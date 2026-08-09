@@ -40,7 +40,7 @@ const products = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
           </svg>
         ),
-        iconBg: "bg-purple-100 text-purple-600 border border-purple-200",
+        iconBg: "bg-blue-50 text-[#2563EB] border border-blue-200",
         title: "Academics & Batch Management",
         desc: (
           <>
@@ -54,7 +54,7 @@ const products = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
           </svg>
         ),
-        iconBg: "bg-emerald-100 text-emerald-600 border border-emerald-200",
+        iconBg: "bg-blue-50 text-[#2563EB] border border-blue-200",
         title: "Assessments & Performance",
         desc: (
           <>
@@ -68,7 +68,7 @@ const products = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
           </svg>
         ),
-        iconBg: "bg-amber-100 text-amber-600 border border-amber-200",
+        iconBg: "bg-blue-50 text-[#2563EB] border border-blue-200",
         title: "Fees & Communication",
         desc: (
           <>
@@ -82,7 +82,7 @@ const products = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
           </svg>
         ),
-        iconBg: "bg-sky-100 text-sky-600 border border-sky-200",
+        iconBg: "bg-blue-50 text-[#2563EB] border border-blue-200",
         title: "Student & Parent Experience",
         desc: (
           <>
@@ -96,7 +96,7 @@ const products = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" />
           </svg>
         ),
-        iconBg: "bg-rose-100 text-rose-600 border border-rose-200",
+        iconBg: "bg-blue-50 text-[#2563EB] border border-blue-200",
         title: "Live Classes & Recorded Sessions",
         desc: (
           <>
@@ -116,13 +116,13 @@ const products = [
     id: "automation-suite",
     num: "02",
     badge: "Enterprise Automation",
-    badgeColor: "#0284C7",
-    badgeBg: "bg-sky-50 text-sky-700 border-sky-200/90",
+    badgeColor: "#2563EB",
+    badgeBg: "bg-blue-50 text-[#2563EB] border-blue-200/90",
     name: "AI Agents for Modern Businesses",
     headline: "Autonomous Digital Workforce for Modern Startups & Growing Teams",
     description: (
       <>
-        <strong className="font-extrabold text-[#0F172A]">Intelligent AI agents.</strong> Our AI agents work like a <strong className="font-extrabold text-[#0284C7]">digital team</strong> that supports marketing, sales, operations, customer support, and everyday business tasks automatically.
+        <strong className="font-extrabold text-[#0F172A]">Intelligent AI agents.</strong> Our AI agents work like a <strong className="font-extrabold text-[#059669]">digital team</strong> that supports marketing, sales, operations, customer support, and everyday business tasks automatically.
       </>
     ),
     features: [
@@ -133,7 +133,7 @@ const products = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" />
           </svg>
         ),
-        iconBg: "bg-blue-100 text-[#2563EB] border border-blue-200",
+        iconBg: "bg-emerald-100/90 text-[#059669] border border-emerald-300",
         title: "Marketing Intelligence Agent",
         desc: (
           <>
@@ -147,7 +147,7 @@ const products = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
           </svg>
         ),
-        iconBg: "bg-sky-100 text-[#0284C7] border border-sky-200",
+        iconBg: "bg-emerald-100/90 text-[#059669] border border-emerald-300",
         title: "Lead & Sales Agent",
         desc: (
           <>
@@ -161,7 +161,7 @@ const products = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" />
           </svg>
         ),
-        iconBg: "bg-emerald-100 text-emerald-700 border border-emerald-200",
+        iconBg: "bg-emerald-100/90 text-[#059669] border border-emerald-300",
         title: "Customer Success Agent",
         desc: (
           <>
@@ -175,7 +175,7 @@ const products = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
           </svg>
         ),
-        iconBg: "bg-amber-100 text-amber-700 border border-amber-200",
+        iconBg: "bg-emerald-100/90 text-[#059669] border border-emerald-300",
         title: "Operations & Workflow Agent",
         desc: (
           <>
@@ -189,7 +189,7 @@ const products = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
           </svg>
         ),
-        iconBg: "bg-purple-100 text-purple-700 border border-purple-200",
+        iconBg: "bg-emerald-100/90 text-[#059669] border border-emerald-300",
         title: "Founder Intelligence Agent",
         desc: (
           <>
@@ -203,7 +203,7 @@ const products = [
             <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l5.654-4.654m.567-.567l1.04-1.265m-2.18 2.398l-3.03 2.496m0 0l-3.586-3.586m3.586 3.586l3.586 3.586M15 4.5a3 3 0 11-6 0 3 3 0 016 0z" />
           </svg>
         ),
-        iconBg: "bg-indigo-100 text-indigo-700 border border-indigo-200",
+        iconBg: "bg-emerald-100/90 text-[#059669] border border-emerald-300",
         title: "Custom AI Agent Development",
         desc: (
           <>
@@ -225,6 +225,7 @@ const products = [
 function LMS3DVisual() {
   const [activeTab, setActiveTab] = useState<"kpi" | "exam" | "lectures" | "academics">("kpi");
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isHovered, setIsHovered] = useState(false);
 
   /* Render animated SVG icons for LMS module tabs */
   const renderLmsIcon = (id: string, isActive: boolean, color: string) => {
@@ -234,10 +235,10 @@ function LMS3DVisual() {
       <defs>
         <linearGradient id={gradId} x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stopColor={color}>
-            <animate attributeName="stop-color" values={`${color};#3B82F6;#10B981;${color}`} dur="3s" repeatCount="indefinite" />
+            <animate attributeName="stop-color" values={`${color};#3B82F6;#0284C7;${color}`} dur="3s" repeatCount="indefinite" />
           </stop>
           <stop offset="100%" stopColor="#3B82F6">
-            <animate attributeName="stop-color" values={`#3B82F6;${color};#8B5CF6;#3B82F6`} dur="3s" repeatCount="indefinite" />
+            <animate attributeName="stop-color" values={`#3B82F6;${color};#1D4ED8;#3B82F6`} dur="3s" repeatCount="indefinite" />
           </stop>
         </linearGradient>
       </defs>
@@ -289,21 +290,21 @@ function LMS3DVisual() {
     }
   };
 
-  const tabs: { id: "kpi" | "exam" | "lectures" | "academics"; label: string; color: string }[] = [
+  const tabs: { id: "kpi" | "academics" | "lectures" | "exam"; label: string; color: string }[] = [
     { id: "kpi", label: "Admissions & Leads", color: "#2563EB" },
-    { id: "exam", label: "Exam & Assessment", color: "#059669" },
-    { id: "lectures", label: "Live & Recorded Hub", color: "#7C3AED" },
-    { id: "academics", label: "Academics & Batches", color: "#7C3AED" },
+    { id: "academics", label: "Academics & Batches", color: "#0284C7" },
+    { id: "lectures", label: "Live & Recorded Hub", color: "#1D4ED8" },
+    { id: "exam", label: "Exam & Assessment", color: "#0369A1" },
   ];
 
-  // Auto-cycle through LMS tabs every 5 seconds
+  // Auto-cycle through LMS tabs every 3.5 seconds
   const autoPlayRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const startAutoPlay = useCallback(() => {
     if (autoPlayRef.current) clearInterval(autoPlayRef.current);
     autoPlayRef.current = setInterval(() => {
       setActiveTab((prev) => {
-        const order: ("kpi" | "exam" | "lectures" | "academics")[] = ["kpi", "exam", "lectures", "academics"];
+        const order: ("kpi" | "academics" | "lectures" | "exam")[] = ["kpi", "academics", "lectures", "exam"];
         const nextIdx = (order.indexOf(prev) + 1) % order.length;
         return order[nextIdx];
       });
@@ -311,9 +312,22 @@ function LMS3DVisual() {
   }, []);
 
   useEffect(() => {
-    if (isAutoPlaying) startAutoPlay();
+    if (isAutoPlaying && !isHovered) {
+      startAutoPlay();
+    } else {
+      if (autoPlayRef.current) clearInterval(autoPlayRef.current);
+    }
     return () => { if (autoPlayRef.current) clearInterval(autoPlayRef.current); };
-  }, [isAutoPlaying, startAutoPlay]);
+  }, [isAutoPlaying, isHovered, startAutoPlay]);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    if (autoPlayRef.current) clearInterval(autoPlayRef.current);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
 
   const handleTabClick = (tabId: "kpi" | "exam" | "lectures" | "academics") => {
     setActiveTab(tabId);
@@ -321,28 +335,31 @@ function LMS3DVisual() {
     if (autoPlayRef.current) clearInterval(autoPlayRef.current);
     setTimeout(() => {
       setIsAutoPlaying(true);
-      startAutoPlay();
     }, 8000);
   };
 
   return (
-    <div className="relative w-full rounded-3xl bg-gradient-to-br from-white via-slate-50/70 to-blue-50/40 border border-blue-200/90 shadow-[0_20px_60px_rgba(37,99,235,0.07)] overflow-hidden flex flex-col justify-between group/visual text-[#0F172A]">
+    <div
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className="relative w-full h-full min-h-[480px] sm:min-h-[540px] rounded-3xl bg-gradient-to-br from-blue-50/90 via-sky-50/50 via-white to-blue-50/70 border border-blue-200/90 shadow-[0_20px_60px_rgba(37,99,235,0.12)] overflow-hidden flex flex-col justify-between group/visual text-[#0F172A]"
+    >
       {/* ── Top Ambient Light Mesh ── */}
-      <div className="absolute top-0 right-0 w-80 h-80 bg-blue-100/40 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-sky-100/30 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute inset-0 bg-[radial-gradient(#93c5fd_1px,transparent_1px)] [background-size:24px_24px] opacity-30 pointer-events-none" />
+      <div className="absolute top-0 right-0 w-80 h-80 bg-blue-200/40 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-sky-200/40 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(#93c5fd_1px,transparent_1px)] [background-size:24px_24px] opacity-35 pointer-events-none" />
 
-      {/* ── Top Application Titlebar (Pure Crisp Light) ── */}
-      <div className="relative z-10 bg-white/95 backdrop-blur-md px-3.5 sm:px-4 py-2.5 sm:py-3 border-b border-slate-200/80 flex flex-wrap items-center justify-between gap-2 shadow-2xs">
+      {/* ── Top Application Titlebar (Vibrant Brand Blue Gradient Header) ── */}
+      <div className="relative z-10 bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] text-white px-3.5 sm:px-4 py-2.5 sm:py-3 border-b border-blue-400/30 flex flex-wrap items-center justify-between gap-2 shadow-md">
         <div className="flex items-center gap-2">
-          <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-xl bg-gradient-to-tr from-[#2563EB] to-[#0284C7] flex items-center justify-center text-white text-[11px] font-black shadow-sm">
+          <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-xl bg-white text-[#2563EB] flex items-center justify-center text-[11px] font-black shadow-md">
             AG
           </div>
           <div>
-            <div className="text-[11.5px] sm:text-[12px] font-black tracking-tight leading-none text-[#0F172A]">
+            <div className="text-[11.5px] sm:text-[12px] font-black tracking-tight leading-none text-white">
               Agaran Institute OS
             </div>
-            <div className="text-[9px] sm:text-[9.5px] text-[#64748B] mt-0.5 font-medium">
+            <div className="text-[9px] sm:text-[9.5px] text-blue-100 mt-0.5 font-semibold">
               Enterprise Coaching & Learning Hub
             </div>
           </div>
@@ -350,22 +367,25 @@ function LMS3DVisual() {
 
         {/* Live Status Badge */}
         <div className="flex items-center gap-2">
-          <span className="inline-flex items-center gap-1.5 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-[9.5px] sm:text-[10px] font-bold">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+          <span className="inline-flex items-center gap-1.5 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-white/20 border border-white/30 text-white text-[9.5px] sm:text-[10px] font-black backdrop-blur-md shadow-2xs">
+            <span className="w-1.5 h-1.5 rounded-full bg-sky-300 animate-pulse" />
             2,450 Students Active
           </span>
         </div>
       </div>
 
       {/* ── Visual Module Showcase Strip — Matching AI Agents Style (No Scrollbar) ── */}
-      <div className="relative z-10 px-3 sm:px-4 py-3 sm:py-4 bg-gradient-to-b from-slate-50/90 to-white/60 border-b border-slate-200/40">
-        {/* Continuous animated connection line across all tabs */}
-        <div className="absolute left-[12%] right-[12%] top-1/2 -translate-y-1/2 h-[2px] rounded-full overflow-hidden bg-slate-200/50 z-0">
+      <div className="relative z-10 px-3 sm:px-4 py-3 sm:py-4 bg-gradient-to-b from-blue-100/50 via-sky-50/60 to-white/90 border-b border-blue-200/50">
+        {/* Sleek Fiber-Optic Energy Pipeline Track */}
+        <div className="absolute left-[12%] right-[12%] top-1/2 -translate-y-1/2 h-[1.5px] rounded-full overflow-hidden bg-slate-200/60 z-0">
           <motion.div
-            className="h-full rounded-full"
-            style={{ background: `linear-gradient(90deg, ${tabs[0].color}, ${tabs[1].color}, ${tabs[2].color}, ${tabs[3].color})` }}
-            animate={{ x: ['-100%', '0%'] }}
-            transition={{ duration: 2.5, repeat: Infinity, ease: "linear" }}
+            className="w-24 h-full rounded-full"
+            style={{
+              background: `linear-gradient(90deg, transparent, ${tabs[0].color}, #38BDF8, transparent)`,
+              boxShadow: `0 0 10px ${tabs[0].color}80`,
+            }}
+            animate={{ x: ['-100%', '350%'] }}
+            transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
           />
         </div>
 
@@ -385,12 +405,12 @@ function LMS3DVisual() {
                   className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-2xl flex items-center justify-center border-2 mb-1.5 transition-all duration-300"
                   style={{
                     background: isActive
-                      ? `linear-gradient(135deg, ${tab.color}25, ${tab.color}08)`
-                      : `linear-gradient(135deg, ${tab.color}10, white)`,
-                    borderColor: isActive ? tab.color : `${tab.color}30`,
+                      ? `linear-gradient(135deg, ${tab.color}30, ${tab.color}10)`
+                      : `linear-gradient(135deg, ${tab.color}15, white)`,
+                    borderColor: isActive ? tab.color : `${tab.color}40`,
                     boxShadow: isActive
-                      ? `0 10px 25px -5px ${tab.color}40, 0 4px 10px -3px ${tab.color}20`
-                      : `0 2px 6px ${tab.color}08`,
+                      ? `0 10px 25px -5px ${tab.color}50, 0 4px 10px -3px ${tab.color}30`
+                      : `0 2px 6px ${tab.color}12`,
                   }}
                   animate={isActive ? { y: -4, scale: 1.05 } : { y: 0, scale: 1 }}
                   whileHover={{ y: -6, scale: 1.08 }}
@@ -407,7 +427,7 @@ function LMS3DVisual() {
                   {/* Sleek active dot indicator at top right */}
                   {isActive && (
                     <motion.span
-                      className="absolute -top-1 -right-1 w-3 h-3 rounded-full border-2 border-white flex items-center justify-center shadow-sm"
+                      className="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full border-2 border-white flex items-center justify-center shadow-sm"
                       style={{ background: tab.color }}
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
@@ -420,9 +440,9 @@ function LMS3DVisual() {
 
                 {/* Label */}
                 <motion.span
-                  className="text-[7.5px] sm:text-[8.5px] font-bold text-center leading-tight max-w-[65px] sm:max-w-[85px]"
-                  style={{ color: isActive ? tab.color : '#94A3B8' }}
-                  animate={isActive ? { opacity: 1 } : { opacity: 0.7 }}
+                  className="text-[7.5px] sm:text-[8.5px] font-black text-center leading-tight max-w-[65px] sm:max-w-[85px]"
+                  style={{ color: isActive ? tab.color : '#64748B' }}
+                  animate={isActive ? { opacity: 1 } : { opacity: 0.8 }}
                 >
                   {tab.label}
                 </motion.span>
@@ -432,347 +452,235 @@ function LMS3DVisual() {
         </div>
       </div>
 
-      {/* ── Main Dynamic Stage Content ── */}
-      <div className="relative z-10 p-3.5 sm:p-4 flex-1 flex flex-col justify-center">
-        {/* TAB 1: Admissions & Student Lead Management Pipeline (Clean & Spacious) */}
+      {/* ── Active Module Interactive Detail Canvas — Clean & Vibrant Light Theme ── */}
+      <div className="relative z-10 px-3 sm:px-4 py-4 sm:py-5 flex-1 flex flex-col">
+
+        {/* TAB 1: Admissions & Leads Pipeline */}
         {activeTab === "kpi" && (
           <motion.div
             key="kpi"
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.2 }}
-            className="flex flex-col gap-2.5"
+            className="flex-1 flex flex-col justify-between gap-3"
           >
-            {/* Top 2 Clean Big Metric Cards */}
-            <div className="grid grid-cols-2 gap-3">
-              <div className="bg-white rounded-2xl p-3.5 border border-slate-200/90 shadow-sm hover:border-blue-300 transition-all">
-                <div className="text-[10.5px] font-bold text-[#64748B]">Total Inbound Leads</div>
-                <div className="text-2xl sm:text-3xl font-black text-[#0F172A] mt-0.5 tracking-tight">640</div>
-                <div className="text-[10px] text-emerald-600 font-bold mt-1">↑ +28% Conversion</div>
-              </div>
-
-              <div className="bg-white rounded-2xl p-3.5 border border-slate-200/90 shadow-sm hover:border-blue-300 transition-all">
-                <div className="text-[10.5px] font-bold text-[#64748B]">Confirmed Admissions</div>
-                <div className="text-2xl sm:text-3xl font-black text-[#2563EB] mt-0.5 tracking-tight">184</div>
-                <div className="text-[10px] text-emerald-600 font-bold mt-1">✓ 92% Target Filled</div>
-              </div>
-            </div>
-
-            {/* Inbound Lead Live Queue (Clean Spacious List) */}
-            <div className="bg-white rounded-2xl p-3.5 border border-slate-200/90 shadow-sm">
-              <div className="flex items-center justify-between text-[11px] font-black text-[#0F172A] mb-2.5">
-                <span>Recent Student Enrollments</span>
-                <span className="text-[9.5px] text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full font-bold border border-blue-200">
-                  Auto SMS Synced
+            <div className="bg-gradient-to-br from-blue-100/90 via-blue-50/80 to-white rounded-2xl p-4 border border-blue-300/90 shadow-md shadow-blue-500/10 relative overflow-hidden">
+              <div className="h-1 bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] rounded-t-2xl -mx-4 -mt-4 mb-3" />
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-[10px] font-black text-[#2563EB] bg-blue-100 px-2.5 py-0.5 rounded-full border border-blue-300 shadow-2xs">
+                  Automated Lead Pipeline
+                </span>
+                <span className="text-[10px] font-black text-blue-900 bg-blue-100 px-2.5 py-0.5 rounded-full border border-blue-300 shadow-2xs">
+                  +42 Inbound Today
                 </span>
               </div>
 
-              <div className="space-y-2 text-[10px]">
-                <div className="p-2.5 rounded-xl bg-emerald-50/70 border border-emerald-100 flex items-center justify-between">
+              <h4 className="text-base sm:text-lg font-black text-[#0F172A] tracking-tight">
+                Inbound Student Admission Velocity
+              </h4>
+
+              {/* Stat Row */}
+              <div className="grid grid-cols-3 gap-2 mt-3">
+                <div className="p-2 sm:p-2.5 rounded-xl bg-gradient-to-br from-blue-100/80 via-white to-blue-50 border border-blue-200/90 shadow-2xs">
+                  <div className="text-[10px] font-bold text-[#64748B]">Total Leads</div>
+                  <div className="text-base sm:text-lg font-black text-[#2563EB]">1,280</div>
+                </div>
+                <div className="p-2 sm:p-2.5 rounded-xl bg-gradient-to-br from-sky-100/80 via-white to-blue-50 border border-sky-200/90 shadow-2xs">
+                  <div className="text-[10px] font-bold text-[#64748B]">Converted</div>
+                  <div className="text-base sm:text-lg font-black text-[#0284C7]">842</div>
+                </div>
+                <div className="p-2 sm:p-2.5 rounded-xl bg-gradient-to-br from-indigo-100/80 via-white to-blue-50 border border-indigo-200/90 shadow-2xs">
+                  <div className="text-[10px] font-bold text-[#64748B]">Conv. Rate</div>
+                  <div className="text-base sm:text-lg font-black text-[#1D4ED8]">65.8%</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Inbound Lead Stream */}
+            <div className="bg-gradient-to-br from-white via-blue-50/50 to-sky-50/40 rounded-2xl p-4 border border-blue-200/90 shadow-lg shadow-blue-500/10 flex-1 flex flex-col justify-between">
+              <div className="flex items-center justify-between text-[11px] font-black text-[#0F172A] mb-2">
+                <span>Real-Time Lead Stream</span>
+                <span className="text-[9.5px] font-black text-[#2563EB]">Auto CRM Sync</span>
+              </div>
+
+              <div className="space-y-2">
+                <div className="p-3 rounded-xl bg-gradient-to-r from-blue-100/80 via-white to-sky-50 border border-blue-200/90 shadow-sm flex items-center justify-between gap-3">
                   <div>
-                    <div className="font-extrabold text-emerald-950">Siddharth V. (Advanced Program)</div>
-                    <div className="text-emerald-700 text-[9px]">Admission Confirmed • ₹45,000 Paid</div>
+                    <div className="font-black text-[#0F172A] text-[12px] leading-snug">Siddharth V. (Advanced Masterclass)</div>
+                    <div className="text-[#2563EB] text-[10px] mt-0.5 font-extrabold">Admission Confirmed • ₹45,000 Paid</div>
                   </div>
-                  <span className="text-[9px] text-emerald-800 bg-emerald-100 px-2 py-0.5 rounded-md font-extrabold">Enrolled</span>
+                  <span className="text-[9.5px] text-[#1D4ED8] bg-blue-100 px-2.5 py-1 rounded-lg font-black shrink-0 shadow-2xs border border-blue-300">Enrolled</span>
                 </div>
 
-                <div className="p-2.5 rounded-xl bg-blue-50/70 border border-blue-100 flex items-center justify-between">
+                <div className="p-3 rounded-xl bg-gradient-to-r from-blue-100/80 via-white to-blue-50 border border-blue-200/90 shadow-sm flex items-center justify-between gap-3">
                   <div>
-                    <div className="font-extrabold text-blue-950">Ananya R. (Core Foundation Batch)</div>
-                    <div className="text-blue-700 text-[9px]">Counseling Scheduled Today 4:30 PM</div>
+                    <div className="font-black text-[#0F172A] text-[12px] leading-snug">Ananya R. (Core Foundation Batch)</div>
+                    <div className="text-[#2563EB] text-[10px] mt-0.5 font-extrabold">Counseling Scheduled Today 04:30 PM</div>
                   </div>
-                  <span className="text-[9px] text-blue-800 bg-blue-100 px-2 py-0.5 rounded-md font-extrabold">Hot Lead</span>
+                  <span className="text-[9.5px] text-[#1D4ED8] bg-blue-100 px-2.5 py-1 rounded-lg font-black shrink-0 shadow-2xs border border-blue-300">Hot Lead</span>
                 </div>
+              </div>
 
-                <div className="p-2.5 rounded-xl bg-amber-50/70 border border-amber-100 flex items-center justify-between">
-                  <div>
-                    <div className="font-extrabold text-amber-950">Karthik M. (Comprehensive Track)</div>
-                    <div className="text-amber-700 text-[9px]">Score: 96/100 • Offer SMS Sent</div>
-                  </div>
-                  <span className="text-[9px] text-amber-800 bg-amber-100 px-2 py-0.5 rounded-md font-extrabold">Pending</span>
-                </div>
+              <div className="mt-3 pt-3 border-t border-blue-200/60 flex items-center justify-between text-[10px] font-bold text-[#64748B]">
+                <span>Top Inbound Source: Google (42%)</span>
+                <span className="text-[#2563EB] font-black">Velocity: 4.2 Days</span>
               </div>
             </div>
           </motion.div>
         )}
 
-        {/* TAB 2: Live Exam & Assessment Portal (Hybrid Online & Offline Tests) */}
+        {/* TAB 2: Live Exam & Assessment Portal */}
         {activeTab === "exam" && (
           <motion.div
             key="exam"
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.2 }}
-            className="flex flex-col gap-2.5"
+            className="flex-1 flex flex-col justify-between gap-3"
           >
-            {/* Top Hybrid Mode Selector / Header */}
-            <div className="flex items-center justify-between text-[10px] font-black pb-1 border-b border-slate-100">
-              <div className="flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-                <span className="text-[#0F172A]">Hybrid Examination Engine</span>
-              </div>
-              <span className="text-blue-700 bg-blue-50 px-2 py-0.5 rounded-full font-bold border border-blue-200 text-[9px] sm:text-[9.5px]">
-                Online & Offline
-              </span>
-            </div>
-
-            {/* 2 Dual Mode Cards: Online & Offline Assessment */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-              {/* Mode 1: Online Mode */}
-              <div className="bg-white rounded-2xl p-3 sm:p-3.5 border border-slate-200/90 shadow-sm hover:border-blue-300 transition-all flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between gap-1.5 mb-1.5">
-                    <span className="text-[9.5px] sm:text-[10px] font-extrabold text-[#2563EB] bg-blue-50 px-2 py-0.5 rounded-md border border-blue-100 whitespace-nowrap">
-                      🖥️ Online
-                    </span>
-                    <span className="text-[8.5px] sm:text-[9px] font-black text-rose-600 bg-rose-50 px-1.5 py-0.5 rounded border border-rose-200 whitespace-nowrap shrink-0 flex items-center gap-1">
-                      <span className="w-1 h-1 rounded-full bg-rose-500 animate-ping" />
-                      ⏱️ 42:15 Left
-                    </span>
-                  </div>
-
-                  <h5 className="text-[12px] font-black text-[#0F172A] leading-snug">
-                    Comprehensive Grand Mock #08
-                  </h5>
-                  <p className="text-[9.5px] text-[#64748B] mt-0.5 font-medium">
-                    60 Questions • 48 Answered (80%)
-                  </p>
-
-                  {/* Visual Progress Bar */}
-                  <div className="w-full bg-slate-100 rounded-full h-1 mt-2 overflow-hidden">
-                    <motion.div
-                      className="bg-[#2563EB] h-full rounded-full"
-                      initial={{ width: 0 }}
-                      animate={{ width: "80%" }}
-                      transition={{ duration: 0.8, ease: "easeOut" }}
-                    />
-                  </div>
-                </div>
-
-                <div className="mt-2.5 pt-2 border-t border-slate-100 flex items-center justify-between text-[9.5px]">
-                  <span className="font-extrabold text-[#0F172A]">Score: 194 / 200</span>
-                  <span className="font-black text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200 text-[8.5px]">
-                    Rank #01 (Top 1%)
-                  </span>
-                </div>
-              </div>
-
-              {/* Mode 2: Offline Classroom Paper */}
-              <div className="bg-white rounded-2xl p-3 sm:p-3.5 border border-slate-200/90 shadow-sm hover:border-blue-300 transition-all flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center justify-between gap-1.5 mb-1.5">
-                    <span className="text-[9.5px] sm:text-[10px] font-extrabold text-emerald-800 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200 whitespace-nowrap">
-                      📝 Offline
-                    </span>
-                    <span className="text-[8.5px] sm:text-[9px] font-black text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-100 whitespace-nowrap shrink-0">
-                      ✓ 186 Graded
-                    </span>
-                  </div>
-
-                  <h5 className="text-[12px] font-black text-[#0F172A] leading-snug">
-                    Classroom Diagnostic Exam
-                  </h5>
-                  <p className="text-[9.5px] text-[#64748B] mt-0.5 font-medium">
-                    Physical Paper to Cloud Sync in 3.2s
-                  </p>
-
-                  {/* Visual Progress Bar */}
-                  <div className="w-full bg-slate-100 rounded-full h-1 mt-2 overflow-hidden">
-                    <motion.div
-                      className="bg-emerald-500 h-full rounded-full"
-                      initial={{ width: 0 }}
-                      animate={{ width: "100%" }}
-                      transition={{ duration: 0.8, ease: "easeOut" }}
-                    />
-                  </div>
-                </div>
-
-                <div className="mt-2.5 pt-2 border-t border-slate-100 flex items-center justify-between text-[9.5px]">
-                  <span className="font-extrabold text-[#0F172A]">99.8% Accuracy</span>
-                  <span className="font-black text-[#2563EB] bg-blue-50 px-1.5 py-0.5 rounded border border-blue-200 text-[8.5px]">
-                    SMS Sent
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* Bottom Unified Evaluation Bar */}
-            <div className="p-2.5 rounded-xl bg-gradient-to-r from-blue-50 via-slate-50 to-indigo-50 border border-blue-200/80 flex flex-wrap items-center justify-between gap-1.5">
-              <div className="flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                <span className="text-[9.5px] sm:text-[10px] font-black text-[#0F172A]">
-                  Unified Ranklist: Online & Offline Students Synced Instantly
+            <div className="bg-gradient-to-br from-sky-100/90 via-blue-50/80 to-white rounded-2xl p-4 border border-sky-300/90 shadow-md shadow-sky-500/10 relative overflow-hidden">
+              <div className="h-1 bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] rounded-t-2xl -mx-4 -mt-4 mb-3" />
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-[10px] font-black text-[#2563EB] bg-blue-100 px-2.5 py-0.5 rounded-full border border-blue-300 shadow-2xs">
+                  Exam Engine Active
+                </span>
+                <span className="text-[10px] font-black text-[#0284C7] bg-sky-100 px-2.5 py-0.5 rounded-full border border-sky-300 flex items-center gap-1.5 shadow-2xs">
+                  <span className="w-1.5 h-1.5 rounded-full bg-sky-500 animate-pulse" />
+                  42:15 Remaining
                 </span>
               </div>
-              <span className="text-[8.5px] font-black text-[#2563EB] bg-white px-2 py-0.5 rounded shadow-2xs border border-blue-100">
-                100% Automated
-              </span>
+
+              <h4 className="text-base sm:text-lg font-black text-[#0F172A] tracking-tight">
+                National Mock Examination Series #08
+              </h4>
+              <p className="text-[11.5px] text-[#475569] mt-1 font-extrabold leading-relaxed">
+                420 Students Active • Hybrid Evaluation (Online CBT & Paper OCR)
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-white via-sky-50/50 to-blue-50/40 rounded-2xl p-4 border border-sky-200/90 shadow-lg shadow-sky-500/10 flex-1 flex flex-col justify-between">
+              <div className="flex items-center justify-between text-[11px] font-black text-[#0F172A] mb-2">
+                <span>Performance & Ranking</span>
+                <span className="text-[#0284C7] bg-sky-100 px-2.5 py-0.5 rounded-full font-black border border-sky-300 text-[9.5px] shadow-2xs">
+                  99.8% Accuracy
+                </span>
+              </div>
+
+              <p className="text-[12px] text-[#475569] leading-relaxed font-normal p-3 rounded-xl bg-gradient-to-r from-blue-100/70 via-white to-blue-100/70 border border-blue-200/90 shadow-2xs">
+                Online Score: <strong className="font-extrabold text-[#0F172A]">194 / 200 (Rank #01)</strong> • Paper Scans: <strong className="font-extrabold text-[#0284C7]">186 Sheets Graded (3.2s)</strong>.
+              </p>
+
+              <div className="pt-3 border-t border-blue-200/60 flex items-center justify-between text-[10px] font-bold text-[#64748B]">
+                <span>Class Average: 96.4%</span>
+                <span className="text-[#2563EB] font-black">Auto SMS Results Sent</span>
+              </div>
             </div>
           </motion.div>
         )}
 
-        {/* TAB 3: Pure Light Live Classroom & Video Player Studio */}
+        {/* TAB 3: Live Classroom & Video Player Studio */}
         {activeTab === "lectures" && (
           <motion.div
             key="lectures"
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.2 }}
-            className="flex flex-col gap-2.5"
+            className="flex-1 flex flex-col justify-between gap-3"
           >
-            {/* Pure Light Video Studio Canvas */}
-            <div className="bg-gradient-to-br from-blue-50/90 via-sky-50/60 to-indigo-50/80 rounded-2xl p-3 sm:p-3.5 border border-blue-200/90 shadow-sm text-[#0F172A]">
+            <div className="bg-gradient-to-br from-blue-100/90 via-blue-50/80 to-white rounded-2xl p-4 border border-blue-300/90 shadow-md shadow-blue-500/10 relative overflow-hidden">
+              <div className="h-1 bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] rounded-t-2xl -mx-4 -mt-4 mb-3" />
               <div className="flex items-center justify-between mb-2">
-                <div className="flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-violet-600 animate-pulse" />
-                  <span className="text-[11px] font-extrabold text-[#0F172A]">
-                    Live Broadcast: Core & Advanced Coaching Hub
-                  </span>
-                </div>
-                <span className="text-[9.5px] font-black text-[#2563EB] bg-white px-2 py-0.5 rounded border border-blue-200 shadow-2xs">
-                  1080p HD Studio
-                </span>
-              </div>
-
-              {/* Whiteboard / Video simulation banner (Pure Light Theme) */}
-              <div className="h-20 sm:h-24 rounded-xl bg-white/90 border border-blue-100 flex flex-col justify-center items-center p-2.5 text-center shadow-xs">
-                <div className="text-[11.5px] sm:text-xs font-black text-[#0F172A]">
-                  Module 04: Core Concepts & Applied Problem Solving
-                </div>
-                <div className="text-[9.5px] sm:text-[10px] text-[#2563EB] font-bold mt-0.5">
-                  Instructor: Dr. Arvind S. (Senior Academic Head)
-                </div>
-                {/* Audio Equalizer */}
-                <div className="flex items-center gap-1 mt-1.5">
-                  {[4, 14, 8, 18, 10, 16, 6, 12, 8].map((h, idx) => (
-                    <motion.span
-                      key={idx}
-                      className="w-1 bg-[#2563EB] rounded-full"
-                      animate={{ height: [`${h}px`, `${h * 1.4}px`, `${h * 0.6}px`, `${h}px`] }}
-                      transition={{ repeat: Infinity, duration: 1 + idx * 0.1, ease: "easeInOut" }}
-                    />
-                  ))}
-                </div>
-              </div>
-
-              {/* Real-time Automated Attendance Tracking Bar */}
-              <div className="mt-2 p-2 rounded-xl bg-white/80 border border-emerald-200/90 flex items-center justify-between text-[9.5px]">
                 <div className="flex items-center gap-1.5">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                  <span className="font-extrabold text-emerald-950">
-                    Auto Attendance: 184/186 Present (98.9%)
-                  </span>
+                  <span className="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse" />
+                  <span className="text-[10px] font-black text-[#0F172A]">Live Studio Broadcast</span>
                 </div>
-                <span className="text-[8.5px] font-black text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200">
-                  ✓ Watch-Time Logged
+                <span className="text-[9.5px] font-black text-[#1D4ED8] bg-blue-100 px-2.5 py-0.5 rounded-full border border-blue-300 shadow-2xs">
+                  184 Attending
                 </span>
               </div>
 
-              {/* Pre-recorded library status */}
-              <div className="flex items-center justify-between text-[9.5px] text-[#475569] mt-2 font-semibold">
-                <span className="flex items-center gap-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-                  48 Pre-Recorded Lecture Vault Ready
+              <h4 className="text-base sm:text-lg font-black text-[#0F172A] tracking-tight">
+                Advanced Physics Masterclass & Problem Solving
+              </h4>
+              <p className="text-[11.5px] text-[#475569] mt-1 font-extrabold leading-relaxed">
+                Instructor: Dr. R. Sharma • Live Chat & Interactive Q&A Active
+              </p>
+            </div>
+
+            <div className="bg-gradient-to-br from-white via-blue-50/50 to-sky-50/40 rounded-2xl p-4 border border-blue-200/90 shadow-lg shadow-blue-500/10 flex-1 flex flex-col justify-between">
+              <div className="flex items-center justify-between text-[11px] font-black text-[#0F172A] mb-2">
+                <span>Recorded Lecture Hub</span>
+                <span className="text-[9.5px] font-black text-[#1D4ED8] bg-blue-100 px-2.5 py-0.5 rounded-full border border-blue-300 shadow-2xs">
+                  24/7 Access
                 </span>
-                <span className="text-[#2563EB] font-extrabold bg-blue-50 px-1.5 py-0.5 rounded border border-blue-200 text-[8.5px]">
-                  Auto-Synced
-                </span>
+              </div>
+
+              <p className="text-[12px] text-[#475569] leading-relaxed font-normal p-3 rounded-xl bg-gradient-to-r from-blue-100/70 via-white to-sky-50/70 border border-blue-200/90 shadow-2xs">
+                Organic Chemistry & Calculus lectures archived in <strong className="font-extrabold text-[#1D4ED8]">1080p HD</strong> with attached PDF study notes.
+              </p>
+
+              <div className="pt-3 border-t border-blue-200/60 flex items-center justify-between text-[10px] font-bold text-[#64748B]">
+                <span>Automated Class Attendance Tracked</span>
+                <span className="text-[#2563EB] font-black">HD Streaming 1080p</span>
               </div>
             </div>
           </motion.div>
         )}
 
-        {/* TAB 4: Academics & Batch Operations Hub */}
+        {/* TAB 4: Academics & Batches */}
         {activeTab === "academics" && (
           <motion.div
             key="academics"
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.2 }}
-            className="flex flex-col gap-2.5"
+            className="flex-1 flex flex-col justify-between gap-3"
           >
-            {/* Top Academics Strip */}
-            <div className="flex items-center justify-between text-[10px] font-black pb-1 border-b border-slate-100">
-              <div className="flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
-                <span className="text-[#0F172A]">Academics & Batch Operations</span>
+            <div className="bg-gradient-to-br from-sky-100/90 via-blue-50/80 to-white rounded-2xl p-4 border border-sky-300/90 shadow-md shadow-sky-500/10 relative overflow-hidden">
+              <div className="h-1 bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] rounded-t-2xl -mx-4 -mt-4 mb-3" />
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-[10px] font-black text-[#2563EB] bg-blue-100 px-2.5 py-0.5 rounded-full border border-blue-300 shadow-2xs">
+                  Batch Operations
+                </span>
+                <span className="text-[9.5px] font-black text-[#0284C7] bg-sky-100 px-2.5 py-0.5 rounded-full border border-sky-300 shadow-2xs">
+                  12 Batches Active
+                </span>
               </div>
-              <span className="text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full font-bold border border-emerald-200 text-[9px] sm:text-[9.5px]">
-                18 Batches Live
-              </span>
+
+              <h4 className="text-base sm:text-lg font-black text-[#0F172A] tracking-tight">
+                Academic Curriculum & Timetable Engine
+              </h4>
+              <p className="text-[11.5px] text-[#475569] mt-1 font-extrabold leading-relaxed">
+                Automated Class Schedules • Attendance Tracking • Faculty Workload Optimization
+              </p>
             </div>
 
-            {/* Live Batch Timetable Grid */}
-            <div className="bg-white rounded-2xl p-3 border border-slate-200/90 shadow-sm space-y-2 text-[10px]">
-              {/* Batch 1 */}
-              <div className="p-2.5 rounded-xl bg-blue-50/70 border border-blue-100 flex items-center justify-between">
-                <div>
-                  <div className="font-extrabold text-blue-950 flex items-center gap-1.5">
-                    <span>Advanced Masterclass (Batch A)</span>
-                    <span className="text-[8px] bg-emerald-100 text-emerald-800 px-1.5 py-0.2 rounded font-black">Live</span>
-                  </div>
-                  <div className="text-blue-700 text-[9px] mt-0.5">09:00 AM - 11:00 AM • Dr. Arvind S. • Room 402</div>
-                </div>
-                <span className="text-[8.5px] font-black text-[#2563EB] bg-white px-2 py-0.5 rounded shadow-2xs border border-blue-100">
-                  Room 402
-                </span>
+            <div className="bg-gradient-to-br from-white via-sky-50/50 to-blue-50/40 rounded-2xl p-4 border border-sky-200/90 shadow-lg shadow-sky-500/10 flex-1 flex flex-col justify-between">
+              <div className="flex items-center justify-between text-[11px] font-black text-[#0F172A] mb-2">
+                <span>Active Batches</span>
+                <span className="text-[9.5px] font-black text-[#2563EB]">Schedules Synced</span>
               </div>
 
-              {/* Batch 2 */}
-              <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200/70 flex items-center justify-between">
-                <div>
-                  <div className="font-extrabold text-[#0F172A]">Core Foundation Program (Batch B)</div>
-                  <div className="text-[#64748B] text-[9px] mt-0.5">11:30 AM - 01:30 PM • Prof. Meera K. • Studio 01</div>
-                </div>
-                <span className="text-[8.5px] font-bold text-slate-600 bg-white px-2 py-0.5 rounded border border-slate-200">
-                  Next in 15m
-                </span>
-              </div>
+              <p className="text-[12px] text-[#475569] leading-relaxed font-normal p-3 rounded-xl bg-gradient-to-r from-sky-100/70 via-white to-blue-100/70 border border-sky-200/90 shadow-2xs">
+                <strong className="font-extrabold text-[#0F172A]">Target JEE 2026</strong> & <strong className="font-extrabold text-[#0284C7]">Foundation NEET 2027</strong> active with <strong className="font-extrabold text-[#2563EB]">98.2% attendance</strong>.
+              </p>
 
-              {/* Course Syllabus Progress Bars */}
-              <div className="pt-1.5 border-t border-slate-100 grid grid-cols-2 gap-2 text-[9px]">
-                <div>
-                  <div className="flex justify-between font-bold text-[#0F172A] mb-0.5">
-                    <span>Core Foundation Track</span>
-                    <span className="text-[#2563EB] font-black">82% (14/18 Modules)</span>
-                  </div>
-                  <div className="w-full bg-slate-100 rounded-full h-1 overflow-hidden">
-                    <motion.div
-                      className="bg-[#2563EB] h-full rounded-full"
-                      initial={{ width: 0 }}
-                      animate={{ width: "82%" }}
-                      transition={{ duration: 0.8, ease: "easeOut" }}
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <div className="flex justify-between font-bold text-[#0F172A] mb-0.5">
-                    <span>Advanced Skill Track</span>
-                    <span className="text-emerald-600 font-black">75% (12/16 Modules)</span>
-                  </div>
-                  <div className="w-full bg-slate-100 rounded-full h-1 overflow-hidden">
-                    <motion.div
-                      className="bg-emerald-500 h-full rounded-full"
-                      initial={{ width: 0 }}
-                      animate={{ width: "75%" }}
-                      transition={{ duration: 0.8, ease: "easeOut" }}
-                    />
-                  </div>
-                </div>
+              <div className="pt-3 border-t border-sky-200/60 flex items-center justify-between text-[10px] font-bold text-[#64748B]">
+                <span>Biometric & App Attendance Combined</span>
+                <span className="text-[#2563EB] font-black">Reports Generated</span>
               </div>
             </div>
           </motion.div>
         )}
       </div>
 
-      {/* ── Bottom Telemetry Footer Strip (Crisp Light Theme) ── */}
-      <div className="relative z-10 bg-slate-50/90 border-t border-slate-200/80 text-[#0F172A] px-4 py-2.5 flex items-center justify-between text-[10.5px] font-extrabold">
+      {/* ── Bottom Telemetry Footer Strip (Ultra Crisp Dark Blue Theme) ── */}
+      <div className="relative z-10 bg-gradient-to-r from-[#0F172A] via-[#1E293B] to-[#0F172A] border-t border-slate-700/80 text-white px-4 py-2.5 flex items-center justify-between text-[10.5px] font-extrabold shadow-inner">
         <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-          <span className="text-[#0F172A]">Real-Time Cloud LMS Engine Active</span>
+          <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse" />
+          <span className="text-white">Real-Time Cloud LMS Engine Active</span>
         </div>
-        <span className="bg-blue-50 text-[#2563EB] border border-blue-200/80 px-2.5 py-0.5 rounded-md text-[9.5px] tracking-wide font-black">
+        <span className="bg-blue-600/90 text-white border border-blue-400/80 px-2.5 py-0.5 rounded-md text-[9.5px] tracking-wide font-black shadow-2xs">
           99.99% Uptime
         </span>
       </div>
@@ -953,6 +861,7 @@ function Automation3DVisual() {
   );
 
   // Auto-cycle through agents
+  const [isHovered, setIsHovered] = useState(false);
   const autoPlayRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const startAutoPlay = useCallback(() => {
@@ -963,9 +872,22 @@ function Automation3DVisual() {
   }, []);
 
   useEffect(() => {
-    if (isAutoPlaying) startAutoPlay();
+    if (isAutoPlaying && !isHovered) {
+      startAutoPlay();
+    } else {
+      if (autoPlayRef.current) clearInterval(autoPlayRef.current);
+    }
     return () => { if (autoPlayRef.current) clearInterval(autoPlayRef.current); };
-  }, [isAutoPlaying, startAutoPlay]);
+  }, [isAutoPlaying, isHovered, startAutoPlay]);
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    if (autoPlayRef.current) clearInterval(autoPlayRef.current);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
 
   const handleAgentClick = (idx: number) => {
     setActiveAgent(idx);
@@ -973,68 +895,72 @@ function Automation3DVisual() {
     if (autoPlayRef.current) clearInterval(autoPlayRef.current);
     setTimeout(() => {
       setIsAutoPlaying(true);
-      startAutoPlay();
     }, 8000);
   };
 
   const current = agents[activeAgent];
 
   return (
-    <div className="relative w-full rounded-3xl bg-gradient-to-br from-[#f8faff] via-white to-[#f0f7ff] border border-blue-200/80 shadow-[0_24px_80px_rgba(37,99,235,0.08)] overflow-hidden flex flex-col text-[#0F172A]">
+    <div
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      className="relative w-full h-full min-h-[480px] sm:min-h-[540px] rounded-3xl bg-gradient-to-br from-emerald-50/90 via-teal-50/50 via-white to-emerald-50/70 border border-emerald-200/90 shadow-[0_20px_60px_rgba(5,150,105,0.14)] overflow-hidden flex flex-col justify-between text-[#0F172A]"
+    >
 
       {/* ── Animated Background Mesh ── */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <motion.div
-          className="absolute w-[300px] h-[300px] rounded-full opacity-[0.12]"
+          className="absolute w-[300px] h-[300px] rounded-full opacity-[0.18]"
           style={{ background: `radial-gradient(circle, ${current.color}, transparent 70%)`, top: '20%', left: '30%' }}
           animate={{ scale: [1, 1.3, 1], x: [0, 30, -20, 0], y: [0, -20, 15, 0] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute w-[200px] h-[200px] rounded-full opacity-[0.08]"
+          className="absolute w-[200px] h-[200px] rounded-full opacity-[0.12]"
           style={{ background: `radial-gradient(circle, ${current.color}, transparent 70%)`, bottom: '10%', right: '10%' }}
           animate={{ scale: [1.2, 1, 1.2], x: [0, -20, 10, 0] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         />
-        <div className="absolute inset-0 bg-[radial-gradient(#94a3b8_0.7px,transparent_0.7px)] [background-size:20px_20px] opacity-20" />
+        <div className="absolute inset-0 bg-[radial-gradient(#a7f3d0_1px,transparent_1px)] [background-size:24px_24px] opacity-35" />
       </div>
 
-      {/* ── Top Bar ── */}
-      <div className="relative z-10 bg-white/90 backdrop-blur-lg px-4 py-2 border-b border-slate-200/60 flex items-center justify-between">
+      {/* ── Top Bar (Fresh Light Emerald Green Header Bar) ── */}
+      <div className="relative z-10 bg-gradient-to-r from-[#059669] via-[#10B981] to-[#0D9488] text-white px-4 py-2.5 border-b border-emerald-400/30 flex items-center justify-between shadow-md">
         <div className="flex items-center gap-2">
           <motion.div
-            className="w-7 h-7 rounded-xl flex items-center justify-center text-white text-[11px] font-black shadow-lg"
-            style={{ background: `linear-gradient(135deg, ${current.color}, #2563EB)` }}
+            className="w-7 h-7 rounded-xl bg-white text-[#059669] flex items-center justify-center text-[11px] font-black shadow-md"
             animate={{ rotate: [0, 5, -5, 0] }}
             transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
           >
             AI
           </motion.div>
           <div>
-            <div className="text-[11.5px] font-black tracking-tight leading-none">Agaran AI Workforce</div>
-            <div className="text-[8.5px] text-[#64748B] mt-0.5 font-medium">5 Autonomous Agents • Always Running</div>
+            <div className="text-[11.5px] font-black tracking-tight leading-none text-white">Agaran AI Workforce</div>
+            <div className="text-[8.5px] text-emerald-100 mt-0.5 font-semibold">5 Autonomous Agents • Always Running</div>
           </div>
         </div>
         <motion.span
-          className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[9px] font-bold border"
-          style={{ background: current.colorLight, borderColor: current.colorMid, color: current.color }}
+          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9.5px] font-black bg-white/20 border border-white/30 text-white backdrop-blur-md shadow-2xs"
           animate={{ opacity: [0.8, 1, 0.8] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: current.color }} />
-          Live
+          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+          Live Engine
         </motion.span>
       </div>
 
       {/* ── Visual Agent Showcase Strip — Rich Animated Icons ── */}
-      <div className="relative z-10 px-3 sm:px-4 py-3 sm:py-4 bg-gradient-to-b from-slate-50/90 to-white/60 border-b border-slate-200/40">
-        {/* Connection line running across all agents */}
-        <div className="absolute left-[10%] right-[10%] top-1/2 -translate-y-1/2 h-[2px] rounded-full overflow-hidden bg-slate-200/50 z-0">
+      <div className="relative z-10 px-3 sm:px-4 py-3 sm:py-4 bg-gradient-to-b from-emerald-100/60 via-teal-50/60 to-white/90 border-b border-emerald-200/60">
+        {/* Sleek Fiber-Optic Energy Pipeline Track */}
+        <div className="absolute left-[10%] right-[10%] top-1/2 -translate-y-1/2 h-[1.5px] rounded-full overflow-hidden bg-slate-200/60 z-0">
           <motion.div
-            className="h-full rounded-full"
-            style={{ background: `linear-gradient(90deg, ${agents[0].color}, ${agents[1].color}, ${agents[2].color}, ${agents[3].color}, ${agents[4].color})` }}
-            animate={{ x: ['-100%', '0%'] }}
-            transition={{ duration: 2.5, repeat: Infinity, ease: "linear" }}
+            className="w-24 h-full rounded-full"
+            style={{
+              background: `linear-gradient(90deg, transparent, ${current.color}, #34D399, transparent)`,
+              boxShadow: `0 0 10px ${current.color}80`,
+            }}
+            animate={{ x: ['-100%', '350%'] }}
+            transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
           />
         </div>
 
@@ -1055,11 +981,11 @@ function Automation3DVisual() {
                   style={{
                     background: isActive
                       ? `linear-gradient(135deg, ${agent.colorLight}, white)`
-                      : `linear-gradient(135deg, ${agent.colorLight}30, white)`,
-                    borderColor: isActive ? agent.color : `${agent.color}35`,
+                      : `linear-gradient(135deg, ${agent.colorLight}40, white)`,
+                    borderColor: isActive ? agent.color : `${agent.color}45`,
                     boxShadow: isActive
-                      ? `0 10px 25px -5px ${agent.color}40, 0 4px 10px -3px ${agent.color}20`
-                      : `0 2px 6px ${agent.color}08`,
+                      ? `0 10px 25px -5px ${agent.color}50, 0 4px 10px -3px ${agent.color}30`
+                      : `0 2px 6px ${agent.color}12`,
                   }}
                   animate={isActive ? { y: -4, scale: 1.05 } : { y: 0, scale: 1 }}
                   whileHover={{ y: -6, scale: 1.08 }}
@@ -1076,7 +1002,7 @@ function Automation3DVisual() {
                   {/* Sleek active dot indicator at top right */}
                   {isActive && (
                     <motion.span
-                      className="absolute -top-1 -right-1 w-3 h-3 rounded-full border-2 border-white flex items-center justify-center shadow-sm"
+                      className="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full border-2 border-white flex items-center justify-center shadow-sm"
                       style={{ background: agent.color }}
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
@@ -1089,9 +1015,9 @@ function Automation3DVisual() {
 
                 {/* Label */}
                 <motion.span
-                  className="text-[7.5px] sm:text-[8.5px] font-bold text-center leading-tight max-w-[56px] sm:max-w-[72px]"
-                  style={{ color: isActive ? agent.color : '#94A3B8' }}
-                  animate={isActive ? { opacity: 1 } : { opacity: 0.7 }}
+                  className="text-[7.5px] sm:text-[8.5px] font-black text-center leading-tight max-w-[56px] sm:max-w-[72px]"
+                  style={{ color: isActive ? agent.color : '#64748B' }}
+                  animate={isActive ? { opacity: 1 } : { opacity: 0.8 }}
                 >
                   {agent.label}
                 </motion.span>
@@ -1101,20 +1027,22 @@ function Automation3DVisual() {
         </div>
       </div>
 
-      {/* ── Rich Agent Detail Stage — Tall & Immersive ── */}
+      {/* ── Rich Agent Detail Stage — Tall & Immersive Colorful Cards ── */}
       <div className="relative z-10 px-3 sm:px-4 py-4 sm:py-5 flex-1 flex flex-col">
         <motion.div
           key={current.id}
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ type: "spring", stiffness: 350, damping: 28 }}
-          className="w-full rounded-2xl border p-4 sm:p-5 backdrop-blur-sm flex-1 flex flex-col"
+          className="w-full rounded-2xl border p-4 sm:p-5 backdrop-blur-sm flex-1 flex flex-col relative overflow-hidden"
           style={{
-            background: `linear-gradient(145deg, ${current.colorLight}60, white 40%, ${current.colorLight}30)`,
-            borderColor: `${current.colorMid}70`,
-            boxShadow: `0 8px 40px ${current.color}08, inset 0 1px 0 rgba(255,255,255,0.8)`,
+            background: `linear-gradient(145deg, ${current.colorLight}90, white 50%, ${current.colorLight}50)`,
+            borderColor: `${current.colorMid}`,
+            boxShadow: `0 12px 40px ${current.color}15, inset 0 1px 0 rgba(255,255,255,0.9)`,
           }}
         >
+          <div className="h-1 bg-gradient-to-r from-[#059669] via-[#10B981] to-[#0D9488] rounded-t-2xl -mx-5 -mt-5 mb-4" />
+
           {/* Agent Header Row */}
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2.5">
@@ -1134,7 +1062,7 @@ function Automation3DVisual() {
                 <div className="text-[13px] sm:text-[14px] font-black leading-tight" style={{ color: current.color }}>
                   {current.label} Agent
                 </div>
-                <div className="text-[10px] text-[#64748B] font-medium mt-0.5">{current.tagline}</div>
+                <div className="text-[10px] text-[#475569] font-extrabold mt-0.5">{current.tagline}</div>
               </div>
             </div>
             <motion.div
@@ -1144,285 +1072,176 @@ function Automation3DVisual() {
               transition={{ type: "spring", delay: 0.15 }}
             >
               <div className="text-xl sm:text-2xl font-black tracking-tight" style={{ color: current.color }}>{current.stat}</div>
-              <div className="text-[9px] font-bold text-[#94A3B8] uppercase tracking-wider">{current.statLabel}</div>
+              <div className="text-[9px] font-extrabold text-[#64748B] uppercase tracking-wider">{current.statLabel}</div>
             </motion.div>
           </div>
 
-          {/* ── Rich Visual Action Scenes ── */}
-          <div className="flex-1 flex flex-col gap-2.5">
+          {/* ── Rich Visual Action Scenes — Colorful & Vibrant ── */}
+          <div className="flex-1 flex flex-col justify-between gap-3">
 
-            {/* Marketing: Rich analytics dashboard feel */}
+            {/* Marketing: Clean analytics & campaign summary */}
             {activeAgent === 0 && (
               <>
-                {/* Animated bar chart — taller */}
-                <div className="bg-white/80 rounded-xl border border-slate-200/60 p-3 flex-1">
-                  <div className="flex items-center justify-between mb-2.5">
-                    <span className="text-[10px] font-black text-[#0F172A]">Campaign Performance Analytics</span>
-                    <motion.span
-                      className="text-[8.5px] font-bold px-2 py-0.5 rounded-full"
+                <div className="bg-gradient-to-br from-emerald-100/90 via-emerald-50/80 to-white rounded-2xl border border-emerald-300/80 p-3.5 sm:p-4 shadow-md shadow-emerald-500/10">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-[11px] font-black text-[#0F172A]">Campaign Performance & Discovery</span>
+                    <span
+                      className="text-[9px] font-extrabold px-2.5 py-0.5 rounded-full shadow-2xs border border-emerald-200"
                       style={{ background: current.colorLight, color: current.color }}
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ delay: 0.5 }}
                     >
-                      Multi-Channel Active
-                    </motion.span>
+                      5 Channels Active
+                    </span>
                   </div>
-                  <div className="flex items-end gap-1.5 h-16 sm:h-20">
-                    {[28, 45, 38, 62, 55, 78, 68, 88, 72, 95].map((h, i) => (
-                      <motion.div
+                  <div className="flex items-end gap-2 h-16 sm:h-20 py-1">
+                    {[35, 48, 42, 68, 58, 82, 72, 92, 78, 98].map((h, i) => (
+                      <div
                         key={i}
-                        className="flex-1 rounded-t-md"
-                        style={{ background: `linear-gradient(to top, ${current.color}, ${current.colorMid})` }}
-                        initial={{ height: 0 }}
-                        animate={{ height: `${h}%` }}
-                        transition={{ duration: 0.5, delay: i * 0.06, ease: "easeOut" }}
+                        className="flex-1 rounded-t-md transition-all duration-300 shadow-2xs"
+                        style={{ height: `${h}%`, background: `linear-gradient(to top, ${current.color}, ${current.colorMid})` }}
                       />
                     ))}
                   </div>
                 </div>
-                {/* KPI strip */}
-                <div className="grid grid-cols-3 gap-2">
-                  {[
-                    { label: "Topics Found", val: "14 Clusters" },
-                    { label: "Campaigns Drafted", val: "6 Angles" },
-                    { label: "Audience Reach", val: "12.4K" },
-                  ].map((kpi, i) => (
-                    <motion.div
-                      key={kpi.label}
-                      className="bg-white/80 rounded-xl border border-slate-200/50 p-2.5 text-center"
-                      initial={{ opacity: 0, y: 8 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 0.4 + i * 0.1 }}
-                    >
-                      <div className="text-[12px] sm:text-[13px] font-black" style={{ color: current.color }}>{kpi.val}</div>
-                      <div className="text-[8px] font-bold text-[#94A3B8] mt-0.5">{kpi.label}</div>
-                    </motion.div>
-                  ))}
+
+                <div className="bg-gradient-to-br from-white via-emerald-50/50 to-teal-50/40 rounded-2xl p-3.5 border border-emerald-200/90 shadow-md shadow-emerald-500/10 flex-1 flex flex-col justify-between">
+                  <div className="flex items-center justify-between text-[11px] font-black text-[#0F172A] mb-2">
+                    <span>Trending Market Discovery</span>
+                    <span className="text-[9.5px] font-black text-emerald-800 bg-emerald-100 px-2.5 py-0.5 rounded-full border border-emerald-300 shadow-2xs">
+                      +340% Spike
+                    </span>
+                  </div>
+                  <p className="text-[12px] text-[#475569] leading-relaxed font-normal p-2.5 rounded-xl bg-gradient-to-r from-emerald-100/70 via-white to-emerald-100/70 border border-emerald-200/90 shadow-2xs">
+                    Keyword: <strong className="font-extrabold text-[#059669]">&quot;Enterprise Workflow Automation&quot;</strong>. 3 LinkedIn posts & email sequences drafted and scheduled automatically.
+                  </p>
                 </div>
               </>
             )}
 
-            {/* Sales: Lead pipeline with rich cards */}
+            {/* Sales: Lead pipeline with clean cards */}
             {activeAgent === 1 && (
               <>
-                <div className="bg-white/80 rounded-xl border border-slate-200/60 p-3 flex-1">
-                  <div className="text-[10px] font-black text-[#0F172A] mb-2.5">Lead Qualification Pipeline</div>
+                <div className="bg-gradient-to-br from-emerald-100/90 via-teal-50/80 to-white rounded-2xl border border-emerald-300/80 p-3.5 sm:p-4 shadow-md shadow-emerald-500/10">
+                  <div className="flex items-center justify-between text-[11px] font-black text-[#0F172A] mb-3">
+                    <span>Lead Qualification & Proposal Pipeline</span>
+                    <span className="text-[9.5px] font-black text-emerald-800 bg-emerald-100 px-2.5 py-0.5 rounded-full border border-emerald-300 shadow-2xs">
+                      Score: 98/100
+                    </span>
+                  </div>
                   <div className="space-y-2">
                     {[
-                      { step: "Lead Captured", detail: "Vertex Global • Inbound Form", status: "Done" },
-                      { step: "Intent Scored", detail: "Enterprise Tier • Score: 98/100", status: "Done" },
+                      { step: "Lead Captured", detail: "Inbound Website Form • Vertex Global", status: "Done" },
                       { step: "Proposal Sent", detail: "Scoped deliverables & pricing in 2.1s", status: "Done" },
-                      { step: "Meeting Booked", detail: "Calendar link dispatched • 03:00 PM", status: "Live" },
-                    ].map((item, i) => (
-                      <motion.div
-                        key={item.step}
-                        className="flex items-center gap-2.5"
-                        initial={{ opacity: 0, x: -16 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: i * 0.2, type: "spring", stiffness: 250 }}
-                      >
-                        <motion.div
-                          className="w-6 h-6 rounded-lg flex items-center justify-center text-white text-[9px] font-black shrink-0"
+                      { step: "Meeting Booked", detail: "Calendar invite confirmed • 03:00 PM Today", status: "Live" },
+                    ].map((item) => (
+                      <div key={item.step} className="flex items-center gap-2.5 p-2 rounded-xl bg-gradient-to-r from-emerald-50 via-white to-teal-50 border border-emerald-200/80 shadow-2xs">
+                        <div
+                          className="w-4 h-4 rounded-full flex items-center justify-center text-white text-[8px] font-black shrink-0 shadow-xs"
                           style={{ background: current.color }}
-                          initial={{ scale: 0 }}
-                          animate={{ scale: 1 }}
-                          transition={{ delay: i * 0.2 + 0.1, type: "spring" }}
                         >
-                          {item.status === "Live" ? (
-                            <motion.span animate={{ opacity: [1, 0.3, 1] }} transition={{ duration: 1, repeat: Infinity }}>●</motion.span>
-                          ) : "✓"}
-                        </motion.div>
-                        <div className="flex-1">
-                          <div className="text-[10px] font-bold text-[#0F172A]">{item.step}</div>
-                          <div className="text-[8.5px] text-[#64748B]">{item.detail}</div>
+                          ✓
                         </div>
-                        <span className="text-[8px] font-black px-1.5 py-0.5 rounded-md shrink-0"
-                          style={{ background: item.status === "Live" ? current.colorLight : '#F0FDF4', color: item.status === "Live" ? current.color : '#059669', border: `1px solid ${item.status === "Live" ? current.colorMid : '#BBF7D0'}` }}
-                        >
-                          {item.status}
-                        </span>
-                      </motion.div>
+                        <div className="flex-1">
+                          <div className="text-[11.5px] font-black text-[#0F172A] leading-snug">{item.step}</div>
+                          <div className="text-[10px] text-[#475569] font-bold">{item.detail}</div>
+                        </div>
+                      </div>
                     ))}
                   </div>
                 </div>
-                <motion.div
-                  className="bg-white/80 rounded-xl border border-slate-200/50 p-2.5 flex items-center justify-between text-[9.5px]"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.8 }}
-                >
-                  <span className="font-bold text-[#0F172A]">CRM Auto-Updated • Follow-up Scheduled</span>
-                  <span className="font-black px-2 py-0.5 rounded" style={{ background: current.colorLight, color: current.color }}>Autonomous</span>
-                </motion.div>
+
+                <div className="bg-gradient-to-br from-white via-emerald-50/50 to-teal-50/40 rounded-2xl p-3.5 border border-emerald-200/90 shadow-md shadow-emerald-500/10 flex items-center justify-between text-[11px]">
+                  <span className="font-black text-[#0F172A]">Pipeline Value: ₹3,80,000</span>
+                  <span className="font-black text-[#059669] bg-emerald-100 px-2.5 py-0.5 rounded-full border border-emerald-300 text-[10px] shadow-2xs">
+                    2.1s / Deal Velocity
+                  </span>
+                </div>
               </>
             )}
 
-            {/* Support: Richer chat conversation */}
+            {/* Support: Clean onboarding & response stream */}
             {activeAgent === 2 && (
               <>
-                <div className="bg-white/80 rounded-xl border border-slate-200/60 p-3 flex-1">
-                  <div className="flex items-center justify-between mb-2.5">
-                    <span className="text-[10px] font-black text-[#0F172A]">Live Customer Onboarding</span>
-                    <span className="text-[8px] font-bold px-2 py-0.5 rounded-full" style={{ background: current.colorLight, color: current.color }}>24/7 Active</span>
+                <div className="bg-gradient-to-br from-white via-emerald-50/40 to-teal-50/30 rounded-2xl border border-emerald-200/90 p-3.5 sm:p-4 shadow-lg shadow-emerald-500/10 flex-1 flex flex-col justify-between">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-[11px] font-black text-[#0F172A]">24/7 Autonomous Onboarding Stream</span>
+                    <span className="text-[9.5px] font-black text-emerald-800 bg-emerald-100 px-2.5 py-0.5 rounded-full border border-emerald-300 shadow-2xs">
+                      0.8s Response
+                    </span>
                   </div>
+
                   <div className="space-y-2">
-                    {[
-                      { from: "user", text: "How do we configure team access & custom workflows?" },
-                      { from: "ai", text: "Workspace configured! Guided onboarding links sent to all 12 team members." },
-                      { from: "user", text: "Can we integrate with our existing CRM?" },
-                      { from: "ai", text: "3 CRM integrations synced successfully. Data flowing in real-time." },
-                    ].map((msg, i) => (
-                      <motion.div
-                        key={i}
-                        className={`flex ${msg.from === "ai" ? "justify-end" : "justify-start"}`}
-                        initial={{ opacity: 0, x: msg.from === "ai" ? 16 : -16, y: 4 }}
-                        animate={{ opacity: 1, x: 0, y: 0 }}
-                        transition={{ delay: i * 0.35, type: "spring", stiffness: 220 }}
-                      >
-                        <div
-                          className={`px-3 py-2 rounded-xl text-[9.5px] font-medium max-w-[85%] ${
-                            msg.from === "ai"
-                              ? "border font-semibold"
-                              : "bg-slate-100/80 text-slate-700"
-                          }`}
-                          style={msg.from === "ai" ? { background: `${current.colorLight}`, borderColor: current.colorMid, color: '#0F172A' } : {}}
-                        >
-                          <span className="font-black mr-1" style={{ color: msg.from === "ai" ? current.color : '#475569' }}>
-                            {msg.from === "ai" ? "AI:" : "Q:"}
-                          </span>
-                          {msg.text}
-                        </div>
-                      </motion.div>
-                    ))}
+                    <div className="p-2.5 rounded-xl bg-gradient-to-r from-slate-100 via-white to-slate-100 text-[11.5px] text-[#334155] leading-snug border border-slate-200 shadow-2xs">
+                      <strong className="text-[#0F172A] font-black">Customer:</strong> How do we configure team access & custom workflows?
+                    </div>
+                    <div className="p-2.5 rounded-xl bg-gradient-to-r from-emerald-100/90 via-white to-emerald-50 text-[11.5px] text-[#0F172A] leading-snug font-normal border border-emerald-200 shadow-2xs">
+                      <strong className="text-emerald-900 font-black">AI Support:</strong> Workspace configured! Guided onboarding links sent to all 12 team members.
+                    </div>
                   </div>
-                </div>
-                <div className="grid grid-cols-2 gap-2">
-                  {[
-                    { label: "CSAT Score", val: "5.0 / 5.0" },
-                    { label: "Resolution", val: "100%" },
-                  ].map((kpi, i) => (
-                    <motion.div
-                      key={kpi.label}
-                      className="bg-white/80 rounded-xl border border-slate-200/50 p-2.5 flex items-center justify-between"
-                      initial={{ opacity: 0, y: 6 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: 1.4 + i * 0.1 }}
-                    >
-                      <span className="text-[9px] font-bold text-[#64748B]">{kpi.label}</span>
-                      <span className="text-[11px] font-black" style={{ color: current.color }}>{kpi.val}</span>
-                    </motion.div>
-                  ))}
+
+                  <div className="mt-3 pt-3 border-t border-emerald-200/60 flex items-center justify-between text-[10.5px] font-bold text-[#64748B]">
+                    <span>CSAT Score: 5.0 / 5.0</span>
+                    <span className="text-emerald-700 font-black">0 Backlog Tickets</span>
+                  </div>
                 </div>
               </>
             )}
 
-            {/* Ops: Task automation grid — richer */}
+            {/* Ops: Clean task automation grid */}
             {activeAgent === 3 && (
               <>
-                <div className="bg-white/80 rounded-xl border border-slate-200/60 p-3 flex-1">
-                  <div className="text-[10px] font-black text-[#0F172A] mb-2.5">Automated Workflow Tasks</div>
-                  <div className="grid grid-cols-2 gap-2">
-                    {[
-                      { task: "Invoice Processing", count: "24 Done", pct: 100 },
-                      { task: "Contract Drafting", count: "12 Done", pct: 100 },
-                      { task: "Report Generation", count: "8 Done", pct: 100 },
-                      { task: "Email Sequences", count: "36 Sent", pct: 100 },
-                      { task: "Task Assignment", count: "18 Routed", pct: 85 },
-                      { task: "Approval Flows", count: "6 Pending", pct: 60 },
-                    ].map((item, i) => (
-                      <motion.div
-                        key={item.task}
-                        className="rounded-lg border p-2"
-                        style={{ borderColor: `${current.colorMid}60`, background: i < 4 ? `${current.colorLight}40` : 'white' }}
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ delay: i * 0.1, type: "spring", stiffness: 300 }}
-                      >
-                        <div className="text-[9px] font-bold text-[#0F172A] mb-1">{item.task}</div>
-                        <div className="w-full bg-slate-100 rounded-full h-1 overflow-hidden">
-                          <motion.div
-                            className="h-full rounded-full"
-                            style={{ background: `linear-gradient(to right, ${current.color}, ${current.colorMid})` }}
-                            initial={{ width: '0%' }}
-                            animate={{ width: `${item.pct}%` }}
-                            transition={{ duration: 0.6, delay: i * 0.1 + 0.15 }}
-                          />
-                        </div>
-                        <div className="text-[8px] font-bold mt-1" style={{ color: current.color }}>{item.count}</div>
-                      </motion.div>
-                    ))}
+                <div className="bg-gradient-to-br from-white via-amber-50/40 to-emerald-50/30 rounded-2xl border border-amber-200/90 p-3.5 sm:p-4 shadow-lg shadow-amber-500/10 flex-1 flex flex-col justify-between">
+                  <div className="flex items-center justify-between text-[11px] font-black text-[#0F172A] mb-3">
+                    <span>Automated Operations & Workflow Tasks</span>
+                    <span className="text-[9.5px] font-black text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full border border-amber-300 shadow-2xs">
+                      85% Automated
+                    </span>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-2 mb-3">
+                    <div className="p-2.5 rounded-xl bg-gradient-to-br from-amber-100/80 via-white to-amber-50 border border-amber-200 shadow-2xs">
+                      <div className="text-[11px] font-black text-[#0F172A]">Invoices & Billing</div>
+                      <div className="text-[10px] text-amber-900 font-black mt-0.5">24 Processed Today</div>
+                    </div>
+                    <div className="p-2.5 rounded-xl bg-gradient-to-br from-emerald-100/80 via-white to-emerald-50 border border-emerald-200 shadow-2xs">
+                      <div className="text-[11px] font-black text-[#0F172A]">Cross-App Data Sync</div>
+                      <div className="text-[10px] text-emerald-900 font-black mt-0.5">100% Real-Time</div>
+                    </div>
+                  </div>
+
+                  <div className="pt-3 border-t border-amber-200/60 flex items-center justify-between text-[10px] font-bold text-[#64748B]">
+                    <span>Integrations: Stripe, QuickBooks, Slack, Notion</span>
+                    <span className="text-amber-800 font-black">Self-Healing Active</span>
                   </div>
                 </div>
-                <motion.div
-                  className="bg-white/80 rounded-xl border border-slate-200/50 p-2.5 flex items-center justify-between text-[9.5px]"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.7 }}
-                >
-                  <span className="font-bold text-[#0F172A]">Cross-Platform Sync Active</span>
-                  <span className="font-black px-2 py-0.5 rounded" style={{ background: current.colorLight, color: current.color }}>85% Ops Automated</span>
-                </motion.div>
               </>
             )}
 
-            {/* Founder: Rich executive briefing */}
+            {/* Founder: Clean executive briefing */}
             {activeAgent === 4 && (
               <>
-                <div className="bg-white/80 rounded-xl border border-slate-200/60 p-3 flex-1">
-                  <div className="flex items-center justify-between mb-2.5">
-                    <span className="text-[10px] font-black text-[#0F172A]">Weekly Founder Intelligence Brief</span>
-                    <span className="text-[8px] font-bold px-2 py-0.5 rounded-full" style={{ background: current.colorLight, color: current.color }}>Automated Digest</span>
+                <div className="bg-gradient-to-br from-white via-emerald-50/40 to-teal-50/30 rounded-2xl border border-emerald-200/90 p-3.5 sm:p-4 shadow-lg shadow-emerald-500/10 flex-1 flex flex-col justify-between">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-[11px] font-black text-[#0F172A]">Weekly Founder Executive Digest</span>
+                    <span className="text-[9.5px] font-black text-emerald-900 bg-emerald-100 px-2.5 py-0.5 rounded-full border border-emerald-300 shadow-2xs">
+                      Weekly Briefing
+                    </span>
                   </div>
-                  <div className="space-y-2">
-                    {[
-                      { label: "Revenue & Pipeline Growth", val: "↑ +34.2% MoM", width: "92%" },
-                      { label: "Operational Tasks Automated", val: "18 Completed", width: "78%" },
-                      { label: "Customer Satisfaction", val: "CSAT 5.0/5.0", width: "96%" },
-                      { label: "Inbound Lead Conversion", val: "↑ +28% Rate", width: "72%" },
-                    ].map((line, i) => (
-                      <motion.div
-                        key={line.label}
-                        className="flex items-center gap-2"
-                        initial={{ opacity: 0, x: -12 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: i * 0.2 }}
-                      >
-                        <span className="text-[#64748B] font-medium shrink-0 text-[8.5px] w-[38%]">{line.label}</span>
-                        <div className="flex-1 h-2.5 rounded-full overflow-hidden bg-slate-100">
-                          <motion.div
-                            className="h-full rounded-full"
-                            style={{ background: `linear-gradient(to right, ${current.color}, ${current.colorMid})` }}
-                            initial={{ width: '0%' }}
-                            animate={{ width: line.width }}
-                            transition={{ duration: 0.7, delay: i * 0.2 + 0.1, ease: "easeOut" }}
-                          />
-                        </div>
-                        <motion.span
-                          className="font-black text-[9px] shrink-0"
-                          style={{ color: current.color }}
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          transition={{ delay: i * 0.2 + 0.5 }}
-                        >
-                          {line.val}
-                        </motion.span>
-                      </motion.div>
-                    ))}
+
+                  <div className="space-y-2 text-[11.5px] text-[#334155] leading-relaxed">
+                    <div className="flex items-center justify-between p-2.5 rounded-xl bg-gradient-to-r from-emerald-100/80 via-white to-teal-50 border border-emerald-200 shadow-2xs">
+                      <span className="font-extrabold text-[#0F172A]">Revenue Growth (MoM)</span>
+                      <strong className="text-emerald-700 font-black">↑ +34.2%</strong>
+                    </div>
+                    <div className="flex items-center justify-between p-2.5 rounded-xl bg-gradient-to-r from-emerald-100/80 via-white to-emerald-50 border border-emerald-200 shadow-2xs">
+                      <span className="font-extrabold text-[#0F172A]">Cash Runway</span>
+                      <strong className="text-emerald-700 font-black">24.5 Months</strong>
+                    </div>
+                  </div>
+
+                  <div className="mt-3 pt-3 border-t border-emerald-200/60 text-[10.5px] font-bold text-[#64748B]">
+                    <span>Top Focus: Scale High-Performing Inbound Acquisition</span>
                   </div>
                 </div>
-                <motion.div
-                  className="rounded-xl border p-2.5 flex items-center justify-between text-[9.5px]"
-                  style={{ background: `${current.colorLight}60`, borderColor: `${current.colorMid}60` }}
-                  initial={{ opacity: 0, y: 6 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.8 }}
-                >
-                  <span className="font-extrabold" style={{ color: '#0F172A' }}>Top Priority: Expand High-Performing Inbound Funnel</span>
-                  <span className="text-[8px] font-black px-2 py-0.5 rounded bg-white border" style={{ borderColor: current.colorMid, color: current.color }}>
-                    Sent to Founder
-                  </span>
-                </motion.div>
               </>
             )}
           </div>
@@ -1443,31 +1262,48 @@ function Automation3DVisual() {
         </div>
       </div>
 
-      {/* ── Bottom Status Strip ── */}
-      <div className="relative z-10 bg-white/80 backdrop-blur border-t border-slate-200/60 px-4 py-2 flex items-center justify-between">
-        <div className="flex items-center gap-1.5">
-          <motion.span
-            className="w-2 h-2 rounded-full"
-            style={{ background: current.color }}
-            animate={{ opacity: [1, 0.4, 1] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
-          />
-          <span className="text-[10px] font-black text-[#0F172A]">Multi-Agent Orchestration</span>
+      {/* ── Bottom Telemetry Footer Strip (Fresh Emerald Dark Theme) ── */}
+      <div className="relative z-10 bg-gradient-to-r from-[#064E3B] via-[#047857] to-[#064E3B] border-t border-emerald-600/80 text-white px-4 py-2.5 flex items-center justify-between text-[10.5px] font-extrabold shadow-inner">
+        <div className="flex items-center gap-2">
+          <span className="w-2 h-2 rounded-full bg-emerald-300 animate-pulse" />
+          <span className="text-white">Real-Time Autonomous AI Engine Active</span>
         </div>
-        <div className="flex items-center gap-1.5 text-[8.5px] sm:text-[9px] font-black">
-          <span className="px-2 py-0.5 rounded border" style={{ background: current.colorLight, borderColor: current.colorMid, color: current.color }}>
-            24/7 Autonomous
-          </span>
-          <span className="px-2 py-0.5 rounded bg-emerald-50 border border-emerald-200 text-emerald-700">
-            5 Agents Live
-          </span>
-        </div>
+        <span className="bg-emerald-700/90 text-white border border-emerald-400/80 px-2.5 py-0.5 rounded-md text-[9.5px] tracking-wide font-black shadow-2xs">
+          99.99% Uptime
+        </span>
       </div>
     </div>
   );
 }
 
-/* ── Single 3D Product Stage Component ── */
+/* ── Single 3D Product Stage Component (Matching 2nd Section Card & UI/UX Look) ── */
+/* ── Reusable scroll-reveal wrapper (Matches 2nd section WhoWeBuildFor look & behavior) ── */
+function Reveal({
+  children,
+  delay = 0,
+  className = "",
+  y = 22,
+}: {
+  children: React.ReactNode;
+  delay?: number;
+  className?: string;
+  y?: number;
+}) {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: false, amount: 0.1 });
+  return (
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y }}
+      animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y }}
+      transition={{ duration: 0.45, delay, ease: "easeOut" }}
+      className={className}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
 function ProductStage({
   product,
   index,
@@ -1475,107 +1311,168 @@ function ProductStage({
   product: (typeof products)[0];
   index: number;
 }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: false, amount: 0.2 });
+  const cardRef = useRef<HTMLDivElement>(null);
+  const cardInView = useInView(cardRef, { once: false, amount: 0.05 });
+
+  const headerRef = useRef<HTMLDivElement>(null);
+  const headerInView = useInView(headerRef, { once: false, amount: 0.05 });
+
+  const descRef = useRef<HTMLDivElement>(null);
+  const descInView = useInView(descRef, { once: false, amount: 0.05 });
+
+  const isAiAgent = product.id === "automation-suite";
+
+  const cardTheme = isAiAgent
+    ? {
+        bg: "bg-gradient-to-br from-emerald-100/90 via-emerald-50/60 to-white",
+        border: "border-emerald-300/90",
+        shadow: "shadow-[0_16px_45px_rgba(5,150,105,0.14)] group-hover:shadow-[0_28px_65px_rgba(5,150,105,0.24)]",
+        headerGradient: "from-[#059669] via-[#10B981] to-[#0D9488]",
+        descBg: "bg-gradient-to-br from-white via-emerald-50/90 to-teal-50/70 border-emerald-300/90 shadow-md shadow-emerald-500/10",
+        topLine: "from-[#059669] via-[#10B981] to-[#0D9488]",
+        tileBg: "bg-gradient-to-br from-emerald-100/80 via-emerald-50/60 to-white border-emerald-300/80 hover:from-emerald-200/80 hover:to-white",
+        ctaBg: "bg-[#059669] hover:bg-[#047857] shadow-emerald-500/20",
+        noteBg: "bg-emerald-100/90 border-emerald-200/90 text-[#064E3B]",
+        dotBg: "bg-[#059669]",
+        metricText: "text-[#059669]",
+      }
+    : {
+        bg: "bg-gradient-to-br from-blue-100/90 via-blue-50/60 to-white",
+        border: "border-blue-300/90",
+        shadow: "shadow-[0_16px_45px_rgba(37,99,235,0.12)] group-hover:shadow-[0_28px_65px_rgba(37,99,235,0.22)]",
+        headerGradient: "from-[#1D4ED8] via-[#2563EB] to-[#0EA5E9]",
+        descBg: "bg-gradient-to-br from-white via-blue-50/90 to-sky-50/70 border-blue-300/90 shadow-md shadow-blue-500/10",
+        topLine: "from-[#1D4ED8] via-[#2563EB] to-[#0EA5E9]",
+        tileBg: "bg-gradient-to-br from-blue-100/80 via-blue-50/60 to-white border-blue-300/80 hover:from-blue-200/80 hover:to-white",
+        ctaBg: "bg-[#2563EB] hover:bg-[#1D4ED8] shadow-blue-500/20",
+        noteBg: "bg-blue-100/90 border-blue-200/90 text-[#1E3A8A]",
+        dotBg: "bg-[#2563EB]",
+        metricText: "text-[#2563EB]",
+      };
 
   return (
     <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 36 }}
-      animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.65, delay: index * 0.15, ease: "easeOut" }}
-      className="relative rounded-3xl sm:rounded-[36px] bg-white border border-slate-200/90 shadow-[0_15px_40px_rgba(15,23,42,0.04)] hover:shadow-[0_25px_60px_rgba(37,99,235,0.09)] transition-all duration-500 overflow-hidden p-5 sm:p-8 lg:p-10 mb-12 last:mb-0 group/card"
+      ref={cardRef}
+      initial={{ opacity: 0, y: 24 }}
+      animate={cardInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
+      transition={{ duration: 0.45, delay: index * 0.1, ease: "easeOut" }}
+      className={`group relative rounded-3xl border ${cardTheme.border} ${cardTheme.bg} overflow-hidden ${cardTheme.shadow} transition-all duration-500 hover:-translate-y-1.5 flex flex-col`}
     >
-      {/* 3D Top Accent Glow Line */}
-      <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] opacity-90" />
+      {/* ── Cinematic Gradient Header (Matching 2nd Section Look) ── */}
+      <motion.div
+        ref={headerRef}
+        initial={{ opacity: 0 }}
+        animate={headerInView ? { opacity: 1 } : { opacity: 0 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        className={`relative bg-gradient-to-br ${cardTheme.headerGradient} px-6 pt-7 pb-12 sm:px-9 sm:pt-9 sm:pb-14 overflow-hidden`}
+      >
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,255,255,0.22),transparent_60%)] pointer-events-none" />
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-        {/* Left Column: Product Info & Feature Grid */}
-        <div className="lg:col-span-7 flex flex-col justify-between">
-          <div>
-            {/* Number + Badge Pill */}
-            <div className="flex items-center gap-3 mb-3.5">
-              <span className="text-xs font-black tracking-[0.2em] text-[#2563EB]">
-                {product.num}
-              </span>
-              <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-[0.12em] border ${product.badgeBg}`}>
-                <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-pulse" />
-                {product.badge}
-              </span>
-            </div>
-
-            {/* Product Title */}
-            <h3 className="text-2xl sm:text-3xl lg:text-[2.2rem] font-black text-[#0F172A] tracking-[-0.03em] leading-tight mb-2 group-hover/card:text-[#2563EB] transition-colors duration-300">
-              {product.name}
-            </h3>
-
-            {/* Sub-headline */}
-            <p className="text-sm sm:text-[15px] font-bold text-[#2563EB] mb-3.5">
-              {product.headline}
-            </p>
-
-            {/* Description */}
-            <p className="text-[13.5px] sm:text-sm text-[#475569] leading-relaxed mb-6">
-              {product.description}
-            </p>
-
-            {/* Core Capability 6-Tile Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mb-6">
-              {product.features.map((feat) => (
-                <div
-                  key={feat.title}
-                  className="rounded-2xl p-3 bg-slate-50/90 border border-slate-200/80 hover:bg-blue-50/60 hover:border-blue-200 transition-colors duration-200 flex items-start gap-2.5"
-                >
-                  <div className={`w-7 h-7 rounded-xl flex items-center justify-center text-xs flex-shrink-0 ${feat.iconBg}`}>
-                    {feat.icon}
-                  </div>
-                  <div>
-                    <h4 className="text-[12px] font-extrabold text-[#0F172A] leading-snug">
-                      {feat.title}
-                    </h4>
-                    <p className="text-[10.5px] text-[#64748B] leading-relaxed mt-0.5 font-normal">
-                      {feat.desc}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            {/* Target Audience Footer Note */}
-            {"footerNote" in product && product.footerNote && (
-              <div className="mb-5 inline-flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-50 border border-slate-200/80 text-[10.5px] font-bold text-[#475569]">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
-                {product.footerNote}
-              </div>
-            )}
-          </div>
-
-          {/* CTA & Metrics Footer */}
-          <div className="flex flex-wrap items-center justify-between gap-4 pt-5 border-t border-slate-100">
-            <a
-              href={product.href}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-xs sm:text-[13px] font-extrabold shadow-md hover:shadow-lg shadow-blue-500/20 transition-all duration-200 group/btn"
-            >
-              <span>{product.cta}</span>
-              <span className="group-hover/btn:translate-x-1 transition-transform duration-200 text-sm">→</span>
-            </a>
-
-            <div className="flex items-center gap-4 sm:gap-6">
-              <div>
-                <div className="text-base sm:text-lg font-black text-[#0F172A]">{product.metric1.val}</div>
-                <div className="text-[10px] font-bold text-[#64748B] uppercase tracking-wider">{product.metric1.label}</div>
-              </div>
-              <div className="w-px h-7 bg-slate-200" />
-              <div>
-                <div className="text-base sm:text-lg font-black text-[#0F172A]">{product.metric2.val}</div>
-                <div className="text-[10px] font-bold text-[#64748B] uppercase tracking-wider">{product.metric2.label}</div>
-              </div>
-            </div>
-          </div>
+        <div className="relative z-10 flex flex-wrap items-center justify-between gap-3 mb-3">
+          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10.5px] font-extrabold uppercase tracking-[0.12em] bg-white/15 text-white border border-white/25 backdrop-blur-sm shadow-xs">
+            <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+            {product.badge}
+          </span>
         </div>
 
-        {/* Right Column: 3D Interactive Visual Canvas */}
-        <div className="lg:col-span-5 flex justify-center w-full">
-          {product.mockupType === "lms" ? <LMS3DVisual /> : <Automation3DVisual />}
+        {/* Product Name & Headline */}
+        <div className="relative z-10">
+          <h3 className="text-2xl sm:text-3xl lg:text-[2.35rem] font-black text-white tracking-[-0.03em] leading-[1.18]">
+            {product.name}
+          </h3>
+          <p className="text-white/90 text-xs sm:text-sm font-bold mt-1 tracking-wide">
+            {product.headline}
+          </p>
+        </div>
+
+        {/* Decorative Rings */}
+        <div className="absolute bottom-[-36px] right-[-36px] w-[140px] h-[140px] rounded-full border-[28px] border-white/10 pointer-events-none" />
+        <div className="absolute bottom-[-10px] right-[40px] w-[80px] h-[80px] rounded-full border-[14px] border-white/8 pointer-events-none" />
+      </motion.div>
+
+      {/* ── Floating Description Card Badge (Matching 2nd Section Look) ── */}
+      <motion.div
+        ref={descRef}
+        initial={{ opacity: 0, y: 16 }}
+        animate={descInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 16 }}
+        transition={{ duration: 0.5, delay: 0.08, ease: "easeOut" }}
+        className="relative -mt-6 mx-5 sm:mx-8 z-10"
+      >
+        <div className={`rounded-2xl ${cardTheme.descBg} border p-4 sm:p-5 shadow-lg`}>
+          <div className={`h-1 bg-gradient-to-r ${cardTheme.topLine} rounded-t-2xl -mx-5 -mt-5 mb-3.5`} />
+          <p className="text-[13.5px] sm:text-[14.5px] text-[#475569] leading-[1.75] font-normal text-justify">
+            {product.description}
+          </p>
+        </div>
+      </motion.div>
+
+      {/* ── Card Body Container (Features + 3D Visual Stage) ── */}
+      <div className="p-5 sm:p-8 pt-6 sm:pt-7 flex-1">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-7 lg:gap-10 items-stretch">
+          {/* Left Column: Core Capability 6-Tile Grid */}
+          <div className="lg:col-span-7 flex flex-col justify-between">
+            <div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-3.5 mb-6">
+                {product.features.map((feat, featIdx) => (
+                  <motion.div
+                    key={feat.title}
+                    initial={{ opacity: 0, y: 14 }}
+                    animate={cardInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
+                    transition={{ duration: 0.4, delay: featIdx * 0.06, ease: "easeOut" }}
+                    className={`group/feat rounded-2xl p-3.5 sm:p-4 ${cardTheme.tileBg} transition-all duration-200 flex items-start gap-3 shadow-2xs hover:shadow-md relative overflow-hidden`}
+                  >
+                    <div className={`w-8 h-8 rounded-xl flex items-center justify-center text-xs flex-shrink-0 group-hover/feat:scale-105 transition-transform duration-200 ${feat.iconBg}`}>
+                      {feat.icon}
+                    </div>
+                    <div>
+                      <h4 className="text-[12.5px] sm:text-[13px] font-black text-[#0F172A] leading-snug">
+                        {feat.title}
+                      </h4>
+                      <p className="text-[11px] sm:text-[11.5px] text-[#64748B] leading-[1.65] mt-1 font-normal">
+                        {feat.desc}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Target Audience Footer Note */}
+              {"footerNote" in product && product.footerNote && (
+                <div className={`mb-6 inline-flex items-center gap-2 px-3.5 py-2 rounded-xl ${cardTheme.noteBg} border text-[11px] font-extrabold shadow-2xs`}>
+                  <span className={`w-1.5 h-1.5 rounded-full ${cardTheme.dotBg}`} />
+                  {product.footerNote}
+                </div>
+              )}
+            </div>
+
+            {/* CTA & Metrics Footer */}
+            <div className="flex flex-wrap items-center justify-between gap-4 pt-5 border-t border-slate-200/60">
+              <a
+                href={product.href}
+                className={`inline-flex items-center gap-2 px-6 py-3 rounded-full ${cardTheme.ctaBg} text-white text-xs sm:text-[13.5px] font-extrabold shadow-md hover:shadow-lg transition-all duration-200 group/btn`}
+              >
+                <span>{product.cta}</span>
+                <span className="group-hover/btn:translate-x-1 transition-transform duration-200 text-sm">→</span>
+              </a>
+
+              <div className="flex items-center gap-4 sm:gap-6">
+                <div className="text-right">
+                  <div className={`text-base sm:text-lg font-black ${cardTheme.metricText}`}>{product.metric1.val}</div>
+                  <div className="text-[10px] font-extrabold text-slate-500 uppercase tracking-wider">{product.metric1.label}</div>
+                </div>
+                <div className="h-7 w-[1px] bg-slate-200/80" />
+                <div className="text-right">
+                  <div className={`text-base sm:text-lg font-black ${cardTheme.metricText}`}>{product.metric2.val}</div>
+                  <div className="text-[10px] font-extrabold text-slate-500 uppercase tracking-wider">{product.metric2.label}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: 3D Interactive Visual Canvas */}
+          <div className="lg:col-span-5 flex flex-col justify-center w-full h-full">
+            {product.mockupType === "lms" ? <LMS3DVisual /> : <Automation3DVisual />}
+          </div>
         </div>
       </div>
     </motion.div>
@@ -1583,11 +1480,8 @@ function ProductStage({
 }
 
 export default function Products() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-  const headerInView = useInView(sectionRef, { once: false, amount: 0.2 });
-
   return (
-    <section className="relative bg-gradient-to-b from-white via-slate-50/50 to-white overflow-hidden border-t border-slate-100 py-20 sm:py-28 lg:py-32">
+    <section className="relative bg-gradient-to-b from-white via-slate-50/50 to-white overflow-hidden border-t border-slate-100 py-8 sm:py-12 lg:py-14">
       {/* ── Soft Ambient Glow Blobs ── */}
       <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-blue-100/50 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-20 right-1/4 w-[500px] h-[300px] bg-sky-100/40 rounded-full blur-[120px] pointer-events-none" />
@@ -1596,47 +1490,48 @@ export default function Products() {
       <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:28px_28px] opacity-35 pointer-events-none" />
 
       <Container as="div">
-        <div ref={sectionRef} className="relative z-10 max-w-6xl mx-auto">
-          {/* ── Section Header ── */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 mb-14 sm:mb-20">
-            <div className="lg:col-span-6">
-              <motion.div
-                initial={{ opacity: 0, y: 15 }}
-                animate={headerInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5 }}
-                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200/90 text-[11px] font-extrabold text-[#2563EB] tracking-[0.15em] uppercase mb-4"
-              >
-                <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-pulse" />
-                Products Built by Agaran
-              </motion.div>
+        <div className="relative z-10 max-w-6xl mx-auto">
+          {/* ── Section Header — Ultra-Clean, Zero-Sentence High-Impact UI/UX ── */}
+          <div className="relative text-center max-w-4xl mx-auto mb-8 sm:mb-10">
+            {/* Category Badge Pill */}
+            <Reveal delay={0} y={14}>
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200/90 text-[11px] font-black text-[#2563EB] tracking-[0.18em] uppercase mb-3.5 shadow-2xs">
+                <span className="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse" />
+                PRODUCTS BUILT BY AGARAN
+              </div>
+            </Reveal>
 
-              <motion.h2
-                initial={{ opacity: 0, y: 20 }}
-                animate={headerInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.55, delay: 0.08 }}
-                className="text-[1.95rem] sm:text-[2.65rem] lg:text-[3.15rem] font-black text-[#0F172A] tracking-[-0.035em] leading-[1.14]"
-              >
-                Purpose-built platforms for{" "}
+            {/* Main Title */}
+            <Reveal delay={0.08} y={20}>
+              <h2 className="text-[2.1rem] sm:text-[3rem] lg:text-[3.5rem] font-black text-[#0F172A] tracking-[-0.035em] leading-[1.12]">
+                Education & Automation{" "}
                 <span className="bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] bg-clip-text text-transparent">
-                  education & automation.
+                  Platforms
                 </span>
-              </motion.h2>
-            </div>
+              </h2>
+            </Reveal>
 
-            <div className="lg:col-span-6 flex items-end">
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                animate={headerInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.55, delay: 0.16 }}
-                className="text-sm sm:text-base text-[#475569] leading-[1.75] max-w-lg font-normal"
-              >
-                Technology designed to modernize institutions and scale business operations with intelligence, precision, and long-term capability.
-              </motion.p>
-            </div>
+            {/* Punchy Capability Highlights — ZERO SENTENCES */}
+            <Reveal delay={0.16} y={16}>
+              <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mt-4">
+                <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-white border border-slate-200/90 shadow-sm text-xs sm:text-[13px] font-black text-[#0F172A]">
+                  <span className="w-2 h-2 rounded-full bg-[#2563EB]" />
+                  <span>Coaching & LMS OS</span>
+                </div>
+                <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-white border border-slate-200/90 shadow-sm text-xs sm:text-[13px] font-black text-[#0F172A]">
+                  <span className="w-2 h-2 rounded-full bg-[#2563EB]" />
+                  <span>Autonomous AI Workforce</span>
+                </div>
+                <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-white border border-slate-200/90 shadow-sm text-xs sm:text-[13px] font-black text-[#0F172A]">
+                  <span className="w-2 h-2 rounded-full bg-[#2563EB]" />
+                  <span>24/7 Operations Engine</span>
+                </div>
+              </div>
+            </Reveal>
           </div>
 
-          {/* ── 3D Product Stages ── */}
-          <div className="relative">
+          {/* ── 3D Product Stages — smooth scroll reveal & refresh ── */}
+          <div className="relative space-y-6 sm:space-y-8 lg:space-y-10">
             {products.map((product, index) => (
               <ProductStage key={product.id} product={product} index={index} />
             ))}

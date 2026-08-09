@@ -18,7 +18,7 @@ interface MobileMenuProps {
 
 const linkIconStyles: Record<string, { icon: React.ReactNode; bgClass: string }> = {
   "what we do": {
-    bgClass: "bg-amber-50 text-amber-600 border border-amber-200/60 group-hover:bg-amber-100",
+    bgClass: "bg-blue-50 text-[#2563EB] border border-blue-200/60 group-hover:bg-blue-100",
     icon: (
       <svg className="w-[18px] h-[18px]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -26,7 +26,7 @@ const linkIconStyles: Record<string, { icon: React.ReactNode; bgClass: string }>
     ),
   },
   products: {
-    bgClass: "bg-blue-50 text-blue-600 border border-blue-200/60 group-hover:bg-blue-100",
+    bgClass: "bg-blue-50 text-[#2563EB] border border-blue-200/60 group-hover:bg-blue-100",
     icon: (
       <svg className="w-[18px] h-[18px]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
@@ -34,7 +34,7 @@ const linkIconStyles: Record<string, { icon: React.ReactNode; bgClass: string }>
     ),
   },
   work: {
-    bgClass: "bg-emerald-50 text-emerald-600 border border-emerald-200/60 group-hover:bg-emerald-100",
+    bgClass: "bg-blue-50 text-[#2563EB] border border-blue-200/60 group-hover:bg-blue-100",
     icon: (
       <svg className="w-[18px] h-[18px]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -42,7 +42,7 @@ const linkIconStyles: Record<string, { icon: React.ReactNode; bgClass: string }>
     ),
   },
   about: {
-    bgClass: "bg-purple-50 text-purple-600 border border-purple-200/60 group-hover:bg-purple-100",
+    bgClass: "bg-blue-50 text-[#2563EB] border border-blue-200/60 group-hover:bg-blue-100",
     icon: (
       <svg className="w-[18px] h-[18px]" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />

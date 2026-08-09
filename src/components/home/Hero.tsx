@@ -350,7 +350,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative min-h-[92vh] flex flex-col justify-center overflow-hidden bg-white pt-24 pb-12 sm:pt-28 sm:pb-16">
+    <section className="relative min-h-[85vh] flex flex-col justify-center overflow-hidden bg-white pt-16 pb-6 sm:pt-20 sm:pb-8">
       {/* Light constellation particle background (Desktop Only) */}
       <canvas
         ref={canvasRef}
@@ -446,7 +446,7 @@ export default function Hero() {
 
         {/* Bottom Floating Stats Showcase Bar */}
         <motion.div
-          className="mt-12 sm:mt-16 lg:mt-20 w-full p-5 sm:p-7 lg:p-8 bg-white/70 backdrop-blur-xl rounded-2xl sm:rounded-3xl border border-slate-200/80 shadow-[0_15px_35px_rgba(0,0,0,0.04)] grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 divide-x-0 md:divide-x divide-slate-100"
+          className="mt-6 sm:mt-8 lg:mt-10 w-full p-5 sm:p-7 lg:p-8 bg-white/70 backdrop-blur-xl rounded-2xl sm:rounded-3xl border border-slate-200/80 shadow-[0_15px_35px_rgba(0,0,0,0.04)] grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 divide-x-0 md:divide-x divide-slate-100"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.9, duration: 0.7 }}

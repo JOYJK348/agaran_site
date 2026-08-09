@@ -1,156 +1,344 @@
+"use client";
+
+import { useState, useEffect, useRef, useCallback } from "react";
 import Container from "@/components/ui/Container";
 
 const pillars = [
   {
-    title: "AI-first approach",
-    description:
-      "AI and automation are built into the way we design software, workflows, and digital products.",
-    points: [
-      "Autonomous agent workflow integration",
-      "Real-time decision intelligence",
-      "Native tool & API orchestration",
-    ],
-    color: "#2563EB",
-    iconBg: "bg-blue-50 text-[#2563EB] border-blue-100",
-    icon: (
-      <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
-      </svg>
+    title: "AI-Driven Solutions",
+    description: (
+      <>
+        <strong className="font-extrabold text-[#059669]">AI and automation</strong> are built natively into the way we design <strong className="font-extrabold text-[#0F172A]">software</strong> and <strong className="font-extrabold text-[#0F172A]">business systems</strong>.
+      </>
     ),
+    points: [
+      { bold: "AI-powered", text: "workflows" },
+      { bold: "Smart business", text: "automation" },
+      { bold: "Connected", text: "software systems" },
+      { bold: "Faster", text: "everyday operations" },
+    ],
   },
   {
-    title: "Built for scalability",
-    description:
-      "Our systems are designed to grow with your business, not limit it.",
-    points: [
-      "Modular micro-architecture design",
-      "High-throughput load handling",
-      "99.99% cloud reliability standards",
-    ],
-    color: "#0284C7",
-    iconBg: "bg-sky-50 text-[#0284C7] border-sky-100",
-    icon: (
-      <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" />
-      </svg>
+    title: "Built to Grow",
+    description: (
+      <>
+        Our software is designed to be <strong className="font-extrabold text-[#0F172A]">reliable, flexible</strong>, and ready to <strong className="font-extrabold text-[#2563EB]">scale as your business grows</strong>.
+      </>
     ),
+    points: [
+      { bold: "Scalable", text: "architecture" },
+      { bold: "Cloud-based", text: "systems" },
+      { bold: "Secure data", text: "management" },
+      { bold: "Long-term", text: "flexibility" },
+    ],
   },
   {
-    title: "Real-world automation",
-    description:
-      "We automate repetitive work, simplify operations, and improve business efficiency.",
-    points: [
-      "Cross-platform data synchronization",
-      "85% operational overhead reduction",
-      "Autonomous error recovery & logging",
-    ],
-    color: "#059669",
-    iconBg: "bg-emerald-50 text-[#059669] border-emerald-100",
-    icon: (
-      <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-      </svg>
+    title: "Automation Saves Time",
+    description: (
+      <>
+        We automate <strong className="font-extrabold text-[#2563EB]">repetitive work</strong> so your team can focus on <strong className="font-extrabold text-[#0F172A]">what matters most</strong>.
+      </>
     ),
+    points: [
+      { bold: "Workflow", text: "automation" },
+      { bold: "Document", text: "processing" },
+      { bold: "Lead & customer", text: "management" },
+      { bold: "Faster internal", text: "operations" },
+    ],
   },
   {
-    title: "Long-term technology partner",
-    description:
-      "We build products and systems that can evolve with your organization over time.",
-    points: [
-      "Continuous architectural evolution",
-      "Maintainable, clean code standards",
-      "Dedicated senior engineering support",
-    ],
-    color: "#7C3AED",
-    iconBg: "bg-purple-50 text-[#7C3AED] border-purple-100",
-    icon: (
-      <svg className="w-5 h-5 sm:w-6 sm:h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
-      </svg>
+    title: "A Long-Term Partner",
+    description: (
+      <>
+        We build software that is <strong className="font-extrabold text-[#0F172A]">easy to maintain</strong>, improve, and <strong className="font-extrabold text-[#2563EB]">expand over time</strong>.
+      </>
     ),
+    points: [
+      { bold: "Clean & maintainable", text: "systems" },
+      { bold: "Continuous", text: "improvements" },
+      { bold: "Reliable", text: "technical support" },
+      { bold: "Solutions built for", text: "long-term growth" },
+    ],
   },
 ];
 
 export default function WhyAgaran() {
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const touchStartX = useRef<number | null>(null);
+
+  const nextSlide = useCallback(() => {
+    setActiveSlide((prev) => (prev + 1) % pillars.length);
+  }, []);
+
+  const prevSlide = useCallback(() => {
+    setActiveSlide((prev) => (prev - 1 + pillars.length) % pillars.length);
+  }, []);
+
+  // Auto-cycle for mobile view every 3.5 seconds
+  useEffect(() => {
+    if (isPaused) return;
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 3500);
+    return () => clearInterval(interval);
+  }, [isPaused, nextSlide]);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    setIsPaused(true);
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (touchStartX.current === null) return;
+    const touchEndX = e.changedTouches[0].clientX;
+    const diff = touchStartX.current - touchEndX;
+
+    if (diff > 50) {
+      nextSlide();
+    } else if (diff < -50) {
+      prevSlide();
+    }
+    touchStartX.current = null;
+    setIsPaused(false);
+  };
+
   return (
-    <section id="why-agaran" className="relative py-14 sm:py-20 lg:py-28 bg-white border-t border-slate-200/80">
+    <section id="why-agaran" className="relative py-8 sm:py-12 lg:py-14 bg-gradient-to-b from-white via-slate-50/40 to-white border-t border-slate-200/80 overflow-hidden">
+      {/* ── Soft Ambient Glow Blobs ── */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-blue-50/60 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:28px_28px] opacity-30 pointer-events-none" />
+
       <Container as="div">
-        <div className="max-w-6xl mx-auto px-1 sm:px-0">
-          {/* ── Section Header (Title: Why Agaran + Subtitle) ── */}
-          <div className="max-w-3xl mb-10 sm:mb-14 lg:mb-16 text-left">
-            <h2 className="text-[2.2rem] sm:text-[2.8rem] lg:text-[3.4rem] font-black text-[#0F172A] tracking-tight leading-[1.12]">
-              Why{" "}
+        <div className="relative z-10 max-w-7xl mx-auto px-1 sm:px-0">
+          
+          {/* ── Section Header — Ultra-Clean, Zero-Sentence High-Impact UI/UX (Matching Pattern) ── */}
+          <div className="relative text-center max-w-4xl mx-auto mb-8 sm:mb-10">
+            {/* Category Badge Pill */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200/90 text-[11px] font-black text-[#2563EB] tracking-[0.18em] uppercase mb-3.5 shadow-2xs">
+              <span className="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse" />
+              WHY CHOOSE AGARAN
+            </div>
+
+            {/* Main Title */}
+            <h2 className="text-[2.1rem] sm:text-[3rem] lg:text-[3.5rem] font-black text-[#0F172A] tracking-[-0.035em] leading-[1.12]">
+              Built for{" "}
               <span className="bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] bg-clip-text text-transparent">
-                Agaran
+                Growth
               </span>
             </h2>
 
-            <p className="text-base sm:text-lg lg:text-xl font-bold text-[#334155] leading-relaxed mt-3 tracking-tight">
-              We build technology that is practical, scalable, and designed for long-term growth.
-            </p>
+            {/* Punchy Capability Highlights — ZERO SENTENCES */}
+            <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mt-4">
+              <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-white border border-slate-200/90 shadow-sm text-xs sm:text-[13px] font-black text-[#0F172A]">
+                <span className="w-2 h-2 rounded-full bg-[#2563EB]" />
+                <span>Practical Engineering</span>
+              </div>
+              <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-white border border-slate-200/90 shadow-sm text-xs sm:text-[13px] font-black text-[#0F172A]">
+                <span className="w-2 h-2 rounded-full bg-[#2563EB]" />
+                <span>Automated Efficiency</span>
+              </div>
+              <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-white border border-slate-200/90 shadow-sm text-xs sm:text-[13px] font-black text-[#0F172A]">
+                <span className="w-2 h-2 rounded-full bg-[#2563EB]" />
+                <span>Reliable Partnership</span>
+              </div>
+            </div>
           </div>
 
-          {/* ── 4 Clean Cards Grid (No Numbers, No Extra Tags) ── */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 lg:gap-7">
-            {pillars.map((pillar) => (
+          {/* ── Mobile / Tablet Auto-Slider (< lg) ── */}
+          <div
+            className="block lg:hidden"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+          >
+            <div className="relative overflow-hidden rounded-3xl">
               <div
-                key={pillar.title}
-                className="group relative p-6 sm:p-7 lg:p-8 rounded-2xl sm:rounded-3xl bg-slate-50/70 hover:bg-white border border-slate-200/90 hover:border-blue-300 hover:shadow-[0_12px_40px_rgba(37,99,235,0.08)] transition-all duration-200 flex flex-col justify-between"
+                className="flex transition-transform duration-500 ease-out"
+                style={{ transform: `translateX(-${activeSlide * 100}%)` }}
               >
-                <div>
-                  {/* Clean Icon Container */}
-                  <div className={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl ${pillar.iconBg} border flex items-center justify-center shadow-2xs mb-5`}>
-                    {pillar.icon}
-                  </div>
+                {pillars.map((pillar, idx) => {
+                  const cardStyles = [
+                    { bg: "bg-gradient-to-br from-emerald-100/90 via-emerald-50/70 to-white", border: "border-emerald-300/80", accent: "from-[#059669] via-[#10B981] to-[#059669]", badge: "bg-emerald-100 text-emerald-800 border-emerald-300" },
+                    { bg: "bg-gradient-to-br from-blue-100/90 via-blue-50/70 to-white", border: "border-blue-300/80", accent: "from-[#1D4ED8] via-[#2563EB] to-[#0284C7]", badge: "bg-blue-100 text-[#2563EB] border-blue-300" },
+                    { bg: "bg-gradient-to-br from-emerald-100/90 via-emerald-50/70 to-white", border: "border-emerald-300/80", accent: "from-[#059669] via-[#10B981] to-[#059669]", badge: "bg-emerald-100 text-emerald-800 border-emerald-300" },
+                    { bg: "bg-gradient-to-br from-blue-100/90 via-blue-50/70 to-white", border: "border-blue-300/80", accent: "from-[#1D4ED8] via-[#2563EB] to-[#0284C7]", badge: "bg-blue-100 text-[#2563EB] border-blue-300" },
+                  ][idx];
 
-                  {/* Title & Description */}
-                  <h3 className="text-xl sm:text-2xl font-black text-[#0F172A] tracking-tight leading-snug">
-                    {pillar.title}
-                  </h3>
-                  <p className="text-[13.5px] sm:text-[14.5px] leading-relaxed text-[#475569] mt-2 font-medium">
-                    {pillar.description}
-                  </p>
-                </div>
+                  return (
+                    <div key={pillar.title} className="w-full shrink-0 px-1">
+                      <div className={`relative rounded-3xl ${cardStyles.bg} border ${cardStyles.border} shadow-[0_8px_30px_rgba(37,99,235,0.08)] overflow-hidden flex flex-col justify-between p-5 sm:p-6`}>
+                        {/* Top Brand Accent Line */}
+                        <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${cardStyles.accent}`} />
 
-                {/* Key Bullet Highlights */}
-                <div className="mt-5 sm:mt-6 pt-4 sm:pt-5 border-t border-slate-200/70">
-                  <div className="space-y-1.5 sm:space-y-2">
-                    {pillar.points.map((point) => (
-                      <div key={point} className="flex items-center gap-2 text-[12.5px] sm:text-[13px] text-[#334155] font-semibold">
-                        <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ background: pillar.color }} />
-                        <span className="leading-snug">{point}</span>
+                        {/* Ambient Spotlight */}
+                        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(37,99,235,0.08),transparent_70%)] pointer-events-none" />
+
+                        <div className="relative z-10">
+                          {/* Slide Number Tag */}
+                          <div className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border text-[10px] font-mono font-black uppercase tracking-wider mb-2.5 shadow-2xs ${cardStyles.badge}`}>
+                            <span>0{idx + 1}</span>
+                            <span>/</span>
+                            <span>04</span>
+                          </div>
+
+                          {/* Card Title */}
+                          <h3 className="text-lg font-black text-[#0F172A] tracking-tight leading-snug mb-2">
+                            {pillar.title}
+                          </h3>
+
+                          {/* Description with Highlights */}
+                          <p className="text-[13px] leading-[1.65] text-[#475569] font-normal mb-4 text-justify">
+                            {pillar.description}
+                          </p>
+                        </div>
+
+                        {/* Feature Bullet Checklist */}
+                        <div className="relative z-10 pt-3.5 border-t border-blue-200/60">
+                          <ul className="space-y-2">
+                            {pillar.points.map((pt) => (
+                              <li
+                                key={pt.bold + pt.text}
+                                className="flex items-start gap-2.5 text-[12px] text-[#334155] leading-snug"
+                              >
+                                <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] shrink-0 mt-1.5" />
+                                <span className="font-normal">
+                                  <strong className="font-extrabold text-[#0F172A]">{pt.bold}</strong> {pt.text}
+                                </span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
                       </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* ── Signature Bottom Card (Mobile Responsive) ── */}
-          <div className="mt-6 sm:mt-10 p-5 sm:p-7 lg:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-r from-blue-50/90 via-sky-50/50 to-indigo-50/80 border border-blue-200/90 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-6 text-center sm:text-left">
-            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-3 sm:gap-4">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#2563EB] flex items-center justify-center text-white text-lg sm:text-xl font-black shadow-md shadow-blue-500/20 shrink-0">
-                ✦
-              </div>
-              <div>
-                <div className="text-[10px] sm:text-[11px] font-mono font-bold text-[#2563EB] uppercase tracking-wider">
-                  THE AGARAN COMMITMENT
-                </div>
-                <h4 className="text-sm sm:text-base lg:text-lg font-black text-[#0F172A] tracking-tight mt-0.5 leading-snug">
-                  Technology built for growth, automation, and long-term impact.
-                </h4>
+                    </div>
+                  );
+                })}
               </div>
             </div>
 
-            <a
-              href="/contact"
-              className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-xs sm:text-sm font-extrabold shadow-md hover:shadow-blue-500/25 transition-all duration-150 shrink-0"
-            >
-              <span>Start a Conversation</span>
-              <span>&rarr;</span>
-            </a>
+            {/* ── Mobile Navigation Controls (Dots + Counter) ── */}
+            <div className="flex items-center justify-between mt-3.5 px-2">
+              <div className="flex items-center gap-1.5">
+                {pillars.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setActiveSlide(idx)}
+                    aria-label={`Go to slide ${idx + 1}`}
+                    className={`h-2 rounded-full transition-all duration-300 ${
+                      activeSlide === idx
+                        ? "w-7 bg-[#2563EB]"
+                        : "w-2 bg-slate-200 hover:bg-slate-300"
+                    }`}
+                  />
+                ))}
+              </div>
+
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={prevSlide}
+                  aria-label="Previous slide"
+                  className="w-8 h-8 rounded-full bg-white border border-slate-200/90 text-[#0F172A] hover:bg-blue-50 hover:text-[#2563EB] hover:border-blue-200 flex items-center justify-center text-xs font-black shadow-xs transition-colors"
+                >
+                  &larr;
+                </button>
+                <button
+                  onClick={nextSlide}
+                  aria-label="Next slide"
+                  className="w-8 h-8 rounded-full bg-[#2563EB] text-white hover:bg-[#1D4ED8] flex items-center justify-center text-xs font-black shadow-xs transition-colors"
+                >
+                  &rarr;
+                </button>
+              </div>
+            </div>
           </div>
+
+          {/* ── Desktop Single Row (lg:grid-cols-4) ── */}
+          <div className="hidden lg:grid lg:grid-cols-4 gap-4 xl:gap-5 items-stretch">
+            {pillars.map((pillar, idx) => {
+              const cardStyles = [
+                { bg: "bg-gradient-to-br from-emerald-100/90 via-emerald-50/70 to-white", border: "border-emerald-300/80", hoverShadow: "hover:shadow-[0_22px_50px_rgba(5,150,105,0.20)]", accent: "from-[#059669] via-[#10B981] to-[#059669]", badge: "bg-emerald-100 text-emerald-800 border-emerald-300", dot: "bg-emerald-600", spotlight: "rgba(16,185,129,0.18)" },
+                { bg: "bg-gradient-to-br from-blue-100/90 via-blue-50/70 to-white", border: "border-blue-300/80", hoverShadow: "hover:shadow-[0_22px_50px_rgba(37,99,235,0.16)]", accent: "from-[#1D4ED8] via-[#2563EB] to-[#0284C7]", badge: "bg-blue-100 text-[#2563EB] border-blue-300", dot: "bg-[#2563EB]", spotlight: "rgba(37,99,235,0.14)" },
+                { bg: "bg-gradient-to-br from-emerald-100/90 via-emerald-50/70 to-white", border: "border-emerald-300/80", hoverShadow: "hover:shadow-[0_22px_50px_rgba(5,150,105,0.20)]", accent: "from-[#059669] via-[#10B981] to-[#059669]", badge: "bg-emerald-100 text-emerald-800 border-emerald-300", dot: "bg-emerald-600", spotlight: "rgba(16,185,129,0.18)" },
+                { bg: "bg-gradient-to-br from-blue-100/90 via-blue-50/70 to-white", border: "border-blue-300/80", hoverShadow: "hover:shadow-[0_22px_50px_rgba(37,99,235,0.16)]", accent: "from-[#1D4ED8] via-[#2563EB] to-[#0284C7]", badge: "bg-blue-100 text-[#2563EB] border-blue-300", dot: "bg-[#2563EB]", spotlight: "rgba(37,99,235,0.14)" },
+              ][idx];
+
+              return (
+                <div
+                  key={pillar.title}
+                  className={`group relative rounded-3xl ${cardStyles.bg} border ${cardStyles.border} shadow-[0_8px_30px_rgba(37,99,235,0.06)] ${cardStyles.hoverShadow} transition-all duration-300 overflow-hidden flex flex-col justify-between p-5 xl:p-6 hover:-translate-y-1.5 cursor-default`}
+                >
+                  {/* Radial Spotlight Hover Shimmer */}
+                  <div
+                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+                    style={{ background: `radial-gradient(ellipse at top, ${cardStyles.spotlight}, transparent 70%)` }}
+                  />
+
+                  {/* Top Animated Brand Accent Line */}
+                  <div className={`absolute top-0 left-0 right-0 h-1.5 group-hover:h-2 bg-gradient-to-r ${cardStyles.accent} transition-all duration-300`} />
+
+                  <div className="relative z-10">
+                    {/* Slide Number Tag */}
+                    <div className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border text-[10px] font-mono font-black uppercase tracking-wider mb-3 shadow-2xs ${cardStyles.badge}`}>
+                      <span>0{idx + 1}</span>
+                      <span>/</span>
+                      <span>04</span>
+                    </div>
+
+                    {/* Card Title */}
+                    <h3 className="text-[18px] xl:text-[19px] font-black text-[#0F172A] tracking-tight leading-snug mb-2.5 group-hover:text-[#2563EB] transition-colors duration-200">
+                      {pillar.title}
+                    </h3>
+
+                    {/* Description with Highlights */}
+                    <p className="text-[12.5px] xl:text-[13px] leading-[1.65] text-[#475569] font-normal mb-4 text-justify">
+                      {pillar.description}
+                    </p>
+                  </div>
+
+                  {/* Feature Bullet Checklist (Clean Typographic Bullets) */}
+                  <div className="relative z-10 pt-3.5 border-t border-slate-200/60">
+                    <ul className="space-y-2.5">
+                      {pillar.points.map((pt) => (
+                        <li
+                          key={pt.bold + pt.text}
+                          className="flex items-start gap-2.5 text-[12px] xl:text-[12.5px] text-[#334155] leading-snug group/item hover:text-[#0F172A] transition-colors duration-150"
+                        >
+                          <span className={`w-1.5 h-1.5 rounded-full ${cardStyles.dot} shrink-0 mt-1.5 group-hover/item:scale-125 transition-transform duration-150`} />
+                          <span className="group-hover/item:translate-x-0.5 transition-transform duration-150 font-normal">
+                            <strong className="font-extrabold text-[#0F172A]">{pt.bold}</strong> {pt.text}
+                          </span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* ── Signature Bottom Commitment Banner (Zero Emojis) ── */}
+          <div className="mt-7 sm:mt-9 p-5 sm:p-6 lg:p-7 rounded-3xl bg-gradient-to-r from-blue-50/95 via-sky-50/60 to-blue-50/90 border border-blue-200/90 shadow-sm flex flex-col lg:flex-row items-center justify-between gap-4 sm:gap-6 text-center lg:text-left">
+            <div>
+              <div className="text-[10px] sm:text-[11px] font-mono font-extrabold text-[#2563EB] uppercase tracking-wider">
+                THE AGARAN COMMITMENT
+              </div>
+              <h4 className="text-sm sm:text-base lg:text-lg font-black text-[#0F172A] tracking-tight mt-0.5 leading-snug">
+                Technology engineered for <span className="text-[#2563EB]">growth</span>, <span className="text-[#2563EB]">automation</span>, and long-term enterprise capability.
+              </h4>
+            </div>
+
+            <div className="flex items-center justify-center gap-4 shrink-0 w-full sm:w-auto">
+              <a
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 rounded-full bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-xs sm:text-sm font-extrabold shadow-md hover:shadow-lg shadow-blue-500/20 transition-all duration-200 shrink-0 group/cta"
+              >
+                <span>Start a Conversation</span>
+                <span className="group-hover/cta:translate-x-1 transition-transform duration-200">&rarr;</span>
+              </a>
+            </div>
+          </div>
+
         </div>
       </Container>
     </section>
