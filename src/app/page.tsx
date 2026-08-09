@@ -1,10 +1,9 @@
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/home/Hero";
-import WhatWeDo from "@/components/home/WhatWeDo";
+import WhoWeBuildFor from "@/components/home/WhoWeBuildFor";
 import HowWeWork from "@/components/home/HowWeWork";
-import EducationTechnology from "@/components/home/EducationTechnology";
-import BusinessAutomation from "@/components/home/BusinessAutomation";
 import Products from "@/components/home/Products";
+import WhyAgaran from "@/components/home/WhyAgaran";
 import SelectedWork from "@/components/home/SelectedWork";
 import FinalCTA from "@/components/home/FinalCTA";
 import JsonLd from "@/components/seo/JsonLd";
@@ -16,11 +15,10 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <WhatWeDo />
+        <WhoWeBuildFor />
         <HowWeWork />
-        <EducationTechnology />
-        <BusinessAutomation />
         <Products />
+        <WhyAgaran />
         <SelectedWork />
         <FinalCTA />
       </main>
