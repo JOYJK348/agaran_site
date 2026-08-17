@@ -41,7 +41,7 @@ const projects = [
     tags: [
       "Live Classes & Recordings",
       "Exam Management",
-      "OMR Builder",
+      "Digital Exam Builder",
       "Offline Exam Builder",
       "AI Answer Solver",
       "AI Integration",

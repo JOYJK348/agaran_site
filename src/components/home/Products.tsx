@@ -222,1055 +222,763 @@ const products = [
 ];
 
 /* ── Ultra-Rich Interactive LMS Dashboard & Portal Simulation (Pure Light Theme) ── */
+/* ── Immersive Coaching Platform OS Visual (Rich Text & 3D Orbital Network • Blue Theme) ── */
 function LMS3DVisual() {
-  const [activeTab, setActiveTab] = useState<"kpi" | "exam" | "lectures" | "academics">("kpi");
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const [isHovered, setIsHovered] = useState(false);
+  const [activeModule, setActiveModule] = useState(0);
 
-  /* Render animated SVG icons for LMS module tabs */
-  const renderLmsIcon = (id: string, isActive: boolean, color: string) => {
-    const cls = "w-5 h-5 sm:w-6 sm:h-6 transition-all duration-300";
-    const gradId = `grad-lms-${id}-${isActive ? 'a' : 'i'}`;
-    const activeGrad = (
-      <defs>
-        <linearGradient id={gradId} x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor={color}>
-            <animate attributeName="stop-color" values={`${color};#3B82F6;#0284C7;${color}`} dur="3s" repeatCount="indefinite" />
-          </stop>
-          <stop offset="100%" stopColor="#3B82F6">
-            <animate attributeName="stop-color" values={`#3B82F6;${color};#1D4ED8;#3B82F6`} dur="3s" repeatCount="indefinite" />
-          </stop>
-        </linearGradient>
-      </defs>
-    );
-    const inactiveGrad = (
-      <defs>
-        <linearGradient id={gradId} x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor={color} stopOpacity="0.75" />
-          <stop offset="100%" stopColor="#94A3B8" stopOpacity="0.6" />
-        </linearGradient>
-      </defs>
-    );
-    const stroke = `url(#${gradId})`;
-    const sw = isActive ? 2.2 : 1.8;
-
-    switch (id) {
-      case "kpi":
-        return (
-          <svg className={cls} viewBox="0 0 24 24" fill="none" strokeWidth={sw} strokeLinecap="round" strokeLinejoin="round">
-            {isActive ? activeGrad : inactiveGrad}
-            <path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" stroke={stroke} />
-            {isActive && <circle cx="12" cy="14" r="1.5" fill={color} opacity="0.8"><animate attributeName="r" values="1.5;2.5;1.5" dur="1.5s" repeatCount="indefinite" /></circle>}
-          </svg>
-        );
-      case "exam":
-        return (
-          <svg className={cls} viewBox="0 0 24 24" fill="none" strokeWidth={sw} strokeLinecap="round" strokeLinejoin="round">
-            {isActive ? activeGrad : inactiveGrad}
-            <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke={stroke} />
-            {isActive && <line x1="9" y1="12" x2="15" y2="12" stroke={color} strokeWidth="3"><animate attributeName="x2" values="9;15;9" dur="2s" repeatCount="indefinite" /></line>}
-          </svg>
-        );
-      case "lectures":
-        return (
-          <svg className={cls} viewBox="0 0 24 24" fill="none" strokeWidth={sw} strokeLinecap="round" strokeLinejoin="round">
-            {isActive ? activeGrad : inactiveGrad}
-            <path d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" stroke={stroke} />
-          </svg>
-        );
-      case "academics":
-        return (
-          <svg className={cls} viewBox="0 0 24 24" fill="none" strokeWidth={sw} strokeLinecap="round" strokeLinejoin="round">
-            {isActive ? activeGrad : inactiveGrad}
-            <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" stroke={stroke} />
-          </svg>
-        );
-      default:
-        return null;
-    }
-  };
-
-  const tabs: { id: "kpi" | "academics" | "lectures" | "exam"; label: string; color: string }[] = [
-    { id: "kpi", label: "Admissions & Leads", color: "#2563EB" },
-    { id: "academics", label: "Academics & Batches", color: "#0284C7" },
-    { id: "lectures", label: "Live & Recorded Hub", color: "#1D4ED8" },
-    { id: "exam", label: "Exam & Assessment", color: "#0369A1" },
+  const modules = [
+    {
+      id: "admissions",
+      label: "Admissions",
+      badge: "ADMISSIONS & ENROLLMENT",
+      icon: "🎓",
+      problem: "Manual Lead Tracking & Delayed Student Follow-ups",
+      solution: "Automated Lead Capture & Instant Student Enrollment",
+      steps: [
+        { icon: "📝", label: "Lead Ingestion", desc: "Captures web, WhatsApp & walk-in leads" },
+        { icon: "⚡", label: "Instant Follow-up", desc: "Sends syllabus & fee options in 1.5s" },
+        { icon: "🎯", label: "Auto Enrollment", desc: "Digital form submission & student ID gen" },
+      ],
+      metric: "3.4x Faster Admissions",
+      impact: "100% Digital Onboarding",
+      color: "#2563EB",
+    },
+    {
+      id: "academics",
+      label: "Academics",
+      badge: "ACADEMIC & BATCH OS",
+      icon: "📚",
+      problem: "Overlapping Schedules & Manual Attendance Sheets",
+      solution: "Unified Batch, Schedule & Live Attendance Engine",
+      steps: [
+        { icon: "📅", label: "Batch Scheduling", desc: "Auto-creates timetables with zero clash" },
+        { icon: "📲", label: "Biometric Sync", desc: "Live attendance via app & RFID scanner" },
+        { icon: "📊", label: "Progress Report", desc: "Syllabus tracking & performance insights" },
+      ],
+      metric: "98.2% Attendance Rate",
+      impact: "Zero Schedule Clashes",
+      color: "#0284C7",
+    },
+    {
+      id: "assessments",
+      label: "Exams & Ranking",
+      badge: "EXAM & EVALUATION",
+      icon: "📝",
+      problem: "Days Spent Manual Grading & Rank Calculation",
+      solution: "Instant Test Engine, Digital Auto-Grading & AIR Ranks",
+      steps: [
+        { icon: "🧠", label: "Question Bank", desc: "Auto-generates JEE, NEET & Foundation tests" },
+        { icon: "⚡", label: "1-Click Evaluation", desc: "Digital paper scanning & online auto-grade" },
+        { icon: "📊", label: "AIR Rank Engine", desc: "Instant AIR ranks & topic weakness reports" },
+      ],
+      metric: "99.8% Exam Accuracy",
+      impact: "Instant Results Delivery",
+      color: "#1D4ED8",
+    },
+    {
+      id: "fees",
+      label: "Fees & SMS",
+      badge: "FEE RECOVERY ENGINE",
+      icon: "💳",
+      problem: "Uncollected Installments & Manual Reminder Calls",
+      solution: "Automated Fee Collection & Parent WhatsApp Alerts",
+      steps: [
+        { icon: "💳", label: "Payment Plans", desc: "Auto-generates invoices & installments" },
+        { icon: "📲", label: "WhatsApp Alerts", desc: "Automated gentle reminders to parents" },
+        { icon: "🧾", label: "Digital Receipts", desc: "Instant PDF receipts & accounting sync" },
+      ],
+      metric: "3.4x Faster Fee Recovery",
+      impact: "Zero Pending Installments",
+      color: "#0369A1",
+    },
+    {
+      id: "portal",
+      label: "Student Hub",
+      badge: "STUDENT & PARENT PORTAL",
+      icon: "📱",
+      problem: "Frequent Parent Inquiries for Marks & Attendance",
+      solution: "Dedicated Mobile App for Live Marks, Videos & Notices",
+      steps: [
+        { icon: "📱", label: "Mobile App", desc: "Dedicated iOS & Android parent portal" },
+        { icon: "🎥", label: "Recorded Lectures", desc: "24/7 access to HD class recordings" },
+        { icon: "📈", label: "Live Growth View", desc: "Real-time marks, attendance & notifications" },
+      ],
+      metric: "4.9/5 App Satisfaction",
+      impact: "90% Fewer Admin Calls",
+      color: "#2563EB",
+    },
   ];
 
-  // Auto-cycle through LMS tabs every 3.5 seconds
-  const autoPlayRef = useRef<ReturnType<typeof setInterval> | null>(null);
-
-  const startAutoPlay = useCallback(() => {
-    if (autoPlayRef.current) clearInterval(autoPlayRef.current);
-    autoPlayRef.current = setInterval(() => {
-      setActiveTab((prev) => {
-        const order: ("kpi" | "academics" | "lectures" | "exam")[] = ["kpi", "academics", "lectures", "exam"];
-        const nextIdx = (order.indexOf(prev) + 1) % order.length;
-        return order[nextIdx];
-      });
-    }, 3500);
+  // Auto-cycle modules every 5s
+  useEffect(() => {
+    const timer = setInterval(() => setActiveModule((p) => (p + 1) % 5), 5000);
+    return () => clearInterval(timer);
   }, []);
 
-  useEffect(() => {
-    if (isAutoPlaying && !isHovered) {
-      startAutoPlay();
-    } else {
-      if (autoPlayRef.current) clearInterval(autoPlayRef.current);
-    }
-    return () => { if (autoPlayRef.current) clearInterval(autoPlayRef.current); };
-  }, [isAutoPlaying, isHovered, startAutoPlay]);
+  const current = modules[activeModule];
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-    if (autoPlayRef.current) clearInterval(autoPlayRef.current);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-
-  const handleTabClick = (tabId: "kpi" | "exam" | "lectures" | "academics") => {
-    setActiveTab(tabId);
-    setIsAutoPlaying(false);
-    if (autoPlayRef.current) clearInterval(autoPlayRef.current);
-    setTimeout(() => {
-      setIsAutoPlaying(true);
-    }, 8000);
-  };
+  // Calculate 5 node positions in a circle
+  const R = 36;
+  const positions = modules.map((_, i) => {
+    const angle = -Math.PI / 2 + i * ((2 * Math.PI) / 5);
+    return { x: 50 + R * Math.cos(angle), y: 50 + R * Math.sin(angle) };
+  });
 
   return (
-    <div
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      className="relative w-full h-full min-h-[480px] sm:min-h-[540px] rounded-3xl bg-gradient-to-br from-blue-50/90 via-sky-50/50 via-white to-blue-50/70 border border-blue-200/90 shadow-[0_20px_60px_rgba(37,99,235,0.12)] overflow-hidden flex flex-col justify-between group/visual text-[#0F172A]"
-    >
-      {/* ── Top Ambient Light Mesh ── */}
-      <div className="absolute top-0 right-0 w-80 h-80 bg-blue-200/40 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-80 h-80 bg-sky-200/40 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute inset-0 bg-[radial-gradient(#93c5fd_1px,transparent_1px)] [background-size:24px_24px] opacity-35 pointer-events-none" />
-
-      {/* ── Top Application Titlebar (Vibrant Brand Blue Gradient Header) ── */}
-      <div className="relative z-10 bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] text-white px-3.5 sm:px-4 py-2.5 sm:py-3 border-b border-blue-400/30 flex flex-wrap items-center justify-between gap-2 shadow-md">
-        <div className="flex items-center gap-2">
-          <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-xl bg-white text-[#2563EB] flex items-center justify-center text-[11px] font-black shadow-md">
-            AG
-          </div>
-          <div>
-            <div className="text-[11.5px] sm:text-[12px] font-black tracking-tight leading-none text-white">
-              Agaran Institute OS
-            </div>
-            <div className="text-[9px] sm:text-[9.5px] text-blue-100 mt-0.5 font-semibold">
-              Enterprise Coaching & Learning Hub
-            </div>
-          </div>
-        </div>
-
-        {/* Live Status Badge */}
-        <div className="flex items-center gap-2">
-          <span className="inline-flex items-center gap-1.5 px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-full bg-white/20 border border-white/30 text-white text-[9.5px] sm:text-[10px] font-black backdrop-blur-md shadow-2xs">
-            <span className="w-1.5 h-1.5 rounded-full bg-sky-300 animate-pulse" />
-            2,450 Students Active
-          </span>
-        </div>
+    <div className="relative w-full rounded-3xl bg-gradient-to-br from-blue-50/90 via-white to-sky-50/70 border border-blue-200/80 shadow-[0_12px_45px_rgba(37,99,235,0.10)] overflow-hidden">
+      {/* ── Soft Ambient Glow Blobs ── */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <motion.div
+          className="absolute w-[400px] h-[400px] rounded-full opacity-[0.12]"
+          style={{ background: "radial-gradient(circle, #3B82F6, transparent 70%)", top: "-10%", left: "10%" }}
+          animate={{ scale: [1, 1.2, 1] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute w-[350px] h-[350px] rounded-full opacity-[0.09]"
+          style={{ background: "radial-gradient(circle, #0284C7, transparent 70%)", bottom: "-10%", right: "10%" }}
+          animate={{ scale: [1.2, 1, 1.2] }}
+          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <div className="absolute inset-0 bg-[radial-gradient(#93c5fd_0.8px,transparent_0.8px)] [background-size:22px_22px] opacity-[0.22]" />
       </div>
 
-      {/* ── Visual Module Showcase Strip — Matching AI Agents Style (No Scrollbar) ── */}
-      <div className="relative z-10 px-3 sm:px-4 py-3 sm:py-4 bg-gradient-to-b from-blue-100/50 via-sky-50/60 to-white/90 border-b border-blue-200/50">
-        {/* Sleek Fiber-Optic Energy Pipeline Track */}
-        <div className="absolute left-[12%] right-[12%] top-1/2 -translate-y-1/2 h-[1.5px] rounded-full overflow-hidden bg-slate-200/60 z-0">
-          <motion.div
-            className="w-24 h-full rounded-full"
-            style={{
-              background: `linear-gradient(90deg, transparent, ${tabs[0].color}, #38BDF8, transparent)`,
-              boxShadow: `0 0 10px ${tabs[0].color}80`,
-            }}
-            animate={{ x: ['-100%', '350%'] }}
-            transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
-          />
+      {/* ── Top Bar with Module Selector Pills ── */}
+      <div className="relative z-10 px-4 sm:px-6 py-3 border-b border-blue-200/60 bg-white/60 backdrop-blur-md flex flex-wrap items-center justify-between gap-3">
+        <div className="flex items-center gap-2">
+          <div className="w-2.5 h-2.5 rounded-full bg-blue-600 animate-pulse" />
+          <span className="text-xs font-black text-[#0F172A] uppercase tracking-wider">
+            Agaran Institute Operating System
+          </span>
         </div>
 
-        <div className="relative z-10 flex items-center justify-between gap-1">
-          {tabs.map((tab, idx) => {
-            const isActive = activeTab === tab.id;
+        {/* Desktop/Tablet Module Selector Pills */}
+        <div className="hidden sm:flex items-center gap-1.5">
+          {modules.map((mod, idx) => {
+            const isActive = idx === activeModule;
             return (
-              <motion.button
-                key={tab.id}
+              <button
+                key={mod.id}
                 type="button"
-                onClick={() => handleTabClick(tab.id)}
-                className="flex flex-col items-center cursor-pointer flex-1 group/tab"
-                animate={isActive ? { y: -2 } : { y: 0 }}
-                transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                onClick={() => setActiveModule(idx)}
+                className={`cursor-pointer px-3 py-1 rounded-full text-[11px] font-black transition-all duration-300 border flex items-center gap-1.5 ${
+                  isActive
+                    ? "bg-blue-600 text-white border-blue-500 shadow-md scale-105"
+                    : "bg-white/80 text-slate-600 border-blue-200/80 hover:bg-blue-50 hover:text-blue-800"
+                }`}
               >
-                <motion.div
-                  className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-2xl flex items-center justify-center border-2 mb-1.5 transition-all duration-300"
-                  style={{
-                    background: isActive
-                      ? `linear-gradient(135deg, ${tab.color}30, ${tab.color}10)`
-                      : `linear-gradient(135deg, ${tab.color}15, white)`,
-                    borderColor: isActive ? tab.color : `${tab.color}40`,
-                    boxShadow: isActive
-                      ? `0 10px 25px -5px ${tab.color}50, 0 4px 10px -3px ${tab.color}30`
-                      : `0 2px 6px ${tab.color}12`,
-                  }}
-                  animate={isActive ? { y: -4, scale: 1.05 } : { y: 0, scale: 1 }}
-                  whileHover={{ y: -6, scale: 1.08 }}
-                  transition={{ type: "spring", stiffness: 350, damping: 22 }}
-                >
-                  <motion.div
-                    className="w-5 h-5 sm:w-6 sm:h-6"
-                    animate={isActive ? { y: [0, -2, 0] } : { y: 0 }}
-                    transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-                  >
-                    {renderLmsIcon(tab.id, isActive, tab.color)}
-                  </motion.div>
-
-                  {/* Sleek active dot indicator at top right */}
-                  {isActive && (
-                    <motion.span
-                      className="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full border-2 border-white flex items-center justify-center shadow-sm"
-                      style={{ background: tab.color }}
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{ type: "spring", stiffness: 500 }}
-                    >
-                      <span className="w-1 h-1 rounded-full bg-white animate-pulse" />
-                    </motion.span>
-                  )}
-                </motion.div>
-
-                {/* Label */}
-                <motion.span
-                  className="text-[7.5px] sm:text-[8.5px] font-black text-center leading-tight max-w-[65px] sm:max-w-[85px]"
-                  style={{ color: isActive ? tab.color : '#64748B' }}
-                  animate={isActive ? { opacity: 1 } : { opacity: 0.8 }}
-                >
-                  {tab.label}
-                </motion.span>
-              </motion.button>
+                <span>{mod.icon}</span>
+                <span>{mod.label}</span>
+              </button>
             );
           })}
         </div>
       </div>
 
-      {/* ── Active Module Interactive Detail Canvas — Clean & Vibrant Light Theme ── */}
-      <div className="relative z-10 px-3 sm:px-4 py-4 sm:py-5 flex-1 flex flex-col">
+      {/* ── Main Content Grid (Orbital Network + Text Explanation Stream) ── */}
+      <div className="relative z-10 p-5 sm:p-7 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        {/* Left Column: 3D Orbital Network (5 cols on lg) */}
+        <div className="lg:col-span-5 flex flex-col items-center justify-center">
+          <div className="relative w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] lg:w-[340px] lg:h-[340px]">
+            {/* SVG Connection Beams */}
+            <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
+              <defs>
+                <filter id="aglow-blue">
+                  <feGaussianBlur stdDeviation="1.2" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
 
-        {/* TAB 1: Admissions & Leads Pipeline */}
-        {activeTab === "kpi" && (
-          <motion.div
-            key="kpi"
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2 }}
-            className="flex-1 flex flex-col justify-between gap-3"
-          >
-            <div className="bg-gradient-to-br from-blue-100/90 via-blue-50/80 to-white rounded-2xl p-4 border border-blue-300/90 shadow-md shadow-blue-500/10 relative overflow-hidden">
-              <div className="h-1 bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] rounded-t-2xl -mx-4 -mt-4 mb-3" />
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-[10px] font-black text-[#2563EB] bg-blue-100 px-2.5 py-0.5 rounded-full border border-blue-300 shadow-2xs">
-                  Automated Lead Pipeline
-                </span>
-                <span className="text-[10px] font-black text-blue-900 bg-blue-100 px-2.5 py-0.5 rounded-full border border-blue-300 shadow-2xs">
-                  +42 Inbound Today
-                </span>
-              </div>
+              {/* Orbital rings */}
+              <circle cx="50" cy="50" r={R} fill="none" stroke="#BFDBFE" strokeWidth="0.6" strokeDasharray="3 3" />
+              <circle cx="50" cy="50" r={R * 0.65} fill="none" stroke="#93C5FD" strokeWidth="0.4" opacity="0.5" />
 
-              <h4 className="text-base sm:text-lg font-black text-[#0F172A] tracking-tight">
-                Inbound Student Admission Velocity
-              </h4>
+              {/* Connection beams from each node to center */}
+              {positions.map((pos, i) => {
+                const isActive = i === activeModule;
+                return (
+                  <g key={modules[i].id}>
+                    <motion.line
+                      x1="50" y1="50" x2={pos.x} y2={pos.y}
+                      stroke={isActive ? "#2563EB" : "#93C5FD"}
+                      strokeWidth={isActive ? 1.6 : 0.6}
+                      strokeDasharray={isActive ? "4 2" : "2 4"}
+                      filter={isActive ? "url(#aglow-blue)" : undefined}
+                      animate={{ strokeDashoffset: isActive ? [12, 0] : [6, 0] }}
+                      transition={{ strokeDashoffset: { duration: 1.2, repeat: Infinity, ease: "linear" } }}
+                    />
+                    {isActive && (
+                      <motion.circle
+                        r="2.5" fill="#2563EB"
+                        animate={{ cx: [50, pos.x], cy: [50, pos.y], opacity: [0.3, 1, 0.3] }}
+                        transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                      />
+                    )}
+                  </g>
+                );
+              })}
+            </svg>
 
-              {/* Stat Row */}
-              <div className="grid grid-cols-3 gap-2 mt-3">
-                <div className="p-2 sm:p-2.5 rounded-xl bg-gradient-to-br from-blue-100/80 via-white to-blue-50 border border-blue-200/90 shadow-2xs">
-                  <div className="text-[10px] font-bold text-[#64748B]">Total Leads</div>
-                  <div className="text-base sm:text-lg font-black text-[#2563EB]">1,280</div>
+            {/* Central Core */}
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+              <motion.div
+                animate={{ scale: [1, 1.06, 1] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                className="relative"
+              >
+                <div className="absolute -inset-4 rounded-full bg-blue-400/20 blur-xl pointer-events-none" />
+                
+                {/* Outer Orbit Rings */}
+                <motion.div
+                  className="absolute -inset-7 rounded-full border border-blue-300/40"
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+                >
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-blue-500" />
+                </motion.div>
+
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-blue-600 via-sky-600 to-blue-800 flex flex-col items-center justify-center shadow-xl shadow-blue-400/30 border-2 border-white">
+                  <span className="text-white font-black text-sm sm:text-base tracking-tight">LMS</span>
+                  <span className="text-[7.5px] text-blue-100 font-extrabold uppercase tracking-widest">OS</span>
                 </div>
-                <div className="p-2 sm:p-2.5 rounded-xl bg-gradient-to-br from-sky-100/80 via-white to-blue-50 border border-sky-200/90 shadow-2xs">
-                  <div className="text-[10px] font-bold text-[#64748B]">Converted</div>
-                  <div className="text-base sm:text-lg font-black text-[#0284C7]">842</div>
-                </div>
-                <div className="p-2 sm:p-2.5 rounded-xl bg-gradient-to-br from-indigo-100/80 via-white to-blue-50 border border-indigo-200/90 shadow-2xs">
-                  <div className="text-[10px] font-bold text-[#64748B]">Conv. Rate</div>
-                  <div className="text-base sm:text-lg font-black text-[#1D4ED8]">65.8%</div>
-                </div>
-              </div>
+              </motion.div>
             </div>
 
-            {/* Inbound Lead Stream */}
-            <div className="bg-gradient-to-br from-white via-blue-50/50 to-sky-50/40 rounded-2xl p-4 border border-blue-200/90 shadow-lg shadow-blue-500/10 flex-1 flex flex-col justify-between">
-              <div className="flex items-center justify-between text-[11px] font-black text-[#0F172A] mb-2">
-                <span>Real-Time Lead Stream</span>
-                <span className="text-[9.5px] font-black text-[#2563EB]">Auto CRM Sync</span>
-              </div>
-
-              <div className="space-y-2">
-                <div className="p-3 rounded-xl bg-gradient-to-r from-blue-100/80 via-white to-sky-50 border border-blue-200/90 shadow-sm flex items-center justify-between gap-3">
-                  <div>
-                    <div className="font-black text-[#0F172A] text-[12px] leading-snug">Siddharth V. (Advanced Masterclass)</div>
-                    <div className="text-[#2563EB] text-[10px] mt-0.5 font-extrabold">Admission Confirmed • ₹45,000 Paid</div>
+            {/* Orbiting Module Nodes */}
+            {modules.map((mod, i) => {
+              const pos = positions[i];
+              const isActive = i === activeModule;
+              return (
+                <motion.button
+                  key={mod.id}
+                  type="button"
+                  onClick={() => setActiveModule(i)}
+                  className="absolute z-30 -translate-x-1/2 -translate-y-1/2 cursor-pointer outline-none group"
+                  style={{ left: `${pos.x}%`, top: `${pos.y}%` }}
+                  animate={{ scale: isActive ? 1.15 : 0.95 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                >
+                  {isActive && (
+                    <motion.div
+                      className="absolute -inset-2.5 rounded-full border-2 border-blue-500/70"
+                      animate={{ scale: [1, 1.25, 1], opacity: [0.6, 0.2, 0.6] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                    />
+                  )}
+                  <div
+                    className={`w-11 h-11 sm:w-13 sm:h-13 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${
+                      isActive
+                        ? "bg-white border-blue-600 shadow-lg shadow-blue-300/40 text-xl sm:text-2xl ring-4 ring-blue-100"
+                        : "bg-white/80 border-blue-200 text-lg opacity-70 group-hover:opacity-100 group-hover:border-blue-300"
+                    }`}
+                  >
+                    <span>{mod.icon}</span>
                   </div>
-                  <span className="text-[9.5px] text-[#1D4ED8] bg-blue-100 px-2.5 py-1 rounded-lg font-black shrink-0 shadow-2xs border border-blue-300">Enrolled</span>
-                </div>
 
-                <div className="p-3 rounded-xl bg-gradient-to-r from-blue-100/80 via-white to-blue-50 border border-blue-200/90 shadow-sm flex items-center justify-between gap-3">
-                  <div>
-                    <div className="font-black text-[#0F172A] text-[12px] leading-snug">Ananya R. (Core Foundation Batch)</div>
-                    <div className="text-[#2563EB] text-[10px] mt-0.5 font-extrabold">Counseling Scheduled Today 04:30 PM</div>
+                  <div className={`absolute -bottom-5 left-1/2 -translate-x-1/2 whitespace-nowrap text-[9px] font-black px-2 py-0.5 rounded-full border transition-all ${
+                    isActive ? "bg-blue-600 text-white border-blue-500 shadow-xs" : "bg-white/90 text-slate-600 border-slate-200"
+                  }`}>
+                    {mod.label}
                   </div>
-                  <span className="text-[9.5px] text-[#1D4ED8] bg-blue-100 px-2.5 py-1 rounded-lg font-black shrink-0 shadow-2xs border border-blue-300">Hot Lead</span>
+                </motion.button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Right Column: Sleek Unboxed Problem ➔ Solution ➔ Step Flow (7 cols on lg) */}
+        <div className="lg:col-span-7 flex flex-col justify-center">
+          <motion.div
+            key={current.id}
+            initial={{ opacity: 0, x: 15 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -15 }}
+            transition={{ duration: 0.35, ease: "easeOut" }}
+            className="space-y-4"
+          >
+            {/* Header Badge & Module Name */}
+            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-blue-100 pb-3">
+              <div className="flex items-center gap-2">
+                <span className="text-2xl">{current.icon}</span>
+                <div>
+                  <div className="text-[10px] font-black text-blue-600 uppercase tracking-widest">
+                    {current.badge}
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-black text-[#0F172A] tracking-tight">
+                    {current.solution}
+                  </h3>
                 </div>
               </div>
 
-              <div className="mt-3 pt-3 border-t border-blue-200/60 flex items-center justify-between text-[10px] font-bold text-[#64748B]">
-                <span>Top Inbound Source: Google (42%)</span>
-                <span className="text-[#2563EB] font-black">Velocity: 4.2 Days</span>
+              {/* Key Impact Pill */}
+              <div className="px-3 py-1 rounded-full bg-blue-100/90 text-blue-800 text-xs font-black border border-blue-300 shadow-2xs flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse" />
+                <span>{current.impact}</span>
+              </div>
+            </div>
+
+            {/* Problem Statement Pill */}
+            <div className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-amber-50/80 border border-amber-200/90 text-amber-900 text-xs font-bold shadow-2xs">
+              <span className="px-2 py-0.5 rounded-md bg-amber-500 text-white font-black text-[9.5px] uppercase tracking-wider">
+                PROBLEM SOLVED
+              </span>
+              <span className="font-extrabold">{current.problem}</span>
+            </div>
+
+            {/* 3-Step Interactive Visual Execution Flow */}
+            <div className="pt-1 space-y-2.5">
+              <div className="text-[10.5px] font-black text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
+                <span>Automated Operating Stream</span>
+                <div className="h-[1px] flex-1 bg-slate-200/80" />
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                {current.steps.map((step, stepIdx) => (
+                  <motion.div
+                    key={step.label}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: stepIdx * 0.08, duration: 0.3 }}
+                    className="relative flex flex-col p-3 rounded-2xl bg-gradient-to-b from-white/90 to-blue-50/40 border border-blue-200/70 shadow-xs hover:border-blue-300 transition-all"
+                  >
+                    <div className="flex items-center justify-between mb-1.5">
+                      <span className="w-7 h-7 rounded-xl bg-blue-100/80 text-blue-700 flex items-center justify-center text-sm font-black border border-blue-200">
+                        {step.icon}
+                      </span>
+                      <span className="text-[9px] font-black text-blue-600 bg-blue-100/60 px-1.5 py-0.5 rounded-md">
+                        STEP 0{stepIdx + 1}
+                      </span>
+                    </div>
+                    <div className="text-xs font-black text-[#0F172A] leading-snug">
+                      {step.label}
+                    </div>
+                    <div className="text-[11px] text-slate-600 font-medium leading-relaxed mt-1">
+                      {step.desc}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Bottom Outcome Stat Strip */}
+            <div className="pt-2 flex items-center justify-between text-xs border-t border-blue-100">
+              <div className="flex items-center gap-2 text-slate-500 font-bold text-[11px]">
+                <span className="w-2 h-2 rounded-full bg-blue-600 animate-ping" />
+                <span>Verified Institute Outcome</span>
+              </div>
+              <div className="text-sm sm:text-base font-black text-blue-700 tracking-tight bg-blue-100/70 px-3.5 py-1 rounded-full border border-blue-300 shadow-2xs">
+                🎯 {current.metric}
               </div>
             </div>
           </motion.div>
-        )}
-
-        {/* TAB 2: Live Exam & Assessment Portal */}
-        {activeTab === "exam" && (
-          <motion.div
-            key="exam"
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2 }}
-            className="flex-1 flex flex-col justify-between gap-3"
-          >
-            <div className="bg-gradient-to-br from-sky-100/90 via-blue-50/80 to-white rounded-2xl p-4 border border-sky-300/90 shadow-md shadow-sky-500/10 relative overflow-hidden">
-              <div className="h-1 bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] rounded-t-2xl -mx-4 -mt-4 mb-3" />
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-[10px] font-black text-[#2563EB] bg-blue-100 px-2.5 py-0.5 rounded-full border border-blue-300 shadow-2xs">
-                  Exam Engine Active
-                </span>
-                <span className="text-[10px] font-black text-[#0284C7] bg-sky-100 px-2.5 py-0.5 rounded-full border border-sky-300 flex items-center gap-1.5 shadow-2xs">
-                  <span className="w-1.5 h-1.5 rounded-full bg-sky-500 animate-pulse" />
-                  42:15 Remaining
-                </span>
-              </div>
-
-              <h4 className="text-base sm:text-lg font-black text-[#0F172A] tracking-tight">
-                National Mock Examination Series #08
-              </h4>
-              <p className="text-[11.5px] text-[#475569] mt-1 font-extrabold leading-relaxed">
-                420 Students Active • Hybrid Evaluation (Online CBT & Paper OCR)
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-white via-sky-50/50 to-blue-50/40 rounded-2xl p-4 border border-sky-200/90 shadow-lg shadow-sky-500/10 flex-1 flex flex-col justify-between">
-              <div className="flex items-center justify-between text-[11px] font-black text-[#0F172A] mb-2">
-                <span>Performance & Ranking</span>
-                <span className="text-[#0284C7] bg-sky-100 px-2.5 py-0.5 rounded-full font-black border border-sky-300 text-[9.5px] shadow-2xs">
-                  99.8% Accuracy
-                </span>
-              </div>
-
-              <p className="text-[12px] text-[#475569] leading-relaxed font-normal p-3 rounded-xl bg-gradient-to-r from-blue-100/70 via-white to-blue-100/70 border border-blue-200/90 shadow-2xs">
-                Online Score: <strong className="font-extrabold text-[#0F172A]">194 / 200 (Rank #01)</strong> • Paper Scans: <strong className="font-extrabold text-[#0284C7]">186 Sheets Graded (3.2s)</strong>.
-              </p>
-
-              <div className="pt-3 border-t border-blue-200/60 flex items-center justify-between text-[10px] font-bold text-[#64748B]">
-                <span>Class Average: 96.4%</span>
-                <span className="text-[#2563EB] font-black">Auto SMS Results Sent</span>
-              </div>
-            </div>
-          </motion.div>
-        )}
-
-        {/* TAB 3: Live Classroom & Video Player Studio */}
-        {activeTab === "lectures" && (
-          <motion.div
-            key="lectures"
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2 }}
-            className="flex-1 flex flex-col justify-between gap-3"
-          >
-            <div className="bg-gradient-to-br from-blue-100/90 via-blue-50/80 to-white rounded-2xl p-4 border border-blue-300/90 shadow-md shadow-blue-500/10 relative overflow-hidden">
-              <div className="h-1 bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] rounded-t-2xl -mx-4 -mt-4 mb-3" />
-              <div className="flex items-center justify-between mb-2">
-                <div className="flex items-center gap-1.5">
-                  <span className="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse" />
-                  <span className="text-[10px] font-black text-[#0F172A]">Live Studio Broadcast</span>
-                </div>
-                <span className="text-[9.5px] font-black text-[#1D4ED8] bg-blue-100 px-2.5 py-0.5 rounded-full border border-blue-300 shadow-2xs">
-                  184 Attending
-                </span>
-              </div>
-
-              <h4 className="text-base sm:text-lg font-black text-[#0F172A] tracking-tight">
-                Advanced Physics Masterclass & Problem Solving
-              </h4>
-              <p className="text-[11.5px] text-[#475569] mt-1 font-extrabold leading-relaxed">
-                Instructor: Dr. R. Sharma • Live Chat & Interactive Q&A Active
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-white via-blue-50/50 to-sky-50/40 rounded-2xl p-4 border border-blue-200/90 shadow-lg shadow-blue-500/10 flex-1 flex flex-col justify-between">
-              <div className="flex items-center justify-between text-[11px] font-black text-[#0F172A] mb-2">
-                <span>Recorded Lecture Hub</span>
-                <span className="text-[9.5px] font-black text-[#1D4ED8] bg-blue-100 px-2.5 py-0.5 rounded-full border border-blue-300 shadow-2xs">
-                  24/7 Access
-                </span>
-              </div>
-
-              <p className="text-[12px] text-[#475569] leading-relaxed font-normal p-3 rounded-xl bg-gradient-to-r from-blue-100/70 via-white to-sky-50/70 border border-blue-200/90 shadow-2xs">
-                Organic Chemistry & Calculus lectures archived in <strong className="font-extrabold text-[#1D4ED8]">1080p HD</strong> with attached PDF study notes.
-              </p>
-
-              <div className="pt-3 border-t border-blue-200/60 flex items-center justify-between text-[10px] font-bold text-[#64748B]">
-                <span>Automated Class Attendance Tracked</span>
-                <span className="text-[#2563EB] font-black">HD Streaming 1080p</span>
-              </div>
-            </div>
-          </motion.div>
-        )}
-
-        {/* TAB 4: Academics & Batches */}
-        {activeTab === "academics" && (
-          <motion.div
-            key="academics"
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.2 }}
-            className="flex-1 flex flex-col justify-between gap-3"
-          >
-            <div className="bg-gradient-to-br from-sky-100/90 via-blue-50/80 to-white rounded-2xl p-4 border border-sky-300/90 shadow-md shadow-sky-500/10 relative overflow-hidden">
-              <div className="h-1 bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] rounded-t-2xl -mx-4 -mt-4 mb-3" />
-              <div className="flex items-center justify-between mb-2">
-                <span className="text-[10px] font-black text-[#2563EB] bg-blue-100 px-2.5 py-0.5 rounded-full border border-blue-300 shadow-2xs">
-                  Batch Operations
-                </span>
-                <span className="text-[9.5px] font-black text-[#0284C7] bg-sky-100 px-2.5 py-0.5 rounded-full border border-sky-300 shadow-2xs">
-                  12 Batches Active
-                </span>
-              </div>
-
-              <h4 className="text-base sm:text-lg font-black text-[#0F172A] tracking-tight">
-                Academic Curriculum & Timetable Engine
-              </h4>
-              <p className="text-[11.5px] text-[#475569] mt-1 font-extrabold leading-relaxed">
-                Automated Class Schedules • Attendance Tracking • Faculty Workload Optimization
-              </p>
-            </div>
-
-            <div className="bg-gradient-to-br from-white via-sky-50/50 to-blue-50/40 rounded-2xl p-4 border border-sky-200/90 shadow-lg shadow-sky-500/10 flex-1 flex flex-col justify-between">
-              <div className="flex items-center justify-between text-[11px] font-black text-[#0F172A] mb-2">
-                <span>Active Batches</span>
-                <span className="text-[9.5px] font-black text-[#2563EB]">Schedules Synced</span>
-              </div>
-
-              <p className="text-[12px] text-[#475569] leading-relaxed font-normal p-3 rounded-xl bg-gradient-to-r from-sky-100/70 via-white to-blue-100/70 border border-sky-200/90 shadow-2xs">
-                <strong className="font-extrabold text-[#0F172A]">Target JEE 2026</strong> & <strong className="font-extrabold text-[#0284C7]">Foundation NEET 2027</strong> active with <strong className="font-extrabold text-[#2563EB]">98.2% attendance</strong>.
-              </p>
-
-              <div className="pt-3 border-t border-sky-200/60 flex items-center justify-between text-[10px] font-bold text-[#64748B]">
-                <span>Biometric & App Attendance Combined</span>
-                <span className="text-[#2563EB] font-black">Reports Generated</span>
-              </div>
-            </div>
-          </motion.div>
-        )}
+        </div>
       </div>
 
-      {/* ── Bottom Telemetry Footer Strip (Ultra Crisp Dark Blue Theme) ── */}
-      <div className="relative z-10 bg-gradient-to-r from-[#0F172A] via-[#1E293B] to-[#0F172A] border-t border-slate-700/80 text-white px-4 py-2.5 flex items-center justify-between text-[10.5px] font-extrabold shadow-inner">
-        <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-sky-400 animate-pulse" />
-          <span className="text-white">Real-Time Cloud LMS Engine Active</span>
-        </div>
-        <span className="bg-blue-600/90 text-white border border-blue-400/80 px-2.5 py-0.5 rounded-md text-[9.5px] tracking-wide font-black shadow-2xs">
-          99.99% Uptime
-        </span>
+      {/* ── Mobile Module Selector Dots ── */}
+      <div className="flex sm:hidden items-center justify-center gap-2 pb-4 pt-1 border-t border-blue-100">
+        {modules.map((mod, idx) => {
+          const isActive = idx === activeModule;
+          return (
+            <button
+              key={mod.id}
+              type="button"
+              onClick={() => setActiveModule(idx)}
+              className={`px-3 py-1 rounded-full text-[10px] font-black transition-all flex items-center gap-1 border ${
+                isActive
+                  ? "bg-blue-600 text-white border-blue-500 shadow-xs"
+                  : "bg-white text-slate-600 border-slate-200"
+              }`}
+            >
+              <span>{mod.icon}</span>
+              <span>{mod.label}</span>
+            </button>
+          );
+        })}
       </div>
     </div>
   );
 }
 
-/* ── 🚀 Immersive AI Agent Orchestration Visual — Top-Notch 3D Agent Animations ── */
+/* ── Mobile-First AI Agent Orbital Network (Rich Text & Visual Flow • Zero Cards) ── */
 function Automation3DVisual() {
   const [activeAgent, setActiveAgent] = useState(0);
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-
-  /* Gradient-animated SVG icon for each agent — rich, meaningful, premium */
-  const renderAgentIcon = (id: string, size: string, isActive: boolean, agentColor: string) => {
-    const cls = `${size} transition-all duration-300`;
-    const gradId = `grad-${id}-${isActive ? 'a' : 'i'}`;
-    const activeGrad = (
-      <defs>
-        <linearGradient id={gradId} x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor={agentColor}>
-            <animate attributeName="stop-color" values={`${agentColor};#818CF8;#06B6D4;${agentColor}`} dur="3s" repeatCount="indefinite" />
-          </stop>
-          <stop offset="100%" stopColor="#818CF8">
-            <animate attributeName="stop-color" values={`#818CF8;${agentColor};#F472B6;#818CF8`} dur="3s" repeatCount="indefinite" />
-          </stop>
-        </linearGradient>
-      </defs>
-    );
-    const inactiveGrad = (
-      <defs>
-        <linearGradient id={gradId} x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor={agentColor} stopOpacity="0.75" />
-          <stop offset="100%" stopColor="#94A3B8" stopOpacity="0.6" />
-        </linearGradient>
-      </defs>
-    );
-    const grad = isActive ? activeGrad : inactiveGrad;
-    const stroke = `url(#${gradId})`;
-    const sw = isActive ? 2.2 : 1.8;
-
-    switch (id) {
-      case "marketing":
-        return (
-          <svg className={cls} viewBox="0 0 24 24" fill="none" strokeWidth={sw} strokeLinecap="round" strokeLinejoin="round">
-            {grad}
-            <path d="M10.5 6a7.5 7.5 0 107.5 7.5h-7.5V6z" stroke={stroke} />
-            <path d="M13.5 10.5H21A7.5 7.5 0 0013.5 3v7.5z" stroke={stroke} />
-            {isActive && <circle cx="14" cy="8" r="1.2" fill={agentColor} opacity="0.6"><animate attributeName="r" values="1.2;2;1.2" dur="1.5s" repeatCount="indefinite" /></circle>}
-          </svg>
-        );
-      case "sales":
-        return (
-          <svg className={cls} viewBox="0 0 24 24" fill="none" strokeWidth={sw} strokeLinecap="round" strokeLinejoin="round">
-            {grad}
-            <path d="M15 6.75a3 3 0 11-6 0 3 3 0 016 0z" stroke={stroke} />
-            <path d="M2.25 21a8.25 8.25 0 0115.5 0" stroke={stroke} />
-            <path d="M17.25 9.75a2.25 2.25 0 110-4.5" stroke={stroke} />
-            <path d="M21.75 21a6 6 0 00-4.5-5.8" stroke={stroke} />
-            {isActive && <circle cx="19" cy="7.5" r="1" fill={agentColor} opacity="0.6"><animate attributeName="opacity" values="0.6;1;0.6" dur="1s" repeatCount="indefinite" /></circle>}
-          </svg>
-        );
-      case "support":
-        return (
-          <svg className={cls} viewBox="0 0 24 24" fill="none" strokeWidth={sw} strokeLinecap="round" strokeLinejoin="round">
-            {grad}
-            <path d="M21 12c0 4.556-4.03 8.25-9 8.25a9.764 9.764 0 01-2.555-.337A5.972 5.972 0 015.41 20.97a5.969 5.969 0 01-.474-.065 4.48 4.48 0 00.978-2.025c.09-.457-.133-.901-.467-1.226C3.93 16.178 3 14.189 3 12c0-4.556 4.03-8.25 9-8.25s9 3.694 9 8.25z" stroke={stroke} />
-            <circle cx="8.5" cy="12" r="0.8" fill={isActive ? agentColor : '#94A3B8'}>
-              {isActive && <animate attributeName="r" values="0.8;1.3;0.8" dur="1.2s" repeatCount="indefinite" />}
-            </circle>
-            <circle cx="12" cy="12" r="0.8" fill={isActive ? agentColor : '#94A3B8'}>
-              {isActive && <animate attributeName="r" values="0.8;1.3;0.8" dur="1.2s" begin="0.2s" repeatCount="indefinite" />}
-            </circle>
-            <circle cx="15.5" cy="12" r="0.8" fill={isActive ? agentColor : '#94A3B8'}>
-              {isActive && <animate attributeName="r" values="0.8;1.3;0.8" dur="1.2s" begin="0.4s" repeatCount="indefinite" />}
-            </circle>
-          </svg>
-        );
-      case "ops":
-        return (
-          <svg className={cls} viewBox="0 0 24 24" fill="none" strokeWidth={sw} strokeLinecap="round" strokeLinejoin="round">
-            {grad}
-            {/* Workflow process node paths */}
-            <path d="M3.75 12h4.5m7.5 0h4.5M12 4.5v4.5m0 7.5v4.5" stroke={stroke} strokeDasharray={isActive ? "none" : "2 2"} />
-            {/* Central hub node */}
-            <circle cx="12" cy="12" r="3" stroke={stroke} fill={isActive ? `${agentColor}20` : "none"} />
-            {/* 4 surrounding workflow nodes */}
-            <circle cx="12" cy="3.75" r="1.75" stroke={stroke} fill={isActive ? `${agentColor}30` : "none"} />
-            <circle cx="20.25" cy="12" r="1.75" stroke={stroke} fill={isActive ? `${agentColor}30` : "none"} />
-            <circle cx="12" cy="20.25" r="1.75" stroke={stroke} fill={isActive ? `${agentColor}30` : "none"} />
-            <circle cx="3.75" cy="12" r="1.75" stroke={stroke} fill={isActive ? `${agentColor}30` : "none"} />
-            {isActive && (
-              <>
-                <circle cx="12" cy="12" r="1" fill={agentColor}>
-                  <animate attributeName="r" values="1;2.2;1" dur="1.8s" repeatCount="indefinite" />
-                  <animate attributeName="opacity" values="1;0.4;1" dur="1.8s" repeatCount="indefinite" />
-                </circle>
-                <circle cx="8" cy="12" r="1" fill={agentColor}>
-                  <animate attributeName="cx" values="3.75;12;20.25" dur="2s" repeatCount="indefinite" />
-                </circle>
-              </>
-            )}
-          </svg>
-        );
-      case "founder":
-        return (
-          <svg className={cls} viewBox="0 0 24 24" fill="none" strokeWidth={sw} strokeLinecap="round" strokeLinejoin="round">
-            {grad}
-            <path d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75z" stroke={stroke} fill={isActive ? `${agentColor}15` : 'none'} />
-            <path d="M9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625z" stroke={stroke} fill={isActive ? `${agentColor}20` : 'none'} />
-            <path d="M16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" stroke={stroke} fill={isActive ? `${agentColor}25` : 'none'} />
-            {isActive && <line x1="3" y1="21.5" x2="21" y2="21.5" stroke={agentColor} strokeWidth="1.5" opacity="0.3" />}
-          </svg>
-        );
-      default:
-        return null;
-    }
-  };
 
   const agents = [
     {
       id: "marketing",
-      label: "Marketing Intelligence",
-      color: "#2563EB",
-      colorLight: "#DBEAFE",
-      colorMid: "#93C5FD",
-      tagline: "Researches your market & creates campaigns",
-      stat: "+38%",
-      statLabel: "Campaign Lift",
+      label: "Marketing",
+      badge: "MARKETING AI AGENT",
+      icon: "📢",
+      problem: "Manual Content & Slow Lead Generation",
+      solution: "24/7 Autonomous Brand Growth Engine",
+      steps: [
+        { icon: "🔍", label: "Intent Signals", desc: "Scans search & market trends in real-time" },
+        { icon: "⚡", label: "Auto-Campaign", desc: "AI writes, designs & publishes posts" },
+        { icon: "🚀", label: "Growth Result", desc: "+38% Traffic • 48 Qualified Leads" },
+      ],
+      metric: "+38% Traffic Growth",
+      impact: "85% Less Manual Work",
+      color: "#059669",
     },
     {
       id: "sales",
-      label: "Lead & Sales",
-      color: "#0284C7",
-      colorLight: "#E0F2FE",
-      colorMid: "#7DD3FC",
-      tagline: "Qualifies leads & sends proposals automatically",
-      stat: "98/100",
-      statLabel: "Lead Score",
+      label: "Sales",
+      badge: "SALES AI AGENT",
+      icon: "💼",
+      problem: "Delayed Follow-ups & Lost Prospects",
+      solution: "2.1s Instant Lead Qualification & Closing",
+      steps: [
+        { icon: "💼", label: "Lead Capture", desc: "Detects high-intent prospect inquiry" },
+        { icon: "⚡", label: "Instant Proposal", desc: "Generates & dispatches proposal in 2.1s" },
+        { icon: "💰", label: "Deal Closed", desc: "₹3.8L Revenue Secured automatically" },
+      ],
+      metric: "₹3.8L Closed",
+      impact: "2.1s Speed-to-Lead",
+      color: "#0D9488",
     },
     {
       id: "support",
-      label: "Customer Success",
-      color: "#059669",
-      colorLight: "#D1FAE5",
-      colorMid: "#6EE7B7",
-      tagline: "Onboards customers & resolves queries 24/7",
-      stat: "5.0/5.0",
-      statLabel: "CSAT",
+      label: "Support",
+      badge: "CUSTOMER SUPPORT AI",
+      icon: "💬",
+      problem: "High Ticket Backlog & Slow Responses",
+      solution: "Sub-Second Instant Query Resolution",
+      steps: [
+        { icon: "💬", label: "Incoming Query", desc: "Customer asks technical or billing question" },
+        { icon: "🧠", label: "0.8s AI Match", desc: "Resolves instantly with context precision" },
+        { icon: "⭐", label: "100% CSAT", desc: "5.0 Rating with Zero Queue Backlog" },
+      ],
+      metric: "0.8s Response Time",
+      impact: "100% CSAT Score",
+      color: "#10B981",
     },
     {
       id: "ops",
-      label: "Operations & Workflow",
-      color: "#D97706",
-      colorLight: "#FEF3C7",
-      colorMid: "#FCD34D",
-      tagline: "Automates tasks, docs & cross-platform workflows",
-      stat: "85%",
-      statLabel: "Ops Automated",
+      label: "Operations",
+      badge: "OPERATIONS AI AGENT",
+      icon: "⚙️",
+      problem: "Manual Copy-Pasting Across 10+ Apps",
+      solution: "Self-Healing Multi-App Workflow Engine",
+      steps: [
+        { icon: "🔗", label: "App Integration", desc: "Syncs Stripe, Slack, CRM & Notion" },
+        { icon: "⚙️", label: "Auto-Workflow", desc: "Executes repetitive data tasks 24/7" },
+        { icon: "✅", label: "Zero Errors", desc: "40 Hours/Week saved across team" },
+      ],
+      metric: "85% Automated",
+      impact: "40 Hours/Wk Saved",
+      color: "#047857",
     },
     {
       id: "founder",
-      label: "Founder Intelligence",
-      color: "#7C3AED",
-      colorLight: "#EDE9FE",
-      colorMid: "#C4B5FD",
-      tagline: "Weekly insights, priorities & growth recommendations",
-      stat: "+34.2%",
-      statLabel: "MoM Growth",
+      label: "Founder AI",
+      badge: "FOUNDER ADVISORY AI",
+      icon: "📊",
+      problem: "Strategic Blindspots & Scattered Metrics",
+      solution: "Real-Time Executive Intelligence & Priority Actions",
+      steps: [
+        { icon: "📈", label: "Data Stream", desc: "Tracks MRR, Cash Runway & Churn" },
+        { icon: "🔍", label: "Insight Engine", desc: "Identifies top revenue opportunities" },
+        { icon: "🚀", label: "Strategic Action", desc: "Recommends high-ROI channel scale" },
+      ],
+      metric: "3.8x Campaign ROI",
+      impact: "24/7 Strategic Visibility",
+      color: "#059669",
     },
   ];
 
-  // Keep AgentIcons for use in detail card
-  const AgentIcons: Record<string, React.ReactNode> = Object.fromEntries(
-    ["marketing", "sales", "support", "ops", "founder"].map(id => [
-      id,
-      renderAgentIcon(id, "w-5 h-5 sm:w-6 sm:h-6", true, agents.find(a => a.id === id)?.color || "#2563EB")
-    ])
-  );
-
-  // Auto-cycle through agents
-  const [isHovered, setIsHovered] = useState(false);
-  const autoPlayRef = useRef<ReturnType<typeof setInterval> | null>(null);
-
-  const startAutoPlay = useCallback(() => {
-    if (autoPlayRef.current) clearInterval(autoPlayRef.current);
-    autoPlayRef.current = setInterval(() => {
-      setActiveAgent((prev) => (prev + 1) % 5);
-    }, 3500);
-  }, []);
-
+  // Auto-cycle agents every 5s
   useEffect(() => {
-    if (isAutoPlaying && !isHovered) {
-      startAutoPlay();
-    } else {
-      if (autoPlayRef.current) clearInterval(autoPlayRef.current);
-    }
-    return () => { if (autoPlayRef.current) clearInterval(autoPlayRef.current); };
-  }, [isAutoPlaying, isHovered, startAutoPlay]);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-    if (autoPlayRef.current) clearInterval(autoPlayRef.current);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-
-  const handleAgentClick = (idx: number) => {
-    setActiveAgent(idx);
-    setIsAutoPlaying(false);
-    if (autoPlayRef.current) clearInterval(autoPlayRef.current);
-    setTimeout(() => {
-      setIsAutoPlaying(true);
-    }, 8000);
-  };
+    const timer = setInterval(() => setActiveAgent((p) => (p + 1) % 5), 5000);
+    return () => clearInterval(timer);
+  }, []);
 
   const current = agents[activeAgent];
 
-  return (
-    <div
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      className="relative w-full h-full min-h-[480px] sm:min-h-[540px] rounded-3xl bg-gradient-to-br from-emerald-50/90 via-teal-50/50 via-white to-emerald-50/70 border border-emerald-200/90 shadow-[0_20px_60px_rgba(5,150,105,0.14)] overflow-hidden flex flex-col justify-between text-[#0F172A]"
-    >
+  // Calculate 5 node positions in a circle (percentage of SVG/container viewBox)
+  const R = 36;
+  const positions = agents.map((_, i) => {
+    const angle = -Math.PI / 2 + i * ((2 * Math.PI) / 5);
+    return { x: 50 + R * Math.cos(angle), y: 50 + R * Math.sin(angle) };
+  });
 
-      {/* ── Animated Background Mesh ── */}
+  return (
+    <div className="relative w-full rounded-3xl bg-gradient-to-br from-emerald-50/90 via-white to-teal-50/70 border border-emerald-200/80 shadow-[0_12px_45px_rgba(16,185,129,0.10)] overflow-hidden">
+      {/* ── Soft Ambient Glow Blobs ── */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <motion.div
-          className="absolute w-[300px] h-[300px] rounded-full opacity-[0.18]"
-          style={{ background: `radial-gradient(circle, ${current.color}, transparent 70%)`, top: '20%', left: '30%' }}
-          animate={{ scale: [1, 1.3, 1], x: [0, 30, -20, 0], y: [0, -20, 15, 0] }}
+          className="absolute w-[400px] h-[400px] rounded-full opacity-[0.12]"
+          style={{ background: "radial-gradient(circle, #10B981, transparent 70%)", top: "-10%", left: "10%" }}
+          animate={{ scale: [1, 1.2, 1] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute w-[200px] h-[200px] rounded-full opacity-[0.12]"
-          style={{ background: `radial-gradient(circle, ${current.color}, transparent 70%)`, bottom: '10%', right: '10%' }}
-          animate={{ scale: [1.2, 1, 1.2], x: [0, -20, 10, 0] }}
+          className="absolute w-[350px] h-[350px] rounded-full opacity-[0.09]"
+          style={{ background: "radial-gradient(circle, #059669, transparent 70%)", bottom: "-10%", right: "10%" }}
+          animate={{ scale: [1.2, 1, 1.2] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         />
-        <div className="absolute inset-0 bg-[radial-gradient(#a7f3d0_1px,transparent_1px)] [background-size:24px_24px] opacity-35" />
+        <div className="absolute inset-0 bg-[radial-gradient(#a7f3d0_0.8px,transparent_0.8px)] [background-size:22px_22px] opacity-[0.22]" />
       </div>
 
-      {/* ── Top Bar (Fresh Light Emerald Green Header Bar) ── */}
-      <div className="relative z-10 bg-gradient-to-r from-[#059669] via-[#10B981] to-[#0D9488] text-white px-4 py-2.5 border-b border-emerald-400/30 flex items-center justify-between shadow-md">
+      {/* ── Top Bar with Agent Selector Pills ── */}
+      <div className="relative z-10 px-4 sm:px-6 py-3 border-b border-emerald-200/60 bg-white/60 backdrop-blur-md flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-2">
-          <motion.div
-            className="w-7 h-7 rounded-xl bg-white text-[#059669] flex items-center justify-center text-[11px] font-black shadow-md"
-            animate={{ rotate: [0, 5, -5, 0] }}
-            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-          >
-            AI
-          </motion.div>
-          <div>
-            <div className="text-[11.5px] font-black tracking-tight leading-none text-white">Agaran AI Workforce</div>
-            <div className="text-[8.5px] text-emerald-100 mt-0.5 font-semibold">5 Autonomous Agents • Always Running</div>
-          </div>
-        </div>
-        <motion.span
-          className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[9.5px] font-black bg-white/20 border border-white/30 text-white backdrop-blur-md shadow-2xs"
-          animate={{ opacity: [0.8, 1, 0.8] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-          Live Engine
-        </motion.span>
-      </div>
-
-      {/* ── Visual Agent Showcase Strip — Rich Animated Icons ── */}
-      <div className="relative z-10 px-3 sm:px-4 py-3 sm:py-4 bg-gradient-to-b from-emerald-100/60 via-teal-50/60 to-white/90 border-b border-emerald-200/60">
-        {/* Sleek Fiber-Optic Energy Pipeline Track */}
-        <div className="absolute left-[10%] right-[10%] top-1/2 -translate-y-1/2 h-[1.5px] rounded-full overflow-hidden bg-slate-200/60 z-0">
-          <motion.div
-            className="w-24 h-full rounded-full"
-            style={{
-              background: `linear-gradient(90deg, transparent, ${current.color}, #34D399, transparent)`,
-              boxShadow: `0 0 10px ${current.color}80`,
-            }}
-            animate={{ x: ['-100%', '350%'] }}
-            transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut" }}
-          />
+          <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+          <span className="text-xs font-black text-[#0F172A] uppercase tracking-wider">
+            Agaran Autonomous AI Workforce
+          </span>
         </div>
 
-        <div className="relative z-10 flex items-center justify-between gap-1">
+        {/* Desktop/Tablet Agent Selector Pills */}
+        <div className="hidden sm:flex items-center gap-1.5">
           {agents.map((agent, idx) => {
             const isActive = idx === activeAgent;
             return (
-              <motion.button
+              <button
                 key={agent.id}
                 type="button"
-                onClick={() => handleAgentClick(idx)}
-                className="flex flex-col items-center cursor-pointer flex-1 group/agent"
-                animate={isActive ? { y: -2 } : { y: 0 }}
-                transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                onClick={() => setActiveAgent(idx)}
+                className={`cursor-pointer px-3 py-1 rounded-full text-[11px] font-black transition-all duration-300 border flex items-center gap-1.5 ${
+                  isActive
+                    ? "bg-emerald-600 text-white border-emerald-500 shadow-md scale-105"
+                    : "bg-white/80 text-slate-600 border-emerald-200/80 hover:bg-emerald-50 hover:text-emerald-800"
+                }`}
               >
-                <motion.div
-                  className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-2xl flex items-center justify-center border-2 mb-1.5 transition-all duration-300"
-                  style={{
-                    background: isActive
-                      ? `linear-gradient(135deg, ${agent.colorLight}, white)`
-                      : `linear-gradient(135deg, ${agent.colorLight}40, white)`,
-                    borderColor: isActive ? agent.color : `${agent.color}45`,
-                    boxShadow: isActive
-                      ? `0 10px 25px -5px ${agent.color}50, 0 4px 10px -3px ${agent.color}30`
-                      : `0 2px 6px ${agent.color}12`,
-                  }}
-                  animate={isActive ? { y: -4, scale: 1.05 } : { y: 0, scale: 1 }}
-                  whileHover={{ y: -6, scale: 1.08 }}
-                  transition={{ type: "spring", stiffness: 350, damping: 22 }}
-                >
-                  <motion.div
-                    className="w-5 h-5 sm:w-6 sm:h-6"
-                    animate={isActive ? { y: [0, -2, 0] } : { y: 0 }}
-                    transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-                  >
-                    {renderAgentIcon(agent.id, "w-5 h-5 sm:w-6 sm:h-6", isActive, agent.color)}
-                  </motion.div>
-
-                  {/* Sleek active dot indicator at top right */}
-                  {isActive && (
-                    <motion.span
-                      className="absolute -top-1 -right-1 w-3.5 h-3.5 rounded-full border-2 border-white flex items-center justify-center shadow-sm"
-                      style={{ background: agent.color }}
-                      initial={{ scale: 0 }}
-                      animate={{ scale: 1 }}
-                      transition={{ type: "spring", stiffness: 500 }}
-                    >
-                      <span className="w-1 h-1 rounded-full bg-white animate-pulse" />
-                    </motion.span>
-                  )}
-                </motion.div>
-
-                {/* Label */}
-                <motion.span
-                  className="text-[7.5px] sm:text-[8.5px] font-black text-center leading-tight max-w-[56px] sm:max-w-[72px]"
-                  style={{ color: isActive ? agent.color : '#64748B' }}
-                  animate={isActive ? { opacity: 1 } : { opacity: 0.8 }}
-                >
-                  {agent.label}
-                </motion.span>
-              </motion.button>
+                <span>{agent.icon}</span>
+                <span>{agent.label}</span>
+              </button>
             );
           })}
         </div>
       </div>
 
-      {/* ── Rich Agent Detail Stage — Tall & Immersive Colorful Cards ── */}
-      <div className="relative z-10 px-3 sm:px-4 py-4 sm:py-5 flex-1 flex flex-col">
-        <motion.div
-          key={current.id}
-          initial={{ opacity: 0, y: 12 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ type: "spring", stiffness: 350, damping: 28 }}
-          className="w-full rounded-2xl border p-4 sm:p-5 backdrop-blur-sm flex-1 flex flex-col relative overflow-hidden"
-          style={{
-            background: `linear-gradient(145deg, ${current.colorLight}90, white 50%, ${current.colorLight}50)`,
-            borderColor: `${current.colorMid}`,
-            boxShadow: `0 12px 40px ${current.color}15, inset 0 1px 0 rgba(255,255,255,0.9)`,
-          }}
-        >
-          <div className="h-1 bg-gradient-to-r from-[#059669] via-[#10B981] to-[#0D9488] rounded-t-2xl -mx-5 -mt-5 mb-4" />
+      {/* ── Main Content Grid (Orbital Network + Text Explanation Stream) ── */}
+      <div className="relative z-10 p-5 sm:p-7 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        {/* Left Column: 3D Orbital Network (5 cols on lg) */}
+        <div className="lg:col-span-5 flex flex-col items-center justify-center">
+          <div className="relative w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] lg:w-[340px] lg:h-[340px]">
+            {/* SVG Connection Beams */}
+            <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
+              <defs>
+                <filter id="aglow-rich">
+                  <feGaussianBlur stdDeviation="1.2" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
 
-          {/* Agent Header Row */}
-          <div className="flex items-center justify-between mb-4">
-            <div className="flex items-center gap-2.5">
+              {/* Orbital rings */}
+              <circle cx="50" cy="50" r={R} fill="none" stroke="#A7F3D0" strokeWidth="0.6" strokeDasharray="3 3" />
+              <circle cx="50" cy="50" r={R * 0.65} fill="none" stroke="#6EE7B7" strokeWidth="0.4" opacity="0.5" />
+
+              {/* Connection beams from each node to center */}
+              {positions.map((pos, i) => {
+                const isActive = i === activeAgent;
+                return (
+                  <g key={agents[i].id}>
+                    <motion.line
+                      x1="50" y1="50" x2={pos.x} y2={pos.y}
+                      stroke={isActive ? "#059669" : "#C7D2FE"}
+                      strokeWidth={isActive ? 1.6 : 0.6}
+                      strokeDasharray={isActive ? "4 2" : "2 4"}
+                      filter={isActive ? "url(#aglow-rich)" : undefined}
+                      animate={{ strokeDashoffset: isActive ? [12, 0] : [6, 0] }}
+                      transition={{ strokeDashoffset: { duration: 1.2, repeat: Infinity, ease: "linear" } }}
+                    />
+                    {isActive && (
+                      <motion.circle
+                        r="2.5" fill="#10B981"
+                        animate={{ cx: [50, pos.x], cy: [50, pos.y], opacity: [0.3, 1, 0.3] }}
+                        transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                      />
+                    )}
+                  </g>
+                );
+              })}
+            </svg>
+
+            {/* Central AI Core */}
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
               <motion.div
-                className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl flex items-center justify-center border shadow-md"
-                style={{
-                  background: `linear-gradient(145deg, ${current.colorLight}, white)`,
-                  borderColor: `${current.colorMid}`,
-                  color: current.color,
-                }}
                 animate={{ scale: [1, 1.06, 1] }}
-                transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                className="relative"
               >
-                <div className="w-5 h-5">{AgentIcons[current.id]}</div>
-              </motion.div>
-              <div>
-                <div className="text-[13px] sm:text-[14px] font-black leading-tight" style={{ color: current.color }}>
-                  {current.label} Agent
+                <div className="absolute -inset-4 rounded-full bg-emerald-400/20 blur-xl pointer-events-none" />
+                
+                {/* Outer Orbit Rings */}
+                <motion.div
+                  className="absolute -inset-7 rounded-full border border-emerald-300/40"
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+                >
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-emerald-500" />
+                </motion.div>
+
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-emerald-500 via-emerald-600 to-teal-700 flex flex-col items-center justify-center shadow-xl shadow-emerald-400/30 border-2 border-white">
+                  <span className="text-white font-black text-sm sm:text-base tracking-tight">AI</span>
+                  <span className="text-[7.5px] text-emerald-100 font-extrabold uppercase tracking-widest">CORE</span>
                 </div>
-                <div className="text-[10px] text-[#475569] font-extrabold mt-0.5">{current.tagline}</div>
+              </motion.div>
+            </div>
+
+            {/* Orbiting Agent Nodes */}
+            {agents.map((agent, i) => {
+              const pos = positions[i];
+              const isActive = i === activeAgent;
+              return (
+                <motion.button
+                  key={agent.id}
+                  type="button"
+                  onClick={() => setActiveAgent(i)}
+                  className="absolute z-30 -translate-x-1/2 -translate-y-1/2 cursor-pointer outline-none group"
+                  style={{ left: `${pos.x}%`, top: `${pos.y}%` }}
+                  animate={{ scale: isActive ? 1.15 : 0.95 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                >
+                  {isActive && (
+                    <motion.div
+                      className="absolute -inset-2.5 rounded-full border-2 border-emerald-500/70"
+                      animate={{ scale: [1, 1.25, 1], opacity: [0.6, 0.2, 0.6] }}
+                      transition={{ duration: 2, repeat: Infinity }}
+                    />
+                  )}
+                  <div
+                    className={`w-11 h-11 sm:w-13 sm:h-13 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${
+                      isActive
+                        ? "bg-white border-emerald-500 shadow-lg shadow-emerald-300/40 text-xl sm:text-2xl ring-4 ring-emerald-100"
+                        : "bg-white/80 border-emerald-200 text-lg opacity-70 group-hover:opacity-100 group-hover:border-emerald-300"
+                    }`}
+                  >
+                    <span>{agent.icon}</span>
+                  </div>
+
+                  <div className={`absolute -bottom-5 left-1/2 -translate-x-1/2 whitespace-nowrap text-[9px] font-black px-2 py-0.5 rounded-full border transition-all ${
+                    isActive ? "bg-emerald-600 text-white border-emerald-500 shadow-xs" : "bg-white/90 text-slate-600 border-slate-200"
+                  }`}>
+                    {agent.label}
+                  </div>
+                </motion.button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* Right Column: Sleek Unboxed Problem ➔ Solution ➔ Step Flow (7 cols on lg) */}
+        <div className="lg:col-span-7 flex flex-col justify-center">
+          <motion.div
+            key={current.id}
+            initial={{ opacity: 0, x: 15 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -15 }}
+            transition={{ duration: 0.35, ease: "easeOut" }}
+            className="space-y-4"
+          >
+            {/* Header Badge & Agent Name */}
+            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-emerald-100 pb-3">
+              <div className="flex items-center gap-2">
+                <span className="text-2xl">{current.icon}</span>
+                <div>
+                  <div className="text-[10px] font-black text-emerald-600 uppercase tracking-widest">
+                    {current.badge}
+                  </div>
+                  <h3 className="text-xl sm:text-2xl font-black text-[#0F172A] tracking-tight">
+                    {current.solution}
+                  </h3>
+                </div>
+              </div>
+
+              {/* Key Impact Pill */}
+              <div className="px-3 py-1 rounded-full bg-emerald-100/90 text-emerald-800 text-xs font-black border border-emerald-300 shadow-2xs flex items-center gap-1.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                <span>{current.impact}</span>
               </div>
             </div>
-            <motion.div
-              className="text-right"
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ type: "spring", delay: 0.15 }}
-            >
-              <div className="text-xl sm:text-2xl font-black tracking-tight" style={{ color: current.color }}>{current.stat}</div>
-              <div className="text-[9px] font-extrabold text-[#64748B] uppercase tracking-wider">{current.statLabel}</div>
-            </motion.div>
-          </div>
 
-          {/* ── Rich Visual Action Scenes — Colorful & Vibrant ── */}
-          <div className="flex-1 flex flex-col justify-between gap-3">
+            {/* Problem Statement Pill (Unboxed Glowing Stripe) */}
+            <div className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-amber-50/80 border border-amber-200/90 text-amber-900 text-xs font-bold shadow-2xs">
+              <span className="px-2 py-0.5 rounded-md bg-amber-500 text-white font-black text-[9.5px] uppercase tracking-wider">
+                PROBLEM SOLVED
+              </span>
+              <span className="font-extrabold">{current.problem}</span>
+            </div>
 
-            {/* Marketing: Clean analytics & campaign summary */}
-            {activeAgent === 0 && (
-              <>
-                <div className="bg-gradient-to-br from-emerald-100/90 via-emerald-50/80 to-white rounded-2xl border border-emerald-300/80 p-3.5 sm:p-4 shadow-md shadow-emerald-500/10">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-[11px] font-black text-[#0F172A]">Campaign Performance & Discovery</span>
-                    <span
-                      className="text-[9px] font-extrabold px-2.5 py-0.5 rounded-full shadow-2xs border border-emerald-200"
-                      style={{ background: current.colorLight, color: current.color }}
-                    >
-                      5 Channels Active
-                    </span>
-                  </div>
-                  <div className="flex items-end gap-2 h-16 sm:h-20 py-1">
-                    {[35, 48, 42, 68, 58, 82, 72, 92, 78, 98].map((h, i) => (
-                      <div
-                        key={i}
-                        className="flex-1 rounded-t-md transition-all duration-300 shadow-2xs"
-                        style={{ height: `${h}%`, background: `linear-gradient(to top, ${current.color}, ${current.colorMid})` }}
-                      />
-                    ))}
-                  </div>
-                </div>
+            {/* 3-Step Interactive Visual Execution Flow (UNBOXED - NO CARD CONTAINERS) */}
+            <div className="pt-1 space-y-2.5">
+              <div className="text-[10.5px] font-black text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
+                <span>Autonomous Execution Stream</span>
+                <div className="h-[1px] flex-1 bg-slate-200/80" />
+              </div>
 
-                <div className="bg-gradient-to-br from-white via-emerald-50/50 to-teal-50/40 rounded-2xl p-3.5 border border-emerald-200/90 shadow-md shadow-emerald-500/10 flex-1 flex flex-col justify-between">
-                  <div className="flex items-center justify-between text-[11px] font-black text-[#0F172A] mb-2">
-                    <span>Trending Market Discovery</span>
-                    <span className="text-[9.5px] font-black text-emerald-800 bg-emerald-100 px-2.5 py-0.5 rounded-full border border-emerald-300 shadow-2xs">
-                      +340% Spike
-                    </span>
-                  </div>
-                  <p className="text-[12px] text-[#475569] leading-relaxed font-normal p-2.5 rounded-xl bg-gradient-to-r from-emerald-100/70 via-white to-emerald-100/70 border border-emerald-200/90 shadow-2xs">
-                    Keyword: <strong className="font-extrabold text-[#059669]">&quot;Enterprise Workflow Automation&quot;</strong>. 3 LinkedIn posts & email sequences drafted and scheduled automatically.
-                  </p>
-                </div>
-              </>
-            )}
-
-            {/* Sales: Lead pipeline with clean cards */}
-            {activeAgent === 1 && (
-              <>
-                <div className="bg-gradient-to-br from-emerald-100/90 via-teal-50/80 to-white rounded-2xl border border-emerald-300/80 p-3.5 sm:p-4 shadow-md shadow-emerald-500/10">
-                  <div className="flex items-center justify-between text-[11px] font-black text-[#0F172A] mb-3">
-                    <span>Lead Qualification & Proposal Pipeline</span>
-                    <span className="text-[9.5px] font-black text-emerald-800 bg-emerald-100 px-2.5 py-0.5 rounded-full border border-emerald-300 shadow-2xs">
-                      Score: 98/100
-                    </span>
-                  </div>
-                  <div className="space-y-2">
-                    {[
-                      { step: "Lead Captured", detail: "Inbound Website Form • Vertex Global", status: "Done" },
-                      { step: "Proposal Sent", detail: "Scoped deliverables & pricing in 2.1s", status: "Done" },
-                      { step: "Meeting Booked", detail: "Calendar invite confirmed • 03:00 PM Today", status: "Live" },
-                    ].map((item) => (
-                      <div key={item.step} className="flex items-center gap-2.5 p-2 rounded-xl bg-gradient-to-r from-emerald-50 via-white to-teal-50 border border-emerald-200/80 shadow-2xs">
-                        <div
-                          className="w-4 h-4 rounded-full flex items-center justify-center text-white text-[8px] font-black shrink-0 shadow-xs"
-                          style={{ background: current.color }}
-                        >
-                          ✓
-                        </div>
-                        <div className="flex-1">
-                          <div className="text-[11.5px] font-black text-[#0F172A] leading-snug">{item.step}</div>
-                          <div className="text-[10px] text-[#475569] font-bold">{item.detail}</div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="bg-gradient-to-br from-white via-emerald-50/50 to-teal-50/40 rounded-2xl p-3.5 border border-emerald-200/90 shadow-md shadow-emerald-500/10 flex items-center justify-between text-[11px]">
-                  <span className="font-black text-[#0F172A]">Pipeline Value: ₹3,80,000</span>
-                  <span className="font-black text-[#059669] bg-emerald-100 px-2.5 py-0.5 rounded-full border border-emerald-300 text-[10px] shadow-2xs">
-                    2.1s / Deal Velocity
-                  </span>
-                </div>
-              </>
-            )}
-
-            {/* Support: Clean onboarding & response stream */}
-            {activeAgent === 2 && (
-              <>
-                <div className="bg-gradient-to-br from-white via-emerald-50/40 to-teal-50/30 rounded-2xl border border-emerald-200/90 p-3.5 sm:p-4 shadow-lg shadow-emerald-500/10 flex-1 flex flex-col justify-between">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-[11px] font-black text-[#0F172A]">24/7 Autonomous Onboarding Stream</span>
-                    <span className="text-[9.5px] font-black text-emerald-800 bg-emerald-100 px-2.5 py-0.5 rounded-full border border-emerald-300 shadow-2xs">
-                      0.8s Response
-                    </span>
-                  </div>
-
-                  <div className="space-y-2">
-                    <div className="p-2.5 rounded-xl bg-gradient-to-r from-slate-100 via-white to-slate-100 text-[11.5px] text-[#334155] leading-snug border border-slate-200 shadow-2xs">
-                      <strong className="text-[#0F172A] font-black">Customer:</strong> How do we configure team access & custom workflows?
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                {current.steps.map((step, stepIdx) => (
+                  <motion.div
+                    key={step.label}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: stepIdx * 0.08, duration: 0.3 }}
+                    className="relative flex flex-col p-3 rounded-2xl bg-gradient-to-b from-white/90 to-emerald-50/40 border border-emerald-200/70 shadow-xs hover:border-emerald-300 transition-all"
+                  >
+                    <div className="flex items-center justify-between mb-1.5">
+                      <span className="w-7 h-7 rounded-xl bg-emerald-100/80 text-emerald-700 flex items-center justify-center text-sm font-black border border-emerald-200">
+                        {step.icon}
+                      </span>
+                      <span className="text-[9px] font-black text-emerald-600 bg-emerald-100/60 px-1.5 py-0.5 rounded-md">
+                        STEP 0{stepIdx + 1}
+                      </span>
                     </div>
-                    <div className="p-2.5 rounded-xl bg-gradient-to-r from-emerald-100/90 via-white to-emerald-50 text-[11.5px] text-[#0F172A] leading-snug font-normal border border-emerald-200 shadow-2xs">
-                      <strong className="text-emerald-900 font-black">AI Support:</strong> Workspace configured! Guided onboarding links sent to all 12 team members.
+                    <div className="text-xs font-black text-[#0F172A] leading-snug">
+                      {step.label}
                     </div>
-                  </div>
-
-                  <div className="mt-3 pt-3 border-t border-emerald-200/60 flex items-center justify-between text-[10.5px] font-bold text-[#64748B]">
-                    <span>CSAT Score: 5.0 / 5.0</span>
-                    <span className="text-emerald-700 font-black">0 Backlog Tickets</span>
-                  </div>
-                </div>
-              </>
-            )}
-
-            {/* Ops: Clean task automation grid */}
-            {activeAgent === 3 && (
-              <>
-                <div className="bg-gradient-to-br from-white via-amber-50/40 to-emerald-50/30 rounded-2xl border border-amber-200/90 p-3.5 sm:p-4 shadow-lg shadow-amber-500/10 flex-1 flex flex-col justify-between">
-                  <div className="flex items-center justify-between text-[11px] font-black text-[#0F172A] mb-3">
-                    <span>Automated Operations & Workflow Tasks</span>
-                    <span className="text-[9.5px] font-black text-amber-800 bg-amber-100 px-2.5 py-0.5 rounded-full border border-amber-300 shadow-2xs">
-                      85% Automated
-                    </span>
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-2 mb-3">
-                    <div className="p-2.5 rounded-xl bg-gradient-to-br from-amber-100/80 via-white to-amber-50 border border-amber-200 shadow-2xs">
-                      <div className="text-[11px] font-black text-[#0F172A]">Invoices & Billing</div>
-                      <div className="text-[10px] text-amber-900 font-black mt-0.5">24 Processed Today</div>
+                    <div className="text-[11px] text-slate-600 font-medium leading-relaxed mt-1">
+                      {step.desc}
                     </div>
-                    <div className="p-2.5 rounded-xl bg-gradient-to-br from-emerald-100/80 via-white to-emerald-50 border border-emerald-200 shadow-2xs">
-                      <div className="text-[11px] font-black text-[#0F172A]">Cross-App Data Sync</div>
-                      <div className="text-[10px] text-emerald-900 font-black mt-0.5">100% Real-Time</div>
-                    </div>
-                  </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
 
-                  <div className="pt-3 border-t border-amber-200/60 flex items-center justify-between text-[10px] font-bold text-[#64748B]">
-                    <span>Integrations: Stripe, QuickBooks, Slack, Notion</span>
-                    <span className="text-amber-800 font-black">Self-Healing Active</span>
-                  </div>
-                </div>
-              </>
-            )}
-
-            {/* Founder: Clean executive briefing */}
-            {activeAgent === 4 && (
-              <>
-                <div className="bg-gradient-to-br from-white via-emerald-50/40 to-teal-50/30 rounded-2xl border border-emerald-200/90 p-3.5 sm:p-4 shadow-lg shadow-emerald-500/10 flex-1 flex flex-col justify-between">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-[11px] font-black text-[#0F172A]">Weekly Founder Executive Digest</span>
-                    <span className="text-[9.5px] font-black text-emerald-900 bg-emerald-100 px-2.5 py-0.5 rounded-full border border-emerald-300 shadow-2xs">
-                      Weekly Briefing
-                    </span>
-                  </div>
-
-                  <div className="space-y-2 text-[11.5px] text-[#334155] leading-relaxed">
-                    <div className="flex items-center justify-between p-2.5 rounded-xl bg-gradient-to-r from-emerald-100/80 via-white to-teal-50 border border-emerald-200 shadow-2xs">
-                      <span className="font-extrabold text-[#0F172A]">Revenue Growth (MoM)</span>
-                      <strong className="text-emerald-700 font-black">↑ +34.2%</strong>
-                    </div>
-                    <div className="flex items-center justify-between p-2.5 rounded-xl bg-gradient-to-r from-emerald-100/80 via-white to-emerald-50 border border-emerald-200 shadow-2xs">
-                      <span className="font-extrabold text-[#0F172A]">Cash Runway</span>
-                      <strong className="text-emerald-700 font-black">24.5 Months</strong>
-                    </div>
-                  </div>
-
-                  <div className="mt-3 pt-3 border-t border-emerald-200/60 text-[10.5px] font-bold text-[#64748B]">
-                    <span>Top Focus: Scale High-Performing Inbound Acquisition</span>
-                  </div>
-                </div>
-              </>
-            )}
-          </div>
-        </motion.div>
-
-        {/* ── Compact Pipeline Dots ── */}
-        <div className="flex items-center justify-center gap-1.5 mt-2.5">
-          {agents.map((agent, idx) => (
-            <button key={agent.id} type="button" onClick={() => handleAgentClick(idx)} className="cursor-pointer p-0.5">
-              <motion.div
-                className="w-1.5 h-1.5 rounded-full"
-                style={{ background: idx === activeAgent ? current.color : '#CBD5E1' }}
-                animate={idx === activeAgent ? { scale: [1, 1.6, 1] } : { scale: 1 }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-              />
-            </button>
-          ))}
+            {/* Bottom Outcome Stat Strip */}
+            <div className="pt-2 flex items-center justify-between text-xs border-t border-emerald-100">
+              <div className="flex items-center gap-2 text-slate-500 font-bold text-[11px]">
+                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
+                <span>Verified Business Result</span>
+              </div>
+              <div className="text-sm sm:text-base font-black text-emerald-700 tracking-tight bg-emerald-100/70 px-3.5 py-1 rounded-full border border-emerald-300 shadow-2xs">
+                🎯 {current.metric}
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
 
-      {/* ── Bottom Telemetry Footer Strip (Fresh Emerald Dark Theme) ── */}
-      <div className="relative z-10 bg-gradient-to-r from-[#064E3B] via-[#047857] to-[#064E3B] border-t border-emerald-600/80 text-white px-4 py-2.5 flex items-center justify-between text-[10.5px] font-extrabold shadow-inner">
-        <div className="flex items-center gap-2">
-          <span className="w-2 h-2 rounded-full bg-emerald-300 animate-pulse" />
-          <span className="text-white">Real-Time Autonomous AI Engine Active</span>
-        </div>
-        <span className="bg-emerald-700/90 text-white border border-emerald-400/80 px-2.5 py-0.5 rounded-md text-[9.5px] tracking-wide font-black shadow-2xs">
-          99.99% Uptime
-        </span>
+      {/* ── Mobile Agent Selector Dots (visible < 640px) ── */}
+      <div className="flex sm:hidden items-center justify-center gap-2 pb-4 pt-1 border-t border-emerald-100">
+        {agents.map((agent, idx) => {
+          const isActive = idx === activeAgent;
+          return (
+            <button
+              key={agent.id}
+              type="button"
+              onClick={() => setActiveAgent(idx)}
+              className={`px-3 py-1 rounded-full text-[10px] font-black transition-all flex items-center gap-1 border ${
+                isActive
+                  ? "bg-emerald-600 text-white border-emerald-500 shadow-xs"
+                  : "bg-white text-slate-600 border-slate-200"
+              }`}
+            >
+              <span>{agent.icon}</span>
+              <span>{agent.label}</span>
+            </button>
+          );
+        })}
       </div>
     </div>
   );
@@ -1308,57 +1016,58 @@ function ProductStage({
   product,
   index,
 }: {
-  product: (typeof products)[0];
+  product: (typeof products)[number];
   index: number;
 }) {
-  const cardRef = useRef<HTMLDivElement>(null);
-  const cardInView = useInView(cardRef, { once: false, amount: 0.05 });
+  const ref = useRef<HTMLDivElement>(null);
+  const cardInView = useInView(ref, { once: false, amount: 0.15 });
 
   const headerRef = useRef<HTMLDivElement>(null);
-  const headerInView = useInView(headerRef, { once: false, amount: 0.05 });
+  const headerInView = useInView(headerRef, { once: false, amount: 0.2 });
 
   const descRef = useRef<HTMLDivElement>(null);
-  const descInView = useInView(descRef, { once: false, amount: 0.05 });
+  const descInView = useInView(descRef, { once: false, amount: 0.2 });
 
-  const isAiAgent = product.id === "automation-suite";
+  const themeConfig = {
+    "coaching-platform": {
+      bg: "bg-white",
+      border: "border-blue-200/80 hover:border-blue-400/80",
+      headerGradient: "from-[#1D4ED8] via-[#2563EB] to-[#0284C7]",
+      descBg: "bg-blue-50/70 border-blue-200/90",
+      topLine: "from-[#2563EB] to-[#0284C7]",
+      tileBg: "bg-blue-50/50 hover:bg-blue-100/60 border border-blue-100",
+      noteBg: "bg-blue-50 text-[#2563EB] border-blue-200",
+      dotBg: "bg-[#2563EB]",
+      ctaBg: "bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] hover:from-[#1e40af] hover:to-[#0369a1]",
+      metricText: "text-[#2563EB]",
+      shadow: "shadow-[0_12px_40px_rgba(37,99,235,0.08)]",
+    },
+    "automation-suite": {
+      bg: "bg-white",
+      border: "border-emerald-200/80 hover:border-emerald-400/80",
+      headerGradient: "from-[#047857] via-[#059669] to-[#0D9488]",
+      descBg: "bg-emerald-50/70 border-emerald-200/90",
+      topLine: "from-[#059669] to-[#0D9488]",
+      tileBg: "bg-emerald-50/50 hover:bg-emerald-100/60 border border-emerald-100",
+      noteBg: "bg-emerald-50 text-[#059669] border-emerald-200",
+      dotBg: "bg-[#059669]",
+      ctaBg: "bg-gradient-to-r from-[#047857] via-[#059669] to-[#0D9488] hover:from-[#065f46] hover:to-[#0f766e]",
+      metricText: "text-[#059669]",
+      shadow: "shadow-[0_12px_40px_rgba(16,185,129,0.08)]",
+    },
+  };
 
-  const cardTheme = isAiAgent
-    ? {
-        bg: "bg-gradient-to-br from-emerald-100/90 via-emerald-50/60 to-white",
-        border: "border-emerald-300/90",
-        shadow: "shadow-[0_16px_45px_rgba(5,150,105,0.14)] group-hover:shadow-[0_28px_65px_rgba(5,150,105,0.24)]",
-        headerGradient: "from-[#059669] via-[#10B981] to-[#0D9488]",
-        descBg: "bg-gradient-to-br from-white via-emerald-50/90 to-teal-50/70 border-emerald-300/90 shadow-md shadow-emerald-500/10",
-        topLine: "from-[#059669] via-[#10B981] to-[#0D9488]",
-        tileBg: "bg-gradient-to-br from-emerald-100/80 via-emerald-50/60 to-white border-emerald-300/80 hover:from-emerald-200/80 hover:to-white",
-        ctaBg: "bg-[#059669] hover:bg-[#047857] shadow-emerald-500/20",
-        noteBg: "bg-emerald-100/90 border-emerald-200/90 text-[#064E3B]",
-        dotBg: "bg-[#059669]",
-        metricText: "text-[#059669]",
-      }
-    : {
-        bg: "bg-gradient-to-br from-blue-100/90 via-blue-50/60 to-white",
-        border: "border-blue-300/90",
-        shadow: "shadow-[0_16px_45px_rgba(37,99,235,0.12)] group-hover:shadow-[0_28px_65px_rgba(37,99,235,0.22)]",
-        headerGradient: "from-[#1D4ED8] via-[#2563EB] to-[#0EA5E9]",
-        descBg: "bg-gradient-to-br from-white via-blue-50/90 to-sky-50/70 border-blue-300/90 shadow-md shadow-blue-500/10",
-        topLine: "from-[#1D4ED8] via-[#2563EB] to-[#0EA5E9]",
-        tileBg: "bg-gradient-to-br from-blue-100/80 via-blue-50/60 to-white border-blue-300/80 hover:from-blue-200/80 hover:to-white",
-        ctaBg: "bg-[#2563EB] hover:bg-[#1D4ED8] shadow-blue-500/20",
-        noteBg: "bg-blue-100/90 border-blue-200/90 text-[#1E3A8A]",
-        dotBg: "bg-[#2563EB]",
-        metricText: "text-[#2563EB]",
-      };
+  const cardTheme = themeConfig[product.id as keyof typeof themeConfig];
 
   return (
     <motion.div
-      ref={cardRef}
+      ref={ref}
       initial={{ opacity: 0, y: 24 }}
       animate={cardInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 24 }}
       transition={{ duration: 0.45, delay: index * 0.1, ease: "easeOut" }}
       className={`group relative rounded-3xl border ${cardTheme.border} ${cardTheme.bg} overflow-hidden ${cardTheme.shadow} transition-all duration-500 hover:-translate-y-1.5 flex flex-col`}
     >
-      {/* ── Cinematic Gradient Header (Matching 2nd Section Look) ── */}
+      {/* ── Cinematic Gradient Header ── */}
       <motion.div
         ref={headerRef}
         initial={{ opacity: 0 }}
@@ -1390,7 +1099,7 @@ function ProductStage({
         <div className="absolute bottom-[-10px] right-[40px] w-[80px] h-[80px] rounded-full border-[14px] border-white/8 pointer-events-none" />
       </motion.div>
 
-      {/* ── Floating Description Card Badge (Matching 2nd Section Look) ── */}
+      {/* ── Floating Description Card Badge ── */}
       <motion.div
         ref={descRef}
         initial={{ opacity: 0, y: 16 }}
@@ -1406,79 +1115,45 @@ function ProductStage({
         </div>
       </motion.div>
 
-      {/* ── Card Body Container (Features + 3D Visual Stage) ── */}
+      {/* ── Card Body Container (Full-Width 3D Visual Stage for Both Products) ── */}
       <div className="p-5 sm:p-8 pt-6 sm:pt-7 flex-1">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-7 lg:gap-10 items-stretch">
-          {/* Left Column: Core Capability 6-Tile Grid */}
-          <div className="lg:col-span-7 flex flex-col justify-between">
-            <div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-3.5 mb-6">
-                {product.features.map((feat, featIdx) => (
-                  <motion.div
-                    key={feat.title}
-                    initial={{ opacity: 0, y: 14 }}
-                    animate={cardInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 14 }}
-                    transition={{ duration: 0.4, delay: featIdx * 0.06, ease: "easeOut" }}
-                    className={`group/feat rounded-2xl p-3.5 sm:p-4 ${cardTheme.tileBg} transition-all duration-200 flex items-start gap-3 shadow-2xs hover:shadow-md relative overflow-hidden`}
-                  >
-                    <div className={`w-8 h-8 rounded-xl flex items-center justify-center text-xs flex-shrink-0 group-hover/feat:scale-105 transition-transform duration-200 ${feat.iconBg}`}>
-                      {feat.icon}
-                    </div>
-                    <div>
-                      <h4 className="text-[12.5px] sm:text-[13px] font-black text-[#0F172A] leading-snug">
-                        {feat.title}
-                      </h4>
-                      <p className="text-[11px] sm:text-[11.5px] text-[#64748B] leading-[1.65] mt-1 font-normal">
-                        {feat.desc}
-                      </p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* Target Audience Footer Note */}
-              {"footerNote" in product && product.footerNote && (
-                <div className={`mb-6 inline-flex items-center gap-2 px-3.5 py-2 rounded-xl ${cardTheme.noteBg} border text-[11px] font-extrabold shadow-2xs`}>
-                  <span className={`w-1.5 h-1.5 rounded-full ${cardTheme.dotBg}`} />
-                  {product.footerNote}
-                </div>
-              )}
-            </div>
-
-            {/* CTA & Metrics Footer */}
-            <div className="flex flex-wrap items-center justify-between gap-4 pt-5 border-t border-slate-200/60">
-              <a
-                href={product.href}
-                className={`inline-flex items-center gap-2 px-6 py-3 rounded-full ${cardTheme.ctaBg} text-white text-xs sm:text-[13.5px] font-extrabold shadow-md hover:shadow-lg transition-all duration-200 group/btn`}
-              >
-                <span>{product.cta}</span>
-                <span className="group-hover/btn:translate-x-1 transition-transform duration-200 text-sm">→</span>
-              </a>
-
-              <div className="flex items-center gap-4 sm:gap-6">
-                <div className="text-right">
-                  <div className={`text-base sm:text-lg font-black ${cardTheme.metricText}`}>{product.metric1.val}</div>
-                  <div className="text-[10px] font-extrabold text-slate-500 uppercase tracking-wider">{product.metric1.label}</div>
-                </div>
-                <div className="h-7 w-[1px] bg-slate-200/80" />
-                <div className="text-right">
-                  <div className={`text-base sm:text-lg font-black ${cardTheme.metricText}`}>{product.metric2.val}</div>
-                  <div className="text-[10px] font-extrabold text-slate-500 uppercase tracking-wider">{product.metric2.label}</div>
-                </div>
-              </div>
-            </div>
+        <div className="w-full flex flex-col items-center">
+          {/* Centered 3D Interactive Visual Stage */}
+          <div className="w-full mb-6">
+            {product.id === "coaching-platform" ? (
+              <LMS3DVisual />
+            ) : (
+              <Automation3DVisual />
+            )}
           </div>
 
-          {/* Right Column: 3D Interactive Visual Canvas */}
-          <div className="lg:col-span-5 flex flex-col justify-center w-full h-full">
-            {product.mockupType === "lms" ? <LMS3DVisual /> : <Automation3DVisual />}
+          {/* Bottom CTA & Key Metrics Bar */}
+          <div className="w-full flex flex-wrap items-center justify-between gap-4 pt-5 border-t border-slate-200/80 bg-gradient-to-r from-slate-50/60 via-white to-slate-50/60 p-4 sm:p-5 rounded-2xl border">
+            <a
+              href={product.href}
+              className={`inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full ${cardTheme.ctaBg} text-white text-xs sm:text-[14px] font-black shadow-md hover:shadow-lg transition-all duration-200 group/btn`}
+            >
+              <span>{product.cta}</span>
+              <span className="group-hover/btn:translate-x-1.5 transition-transform duration-200 text-sm">→</span>
+            </a>
+
+            <div className="flex items-center gap-4 sm:gap-8">
+              <div className="text-right">
+                <div className={`text-base sm:text-xl font-black ${cardTheme.metricText}`}>{product.metric1.val}</div>
+                <div className="text-[10px] sm:text-[10.5px] font-extrabold text-slate-500 uppercase tracking-wider">{product.metric1.label}</div>
+              </div>
+              <div className="h-8 w-[1px] bg-slate-200/90" />
+              <div className="text-right">
+                <div className={`text-base sm:text-xl font-black ${cardTheme.metricText}`}>{product.metric2.val}</div>
+                <div className="text-[10px] sm:text-[10.5px] font-extrabold text-slate-500 uppercase tracking-wider">{product.metric2.label}</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </motion.div>
   );
 }
-
 export default function Products() {
   return (
     <section className="relative bg-gradient-to-b from-white via-slate-50/50 to-white overflow-hidden border-t border-slate-100 py-8 sm:py-12 lg:py-14">

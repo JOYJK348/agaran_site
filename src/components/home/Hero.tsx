@@ -212,7 +212,7 @@ export default function Hero() {
     };
   }, []);
 
-  const fullHeadline = "Building intelligent software and AI systems for business and education.";
+  const fullHeadline = "Build Intelligent Solutions Automate What Matters";
 
   // Typewriter effect
   useEffect(() => {
@@ -232,13 +232,13 @@ export default function Hero() {
   const renderHighlightedHeadline = () => {
     const textToRender = done ? fullHeadline : displayText;
     
-    // Replace intelligent software and AI systems with blue styled spans
-    const parts = textToRender.split(/(intelligent software|AI systems)/g);
+    // Replace Intelligent Solutions and Automate What Matters with blue styled spans
+    const parts = textToRender.split(/(Intelligent Solutions|Automate What Matters)/g);
 
     return (
       <>
         {parts.map((part, index) => {
-          if (part === "intelligent software" || part === "AI systems") {
+          if (part === "Intelligent Solutions" || part === "Automate What Matters") {
             return (
               <span
                 key={index}
@@ -259,32 +259,7 @@ export default function Hero() {
 
   const corePillars = [
     {
-      name: "Learning Platforms",
-      icon: (
-        <svg className="w-4 h-4 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-        </svg>
-      ),
-    },
-    {
-      name: "Autonomous AI Agents",
-      icon: (
-        <svg className="w-4 h-4 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-        </svg>
-      ),
-    },
-    {
-      name: "Mobile & Web Apps",
-      icon: (
-        <svg className="w-4 h-4 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-        </svg>
-      ),
-    },
-    {
-      name: "AI & Automation",
+      name: "Business Automation",
       icon: (
         <svg className="w-4 h-4 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
           <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -292,10 +267,35 @@ export default function Hero() {
       ),
     },
     {
-      name: "Enterprise Security",
+      name: "Workflow Automation",
       icon: (
         <svg className="w-4 h-4 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+        </svg>
+      ),
+    },
+    {
+      name: "AI Agents",
+      icon: (
+        <svg className="w-4 h-4 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+        </svg>
+      ),
+    },
+    {
+      name: "SaaS Products",
+      icon: (
+        <svg className="w-4 h-4 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
+        </svg>
+      ),
+    },
+    {
+      name: "Education Technology",
+      icon: (
+        <svg className="w-4 h-4 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
+          <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
         </svg>
       ),
     },
@@ -309,41 +309,40 @@ export default function Hero() {
     },
   ];
 
-  const stats = [
+  const trustMetrics = [
     {
-      value: "50+",
-      label: "Projects Delivered",
+      title: "99.9% Uptime",
+      subtitle: "Reliable Cloud Infrastructure",
       icon: (
-        <svg className="w-6 h-6 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+        <svg className="w-4 h-4 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
         </svg>
       ),
     },
     {
-      value: "20+",
-      label: "AI Agents Built",
+      title: "24/7 Operations",
+      subtitle: "Autonomous AI Execution",
       icon: (
-        <svg className="w-6 h-6 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+        <svg className="w-4 h-4 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
           <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
         </svg>
       ),
     },
     {
-      value: "30+",
-      label: "Happy Organizations",
+      title: "100% Custom",
+      subtitle: "Built Around Your Workflows",
       icon: (
-        <svg className="w-6 h-6 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0h5m-5 0V11m0 0l-2-2m2 2l2-2" />
+        <svg className="w-4 h-4 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
         </svg>
       ),
     },
     {
-      value: "1000+",
-      label: "Learners Empowered",
+      title: "Enterprise Grade",
+      subtitle: "Security & Scalability",
       icon: (
-        <svg className="w-6 h-6 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
-          <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+        <svg className="w-4 h-4 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+          <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
         </svg>
       ),
     },
@@ -380,53 +379,67 @@ export default function Hero() {
           >
             {/* Pill Category Badge */}
             <motion.div
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] sm:text-xs font-bold uppercase tracking-wider text-[#2563EB]"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB]"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1, duration: 0.4 }}
             >
               <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#2563EB] animate-pulse" />
-              <span>BUILD &nbsp;•&nbsp; AUTOMATE &nbsp;•&nbsp; GROW</span>
+              <span>AI AGENTS &nbsp;•&nbsp; AUTOMATION &nbsp;•&nbsp; SOFTWARE</span>
             </motion.div>
 
             {/* Main Headline (Top-Notch Vercel/Apple Style Precision Typography) */}
-            <h1 className="text-[1.7rem] xs:text-[1.9rem] sm:text-3xl md:text-4xl lg:text-[2.65rem] xl:text-[2.9rem] font-extrabold lg:font-black leading-[1.3] xs:leading-[1.26] sm:leading-[1.18] lg:leading-[1.14] tracking-[-0.035em] text-slate-900 max-w-full lg:max-w-[570px] xl:max-w-[630px]">
+            <h1 className="text-[1.8rem] xs:text-[2.1rem] sm:text-4xl md:text-[2.65rem] lg:text-[2.85rem] xl:text-[3.15rem] font-extrabold lg:font-black leading-[1.22] xs:leading-[1.18] sm:leading-[1.14] lg:leading-[1.12] tracking-[-0.035em] text-slate-900 max-w-full lg:max-w-[570px] xl:max-w-[630px]">
               {renderHighlightedHeadline()}
             </h1>
 
+            {/* Subheadline */}
+            <motion.p
+              className="text-sm sm:text-base lg:text-[1.05rem] font-medium leading-relaxed text-slate-600 max-w-full lg:max-w-[570px] tracking-normal -mt-1 sm:-mt-2"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.3, duration: 0.5 }}
+            >
+              Agaran builds intelligent technology and AI systems that help businesses work smarter and people learn, create, and grow.
+            </motion.p>
+
             {/* Action Buttons (Stacked Full-Width on Mobile, Row on Desktop) */}
             <motion.div
-              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 sm:gap-4 pt-3 sm:pt-2 w-full max-w-xs sm:max-w-none"
+              className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3.5 sm:gap-4 pt-1 w-full max-w-xs sm:max-w-none"
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.5 }}
             >
-              <Button variant="primary" href="/what-we-do" className="text-sm sm:text-base px-6 py-3.5 sm:py-3 rounded-xl font-semibold w-full sm:w-auto justify-center">
-                Explore What We Do <span className="ml-1">→</span>
+              <Button variant="primary" href="/what-we-do" className="text-sm sm:text-base px-7 py-3.5 sm:py-4 rounded-xl font-bold w-full sm:w-auto justify-center shadow-md hover:shadow-lg transition-all">
+                Explore Solutions <span className="ml-1">→</span>
               </Button>
-              <Button variant="secondary" href="/work" className="text-sm sm:text-base px-6 py-3.5 sm:py-3 rounded-xl font-semibold w-full sm:w-auto justify-center">
+              <Button variant="secondary" href="/work" className="text-sm sm:text-base px-7 py-3.5 sm:py-4 rounded-xl font-bold w-full sm:w-auto justify-center border border-slate-200">
                 View Our Work
               </Button>
             </motion.div>
 
-            {/* Core Pillars & Capabilities Bar */}
+            {/* Core Pillars & Capabilities Bar (Mobile-First Symmetrical Grid) */}
             <motion.div
               className="pt-5 sm:pt-6 w-full border-t border-slate-100 mt-2"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5, duration: 0.5 }}
             >
-              <p className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-[#94A3B8] mb-3">
-                ENGINEERED FOR IMPACT
-              </p>
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 sm:gap-3">
+              <div className="flex items-center justify-center lg:justify-start gap-1.5 mb-3">
+                <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
+                <p className="text-[10px] sm:text-[11px] font-black uppercase tracking-widest text-[#94A3B8]">
+                  ENGINEERED FOR IMPACT
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-2 xs:grid-cols-3 lg:flex lg:flex-wrap gap-2 sm:gap-2.5 w-full">
                 {corePillars.map((pillar) => (
                   <div
                     key={pillar.name}
-                    className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-50 border border-slate-200/80 text-xs font-semibold text-slate-700 transition-all hover:bg-blue-50 hover:border-blue-200 hover:text-blue-600 cursor-default"
+                    className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-2 rounded-xl sm:rounded-full bg-slate-50/90 border border-slate-200/80 text-[11px] xs:text-xs font-bold text-slate-700 transition-all hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600 cursor-default shadow-2xs justify-start sm:justify-center min-w-0"
                   >
-                    {pillar.icon}
-                    <span>{pillar.name}</span>
+                    <span className="flex-shrink-0 text-[#2563EB]">{pillar.icon}</span>
+                    <span className="truncate font-extrabold">{pillar.name}</span>
                   </div>
                 ))}
               </div>
@@ -444,32 +457,33 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Bottom Floating Stats Showcase Bar */}
+        {/* Mobile-First Trust Metrics Bar */}
         <motion.div
-          className="mt-6 sm:mt-8 lg:mt-10 w-full p-5 sm:p-7 lg:p-8 bg-white/70 backdrop-blur-xl rounded-2xl sm:rounded-3xl border border-slate-200/80 shadow-[0_15px_35px_rgba(0,0,0,0.04)] grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 divide-x-0 md:divide-x divide-slate-100"
-          initial={{ opacity: 0, y: 30 }}
+          className="mt-6 sm:mt-8 lg:mt-10 w-full grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4"
+          initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.9, duration: 0.7 }}
+          transition={{ delay: 0.85, duration: 0.6 }}
         >
-          {stats.map((stat, idx) => (
-            <div
-              key={idx}
-              className={`flex items-center gap-4 ${
-                idx !== 0 ? "md:pl-6" : ""
-              }`}
+          {trustMetrics.map((item, idx) => (
+            <motion.div
+              key={item.title}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9 + idx * 0.08, duration: 0.4 }}
+              className="flex items-center gap-3 p-3 sm:p-3.5 rounded-2xl bg-gradient-to-r from-slate-50/90 via-white to-blue-50/30 border border-slate-200/80 shadow-2xs hover:shadow-xs hover:border-blue-300/80 transition-all group"
             >
-              <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#EFF6FF] border border-[#DBEAFE] flex items-center justify-center flex-shrink-0">
-                {stat.icon}
+              <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-blue-50 text-[#2563EB] border border-blue-100 flex items-center justify-center flex-shrink-0 group-hover:scale-105 transition-transform">
+                {item.icon}
               </div>
-              <div>
-                <h3 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-[#0F172A] leading-none tabular-nums">
-                  {stat.value}
-                </h3>
-                <p className="text-[10px] sm:text-xs lg:text-sm font-medium text-[#64748B] mt-0.5 sm:mt-1">
-                  {stat.label}
+              <div className="min-w-0 flex-1">
+                <h4 className="text-xs sm:text-[13.5px] font-black text-[#0F172A] leading-tight tracking-tight truncate">
+                  {item.title}
+                </h4>
+                <p className="text-[10px] sm:text-[11px] font-medium text-slate-500 leading-tight mt-0.5 truncate">
+                  {item.subtitle}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </motion.div>
       </div>

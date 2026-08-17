@@ -1,126 +1,127 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Container from "@/components/ui/Container";
 
-const pillars = [
+const appScreens = [
   {
-    title: "AI-Driven Solutions",
-    description: (
-      <>
-        <strong className="font-extrabold text-[#059669]">AI and automation</strong> are built natively into the way we design <strong className="font-extrabold text-[#0F172A]">software</strong> and <strong className="font-extrabold text-[#0F172A]">business systems</strong>.
-      </>
-    ),
-    points: [
-      { bold: "AI-powered", text: "workflows" },
-      { bold: "Smart business", text: "automation" },
-      { bold: "Connected", text: "software systems" },
-      { bold: "Faster", text: "everyday operations" },
-    ],
+    id: "automation",
+    navLabel: "AI Agent",
+    icon: "🤖",
+    title: "Autonomous AI Engine",
+    subtitle: "Replaces manual tasks 24/7",
+    color: "#059669",
+    gradient: "from-emerald-500 to-teal-600",
+    badge: "ACTIVE",
+    badgeBg: "bg-emerald-500/10 text-emerald-400 border-emerald-500/30",
+    content: {
+      statusText: "Agent #104 Executing Workflow...",
+      steps: [
+        { title: "Lead Ingestion", time: "0.1s", status: "Done", color: "text-emerald-400" },
+        { title: "AI Decision Model", time: "0.4s", status: "Active", color: "text-blue-400" },
+        { title: "Portal Database Sync", time: "0.2s", status: "Queued", color: "text-slate-400" },
+      ],
+      statLabel: "Manual Overhead Saved",
+      statValue: "85%",
+    },
   },
   {
-    title: "Built to Grow",
-    description: (
-      <>
-        Our software is designed to be <strong className="font-extrabold text-[#0F172A]">reliable, flexible</strong>, and ready to <strong className="font-extrabold text-[#2563EB]">scale as your business grows</strong>.
-      </>
-    ),
-    points: [
-      { bold: "Scalable", text: "architecture" },
-      { bold: "Cloud-based", text: "systems" },
-      { bold: "Secure data", text: "management" },
-      { bold: "Long-term", text: "flexibility" },
-    ],
+    id: "scale",
+    navLabel: "Scale",
+    icon: "⚡",
+    title: "Multi-Tenant Cloud OS",
+    subtitle: "Isolated architecture for growth",
+    color: "#2563EB",
+    gradient: "from-blue-500 to-indigo-600",
+    badge: "100k REQ/S",
+    badgeBg: "bg-blue-500/10 text-blue-400 border-blue-500/30",
+    content: {
+      statusText: "Tenant Isolation Layer • Active",
+      tenants: [
+        { name: "Coaching Platform", load: "88%", status: "Isolated" },
+        { name: "University Portal", load: "62%", status: "Isolated" },
+        { name: "Enterprise SaaS", load: "45%", status: "Isolated" },
+      ],
+      statLabel: "Target SLA Uptime",
+      statValue: "99.99%",
+    },
   },
   {
-    title: "Automation Saves Time",
-    description: (
-      <>
-        We automate <strong className="font-extrabold text-[#2563EB]">repetitive work</strong> so your team can focus on <strong className="font-extrabold text-[#0F172A]">what matters most</strong>.
-      </>
-    ),
-    points: [
-      { bold: "Workflow", text: "automation" },
-      { bold: "Document", text: "processing" },
-      { bold: "Lead & customer", text: "management" },
-      { bold: "Faster internal", text: "operations" },
-    ],
+    id: "velocity",
+    navLabel: "Speed",
+    icon: "🚀",
+    title: "Real-Time Sync Engine",
+    subtitle: "Zero latency portal updates",
+    color: "#7C3AED",
+    gradient: "from-purple-500 to-violet-600",
+    badge: "< 40MS",
+    badgeBg: "bg-purple-500/10 text-purple-400 border-purple-500/30",
+    content: {
+      statusText: "Cross-Portal Data Bridge Live",
+      portals: [
+        { name: "Admin Dashboard", state: "Synced ⚡" },
+        { name: "Student App", state: "Synced ⚡" },
+        { name: "Parent Portal", state: "Synced ⚡" },
+      ],
+      statLabel: "Average Data Latency",
+      statValue: "18ms",
+    },
   },
   {
-    title: "A Long-Term Partner",
-    description: (
-      <>
-        We build software that is <strong className="font-extrabold text-[#0F172A]">easy to maintain</strong>, improve, and <strong className="font-extrabold text-[#2563EB]">expand over time</strong>.
-      </>
-    ),
-    points: [
-      { bold: "Clean & maintainable", text: "systems" },
-      { bold: "Continuous", text: "improvements" },
-      { bold: "Reliable", text: "technical support" },
-      { bold: "Solutions built for", text: "long-term growth" },
-    ],
+    id: "security",
+    navLabel: "Trust",
+    icon: "🛡️",
+    title: "Bank-Grade Shield",
+    subtitle: "Continuous security & backups",
+    color: "#EA580C",
+    gradient: "from-orange-500 to-amber-600",
+    badge: "PROTECTED",
+    badgeBg: "bg-orange-500/10 text-orange-400 border-orange-500/30",
+    content: {
+      statusText: "Enterprise Security Guard • Operational",
+      checks: [
+        { label: "256-Bit SSL Encryption", passed: true },
+        { label: "Automated Daily Backups", passed: true },
+        { label: "Role-Based Access Control", passed: true },
+      ],
+      statLabel: "Security Compliance",
+      statValue: "100%",
+    },
   },
 ];
 
 export default function WhyAgaran() {
-  const [activeSlide, setActiveSlide] = useState(0);
+  const [activeTab, setActiveTab] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-  const touchStartX = useRef<number | null>(null);
 
-  const nextSlide = useCallback(() => {
-    setActiveSlide((prev) => (prev + 1) % pillars.length);
-  }, []);
-
-  const prevSlide = useCallback(() => {
-    setActiveSlide((prev) => (prev - 1 + pillars.length) % pillars.length);
-  }, []);
-
-  // Auto-cycle for mobile view every 3.5 seconds
+  // Auto cycle screen tabs every 3.5 seconds
   useEffect(() => {
     if (isPaused) return;
-    const interval = setInterval(() => {
-      nextSlide();
+    const timer = setInterval(() => {
+      setActiveTab((prev) => (prev + 1) % appScreens.length);
     }, 3500);
-    return () => clearInterval(interval);
-  }, [isPaused, nextSlide]);
+    return () => clearInterval(timer);
+  }, [isPaused]);
 
-  const handleTouchStart = (e: React.TouchEvent) => {
-    touchStartX.current = e.touches[0].clientX;
-    setIsPaused(true);
-  };
-
-  const handleTouchEnd = (e: React.TouchEvent) => {
-    if (touchStartX.current === null) return;
-    const touchEndX = e.changedTouches[0].clientX;
-    const diff = touchStartX.current - touchEndX;
-
-    if (diff > 50) {
-      nextSlide();
-    } else if (diff < -50) {
-      prevSlide();
-    }
-    touchStartX.current = null;
-    setIsPaused(false);
-  };
+  const currentScreen = appScreens[activeTab];
 
   return (
-    <section id="why-agaran" className="relative py-8 sm:py-12 lg:py-14 bg-gradient-to-b from-white via-slate-50/40 to-white border-t border-slate-200/80 overflow-hidden">
-      {/* ── Soft Ambient Glow Blobs ── */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-blue-50/60 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:28px_28px] opacity-30 pointer-events-none" />
+    <section id="why-agaran" className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-white via-slate-50/60 to-white border-t border-slate-200/80 overflow-hidden">
+      {/* Background Soft Ambient Lights */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-blue-100/40 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:28px_28px] opacity-25 pointer-events-none" />
 
       <Container as="div">
-        <div className="relative z-10 max-w-7xl mx-auto px-1 sm:px-0">
+        <div className="relative z-10 max-w-6xl mx-auto px-2 sm:px-0">
           
-          {/* ── Section Header — Ultra-Clean, Zero-Sentence High-Impact UI/UX (Matching Pattern) ── */}
-          <div className="relative text-center max-w-4xl mx-auto mb-8 sm:mb-10">
-            {/* Category Badge Pill */}
+          {/* Section Header */}
+          <div className="relative text-center max-w-3xl mx-auto mb-8 sm:mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200/90 text-[11px] font-black text-[#2563EB] tracking-[0.18em] uppercase mb-3.5 shadow-2xs">
               <span className="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse" />
               WHY CHOOSE AGARAN
             </div>
 
-            {/* Main Title */}
             <h2 className="text-[2.1rem] sm:text-[3rem] lg:text-[3.5rem] font-black text-[#0F172A] tracking-[-0.035em] leading-[1.12]">
               Built for{" "}
               <span className="bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] bg-clip-text text-transparent">
@@ -128,215 +129,277 @@ export default function WhyAgaran() {
               </span>
             </h2>
 
-            {/* Punchy Capability Highlights — ZERO SENTENCES */}
-            <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mt-4">
-              <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-white border border-slate-200/90 shadow-sm text-xs sm:text-[13px] font-black text-[#0F172A]">
+            <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mt-4">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs text-xs font-black text-[#0F172A]">
                 <span className="w-2 h-2 rounded-full bg-[#2563EB]" />
                 <span>Practical Engineering</span>
               </div>
-              <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-white border border-slate-200/90 shadow-sm text-xs sm:text-[13px] font-black text-[#0F172A]">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs text-xs font-black text-[#0F172A]">
                 <span className="w-2 h-2 rounded-full bg-[#2563EB]" />
                 <span>Automated Efficiency</span>
               </div>
-              <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-white border border-slate-200/90 shadow-sm text-xs sm:text-[13px] font-black text-[#0F172A]">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs text-xs font-black text-[#0F172A]">
                 <span className="w-2 h-2 rounded-full bg-[#2563EB]" />
                 <span>Reliable Partnership</span>
               </div>
             </div>
           </div>
 
-          {/* ── Mobile / Tablet Auto-Slider (< lg) ── */}
+          {/* ── iPhone 17 Pro Max Interactive Showcase ── */}
           <div
-            className="block lg:hidden"
+            className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
-            onTouchStart={handleTouchStart}
-            onTouchEnd={handleTouchEnd}
           >
-            <div className="relative overflow-hidden rounded-3xl">
-              <div
-                className="flex transition-transform duration-500 ease-out"
-                style={{ transform: `translateX(-${activeSlide * 100}%)` }}
-              >
-                {pillars.map((pillar, idx) => {
-                  const cardStyles = [
-                    { bg: "bg-gradient-to-br from-emerald-100/90 via-emerald-50/70 to-white", border: "border-emerald-300/80", accent: "from-[#059669] via-[#10B981] to-[#059669]", badge: "bg-emerald-100 text-emerald-800 border-emerald-300" },
-                    { bg: "bg-gradient-to-br from-blue-100/90 via-blue-50/70 to-white", border: "border-blue-300/80", accent: "from-[#1D4ED8] via-[#2563EB] to-[#0284C7]", badge: "bg-blue-100 text-[#2563EB] border-blue-300" },
-                    { bg: "bg-gradient-to-br from-emerald-100/90 via-emerald-50/70 to-white", border: "border-emerald-300/80", accent: "from-[#059669] via-[#10B981] to-[#059669]", badge: "bg-emerald-100 text-emerald-800 border-emerald-300" },
-                    { bg: "bg-gradient-to-br from-blue-100/90 via-blue-50/70 to-white", border: "border-blue-300/80", accent: "from-[#1D4ED8] via-[#2563EB] to-[#0284C7]", badge: "bg-blue-100 text-[#2563EB] border-blue-300" },
-                  ][idx];
+            {/* Left/Top Interactive Navigation Controls */}
+            <div className="w-full lg:w-5/12 flex flex-col gap-3">
+              <div className="text-center lg:text-left mb-2">
+                <h3 className="text-xl sm:text-2xl font-black text-[#0F172A] tracking-tight">
+                  Experience Agaran Technology
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-500 font-medium mt-1">
+                  Tap any screen tab below to preview live mobile app interfaces in real time.
+                </p>
+              </div>
 
+              {/* Pill Selectors */}
+              <div className="grid grid-cols-2 lg:flex lg:flex-col gap-2.5">
+                {appScreens.map((screen, idx) => {
+                  const isActive = activeTab === idx;
                   return (
-                    <div key={pillar.title} className="w-full shrink-0 px-1">
-                      <div className={`relative rounded-3xl ${cardStyles.bg} border ${cardStyles.border} shadow-[0_8px_30px_rgba(37,99,235,0.08)] overflow-hidden flex flex-col justify-between p-5 sm:p-6`}>
-                        {/* Top Brand Accent Line */}
-                        <div className={`absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r ${cardStyles.accent}`} />
-
-                        {/* Ambient Spotlight */}
-                        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(37,99,235,0.08),transparent_70%)] pointer-events-none" />
-
-                        <div className="relative z-10">
-                          {/* Slide Number Tag */}
-                          <div className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border text-[10px] font-mono font-black uppercase tracking-wider mb-2.5 shadow-2xs ${cardStyles.badge}`}>
-                            <span>0{idx + 1}</span>
-                            <span>/</span>
-                            <span>04</span>
-                          </div>
-
-                          {/* Card Title */}
-                          <h3 className="text-lg font-black text-[#0F172A] tracking-tight leading-snug mb-2">
-                            {pillar.title}
-                          </h3>
-
-                          {/* Description with Highlights */}
-                          <p className="text-[13px] leading-[1.65] text-[#475569] font-normal mb-4 text-justify">
-                            {pillar.description}
-                          </p>
-                        </div>
-
-                        {/* Feature Bullet Checklist */}
-                        <div className="relative z-10 pt-3.5 border-t border-blue-200/60">
-                          <ul className="space-y-2">
-                            {pillar.points.map((pt) => (
-                              <li
-                                key={pt.bold + pt.text}
-                                className="flex items-start gap-2.5 text-[12px] text-[#334155] leading-snug"
-                              >
-                                <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] shrink-0 mt-1.5" />
-                                <span className="font-normal">
-                                  <strong className="font-extrabold text-[#0F172A]">{pt.bold}</strong> {pt.text}
-                                </span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
+                    <button
+                      key={screen.id}
+                      onClick={() => setActiveTab(idx)}
+                      className={`flex items-center gap-3 p-3 sm:p-3.5 rounded-2xl border text-left transition-all ${
+                        isActive
+                          ? "bg-white border-[#2563EB] shadow-[0_10px_25px_rgba(37,99,235,0.12)] scale-[1.02]"
+                          : "bg-slate-50/80 border-slate-200/80 hover:bg-white hover:border-slate-300"
+                      }`}
+                    >
+                      <div
+                        className={`w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center text-lg flex-shrink-0 border ${
+                          isActive
+                            ? "bg-blue-50 text-[#2563EB] border-blue-200"
+                            : "bg-slate-100 text-slate-600 border-slate-200"
+                        }`}
+                      >
+                        {screen.icon}
                       </div>
-                    </div>
+                      <div className="min-w-0 flex-1">
+                        <h4 className={`text-xs sm:text-sm font-black truncate ${isActive ? "text-[#0F172A]" : "text-slate-700"}`}>
+                          {screen.title}
+                        </h4>
+                        <p className="text-[10.5px] font-medium text-slate-500 truncate mt-0.5">
+                          {screen.subtitle}
+                        </p>
+                      </div>
+                      {isActive && (
+                        <span className="w-2 h-2 rounded-full bg-[#2563EB] animate-ping hidden sm:block" />
+                      )}
+                    </button>
                   );
                 })}
               </div>
             </div>
 
-            {/* ── Mobile Navigation Controls (Dots + Counter) ── */}
-            <div className="flex items-center justify-between mt-3.5 px-2">
-              <div className="flex items-center gap-1.5">
-                {pillars.map((_, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setActiveSlide(idx)}
-                    aria-label={`Go to slide ${idx + 1}`}
-                    className={`h-2 rounded-full transition-all duration-300 ${
-                      activeSlide === idx
-                        ? "w-7 bg-[#2563EB]"
-                        : "w-2 bg-slate-200 hover:bg-slate-300"
-                    }`}
-                  />
-                ))}
-              </div>
+            {/* Right/Center Smartphone Frame — Authentic iPhone 17 Pro Max Titanium Chassis */}
+            <div className="w-full lg:w-7/12 flex justify-center items-center">
+              <div className="relative w-full max-w-[340px] xs:max-w-[360px] sm:max-w-[380px] rounded-[54px] bg-gradient-to-b from-[#3B3E43] via-[#1F2125] to-[#121315] p-3 sm:p-3.5 shadow-[0_35px_80px_rgba(0,0,0,0.45),inset_0_1px_2px_rgba(255,255,255,0.25)] border border-[#484B52]/60">
+                
+                {/* Left Side iPhone Buttons: Action Button & Volume */}
+                <div className="absolute -left-[4px] top-24 w-[4px] h-7 bg-gradient-to-b from-[#484B52] to-[#2B2D31] rounded-l-md shadow-xs" />
+                <div className="absolute -left-[4px] top-36 w-[4px] h-12 bg-gradient-to-b from-[#484B52] to-[#2B2D31] rounded-l-md shadow-xs" />
+                <div className="absolute -left-[4px] top-52 w-[4px] h-12 bg-gradient-to-b from-[#484B52] to-[#2B2D31] rounded-l-md shadow-xs" />
 
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={prevSlide}
-                  aria-label="Previous slide"
-                  className="w-8 h-8 rounded-full bg-white border border-slate-200/90 text-[#0F172A] hover:bg-blue-50 hover:text-[#2563EB] hover:border-blue-200 flex items-center justify-center text-xs font-black shadow-xs transition-colors"
-                >
-                  &larr;
-                </button>
-                <button
-                  onClick={nextSlide}
-                  aria-label="Next slide"
-                  className="w-8 h-8 rounded-full bg-[#2563EB] text-white hover:bg-[#1D4ED8] flex items-center justify-center text-xs font-black shadow-xs transition-colors"
-                >
-                  &rarr;
-                </button>
-              </div>
-            </div>
-          </div>
+                {/* Right Side iPhone Buttons: Power & Camera Control Button */}
+                <div className="absolute -right-[4px] top-32 w-[4px] h-16 bg-gradient-to-b from-[#484B52] to-[#2B2D31] rounded-r-md shadow-xs" />
+                <div className="absolute -right-[4px] top-56 w-[4px] h-10 bg-gradient-to-b from-[#383A3F] to-[#1F2023] rounded-r-md shadow-xs" />
 
-          {/* ── Desktop Single Row (lg:grid-cols-4) ── */}
-          <div className="hidden lg:grid lg:grid-cols-4 gap-4 xl:gap-5 items-stretch">
-            {pillars.map((pillar, idx) => {
-              const cardStyles = [
-                { bg: "bg-gradient-to-br from-emerald-100/90 via-emerald-50/70 to-white", border: "border-emerald-300/80", hoverShadow: "hover:shadow-[0_22px_50px_rgba(5,150,105,0.20)]", accent: "from-[#059669] via-[#10B981] to-[#059669]", badge: "bg-emerald-100 text-emerald-800 border-emerald-300", dot: "bg-emerald-600", spotlight: "rgba(16,185,129,0.18)" },
-                { bg: "bg-gradient-to-br from-blue-100/90 via-blue-50/70 to-white", border: "border-blue-300/80", hoverShadow: "hover:shadow-[0_22px_50px_rgba(37,99,235,0.16)]", accent: "from-[#1D4ED8] via-[#2563EB] to-[#0284C7]", badge: "bg-blue-100 text-[#2563EB] border-blue-300", dot: "bg-[#2563EB]", spotlight: "rgba(37,99,235,0.14)" },
-                { bg: "bg-gradient-to-br from-emerald-100/90 via-emerald-50/70 to-white", border: "border-emerald-300/80", hoverShadow: "hover:shadow-[0_22px_50px_rgba(5,150,105,0.20)]", accent: "from-[#059669] via-[#10B981] to-[#059669]", badge: "bg-emerald-100 text-emerald-800 border-emerald-300", dot: "bg-emerald-600", spotlight: "rgba(16,185,129,0.18)" },
-                { bg: "bg-gradient-to-br from-blue-100/90 via-blue-50/70 to-white", border: "border-blue-300/80", hoverShadow: "hover:shadow-[0_22px_50px_rgba(37,99,235,0.16)]", accent: "from-[#1D4ED8] via-[#2563EB] to-[#0284C7]", badge: "bg-blue-100 text-[#2563EB] border-blue-300", dot: "bg-[#2563EB]", spotlight: "rgba(37,99,235,0.14)" },
-              ][idx];
+                {/* iPhone 17 Pro Max Super Retina XDR Screen Inner Container */}
+                <div className="relative rounded-[44px] bg-slate-950 overflow-hidden border border-slate-800/90 min-h-[510px] flex flex-col justify-between select-none shadow-inner">
+                  
+                  {/* Top Status Bar with Dynamic Island Pro */}
+                  <div className="pt-3 px-6 pb-2 bg-black flex items-center justify-between z-30">
+                    <span className="text-[11px] font-semibold text-white tracking-tight">9:41</span>
 
-              return (
-                <div
-                  key={pillar.title}
-                  className={`group relative rounded-3xl ${cardStyles.bg} border ${cardStyles.border} shadow-[0_8px_30px_rgba(37,99,235,0.06)] ${cardStyles.hoverShadow} transition-all duration-300 overflow-hidden flex flex-col justify-between p-5 xl:p-6 hover:-translate-y-1.5 cursor-default`}
-                >
-                  {/* Radial Spotlight Hover Shimmer */}
-                  <div
-                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-                    style={{ background: `radial-gradient(ellipse at top, ${cardStyles.spotlight}, transparent 70%)` }}
-                  />
-
-                  {/* Top Animated Brand Accent Line */}
-                  <div className={`absolute top-0 left-0 right-0 h-1.5 group-hover:h-2 bg-gradient-to-r ${cardStyles.accent} transition-all duration-300`} />
-
-                  <div className="relative z-10">
-                    {/* Slide Number Tag */}
-                    <div className={`inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full border text-[10px] font-mono font-black uppercase tracking-wider mb-3 shadow-2xs ${cardStyles.badge}`}>
-                      <span>0{idx + 1}</span>
-                      <span>/</span>
-                      <span>04</span>
+                    {/* iPhone 17 Pro Max Dynamic Island Pill */}
+                    <div className="w-24 h-5 rounded-full bg-slate-950 border border-slate-800 flex items-center justify-between px-2.5 shadow-inner">
+                      <div className="flex items-center gap-1">
+                        <span className="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse" />
+                        <span className="w-1 h-1 rounded-full bg-emerald-400" />
+                      </div>
+                      <div className="flex items-center gap-0.5">
+                        <span className="w-0.5 h-2 bg-emerald-400 rounded-full animate-pulse" />
+                        <span className="w-0.5 h-3 bg-emerald-400 rounded-full animate-pulse delay-75" />
+                        <span className="w-0.5 h-1.5 bg-emerald-400 rounded-full animate-pulse delay-150" />
+                      </div>
                     </div>
 
-                    {/* Card Title */}
-                    <h3 className="text-[18px] xl:text-[19px] font-black text-[#0F172A] tracking-tight leading-snug mb-2.5 group-hover:text-[#2563EB] transition-colors duration-200">
-                      {pillar.title}
-                    </h3>
-
-                    {/* Description with Highlights */}
-                    <p className="text-[12.5px] xl:text-[13px] leading-[1.65] text-[#475569] font-normal mb-4 text-justify">
-                      {pillar.description}
-                    </p>
+                    <div className="flex items-center gap-1 text-[10px] font-bold text-white">
+                      <span>5G UC</span>
+                      <div className="w-5 h-2.5 rounded-xs border border-white/80 p-0.5 flex items-center">
+                        <div className="w-full h-full bg-emerald-400 rounded-2xs" />
+                      </div>
+                    </div>
                   </div>
 
-                  {/* Feature Bullet Checklist (Clean Typographic Bullets) */}
-                  <div className="relative z-10 pt-3.5 border-t border-slate-200/60">
-                    <ul className="space-y-2.5">
-                      {pillar.points.map((pt) => (
-                        <li
-                          key={pt.bold + pt.text}
-                          className="flex items-start gap-2.5 text-[12px] xl:text-[12.5px] text-[#334155] leading-snug group/item hover:text-[#0F172A] transition-colors duration-150"
-                        >
-                          <span className={`w-1.5 h-1.5 rounded-full ${cardStyles.dot} shrink-0 mt-1.5 group-hover/item:scale-125 transition-transform duration-150`} />
-                          <span className="group-hover/item:translate-x-0.5 transition-transform duration-150 font-normal">
-                            <strong className="font-extrabold text-[#0F172A]">{pt.bold}</strong> {pt.text}
-                          </span>
-                        </li>
-                      ))}
-                    </ul>
+                  {/* iOS App Navigation Header */}
+                  <div className="px-4 py-3 bg-slate-900/95 backdrop-blur-xl border-b border-slate-800 flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <div className="w-7 h-7 rounded-xl bg-gradient-to-tr from-[#1D4ED8] to-[#2563EB] flex items-center justify-center text-white text-xs font-black shadow-sm">
+                        A
+                      </div>
+                      <div>
+                        <div className="text-[11.5px] font-black text-white leading-tight tracking-tight">Agaran Intelligence</div>
+                        <div className="text-[9px] font-mono text-slate-400">Enterprise Platform • Active</div>
+                      </div>
+                    </div>
+                    <div className={`px-2.5 py-0.5 rounded-full border text-[9.5px] font-mono font-black uppercase ${currentScreen.badgeBg}`}>
+                      {currentScreen.badge}
+                    </div>
                   </div>
+
+                  {/* iOS Super Retina Screen Content */}
+                  <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 relative">
+                    <AnimatePresence mode="wait">
+                      <motion.div
+                        key={currentScreen.id}
+                        initial={{ opacity: 0, scale: 0.95, y: 10 }}
+                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                        exit={{ opacity: 0, scale: 1.05, y: -10 }}
+                        transition={{ duration: 0.28, ease: "easeOut" }}
+                        className="space-y-4"
+                      >
+                        {/* iOS Widget Screen Header Card */}
+                        <div className="p-3.5 rounded-2xl bg-slate-800/80 border border-slate-700/80 flex items-center gap-3 backdrop-blur-md">
+                          <div className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center text-xl shadow-xs">
+                            {currentScreen.icon}
+                          </div>
+                          <div>
+                            <h4 className="text-sm font-black text-white leading-tight">
+                              {currentScreen.title}
+                            </h4>
+                            <p className="text-[10.5px] font-medium text-slate-400 mt-0.5">
+                              {currentScreen.subtitle}
+                            </p>
+                          </div>
+                        </div>
+
+                        {/* iOS Interactive Process Card */}
+                        <div className="p-3.5 rounded-2xl bg-slate-800/60 border border-slate-700/60 space-y-2.5 backdrop-blur-sm">
+                          <div className="text-[10px] font-mono font-bold text-slate-400 flex items-center justify-between">
+                            <span>PROMOTION PROCESS FLOW</span>
+                            <span className="text-emerald-400 flex items-center gap-1">
+                              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                              LIVE
+                            </span>
+                          </div>
+
+                          {currentScreen.id === "automation" && (
+                            <div className="space-y-2">
+                              {currentScreen.content.steps?.map((step) => (
+                                <div key={step.title} className="flex items-center justify-between p-2 rounded-xl bg-slate-900/90 text-xs font-semibold text-slate-200">
+                                  <span>{step.title}</span>
+                                  <span className={`font-mono text-[10.5px] ${step.color}`}>{step.status} ({step.time})</span>
+                                </div>
+                              ))}
+                            </div>
+                          )}
+
+                          {currentScreen.id === "scale" && (
+                            <div className="space-y-2">
+                              {currentScreen.content.tenants?.map((t) => (
+                                <div key={t.name} className="flex items-center justify-between p-2 rounded-xl bg-slate-900/90 text-xs font-semibold text-slate-200">
+                                  <span>{t.name}</span>
+                                  <span className="font-mono text-[10.5px] text-blue-400">{t.load} • {t.status}</span>
+                                </div>
+                              ))}
+                            </div>
+                          )}
+
+                          {currentScreen.id === "velocity" && (
+                            <div className="space-y-2">
+                              {currentScreen.content.portals?.map((p) => (
+                                <div key={p.name} className="flex items-center justify-between p-2 rounded-xl bg-slate-900/90 text-xs font-semibold text-slate-200">
+                                  <span>{p.name}</span>
+                                  <span className="font-mono text-[10.5px] text-purple-400">{p.state}</span>
+                                </div>
+                              ))}
+                            </div>
+                          )}
+
+                          {currentScreen.id === "security" && (
+                            <div className="space-y-2">
+                              {currentScreen.content.checks?.map((c) => (
+                                <div key={c.label} className="flex items-center gap-2 p-2 rounded-xl bg-slate-900/90 text-xs font-semibold text-slate-200">
+                                  <span className="w-2 h-2 rounded-full bg-emerald-400" />
+                                  <span>{c.label}</span>
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+
+                        {/* iOS Metric Highlight Banner */}
+                        <div className="p-3 rounded-2xl bg-gradient-to-r from-blue-600/20 to-indigo-600/20 border border-blue-500/30 flex items-center justify-between">
+                          <div>
+                            <div className="text-[10px] font-mono text-slate-400 uppercase tracking-wider">{currentScreen.content.statLabel}</div>
+                            <div className="text-lg font-black text-white">{currentScreen.content.statValue}</div>
+                          </div>
+                          <div className="px-3 py-1.5 rounded-xl bg-[#2563EB] text-white text-xs font-extrabold shadow-sm">
+                            Verified ✓
+                          </div>
+                        </div>
+                      </motion.div>
+                    </AnimatePresence>
+
+                    {/* iOS Bottom Home Indicator Bar */}
+                    <div className="pt-3 flex justify-center z-30">
+                      <div className="w-32 h-1 rounded-full bg-white/40" />
+                    </div>
+                  </div>
+
+                  {/* iOS App Dock Navigation Tabs */}
+                  <div className="px-3 py-2 bg-slate-950 border-t border-slate-800 grid grid-cols-4 gap-1 text-center">
+                    {appScreens.map((s, i) => (
+                      <button
+                        key={s.id}
+                        onClick={() => setActiveTab(i)}
+                        className={`py-1.5 rounded-xl flex flex-col items-center gap-0.5 text-[10px] font-bold transition-all ${
+                          activeTab === i
+                            ? "bg-blue-600/20 text-blue-400 border border-blue-500/30"
+                            : "text-slate-500 hover:text-slate-400"
+                        }`}
+                      >
+                        <span className="text-xs">{s.icon}</span>
+                        <span>{s.navLabel}</span>
+                      </button>
+                    ))}
+                  </div>
+
                 </div>
-              );
-            })}
+              </div>
+            </div>
+
           </div>
 
-          {/* ── Signature Bottom Commitment Banner (Zero Emojis) ── */}
-          <div className="mt-7 sm:mt-9 p-5 sm:p-6 lg:p-7 rounded-3xl bg-gradient-to-r from-blue-50/95 via-sky-50/60 to-blue-50/90 border border-blue-200/90 shadow-sm flex flex-col lg:flex-row items-center justify-between gap-4 sm:gap-6 text-center lg:text-left">
-            <div>
-              <div className="text-[10px] sm:text-[11px] font-mono font-extrabold text-[#2563EB] uppercase tracking-wider">
-                THE AGARAN COMMITMENT
+          {/* ── Signature Bottom Commitment Banner ── */}
+          <div className="mt-12 sm:mt-16 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#0F172A] via-[#1E293B] to-[#0F172A] text-white border border-slate-800 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <div className="space-y-1.5">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 text-xs font-extrabold uppercase tracking-wider">
+                AGARAN ENGINEERING GUARANTEE
               </div>
-              <h4 className="text-sm sm:text-base lg:text-lg font-black text-[#0F172A] tracking-tight mt-0.5 leading-snug">
-                Technology engineered for <span className="text-[#2563EB]">growth</span>, <span className="text-[#2563EB]">automation</span>, and long-term enterprise capability.
-              </h4>
+              <h3 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight">
+                Software built for longevity, performance, and real business results.
+              </h3>
             </div>
-
-            <div className="flex items-center justify-center gap-4 shrink-0 w-full sm:w-auto">
-              <a
-                href="/contact"
-                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 rounded-full bg-[#2563EB] hover:bg-[#1D4ED8] text-white text-xs sm:text-sm font-extrabold shadow-md hover:shadow-lg shadow-blue-500/20 transition-all duration-200 shrink-0 group/cta"
-              >
-                <span>Start a Conversation</span>
-                <span className="group-hover/cta:translate-x-1 transition-transform duration-200">&rarr;</span>
-              </a>
-            </div>
+            <a
+              href="/what-we-do"
+              className="flex-shrink-0 inline-flex items-center gap-2 px-7 py-4 rounded-2xl bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-black text-sm transition-all shadow-md hover:shadow-lg hover:scale-[1.02]"
+            >
+              <span>Explore Tech Stack</span>
+              <span>→</span>
+            </a>
           </div>
 
         </div>

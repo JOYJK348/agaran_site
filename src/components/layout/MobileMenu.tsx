@@ -102,7 +102,6 @@ export default function MobileMenu({ isOpen, onClose, navLinks }: MobileMenuProp
                 />
                 <div className="min-w-0">
                   <p className="text-[14.5px] font-bold text-slate-900 leading-tight tracking-tight">AGARAN</p>
-                  <p className="text-[11.5px] text-slate-500 leading-tight mt-0.5 font-medium">Building Intelligent Solutions</p>
                 </div>
               </div>
             </div>

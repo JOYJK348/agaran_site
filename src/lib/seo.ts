@@ -6,12 +6,12 @@
 
 export const siteConfig = {
   name: "Agaran",
-  tagline: "Building Intelligent Solutions",
+  tagline: "Build Intelligent Solutions Automate What Matters",
   description:
-    "Agaran builds custom software, education platforms, business automation systems, and intelligent AI solutions. Building intelligent software and AI systems for business and education.",
+    "Agaran builds intelligent technology and AI systems that help businesses work smarter and people learn, create, and grow.",
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://agaran.com",
   logo: "/logo.png",
-  logoAlt: "Agaran — Building Intelligent Solutions",
+  logoAlt: "Agaran — Intelligent Systems & AI Agents",
   themeColor: "#2563EB",
   locale: "en_US",
   social: {
@@ -22,23 +22,22 @@ export const siteConfig = {
 };
 
 export const homepageMeta = {
-  title: "Agaran — Building intelligent software and AI systems for business and education",
+  title: "Agaran — Build Intelligent Solutions Automate What Matters",
   titleTemplate: "%s | Agaran",
   description: siteConfig.description,
   keywords: [
-    "custom software development",
-    "education technology",
-    "learning platforms",
+    "AI agents",
     "business automation",
     "workflow automation",
-    "AI solutions",
     "intelligent systems",
     "SaaS platforms",
-    "coaching management",
+    "education technology",
+    "learning platforms",
+    "custom software",
     "Agaran",
   ],
   openGraph: {
-    title: "Agaran — Building Intelligent Solutions",
+    title: "Agaran — Build Intelligent Solutions Automate What Matters",
     description: siteConfig.description,
     url: siteConfig.url,
     siteName: siteConfig.name,
@@ -47,7 +46,7 @@ export const homepageMeta = {
         url: `${siteConfig.url}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: "Agaran — Building Intelligent Solutions",
+        alt: "Agaran — Build Intelligent Solutions Automate What Matters",
       },
     ],
     locale: siteConfig.locale,
@@ -55,7 +54,7 @@ export const homepageMeta = {
   },
   twitter: {
     card: "summary_large_image" as const,
-    title: "Agaran — Building Intelligent Solutions",
+    title: "Agaran — Build Intelligent Solutions Automate What Matters",
     description: siteConfig.description,
     images: [`${siteConfig.url}/og-image.png`],
     creator: siteConfig.social.twitter,

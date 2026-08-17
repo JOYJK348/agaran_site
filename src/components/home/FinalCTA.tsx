@@ -81,7 +81,7 @@ export default function FinalCTA() {
             </motion.p>
           </div>
 
-          {/* ── 3 High-Impact Highlight Cards (White Background) ── */}
+          {/* ── 3 High-Impact Highlight Cards (100% Pure Clean White Background, Zero Blue Shadows) ── */}
           <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 mb-10 sm:mb-12">
             {highlights.map((item, idx) => (
               <motion.div
@@ -89,20 +89,17 @@ export default function FinalCTA() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.45, delay: 0.3 + idx * 0.08, ease: "easeOut" }}
-                className="group relative rounded-2xl bg-gradient-to-br from-white via-blue-50/40 to-white border border-white/90 p-5 sm:p-6 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between shadow-[0_10px_30px_rgba(0,0,0,0.12)] hover:shadow-[0_18px_45px_rgba(0,0,0,0.20)] overflow-hidden"
+                className="group relative rounded-2xl bg-white border border-slate-100 p-5 sm:p-6 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between shadow-md hover:shadow-xl overflow-hidden"
               >
-                {/* Top Accent Line */}
-                <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] rounded-t-2xl opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
-
                 <div>
                   <div className="flex items-center justify-between mb-3">
-                    <span className="text-[10px] font-mono font-black text-[#1D4ED8] uppercase tracking-widest bg-blue-100/90 px-2.5 py-0.5 rounded-full border border-blue-200/90 shadow-2xs">
+                    <span className="text-[10px] font-mono font-black text-slate-700 uppercase tracking-widest bg-slate-100 px-2.5 py-0.5 rounded-full border border-slate-200 shadow-2xs">
                       {item.tag}
                     </span>
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] group-hover:scale-125 transition-transform duration-200" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-slate-400 group-hover:scale-125 transition-transform duration-200" />
                   </div>
 
-                  <h3 className="text-base sm:text-lg font-black text-[#0F172A] leading-snug tracking-tight mb-2 group-hover:text-[#2563EB] transition-colors duration-200">
+                  <h3 className="text-base sm:text-lg font-black text-[#0F172A] leading-snug tracking-tight mb-2 transition-colors duration-200">
                     {item.title}
                   </h3>
 
