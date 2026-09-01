@@ -219,7 +219,7 @@ export default function AboutPage() {
 
             {/* H1 — balanced hero font size */}
             <Reveal delay={0.1}>
-              <h1 className="text-center text-[1.65rem] xs:text-[1.95rem] sm:text-3xl md:text-[2.25rem] lg:text-[2.65rem] xl:text-[2.85rem] font-extrabold lg:font-black leading-[1.18] sm:leading-[1.12] lg:leading-[1.08] tracking-[-0.035em] text-[#0F172A] max-w-4xl mx-auto mb-4">
+              <h1 className="text-center text-[1.65rem] xs:text-[1.95rem] sm:text-3xl md:text-[2.25rem] lg:text-[2.65rem] xl:text-[2.85rem] font-extrabold lg:font-black leading-[1.18] sm:leading-[1.12] lg:leading-[1.08] tracking-[-0.035em] text-[#0F172A] w-full max-w-[1280px] mx-auto mb-4">
                 Technology With a{" "}
                 <span className="bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] bg-clip-text text-transparent">
                   Reason.
@@ -229,7 +229,7 @@ export default function AboutPage() {
 
             {/* Sub — Home hero body text style */}
             <Reveal delay={0.2}>
-              <p className="text-center text-sm sm:text-base lg:text-[1.08rem] font-medium leading-relaxed text-slate-600 max-w-2xl mx-auto mb-6">
+              <p className="text-center text-sm sm:text-base lg:text-[1.08rem] font-medium leading-relaxed text-slate-600 w-full max-w-3xl mx-auto mb-6">
                 We build software, AI systems, and automation infrastructure for organizations that want to move faster, operate leaner, and deliver more — without adding complexity to do it.
               </p>
             </Reveal>
@@ -246,9 +246,9 @@ export default function AboutPage() {
               </div>
             </Reveal>
 
-            {/* Stats strip — same pattern as Home trust metrics */}
+            {/* Stats strip — full width */}
             <Reveal delay={0.38}>
-              <div className="mt-8 sm:mt-10 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 max-w-4xl mx-auto">
+              <div className="mt-8 sm:mt-10 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 w-full max-w-[1280px] mx-auto">
                 {stats.map((s) => (
                   <div
                     key={s.label}
@@ -752,18 +752,18 @@ export default function AboutPage() {
             </Reveal>
 
             <Reveal delay={0.1}>
-              <h2 className="text-center text-[1.55rem] xs:text-[1.8rem] sm:text-3xl md:text-[2rem] lg:text-4xl xl:text-[2.4rem] font-extrabold lg:font-black leading-[1.18] tracking-[-0.035em] text-[#0F172A] mb-2 max-w-3xl mx-auto">
+              <h2 className="text-center text-[1.55rem] xs:text-[1.8rem] sm:text-3xl md:text-[2rem] lg:text-4xl xl:text-[2.4rem] font-extrabold lg:font-black leading-[1.18] tracking-[-0.035em] text-[#0F172A] mb-2 w-full max-w-[1280px] mx-auto">
                 How We Work & Make Decisions
               </h2>
             </Reveal>
             <Reveal delay={0.14}>
-              <p className="text-center text-xs sm:text-sm lg:text-[1.05rem] font-medium leading-relaxed text-slate-600 max-w-2xl mx-auto mb-8">
+              <p className="text-center text-xs sm:text-sm lg:text-[1.05rem] font-medium leading-relaxed text-slate-600 w-full max-w-3xl mx-auto mb-8">
                 These aren&apos;t rules on a wall. They are the 5 standards we follow every single day:
               </p>
             </Reveal>
 
             {/* Interactive Animated Stepper Tabs */}
-            <div className="flex items-center justify-center gap-2 sm:gap-3 mb-8 overflow-x-auto pb-2 scrollbar-none">
+            <div className="flex items-center justify-center gap-2 sm:gap-3 mb-8 overflow-x-auto pb-2 scrollbar-none w-full">
               {principles.map((p, i) => (
                 <button
                   key={p.num}
@@ -781,13 +781,13 @@ export default function AboutPage() {
               ))}
             </div>
 
-            {/* Animated Spotlight Display Card */}
+            {/* Animated Spotlight Display Card — full width */}
             <motion.div
               key={activePrinciple}
               initial={{ opacity: 0, y: 16, scale: 0.98 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
-              className="max-w-4xl mx-auto rounded-[28px] bg-white border border-slate-200/90 p-7 sm:p-10 shadow-[0_12px_40px_rgba(37,99,235,0.08)] relative overflow-hidden"
+              className="w-full max-w-[1280px] mx-auto rounded-[28px] bg-white border border-slate-200/90 p-7 sm:p-10 shadow-[0_12px_40px_rgba(37,99,235,0.08)] relative overflow-hidden"
             >
               <div className="h-1.5 absolute top-0 left-0 right-0 bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7]" />
               
