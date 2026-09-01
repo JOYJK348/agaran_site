@@ -240,41 +240,72 @@ export default function WhoWeBuildForInteractive() {
           </div>
 
           {/* ════════════════════════════════════════════════════════════════
-              ANIMATED 4-STEP ECOSYSTEM NAVIGATION BAR
+              ULTRA-RICH 3D FLOATING GLASS SEGMENT NAVIGATION DOCK
           ════════════════════════════════════════════════════════════════ */}
-          <div className="mt-6 p-3 sm:p-4 rounded-2xl bg-white border border-slate-200/90 shadow-sm w-full">
+          <div
+            className="mt-6 p-2.5 sm:p-3.5 rounded-3xl bg-white/95 border border-slate-200/90 shadow-[0_15px_40px_rgba(37,99,235,0.08)] backdrop-blur-2xl w-full"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+          >
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 w-full">
               {worlds.map((w, idx) => {
                 const isActive = activeIdx === idx;
                 return (
-                  <button
-                    key={w.id + "-indicator"}
+                  <motion.button
+                    key={w.id + "-rich-indicator"}
                     onClick={() => handleUserClick(idx)}
-                    className={`flex flex-col items-center justify-center p-2.5 sm:p-3 rounded-xl transition-all border text-center cursor-pointer ${
+                    whileHover={{ y: -2 }}
+                    whileTap={{ scale: 0.97 }}
+                    className={`relative p-3 sm:p-4 rounded-2xl transition-all duration-300 text-left cursor-pointer focus:outline-none overflow-hidden ${
                       isActive
-                        ? "bg-[#EFF6FF] border-[#BFDBFE] text-[#2563EB] font-black shadow-2xs scale-[1.02]"
-                        : "bg-slate-50 border-slate-200/80 text-slate-500 font-bold hover:bg-slate-100"
+                        ? "bg-gradient-to-b from-white via-blue-50/80 to-white border-2 border-[#2563EB] shadow-md shadow-blue-500/10 scale-[1.02]"
+                        : "bg-slate-50/80 border border-slate-200/80 hover:bg-white hover:border-blue-200"
                     }`}
                   >
-                    <span className="text-[10px] sm:text-[11.5px] font-black uppercase tracking-wider truncate w-full mb-1.5">
+                    {/* Header Row: Monospace Step Pill + Live Pulse */}
+                    <div className="flex items-center justify-between mb-1.5">
+                      <span
+                        className={`text-[9.5px] font-mono font-black tracking-widest px-2 py-0.5 rounded-md border ${
+                          isActive
+                            ? "bg-[#EFF6FF] text-[#2563EB] border-[#BFDBFE]"
+                            : "bg-slate-200/70 text-slate-500 border-slate-300/60"
+                        }`}
+                      >
+                        {w.num}
+                      </span>
+
+                      {isActive && (
+                        <div className="flex items-center gap-1">
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-ping" />
+                          <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
+                        </div>
+                      )}
+                    </div>
+
+                    {/* Step Short Title */}
+                    <div
+                      className={`text-[11px] sm:text-xs font-black uppercase tracking-wider truncate mb-2.5 ${
+                        isActive ? "text-[#2563EB]" : "text-slate-700"
+                      }`}
+                    >
                       {w.shortName}
-                    </span>
+                    </div>
 
                     {/* Step Segment Fill Bar */}
-                    <div className="w-full h-1 rounded-full bg-slate-200 overflow-hidden">
+                    <div className="w-full h-1.5 rounded-full bg-slate-200/90 overflow-hidden">
                       {isActive ? (
                         <motion.div
-                          key={activeWorld.id + "-step-fill"}
+                          key={activeWorld.id + "-rich-step-fill"}
                           initial={{ width: "0%" }}
                           animate={{ width: "100%" }}
                           transition={{ duration: 4.5, ease: "linear" }}
-                          className="h-full bg-gradient-to-r from-[#1D4ED8] to-[#2563EB]"
+                          className="h-full bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] rounded-full"
                         />
                       ) : idx < activeIdx ? (
-                        <div className="h-full bg-[#2563EB]" />
+                        <div className="h-full bg-[#2563EB] rounded-full" />
                       ) : null}
                     </div>
-                  </button>
+                  </motion.button>
                 );
               })}
             </div>
