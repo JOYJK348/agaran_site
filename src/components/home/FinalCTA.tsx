@@ -39,13 +39,13 @@ export default function FinalCTA() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[450px] bg-blue-100/40 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:32px_32px] opacity-30 pointer-events-none" />
 
-      <Container as="div">
+      <div className="relative z-10 w-full max-w-full px-2 xs:px-3 sm:px-4 lg:px-6">
         <motion.div
           ref={containerRef}
           initial={{ opacity: 0, y: 28 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
           transition={{ duration: 0.55, ease: "easeOut" }}
-          className="relative z-10 w-full max-w-[1440px] mx-auto rounded-[2.5rem] bg-[#2563EB] border border-blue-400/50 p-6 sm:p-10 lg:p-14 shadow-[0_25px_80px_rgba(37,99,235,0.30)] overflow-hidden text-white"
+          className="relative z-10 w-full max-w-full mx-auto rounded-[2.5rem] bg-[#2563EB] border border-blue-400/50 p-6 sm:p-10 lg:p-14 shadow-[0_25px_80px_rgba(37,99,235,0.30)] overflow-hidden text-white"
         >
 
           {/* ── Top Header Section ── */}
@@ -151,7 +151,7 @@ export default function FinalCTA() {
             ))}
           </motion.div>
         </motion.div>
-      </Container>
+      </div>
     </section>
   );
 }

@@ -142,8 +142,7 @@ export default function SelectedWork() {
         <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:28px_28px] opacity-30 pointer-events-none" />
         <div className="absolute top-0 left-1/3 w-[500px] h-[280px] bg-blue-100/40 rounded-full blur-[120px] pointer-events-none" />
 
-        <Container as="div">
-          <div className="relative z-10 w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+        <div className="relative z-10 w-full max-w-full px-2 xs:px-3 sm:px-4 lg:px-6">
 
             {/* ── Section Header ── */}
             <div className="relative text-center max-w-4xl mx-auto mb-8 sm:mb-10">
@@ -273,7 +272,6 @@ export default function SelectedWork() {
               </div>
             </Reveal>
           </div>
-        </Container>
       </section>
 
       {/* ══════════════════════════════════════════════ */}
@@ -283,8 +281,7 @@ export default function SelectedWork() {
         <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:28px_28px] opacity-25 pointer-events-none" />
         <div className="absolute bottom-0 right-1/4 w-[500px] h-[280px] bg-blue-100/30 rounded-full blur-[120px] pointer-events-none" />
 
-        <Container as="div">
-          <div className="relative z-10 w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+        <div className="relative z-10 w-full max-w-full px-2 xs:px-3 sm:px-4 lg:px-6">
 
             {/* ── Section Header ── */}
             <div className="relative text-center max-w-4xl mx-auto mb-8 sm:mb-10">
@@ -367,7 +364,6 @@ export default function SelectedWork() {
               })}
             </div>
           </div>
-        </Container>
       </section>
     </>
   );

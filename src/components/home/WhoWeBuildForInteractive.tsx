@@ -124,220 +124,238 @@ export default function WhoWeBuildForInteractive() {
       ref={sectionRef}
       id="who-we-build-for"
       className="relative py-6 sm:py-8 lg:py-10 bg-gradient-to-b from-white via-slate-50/60 to-white overflow-hidden w-full"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
     >
+      {/* Keyframes for Exact Progress Line Pause/Resume */}
+      <style jsx global>{`
+        @keyframes worldProgressFill {
+          from { width: 0%; }
+          to { width: 100%; }
+        }
+      `}</style>
+
       {/* Background Ambient Glows & Dot Mesh */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[95%] max-w-[1200px] h-[450px] bg-[#2563EB]/10 rounded-full blur-[160px] pointer-events-none" />
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-full h-[500px] bg-[#2563EB]/10 rounded-full blur-[170px] pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:28px_28px] opacity-35 pointer-events-none" />
 
-      <Container as="div">
-        <div className="relative z-10 w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
-          
-          {/* Section Header */}
-          <motion.div
-            className="text-center max-w-4xl mx-auto mb-8 sm:mb-10 lg:mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-          >
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-4 shadow-2xs">
-              <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#2563EB] animate-pulse" />
-              <span>WHO WE BUILD FOR</span>
-            </div>
-
-            <h2 className="text-[1.8rem] xs:text-[2.1rem] sm:text-4xl md:text-[2.65rem] lg:text-[2.85rem] xl:text-[3.25rem] font-extrabold lg:font-black leading-[1.22] xs:leading-[1.18] sm:leading-[1.14] lg:leading-[1.12] tracking-[-0.035em] text-slate-900">
-              From Everyday Needs{" "}
-              <span className="bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] bg-clip-text text-transparent font-extrabold lg:font-black tracking-[-0.035em]">
-                to Bigger Ideas.
-              </span>
-            </h2>
-
-            <p className="text-sm sm:text-base lg:text-[1.08rem] font-medium leading-relaxed text-slate-600 tracking-normal mt-4 max-w-2xl mx-auto">
-              Technology can take many forms depending on who needs it. We architect intelligent systems tailored to your specific ecosystem.
-            </p>
-          </motion.div>
-
-          {/* ════════════════════════════════════════════════════════════════
-              ACTIVE WORLD DISPLAY SHOWCASE (Image LEFT | Content RIGHT)
-          ════════════════════════════════════════════════════════════════ */}
-          <div
-            ref={showcaseRef}
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
-            onTouchStart={() => setIsPaused(true)}
-            className="relative rounded-3xl bg-white border border-slate-200/90 shadow-[0_20px_60px_rgba(0,0,0,0.05)] p-6 sm:p-10 lg:p-12 overflow-hidden scroll-mt-24 w-full"
-          >
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeWorld.id}
-                initial={{ opacity: 0, y: 15 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -15 }}
-                transition={{ duration: 0.35, ease: "easeOut" }}
-                className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center"
-              >
-                {/* Left Column: High-Res Brand 3D Image Showcase */}
-                <div className="lg:col-span-6 flex justify-center items-center order-1 lg:order-1">
-                  <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-slate-200/80 shadow-xl bg-gradient-to-tr from-slate-50 via-white to-blue-50/40 group">
-                    <Image
-                      src={activeWorld.image}
-                      alt={activeWorld.title}
-                      fill
-                      priority
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
-                    />
-                  </div>
-                </div>
-
-                {/* Right Column: World Narrative & Capabilities */}
-                <div className="lg:col-span-6 space-y-4 sm:space-y-5 lg:space-y-6 order-2 lg:order-2">
-                  <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] font-extrabold uppercase tracking-wider text-[#2563EB]">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
-                    {activeWorld.label}
-                  </div>
-
-                  <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-extrabold lg:font-black text-slate-900 tracking-[-0.035em] leading-tight">
-                    {activeWorld.title}
-                  </h3>
-
-                  <div className="inline-block px-3.5 py-1.5 rounded-lg bg-slate-100/90 text-xs sm:text-sm font-bold text-slate-700 font-mono">
-                    {activeWorld.tagline}
-                  </div>
-
-                  <p className="text-xs sm:text-sm lg:text-base font-medium leading-relaxed text-slate-600 tracking-normal">
-                    {activeWorld.description}
-                  </p>
-
-                  {/* Features Bullet List */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 pt-2">
-                    {activeWorld.features.map((item) => (
-                      <div key={item} className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200/70 text-xs sm:text-[13px] font-extrabold text-slate-800">
-                        <span className="w-4 h-4 rounded-full bg-[#EFF6FF] text-[#2563EB] flex items-center justify-center text-[10px] font-black shrink-0">✓</span>
-                        <span className="truncate">{item}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <div className="pt-3">
-                    <Button variant="primary" href="/contact" className="text-xs sm:text-sm px-7 py-3.5 rounded-xl font-bold shadow-md w-full sm:w-auto justify-center">
-                      Build For {activeWorld.label.split("&")[0]} <span className="ml-1.5">→</span>
-                    </Button>
-                  </div>
-                </div>
-              </motion.div>
-            </AnimatePresence>
-
-            {/* Top Showcase Active Progress Countdown Line */}
-            <div className="absolute top-0 left-0 right-0 h-1 bg-slate-100">
-              <motion.div
-                key={activeWorld.id + "-top-progress"}
-                initial={{ width: "0%" }}
-                animate={{ width: "100%" }}
-                transition={{ duration: 4.5, ease: "linear" }}
-                className="h-full bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7]"
-              />
-            </div>
+      <div className="relative z-10 w-full max-w-full px-2 xs:px-3 sm:px-4 lg:px-6">
+        
+        {/* Section Header */}
+        <motion.div
+          className="text-center max-w-4xl mx-auto mb-8 sm:mb-10 lg:mb-12"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+        >
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-4 shadow-2xs">
+            <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#2563EB] animate-pulse" />
+            <span>WHO WE BUILD FOR</span>
           </div>
 
-          {/* ════════════════════════════════════════════════════════════════
-              ULTRA-RICH 3D FLOATING GLASS SEGMENT NAVIGATION DOCK
-          ════════════════════════════════════════════════════════════════ */}
-          <div
-            className="mt-6 p-2.5 sm:p-3.5 rounded-3xl bg-white/95 border border-slate-200/90 shadow-[0_15px_40px_rgba(37,99,235,0.08)] backdrop-blur-2xl w-full"
-            onMouseEnter={() => setIsPaused(true)}
-            onMouseLeave={() => setIsPaused(false)}
-          >
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 w-full">
-              {worlds.map((w, idx) => {
-                const isActive = activeIdx === idx;
-                return (
-                  <motion.button
-                    key={w.id + "-rich-indicator"}
-                    onClick={() => handleUserClick(idx)}
-                    whileHover={{ y: -2 }}
-                    whileTap={{ scale: 0.97 }}
-                    className={`relative p-3 sm:p-4 rounded-2xl transition-all duration-300 text-left cursor-pointer focus:outline-none overflow-hidden ${
-                      isActive
-                        ? "bg-gradient-to-b from-white via-blue-50/80 to-white border-2 border-[#2563EB] shadow-md shadow-blue-500/10 scale-[1.02]"
-                        : "bg-slate-50/80 border border-slate-200/80 hover:bg-white hover:border-blue-200"
-                    }`}
-                  >
-                    {/* Header Row: Monospace Step Pill + Live Pulse */}
-                    <div className="flex items-center justify-between mb-1.5">
-                      <span
-                        className={`text-[9.5px] font-mono font-black tracking-widest px-2 py-0.5 rounded-md border ${
-                          isActive
-                            ? "bg-[#EFF6FF] text-[#2563EB] border-[#BFDBFE]"
-                            : "bg-slate-200/70 text-slate-500 border-slate-300/60"
-                        }`}
-                      >
-                        {w.num}
-                      </span>
+          <h2 className="text-[1.8rem] xs:text-[2.1rem] sm:text-4xl md:text-[2.65rem] lg:text-[2.85rem] xl:text-[3.25rem] font-extrabold lg:font-black leading-[1.22] xs:leading-[1.18] sm:leading-[1.14] lg:leading-[1.12] tracking-[-0.035em] text-slate-900">
+            From Everyday Needs{" "}
+            <span className="bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] bg-clip-text text-transparent font-extrabold lg:font-black tracking-[-0.035em]">
+              to Bigger Ideas.
+            </span>
+          </h2>
 
-                      {isActive && (
-                        <div className="flex items-center gap-1">
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-ping" />
-                          <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
-                        </div>
-                      )}
+          <p className="text-sm sm:text-base lg:text-[1.08rem] font-medium leading-relaxed text-slate-600 tracking-normal mt-4 max-w-2xl mx-auto">
+            Technology can take many forms depending on who needs it. We architect intelligent systems tailored to your specific ecosystem.
+          </p>
+        </motion.div>
+
+        {/* ════════════════════════════════════════════════════════════════
+            ACTIVE WORLD DISPLAY SHOWCASE (Image LEFT | Content RIGHT)
+        ════════════════════════════════════════════════════════════════ */}
+        <div
+          ref={showcaseRef}
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+          onTouchStart={() => setIsPaused(true)}
+          className="relative rounded-3xl bg-white border border-slate-200/90 shadow-[0_20px_60px_rgba(0,0,0,0.05)] p-5 sm:p-8 lg:p-12 overflow-hidden scroll-mt-24 w-full"
+        >
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeWorld.id}
+              initial={{ opacity: 0, y: 15 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -15 }}
+              transition={{ duration: 0.35, ease: "easeOut" }}
+              className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center"
+            >
+              {/* Left Column: High-Res Brand 3D Image Showcase */}
+              <div className="lg:col-span-6 flex justify-center items-center order-1 lg:order-1">
+                <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-slate-200/80 shadow-xl bg-gradient-to-tr from-slate-50 via-white to-blue-50/40 group">
+                  <Image
+                    src={activeWorld.image}
+                    alt={activeWorld.title}
+                    fill
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                  />
+                </div>
+              </div>
+
+              {/* Right Column: World Narrative & Capabilities */}
+              <div className="lg:col-span-6 space-y-4 sm:space-y-5 lg:space-y-6 order-2 lg:order-2">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] font-extrabold uppercase tracking-wider text-[#2563EB]">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
+                  {activeWorld.label}
+                </div>
+
+                <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-extrabold lg:font-black text-slate-900 tracking-[-0.035em] leading-tight">
+                  {activeWorld.title}
+                </h3>
+
+                <div className="inline-block px-3.5 py-1.5 rounded-lg bg-slate-100/90 text-xs sm:text-sm font-bold text-slate-700 font-mono">
+                  {activeWorld.tagline}
+                </div>
+
+                <p className="text-xs sm:text-sm lg:text-base font-medium leading-relaxed text-slate-600 tracking-normal">
+                  {activeWorld.description}
+                </p>
+
+                {/* Features Bullet List */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 pt-2">
+                  {activeWorld.features.map((item) => (
+                    <div key={item} className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200/70 text-xs sm:text-[13px] font-extrabold text-slate-800">
+                      <span className="w-4 h-4 rounded-full bg-[#EFF6FF] text-[#2563EB] flex items-center justify-center text-[10px] font-black shrink-0">✓</span>
+                      <span className="truncate">{item}</span>
                     </div>
+                  ))}
+                </div>
 
-                    {/* Step Short Title */}
-                    <div
-                      className={`text-[11px] sm:text-xs font-black uppercase tracking-wider truncate mb-2.5 ${
-                        isActive ? "text-[#2563EB]" : "text-slate-700"
+                <div className="pt-3">
+                  <Button variant="primary" href="/contact" className="text-xs sm:text-sm px-7 py-3.5 rounded-xl font-bold shadow-md w-full sm:w-auto justify-center">
+                    Build For {activeWorld.label.split("&")[0]} <span className="ml-1.5">→</span>
+                  </Button>
+                </div>
+              </div>
+            </motion.div>
+          </AnimatePresence>
+
+          {/* Top Showcase Blue Progress Line — Pauses at Exact Percentage on Hover & Resumes on Leave */}
+          <div className="absolute top-0 left-0 right-0 h-1 bg-slate-100">
+            <div
+              key={activeWorld.id + "-top-progress"}
+              className="h-full bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7]"
+              style={{
+                animationName: "worldProgressFill",
+                animationDuration: "4.5s",
+                animationTimingFunction: "linear",
+                animationFillMode: "forwards",
+                animationPlayState: isPaused ? "paused" : "running",
+              }}
+            />
+          </div>
+        </div>
+
+        {/* ════════════════════════════════════════════════════════════════
+            ULTRA-RICH 3D FLOATING GLASS SEGMENT NAVIGATION DOCK
+        ════════════════════════════════════════════════════════════════ */}
+        <div
+          className="mt-6 p-2.5 sm:p-3.5 rounded-3xl bg-white/95 border border-slate-200/90 shadow-[0_15px_40px_rgba(37,99,235,0.08)] backdrop-blur-2xl w-full"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 w-full">
+            {worlds.map((w, idx) => {
+              const isActive = activeIdx === idx;
+              return (
+                <motion.button
+                  key={w.id + "-rich-indicator"}
+                  onClick={() => handleUserClick(idx)}
+                  onMouseEnter={() => setIsPaused(true)}
+                  onMouseLeave={() => setIsPaused(false)}
+                  whileHover={{ y: -2 }}
+                  whileTap={{ scale: 0.97 }}
+                  className={`relative p-3 sm:p-4 rounded-2xl transition-all duration-300 text-left cursor-pointer focus:outline-none overflow-hidden ${
+                    isActive
+                      ? "bg-gradient-to-b from-white via-blue-50/80 to-white border-2 border-[#2563EB] shadow-md shadow-blue-500/10 scale-[1.02]"
+                      : "bg-slate-50/80 border border-slate-200/80 hover:bg-white hover:border-blue-200"
+                  }`}
+                >
+                  {/* Header Row: Monospace Step Pill + Live Pulse */}
+                  <div className="flex items-center justify-between mb-1.5">
+                    <span
+                      className={`text-[9.5px] font-mono font-black tracking-widest px-2 py-0.5 rounded-md border ${
+                        isActive
+                          ? "bg-[#EFF6FF] text-[#2563EB] border-[#BFDBFE]"
+                          : "bg-slate-200/70 text-slate-500 border-slate-300/60"
                       }`}
                     >
-                      {w.shortName}
-                    </div>
+                      {w.num}
+                    </span>
 
-                    {/* Step Segment Fill Bar */}
-                    <div className="w-full h-1.5 rounded-full bg-slate-200/90 overflow-hidden">
-                      {isActive ? (
-                        <motion.div
-                          key={activeWorld.id + "-rich-step-fill"}
-                          initial={{ width: "0%" }}
-                          animate={{ width: "100%" }}
-                          transition={{ duration: 4.5, ease: "linear" }}
-                          className="h-full bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] rounded-full"
-                        />
-                      ) : idx < activeIdx ? (
-                        <div className="h-full bg-[#2563EB] rounded-full" />
-                      ) : null}
-                    </div>
-                  </motion.button>
-                );
-              })}
+                    {isActive && (
+                      <div className="flex items-center gap-1">
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-ping" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
+                      </div>
+                    )}
+                  </div>
+
+                  {/* Step Short Title */}
+                  <div
+                    className={`text-[11px] sm:text-xs font-black uppercase tracking-wider truncate mb-2.5 ${
+                      isActive ? "text-[#2563EB]" : "text-slate-700"
+                    }`}
+                  >
+                    {w.shortName}
+                  </div>
+
+                  {/* Step Segment Fill Bar — Pauses at Exact Percentage on Hover & Resumes on Leave */}
+                  <div className="w-full h-1.5 rounded-full bg-slate-200/90 overflow-hidden">
+                    {isActive ? (
+                      <div
+                        key={activeWorld.id + "-nav-fill"}
+                        className="h-full bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] rounded-full"
+                        style={{
+                          animationName: "worldProgressFill",
+                          animationDuration: "4.5s",
+                          animationTimingFunction: "linear",
+                          animationFillMode: "forwards",
+                          animationPlayState: isPaused ? "paused" : "running",
+                        }}
+                      />
+                    ) : idx < activeIdx ? (
+                      <div className="h-full bg-[#2563EB] rounded-full" />
+                    ) : null}
+                  </div>
+                </motion.button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* ── INCLUSIVE BOTTOM BANNER ── */}
+        <motion.div
+          className="mt-10 sm:mt-14 p-6 sm:p-8 lg:p-10 rounded-3xl bg-gradient-to-r from-blue-50/80 via-white to-indigo-50/80 border border-blue-200/80 text-center relative overflow-hidden shadow-xs w-full"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <div className="max-w-2xl mx-auto space-y-3 relative z-10">
+            <div className="text-xs font-mono font-bold text-[#2563EB] uppercase tracking-wider">
+              Custom Technology Engineering
+            </div>
+            <h4 className="text-lg sm:text-xl lg:text-2xl font-extrabold lg:font-black text-slate-900 tracking-tight">
+              Not seeing your exact category here?
+            </h4>
+            <p className="text-xs sm:text-sm lg:text-base font-medium text-slate-600">
+              That&apos;s okay. We build custom technology solutions tailored specifically to your unique workflow.
+            </p>
+            <div className="pt-2">
+              <Button variant="secondary" href="/contact" className="text-xs sm:text-sm px-6 py-3 rounded-xl font-bold bg-white border-slate-200 hover:border-blue-300">
+                Tell Us What You&apos;re Building →
+              </Button>
             </div>
           </div>
+        </motion.div>
 
-          {/* ── INCLUSIVE BOTTOM BANNER ── */}
-          <motion.div
-            className="mt-10 sm:mt-14 p-6 sm:p-8 lg:p-10 rounded-3xl bg-gradient-to-r from-blue-50/80 via-white to-indigo-50/80 border border-blue-200/80 text-center relative overflow-hidden shadow-xs"
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            <div className="max-w-2xl mx-auto space-y-3 relative z-10">
-              <div className="text-xs font-mono font-bold text-[#2563EB] uppercase tracking-wider">
-                Custom Technology Engineering
-              </div>
-              <h4 className="text-lg sm:text-xl lg:text-2xl font-extrabold lg:font-black text-slate-900 tracking-tight">
-                Not seeing your exact category here?
-              </h4>
-              <p className="text-xs sm:text-sm lg:text-base font-medium text-slate-600">
-                That&apos;s okay. We build custom technology solutions tailored specifically to your unique workflow.
-              </p>
-              <div className="pt-2">
-                <Button variant="secondary" href="/contact" className="text-xs sm:text-sm px-6 py-3 rounded-xl font-bold bg-white border-slate-200 hover:border-blue-300">
-                  Tell Us What You&apos;re Building →
-                </Button>
-              </div>
-            </div>
-          </motion.div>
-
-        </div>
-      </Container>
+      </div>
     </section>
   );
 }
