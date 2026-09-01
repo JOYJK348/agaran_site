@@ -1,4 +1,5 @@
 import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 import Hero from "@/components/home/Hero";
 import WhoWeBuildForInteractive from "@/components/home/WhoWeBuildForInteractive";
 import WhyAgaran from "@/components/home/WhyAgaran";
@@ -18,6 +19,7 @@ export default function Home() {
         <SelectedWork />
         <FinalCTA />
       </main>
+      <Footer />
     </>
   );
 }
