@@ -49,12 +49,22 @@ export default function Footer() {
           <div className="space-y-3 max-w-md">
             {/* Logo */}
             <Link href="/" className="inline-flex items-center gap-2.5 focus:outline-none">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 to-blue-500 flex items-center justify-center font-black text-white text-lg shadow-md shadow-blue-500/20">
-                A
+              <div className="p-1.5 bg-white rounded-xl shadow-xs flex items-center justify-center shrink-0">
+                <Image
+                  src="/logo-transparent.png"
+                  alt="Agaran Icon"
+                  width={36}
+                  height={36}
+                  className="h-7 sm:h-8 w-auto object-contain"
+                />
               </div>
-              <span className="text-xl font-black tracking-wider text-white">
-                AGARAN
-              </span>
+              <Image
+                src="/agaran_font.png"
+                alt="Agaran Wordmark"
+                width={120}
+                height={32}
+                className="h-6 sm:h-7 w-auto object-contain brightness-0 invert"
+              />
             </Link>
             <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
               Building intelligent software, practical AI & digital solutions for growing businesses and institutions.
