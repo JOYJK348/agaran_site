@@ -91,6 +91,7 @@ const testimonials = [
     label: "Ongoing Product Development",
     role: "Education Technology Partner",
     initials: "ET",
+    tagPill: "EDTECH PARTNER",
   },
   {
     quote:
@@ -98,6 +99,7 @@ const testimonials = [
     label: "Active Client Collaboration",
     role: "Technology Partner",
     initials: "TP",
+    tagPill: "TECH COLLABORATION",
   },
   {
     quote:
@@ -105,6 +107,7 @@ const testimonials = [
     label: "Current Implementation Phase",
     role: "Business Automation Partner",
     initials: "BA",
+    tagPill: "AUTOMATION PARTNER",
   },
 ];
 
@@ -132,6 +135,24 @@ export default function SelectedWork() {
   const projectCount = useCounter(2, statsInView);
   const moduleCount = useCounter(100, statsInView);
   const partnerCount = useCounter(3, statsInView);
+
+  // Carousel Scroll Ref & Active Slide State
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const [activeSlide, setActiveSlide] = useState(0);
+
+  const handleScroll = () => {
+    if (!carouselRef.current) return;
+    const scrollPos = carouselRef.current.scrollLeft;
+    const cardWidth = carouselRef.current.offsetWidth * 0.8;
+    const newIndex = Math.round(scrollPos / cardWidth);
+    setActiveSlide(Math.min(Math.max(newIndex, 0), testimonials.length - 1));
+  };
+
+  const scrollSlide = (dir: "left" | "right") => {
+    if (!carouselRef.current) return;
+    const offset = dir === "left" ? -320 : 320;
+    carouselRef.current.scrollBy({ left: offset, behavior: "smooth" });
+  };
 
   return (
     <>
@@ -193,7 +214,7 @@ export default function SelectedWork() {
               </div>
             </Reveal>
 
-            {/* ── Project Cards — Mild Pleasant Colorful Cards with Soft Shadows ── */}
+            {/* ── Project Cards ── */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-7">
               {projects.map((project, idx) => {
                 const cardStyles = [
@@ -275,94 +296,129 @@ export default function SelectedWork() {
       </section>
 
       {/* ══════════════════════════════════════════════ */}
-      {/* SECTION 2 — PARTNER TESTIMONIALS               */}
+      {/* SECTION 2 — ULTRA-RICH PARTNER CAROUSEL       */}
       {/* ══════════════════════════════════════════════ */}
-      <section className="relative py-4 sm:py-6 lg:py-8 bg-gradient-to-b from-slate-50/80 via-white to-white overflow-hidden">
+      <section className="relative py-6 sm:py-8 lg:py-10 bg-gradient-to-b from-slate-50/80 via-white to-white overflow-hidden w-full">
         <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:28px_28px] opacity-25 pointer-events-none" />
         <div className="absolute bottom-0 right-1/4 w-[500px] h-[280px] bg-blue-100/30 rounded-full blur-[120px] pointer-events-none" />
 
-        <div className="relative z-10 w-full max-w-full px-2 xs:px-3 sm:px-4 lg:px-6">
+        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-12">
 
             {/* ── Section Header ── */}
             <div className="relative text-center max-w-4xl mx-auto mb-8 sm:mb-10">
               <Reveal delay={0} y={14}>
-                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200/90 text-[11px] font-black text-[#2563EB] tracking-[0.18em] uppercase mb-3.5 shadow-2xs">
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200/90 text-[11px] font-black text-[#2563EB] tracking-[0.18em] uppercase mb-3 shadow-2xs">
                   <span className="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse" />
                   PARTNER FEEDBACK
                 </div>
               </Reveal>
               <Reveal delay={0.08} y={20}>
-                <h2 className="text-[2.1rem] sm:text-[3rem] lg:text-[3.5rem] font-black text-[#0F172A] tracking-[-0.035em] leading-[1.12]">
+                <h2 className="text-[2rem] sm:text-[2.65rem] lg:text-[3rem] font-black text-[#0F172A] tracking-[-0.035em] leading-[1.12]">
                   Building with{" "}
                   <span className="bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] bg-clip-text text-transparent">
                     Our Partners
                   </span>
                 </h2>
               </Reveal>
-              <Reveal delay={0.16} y={16}>
-                <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mt-4">
-                  {["Long-Term Collaboration", "Transparent Process", "Quality Focused"].map((t) => (
-                    <div key={t} className="inline-flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-white border border-slate-200/90 shadow-sm text-xs sm:text-[13px] font-black text-[#0F172A]">
-                      <span className="w-2 h-2 rounded-full bg-[#2563EB]" />
-                      <span>{t}</span>
-                    </div>
-                  ))}
-                </div>
-              </Reveal>
             </div>
 
-            {/* ── Testimonial Cards — Mild Pleasant Colorful Cards ── */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 sm:gap-6">
+            {/* ── ULTRA-RICH HORIZONTAL SWIPE CAROUSEL (Mobile & Desktop) ── */}
+            <div
+              ref={carouselRef}
+              onScroll={handleScroll}
+              className="flex gap-5 sm:gap-6 overflow-x-auto pb-6 pt-2 snap-x snap-mandatory scrollbar-none max-w-6xl mx-auto px-1"
+            >
               {testimonials.map((item, idx) => {
                 const cardStyles = [
-                  { bg: "bg-gradient-to-br from-blue-100/90 via-blue-50/70 to-white", border: "border-blue-300/80", hoverShadow: "group-hover:shadow-[0_22px_50px_rgba(37,99,235,0.16)]", accent: "from-[#1D4ED8] via-[#2563EB] to-[#0284C7]", avatar: "from-[#1D4ED8] to-[#2563EB]", quoteBorder: "border-blue-300", badge: "bg-blue-100/90 text-[#2563EB] border-blue-200" },
-                  { bg: "bg-gradient-to-br from-sky-100/90 via-blue-50/70 to-white", border: "border-sky-300/80", hoverShadow: "group-hover:shadow-[0_22px_50px_rgba(2,132,199,0.16)]", accent: "from-[#0284C7] via-[#38BDF8] to-[#0284C7]", avatar: "from-[#0284C7] to-[#0284C7]", quoteBorder: "border-sky-300", badge: "bg-sky-100/90 text-[#0284C7] border-sky-200" },
-                  { bg: "bg-gradient-to-br from-emerald-100/90 via-emerald-50/70 to-white", border: "border-emerald-300/80", hoverShadow: "group-hover:shadow-[0_22px_50px_rgba(5,150,105,0.16)]", accent: "from-[#059669] via-[#10B981] to-[#059669]", avatar: "from-[#059669] to-[#10B981]", quoteBorder: "border-emerald-300", badge: "bg-emerald-100/90 text-emerald-800 border-emerald-200" },
+                  { bg: "bg-gradient-to-br from-blue-100/95 via-blue-50/80 to-white", border: "border-blue-300/90", hoverShadow: "shadow-[0_15px_40px_rgba(37,99,235,0.12)]", accent: "from-[#1D4ED8] via-[#2563EB] to-[#0284C7]", avatar: "from-[#1D4ED8] to-[#2563EB]", quoteBorder: "border-blue-400", badge: "bg-blue-100 text-[#2563EB] border-blue-300" },
+                  { bg: "bg-gradient-to-br from-sky-100/95 via-blue-50/80 to-white", border: "border-sky-300/90", hoverShadow: "shadow-[0_15px_40px_rgba(2,132,199,0.12)]", accent: "from-[#0284C7] via-[#38BDF8] to-[#0284C7]", avatar: "from-[#0284C7] to-[#0284C7]", quoteBorder: "border-sky-400", badge: "bg-sky-100 text-[#0284C7] border-sky-300" },
+                  { bg: "bg-gradient-to-br from-emerald-100/95 via-emerald-50/80 to-white", border: "border-emerald-300/90", hoverShadow: "shadow-[0_15px_40px_rgba(5,150,105,0.12)]", accent: "from-[#059669] via-[#10B981] to-[#059669]", avatar: "from-[#059669] to-[#10B981]", quoteBorder: "border-emerald-400", badge: "bg-emerald-100 text-emerald-800 border-emerald-300" },
                 ][idx % 3];
 
                 return (
-                  <Reveal key={item.role} delay={0.1 + idx * 0.1} y={24}>
-                    <div className="group relative h-full rounded-[22px] transition-all duration-500 hover:-translate-y-1">
-                      <div className={`relative h-full rounded-[22px] ${cardStyles.bg} border ${cardStyles.border} transition-all duration-400 overflow-hidden shadow-[0_8px_30px_rgba(37,99,235,0.06)] ${cardStyles.hoverShadow}`}>
-                        {/* Top Brand Accent Bar */}
+                  <div
+                    key={item.role}
+                    className="w-[86vw] xs:w-[320px] sm:w-[350px] md:w-[370px] shrink-0 snap-center"
+                  >
+                    <div className="group relative h-full rounded-[24px] transition-all duration-500 hover:-translate-y-1">
+                      <div className={`relative h-full rounded-[24px] ${cardStyles.bg} border-2 ${cardStyles.border} transition-all duration-400 overflow-hidden ${cardStyles.hoverShadow}`}>
+                        {/* Top Accent Line */}
                         <div className={`h-[4px] bg-gradient-to-r ${cardStyles.accent}`} />
-                        
-                        {/* Ambient top glow on hover */}
-                        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-40 h-24 rounded-full blur-3xl pointer-events-none bg-blue-100/0 group-hover:bg-blue-100/60 transition-all duration-700" />
 
-                        <div className="relative p-6 sm:p-7 flex flex-col h-full">
-                          {/* Avatar + Role Row */}
-                          <div className="flex items-center gap-3.5 mb-5">
-                            <div className={`w-11 h-11 rounded-full bg-gradient-to-br ${cardStyles.avatar} flex items-center justify-center shrink-0 shadow-md shadow-blue-500/25`}>
-                              <span className="text-sm font-black text-white tracking-wide">{item.initials}</span>
+                        <div className="relative p-6 sm:p-7 flex flex-col h-full justify-between">
+                          <div>
+                            {/* Card Header Row: Step Badge + Tag Pill */}
+                            <div className="flex items-center justify-between gap-2 mb-4">
+                              <span className="text-[10px] font-mono font-black tracking-widest text-slate-400 px-2 py-0.5 rounded-md bg-white/80 border border-slate-200">
+                                0{idx + 1} / 03
+                              </span>
+                              <span className={`text-[9.5px] font-mono font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full border ${cardStyles.badge}`}>
+                                {item.tagPill}
+                              </span>
                             </div>
-                            <div>
-                              <p className="text-[13.5px] font-black text-[#0F172A] leading-tight">{item.role}</p>
-                              <div className="inline-flex items-center gap-1.5 mt-1">
-                                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                                <span className={`text-[10.5px] font-extrabold px-2 py-0.5 rounded-full border shadow-2xs ${cardStyles.badge}`}>{item.label}</span>
+
+                            {/* Avatar & Role Header */}
+                            <div className="flex items-center gap-3.5 mb-5">
+                              <div className={`w-11 h-11 rounded-2xl bg-gradient-to-br ${cardStyles.avatar} flex items-center justify-center shrink-0 shadow-md shadow-blue-500/25`}>
+                                <span className="text-sm font-black text-white tracking-wider">{item.initials}</span>
+                              </div>
+                              <div>
+                                <p className="text-[14px] font-black text-[#0F172A] leading-tight">{item.role}</p>
+                                <div className="inline-flex items-center gap-1.5 mt-1">
+                                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                                  <span className="text-[10.5px] font-extrabold text-slate-600">{item.label}</span>
+                                </div>
                               </div>
                             </div>
-                          </div>
 
-                          {/* Quote */}
-                          <div className="flex-1 mb-4">
-                            <div className={`pl-4 border-l-[3px] ${cardStyles.quoteBorder} transition-colors duration-300`}>
-                              <p className="text-[13px] sm:text-[13.5px] text-[#475569] leading-[1.75] font-normal text-justify">
+                            {/* Quote Body with Decorative Symbol */}
+                            <div className="relative pl-4 border-l-[3px] border-blue-500/70 my-3">
+                              <p className="text-xs sm:text-[13.5px] text-[#334155] leading-relaxed font-medium text-left">
                                 &ldquo;{item.quote}&rdquo;
                               </p>
                             </div>
                           </div>
 
-                          {/* Bottom Accent Line */}
-                          <div className={`h-[2px] rounded-full bg-gradient-to-r ${cardStyles.accent} opacity-40 group-hover:opacity-100 transition-all duration-500`} />
+                          {/* Footer Tag */}
+                          <div className="pt-4 mt-2 border-t border-slate-200/60 flex items-center justify-between">
+                            <span className="text-[10px] font-mono font-bold text-slate-400 uppercase tracking-wider">
+                              VERIFIED PARTNER
+                            </span>
+                            <span className="text-xs font-bold text-[#2563EB]">
+                              Agaran Network
+                            </span>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </Reveal>
+                  </div>
                 );
               })}
             </div>
+
+            {/* ── CAROUSEL PAGINATION DOTS ── */}
+            <div className="flex items-center justify-center gap-2 mt-4 max-w-6xl mx-auto">
+              {testimonials.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => {
+                    if (carouselRef.current) {
+                      carouselRef.current.scrollTo({
+                        left: i * 320,
+                        behavior: "smooth",
+                      });
+                    }
+                  }}
+                  className={`h-2 rounded-full transition-all duration-300 cursor-pointer focus:outline-none ${
+                    activeSlide === i
+                      ? "w-8 bg-[#2563EB]"
+                      : "w-2 bg-slate-300 hover:bg-slate-400"
+                  }`}
+                  aria-label={`Go to slide ${i + 1}`}
+                />
+              ))}
+            </div>
+
           </div>
       </section>
     </>
