@@ -229,7 +229,7 @@ function PhoneMockup({ current, isPaused }: { current: typeof pillars[0]; isPaus
                   <div className="text-xl font-black text-white mt-0.5 tracking-tight">{current.screenContent.metricValue}</div>
                 </div>
                 <div className="px-3 py-1.5 rounded-lg text-white text-[10px] font-extrabold uppercase tracking-wider" style={{ backgroundColor: current.color }}>
-                  Verified ✓
+                  Verified
                 </div>
               </div>
 
