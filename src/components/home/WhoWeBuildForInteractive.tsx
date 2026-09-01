@@ -11,7 +11,7 @@ const worlds = [
     id: "startups",
     num: "01",
     label: "STARTUPS & BUSINESSES",
-    shortName: "STARTUPS",
+    shortName: "FOUNDERS",
     title: "Have an Idea? Let’s Build It.",
     tagline: "Idea → First Version → Launch → Grow",
     description:
@@ -32,7 +32,7 @@ const worlds = [
     id: "education",
     num: "02",
     label: "EDUCATION & TRAINING",
-    shortName: "EDUCATION",
+    shortName: "INSTITUTIONS",
     title: "From Admissions to Career Guidance.",
     tagline: "Admission → LMS → Exams → AI → Career",
     description:
@@ -54,7 +54,7 @@ const worlds = [
     id: "organizations",
     num: "03",
     label: "ORGANIZATIONS & TEAMS",
-    shortName: "TEAMS",
+    shortName: "ORGANIZATIONS",
     title: "Make Everyday Work Easier.",
     tagline: "Keep your team, tasks and information organised in one simple place.",
     description:
@@ -75,7 +75,7 @@ const worlds = [
     id: "ideas",
     num: "04",
     label: "NEW IDEAS & INNOVATIONS",
-    shortName: "NEW IDEAS",
+    shortName: "CREATORS",
     title: "Have a problem to solve? Let's find a better way to do it.",
     tagline: "Problem → Smart Approach → Tailored Solution → Result",
     description:
