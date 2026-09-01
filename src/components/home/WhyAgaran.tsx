@@ -300,24 +300,24 @@ export default function WhyAgaran() {
 
           {/* Section Header */}
           <motion.div
-            className="text-center max-w-2xl mx-auto mb-12 sm:mb-16"
+            className="text-center max-w-5xl xl:max-w-6xl mx-auto mb-10 sm:mb-14"
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.55, ease: "easeOut" }}
           >
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-5">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-4">
               <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#2563EB] animate-pulse" />
               <span>WHY CHOOSE AGARAN</span>
             </div>
 
-            <h2 className="text-[1.8rem] xs:text-[2.1rem] sm:text-4xl md:text-[2.65rem] lg:text-[2.85rem] xl:text-[3.15rem] font-extrabold lg:font-black leading-[1.22] xs:leading-[1.18] sm:leading-[1.14] lg:leading-[1.12] tracking-[-0.035em] text-slate-900">
+            <h2 className="text-[1.8rem] xs:text-[2.1rem] sm:text-4xl md:text-[2.65rem] lg:text-[2.85rem] xl:text-[3.25rem] font-extrabold lg:font-black leading-[1.22] xs:leading-[1.18] sm:leading-[1.14] lg:leading-[1.12] tracking-[-0.035em] text-slate-900 lg:whitespace-nowrap">
               Built to Help Your{" "}
               <span className="bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] bg-clip-text text-transparent font-extrabold lg:font-black tracking-[-0.035em]">
                 Business Grow
               </span>
             </h2>
 
-            <p className="text-sm sm:text-base lg:text-[1.05rem] font-medium leading-relaxed text-slate-600 tracking-normal mt-4">
+            <p className="text-sm sm:text-base lg:text-[1.05rem] font-medium leading-relaxed text-slate-600 tracking-normal mt-4 lg:whitespace-nowrap">
               We build software that solves real problems, saves you time, and helps your company grow smoothly.
             </p>
           </motion.div>
