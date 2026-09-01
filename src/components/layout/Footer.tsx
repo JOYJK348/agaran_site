@@ -13,9 +13,9 @@ const footerLinks = {
     { name: "Custom AI & Automation", href: "/#why-agaran" },
   ],
   company: [
+    { name: "About Agaran", href: "/about" },
     { name: "Why Agaran", href: "/#why-agaran" },
     { name: "Selected Work", href: "/#selected-work" },
-    { name: "Who We Build For", href: "/#who-we-build-for" },
     { name: "Contact Us", href: "/contact" },
   ],
   contact: [
