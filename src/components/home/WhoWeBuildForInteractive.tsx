@@ -52,19 +52,20 @@ const worlds = [
     num: "03",
     label: "ORGANIZATIONS & TEAMS",
     shortName: "TEAMS",
-    title: "Bring your people, work & information together in one place.",
-    tagline: "Teams → Workflows → Automation → Smooth Operations",
+    title: "Make Everyday Work Easier.",
+    tagline: "Keep your team, tasks and information organised in one simple place.",
     description:
-      "Bring your people, work & information together in one place. We create custom platforms and practical automation to help your team collaborate effortlessly and save time.",
+      "We build simple systems that make day-to-day work easier for your team.",
     image: "/images/ecosystem/organizations.png",
     accentColor: "#2563EB",
     bgTint: "bg-blue-50/70 border-blue-200/90",
     badgePill: "bg-[#EFF6FF] text-[#2563EB] border-[#BFDBFE]",
+    ctaText: "Build Your Solution →",
     features: [
-      "Connected Team Hubs",
-      "Automated Routine Tasks",
-      "Central Information Flow",
-      "Reliable Daily Execution",
+      "Keep Everything Organised",
+      "Reduce Repetitive Work",
+      "Find Things Faster",
+      "Help Your Team Work Better",
     ],
   },
   {
@@ -229,7 +230,7 @@ export default function WhoWeBuildForInteractive() {
 
                 <div className="pt-3">
                   <Button variant="primary" href="/contact" className="text-xs sm:text-sm px-7 py-3.5 rounded-xl font-bold shadow-md w-full sm:w-auto justify-center">
-                    Build For {activeWorld.label.split("&")[0]} <span className="ml-1.5">→</span>
+                    {activeWorld.ctaText ? activeWorld.ctaText : `Build For ${activeWorld.label.split("&")[0]} →`}
                   </Button>
                 </div>
               </div>
