@@ -1,405 +1,564 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence, useInView } from "framer-motion";
+import Image from "next/image";
 import Container from "@/components/ui/Container";
 
-const appScreens = [
+const pillars = [
   {
-    id: "automation",
-    navLabel: "AI Agent",
-    icon: "🤖",
-    title: "Autonomous AI Engine",
-    subtitle: "Replaces manual tasks 24/7",
-    color: "#059669",
-    gradient: "from-emerald-500 to-teal-600",
-    badge: "ACTIVE",
-    badgeBg: "bg-emerald-500/10 text-emerald-400 border-emerald-500/30",
-    content: {
-      statusText: "Agent #104 Executing Workflow...",
-      steps: [
-        { title: "Lead Ingestion", time: "0.1s", status: "Done", color: "text-emerald-400" },
-        { title: "AI Decision Model", time: "0.4s", status: "Active", color: "text-blue-400" },
-        { title: "Portal Database Sync", time: "0.2s", status: "Queued", color: "text-slate-400" },
+    id: "mvp",
+    num: "01",
+    title: "Start Small, Build Smart",
+    subtitle: "Launch Fast & Learn from Users",
+    description:
+      "You don't need to build everything at once. Start with an MVP, launch it, learn from real users, and build the next version with confidence.",
+    tag: "SMART START",
+    color: "#2563EB",
+    colorLight: "#EFF6FF",
+    colorBorder: "#BFDBFE",
+    icon: (
+      <svg className="w-4 h-4 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a6 6 0 00-2.39 2.24" />
+      </svg>
+    ),
+    screenContent: {
+      items: [
+        { label: "Essential Features Launched", status: "Done", highlight: true },
+        { label: "Real User Feedback", status: "Gathering", highlight: true },
+        { label: "Smart Next Updates", status: "Planned", highlight: false },
       ],
-      statLabel: "Manual Overhead Saved",
-      statValue: "85%",
+      metricLabel: "Launch Speed",
+      metricValue: "3x Faster",
+    },
+  },
+  {
+    id: "focus",
+    num: "02",
+    title: "Build What You Need",
+    subtitle: "Only Features That Matter",
+    description:
+      "We focus on the features that matter most, so you can move faster without unnecessary development.",
+    tag: "ZERO WASTE",
+    color: "#2563EB",
+    colorLight: "#EFF6FF",
+    colorBorder: "#BFDBFE",
+    icon: (
+      <svg className="w-4 h-4 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+      </svg>
+    ),
+    screenContent: {
+      items: [
+        { label: "Core Business Goals", status: "100% Focused", highlight: true },
+        { label: "No Unused Extras", status: "Clean & Fast", highlight: true },
+        { label: "Easy User Experience", status: "Tested", highlight: false },
+      ],
+      metricLabel: "Focus & Speed",
+      metricValue: "100% Focused",
     },
   },
   {
     id: "scale",
-    navLabel: "Scale",
-    icon: "⚡",
-    title: "Multi-Tenant Cloud OS",
-    subtitle: "Isolated architecture for growth",
+    num: "03",
+    title: "Grow Step by Step",
+    subtitle: "Expands as Your Business Grows",
+    description:
+      "Start with the essentials and add new features, users, and capabilities as your needs grow.",
+    tag: "EASY SCALING",
     color: "#2563EB",
-    gradient: "from-blue-500 to-indigo-600",
-    badge: "100k REQ/S",
-    badgeBg: "bg-blue-500/10 text-blue-400 border-blue-500/30",
-    content: {
-      statusText: "Tenant Isolation Layer • Active",
-      tenants: [
-        { name: "Coaching Platform", load: "88%", status: "Isolated" },
-        { name: "University Portal", load: "62%", status: "Isolated" },
-        { name: "Enterprise SaaS", load: "45%", status: "Isolated" },
+    colorLight: "#EFF6FF",
+    colorBorder: "#BFDBFE",
+    icon: (
+      <svg className="w-4 h-4 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+      </svg>
+    ),
+    screenContent: {
+      items: [
+        { label: "Ready for More Users", status: "Smooth", highlight: true },
+        { label: "Easy Feature Add-Ons", status: "Flexible", highlight: true },
+        { label: "Reliable Daily Operation", status: "99.99% Stable", highlight: false },
       ],
-      statLabel: "Target SLA Uptime",
-      statValue: "99.99%",
+      metricLabel: "System Reliability",
+      metricValue: "99.99% Stable",
     },
   },
   {
-    id: "velocity",
-    navLabel: "Speed",
-    icon: "🚀",
-    title: "Real-Time Sync Engine",
-    subtitle: "Zero latency portal updates",
-    color: "#7C3AED",
-    gradient: "from-purple-500 to-violet-600",
-    badge: "< 40MS",
-    badgeBg: "bg-purple-500/10 text-purple-400 border-purple-500/30",
-    content: {
-      statusText: "Cross-Portal Data Bridge Live",
-      portals: [
-        { name: "Admin Dashboard", state: "Synced ⚡" },
-        { name: "Student App", state: "Synced ⚡" },
-        { name: "Parent Portal", state: "Synced ⚡" },
+    id: "ai",
+    num: "04",
+    title: "AI Where It Makes Sense",
+    subtitle: "AI That Saves Time & Money",
+    description:
+      "We use AI where it genuinely adds value — not just because it's trending.",
+    tag: "REAL AI VALUE",
+    color: "#2563EB",
+    colorLight: "#EFF6FF",
+    colorBorder: "#BFDBFE",
+    icon: (
+      <svg className="w-4 h-4 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
+      </svg>
+    ),
+    screenContent: {
+      items: [
+        { label: "Automatic Customer Replies", status: "Instant", highlight: true },
+        { label: "Smart Repetitive Work AI", status: "Zero Error", highlight: true },
+        { label: "Measurable Savings", status: "High Value", highlight: false },
       ],
-      statLabel: "Average Data Latency",
-      statValue: "18ms",
-    },
-  },
-  {
-    id: "security",
-    navLabel: "Trust",
-    icon: "🛡️",
-    title: "Bank-Grade Shield",
-    subtitle: "Continuous security & backups",
-    color: "#EA580C",
-    gradient: "from-orange-500 to-amber-600",
-    badge: "PROTECTED",
-    badgeBg: "bg-orange-500/10 text-orange-400 border-orange-500/30",
-    content: {
-      statusText: "Enterprise Security Guard • Operational",
-      checks: [
-        { label: "256-Bit SSL Encryption", passed: true },
-        { label: "Automated Daily Backups", passed: true },
-        { label: "Role-Based Access Control", passed: true },
-      ],
-      statLabel: "Security Compliance",
-      statValue: "100%",
+      metricLabel: "Time Saved",
+      metricValue: "4.2x Faster",
     },
   },
 ];
 
-export default function WhyAgaran() {
-  const [activeTab, setActiveTab] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
+// ─── Shared iPhone Mockup (Real-Time Asia/Kolkata Clock) ───────────────────────────────────────────
+function PhoneMockup({ current }: { current: typeof pillars[0] }) {
+  const [kolkataTime, setKolkataTime] = useState<string>("");
 
-  // Auto cycle screen tabs every 3.5 seconds
+  useEffect(() => {
+    const updateTime = () => {
+      try {
+        const now = new Date();
+        const formatted = new Intl.DateTimeFormat("en-US", {
+          timeZone: "Asia/Kolkata",
+          hour: "numeric",
+          minute: "2-digit",
+          hour12: true,
+        }).format(now);
+        setKolkataTime(formatted);
+      } catch {
+        setKolkataTime("9:41 PM");
+      }
+    };
+
+    updateTime();
+    const interval = setInterval(updateTime, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="relative w-full max-w-[320px] xs:max-w-[340px] sm:max-w-[360px] rounded-[48px] bg-gradient-to-b from-[#3B3E43] via-[#1F2125] to-[#121315] p-3 shadow-[0_24px_60px_rgba(15,23,42,0.18)] border border-[#484B52]/60">
+      {/* Side Buttons */}
+      <div className="absolute -left-[4px] top-20 w-[4px] h-6 bg-slate-600 rounded-l-md" />
+      <div className="absolute -left-[4px] top-32 w-[4px] h-10 bg-slate-600 rounded-l-md" />
+      <div className="absolute -left-[4px] top-44 w-[4px] h-10 bg-slate-600 rounded-l-md" />
+      <div className="absolute -right-[4px] top-28 w-[4px] h-14 bg-slate-600 rounded-r-md" />
+
+      {/* Screen */}
+      <div className="relative rounded-[38px] bg-[#09090b] overflow-hidden border border-slate-800/60 h-[495px] flex flex-col select-none">
+        {/* Live Status Bar (Real-Time Asia/Kolkata IST Clock) */}
+        <div className="pt-3 px-5 pb-2 bg-black flex items-center justify-between shrink-0">
+          <span className="text-[10.5px] font-semibold text-white tracking-tight font-mono">
+            {kolkataTime || "9:41 PM"}
+          </span>
+          <div className="flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-pulse" />
+            <span className="w-1 h-1 rounded-full bg-emerald-400" />
+            <span className="text-[9px] font-bold text-white ml-0.5">5G</span>
+          </div>
+        </div>
+
+        {/* App Header */}
+        <div className="px-4 py-3 bg-[#111115] border-b border-white/5 flex items-center justify-between shrink-0">
+          <div className="flex items-center gap-2.5">
+            <div className="w-10 h-10 rounded-xl bg-white border border-slate-200/90 flex items-center justify-center p-0.5 shrink-0 shadow-md overflow-hidden">
+              <Image
+                src="/logo-transparent.png"
+                alt="Agaran Logo"
+                width={40}
+                height={40}
+                className="w-full h-full object-contain scale-110"
+              />
+            </div>
+            <div>
+              <div className="text-[11.5px] font-black text-white leading-tight">Agaran Dashboard</div>
+              <div className="text-[8.5px] font-mono text-slate-400 mt-0.5">Business Intelligence</div>
+            </div>
+          </div>
+          <AnimatePresence mode="wait">
+            <motion.span
+              key={current.id + "-badge"}
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.8 }}
+              transition={{ duration: 0.2 }}
+              className="px-2.5 py-0.5 rounded-full text-[8.5px] font-extrabold uppercase tracking-wider border"
+              style={{ backgroundColor: current.colorLight, color: current.color, borderColor: current.colorBorder }}
+            >
+              {current.tag}
+            </motion.span>
+          </AnimatePresence>
+        </div>
+
+        {/* Body */}
+        <div className="flex-1 overflow-hidden bg-[#0c0c10]">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={current.id}
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -12 }}
+              transition={{ duration: 0.26, ease: "easeOut" }}
+              className="flex flex-col gap-3 p-4 h-full justify-between"
+            >
+              {/* Clean Title strip */}
+              <div className="rounded-2xl px-4 py-3 bg-[#2563EB]/15 border border-[#2563EB]/30">
+                <div className="text-xs font-black text-white leading-tight tracking-tight">{current.title}</div>
+                <div className="text-[9.5px] font-medium text-slate-400 mt-0.5 leading-tight">{current.subtitle}</div>
+              </div>
+
+              {/* Status list */}
+              <div className="rounded-2xl bg-white/5 border border-white/8 overflow-hidden">
+                <div className="flex items-center justify-between px-3.5 py-2 border-b border-white/5">
+                  <span className="text-[9px] font-mono font-bold text-slate-400 uppercase tracking-wider">Workflow Status</span>
+                  <div className="flex items-center gap-1">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    <span className="text-[8.5px] font-bold text-emerald-400">ACTIVE</span>
+                  </div>
+                </div>
+                <div className="p-2 space-y-1.5">
+                  {current.screenContent.items.map((item, i) => (
+                    <motion.div
+                      key={item.label}
+                      initial={{ opacity: 0, x: -8 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: i * 0.07, duration: 0.22 }}
+                      className="flex items-center justify-between px-3 py-2.5 rounded-xl bg-white/5"
+                    >
+                      <span className="text-[11px] font-medium text-slate-300">{item.label}</span>
+                      <span className="text-[9.5px] font-mono font-bold" style={{ color: item.highlight ? "#34d399" : "#64748b" }}>
+                        {item.status}
+                      </span>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Metric */}
+              <div className="rounded-xl px-4 py-3 flex items-center justify-between" style={{ background: `linear-gradient(135deg, ${current.color}22, ${current.color}0d)`, border: `1px solid ${current.color}35` }}>
+                <div>
+                  <div className="text-[8.5px] font-mono text-slate-400 uppercase tracking-wider">{current.screenContent.metricLabel}</div>
+                  <div className="text-xl font-black text-white mt-0.5 tracking-tight">{current.screenContent.metricValue}</div>
+                </div>
+                <div className="px-3 py-1.5 rounded-lg text-white text-[10px] font-extrabold uppercase tracking-wider" style={{ backgroundColor: current.color }}>
+                  Verified ✓
+                </div>
+              </div>
+
+              {/* Progress bar */}
+              <div className="h-0.5 rounded-full bg-white/10 overflow-hidden shrink-0">
+                <motion.div
+                  className="h-full rounded-full"
+                  style={{ backgroundColor: current.color }}
+                  initial={{ width: "0%" }}
+                  animate={{ width: "100%" }}
+                  transition={{ duration: 4, ease: "linear" }}
+                  key={current.id + "-prog"}
+                />
+              </div>
+            </motion.div>
+          </AnimatePresence>
+        </div>
+
+        {/* Home bar */}
+        <div className="py-2 flex justify-center bg-black shrink-0">
+          <div className="w-20 h-1 rounded-full bg-white/25" />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default function WhyAgaran() {
+  const [activeIdx, setActiveIdx] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
+  const isInView = useInView(sectionRef, { once: true, margin: "-80px" });
+
   useEffect(() => {
     if (isPaused) return;
     const timer = setInterval(() => {
-      setActiveTab((prev) => (prev + 1) % appScreens.length);
-    }, 3500);
+      setActiveIdx((prev) => (prev + 1) % pillars.length);
+    }, 4000);
     return () => clearInterval(timer);
   }, [isPaused]);
 
-  const currentScreen = appScreens[activeTab];
+  const current = pillars[activeIdx];
 
   return (
-    <section id="why-agaran" className="relative py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-white via-slate-50/60 to-white border-t border-slate-200/80 overflow-hidden">
-      {/* Background Soft Ambient Lights */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-blue-100/40 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:28px_28px] opacity-25 pointer-events-none" />
+    <section
+      ref={sectionRef}
+      id="why-agaran"
+      className="relative py-6 sm:py-8 lg:py-10 bg-white overflow-hidden"
+    >
+      <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:24px_24px] opacity-50 pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[260px] bg-[#2563EB]/7 rounded-full blur-[120px] pointer-events-none" />
 
       <Container as="div">
-        <div className="relative z-10 max-w-6xl mx-auto px-2 sm:px-0">
-          
+        <div className="relative z-10 w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
+
           {/* Section Header */}
-          <div className="relative text-center max-w-3xl mx-auto mb-8 sm:mb-12">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200/90 text-[11px] font-black text-[#2563EB] tracking-[0.18em] uppercase mb-3.5 shadow-2xs">
-              <span className="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse" />
-              WHY CHOOSE AGARAN
+          <motion.div
+            className="text-center max-w-2xl mx-auto mb-12 sm:mb-16"
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.55, ease: "easeOut" }}
+          >
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-5">
+              <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#2563EB] animate-pulse" />
+              <span>WHY CHOOSE AGARAN</span>
             </div>
 
-            <h2 className="text-[2.1rem] sm:text-[3rem] lg:text-[3.5rem] font-black text-[#0F172A] tracking-[-0.035em] leading-[1.12]">
-              Built for{" "}
-              <span className="bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] bg-clip-text text-transparent">
-                Growth
+            <h2 className="text-[1.8rem] xs:text-[2.1rem] sm:text-4xl md:text-[2.65rem] lg:text-[2.85rem] xl:text-[3.15rem] font-extrabold lg:font-black leading-[1.22] xs:leading-[1.18] sm:leading-[1.14] lg:leading-[1.12] tracking-[-0.035em] text-slate-900">
+              Built to Help Your{" "}
+              <span className="bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] bg-clip-text text-transparent font-extrabold lg:font-black tracking-[-0.035em]">
+                Business Grow
               </span>
             </h2>
 
-            <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mt-4">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs text-xs font-black text-[#0F172A]">
-                <span className="w-2 h-2 rounded-full bg-[#2563EB]" />
-                <span>Practical Engineering</span>
-              </div>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs text-xs font-black text-[#0F172A]">
-                <span className="w-2 h-2 rounded-full bg-[#2563EB]" />
-                <span>Automated Efficiency</span>
-              </div>
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs text-xs font-black text-[#0F172A]">
-                <span className="w-2 h-2 rounded-full bg-[#2563EB]" />
-                <span>Reliable Partnership</span>
-              </div>
-            </div>
-          </div>
+            <p className="text-sm sm:text-base lg:text-[1.05rem] font-medium leading-relaxed text-slate-600 tracking-normal mt-4">
+              We build software that solves real problems, saves you time, and helps your company grow smoothly.
+            </p>
+          </motion.div>
 
-          {/* ── iPhone 17 Pro Max Interactive Showcase ── */}
+          {/* ══════════════════════════════════════
+              MOBILE LAYOUT
+          ══════════════════════════════════════ */}
           <div
-            className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12"
+            className="flex flex-col items-center gap-6 lg:hidden"
             onMouseEnter={() => setIsPaused(true)}
             onMouseLeave={() => setIsPaused(false)}
           >
-            {/* Left/Top Interactive Navigation Controls */}
-            <div className="w-full lg:w-5/12 flex flex-col gap-3">
-              <div className="text-center lg:text-left mb-2">
-                <h3 className="text-xl sm:text-2xl font-black text-[#0F172A] tracking-tight">
-                  Experience Agaran Technology
-                </h3>
-                <p className="text-xs sm:text-sm text-slate-500 font-medium mt-1">
-                  Tap any screen tab below to preview live mobile app interfaces in real time.
-                </p>
-              </div>
+            {/* Phone Mockup */}
+            <motion.div
+              initial={{ opacity: 0, y: 24 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.55, ease: "easeOut" }}
+              className="w-full flex justify-center"
+            >
+              <PhoneMockup current={current} />
+            </motion.div>
 
-              {/* Pill Selectors */}
-              <div className="grid grid-cols-2 lg:flex lg:flex-col gap-2.5">
-                {appScreens.map((screen, idx) => {
-                  const isActive = activeTab === idx;
-                  return (
-                    <button
-                      key={screen.id}
-                      onClick={() => setActiveTab(idx)}
-                      className={`flex items-center gap-3 p-3 sm:p-3.5 rounded-2xl border text-left transition-all ${
-                        isActive
-                          ? "bg-white border-[#2563EB] shadow-[0_10px_25px_rgba(37,99,235,0.12)] scale-[1.02]"
-                          : "bg-slate-50/80 border-slate-200/80 hover:bg-white hover:border-slate-300"
-                      }`}
+            {/* 4 Pill Selector Tabs */}
+            <motion.div
+              className="w-full max-w-[340px] xs:max-w-[360px] grid grid-cols-4 gap-2.5"
+              initial={{ opacity: 0, y: 16 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.15, ease: "easeOut" }}
+            >
+              {pillars.map((pillar, idx) => {
+                const isActive = activeIdx === idx;
+                return (
+                  <button
+                    key={pillar.id}
+                    onClick={() => setActiveIdx(idx)}
+                    className="flex flex-col items-center gap-1.5 py-3 px-1 rounded-2xl border transition-all duration-300 focus:outline-none"
+                    style={{
+                      backgroundColor: isActive ? "#EFF6FF" : "#f8fafc",
+                      borderColor: isActive ? "#BFDBFE" : "#f1f5f9",
+                    }}
+                  >
+                    <span
+                      className="w-8 h-8 rounded-xl flex items-center justify-center"
+                      style={{ backgroundColor: isActive ? "#2563EB" : "#e2e8f0" }}
                     >
-                      <div
-                        className={`w-9 h-9 sm:w-10 sm:h-10 rounded-xl flex items-center justify-center text-lg flex-shrink-0 border ${
-                          isActive
-                            ? "bg-blue-50 text-[#2563EB] border-blue-200"
-                            : "bg-slate-100 text-slate-600 border-slate-200"
-                        }`}
-                      >
-                        {screen.icon}
-                      </div>
-                      <div className="min-w-0 flex-1">
-                        <h4 className={`text-xs sm:text-sm font-black truncate ${isActive ? "text-[#0F172A]" : "text-slate-700"}`}>
-                          {screen.title}
-                        </h4>
-                        <p className="text-[10.5px] font-medium text-slate-500 truncate mt-0.5">
-                          {screen.subtitle}
-                        </p>
-                      </div>
-                      {isActive && (
-                        <span className="w-2 h-2 rounded-full bg-[#2563EB] animate-ping hidden sm:block" />
-                      )}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
+                      <span style={{ color: isActive ? "#fff" : "#94a3b8" }}>{pillar.icon}</span>
+                    </span>
+                    <span
+                      className="text-[9.5px] font-mono font-black tracking-widest"
+                      style={{ color: isActive ? "#2563EB" : "#cbd5e1" }}
+                    >
+                      {pillar.num}
+                    </span>
+                  </button>
+                );
+              })}
+            </motion.div>
 
-            {/* Right/Center Smartphone Frame — Authentic iPhone 17 Pro Max Titanium Chassis */}
-            <div className="w-full lg:w-7/12 flex justify-center items-center">
-              <div className="relative w-full max-w-[340px] xs:max-w-[360px] sm:max-w-[380px] rounded-[54px] bg-gradient-to-b from-[#3B3E43] via-[#1F2125] to-[#121315] p-3 sm:p-3.5 shadow-[0_35px_80px_rgba(0,0,0,0.45),inset_0_1px_2px_rgba(255,255,255,0.25)] border border-[#484B52]/60">
-                
-                {/* Left Side iPhone Buttons: Action Button & Volume */}
-                <div className="absolute -left-[4px] top-24 w-[4px] h-7 bg-gradient-to-b from-[#484B52] to-[#2B2D31] rounded-l-md shadow-xs" />
-                <div className="absolute -left-[4px] top-36 w-[4px] h-12 bg-gradient-to-b from-[#484B52] to-[#2B2D31] rounded-l-md shadow-xs" />
-                <div className="absolute -left-[4px] top-52 w-[4px] h-12 bg-gradient-to-b from-[#484B52] to-[#2B2D31] rounded-l-md shadow-xs" />
-
-                {/* Right Side iPhone Buttons: Power & Camera Control Button */}
-                <div className="absolute -right-[4px] top-32 w-[4px] h-16 bg-gradient-to-b from-[#484B52] to-[#2B2D31] rounded-r-md shadow-xs" />
-                <div className="absolute -right-[4px] top-56 w-[4px] h-10 bg-gradient-to-b from-[#383A3F] to-[#1F2023] rounded-r-md shadow-xs" />
-
-                {/* iPhone 17 Pro Max Super Retina XDR Screen Inner Container */}
-                <div className="relative rounded-[44px] bg-slate-950 overflow-hidden border border-slate-800/90 min-h-[510px] flex flex-col justify-between select-none shadow-inner">
-                  
-                  {/* Top Status Bar with Dynamic Island Pro */}
-                  <div className="pt-3 px-6 pb-2 bg-black flex items-center justify-between z-30">
-                    <span className="text-[11px] font-semibold text-white tracking-tight">9:41</span>
-
-                    {/* iPhone 17 Pro Max Dynamic Island Pill */}
-                    <div className="w-24 h-5 rounded-full bg-slate-950 border border-slate-800 flex items-center justify-between px-2.5 shadow-inner">
-                      <div className="flex items-center gap-1">
-                        <span className="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse" />
-                        <span className="w-1 h-1 rounded-full bg-emerald-400" />
-                      </div>
-                      <div className="flex items-center gap-0.5">
-                        <span className="w-0.5 h-2 bg-emerald-400 rounded-full animate-pulse" />
-                        <span className="w-0.5 h-3 bg-emerald-400 rounded-full animate-pulse delay-75" />
-                        <span className="w-0.5 h-1.5 bg-emerald-400 rounded-full animate-pulse delay-150" />
-                      </div>
-                    </div>
-
-                    <div className="flex items-center gap-1 text-[10px] font-bold text-white">
-                      <span>5G UC</span>
-                      <div className="w-5 h-2.5 rounded-xs border border-white/80 p-0.5 flex items-center">
-                        <div className="w-full h-full bg-emerald-400 rounded-2xs" />
-                      </div>
-                    </div>
+            {/* Active Description Block */}
+            <motion.div
+              className="w-full max-w-[340px] xs:max-w-[360px]"
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : {}}
+              transition={{ duration: 0.4, delay: 0.2 }}
+            >
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={current.id + "-mob"}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.25, ease: "easeOut" }}
+                  className="rounded-2xl p-4.5 border bg-[#EFF6FF] border-[#BFDBFE]"
+                >
+                  {/* Tag + title */}
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full border text-[#2563EB] bg-white border-[#BFDBFE]">
+                      {current.tag}
+                    </span>
                   </div>
 
-                  {/* iOS App Navigation Header */}
-                  <div className="px-4 py-3 bg-slate-900/95 backdrop-blur-xl border-b border-slate-800 flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <div className="w-7 h-7 rounded-xl bg-gradient-to-tr from-[#1D4ED8] to-[#2563EB] flex items-center justify-center text-white text-xs font-black shadow-sm">
-                        A
-                      </div>
-                      <div>
-                        <div className="text-[11.5px] font-black text-white leading-tight tracking-tight">Agaran Intelligence</div>
-                        <div className="text-[9px] font-mono text-slate-400">Enterprise Platform • Active</div>
-                      </div>
-                    </div>
-                    <div className={`px-2.5 py-0.5 rounded-full border text-[9.5px] font-mono font-black uppercase ${currentScreen.badgeBg}`}>
-                      {currentScreen.badge}
-                    </div>
+                  <h3 className="text-[1.1rem] sm:text-xl font-extrabold lg:font-black tracking-[-0.035em] mb-1.5 leading-snug text-[#2563EB]">
+                    {current.title}
+                  </h3>
+
+                  <p className="text-sm sm:text-base font-medium leading-relaxed text-slate-600 tracking-normal">
+                    {current.description}
+                  </p>
+
+                  <div className="mt-3 flex items-center gap-1.5">
+                    <span className="text-[11px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB]">
+                      {current.subtitle}
+                    </span>
+                    <span className="text-[#2563EB] text-xs">→</span>
                   </div>
 
-                  {/* iOS Super Retina Screen Content */}
-                  <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 relative">
-                    <AnimatePresence mode="wait">
-                      <motion.div
-                        key={currentScreen.id}
-                        initial={{ opacity: 0, scale: 0.95, y: 10 }}
-                        animate={{ opacity: 1, scale: 1, y: 0 }}
-                        exit={{ opacity: 0, scale: 1.05, y: -10 }}
-                        transition={{ duration: 0.28, ease: "easeOut" }}
-                        className="space-y-4"
-                      >
-                        {/* iOS Widget Screen Header Card */}
-                        <div className="p-3.5 rounded-2xl bg-slate-800/80 border border-slate-700/80 flex items-center gap-3 backdrop-blur-md">
-                          <div className="w-10 h-10 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center text-xl shadow-xs">
-                            {currentScreen.icon}
-                          </div>
-                          <div>
-                            <h4 className="text-sm font-black text-white leading-tight">
-                              {currentScreen.title}
-                            </h4>
-                            <p className="text-[10.5px] font-medium text-slate-400 mt-0.5">
-                              {currentScreen.subtitle}
-                            </p>
-                          </div>
-                        </div>
-
-                        {/* iOS Interactive Process Card */}
-                        <div className="p-3.5 rounded-2xl bg-slate-800/60 border border-slate-700/60 space-y-2.5 backdrop-blur-sm">
-                          <div className="text-[10px] font-mono font-bold text-slate-400 flex items-center justify-between">
-                            <span>PROMOTION PROCESS FLOW</span>
-                            <span className="text-emerald-400 flex items-center gap-1">
-                              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                              LIVE
-                            </span>
-                          </div>
-
-                          {currentScreen.id === "automation" && (
-                            <div className="space-y-2">
-                              {currentScreen.content.steps?.map((step) => (
-                                <div key={step.title} className="flex items-center justify-between p-2 rounded-xl bg-slate-900/90 text-xs font-semibold text-slate-200">
-                                  <span>{step.title}</span>
-                                  <span className={`font-mono text-[10.5px] ${step.color}`}>{step.status} ({step.time})</span>
-                                </div>
-                              ))}
-                            </div>
-                          )}
-
-                          {currentScreen.id === "scale" && (
-                            <div className="space-y-2">
-                              {currentScreen.content.tenants?.map((t) => (
-                                <div key={t.name} className="flex items-center justify-between p-2 rounded-xl bg-slate-900/90 text-xs font-semibold text-slate-200">
-                                  <span>{t.name}</span>
-                                  <span className="font-mono text-[10.5px] text-blue-400">{t.load} • {t.status}</span>
-                                </div>
-                              ))}
-                            </div>
-                          )}
-
-                          {currentScreen.id === "velocity" && (
-                            <div className="space-y-2">
-                              {currentScreen.content.portals?.map((p) => (
-                                <div key={p.name} className="flex items-center justify-between p-2 rounded-xl bg-slate-900/90 text-xs font-semibold text-slate-200">
-                                  <span>{p.name}</span>
-                                  <span className="font-mono text-[10.5px] text-purple-400">{p.state}</span>
-                                </div>
-                              ))}
-                            </div>
-                          )}
-
-                          {currentScreen.id === "security" && (
-                            <div className="space-y-2">
-                              {currentScreen.content.checks?.map((c) => (
-                                <div key={c.label} className="flex items-center gap-2 p-2 rounded-xl bg-slate-900/90 text-xs font-semibold text-slate-200">
-                                  <span className="w-2 h-2 rounded-full bg-emerald-400" />
-                                  <span>{c.label}</span>
-                                </div>
-                              ))}
-                            </div>
-                          )}
-                        </div>
-
-                        {/* iOS Metric Highlight Banner */}
-                        <div className="p-3 rounded-2xl bg-gradient-to-r from-blue-600/20 to-indigo-600/20 border border-blue-500/30 flex items-center justify-between">
-                          <div>
-                            <div className="text-[10px] font-mono text-slate-400 uppercase tracking-wider">{currentScreen.content.statLabel}</div>
-                            <div className="text-lg font-black text-white">{currentScreen.content.statValue}</div>
-                          </div>
-                          <div className="px-3 py-1.5 rounded-xl bg-[#2563EB] text-white text-xs font-extrabold shadow-sm">
-                            Verified ✓
-                          </div>
-                        </div>
-                      </motion.div>
-                    </AnimatePresence>
-
-                    {/* iOS Bottom Home Indicator Bar */}
-                    <div className="pt-3 flex justify-center z-30">
-                      <div className="w-32 h-1 rounded-full bg-white/40" />
-                    </div>
+                  {/* Progress */}
+                  <div className="mt-3.5 h-0.5 rounded-full bg-white/60 overflow-hidden">
+                    <motion.div
+                      className="h-full rounded-full bg-[#2563EB]"
+                      initial={{ width: "0%" }}
+                      animate={{ width: "100%" }}
+                      transition={{ duration: 4, ease: "linear" }}
+                      key={current.id + "-mob-prog"}
+                    />
                   </div>
-
-                  {/* iOS App Dock Navigation Tabs */}
-                  <div className="px-3 py-2 bg-slate-950 border-t border-slate-800 grid grid-cols-4 gap-1 text-center">
-                    {appScreens.map((s, i) => (
-                      <button
-                        key={s.id}
-                        onClick={() => setActiveTab(i)}
-                        className={`py-1.5 rounded-xl flex flex-col items-center gap-0.5 text-[10px] font-bold transition-all ${
-                          activeTab === i
-                            ? "bg-blue-600/20 text-blue-400 border border-blue-500/30"
-                            : "text-slate-500 hover:text-slate-400"
-                        }`}
-                      >
-                        <span className="text-xs">{s.icon}</span>
-                        <span>{s.navLabel}</span>
-                      </button>
-                    ))}
-                  </div>
-
-                </div>
-              </div>
-            </div>
-
+                </motion.div>
+              </AnimatePresence>
+            </motion.div>
           </div>
 
-          {/* ── Signature Bottom Commitment Banner ── */}
-          <div className="mt-12 sm:mt-16 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#0F172A] via-[#1E293B] to-[#0F172A] text-white border border-slate-800 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
-            <div className="space-y-1.5">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/20 text-blue-400 text-xs font-extrabold uppercase tracking-wider">
-                AGARAN ENGINEERING GUARANTEE
-              </div>
-              <h3 className="text-xl sm:text-2xl font-extrabold text-white tracking-tight">
-                Software built for longevity, performance, and real business results.
-              </h3>
+          {/* ══════════════════════════════════════
+              DESKTOP LAYOUT
+          ══════════════════════════════════════ */}
+          <div
+            className="hidden lg:flex gap-14 items-start"
+            onMouseEnter={() => setIsPaused(true)}
+            onMouseLeave={() => setIsPaused(false)}
+          >
+            {/* LEFT: Accordion List */}
+            <div className="w-[52%]">
+              {pillars.map((pillar, idx) => {
+                const isActive = activeIdx === idx;
+                return (
+                  <motion.div
+                    key={pillar.id}
+                    initial={{ opacity: 0, y: 16 }}
+                    animate={isInView ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.45, delay: idx * 0.08, ease: "easeOut" }}
+                  >
+                    {idx === 0 && <div className="h-px bg-slate-100" />}
+                    <button
+                      onClick={() => setActiveIdx(idx)}
+                      className="group w-full text-left relative py-6 flex items-start gap-5 focus:outline-none"
+                    >
+                      {/* Left accent */}
+                      <motion.div
+                        className="absolute left-0 top-0 bottom-0 w-[3px] rounded-full"
+                        animate={{
+                          backgroundColor: isActive ? "#2563EB" : "transparent",
+                          scaleY: isActive ? 1 : 0.3,
+                          opacity: isActive ? 1 : 0,
+                        }}
+                        transition={{ duration: 0.3 }}
+                        style={{ originY: 0 }}
+                      />
+
+                      {/* Number */}
+                      <span
+                        className="shrink-0 text-[10.5px] sm:text-xs font-mono font-black tracking-wider mt-1 w-7 text-right transition-colors duration-300"
+                        style={{ color: isActive ? "#2563EB" : "#94a3b8" }}
+                      >
+                        {pillar.num}
+                      </span>
+
+                      {/* Content */}
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-start justify-between gap-3">
+                          <h3
+                            className="text-base sm:text-lg lg:text-xl font-extrabold lg:font-black tracking-[-0.035em] leading-snug transition-colors duration-300"
+                            style={{ color: isActive ? "#2563EB" : "#64748b" }}
+                          >
+                            {pillar.title}
+                          </h3>
+
+                          <div className="flex items-center gap-2 shrink-0 mt-0.5">
+                            <AnimatePresence>
+                              {isActive && (
+                                <motion.span
+                                  initial={{ opacity: 0, scale: 0.7, x: 8 }}
+                                  animate={{ opacity: 1, scale: 1, x: 0 }}
+                                  exit={{ opacity: 0, scale: 0.7, x: 8 }}
+                                  transition={{ duration: 0.22 }}
+                                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider border bg-[#EFF6FF] text-[#2563EB] border-[#BFDBFE]"
+                                >
+                                  {pillar.icon}
+                                  {pillar.tag}
+                                </motion.span>
+                              )}
+                            </AnimatePresence>
+
+                            <motion.span
+                              animate={{ rotate: isActive ? 90 : 0, color: isActive ? "#2563EB" : "#94a3b8" }}
+                              transition={{ duration: 0.25 }}
+                              className="text-lg font-[#94a3b8] leading-none select-none"
+                            >
+                              →
+                            </motion.span>
+                          </div>
+                        </div>
+
+                        <AnimatePresence initial={false}>
+                          {isActive && (
+                            <motion.div
+                              key="body"
+                              initial={{ opacity: 0, height: 0 }}
+                              animate={{ opacity: 1, height: "auto" }}
+                              exit={{ opacity: 0, height: 0 }}
+                              transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
+                              className="overflow-hidden"
+                            >
+                              <p className="text-sm sm:text-base lg:text-[1.05rem] font-medium leading-relaxed text-slate-600 tracking-normal mt-2.5 pr-2">
+                                {pillar.description}
+                              </p>
+
+                              <div className="mt-3 flex items-center gap-1.5">
+                                <span className="text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB]">
+                                  {pillar.subtitle}
+                                </span>
+                                <span className="text-[#2563EB] text-xs">→</span>
+                              </div>
+
+                              <div className="mt-4 h-0.5 rounded-full bg-slate-100 overflow-hidden">
+                                <motion.div
+                                  className="h-full rounded-full bg-[#2563EB]"
+                                  initial={{ width: "0%" }}
+                                  animate={{ width: "100%" }}
+                                  transition={{ duration: 4, ease: "linear" }}
+                                  key={pillar.id + "-bar"}
+                                />
+                              </div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    </button>
+                    <div className="h-px bg-slate-100" />
+                  </motion.div>
+                );
+              })}
             </div>
-            <a
-              href="/what-we-do"
-              className="flex-shrink-0 inline-flex items-center gap-2 px-7 py-4 rounded-2xl bg-[#2563EB] hover:bg-[#1D4ED8] text-white font-black text-sm transition-all shadow-md hover:shadow-lg hover:scale-[1.02]"
+
+            {/* RIGHT: Sticky Phone */}
+            <motion.div
+              className="w-[48%] flex justify-end items-start sticky top-24"
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.65, delay: 0.15, ease: "easeOut" }}
             >
-              <span>Explore Tech Stack</span>
-              <span>→</span>
-            </a>
+              <PhoneMockup current={current} />
+            </motion.div>
           </div>
 
         </div>

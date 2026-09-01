@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useRef, useState, useEffect, useCallback } from "react";
-import { motion, useInView } from "framer-motion";
+import React, { useRef, useState, useEffect } from "react";
+import { motion, useInView, AnimatePresence } from "framer-motion";
 import Container from "@/components/ui/Container";
 
 const products = [
@@ -221,7 +221,6 @@ const products = [
   },
 ];
 
-/* ── Ultra-Rich Interactive LMS Dashboard & Portal Simulation (Pure Light Theme) ── */
 /* ── Immersive Coaching Platform OS Visual (Rich Text & 3D Orbital Network • Blue Theme) ── */
 function LMS3DVisual() {
   const [activeModule, setActiveModule] = useState(0);
@@ -317,7 +316,6 @@ function LMS3DVisual() {
 
   const current = modules[activeModule];
 
-  // Calculate 5 node positions in a circle
   const R = 36;
   const positions = modules.map((_, i) => {
     const angle = -Math.PI / 2 + i * ((2 * Math.PI) / 5);
@@ -326,7 +324,6 @@ function LMS3DVisual() {
 
   return (
     <div className="relative w-full rounded-3xl bg-gradient-to-br from-blue-50/90 via-white to-sky-50/70 border border-blue-200/80 shadow-[0_12px_45px_rgba(37,99,235,0.10)] overflow-hidden">
-      {/* ── Soft Ambient Glow Blobs ── */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <motion.div
           className="absolute w-[400px] h-[400px] rounded-full opacity-[0.12]"
@@ -343,7 +340,6 @@ function LMS3DVisual() {
         <div className="absolute inset-0 bg-[radial-gradient(#93c5fd_0.8px,transparent_0.8px)] [background-size:22px_22px] opacity-[0.22]" />
       </div>
 
-      {/* ── Top Bar with Module Selector Pills ── */}
       <div className="relative z-10 px-4 sm:px-6 py-3 border-b border-blue-200/60 bg-white/60 backdrop-blur-md flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-2">
           <div className="w-2.5 h-2.5 rounded-full bg-blue-600 animate-pulse" />
@@ -352,7 +348,6 @@ function LMS3DVisual() {
           </span>
         </div>
 
-        {/* Desktop/Tablet Module Selector Pills */}
         <div className="hidden sm:flex items-center gap-1.5">
           {modules.map((mod, idx) => {
             const isActive = idx === activeModule;
@@ -375,13 +370,9 @@ function LMS3DVisual() {
         </div>
       </div>
 
-      {/* ── Main Content Grid (Orbital Network + Text Explanation Stream) ── */}
       <div className="relative z-10 p-5 sm:p-7 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-        
-        {/* Left Column: 3D Orbital Network (5 cols on lg) */}
         <div className="lg:col-span-5 flex flex-col items-center justify-center">
           <div className="relative w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] lg:w-[340px] lg:h-[340px]">
-            {/* SVG Connection Beams */}
             <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
               <defs>
                 <filter id="aglow-blue">
@@ -393,11 +384,9 @@ function LMS3DVisual() {
                 </filter>
               </defs>
 
-              {/* Orbital rings */}
               <circle cx="50" cy="50" r={R} fill="none" stroke="#BFDBFE" strokeWidth="0.6" strokeDasharray="3 3" />
               <circle cx="50" cy="50" r={R * 0.65} fill="none" stroke="#93C5FD" strokeWidth="0.4" opacity="0.5" />
 
-              {/* Connection beams from each node to center */}
               {positions.map((pos, i) => {
                 const isActive = i === activeModule;
                 return (
@@ -423,7 +412,6 @@ function LMS3DVisual() {
               })}
             </svg>
 
-            {/* Central Core */}
             <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
               <motion.div
                 animate={{ scale: [1, 1.06, 1] }}
@@ -432,7 +420,6 @@ function LMS3DVisual() {
               >
                 <div className="absolute -inset-4 rounded-full bg-blue-400/20 blur-xl pointer-events-none" />
                 
-                {/* Outer Orbit Rings */}
                 <motion.div
                   className="absolute -inset-7 rounded-full border border-blue-300/40"
                   animate={{ rotate: 360 }}
@@ -448,7 +435,6 @@ function LMS3DVisual() {
               </motion.div>
             </div>
 
-            {/* Orbiting Module Nodes */}
             {modules.map((mod, i) => {
               const pos = positions[i];
               const isActive = i === activeModule;
@@ -490,7 +476,6 @@ function LMS3DVisual() {
           </div>
         </div>
 
-        {/* Right Column: Sleek Unboxed Problem ➔ Solution ➔ Step Flow (7 cols on lg) */}
         <div className="lg:col-span-7 flex flex-col justify-center">
           <motion.div
             key={current.id}
@@ -500,7 +485,6 @@ function LMS3DVisual() {
             transition={{ duration: 0.35, ease: "easeOut" }}
             className="space-y-4"
           >
-            {/* Header Badge & Module Name */}
             <div className="flex flex-wrap items-center justify-between gap-2 border-b border-blue-100 pb-3">
               <div className="flex items-center gap-2">
                 <span className="text-2xl">{current.icon}</span>
@@ -514,14 +498,12 @@ function LMS3DVisual() {
                 </div>
               </div>
 
-              {/* Key Impact Pill */}
               <div className="px-3 py-1 rounded-full bg-blue-100/90 text-blue-800 text-xs font-black border border-blue-300 shadow-2xs flex items-center gap-1.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-pulse" />
                 <span>{current.impact}</span>
               </div>
             </div>
 
-            {/* Problem Statement Pill */}
             <div className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-amber-50/80 border border-amber-200/90 text-amber-900 text-xs font-bold shadow-2xs">
               <span className="px-2 py-0.5 rounded-md bg-amber-500 text-white font-black text-[9.5px] uppercase tracking-wider">
                 PROBLEM SOLVED
@@ -529,7 +511,6 @@ function LMS3DVisual() {
               <span className="font-extrabold">{current.problem}</span>
             </div>
 
-            {/* 3-Step Interactive Visual Execution Flow */}
             <div className="pt-1 space-y-2.5">
               <div className="text-[10.5px] font-black text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
                 <span>Automated Operating Stream</span>
@@ -564,7 +545,6 @@ function LMS3DVisual() {
               </div>
             </div>
 
-            {/* Bottom Outcome Stat Strip */}
             <div className="pt-2 flex items-center justify-between text-xs border-t border-blue-100">
               <div className="flex items-center gap-2 text-slate-500 font-bold text-[11px]">
                 <span className="w-2 h-2 rounded-full bg-blue-600 animate-ping" />
@@ -578,7 +558,6 @@ function LMS3DVisual() {
         </div>
       </div>
 
-      {/* ── Mobile Module Selector Dots ── */}
       <div className="flex sm:hidden items-center justify-center gap-2 pb-4 pt-1 border-t border-blue-100">
         {modules.map((mod, idx) => {
           const isActive = idx === activeModule;
@@ -603,9 +582,10 @@ function LMS3DVisual() {
   );
 }
 
-/* ── Mobile-First AI Agent Orbital Network (Rich Text & Visual Flow • Zero Cards) ── */
+/* ── Interactive Smartphone App UI/UX Showcase for Enterprise AI Agents ── */
 function Automation3DVisual() {
   const [activeAgent, setActiveAgent] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
   const agents = [
     {
@@ -613,6 +593,8 @@ function Automation3DVisual() {
       label: "Marketing",
       badge: "MARKETING AI AGENT",
       icon: "📢",
+      title: "Marketing Intelligence AI",
+      subtitle: "24/7 Autonomous Brand Growth",
       problem: "Manual Content & Slow Lead Generation",
       solution: "24/7 Autonomous Brand Growth Engine",
       steps: [
@@ -629,6 +611,8 @@ function Automation3DVisual() {
       label: "Sales",
       badge: "SALES AI AGENT",
       icon: "💼",
+      title: "Lead & Sales Closure AI",
+      subtitle: "2.1s Instant Lead Qualification",
       problem: "Delayed Follow-ups & Lost Prospects",
       solution: "2.1s Instant Lead Qualification & Closing",
       steps: [
@@ -641,42 +625,30 @@ function Automation3DVisual() {
       color: "#0D9488",
     },
     {
-      id: "support",
-      label: "Support",
-      badge: "CUSTOMER SUPPORT AI",
+      id: "whatsapp",
+      label: "WhatsApp AI",
+      badge: "WHATSAPP AI CHATBOT",
       icon: "💬",
-      problem: "High Ticket Backlog & Slow Responses",
-      solution: "Sub-Second Instant Query Resolution",
+      title: "WhatsApp AI Chatbot Agent",
+      subtitle: "24/7 Live WhatsApp Messaging & Lead Conversion",
+      problem: "Slow WhatsApp Replies & Lost Customer Leads",
+      solution: "Instant 24/7 WhatsApp AI Chatbot & Lead Automation",
       steps: [
-        { icon: "💬", label: "Incoming Query", desc: "Customer asks technical or billing question" },
-        { icon: "🧠", label: "0.8s AI Match", desc: "Resolves instantly with context precision" },
-        { icon: "⭐", label: "100% CSAT", desc: "5.0 Rating with Zero Queue Backlog" },
+        { icon: "💬", label: "Message Ingest", desc: "Instantly captures incoming WhatsApp inquiry" },
+        { icon: "⚡", label: "Instant Reply", desc: "Dispatches syllabus, fees & demo links in 0.5s" },
+        { icon: "📅", label: "Auto Booking", desc: "Schedules demo class & syncs CRM automatically" },
       ],
-      metric: "0.8s Response Time",
-      impact: "100% CSAT Score",
-      color: "#10B981",
-    },
-    {
-      id: "ops",
-      label: "Operations",
-      badge: "OPERATIONS AI AGENT",
-      icon: "⚙️",
-      problem: "Manual Copy-Pasting Across 10+ Apps",
-      solution: "Self-Healing Multi-App Workflow Engine",
-      steps: [
-        { icon: "🔗", label: "App Integration", desc: "Syncs Stripe, Slack, CRM & Notion" },
-        { icon: "⚙️", label: "Auto-Workflow", desc: "Executes repetitive data tasks 24/7" },
-        { icon: "✅", label: "Zero Errors", desc: "40 Hours/Week saved across team" },
-      ],
-      metric: "85% Automated",
-      impact: "40 Hours/Wk Saved",
-      color: "#047857",
+      metric: "0.5s Response Time",
+      impact: "100% Instant WhatsApp Resolution",
+      color: "#059669",
     },
     {
       id: "founder",
       label: "Founder AI",
       badge: "FOUNDER ADVISORY AI",
       icon: "📊",
+      title: "Executive Intelligence AI",
+      subtitle: "Real-Time Metrics & Priority Actions",
       problem: "Strategic Blindspots & Scattered Metrics",
       solution: "Real-Time Executive Intelligence & Priority Actions",
       steps: [
@@ -690,273 +662,538 @@ function Automation3DVisual() {
     },
   ];
 
-  // Auto-cycle agents every 5s
+  // Auto-cycle agents every 4s
   useEffect(() => {
-    const timer = setInterval(() => setActiveAgent((p) => (p + 1) % 5), 5000);
+    if (isPaused) return;
+    const timer = setInterval(() => setActiveAgent((p) => (p + 1) % agents.length), 4000);
     return () => clearInterval(timer);
-  }, []);
+  }, [isPaused, agents.length]);
 
   const current = agents[activeAgent];
 
-  // Calculate 5 node positions in a circle (percentage of SVG/container viewBox)
-  const R = 36;
-  const positions = agents.map((_, i) => {
-    const angle = -Math.PI / 2 + i * ((2 * Math.PI) / 5);
-    return { x: 50 + R * Math.cos(angle), y: 50 + R * Math.sin(angle) };
-  });
-
   return (
-    <div className="relative w-full rounded-3xl bg-gradient-to-br from-emerald-50/90 via-white to-teal-50/70 border border-emerald-200/80 shadow-[0_12px_45px_rgba(16,185,129,0.10)] overflow-hidden">
-      {/* ── Soft Ambient Glow Blobs ── */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <motion.div
-          className="absolute w-[400px] h-[400px] rounded-full opacity-[0.12]"
-          style={{ background: "radial-gradient(circle, #10B981, transparent 70%)", top: "-10%", left: "10%" }}
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <motion.div
-          className="absolute w-[350px] h-[350px] rounded-full opacity-[0.09]"
-          style={{ background: "radial-gradient(circle, #059669, transparent 70%)", bottom: "-10%", right: "10%" }}
-          animate={{ scale: [1.2, 1, 1.2] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-        />
-        <div className="absolute inset-0 bg-[radial-gradient(#a7f3d0_0.8px,transparent_0.8px)] [background-size:22px_22px] opacity-[0.22]" />
-      </div>
+    <div
+      className="relative w-full rounded-3xl bg-gradient-to-b from-white via-slate-50/70 to-white border border-emerald-200/80 p-5 sm:p-7 lg:p-9 shadow-[0_15px_50px_rgba(16,185,129,0.08)] overflow-hidden"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
+      {/* Background Glows */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-emerald-100/40 rounded-full blur-[120px] pointer-events-none" />
 
-      {/* ── Top Bar with Agent Selector Pills ── */}
-      <div className="relative z-10 px-4 sm:px-6 py-3 border-b border-emerald-200/60 bg-white/60 backdrop-blur-md flex flex-wrap items-center justify-between gap-3">
-        <div className="flex items-center gap-2">
-          <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
-          <span className="text-xs font-black text-[#0F172A] uppercase tracking-wider">
-            Agaran Autonomous AI Workforce
-          </span>
-        </div>
-
-        {/* Desktop/Tablet Agent Selector Pills */}
-        <div className="hidden sm:flex items-center gap-1.5">
-          {agents.map((agent, idx) => {
-            const isActive = idx === activeAgent;
-            return (
-              <button
-                key={agent.id}
-                type="button"
-                onClick={() => setActiveAgent(idx)}
-                className={`cursor-pointer px-3 py-1 rounded-full text-[11px] font-black transition-all duration-300 border flex items-center gap-1.5 ${
-                  isActive
-                    ? "bg-emerald-600 text-white border-emerald-500 shadow-md scale-105"
-                    : "bg-white/80 text-slate-600 border-emerald-200/80 hover:bg-emerald-50 hover:text-emerald-800"
-                }`}
-              >
-                <span>{agent.icon}</span>
-                <span>{agent.label}</span>
-              </button>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* ── Main Content Grid (Orbital Network + Text Explanation Stream) ── */}
-      <div className="relative z-10 p-5 sm:p-7 lg:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+      {/* Main Grid: Left Controls + Right Smartphone Frame */}
+      <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         
-        {/* Left Column: 3D Orbital Network (5 cols on lg) */}
-        <div className="lg:col-span-5 flex flex-col items-center justify-center">
-          <div className="relative w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] lg:w-[340px] lg:h-[340px]">
-            {/* SVG Connection Beams */}
-            <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-              <defs>
-                <filter id="aglow-rich">
-                  <feGaussianBlur stdDeviation="1.2" result="blur" />
-                  <feMerge>
-                    <feMergeNode in="blur" />
-                    <feMergeNode in="SourceGraphic" />
-                  </feMerge>
-                </filter>
-              </defs>
+        {/* Left Column: Interactive Agent Tabs & Info */}
+        <div className="lg:col-span-5 flex flex-col gap-3">
+          <div className="text-center lg:text-left mb-1">
+            <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#059669]">
+              AUTONOMOUS DIGITAL WORKFORCE
+            </span>
+            <h3 className="text-xl sm:text-2xl font-black text-[#0F172A] tracking-tight mt-1">
+              Select an AI Agent to Preview
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-500 font-medium mt-1">
+              Tap any AI agent below to see its live smartphone interface & execution stream.
+            </p>
+          </div>
 
-              {/* Orbital rings */}
-              <circle cx="50" cy="50" r={R} fill="none" stroke="#A7F3D0" strokeWidth="0.6" strokeDasharray="3 3" />
-              <circle cx="50" cy="50" r={R * 0.65} fill="none" stroke="#6EE7B7" strokeWidth="0.4" opacity="0.5" />
-
-              {/* Connection beams from each node to center */}
-              {positions.map((pos, i) => {
-                const isActive = i === activeAgent;
-                return (
-                  <g key={agents[i].id}>
-                    <motion.line
-                      x1="50" y1="50" x2={pos.x} y2={pos.y}
-                      stroke={isActive ? "#059669" : "#C7D2FE"}
-                      strokeWidth={isActive ? 1.6 : 0.6}
-                      strokeDasharray={isActive ? "4 2" : "2 4"}
-                      filter={isActive ? "url(#aglow-rich)" : undefined}
-                      animate={{ strokeDashoffset: isActive ? [12, 0] : [6, 0] }}
-                      transition={{ strokeDashoffset: { duration: 1.2, repeat: Infinity, ease: "linear" } }}
-                    />
-                    {isActive && (
-                      <motion.circle
-                        r="2.5" fill="#10B981"
-                        animate={{ cx: [50, pos.x], cy: [50, pos.y], opacity: [0.3, 1, 0.3] }}
-                        transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-                      />
-                    )}
-                  </g>
-                );
-              })}
-            </svg>
-
-            {/* Central AI Core */}
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-              <motion.div
-                animate={{ scale: [1, 1.06, 1] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="relative"
-              >
-                <div className="absolute -inset-4 rounded-full bg-emerald-400/20 blur-xl pointer-events-none" />
-                
-                {/* Outer Orbit Rings */}
-                <motion.div
-                  className="absolute -inset-7 rounded-full border border-emerald-300/40"
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
-                >
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-emerald-500" />
-                </motion.div>
-
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-gradient-to-br from-emerald-500 via-emerald-600 to-teal-700 flex flex-col items-center justify-center shadow-xl shadow-emerald-400/30 border-2 border-white">
-                  <span className="text-white font-black text-sm sm:text-base tracking-tight">AI</span>
-                  <span className="text-[7.5px] text-emerald-100 font-extrabold uppercase tracking-widest">CORE</span>
-                </div>
-              </motion.div>
-            </div>
-
-            {/* Orbiting Agent Nodes */}
-            {agents.map((agent, i) => {
-              const pos = positions[i];
-              const isActive = i === activeAgent;
+          {/* Selector Pills */}
+          <div className="flex flex-col gap-2">
+            {agents.map((agent, idx) => {
+              const isActive = idx === activeAgent;
               return (
-                <motion.button
+                <button
                   key={agent.id}
                   type="button"
-                  onClick={() => setActiveAgent(i)}
-                  className="absolute z-30 -translate-x-1/2 -translate-y-1/2 cursor-pointer outline-none group"
-                  style={{ left: `${pos.x}%`, top: `${pos.y}%` }}
-                  animate={{ scale: isActive ? 1.15 : 0.95 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                  onClick={() => setActiveAgent(idx)}
+                  className={`flex items-center gap-3 p-3 rounded-2xl border text-left transition-all ${
+                    isActive
+                      ? "bg-white border-emerald-500 shadow-[0_8px_25px_rgba(16,185,129,0.15)] scale-[1.02]"
+                      : "bg-slate-50/80 border-slate-200/80 hover:bg-white hover:border-slate-300"
+                  }`}
                 >
-                  {isActive && (
-                    <motion.div
-                      className="absolute -inset-2.5 rounded-full border-2 border-emerald-500/70"
-                      animate={{ scale: [1, 1.25, 1], opacity: [0.6, 0.2, 0.6] }}
-                      transition={{ duration: 2, repeat: Infinity }}
-                    />
-                  )}
                   <div
-                    className={`w-11 h-11 sm:w-13 sm:h-13 rounded-full flex items-center justify-center border-2 transition-all duration-300 ${
+                    className={`w-9 h-9 rounded-xl flex items-center justify-center text-lg flex-shrink-0 border ${
                       isActive
-                        ? "bg-white border-emerald-500 shadow-lg shadow-emerald-300/40 text-xl sm:text-2xl ring-4 ring-emerald-100"
-                        : "bg-white/80 border-emerald-200 text-lg opacity-70 group-hover:opacity-100 group-hover:border-emerald-300"
+                        ? "bg-emerald-50 text-emerald-700 border-emerald-300"
+                        : "bg-slate-100 text-slate-600 border-slate-200"
                     }`}
                   >
-                    <span>{agent.icon}</span>
+                    {agent.icon}
                   </div>
-
-                  <div className={`absolute -bottom-5 left-1/2 -translate-x-1/2 whitespace-nowrap text-[9px] font-black px-2 py-0.5 rounded-full border transition-all ${
-                    isActive ? "bg-emerald-600 text-white border-emerald-500 shadow-xs" : "bg-white/90 text-slate-600 border-slate-200"
-                  }`}>
-                    {agent.label}
+                  <div className="min-w-0 flex-1">
+                    <h4 className={`text-xs sm:text-sm font-black truncate ${isActive ? "text-[#0F172A]" : "text-slate-700"}`}>
+                      {agent.title}
+                    </h4>
+                    <p className="text-[10.5px] font-medium text-slate-500 truncate mt-0.5">
+                      {agent.subtitle}
+                    </p>
                   </div>
-                </motion.button>
+                  {isActive && (
+                    <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping hidden sm:block" />
+                  )}
+                </button>
               );
             })}
           </div>
         </div>
 
-        {/* Right Column: Sleek Unboxed Problem ➔ Solution ➔ Step Flow (7 cols on lg) */}
-        <div className="lg:col-span-7 flex flex-col justify-center">
-          <motion.div
-            key={current.id}
-            initial={{ opacity: 0, x: 15 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -15 }}
-            transition={{ duration: 0.35, ease: "easeOut" }}
-            className="space-y-4"
-          >
-            {/* Header Badge & Agent Name */}
-            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-emerald-100 pb-3">
-              <div className="flex items-center gap-2">
-                <span className="text-2xl">{current.icon}</span>
-                <div>
-                  <div className="text-[10px] font-black text-emerald-600 uppercase tracking-widest">
-                    {current.badge}
+        {/* Right Column: Smartphone UI Frame (Live Agent Mobile App Interface) */}
+        <div className="lg:col-span-7 flex justify-center items-center">
+          <div className="relative w-full max-w-[340px] xs:max-w-[360px] sm:max-w-[370px] rounded-[52px] bg-gradient-to-b from-[#2E3136] via-[#1A1C1F] to-[#101113] p-3.5 shadow-[0_30px_70px_rgba(15,23,42,0.35)] border border-[#42454B]/70">
+            
+            {/* iPhone Side Buttons */}
+            <div className="absolute -left-[4px] top-24 w-[4px] h-7 bg-slate-700 rounded-l-md" />
+            <div className="absolute -left-[4px] top-36 w-[4px] h-12 bg-slate-700 rounded-l-md" />
+            <div className="absolute -left-[4px] top-52 w-[4px] h-12 bg-slate-700 rounded-l-md" />
+            <div className="absolute -right-[4px] top-32 w-[4px] h-16 bg-slate-700 rounded-r-md" />
+
+            {/* Smartphone Inner Screen — Fixed 550px Height for extra vertical breathing room */}
+            <div className="relative rounded-[42px] bg-slate-950 overflow-hidden border border-slate-800/90 h-[550px] flex flex-col justify-between select-none shadow-inner">
+              
+              {/* Dynamic Island Header Bar */}
+              <div className="pt-3 px-6 pb-2 bg-black flex items-center justify-between z-30 shrink-0">
+                <span className="text-[11px] font-semibold text-white">9:41</span>
+                
+                <div className="w-24 h-5 rounded-full bg-slate-950 border border-slate-800 flex items-center justify-between px-2.5 shadow-inner">
+                  <div className="flex items-center gap-1">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                    <span className="w-1 h-1 rounded-full bg-teal-400" />
                   </div>
-                  <h3 className="text-xl sm:text-2xl font-black text-[#0F172A] tracking-tight">
-                    {current.solution}
-                  </h3>
+                  <div className="flex items-center gap-0.5">
+                    <span className="w-0.5 h-2 bg-emerald-400 rounded-full animate-pulse" />
+                    <span className="w-0.5 h-3 bg-emerald-400 rounded-full animate-pulse delay-75" />
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-1 text-[10px] font-bold text-white">
+                  <span>5G</span>
+                  <div className="w-5 h-2.5 rounded-xs border border-white/80 p-0.5 flex items-center">
+                    <div className="w-full h-full bg-emerald-400 rounded-2xs" />
+                  </div>
                 </div>
               </div>
 
-              {/* Key Impact Pill */}
-              <div className="px-3 py-1 rounded-full bg-emerald-100/90 text-emerald-800 text-xs font-black border border-emerald-300 shadow-2xs flex items-center gap-1.5">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                <span>{current.impact}</span>
-              </div>
-            </div>
-
-            {/* Problem Statement Pill (Unboxed Glowing Stripe) */}
-            <div className="flex items-center gap-2.5 px-3.5 py-2 rounded-xl bg-amber-50/80 border border-amber-200/90 text-amber-900 text-xs font-bold shadow-2xs">
-              <span className="px-2 py-0.5 rounded-md bg-amber-500 text-white font-black text-[9.5px] uppercase tracking-wider">
-                PROBLEM SOLVED
-              </span>
-              <span className="font-extrabold">{current.problem}</span>
-            </div>
-
-            {/* 3-Step Interactive Visual Execution Flow (UNBOXED - NO CARD CONTAINERS) */}
-            <div className="pt-1 space-y-2.5">
-              <div className="text-[10.5px] font-black text-slate-400 uppercase tracking-wider flex items-center gap-1.5">
-                <span>Autonomous Execution Stream</span>
-                <div className="h-[1px] flex-1 bg-slate-200/80" />
+              {/* Mobile App Header */}
+              <div className="px-4 py-2.5 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 flex items-center justify-between shrink-0">
+                <div className="flex items-center gap-2">
+                  <span className="text-xl">{current.icon}</span>
+                  <div>
+                    <div className="text-[11px] font-black text-white leading-tight">{current.badge}</div>
+                    <div className="text-[9px] font-mono text-emerald-400">RUNNING • 24/7</div>
+                  </div>
+                </div>
+                <div className="px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-[9px] font-mono font-bold text-emerald-400">
+                  {current.impact}
+                </div>
               </div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
-                {current.steps.map((step, stepIdx) => (
+              {/* Mobile App Animated Body — Fixed height flex container */}
+              <div className="p-3.5 flex-1 flex flex-col justify-between bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 overflow-hidden">
+                <AnimatePresence mode="wait">
                   <motion.div
-                    key={step.label}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: stepIdx * 0.08, duration: 0.3 }}
-                    className="relative flex flex-col p-3 rounded-2xl bg-gradient-to-b from-white/90 to-emerald-50/40 border border-emerald-200/70 shadow-xs hover:border-emerald-300 transition-all"
+                    key={current.id}
+                    initial={{ opacity: 0, scale: 0.95, y: 10 }}
+                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                    exit={{ opacity: 0, scale: 1.05, y: -10 }}
+                    transition={{ duration: 0.28, ease: "easeOut" }}
+                    className="flex-1 flex flex-col justify-between space-y-2.5"
                   >
-                    <div className="flex items-center justify-between mb-1.5">
-                      <span className="w-7 h-7 rounded-xl bg-emerald-100/80 text-emerald-700 flex items-center justify-center text-sm font-black border border-emerald-200">
-                        {step.icon}
-                      </span>
-                      <span className="text-[9px] font-black text-emerald-600 bg-emerald-100/60 px-1.5 py-0.5 rounded-md">
-                        STEP 0{stepIdx + 1}
-                      </span>
-                    </div>
-                    <div className="text-xs font-black text-[#0F172A] leading-snug">
-                      {step.label}
-                    </div>
-                    <div className="text-[11px] text-slate-600 font-medium leading-relaxed mt-1">
-                      {step.desc}
-                    </div>
+                    {/* Visual Screen 1: MARKETING AI */}
+                    {current.id === "marketing" && (
+                      <div className="space-y-2.5">
+                        {/* Auto Post Generator Card with Animated Glow & Reach Bar */}
+                        <div className="p-3 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-2.5 shadow-md relative overflow-hidden">
+                          <div className="flex items-center justify-between text-[10px] font-bold text-slate-400">
+                            <span className="flex items-center gap-1.5">
+                              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                              <span className="text-white font-mono">AUTONOMOUS CAMPAIGN</span>
+                            </span>
+                            <span className="text-emerald-400 font-mono text-[9px] bg-emerald-500/20 px-2 py-0.5 rounded-full border border-emerald-500/30">
+                              AUTOPILOT
+                            </span>
+                          </div>
+                          
+                          <div className="p-2.5 rounded-xl bg-slate-950 border border-slate-800 flex items-center gap-3">
+                            <motion.div
+                              animate={{ scale: [1, 1.1, 1] }}
+                              transition={{ duration: 2, repeat: Infinity }}
+                              className="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-teal-500 flex items-center justify-center text-white text-lg shadow-md"
+                            >
+                              📢
+                            </motion.div>
+                            <div className="min-w-0 flex-1">
+                              <div className="text-xs font-black text-white truncate">Launch New Product Campaign</div>
+                              <div className="text-[10px] text-slate-400 truncate">#AI #Automation #Growth</div>
+                            </div>
+                          </div>
+
+                          {/* Animated Reach Growth Bar */}
+                          <div className="space-y-1">
+                            <div className="flex items-center justify-between text-[9.5px] font-bold text-slate-300">
+                              <span>Audience Reach Expansion</span>
+                              <span className="text-emerald-400 font-mono">+38% Traffic</span>
+                            </div>
+                            <div className="w-full h-2 rounded-full bg-slate-950 overflow-hidden p-0.5 border border-slate-800">
+                              <motion.div
+                                initial={{ width: "0%" }}
+                                animate={{ width: "85%" }}
+                                transition={{ duration: 1.2, ease: "easeOut" }}
+                                className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-teal-400 shadow-sm"
+                              />
+                            </div>
+                          </div>
+
+                          <div className="flex items-center justify-between pt-1">
+                            <span className="text-[9.5px] font-mono text-slate-400">Status: Scheduled 24/7</span>
+                            <motion.button
+                              whileHover={{ scale: 1.05 }}
+                              whileTap={{ scale: 0.95 }}
+                              type="button"
+                              className="px-3 py-1 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-[10px] font-black shadow-md flex items-center gap-1 cursor-pointer"
+                            >
+                              <span>Auto-Publish</span>
+                              <span className="animate-pulse">⚡</span>
+                            </motion.button>
+                          </div>
+                        </div>
+
+                        {/* Visual Growth Metric Chart Pill */}
+                        <motion.div
+                          initial={{ opacity: 0, y: 8 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.15 }}
+                          className="p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-between"
+                        >
+                          <div className="flex items-center gap-2">
+                            <span className="text-lg">📈</span>
+                            <div>
+                              <div className="text-[11px] font-black text-white">48 Qualified Leads</div>
+                              <div className="text-[9px] font-mono text-emerald-400">85% Less Manual Work</div>
+                            </div>
+                          </div>
+                          <span className="text-xs font-extrabold text-emerald-400 bg-emerald-500/20 px-2.5 py-0.5 rounded-md border border-emerald-500/40 animate-pulse">
+                            LIVE ✓
+                          </span>
+                        </motion.div>
+                      </div>
+                    )}
+
+                    {/* Visual Screen 2: SALES AI — Professional Animated Sales Pipeline */}
+                    {current.id === "sales" && (
+                      <div className="space-y-2.5">
+                        {/* Live Lead Inbound Alert */}
+                        <div className="p-3 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-2.5 shadow-md relative overflow-hidden">
+                          <div className="flex items-center justify-between text-[10px] font-bold text-slate-400">
+                            <span className="flex items-center gap-1.5">
+                              <span className="w-2 h-2 rounded-full bg-teal-400 animate-ping" />
+                              <span className="text-white font-mono uppercase">INBOUND LEAD INBOX</span>
+                            </span>
+                            <span className="text-teal-400 font-mono text-[9px] bg-teal-500/20 px-2 py-0.5 rounded-full border border-teal-500/30">
+                              2.1s QUALIFIED
+                            </span>
+                          </div>
+
+                          {/* High-Intent Prospect Card */}
+                          <motion.div
+                            initial={{ opacity: 0, y: 6 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="p-2.5 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-between"
+                          >
+                            <div className="flex items-center gap-2.5">
+                              <motion.div
+                                animate={{ scale: [1, 1.1, 1] }}
+                                transition={{ duration: 2, repeat: Infinity }}
+                                className="w-9 h-9 rounded-xl bg-teal-500/20 border border-teal-500/40 flex items-center justify-center shadow-sm"
+                              >
+                                <svg className="w-4.5 h-4.5 text-teal-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2.2">
+                                  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                                </svg>
+                              </motion.div>
+                              <div>
+                                <div className="text-xs font-black text-white">High-Intent Enterprise Lead</div>
+                                <div className="text-[9.5px] text-slate-400">Enterprise AI Plan • WhatsApp Inquiry</div>
+                              </div>
+                            </div>
+                            <span className="text-[10px] font-mono font-black text-teal-400 bg-teal-500/20 px-2 py-1 rounded-lg border border-teal-500/30">
+                              98/100
+                            </span>
+                          </motion.div>
+
+                          {/* Auto Proposal Generation Progress */}
+                          <div className="space-y-1">
+                            <div className="flex items-center justify-between text-[9.5px] font-bold text-slate-300">
+                              <span className="flex items-center gap-1">
+                                <span>📄 Proposal PDF Auto-Generated</span>
+                              </span>
+                              <span className="text-teal-400 font-mono">2.1s</span>
+                            </div>
+                            <div className="w-full h-1.5 rounded-full bg-slate-950 overflow-hidden border border-slate-800">
+                              <motion.div
+                                initial={{ width: "0%" }}
+                                animate={{ width: "100%" }}
+                                transition={{ duration: 1, ease: "easeOut" }}
+                                className="h-full rounded-full bg-gradient-to-r from-teal-500 to-emerald-400"
+                              />
+                            </div>
+                          </div>
+
+                          {/* Action Button */}
+                          <motion.button
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            type="button"
+                            className="w-full py-2 rounded-xl bg-gradient-to-r from-teal-600 to-emerald-600 hover:from-teal-500 hover:to-emerald-500 text-white text-xs font-black shadow-md flex items-center justify-center gap-1.5 cursor-pointer border border-teal-400/30"
+                          >
+                            <span>Send Quotation via WhatsApp</span>
+                            <span>📲</span>
+                          </motion.button>
+                        </div>
+
+                        {/* Revenue Result Card */}
+                        <motion.div
+                          initial={{ opacity: 0, y: 8 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.15 }}
+                          className="p-2.5 rounded-xl bg-teal-500/10 border border-teal-500/30 flex items-center justify-between shadow-xs"
+                        >
+                          <div className="flex items-center gap-2">
+                            <span className="text-lg">🎉</span>
+                            <div>
+                              <div className="text-[11px] font-black text-white">₹3.8L Revenue Secured</div>
+                              <div className="text-[9px] font-mono text-teal-400">Speed-to-lead: 2.1s (Instant Close)</div>
+                            </div>
+                          </div>
+                          <span className="text-[10px] font-extrabold text-teal-400 bg-teal-500/20 px-2.5 py-1 rounded-md border border-teal-500/40">
+                            CLOSED ✓
+                          </span>
+                        </motion.div>
+                      </div>
+                    )}
+
+                    {/* Visual Screen 3: EXACT WHATSAPP CLONE CHAT UI/UX */}
+                    {current.id === "whatsapp" && (
+                      <div className="space-y-2.5">
+                        <div className="rounded-2xl bg-[#0b141a] border border-slate-800 shadow-md overflow-hidden flex flex-col">
+                          {/* 2. WhatsApp Chat Message Body with Pattern */}
+                          <div className="p-2.5 space-y-2 bg-[radial-gradient(#1f2c34_1px,transparent_1px)] [background-size:16px_16px] bg-[#0b141a]">
+                            {/* Date Pill */}
+                            <div className="flex justify-center">
+                              <span className="px-2 py-0.5 rounded-md bg-[#1f2c34] text-[8.5px] font-bold text-slate-400 uppercase tracking-wider">
+                                TODAY
+                              </span>
+                            </div>
+
+                            {/* Incoming User Message (Right Green Bubble #005c4b) */}
+                            <motion.div
+                              initial={{ opacity: 0, x: 12 }}
+                              animate={{ opacity: 1, x: 0 }}
+                              className="p-2 rounded-xl rounded-tr-xs bg-[#005c4b] text-white text-[11px] font-medium max-w-[85%] ml-auto shadow-xs"
+                            >
+                              <div>Need product details, pricing & live demo</div>
+                              <div className="text-[8px] text-emerald-200 text-right mt-0.5 font-mono flex items-center justify-end gap-1">
+                                <span>9:41 AM</span>
+                                <span className="text-sky-300 font-bold">✓✓</span>
+                              </div>
+                            </motion.div>
+
+                            {/* Outgoing AI Chatbot Message (Left Dark Bubble #202c33) */}
+                            <motion.div
+                              initial={{ opacity: 0, x: -12 }}
+                              animate={{ opacity: 1, x: 0 }}
+                              transition={{ delay: 0.2 }}
+                              className="p-2 rounded-xl rounded-tl-xs bg-[#202c33] text-slate-100 text-[11px] font-medium max-w-[90%] shadow-xs space-y-1.5 border border-slate-700/50"
+                            >
+                              <div className="text-[9px] font-bold text-[#00a884]">~ Agaran AI Bot</div>
+                              <div>Hello! 👋 Here is your instant product catalog & pricing package:</div>
+
+                              {/* Embedded WhatsApp Attachment Document */}
+                              <div className="p-1.5 rounded-lg bg-[#111b21] border border-slate-700/60 flex items-center justify-between">
+                                <div className="flex items-center gap-2 min-w-0">
+                                  <span className="text-sm">📄</span>
+                                  <div className="min-w-0">
+                                    <div className="text-[9.5px] font-bold text-white truncate">Product_Catalog_&_Pricing.pdf</div>
+                                    <div className="text-[8px] text-slate-400 font-mono">1.2 MB • PDF</div>
+                                  </div>
+                                </div>
+                                <span className="text-[8.5px] font-bold text-[#00a884] bg-[#00a884]/20 px-1.5 py-0.5 rounded-md">View</span>
+                              </div>
+
+                              {/* Quick Reply WhatsApp Action Buttons */}
+                              <div className="grid grid-cols-2 gap-1 pt-0.5">
+                                <div className="py-1 px-1.5 rounded-lg bg-[#111b21] border border-[#00a884]/40 text-[#00a884] text-[9px] font-bold text-center truncate">
+                                  💳 Pricing & Plans
+                                </div>
+                                <div className="py-1 px-1.5 rounded-lg bg-[#00a884] text-white text-[9px] font-bold text-center truncate shadow-xs">
+                                  📲 Book Demo
+                                </div>
+                              </div>
+
+                              <div className="text-[8px] text-slate-400 text-right font-mono">9:41 AM</div>
+                            </motion.div>
+                          </div>
+
+                          {/* 3. WhatsApp Bottom Input Bar */}
+                          <div className="px-2 py-1.5 bg-[#1f2c34] border-t border-slate-800 flex items-center gap-1.5">
+                            <div className="flex-1 bg-[#2a3942] rounded-full px-2.5 py-1 flex items-center justify-between text-slate-400 text-xs">
+                              <div className="flex items-center gap-1.5">
+                                <span>😀</span>
+                                <span className="text-slate-400 text-[9.5px]">Type a message...</span>
+                              </div>
+                              <div className="flex items-center gap-1.5 text-slate-400 text-[11px]">
+                                <span>📎</span>
+                                <span>📷</span>
+                              </div>
+                            </div>
+                            <div className="w-6 h-6 rounded-full bg-[#00a884] text-white flex items-center justify-center text-[10px] shadow-sm">
+                              ➤
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
+                    {/* Visual Screen 4: FOUNDER EXECUTIVE STRATEGIC AI */}
+                    {current.id === "founder" && (
+                      <div className="space-y-2.5">
+                        {/* Live Founder Executive Dashboard Box */}
+                        <div className="p-3 rounded-2xl bg-slate-900/90 border border-slate-800 space-y-2.5 shadow-md relative overflow-hidden">
+                          <div className="flex items-center justify-between text-[10px] font-bold text-slate-400">
+                            <span className="flex items-center gap-1.5">
+                              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                              <span className="text-white font-mono uppercase">FOUNDER BRIEFING</span>
+                            </span>
+                            <span className="text-emerald-400 font-mono text-[9px] bg-emerald-500/20 px-2 py-0.5 rounded-full border border-emerald-500/30">
+                              3.8x ROI
+                            </span>
+                          </div>
+
+                          {/* MRR & Growth Rate */}
+                          <div className="p-2.5 rounded-xl bg-slate-950 border border-slate-800 flex items-center justify-between">
+                            <div>
+                              <div className="text-[9px] text-slate-400 uppercase font-mono">Monthly Recurring Revenue</div>
+                              <div className="text-base font-black text-white flex items-center gap-1.5">
+                                <span>₹14.8L</span>
+                                <span className="text-xs font-mono text-emerald-400 bg-emerald-500/20 px-1.5 py-0.5 rounded-md">
+                                  ▲ +42%
+                                </span>
+                              </div>
+                            </div>
+                            <div className="text-right">
+                              <div className="text-[9px] text-slate-400 font-mono uppercase">Net Margin</div>
+                              <div className="text-xs font-black text-emerald-400">34% (Safe)</div>
+                            </div>
+                          </div>
+
+                          {/* Executive Growth Bar Chart */}
+                          <div className="space-y-1">
+                            <div className="flex items-center justify-between text-[9px] font-bold text-slate-400">
+                              <span>7-Day Revenue Velocity</span>
+                              <span className="text-emerald-400 font-mono">18 Mo Runway</span>
+                            </div>
+                            <div className="flex items-end gap-1.5 h-8 pt-1 px-1 bg-slate-950 rounded-lg border border-slate-800">
+                              {[35, 55, 45, 75, 65, 90, 100].map((h, i) => (
+                                <motion.div
+                                  key={i}
+                                  initial={{ height: "10%" }}
+                                  animate={{ height: `${h}%` }}
+                                  transition={{ duration: 0.8, delay: i * 0.06, ease: "easeOut" }}
+                                  className="flex-1 rounded-t-sm bg-gradient-to-t from-emerald-600 via-teal-500 to-emerald-400 opacity-90"
+                                />
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Strategic AI Recommendation Chip & Approve Button */}
+                        <motion.div
+                          initial={{ opacity: 0, y: 8 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: 0.15 }}
+                          className="p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 space-y-2 shadow-xs"
+                        >
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center gap-1.5">
+                              <motion.span
+                                animate={{ scale: [1, 1.25, 1] }}
+                                transition={{ duration: 1.5, repeat: Infinity }}
+                                className="text-sm"
+                              >
+                                💡
+                              </motion.span>
+                              <div>
+                                <div className="text-xs font-black text-white">Scale High-ROI Channel</div>
+                                <div className="text-[9px] text-emerald-400 font-mono">+₹3.2L Projected Growth</div>
+                              </div>
+                            </div>
+                            <span className="text-[9px] font-black text-emerald-400 bg-emerald-500/20 px-2 py-0.5 rounded-md border border-emerald-500/30">
+                              HIGH ROI
+                            </span>
+                          </div>
+
+                          <motion.button
+                            whileHover={{ scale: 1.02 }}
+                            whileTap={{ scale: 0.98 }}
+                            type="button"
+                            className="w-full py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-black shadow-md flex items-center justify-center gap-1 cursor-pointer"
+                          >
+                            <span>Approve AI Growth Strategy</span>
+                            <span>🚀</span>
+                          </motion.button>
+                        </motion.div>
+                      </div>
+                    )}
+
+                    {/* Sleek Bottom Live Execution Micro-Pill (Fills bottom empty space) */}
+                    <motion.div
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ delay: 0.2 }}
+                      className="px-3 py-1.5 rounded-xl bg-slate-900/80 border border-slate-800/90 flex items-center justify-between text-[9.5px] font-medium text-slate-400 shadow-2xs"
+                    >
+                      <div className="flex items-center gap-1.5 truncate">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping flex-shrink-0" />
+                        <span className="text-slate-300 font-bold truncate">
+                          {current.id === "marketing" && "⚡ 1-Click Multi-Channel Sync • Insta, LinkedIn, WA"}
+                          {current.id === "sales" && "📄 Auto Proposal Dispatched • WhatsApp Synced"}
+                          {current.id === "whatsapp" && "💬 WhatsApp AI: 100% Instant Resolution • Zero Delay"}
+                          {current.id === "founder" && "📊 Daily Automated Executive Briefing at 9 AM"}
+                        </span>
+                      </div>
+                      <span className="text-[9px] font-mono text-emerald-400 font-bold uppercase ml-1 flex-shrink-0">ACTIVE</span>
+                    </motion.div>
                   </motion.div>
+                </AnimatePresence>
+
+                {/* Bottom iOS Home Indicator Bar */}
+                <div className="pt-2 flex justify-center z-30">
+                  <div className="w-28 h-1 rounded-full bg-white/40" />
+                </div>
+              </div>
+
+              {/* Mobile App Navigation Dock */}
+              <div className="px-2 py-1.5 bg-slate-950 border-t border-slate-800 grid grid-cols-4 gap-0.5 text-center">
+                {agents.map((a, idx) => (
+                  <button
+                    key={a.id}
+                    type="button"
+                    onClick={() => setActiveAgent(idx)}
+                    className={`py-1 rounded-xl flex flex-col items-center gap-0.5 text-[9px] font-bold transition-all ${
+                      activeAgent === idx
+                        ? "bg-emerald-500/20 text-emerald-400 border border-emerald-500/30"
+                        : "text-slate-500 hover:text-[#059669]"
+                    }`}
+                  >
+                    <span className="text-xs">{a.icon}</span>
+                    <span className="truncate max-w-full">{a.label}</span>
+                  </button>
                 ))}
               </div>
-            </div>
 
-            {/* Bottom Outcome Stat Strip */}
-            <div className="pt-2 flex items-center justify-between text-xs border-t border-emerald-100">
-              <div className="flex items-center gap-2 text-slate-500 font-bold text-[11px]">
-                <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-                <span>Verified Business Result</span>
-              </div>
-              <div className="text-sm sm:text-base font-black text-emerald-700 tracking-tight bg-emerald-100/70 px-3.5 py-1 rounded-full border border-emerald-300 shadow-2xs">
-                🎯 {current.metric}
-              </div>
             </div>
-          </motion.div>
+          </div>
         </div>
+
       </div>
 
       {/* ── Mobile Agent Selector Dots (visible < 640px) ── */}
@@ -984,8 +1221,7 @@ function Automation3DVisual() {
   );
 }
 
-/* ── Single 3D Product Stage Component (Matching 2nd Section Card & UI/UX Look) ── */
-/* ── Reusable scroll-reveal wrapper (Matches 2nd section WhoWeBuildFor look & behavior) ── */
+/* ── Reusable scroll-reveal wrapper ── */
 function Reveal({
   children,
   delay = 0,
@@ -1154,6 +1390,7 @@ function ProductStage({
     </motion.div>
   );
 }
+
 export default function Products() {
   return (
     <section className="relative bg-gradient-to-b from-white via-slate-50/50 to-white overflow-hidden border-t border-slate-100 py-8 sm:py-12 lg:py-14">

@@ -34,7 +34,7 @@ export default function FinalCTA() {
   const isInView = useInView(containerRef, { once: false, amount: 0.15 });
 
   return (
-    <section className="relative bg-white overflow-hidden py-10 sm:py-14 lg:py-18 border-t border-slate-100">
+    <section className="relative bg-white overflow-hidden py-4 sm:py-6 lg:py-8">
       {/* ── Soft Background Ambient Glows ── */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[450px] bg-blue-100/40 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:32px_32px] opacity-30 pointer-events-none" />
@@ -45,7 +45,7 @@ export default function FinalCTA() {
           initial={{ opacity: 0, y: 28 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
           transition={{ duration: 0.55, ease: "easeOut" }}
-          className="relative z-10 max-w-6xl mx-auto rounded-[2.5rem] bg-[#2563EB] border border-blue-400/50 p-6 sm:p-10 lg:p-14 shadow-[0_25px_80px_rgba(37,99,235,0.30)] overflow-hidden text-white"
+          className="relative z-10 w-full max-w-[1440px] mx-auto rounded-[2.5rem] bg-[#2563EB] border border-blue-400/50 p-6 sm:p-10 lg:p-14 shadow-[0_25px_80px_rgba(37,99,235,0.30)] overflow-hidden text-white"
         >
 
           {/* ── Top Header Section ── */}

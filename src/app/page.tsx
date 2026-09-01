@@ -1,7 +1,6 @@
 import Navbar from "@/components/layout/Navbar";
 import Hero from "@/components/home/Hero";
-import WhoWeBuildFor from "@/components/home/WhoWeBuildFor";
-import Products from "@/components/home/Products";
+import WhoWeBuildForInteractive from "@/components/home/WhoWeBuildForInteractive";
 import WhyAgaran from "@/components/home/WhyAgaran";
 import SelectedWork from "@/components/home/SelectedWork";
 import FinalCTA from "@/components/home/FinalCTA";
@@ -14,8 +13,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <WhoWeBuildFor />
-        <Products />
+        <WhoWeBuildForInteractive />
         <WhyAgaran />
         <SelectedWork />
         <FinalCTA />

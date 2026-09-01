@@ -130,7 +130,7 @@ export default function SelectedWork() {
   const statsInView = useInView(statsRef, { once: false, amount: 0.3 });
 
   const projectCount = useCounter(2, statsInView);
-  const moduleCount = useCounter(80, statsInView);
+  const moduleCount = useCounter(100, statsInView);
   const partnerCount = useCounter(3, statsInView);
 
   return (
@@ -138,12 +138,12 @@ export default function SelectedWork() {
       {/* ══════════════════════════════════════════════ */}
       {/* SECTION 1 — ACTIVE PROJECTS                   */}
       {/* ══════════════════════════════════════════════ */}
-      <section className="relative py-8 sm:py-12 lg:py-14 bg-white overflow-hidden border-t border-slate-100">
+      <section className="relative py-4 sm:py-6 lg:py-8 bg-white overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:28px_28px] opacity-30 pointer-events-none" />
         <div className="absolute top-0 left-1/3 w-[500px] h-[280px] bg-blue-100/40 rounded-full blur-[120px] pointer-events-none" />
 
         <Container as="div">
-          <div className="relative z-10 max-w-6xl mx-auto">
+          <div className="relative z-10 w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
 
             {/* ── Section Header ── */}
             <div className="relative text-center max-w-4xl mx-auto mb-8 sm:mb-10">
@@ -279,12 +279,12 @@ export default function SelectedWork() {
       {/* ══════════════════════════════════════════════ */}
       {/* SECTION 2 — PARTNER TESTIMONIALS               */}
       {/* ══════════════════════════════════════════════ */}
-      <section className="relative py-8 sm:py-12 lg:py-14 bg-gradient-to-b from-slate-50/80 via-white to-white overflow-hidden border-t border-slate-100">
+      <section className="relative py-4 sm:py-6 lg:py-8 bg-gradient-to-b from-slate-50/80 via-white to-white overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:28px_28px] opacity-25 pointer-events-none" />
         <div className="absolute bottom-0 right-1/4 w-[500px] h-[280px] bg-blue-100/30 rounded-full blur-[120px] pointer-events-none" />
 
         <Container as="div">
-          <div className="relative z-10 max-w-6xl mx-auto">
+          <div className="relative z-10 w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-12">
 
             {/* ── Section Header ── */}
             <div className="relative text-center max-w-4xl mx-auto mb-8 sm:mb-10">
