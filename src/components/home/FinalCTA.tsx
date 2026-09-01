@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import Container from "@/components/ui/Container";
 
@@ -33,6 +33,18 @@ export default function FinalCTA() {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: false, amount: 0.15 });
 
+  // Mobile Carousel Scroll Ref & Active Slide State
+  const ctaCarouselRef = useRef<HTMLDivElement>(null);
+  const [activeCtaSlide, setActiveCtaSlide] = useState(0);
+
+  const handleCtaScroll = () => {
+    if (!ctaCarouselRef.current) return;
+    const scrollPos = ctaCarouselRef.current.scrollLeft;
+    const cardWidth = ctaCarouselRef.current.offsetWidth * 0.8;
+    const newIndex = Math.round(scrollPos / cardWidth);
+    setActiveCtaSlide(Math.min(Math.max(newIndex, 0), highlights.length - 1));
+  };
+
   return (
     <section className="relative bg-white overflow-hidden py-4 sm:py-6 lg:py-8">
       {/* ── Soft Background Ambient Glows ── */}
@@ -49,7 +61,7 @@ export default function FinalCTA() {
         >
 
           {/* ── Top Header Section ── */}
-          <div className="relative z-10 text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+          <div className="relative z-10 text-center max-w-3xl mx-auto mb-8 sm:mb-12">
             {/* Category Pill Badge */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -81,15 +93,19 @@ export default function FinalCTA() {
             </motion.p>
           </div>
 
-          {/* ── 3 High-Impact Highlight Cards (100% Pure Clean White Background, Zero Blue Shadows) ── */}
-          <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 mb-10 sm:mb-12">
+          {/* ── 3 Step Cards — Touch Swipe Carousel on Mobile / Grid on Desktop ── */}
+          <div
+            ref={ctaCarouselRef}
+            onScroll={handleCtaScroll}
+            className="relative z-10 flex md:grid md:grid-cols-3 gap-4 sm:gap-5 overflow-x-auto pb-4 pt-1 snap-x snap-mandatory scrollbar-none -mx-2 px-2 sm:mx-0 sm:px-0 mb-4 sm:mb-12"
+          >
             {highlights.map((item, idx) => (
               <motion.div
                 key={item.title}
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ duration: 0.45, delay: 0.3 + idx * 0.08, ease: "easeOut" }}
-                className="group relative rounded-2xl bg-white border border-slate-100 p-5 sm:p-6 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between shadow-md hover:shadow-xl overflow-hidden"
+                className="w-[84vw] xs:w-[300px] sm:w-[320px] shrink-0 snap-center md:w-auto md:shrink group relative rounded-2xl bg-white border border-slate-100 p-5 sm:p-6 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between shadow-md hover:shadow-xl overflow-hidden"
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">
@@ -103,11 +119,34 @@ export default function FinalCTA() {
                     {item.title}
                   </h3>
 
-                  <p className="text-[12.5px] sm:text-[13px] text-[#475569] leading-[1.65] font-normal text-justify">
+                  <p className="text-[12.5px] sm:text-[13px] text-[#475569] leading-[1.65] font-normal text-left">
                     {item.desc}
                   </p>
                 </div>
               </motion.div>
+            ))}
+          </div>
+
+          {/* Mobile Carousel Pagination Dots */}
+          <div className="flex md:hidden items-center justify-center gap-2 mb-8">
+            {highlights.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => {
+                  if (ctaCarouselRef.current) {
+                    ctaCarouselRef.current.scrollTo({
+                      left: i * 280,
+                      behavior: "smooth",
+                    });
+                  }
+                }}
+                className={`h-2 rounded-full transition-all duration-300 cursor-pointer focus:outline-none ${
+                  activeCtaSlide === i
+                    ? "w-8 bg-white"
+                    : "w-2 bg-white/40 hover:bg-white/60"
+                }`}
+                aria-label={`Go to step ${i + 1}`}
+              />
             ))}
           </div>
 
