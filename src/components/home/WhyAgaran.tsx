@@ -180,13 +180,13 @@ function PhoneMockup({ current, isPaused }: { current: typeof pillars[0]; isPaus
           </div>
 
           {/* Screen Content - Animated */}
-          <AnimatePresence mode="wait">
+          <AnimatePresence initial={false}>
             <motion.div
               key={current.id}
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -12 }}
-              transition={{ duration: 0.28, ease: "easeOut" }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
               className="space-y-3"
             >
               {/* Title inside phone */}

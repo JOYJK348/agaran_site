@@ -145,13 +145,8 @@ export default function WhoWeBuildForInteractive() {
 
       <div className="relative z-10 w-full max-w-full px-2 xs:px-3 sm:px-4 lg:px-6">
         
-        {/* Section Header */}
-        <motion.div
-          className="text-center max-w-4xl mx-auto mb-8 sm:mb-10 lg:mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
+        {/* Section Header - Instantly Visible */}
+        <div className="text-center max-w-4xl mx-auto mb-8 sm:mb-10 lg:mb-12">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-4 shadow-2xs">
             <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#2563EB] animate-pulse" />
             <span>WHO WE BUILD FOR</span>
@@ -167,7 +162,7 @@ export default function WhoWeBuildForInteractive() {
           <p className="text-sm sm:text-base lg:text-[1.08rem] font-medium leading-relaxed text-slate-600 tracking-normal mt-4 max-w-2xl mx-auto">
             Technology can take many forms depending on who needs it. We architect intelligent systems tailored to your specific ecosystem.
           </p>
-        </motion.div>
+        </div>
 
         {/* ════════════════════════════════════════════════════════════════
             ACTIVE WORLD DISPLAY SHOWCASE (Image LEFT | Content RIGHT)
@@ -179,13 +174,13 @@ export default function WhoWeBuildForInteractive() {
           onTouchStart={() => setIsPaused(true)}
           className="relative rounded-3xl bg-white border border-slate-200/90 shadow-[0_20px_60px_rgba(0,0,0,0.05)] p-5 sm:p-8 lg:p-12 overflow-hidden scroll-mt-24 w-full"
         >
-          <AnimatePresence mode="wait">
+          <AnimatePresence initial={false}>
             <motion.div
               key={activeWorld.id}
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -15 }}
-              transition={{ duration: 0.35, ease: "easeOut" }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
               className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center"
             >
               {/* Left Column: High-Res Brand 3D Image Showcase */}
