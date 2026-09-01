@@ -174,14 +174,14 @@ export default function WhoWeBuildForInteractive() {
           onTouchStart={() => setIsPaused(true)}
           className="relative rounded-3xl bg-white border border-slate-200/90 shadow-[0_20px_60px_rgba(0,0,0,0.05)] p-5 sm:p-8 lg:p-12 overflow-hidden scroll-mt-24 w-full"
         >
-          <AnimatePresence initial={false}>
+          <AnimatePresence mode="popLayout" initial={false}>
             <motion.div
               key={activeWorld.id}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              transition={{ duration: 0.2, ease: "easeOut" }}
-              className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center"
+              transition={{ duration: 0.25, ease: "easeOut" }}
+              className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full"
             >
               {/* Left Column: High-Res Brand 3D Image Showcase */}
               <div className="lg:col-span-6 flex justify-center items-center order-1 lg:order-1">
