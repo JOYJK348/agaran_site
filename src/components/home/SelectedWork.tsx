@@ -332,7 +332,7 @@ export default function SelectedWork() {
                 const cardStyles = [
                   { bg: "bg-gradient-to-br from-blue-100/95 via-blue-50/80 to-white", border: "border-blue-300/90", hoverShadow: "shadow-[0_15px_40px_rgba(37,99,235,0.12)]", accent: "from-[#1D4ED8] via-[#2563EB] to-[#0284C7]", avatar: "from-[#1D4ED8] to-[#2563EB]", quoteBorder: "border-blue-400", badge: "bg-blue-100 text-[#2563EB] border-blue-300" },
                   { bg: "bg-gradient-to-br from-sky-100/95 via-blue-50/80 to-white", border: "border-sky-300/90", hoverShadow: "shadow-[0_15px_40px_rgba(2,132,199,0.12)]", accent: "from-[#0284C7] via-[#38BDF8] to-[#0284C7]", avatar: "from-[#0284C7] to-[#0284C7]", quoteBorder: "border-sky-400", badge: "bg-sky-100 text-[#0284C7] border-sky-300" },
-                  { bg: "bg-gradient-to-br from-emerald-100/95 via-emerald-50/80 to-white", border: "border-emerald-300/90", hoverShadow: "shadow-[0_15px_40px_rgba(5,150,105,0.12)]", accent: "from-[#059669] via-[#10B981] to-[#059669]", avatar: "from-[#059669] to-[#10B981]", quoteBorder: "border-emerald-400", badge: "bg-emerald-100 text-emerald-800 border-emerald-300" },
+                  { bg: "bg-gradient-to-br from-indigo-100/95 via-blue-50/80 to-white", border: "border-indigo-300/90", hoverShadow: "shadow-[0_15px_40px_rgba(79,70,229,0.12)]", accent: "from-[#1D4ED8] via-[#4338CA] to-[#2563EB]", avatar: "from-[#4338CA] to-[#2563EB]", quoteBorder: "border-indigo-400", badge: "bg-indigo-100 text-[#4338CA] border-indigo-300" },
                 ][idx % 3];
 
                 return (
