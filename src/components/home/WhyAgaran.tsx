@@ -387,7 +387,7 @@ export default function WhyAgaran() {
 
           {/* Active Description Block */}
           <motion.div
-            className="w-full max-w-[340px] xs:max-w-[360px]"
+            className="w-full max-w-sm sm:max-w-md text-left"
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.4, delay: 0.2 }}

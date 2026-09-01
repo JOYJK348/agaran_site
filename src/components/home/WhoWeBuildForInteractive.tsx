@@ -203,17 +203,19 @@ export default function WhoWeBuildForInteractive() {
               </div>
 
               {/* Right Column: World Narrative & Capabilities */}
-              <div className="lg:col-span-6 space-y-4 sm:space-y-5 lg:space-y-6 order-2 lg:order-2">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] font-extrabold uppercase tracking-wider text-[#2563EB]">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
-                  {activeWorld.label}
+              <div className="lg:col-span-6 space-y-3.5 sm:space-y-5 lg:space-y-6 order-2 lg:order-2 text-left">
+                <div>
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10px] sm:text-[10.5px] font-extrabold uppercase tracking-wider text-[#2563EB] mb-2.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
+                    {activeWorld.label}
+                  </div>
+
+                  <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-extrabold lg:font-black text-slate-900 tracking-[-0.035em] leading-tight">
+                    {activeWorld.title}
+                  </h3>
                 </div>
 
-                <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-extrabold lg:font-black text-slate-900 tracking-[-0.035em] leading-tight">
-                  {activeWorld.title}
-                </h3>
-
-                <div className="inline-block px-3.5 py-1.5 rounded-lg bg-slate-100/90 text-xs sm:text-sm font-bold text-slate-700 font-mono">
+                <div className="p-3 sm:px-4 sm:py-2 rounded-xl bg-slate-50 border border-slate-200/80 text-xs sm:text-sm font-bold text-slate-700 leading-relaxed">
                   {activeWorld.tagline}
                 </div>
 
@@ -221,17 +223,17 @@ export default function WhoWeBuildForInteractive() {
                   {activeWorld.description}
                 </p>
 
-                {/* Features Bullet List */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 pt-2">
+                {/* Features Bullet List - Wrap cleanly on mobile */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 pt-1">
                   {activeWorld.features.map((item) => (
-                    <div key={item} className="flex items-center gap-2.5 p-3 rounded-xl bg-slate-50 border border-slate-200/70 text-xs sm:text-[13px] font-extrabold text-slate-800">
-                      <span className="w-4 h-4 rounded-full bg-[#EFF6FF] text-[#2563EB] flex items-center justify-center text-[10px] font-black shrink-0">✓</span>
-                      <span className="truncate">{item}</span>
+                    <div key={item} className="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50/80 border border-slate-200/70 text-xs sm:text-[13px] font-extrabold text-slate-800 leading-snug">
+                      <span className="w-4 h-4 rounded-full bg-[#EFF6FF] text-[#2563EB] flex items-center justify-center text-[10px] font-black shrink-0 mt-0.5">✓</span>
+                      <span className="whitespace-normal break-words">{item}</span>
                     </div>
                   ))}
                 </div>
 
-                <div className="pt-3">
+                <div className="pt-2 sm:pt-3">
                   <Button variant="primary" href="/contact" className="text-xs sm:text-sm px-7 py-3.5 rounded-xl font-bold shadow-md w-full sm:w-auto justify-center">
                     {activeWorld.ctaText ? activeWorld.ctaText : `Build For ${activeWorld.label.split("&")[0]} →`}
                   </Button>
