@@ -837,40 +837,40 @@ export default function WhatWeDoPage() {
               </p>
             </Reveal>
 
-            {/* Visual Workflow Comparison: Manual vs Automated */}
+            {/* Visual Workflow Comparison: Manual vs Automated — Full Container Width */}
             <Reveal delay={0.2} className="mb-10">
-              <div className="max-w-4xl mx-auto space-y-4">
+              <div className="w-full max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
                 {/* Manual Flow */}
-                <div className="p-5 rounded-2xl bg-white border border-slate-200">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs font-extrabold text-slate-500 uppercase tracking-wider">✕ MANUAL WORKFLOW</span>
-                    <span className="text-xs font-bold text-rose-500">Slow & Error-Prone</span>
+                <div className="p-6 sm:p-7 rounded-3xl bg-white border border-slate-200 shadow-2xs space-y-4">
+                  <div className="flex items-center justify-between border-b border-slate-100 pb-3">
+                    <span className="text-xs font-black text-slate-500 uppercase tracking-wider bg-slate-100 px-3 py-1 rounded-full">✕ MANUAL WORKFLOW</span>
+                    <span className="text-xs font-extrabold text-rose-500 bg-rose-50 px-2.5 py-0.5 rounded border border-rose-200">Slow &amp; Error-Prone</span>
                   </div>
-                  <div className="flex flex-wrap items-center gap-2 text-xs font-bold text-slate-600">
-                    <span className="px-3 py-1.5 rounded-lg bg-slate-100">Message</span>
-                    <span>→</span>
-                    <span className="px-3 py-1.5 rounded-lg bg-slate-100">Copy Data</span>
-                    <span>→</span>
-                    <span className="px-3 py-1.5 rounded-lg bg-slate-100">Update Sheet</span>
-                    <span>→</span>
-                    <span className="px-3 py-1.5 rounded-lg bg-slate-100">Check Approval</span>
-                    <span>→</span>
-                    <span className="px-3 py-1.5 rounded-lg bg-slate-100">Send Notification</span>
+                  <div className="flex flex-wrap items-center gap-2 text-xs font-bold text-slate-600 pt-1">
+                    <span className="px-3 py-1.5 rounded-xl bg-slate-100 border border-slate-200">Message</span>
+                    <span>&rarr;</span>
+                    <span className="px-3 py-1.5 rounded-xl bg-slate-100 border border-slate-200">Copy Data</span>
+                    <span>&rarr;</span>
+                    <span className="px-3 py-1.5 rounded-xl bg-slate-100 border border-slate-200">Update Sheet</span>
+                    <span>&rarr;</span>
+                    <span className="px-3 py-1.5 rounded-xl bg-slate-100 border border-slate-200">Check Approval</span>
+                    <span>&rarr;</span>
+                    <span className="px-3 py-1.5 rounded-xl bg-slate-100 border border-slate-200">Send Notification</span>
                   </div>
                 </div>
 
                 {/* Automated Flow */}
-                <div className="p-5 rounded-2xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] text-white shadow-md">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="text-xs font-extrabold text-sky-200 uppercase tracking-wider">✓ AUTOMATED AGARAN FLOW</span>
-                    <span className="text-xs font-bold text-sky-300">Instant & 100% Accurate</span>
+                <div className="p-6 sm:p-7 rounded-3xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] text-white shadow-lg space-y-4">
+                  <div className="flex items-center justify-between border-b border-white/20 pb-3">
+                    <span className="text-xs font-black text-sky-100 uppercase tracking-wider bg-white/20 px-3 py-1 rounded-full border border-white/20">✓ AUTOMATED AGARAN FLOW</span>
+                    <span className="text-xs font-extrabold text-white bg-emerald-500/30 px-2.5 py-0.5 rounded border border-emerald-300/40">Instant &amp; 100% Accurate</span>
                   </div>
-                  <div className="flex flex-wrap items-center gap-3 text-xs font-extrabold text-white">
-                    <span className="px-3 py-1.5 rounded-lg bg-white/15 border border-white/20">Trigger Event</span>
-                    <span>→</span>
-                    <span className="px-3 py-1.5 rounded-lg bg-white/15 border border-white/20">Automated Processing</span>
-                    <span>→</span>
-                    <span className="px-3 py-1.5 rounded-lg bg-white/15 border border-white/20">Instant Action & Update</span>
+                  <div className="flex flex-wrap items-center gap-2.5 text-xs font-extrabold text-white pt-1">
+                    <span className="px-3.5 py-2 rounded-xl bg-white/15 border border-white/25 backdrop-blur-xs">Trigger Event</span>
+                    <span>&rarr;</span>
+                    <span className="px-3.5 py-2 rounded-xl bg-white/15 border border-white/25 backdrop-blur-xs">Automated Processing</span>
+                    <span>&rarr;</span>
+                    <span className="px-3.5 py-2 rounded-xl bg-white/15 border border-white/25 backdrop-blur-xs">Instant Action &amp; Update</span>
                   </div>
                 </div>
               </div>
