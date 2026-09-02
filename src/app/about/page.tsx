@@ -200,26 +200,26 @@ export default function AboutPage() {
         <div className="absolute top-[75%] right-[-5%] w-[500px] h-[400px] rounded-full bg-[#2563EB]/10 blur-[120px] pointer-events-none" />
 
         {/* ══════════════════════════════════════════════════════════
-            01  HERO
+            01  HERO (Full Screen Grand Width matching What-We-Do)
         ══════════════════════════════════════════════════════════ */}
-        <section className="relative z-10 pt-24 sm:pt-28 pb-8 sm:pb-12 px-4 sm:px-8 lg:px-16">
-          {/* Dot grid — same as Home */}
-          <div className="absolute inset-0 bg-[radial-gradient(#BFDBFE_1px,transparent_1px)] [background-size:28px_28px] opacity-50 pointer-events-none" />
+        <section className="relative z-10 pt-20 sm:pt-28 pb-10 sm:pb-14 px-4 sm:px-8 lg:px-16 overflow-hidden">
+          {/* Dot grid pattern backdrop */}
+          <div className="absolute inset-0 bg-[radial-gradient(#BFDBFE_1px,transparent_1px)] [background-size:32px_32px] opacity-40 pointer-events-none" />
 
-          <div className="relative max-w-[1280px] mx-auto">
-            {/* Badge — exact match Home pill */}
+          <div className="relative max-w-[1400px] mx-auto w-full text-center">
+            {/* Section Tag */}
             <Reveal delay={0}>
-              <div className="flex justify-center mb-4">
-                <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB]">
-                  <span className="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse" />
+              <div className="flex justify-center mb-6">
+                <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-xs sm:text-sm font-extrabold uppercase tracking-widest text-[#2563EB] shadow-2xs">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#2563EB] animate-pulse" />
                   ABOUT AGARAN
                 </div>
               </div>
             </Reveal>
 
-            {/* H1 — balanced hero font size */}
+            {/* H1 Title */}
             <Reveal delay={0.1}>
-              <h1 className="text-center text-[1.65rem] xs:text-[1.95rem] sm:text-3xl md:text-[2.25rem] lg:text-[2.65rem] xl:text-[2.85rem] font-extrabold lg:font-black leading-[1.18] sm:leading-[1.12] lg:leading-[1.08] tracking-[-0.035em] text-[#0F172A] w-full max-w-[1280px] mx-auto mb-4">
+              <h1 className="text-center text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] xl:text-[4.4rem] font-black leading-[1.12] tracking-[-0.035em] text-[#0F172A] w-full max-w-5xl mx-auto mb-5">
                 Technology With a{" "}
                 <span className="bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] bg-clip-text text-transparent">
                   Reason.
@@ -227,37 +227,45 @@ export default function AboutPage() {
               </h1>
             </Reveal>
 
-            {/* Sub — Home hero body text style */}
+            {/* Subtitle */}
             <Reveal delay={0.2}>
-              <p className="text-center text-sm sm:text-base lg:text-[1.08rem] font-medium leading-relaxed text-slate-600 w-full max-w-3xl mx-auto mb-6">
-                We build software, AI systems, and automation infrastructure for organizations that want to move faster, operate leaner, and deliver more — without adding complexity to do it.
+              <p className="text-center text-sm sm:text-lg lg:text-xl font-medium leading-relaxed text-slate-600 w-full max-w-3xl mx-auto mb-9">
+                We build software, AI systems, and automation infrastructure for organizations that want to move faster, operate leaner, and deliver more &mdash; without adding complexity to do it.
               </p>
             </Reveal>
 
-            {/* CTA row */}
+            {/* CTA Buttons */}
             <Reveal delay={0.28}>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5">
-                <Button variant="primary" href="/contact" className="text-sm sm:text-[15px] px-7 py-3.5 rounded-xl font-bold w-full sm:w-auto justify-center shadow-md">
-                  Start a Conversation →
-                </Button>
-                <Button variant="secondary" href="/work" className="text-sm sm:text-[15px] px-7 py-3.5 rounded-xl font-bold w-full sm:w-auto justify-center border border-[#2563EB]">
-                  View Our Work
-                </Button>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 mb-10">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center gap-2.5 text-sm sm:text-base px-8 py-4 rounded-2xl font-black text-white bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] hover:shadow-[0_12px_35px_rgba(37,99,235,0.35)] hover:scale-105 transition-all duration-300 w-full sm:w-auto shadow-md"
+                >
+                  <span>Start a Conversation</span>
+                  <span>&rarr;</span>
+                </Link>
+                <Link
+                  href="/work"
+                  className="inline-flex items-center justify-center gap-2.5 text-sm sm:text-base px-7 py-4 rounded-2xl font-extrabold text-[#2563EB] bg-[#EFF6FF] border border-[#BFDBFE] hover:bg-[#DBEAFE] hover:scale-105 transition-all duration-300 w-full sm:w-auto shadow-2xs"
+                >
+                  <span>View Our Work</span>
+                  <span>&rarr;</span>
+                </Link>
               </div>
             </Reveal>
 
             {/* Stats strip — full width */}
             <Reveal delay={0.38}>
-              <div className="mt-8 sm:mt-10 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 w-full max-w-[1280px] mx-auto">
+              <div className="mt-6 sm:mt-8 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 w-full max-w-[1400px] mx-auto">
                 {stats.map((s) => (
                   <div
                     key={s.label}
-                    className="flex flex-col items-center justify-center gap-1 p-3.5 sm:p-4 rounded-2xl bg-gradient-to-b from-slate-50 to-white border border-slate-200/80 shadow-[0_4px_20px_rgba(37,99,235,0.06)] hover:border-[#BFDBFE] hover:shadow-[0_8px_25px_rgba(37,99,235,0.10)] transition-all duration-300"
+                    className="flex flex-col items-center justify-center gap-1.5 p-5 sm:p-6 rounded-[24px] bg-gradient-to-b from-[#EFF6FF]/80 via-white to-[#DBEAFE]/40 border border-[#BFDBFE] shadow-[0_8px_25px_rgba(37,99,235,0.06)] hover:border-[#2563EB] hover:shadow-[0_16px_35px_rgba(37,99,235,0.15)] hover:-translate-y-1 transition-all duration-300"
                   >
-                    <div className="text-2xl sm:text-3xl font-black text-[#2563EB] tracking-tight">
+                    <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-[#2563EB] tracking-tight">
                       <Counter to={s.value} suffix={s.suffix} />
                     </div>
-                    <div className="text-[10px] sm:text-xs font-bold text-slate-500 uppercase tracking-wider text-center">
+                    <div className="text-[10.5px] sm:text-xs font-extrabold text-slate-600 uppercase tracking-wider text-center">
                       {s.label}
                     </div>
                   </div>
