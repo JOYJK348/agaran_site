@@ -229,7 +229,7 @@ export default function AboutPage() {
 
             {/* Subtitle */}
             <Reveal delay={0.2}>
-              <p className="text-center text-sm sm:text-lg lg:text-xl font-medium leading-relaxed text-slate-600 w-full max-w-3xl mx-auto mb-9">
+              <p className="text-center text-sm sm:text-lg lg:text-xl font-medium leading-relaxed text-slate-600 w-full max-w-5xl mx-auto mb-9">
                 We build software, AI systems, and automation infrastructure for organizations that want to move faster, operate leaner, and deliver more &mdash; without adding complexity to do it.
               </p>
             </Reveal>

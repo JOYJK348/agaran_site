@@ -281,7 +281,7 @@ export default function WhatWeDoPage() {
 
             {/* Subtitle */}
             <Reveal delay={0.2}>
-              <p className="text-center text-sm sm:text-lg lg:text-xl font-medium leading-relaxed text-slate-600 w-full max-w-3xl mx-auto mb-9">
+              <p className="text-center text-sm sm:text-lg lg:text-xl font-medium leading-relaxed text-slate-600 w-full max-w-5xl mx-auto mb-9">
                 From custom software to AI-powered systems, we turn real problems and ideas into technology that people can actually use.
               </p>
             </Reveal>

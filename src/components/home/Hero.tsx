@@ -457,9 +457,9 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Mobile-First Trust Metrics Bar */}
+        {/* Mobile-First Trust Metrics Bar — Hidden on Mobile View */}
         <motion.div
-          className="mt-6 sm:mt-8 lg:mt-10 w-full grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4"
+          className="mt-6 sm:mt-8 lg:mt-10 w-full hidden sm:grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4"
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.85, duration: 0.6 }}

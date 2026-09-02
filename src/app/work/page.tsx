@@ -19,7 +19,7 @@ export default function WorkPage() {
           {/* ══════════════════════════════════════════════════════════
               HEADER SECTION — EXECUTIVE LANDING HERO
           ══════════════════════════════════════════════════════════ */}
-          <header className="text-center max-w-5xl mx-auto mb-6">
+          <header className="text-center w-full max-w-full mx-auto mb-6">
             <div className="flex justify-center mb-5">
               <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-xs sm:text-sm font-extrabold uppercase tracking-widest text-[#2563EB] shadow-2xs">
                 <span className="w-2.5 h-2.5 rounded-full bg-[#2563EB] animate-pulse" />
@@ -34,26 +34,26 @@ export default function WorkPage() {
               </span>
             </h1>
 
-            <p className="text-center text-sm sm:text-lg lg:text-xl font-medium leading-relaxed text-slate-600 w-full max-w-3xl mx-auto mb-6">
+            <p className="text-center text-sm sm:text-lg lg:text-xl font-medium leading-relaxed text-slate-600 w-full max-w-5xl mx-auto mb-6">
               In-depth technical whitepapers and engineering case studies detailing real multi-tenant SaaS platforms, microservices backend architectures, automated infrastructure, and 24/7 real-time system monitoring shipped for client institutions.
             </p>
 
-            {/* Quick System Stats Bar */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 max-w-3xl mx-auto text-left sm:text-center text-xs">
-              <div className="p-3 rounded-xl bg-white border border-slate-200/90 shadow-2xs space-y-0.5">
+            {/* Quick System Stats Bar — Full Container Width */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-2 max-w-5xl mx-auto text-center text-xs">
+              <div className="p-3.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs space-y-0.5">
                 <div className="text-base sm:text-lg font-black text-[#2563EB]">2 Systems</div>
                 <div className="text-slate-500 font-bold text-[10px] uppercase">Live Production</div>
               </div>
-              <div className="p-3 rounded-xl bg-white border border-slate-200/90 shadow-2xs space-y-0.5">
+              <div className="p-3.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs space-y-0.5">
                 <div className="text-base sm:text-lg font-black text-emerald-600">362+ APIs</div>
                 <div className="text-slate-500 font-bold text-[10px] uppercase">Contract Endpoints</div>
               </div>
-              <div className="p-3 rounded-xl bg-white border border-slate-200/90 shadow-2xs space-y-0.5">
+              <div className="p-3.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs space-y-0.5">
                 <div className="text-base sm:text-lg font-black text-[#0284C7]">100% Isolated</div>
                 <div className="text-slate-500 font-bold text-[10px] uppercase">Row-Level Security</div>
               </div>
-              <div className="p-3 rounded-xl bg-white border border-slate-200/90 shadow-2xs space-y-0.5">
-                <div className="text-base sm:text-lg font-black text-amber-600 flex items-center justify-start sm:justify-center gap-1.5">
+              <div className="p-3.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs space-y-0.5">
+                <div className="text-base sm:text-lg font-black text-amber-600 flex items-center justify-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-amber-500 animate-ping" />
                   24/7 Active
                 </div>
