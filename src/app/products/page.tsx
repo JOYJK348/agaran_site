@@ -73,7 +73,7 @@ export default function ProductsPage() {
                   </p>
 
                   <p className="text-xs sm:text-base text-slate-600 leading-relaxed text-left sm:text-justify">
-                    An intelligent education platform designed to bring learning, academic management, assessments, communication and everyday institutional workflows into one connected system. Instead of making institutions manage multiple tools and repeat the same tasks every day, the platform uses AI and automation to handle repetitive work, connect information and assist people when they need it.
+                    An intelligent education platform designed to bring student lead capture, online admissions, learning management, assessments, communication and everyday operations into one connected system. From the first student lead enquiry to ongoing academic progress, the platform automates repetitive manual work, connects information, and assists staff, students, and parents seamlessly.
                   </p>
 
                   {/* Feature Highlights Grid */}
@@ -170,7 +170,7 @@ export default function ProductsPage() {
                   </p>
 
                   <p className="text-xs sm:text-base text-slate-600 leading-relaxed text-left sm:text-justify">
-                    A customizable WhatsApp automation platform designed to adapt to the way different businesses work. Businesses can configure their own services, products, FAQs, customer workflows and business rules, while an AI-powered WhatsApp assistant handles conversations, enquiries, follow-ups and routine tasks.
+                    A customizable WhatsApp automation platform designed to automate your entire business workflow starting right from initial lead capture. Businesses configure their products, services, FAQs, and rules, while an AI-powered WhatsApp assistant handles lead generation, customer enquiries, quotes, follow-ups, and routine operational actions automatically.
                   </p>
 
                   {/* Feature Highlights Grid */}

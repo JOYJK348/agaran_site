@@ -219,10 +219,11 @@ export default function ProductWhatsAppPage() {
                   Understands customer questions and responds using the business context provided during configuration.
                 </p>
                 <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs space-y-2 font-mono">
-                  <div>Customer Message</div>
-                  <div className="text-emerald-600 font-bold">&darr; AI Understands Context</div>
-                  <div className="text-[#2563EB] font-bold">&darr; System Checks Business Rules</div>
-                  <div className="text-[#0284C7] font-bold">&darr; Action &amp; Customer Response Sent</div>
+                  <div className="font-extrabold text-emerald-800">01. Initial WhatsApp Lead Message &amp; Capture</div>
+                  <div className="text-emerald-600 font-bold">&darr; 02. AI Intent Understanding &amp; Qualification</div>
+                  <div className="text-[#2563EB] font-bold">&darr; 03. System Checks Catalog, Pricing &amp; Rules</div>
+                  <div className="text-[#0284C7] font-bold">&darr; 04. Instant Response, Booking or Quote Generated</div>
+                  <div className="text-purple-700 font-bold">&darr; 05. Automated Follow-Up &amp; Lead Conversion</div>
                 </div>
               </div>
 

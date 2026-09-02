@@ -312,15 +312,15 @@ export default function ProductAIEducationPage() {
                 <h3 className="text-xl font-black text-[#0F172A]">End-to-End Automated Sequence</h3>
                 
                 <div className="space-y-2 text-xs font-semibold text-slate-800">
-                  <div className="p-2.5 rounded-xl bg-white border border-slate-200 text-center">Student Submits Form</div>
+                  <div className="p-2.5 rounded-xl bg-emerald-50 border border-emerald-200 text-center font-extrabold text-emerald-800">01. Initial Student Lead Capture &amp; Inquiry</div>
                   <div className="text-center text-slate-400 font-bold">&darr;</div>
-                  <div className="p-2.5 rounded-xl bg-white border border-slate-200 text-center">Information Processed</div>
+                  <div className="p-2.5 rounded-xl bg-white border border-slate-200 text-center">02. Automated Online Application &amp; Verification</div>
                   <div className="text-center text-slate-400 font-bold">&darr;</div>
-                  <div className="p-2.5 rounded-xl bg-white border border-slate-200 text-center">Application Status Updated</div>
+                  <div className="p-2.5 rounded-xl bg-white border border-slate-200 text-center">03. Admission Approval &amp; Batch Assignment</div>
                   <div className="text-center text-slate-400 font-bold">&darr;</div>
-                  <div className="p-2.5 rounded-xl bg-white border border-slate-200 text-center">Relevant Team Notified</div>
+                  <div className="p-2.5 rounded-xl bg-white border border-slate-200 text-center">04. Course Access, Exams &amp; AI Support</div>
                   <div className="text-center text-slate-400 font-bold">&darr;</div>
-                  <div className="p-2.5 rounded-xl bg-[#2563EB] text-white text-center font-bold">Student Receives Update</div>
+                  <div className="p-2.5 rounded-xl bg-[#2563EB] text-white text-center font-bold">05. Automated Parent Notifications &amp; Progress Reports</div>
                 </div>
               </div>
 
