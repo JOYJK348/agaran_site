@@ -337,33 +337,56 @@ export default function ProductAIEducationPage() {
               05 — CURRENT DEVELOPMENT STATUS & VISION
           ══════════════════════════════════════════════════════════ */}
           <section className="mb-12 sm:mb-16 scroll-mt-24" id="status-vision">
-            <div className="p-6 sm:p-8 rounded-3xl bg-slate-900 text-white space-y-6">
-              <div className="flex items-center justify-between border-b border-slate-800 pb-4">
-                <span className="text-xs font-black uppercase tracking-widest text-[#38BDF8]">CURRENT STATUS &bull; IN DEVELOPMENT</span>
-                <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
+            <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-[#EFF6FF] via-white to-[#DBEAFE]/40 border border-[#BFDBFE] text-slate-800 space-y-6 shadow-xs">
+              <div className="flex items-center justify-between border-b border-[#BFDBFE] pb-4">
+                <div className="flex items-center gap-2">
+                  <span className="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse" />
+                  <span className="text-xs font-black uppercase tracking-widest text-[#2563EB]">CURRENT STATUS &bull; IN DEVELOPMENT</span>
+                </div>
+                <span className="text-xs font-extrabold text-amber-800 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
+                  Active Engineering
+                </span>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <h3 className="text-xl font-extrabold text-white mb-2">Development Focus</h3>
-                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed text-justify mb-4">
+                  <h3 className="text-xl font-black text-[#0F172A] mb-2">Development Focus</h3>
+                  <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed text-justify mb-4">
                     The platform is currently being designed and developed with high-performance multi-tenant architecture to support coaching centers, schools, and colleges.
                   </p>
-                  <ul className="grid grid-cols-2 gap-2 text-xs font-mono text-sky-200">
-                    <li>&bull; LiveKit SDK integration</li>
-                    <li>&bull; Cloudflare Stream storage</li>
-                    <li>&bull; Student &amp; Parent portals</li>
-                    <li>&bull; Digital &amp; Offline exam engine</li>
-                    <li>&bull; AI doubt solver assistant</li>
-                    <li>&bull; Attendance &amp; Fee ERP</li>
+                  <ul className="grid grid-cols-2 gap-2 text-xs font-bold text-[#2563EB]">
+                    <li className="p-2 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
+                      <span className="text-emerald-500 font-bold">✓</span> LiveKit SDK integration
+                    </li>
+                    <li className="p-2 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
+                      <span className="text-emerald-500 font-bold">✓</span> Cloudflare Stream storage
+                    </li>
+                    <li className="p-2 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
+                      <span className="text-emerald-500 font-bold">✓</span> Student &amp; Parent portals
+                    </li>
+                    <li className="p-2 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
+                      <span className="text-emerald-500 font-bold">✓</span> Digital &amp; Offline exam engine
+                    </li>
+                    <li className="p-2 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
+                      <span className="text-emerald-500 font-bold">✓</span> AI doubt solver assistant
+                    </li>
+                    <li className="p-2 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
+                      <span className="text-emerald-500 font-bold">✓</span> Attendance &amp; Fee ERP
+                    </li>
                   </ul>
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-extrabold text-white mb-2">The Bigger Vision</h3>
-                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed text-justify">
+                  <h3 className="text-xl font-black text-[#0F172A] mb-2">The Bigger Vision</h3>
+                  <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed text-justify mb-4">
                     To deliver a unified digital backbone for modern education — where learning, assessment, administration, and parent communication flow effortlessly through intelligent automation.
                   </p>
+                  <div className="p-4 rounded-2xl bg-white border border-[#BFDBFE] space-y-2 text-xs">
+                    <div className="font-extrabold text-[#0F172A]">Why We Build Differently:</div>
+                    <p className="text-slate-600 leading-relaxed text-justify">
+                      Instead of building isolated chatbots or single-purpose apps, Agaran builds connected systems where data flows seamlessly across every operational layer.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

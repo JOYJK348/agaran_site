@@ -252,36 +252,59 @@ export default function ProductWhatsAppPage() {
           </section>
 
           {/* ══════════════════════════════════════════════════════════
-              05 — CURRENT STATUS & BIGGER VISION
+              05 — CURRENT DEVELOPMENT STATUS & VISION
           ══════════════════════════════════════════════════════════ */}
           <section className="mb-12 sm:mb-16 scroll-mt-24" id="status-vision">
-            <div className="p-6 sm:p-8 rounded-3xl bg-slate-900 text-white space-y-6">
-              <div className="flex items-center justify-between border-b border-slate-800 pb-4">
-                <span className="text-xs font-black uppercase tracking-widest text-emerald-400">CURRENT STATUS &bull; IN DEVELOPMENT</span>
-                <span className="w-2 h-2 rounded-full bg-amber-400 animate-pulse" />
+            <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-emerald-50 via-white to-sky-50 border border-emerald-200 text-slate-800 space-y-6 shadow-xs">
+              <div className="flex items-center justify-between border-b border-emerald-200 pb-4">
+                <div className="flex items-center gap-2">
+                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse" />
+                  <span className="text-xs font-black uppercase tracking-widest text-emerald-700">CURRENT STATUS &bull; IN DEVELOPMENT</span>
+                </div>
+                <span className="text-xs font-extrabold text-amber-800 bg-amber-50 px-3 py-1 rounded-full border border-amber-200">
+                  Active Engineering
+                </span>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <h3 className="text-xl font-extrabold text-white mb-2">Current Development Focus</h3>
-                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed text-justify mb-4">
+                  <h3 className="text-xl font-black text-[#0F172A] mb-2">Current Development Focus</h3>
+                  <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed text-justify mb-4">
                     The platform is currently being designed and developed. The focus is on building the core multi-business architecture, business configuration system, WhatsApp integration, AI assistant layer and automation workflows.
                   </p>
-                  <ul className="grid grid-cols-2 gap-2 text-xs font-mono text-emerald-300">
-                    <li>&bull; Multi-business architecture</li>
-                    <li>&bull; WhatsApp integration</li>
-                    <li>&bull; Business onboarding</li>
-                    <li>&bull; Business configuration</li>
-                    <li>&bull; AI assistant engine</li>
-                    <li>&bull; Workflow automation</li>
+                  <ul className="grid grid-cols-2 gap-2 text-xs font-bold text-emerald-700">
+                    <li className="p-2 rounded-xl bg-white border border-emerald-200 flex items-center gap-1.5 shadow-2xs">
+                      <span className="text-emerald-500 font-bold">✓</span> Multi-business architecture
+                    </li>
+                    <li className="p-2 rounded-xl bg-white border border-emerald-200 flex items-center gap-1.5 shadow-2xs">
+                      <span className="text-emerald-500 font-bold">✓</span> WhatsApp API integration
+                    </li>
+                    <li className="p-2 rounded-xl bg-white border border-emerald-200 flex items-center gap-1.5 shadow-2xs">
+                      <span className="text-emerald-500 font-bold">✓</span> Business onboarding panel
+                    </li>
+                    <li className="p-2 rounded-xl bg-white border border-emerald-200 flex items-center gap-1.5 shadow-2xs">
+                      <span className="text-emerald-500 font-bold">✓</span> Custom catalog configuration
+                    </li>
+                    <li className="p-2 rounded-xl bg-white border border-emerald-200 flex items-center gap-1.5 shadow-2xs">
+                      <span className="text-emerald-500 font-bold">✓</span> AI assistant prompt engine
+                    </li>
+                    <li className="p-2 rounded-xl bg-white border border-emerald-200 flex items-center gap-1.5 shadow-2xs">
+                      <span className="text-emerald-500 font-bold">✓</span> Lead &amp; booking automation
+                    </li>
                   </ul>
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-extrabold text-white mb-2">The Bigger Vision</h3>
-                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed text-justify">
+                  <h3 className="text-xl font-black text-[#0F172A] mb-2">The Bigger Vision</h3>
+                  <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed text-justify mb-4">
                     WhatsApp is already where many businesses communicate with customers. The goal is to make it more than a messaging channel — a place where customers ask, discover, book, order, and get support while the business automates the work behind those conversations.
                   </p>
+                  <div className="p-4 rounded-2xl bg-white border border-emerald-200 space-y-2 text-xs">
+                    <div className="font-extrabold text-slate-900">Why We Build Differently:</div>
+                    <p className="text-slate-600 leading-relaxed text-justify">
+                      Every business gets its own isolated environment, custom context, and rules — delivering authentic customer engagement without generic bot responses.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
