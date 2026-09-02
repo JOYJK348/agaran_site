@@ -189,7 +189,7 @@ export default function WorkPage() {
                   </h2>
 
                   <p className="text-xs sm:text-base text-slate-600 leading-relaxed text-left sm:text-justify">
-                    An enterprise multi-tenant Education Core Platform built for NEET coaching institutes and test prep academies. Features NestJS monorepo micro-services, Supabase PostgreSQL Row-Level Security (RLS) policies, Jitsi WebRTC live video classrooms, 720-mark OMR mock test evaluation queues, fee installment ledgers, and 4 authenticated user roles.
+                    An enterprise multi-tenant Education Core Platform built for NEET coaching institutes and test prep academies. Powered by LiveKit real-time live classrooms, Cloudflare Stream DRM pre-recorded video security, Moodle-style modular course builder, NTA format OMR mock test evaluation queues, fee installment ledgers, and 4 authenticated user roles.
                   </p>
 
                   {/* Feature Highlights Matrix */}
@@ -203,12 +203,12 @@ export default function WorkPage() {
                       <div className="text-[10px] text-slate-500 font-medium">100% Data Isolated</div>
                     </div>
                     <div className="p-2.5 rounded-xl bg-[#F8FAFC] border border-slate-200 text-center">
-                      <div className="font-extrabold text-[#0284C7] text-xs">720 Mock Test</div>
-                      <div className="text-[10px] text-slate-500 font-medium">+4/-1 OMR Engine</div>
+                      <div className="font-extrabold text-[#0284C7] text-xs">LiveKit &amp; DRM</div>
+                      <div className="text-[10px] text-slate-500 font-medium">Live &amp; Pre-Recorded</div>
                     </div>
                     <div className="p-2.5 rounded-xl bg-[#F8FAFC] border border-slate-200 text-center">
-                      <div className="font-extrabold text-purple-700 text-xs">Jitsi Live</div>
-                      <div className="text-[10px] text-slate-500 font-medium">WebRTC Video</div>
+                      <div className="font-extrabold text-purple-700 text-xs">Course Builder</div>
+                      <div className="text-[10px] text-slate-500 font-medium">Moodle Architecture</div>
                     </div>
                   </div>
 
@@ -244,7 +244,7 @@ export default function WorkPage() {
                       </div>
                       <div className="p-2.5 rounded-xl bg-white border border-slate-200/90 flex items-center justify-between shadow-2xs">
                         <span className="text-slate-700 font-bold text-[11px]">Tutor Faculty Hub</span>
-                        <span className="text-purple-700 font-extrabold text-[10px] bg-purple-50 px-2 py-0.5 rounded border border-purple-200">Jitsi Live &amp; OMR Queue</span>
+                        <span className="text-purple-700 font-extrabold text-[10px] bg-purple-50 px-2 py-0.5 rounded border border-purple-200">LiveKit &amp; DRM Vault</span>
                       </div>
                       <div className="p-2.5 rounded-xl bg-white border border-slate-200/90 flex items-center justify-between shadow-2xs">
                         <span className="text-slate-700 font-bold text-[11px]">Learner &amp; Parent Hub</span>
