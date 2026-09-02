@@ -19,7 +19,7 @@ export default function ProductsPage() {
           {/* ══════════════════════════════════════════════════════════
               HEADER SECTION — EXECUTIVE PRODUCTS HERO
           ══════════════════════════════════════════════════════════ */}
-          <header className="text-center w-full max-w-5xl mx-auto mb-8 sm:mb-12">
+          <header className="text-center w-full max-w-full mx-auto mb-8 sm:mb-12">
             <div className="flex justify-center mb-5">
               <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-xs sm:text-sm font-extrabold uppercase tracking-widest text-[#2563EB] shadow-2xs">
                 <span className="w-2.5 h-2.5 rounded-full bg-[#2563EB] animate-pulse" />
@@ -34,7 +34,7 @@ export default function ProductsPage() {
               </span>
             </h1>
 
-            <p className="text-center text-sm sm:text-lg lg:text-xl font-medium leading-relaxed text-slate-600 w-full max-w-4xl mx-auto mb-6 text-justify sm:text-center">
+            <p className="text-center text-sm sm:text-lg lg:text-xl font-medium leading-relaxed text-slate-600 w-full max-w-5xl mx-auto mb-6">
               Agaran is building its own technology products to solve real problems across education, business, communication and everyday operations. Our products are designed around a simple idea: <strong className="font-extrabold text-[#0F172A]">technology should reduce unnecessary work, not create more of it.</strong>
             </p>
 
