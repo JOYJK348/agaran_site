@@ -244,6 +244,110 @@ export default function ProductsPage() {
               </div>
             </div>
           </section>
+          {/* ══════════════════════════════════════════════════════════
+              PRODUCT 03 — AI AGENT PLATFORM
+          ══════════════════════════════════════════════════════════ */}
+          <section className="scroll-mt-24" id="ai-agent-platform">
+            <div className="group block p-6 sm:p-8 lg:p-10 rounded-3xl bg-white border border-[#BFDBFE] shadow-[0_8px_35px_rgba(37,99,235,0.08)] hover:shadow-[0_22px_55px_rgba(37,99,235,0.16)] hover:border-[#2563EB] transition-all duration-300 relative overflow-hidden">
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
+                
+                {/* Left Narrative Column (7/12) */}
+                <div className="lg:col-span-7 space-y-4 sm:space-y-5">
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="text-[10.5px] sm:text-xs font-black uppercase tracking-wider text-[#2563EB] bg-[#EFF6FF] px-3.5 py-1.5 rounded-full border border-[#BFDBFE] shadow-2xs">
+                      PRODUCT 03 &bull; AI &bull; AGENTS &bull; BUSINESS OPERATIONS
+                    </span>
+                    <span className="text-xs font-black text-[#1D4ED8] bg-[#DBEAFE] px-3 py-1 rounded-full flex items-center gap-1.5 border border-[#BFDBFE] shadow-2xs">
+                      <span className="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse" />
+                      Status: Exploring Concept
+                    </span>
+                  </div>
+
+                  <h2 className="text-2xl sm:text-4xl font-black text-[#0F172A] group-hover:text-[#2563EB] transition-colors leading-tight tracking-tight">
+                    AI Agent Platform
+                  </h2>
+
+                  <p className="text-base sm:text-xl font-black bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] bg-clip-text text-transparent">
+                    A Digital Workforce for Modern Businesses.
+                  </p>
+
+                  <p className="text-xs sm:text-base text-slate-600 font-medium leading-relaxed text-left sm:text-justify">
+                    We&apos;re exploring a platform where businesses can build a team of <strong className="font-extrabold text-[#0F172A]">specialised AI agents</strong> to handle different parts of their everyday work — working alongside people, communicating with each other, and taking action across business systems with <strong className="font-extrabold text-[#2563EB]">full human oversight</strong>.
+                  </p>
+
+                  {/* Feature Highlights Grid */}
+                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-1 text-xs">
+                    <div className="p-3.5 rounded-2xl bg-[#EFF6FF] border border-[#BFDBFE] shadow-2xs hover:scale-[1.02] transition-transform">
+                      <div className="font-black text-[#2563EB] flex items-center gap-1.5 text-xs sm:text-sm">
+                        <span className="text-emerald-500 font-bold">✓</span> Multi-Agent Team
+                      </div>
+                      <div className="text-[11px] font-bold text-slate-500 mt-1">CEO, Sales, Support, Ops &amp; HR</div>
+                    </div>
+                    <div className="p-3.5 rounded-2xl bg-blue-50 border border-blue-200 shadow-2xs hover:scale-[1.02] transition-transform">
+                      <div className="font-black text-[#2563EB] flex items-center gap-1.5 text-xs sm:text-sm">
+                        <span className="text-emerald-500 font-bold">✓</span> Inter-Agent Collab
+                      </div>
+                      <div className="text-[11px] font-bold text-slate-500 mt-1">Agents coordinate workflows</div>
+                    </div>
+                    <div className="p-3.5 rounded-2xl bg-sky-50 border border-sky-200 shadow-2xs hover:scale-[1.02] transition-transform">
+                      <div className="font-black text-[#0284C7] flex items-center gap-1.5 text-xs sm:text-sm">
+                        <span className="text-emerald-600 font-bold">✓</span> Human Control Layer
+                      </div>
+                      <div className="text-[11px] font-bold text-slate-500 mt-1">Approvals &amp; permission bounds</div>
+                    </div>
+                  </div>
+
+                  <div className="pt-2">
+                    <Link
+                      href="/products/ai-agent-platform"
+                      className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-2xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] hover:shadow-[0_10px_25px_rgba(37,99,235,0.3)] text-white font-black text-xs sm:text-sm transition-all duration-300 group/btn shadow-md"
+                    >
+                      <span>View Product Details</span>
+                      <span className="text-base group-hover/btn:translate-x-1 transition-transform">&rarr;</span>
+                    </Link>
+                  </div>
+                </div>
+
+                {/* Right Visual Agent Team Mockup (5/12) */}
+                <div className="lg:col-span-5">
+                  <div className="rounded-2xl bg-gradient-to-br from-[#EFF6FF] via-white to-sky-50 border border-[#BFDBFE] p-5 sm:p-6 text-slate-800 flex flex-col justify-between font-sans text-xs shadow-2xs space-y-4">
+                    <div className="flex items-center justify-between border-b border-[#BFDBFE] pb-3">
+                      <div className="flex items-center gap-2">
+                        <span className="w-2.5 h-2.5 rounded-full bg-[#2563EB]" />
+                        <span className="text-[11px] font-black text-slate-800">DIGITAL WORKFORCE ARCHITECTURE</span>
+                      </div>
+                      <span className="text-[#1D4ED8] bg-[#DBEAFE] px-2.5 py-0.5 rounded-full border border-[#BFDBFE] font-black text-[10px] uppercase">EXPLORING</span>
+                    </div>
+
+                    {/* Agent Team Matrix */}
+                    <div className="grid grid-cols-2 gap-2 text-xs">
+                      <div className="p-2.5 rounded-xl bg-white border border-[#BFDBFE] shadow-2xs">
+                        <div className="font-black text-[#2563EB]">Sales Agent</div>
+                        <div className="text-[10px] text-slate-500">Qualifies leads &amp; updates CRM</div>
+                      </div>
+                      <div className="p-2.5 rounded-xl bg-white border border-blue-200 shadow-2xs">
+                        <div className="font-black text-[#2563EB]">Knowledge Agent</div>
+                        <div className="text-[10px] text-slate-500">Searches company SOPs &amp; docs</div>
+                      </div>
+                      <div className="p-2.5 rounded-xl bg-white border border-sky-200 shadow-2xs">
+                        <div className="font-black text-[#0284C7]">Support Agent</div>
+                        <div className="text-[10px] text-slate-500">Resolves customer tickets</div>
+                      </div>
+                      <div className="p-2.5 rounded-xl bg-white border border-emerald-200 shadow-2xs">
+                        <div className="font-black text-emerald-700">Ops &amp; Finance</div>
+                        <div className="text-[10px] text-slate-500">Triggers routine workflows</div>
+                      </div>
+                    </div>
+
+                    <div className="p-3 rounded-xl bg-gradient-to-r from-[#1D4ED8] to-[#2563EB] text-white text-center font-black text-xs shadow-xs uppercase tracking-wider">
+                      Agent &rarr; AI Team &rarr; Digital Workforce
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
 
           {/* ══════════════════════════════════════════════════════════
               FINAL CALL TO ACTION

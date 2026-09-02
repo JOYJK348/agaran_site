@@ -331,8 +331,8 @@ export default function ProductWhatsAppPage() {
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm font-bold text-slate-500">
-              <Link href="/products" className="hover:text-[#2563EB] transition-colors">&larr; Back to Products</Link>
-              <Link href="/products/ai-education-platform" className="hover:text-[#2563EB] transition-colors">Previous Product: AI Education Platform &rarr;</Link>
+              <Link href="/products/ai-education-platform" className="hover:text-[#2563EB] transition-colors">&larr; Previous: AI Education Platform</Link>
+              <Link href="/products/ai-agent-platform" className="hover:text-[#2563EB] transition-colors">Next Product: AI Agent Platform &rarr;</Link>
             </div>
           </footer>
 
