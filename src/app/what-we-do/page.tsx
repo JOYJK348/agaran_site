@@ -538,9 +538,9 @@ export default function WhatWeDoPage() {
               </p>
             </Reveal>
 
-            {/* Visual Problem vs Solution Flow */}
+            {/* Visual Problem vs Solution Flow — Full Container Width */}
             <Reveal delay={0.2} className="mb-10">
-              <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-11 gap-4 items-center">
+              <div className="w-full max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-11 gap-4 items-center">
                 {/* Problem */}
                 <div className="md:col-span-5 p-5 sm:p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
                   <div className="inline-flex items-center gap-1.5 text-xs font-extrabold text-rose-600 uppercase tracking-wider mb-2">
@@ -653,9 +653,9 @@ export default function WhatWeDoPage() {
               </p>
             </Reveal>
 
-            {/* ── Visual AI Flow: Connected Neural Pipeline (UNDERSTAND -> THINK -> ACT) ── */}
+            {/* ── Visual AI Flow: Connected Neural Pipeline (UNDERSTAND -> THINK -> ACT) — Full Container Width ── */}
             <Reveal delay={0.2} className="mb-12">
-              <div className="max-w-5xl mx-auto relative">
+              <div className="w-full max-w-[1440px] mx-auto relative">
                 
                 {/* Connecting Laser Ray between Steps (Desktop) */}
                 <div className="hidden sm:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-[#2563EB]/20 via-[#2563EB] to-[#2563EB]/20 -translate-y-1/2 z-0 pointer-events-none" />
@@ -1129,9 +1129,9 @@ export default function WhatWeDoPage() {
               </p>
             </Reveal>
 
-            {/* Visual Transformation: Before vs After */}
+            {/* Visual Transformation: Before vs After — Full Container Width */}
             <Reveal delay={0.2} className="mb-10">
-              <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-11 gap-4 items-center">
+              <div className="w-full max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-11 gap-4 items-center">
                 {/* Before */}
                 <div className="md:col-span-5 p-5 rounded-2xl bg-slate-50 border border-slate-200">
                   <div className="text-xs font-black text-slate-500 uppercase tracking-wider mb-2">
@@ -1252,7 +1252,7 @@ export default function WhatWeDoPage() {
 
             {/* Visual Process Chain */}
             <Reveal delay={0.2} className="mb-10">
-              <div className="max-w-4xl mx-auto p-4 sm:p-5 rounded-2xl bg-white border border-slate-200">
+              <div className="w-full max-w-[1440px] mx-auto p-5 sm:p-6 rounded-3xl bg-white border border-slate-200 shadow-2xs">
                 <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs font-extrabold text-[#0F172A]">
                   <span className="px-3.5 py-2 rounded-xl bg-slate-100">Problem</span>
                   <span>→</span>
@@ -1384,7 +1384,7 @@ export default function WhatWeDoPage() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.35, ease: "easeOut" }}
-                className="max-w-5xl mx-auto rounded-[30px] bg-gradient-to-br from-[#EFF6FF]/80 via-white to-[#DBEAFE]/40 border border-[#BFDBFE] p-7 sm:p-10 shadow-[0_16px_50px_rgba(37,99,235,0.12)] relative overflow-hidden"
+                className="w-full max-w-[1440px] mx-auto rounded-[30px] bg-gradient-to-br from-[#EFF6FF]/80 via-white to-[#DBEAFE]/40 border border-[#BFDBFE] p-7 sm:p-10 shadow-[0_16px_50px_rgba(37,99,235,0.12)] relative overflow-hidden"
               >
                 {/* Auto-slide timer progress line (Pauses on Hover) */}
                 <motion.div
