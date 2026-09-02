@@ -150,8 +150,8 @@ export default function ProductWhatsAppPage() {
             </p>
 
             {/* How It Works 6-Step Visual Chain */}
-            <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-emerald-700 via-emerald-600 to-[#0284C7] text-white shadow-lg space-y-4 mb-6">
-              <div className="text-xs font-black uppercase tracking-widest text-emerald-200">HOW IT WORKS &bull; 6-STEP WORKFLOW</div>
+            <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] text-white shadow-lg space-y-4 mb-6">
+              <div className="text-xs font-black uppercase tracking-widest text-sky-200">HOW IT WORKS &bull; 6-STEP WORKFLOW</div>
               <div className="grid grid-cols-2 sm:grid-cols-6 gap-3 text-center text-xs font-extrabold">
                 {[
                   { step: "01", label: "Connect", sub: "WhatsApp Business" },
@@ -162,7 +162,7 @@ export default function ProductWhatsAppPage() {
                   { step: "06", label: "Improve", sub: "Update & Scale" },
                 ].map((s) => (
                   <div key={s.step} className="p-3 rounded-2xl bg-white/15 border border-white/25 space-y-1">
-                    <div className="text-[10px] font-mono text-emerald-200">{s.step}</div>
+                    <div className="text-[10px] font-mono text-sky-200">{s.step}</div>
                     <div className="text-sm font-black">{s.label}</div>
                     <div className="text-[10px] text-white/80 font-normal">{s.sub}</div>
                   </div>
@@ -314,15 +314,15 @@ export default function ProductWhatsAppPage() {
               BOTTOM NAVIGATION & CTA
           ══════════════════════════════════════════════════════════ */}
           <footer className="pt-8 border-t border-slate-200 space-y-8">
-            <div className="p-8 rounded-3xl bg-gradient-to-r from-emerald-700 via-emerald-600 to-[#0284C7] text-white text-center space-y-3">
+            <div className="p-8 rounded-3xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] text-white text-center space-y-3">
               <h2 className="text-2xl sm:text-3xl font-black">What Could Your Business Automate?</h2>
-              <p className="text-xs sm:text-sm text-emerald-100 max-w-xl mx-auto">
+              <p className="text-xs sm:text-sm text-blue-100 max-w-xl mx-auto">
                 Tell us how your business currently handles customer conversations and repetitive work. We&apos;ll explore what could be automated.
               </p>
               <div className="pt-2">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-emerald-700 font-black text-xs sm:text-sm shadow-md hover:bg-slate-50 transition-all"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-[#2563EB] font-black text-xs sm:text-sm shadow-md hover:bg-slate-50 transition-all"
                 >
                   <span>Start a Conversation</span>
                   <span>&rarr;</span>
