@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { WHAT_WE_DO_ITEMS } from "./Navbar";
 
 interface NavLink {
   label: string;
@@ -63,6 +64,19 @@ export default function MobileMenu({ isOpen, onClose, navLinks }: MobileMenuProp
     };
   }, [isOpen]);
 
+  const handleMobileItemClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    onClose();
+    const [path, hash] = href.split("#");
+    if (typeof window !== "undefined" && window.location.pathname === path && hash) {
+      e.preventDefault();
+      const elem = document.getElementById(hash);
+      if (elem) {
+        elem.scrollIntoView({ behavior: "smooth" });
+        window.history.pushState(null, "", href);
+      }
+    }
+  };
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -88,7 +102,7 @@ export default function MobileMenu({ isOpen, onClose, navLinks }: MobileMenuProp
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: -6 }}
             transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
-            className="absolute top-[calc(100%+8px)] right-0 w-72 bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-slate-200 z-50 overflow-hidden"
+            className="absolute top-[calc(100%+8px)] right-0 w-80 bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-slate-200 z-50 overflow-hidden"
           >
             {/* Brand Header with Direct Transparent Logo */}
             <div className="px-4 pt-3.5 pb-3 border-b border-slate-100 bg-transparent">
@@ -107,8 +121,9 @@ export default function MobileMenu({ isOpen, onClose, navLinks }: MobileMenuProp
             </div>
 
             {/* Nav Items */}
-            <div className="py-2 px-2">
+            <div className="py-2 px-2 max-h-[75vh] overflow-y-auto">
               {navLinks.map((link) => {
+                const isWhatWeDo = link.label.toLowerCase() === "what we do";
                 const item = linkIconStyles[link.label.toLowerCase()] || {
                   bgClass: "bg-slate-100 text-slate-600 border border-slate-200",
                   icon: (
@@ -119,17 +134,38 @@ export default function MobileMenu({ isOpen, onClose, navLinks }: MobileMenuProp
                 };
 
                 return (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    onClick={onClose}
-                    className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-semibold text-slate-700 hover:text-[#2563EB] hover:bg-slate-50 active:bg-slate-100 transition-all duration-150 group"
-                  >
-                    <span className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors duration-150 ${item.bgClass}`}>
-                      {item.icon}
-                    </span>
-                    <span>{link.label}</span>
-                  </Link>
+                  <div key={link.href} className="space-y-1">
+                    <Link
+                      href={link.href}
+                      onClick={onClose}
+                      className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-[14px] font-semibold text-slate-700 hover:text-[#2563EB] hover:bg-slate-50 active:bg-slate-100 transition-all duration-150 group"
+                    >
+                      <span className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 transition-colors duration-150 ${item.bgClass}`}>
+                        {item.icon}
+                      </span>
+                      <span>{link.label}</span>
+                    </Link>
+
+                    {/* Mobile What We Do 1-2 Word Sub-Items Grid */}
+                    {isWhatWeDo && (
+                      <div className="pl-11 pr-2 pt-0.5 pb-2 grid grid-cols-2 gap-1.5">
+                        {WHAT_WE_DO_ITEMS.map((sub) => (
+                          <Link
+                            key={sub.title}
+                            href={sub.href}
+                            onClick={(e) => handleMobileItemClick(e, sub.href)}
+                            className="p-2 rounded-xl bg-[#EFF6FF]/70 border border-[#BFDBFE]/60 hover:bg-[#EFF6FF] hover:border-[#2563EB] transition-all flex flex-col text-left group/sub"
+                          >
+                            <div className="flex items-center justify-between">
+                              <span className="text-[11px] font-black text-[#0F172A] group-hover/sub:text-[#2563EB] transition-colors">{sub.title}</span>
+                              <span className="text-[8.5px] font-mono font-extrabold text-[#2563EB]">{sub.badge}</span>
+                            </div>
+                            <span className="text-[9.5px] font-medium text-slate-500 line-clamp-1">{sub.subtext.split(",")[0]}</span>
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 );
               })}
             </div>

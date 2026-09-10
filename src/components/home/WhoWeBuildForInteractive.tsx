@@ -1,358 +1,237 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence, useInView } from "framer-motion";
-import Image from "next/image";
-import Container from "@/components/ui/Container";
-import Button from "@/components/ui/Button";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
+import Link from "next/link";
 
-const worlds = [
+// ─────────────────────────────────────────────────────────────────────────────
+// 4 COMPACT CATEGORIES DATA
+// ─────────────────────────────────────────────────────────────────────────────
+const categories = [
   {
-    id: "startups",
+    id: "businesses",
     num: "01",
-    label: "STARTUPS & BUSINESSES",
-    shortName: "FOUNDERS",
-    title: "Have an Idea? Let’s Build It.",
-    tagline: "Idea → First Version → Launch → Grow",
-    description:
-      "Start with what you need, launch it, see how people use it, and improve it as you grow.",
-    image: "/images/ecosystem/startups.png",
+    label: "BUSINESSES",
+    title: "Technology Engineered to Scale Your Business",
+    tagline: "Custom web apps, automated CRM & AI.",
+    description: "Custom web applications, automated CRM systems, and AI workflows engineered to drive revenue.",
+    badgeBg: "bg-white text-[#2563EB] border-blue-200 shadow-xs",
+    cardBg: "bg-gradient-to-b from-[#EFF6FF] via-[#F8FAFC] to-[#DBEAFE]/30",
+    cardBorder: "border-[#BFDBFE] hover:border-[#2563EB] hover:shadow-[0_16px_40px_rgba(37,99,235,0.12)]",
+    headerLine: "from-[#2563EB] via-blue-500 to-sky-400",
     accentColor: "#2563EB",
-    bgTint: "bg-blue-50/70 border-blue-200/90",
-    badgePill: "bg-[#EFF6FF] text-[#2563EB] border-[#BFDBFE]",
-    ctaText: "Build Your Idea →",
+    statusBadge: "Operational Automation & CRM Systems",
     features: [
-      "Start With the Essentials",
-      "Launch Without Overbuilding",
-      "Improve Based on Real Use",
-      "Add More as You Grow",
+      "Custom Web & Mobile Platforms",
+      "AI Agents & Automated Workflows",
+      "CRM & Business Analytics Portals",
     ],
+    cta: "Build Business Tech",
   },
   {
     id: "education",
     num: "02",
-    label: "EDUCATION & TRAINING",
-    shortName: "INSTITUTIONS",
-    title: "From Admissions to Career Guidance.",
-    tagline: "Admission → LMS → Exams → AI → Career",
-    description:
-      "We build technology that supports the complete student journey — from joining an institution to learning, assessment and finding the right path ahead.",
-    image: "/images/ecosystem/education.png",
+    label: "EDUCATION",
+    title: "Automated LMS & Digital Education Systems",
+    tagline: "Automating admissions, learning & exams.",
+    description: "Automated learning platforms (LMS), online admissions, digital exams, fee collection, and AI doubt solvers.",
+    badgeBg: "bg-white text-[#2563EB] border-blue-200 shadow-xs",
+    cardBg: "bg-gradient-to-b from-[#EFF6FF] via-[#F8FAFC] to-[#DBEAFE]/30",
+    cardBorder: "border-[#BFDBFE] hover:border-[#2563EB] hover:shadow-[0_16px_40px_rgba(37,99,235,0.12)]",
+    headerLine: "from-[#2563EB] via-blue-500 to-sky-400",
     accentColor: "#2563EB",
-    bgTint: "bg-blue-50/70 border-blue-200/90",
-    badgePill: "bg-[#EFF6FF] text-[#2563EB] border-[#BFDBFE]",
-    ctaText: "Build For Education →",
+    statusBadge: "Automated LMS & Institutional Platform",
     features: [
-      "Online Forms & Admissions",
-      "LMS & Digital Learning",
-      "Tests & Exam Management",
-      "AI Learning & Student Support",
-      "Career Guidance & Counselling",
+      "Automated Admissions & LMS Portals",
+      "Online Exams & AI Doubt Solvers",
+      "Parent Alerts & Auto Fee Portals",
     ],
+    cta: "Build Automated LMS",
   },
   {
     id: "organizations",
     num: "03",
-    label: "ORGANIZATIONS & TEAMS",
-    shortName: "ORGANIZATIONS",
-    title: "Make Everyday Work Easier.",
-    tagline: "Keep your team, tasks and information organised in one simple place.",
-    description:
-      "We build simple systems that make day-to-day work easier for your team.",
-    image: "/images/ecosystem/organizations.png",
+    label: "TEAMS & ORGANIZATIONS",
+    title: "Custom Team Software & Workflow Automation",
+    tagline: "Connecting teams & streamlining work.",
+    description: "Internal team portals, task management, cross-department data sync, and automated reporting systems.",
+    badgeBg: "bg-white text-[#2563EB] border-blue-200 shadow-xs",
+    cardBg: "bg-gradient-to-b from-[#EFF6FF] via-[#F8FAFC] to-[#DBEAFE]/30",
+    cardBorder: "border-[#BFDBFE] hover:border-[#2563EB] hover:shadow-[0_16px_40px_rgba(37,99,235,0.12)]",
+    headerLine: "from-[#2563EB] via-blue-500 to-sky-400",
     accentColor: "#2563EB",
-    bgTint: "bg-blue-50/70 border-blue-200/90",
-    badgePill: "bg-[#EFF6FF] text-[#2563EB] border-[#BFDBFE]",
-    ctaText: "Build Your Solution →",
+    statusBadge: "Team Operations & Workflow Automation",
     features: [
-      "Keep Everything Organised",
-      "Reduce Repetitive Work",
-      "Find Things Faster",
-      "Help Your Team Work Better",
+      "Internal Portals & Task Systems",
+      "Automated Workflows & Reports",
+      "Cross-Department Data Sync",
     ],
+    cta: "Build Team Software",
   },
   {
     id: "ideas",
     num: "04",
-    label: "NEW IDEAS & INNOVATIONS",
-    shortName: "CREATORS",
-    title: "Have a problem to solve? Let's find a better way to do it.",
-    tagline: "Problem → Smart Approach → Tailored Solution → Result",
-    description:
-      "Have a problem to solve? Let's find a better way to do it. We help you explore new ideas and engineer smart technology solutions designed specifically for your unique goals.",
-    image: "/images/ecosystem/ideas.png",
+    label: "IDEAS & PRODUCTS",
+    title: "MVP Development & Digital Product Engineering",
+    tagline: "Turning startup & product ideas into reality.",
+    description: "Building working MVPs, SaaS web applications, mobile apps, and scalable digital products from scratch.",
+    badgeBg: "bg-white text-[#2563EB] border-blue-200 shadow-xs",
+    cardBg: "bg-gradient-to-b from-[#EFF6FF] via-[#F8FAFC] to-[#DBEAFE]/30",
+    cardBorder: "border-[#BFDBFE] hover:border-[#2563EB] hover:shadow-[0_16px_40px_rgba(37,99,235,0.12)]",
+    headerLine: "from-[#2563EB] via-blue-500 to-sky-400",
     accentColor: "#2563EB",
-    bgTint: "bg-blue-50/70 border-blue-200/90",
-    badgePill: "bg-[#EFF6FF] text-[#2563EB] border-[#BFDBFE]",
+    statusBadge: "MVP Development & SaaS Engineering",
     features: [
-      "Custom Problem Solving",
-      "Tailored System Design",
-      "Smart Process AI & Software",
-      "Turnkey Production Delivery",
+      "Idea Concept → Working MVP",
+      "SaaS Web & Mobile App Dev",
+      "Cloud Launch & Product Scaling",
     ],
+    cta: "Build Your Product",
   },
 ];
 
+// ─────────────────────────────────────────────────────────────────────────────
+// COMPACT 4-COL RESPONSIVE GRID COMPONENT
+// ─────────────────────────────────────────────────────────────────────────────
 export default function WhoWeBuildForInteractive() {
-  const [activeIdx, setActiveIdx] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
-  const showcaseRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-60px" });
-
-  // Auto-cycle through the 4 worlds every 4.5 seconds
-  useEffect(() => {
-    if (isPaused) return;
-    const timer = setInterval(() => {
-      setActiveIdx((prev) => (prev + 1) % worlds.length);
-    }, 4500);
-    return () => clearInterval(timer);
-  }, [isPaused]);
-
-  // Handle Explicit User Click / Tap -> Smooth Auto-Scroll to Top of Showcase
-  const handleUserClick = (idx: number) => {
-    setActiveIdx(idx);
-    setTimeout(() => {
-      if (showcaseRef.current) {
-        const yOffset = -80; // offset for fixed navbar header
-        const y = showcaseRef.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({ top: y, behavior: "smooth" });
-      }
-    }, 60);
-  };
-
-  const activeWorld = worlds[activeIdx];
 
   return (
     <section
       ref={sectionRef}
       id="who-we-build-for"
-      className="relative py-6 sm:py-8 lg:py-10 bg-gradient-to-b from-white via-slate-50/60 to-white overflow-hidden w-full"
-      onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
+      className="relative py-14 sm:py-20 bg-slate-50/60 overflow-hidden w-full border-t border-slate-200/60"
     >
-      {/* Keyframes for Exact Progress Line Pause/Resume */}
-      <style jsx global>{`
-        @keyframes worldProgressFill {
-          from { width: 0%; }
-          to { width: 100%; }
-        }
-      `}</style>
+      {/* Ambient background lighting */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-blue-50/50 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(#CBD5E1_1px,transparent_1px)] [background-size:24px_24px] opacity-20 pointer-events-none" />
 
-      {/* Background Ambient Glows & Dot Mesh */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-full h-[500px] bg-[#2563EB]/10 rounded-full blur-[170px] pointer-events-none" />
-      <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:28px_28px] opacity-35 pointer-events-none" />
+      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-10 xl:px-14">
 
-      <div className="relative z-10 w-full max-w-full px-2 xs:px-3 sm:px-4 lg:px-6">
-        
-        {/* Section Header - Instantly Visible */}
-        <div className="text-center max-w-4xl mx-auto mb-8 sm:mb-10 lg:mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-4 shadow-2xs">
-            <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#2563EB] animate-pulse" />
-            <span>WHO WE BUILD FOR</span>
+        {/* Section Header */}
+        <motion.div
+          className="text-center max-w-full mx-auto mb-10 sm:mb-14"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5 }}
+        >
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] font-black uppercase tracking-widest text-[#2563EB] mb-4">
+            <span className="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse" />
+            WHO WE BUILD FOR
           </div>
-
-          <h2 className="text-[1.8rem] xs:text-[2.1rem] sm:text-4xl md:text-[2.65rem] lg:text-[2.85rem] xl:text-[3.25rem] font-extrabold lg:font-black leading-[1.22] xs:leading-[1.18] sm:leading-[1.14] lg:leading-[1.12] tracking-[-0.035em] text-slate-900">
-            From Everyday Needs{" "}
-            <span className="bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] bg-clip-text text-transparent font-extrabold lg:font-black tracking-[-0.035em]">
-              to Bigger Ideas.
+          <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-[#0F172A] tracking-tight leading-[1.12] mb-3 sm:whitespace-nowrap">
+            Different Needs.{" "}
+            <span className="bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] bg-clip-text text-transparent">
+              One Technology Partner.
             </span>
           </h2>
-
-          <p className="text-sm sm:text-base lg:text-[1.08rem] font-medium leading-relaxed text-slate-600 tracking-normal mt-4 max-w-2xl mx-auto">
-            Technology can take many forms depending on who needs it. We architect intelligent systems tailored to your specific ecosystem.
+          <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed max-w-xl mx-auto">
+            From ambitious ideas to growing businesses and learning institutions, we build custom technology around the people behind them.
           </p>
-        </div>
+        </motion.div>
 
-        {/* ════════════════════════════════════════════════════════════════
-            ACTIVE WORLD DISPLAY SHOWCASE (Image LEFT | Content RIGHT)
-        ════════════════════════════════════════════════════════════════ */}
-        <div
-          ref={showcaseRef}
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
-          onTouchStart={() => setIsPaused(true)}
-          className="relative rounded-3xl bg-white border border-slate-200/90 shadow-[0_20px_60px_rgba(0,0,0,0.05)] p-5 sm:p-8 lg:p-12 overflow-hidden scroll-mt-24 w-full"
-        >
-          <AnimatePresence mode="popLayout" initial={false}>
+        {/* 4 CARDS RESPONSIVE GRID Layout:
+            - Desktop (lg: 1024px+): 4 columns in 1 single row (grid-cols-4)
+            - Tablet (md: 768px-1023px): 2 columns (grid-cols-2)
+            - Mobile (<768px): 1 column (grid-cols-1)
+        */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 xl:gap-6">
+          {categories.map((cat, idx) => (
             <motion.div
-              key={activeWorld.id}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.25, ease: "easeOut" }}
-              className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full"
+              key={cat.id}
+              initial={{ opacity: 0, y: 24 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.45, delay: idx * 0.08 }}
+              whileHover={{ y: -5 }}
+              className={`group relative rounded-3xl ${cat.cardBg} border ${cat.cardBorder} shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col justify-between`}
             >
-              {/* Left Column: High-Res Brand 3D Image Showcase */}
-              <div className="lg:col-span-6 flex justify-center items-center order-1 lg:order-1">
-                <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden border border-slate-200/80 shadow-xl bg-gradient-to-tr from-slate-50 via-white to-blue-50/40 group">
-                  <Image
-                    src={activeWorld.image}
-                    alt={activeWorld.title}
-                    fill
-                    priority
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                    className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
-                  />
-                </div>
-              </div>
+              {/* Top Accent Line */}
+              <div className={`h-1.5 w-full bg-gradient-to-r ${cat.headerLine}`} />
 
-              {/* Right Column: World Narrative & Capabilities */}
-              <div className="lg:col-span-6 space-y-3.5 sm:space-y-5 lg:space-y-6 order-2 lg:order-2 text-left">
-                <div>
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10px] sm:text-[10.5px] font-extrabold uppercase tracking-wider text-[#2563EB] mb-2.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
-                    {activeWorld.label}
+              <div className="p-5 sm:p-6 flex flex-col flex-1 gap-4">
+
+                {/* Header: Number & Badge */}
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <span className="text-[10px] font-mono font-black text-slate-500 bg-white/90 border border-slate-200/80 px-2 py-0.5 rounded-md tracking-wider shadow-2xs">
+                      {cat.num}
+                    </span>
+                    <span className={`text-[9.5px] font-black uppercase tracking-widest px-2.5 py-0.5 rounded-full border ${cat.badgeBg}`}>
+                      {cat.label}
+                    </span>
                   </div>
+                </div>
 
-                  <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-extrabold lg:font-black text-slate-900 tracking-[-0.035em] leading-tight">
-                    {activeWorld.title}
+                {/* Title & Concise Copy */}
+                <div>
+                  <h3 className="text-base sm:text-lg font-black text-[#0F172A] tracking-tight leading-snug mb-1.5 group-hover:text-[#2563EB] transition-colors">
+                    {cat.title}
                   </h3>
+                  <p className="text-xs text-slate-600 font-medium leading-relaxed">
+                    {cat.description}
+                  </p>
                 </div>
 
-                <div className="p-3 sm:px-4 sm:py-2 rounded-xl bg-slate-50 border border-slate-200/80 text-xs sm:text-sm font-bold text-slate-700 leading-relaxed">
-                  {activeWorld.tagline}
+                {/* Status / Live Badge */}
+                <div className="bg-white/90 border border-slate-200/80 rounded-xl p-2 flex items-center gap-2 text-[10px] font-extrabold text-slate-700 shadow-2xs">
+                  <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{ backgroundColor: cat.accentColor }} />
+                  <span className="truncate">{cat.statusBadge}</span>
                 </div>
 
-                <p className="text-xs sm:text-sm lg:text-base font-medium leading-relaxed text-slate-600 tracking-normal">
-                  {activeWorld.description}
-                </p>
-
-                {/* Features Bullet List - Wrap cleanly on mobile */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 pt-1">
-                  {activeWorld.features.map((item) => (
-                    <div key={item} className="flex items-start gap-2.5 p-3 rounded-xl bg-slate-50/80 border border-slate-200/70 text-xs sm:text-[13px] font-extrabold text-slate-800 leading-snug">
-                      <span className="w-4 h-4 rounded-full bg-[#EFF6FF] text-[#2563EB] flex items-center justify-center text-[10px] font-black shrink-0 mt-0.5">✓</span>
-                      <span className="whitespace-normal break-words">{item}</span>
+                {/* Feature Tags */}
+                <div className="flex flex-col gap-1.5 mt-auto pt-1">
+                  {cat.features.map((feat) => (
+                    <div
+                      key={feat}
+                      className="flex items-center gap-2 text-[11px] font-bold text-slate-700 bg-white/70 border border-slate-200/60 px-2.5 py-1.5 rounded-lg"
+                    >
+                      <span
+                        className="w-3.5 h-3.5 rounded-full flex items-center justify-center text-[8px] font-black text-white shrink-0"
+                        style={{ backgroundColor: cat.accentColor }}
+                      >
+                        ✓
+                      </span>
+                      <span className="truncate">{feat}</span>
                     </div>
                   ))}
                 </div>
 
-                <div className="pt-2 sm:pt-3">
-                  <Button variant="primary" href="/contact" className="text-xs sm:text-sm px-7 py-3.5 rounded-xl font-bold shadow-md w-full sm:w-auto justify-center">
-                    {activeWorld.ctaText ? activeWorld.ctaText : `Build For ${activeWorld.label.split("&")[0]} →`}
-                  </Button>
+                {/* CTA Link */}
+                <div className="pt-2">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center justify-center gap-1.5 w-full py-2.5 px-4 rounded-xl font-black text-xs text-white transition-all duration-300 shadow-xs hover:shadow-md hover:scale-[1.01]"
+                    style={{ backgroundColor: cat.accentColor }}
+                  >
+                    <span>{cat.cta}</span>
+                    <span className="text-sm">→</span>
+                  </Link>
                 </div>
+
               </div>
             </motion.div>
-          </AnimatePresence>
-
-          {/* Top Showcase Blue Progress Line — Pauses at Exact Percentage on Hover & Resumes on Leave */}
-          <div className="absolute top-0 left-0 right-0 h-1 bg-slate-100">
-            <div
-              key={activeWorld.id + "-top-progress"}
-              className="h-full bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7]"
-              style={{
-                animationName: "worldProgressFill",
-                animationDuration: "4.5s",
-                animationTimingFunction: "linear",
-                animationFillMode: "forwards",
-                animationPlayState: isPaused ? "paused" : "running",
-              }}
-            />
-          </div>
+          ))}
         </div>
 
-        {/* ════════════════════════════════════════════════════════════════
-            ULTRA-RICH 3D FLOATING GLASS SEGMENT NAVIGATION DOCK
-        ════════════════════════════════════════════════════════════════ */}
-        <div
-          className="mt-6 p-2.5 sm:p-3.5 rounded-3xl bg-white/95 border border-slate-200/90 shadow-[0_15px_40px_rgba(37,99,235,0.08)] backdrop-blur-2xl w-full"
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
-        >
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 w-full">
-            {worlds.map((w, idx) => {
-              const isActive = activeIdx === idx;
-              return (
-                <motion.button
-                  key={w.id + "-rich-indicator"}
-                  onClick={() => handleUserClick(idx)}
-                  onMouseEnter={() => setIsPaused(true)}
-                  onMouseLeave={() => setIsPaused(false)}
-                  whileHover={{ y: -2 }}
-                  whileTap={{ scale: 0.97 }}
-                  className={`relative p-3 sm:p-4 rounded-2xl transition-all duration-300 text-left cursor-pointer focus:outline-none overflow-hidden ${
-                    isActive
-                      ? "bg-gradient-to-b from-white via-blue-50/80 to-white border-2 border-[#2563EB] shadow-md shadow-blue-500/10 scale-[1.02]"
-                      : "bg-slate-50/80 border border-slate-200/80 hover:bg-white hover:border-blue-200"
-                  }`}
-                >
-                  {/* Header Row: Monospace Step Pill + Live Pulse */}
-                  <div className="flex items-center justify-between mb-1.5">
-                    <span
-                      className={`text-[9.5px] font-mono font-black tracking-widest px-2 py-0.5 rounded-md border ${
-                        isActive
-                          ? "bg-[#EFF6FF] text-[#2563EB] border-[#BFDBFE]"
-                          : "bg-slate-200/70 text-slate-500 border-slate-300/60"
-                      }`}
-                    >
-                      {w.num}
-                    </span>
-
-                    {isActive && (
-                      <div className="flex items-center gap-1">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-ping" />
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Step Short Title */}
-                  <div
-                    className={`text-[11px] sm:text-xs font-black uppercase tracking-wider truncate mb-2.5 ${
-                      isActive ? "text-[#2563EB]" : "text-slate-700"
-                    }`}
-                  >
-                    {w.shortName}
-                  </div>
-
-                  {/* Step Segment Fill Bar — Pauses at Exact Percentage on Hover & Resumes on Leave */}
-                  <div className="w-full h-1.5 rounded-full bg-slate-200/90 overflow-hidden">
-                    {isActive ? (
-                      <div
-                        key={activeWorld.id + "-nav-fill"}
-                        className="h-full bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] rounded-full"
-                        style={{
-                          animationName: "worldProgressFill",
-                          animationDuration: "4.5s",
-                          animationTimingFunction: "linear",
-                          animationFillMode: "forwards",
-                          animationPlayState: isPaused ? "paused" : "running",
-                        }}
-                      />
-                    ) : idx < activeIdx ? (
-                      <div className="h-full bg-[#2563EB] rounded-full" />
-                    ) : null}
-                  </div>
-                </motion.button>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* ── INCLUSIVE BOTTOM BANNER ── */}
+        {/* Bottom CTA Banner */}
         <motion.div
-          className="mt-10 sm:mt-14 p-6 sm:p-8 lg:p-10 rounded-3xl bg-gradient-to-r from-blue-50/80 via-white to-indigo-50/80 border border-blue-200/80 text-center relative overflow-hidden shadow-xs w-full"
+          className="mt-10 sm:mt-14 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#EFF6FF] via-white to-[#F0F9FF] border border-[#BFDBFE] text-center relative overflow-hidden shadow-xs"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.3 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <div className="max-w-2xl mx-auto space-y-3 relative z-10">
-            <div className="text-xs font-mono font-bold text-[#2563EB] uppercase tracking-wider">
-              Custom Technology Engineering
-            </div>
-            <h4 className="text-lg sm:text-xl lg:text-2xl font-extrabold lg:font-black text-slate-900 tracking-tight">
-              Not seeing your exact category here?
+          <div className="relative z-10 max-w-xl mx-auto space-y-3">
+            <h4 className="text-lg sm:text-xl font-black text-[#0F172A] tracking-tight">
+              Have a vision in mind? Let&apos;s build the technology behind it.
             </h4>
-            <p className="text-xs sm:text-sm lg:text-base font-medium text-slate-600">
-              That&apos;s okay. We build custom technology solutions tailored specifically to your unique workflow.
-            </p>
-            <div className="pt-2">
-              <Button variant="secondary" href="/contact" className="text-xs sm:text-sm px-6 py-3 rounded-xl font-bold bg-white border-slate-200 hover:border-blue-300">
-                Tell Us What You&apos;re Building →
-              </Button>
-            </div>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] text-white font-black text-xs sm:text-sm hover:shadow-[0_10px_25px_rgba(37,99,235,0.25)] hover:scale-[1.02] transition-all duration-300"
+            >
+              Build Your Solution
+              <span className="text-base">→</span>
+            </Link>
           </div>
         </motion.div>
 
@@ -360,3 +239,4 @@ export default function WhoWeBuildForInteractive() {
     </section>
   );
 }
+

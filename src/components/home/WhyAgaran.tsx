@@ -17,9 +17,17 @@ const pillars = [
     color: "#2563EB",
     colorLight: "#EFF6FF",
     colorBorder: "#BFDBFE",
+    activeBadge: "bg-gradient-to-br from-[#1D4ED8] via-[#2563EB] to-[#0284C7] text-white shadow-[0_10px_25px_rgba(37,99,235,0.35)] ring-4 ring-blue-100",
+    inactiveBadge: "bg-blue-50/90 text-[#2563EB] border border-blue-200 group-hover:bg-blue-100/70",
     icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a6 6 0 00-2.39 2.24" />
+      <svg className="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19 4L20 2L21 4L23 5L21 6L20 8L19 6L17 5L19 4Z" fill="currentColor" opacity="0.9" />
+        <path d="M4.5 19.5C4.5 19.5 5.5 15 9 11.5L12.5 15C9 18.5 4.5 19.5 4.5 19.5Z" fill="currentColor" opacity="0.2" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M9 11.5C11.5 9 15.5 5 19.5 4.5C19 8.5 15 12.5 12.5 15L9 11.5Z" fill="currentColor" opacity="0.15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="14.5" cy="9.5" r="1.75" stroke="currentColor" strokeWidth="1.8" fill="currentColor" fillOpacity="0.4" />
+        <path d="M6 14.5L3.5 16.5L4.5 19.5L7.5 18.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M9.5 18L5.5 19.5L7.5 15.5" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M3 21L5 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" opacity="0.6" />
       </svg>
     ),
     screenContent: {
@@ -35,7 +43,7 @@ const pillars = [
   {
     id: "focus",
     num: "02",
-    title: "Pay Only for What You Use",
+    title: "Build Exactly What You Need",
     subtitle: "Simple, Clean & Easy to Use",
     description:
       "We don't overload your app with confusing extras you'll never use. We focus only on what helps your business run smoothly.",
@@ -43,9 +51,16 @@ const pillars = [
     color: "#2563EB",
     colorLight: "#EFF6FF",
     colorBorder: "#BFDBFE",
+    activeBadge: "bg-gradient-to-br from-[#1D4ED8] via-[#2563EB] to-[#0284C7] text-white shadow-[0_10px_25px_rgba(37,99,235,0.35)] ring-4 ring-blue-100",
+    inactiveBadge: "bg-blue-50/90 text-[#2563EB] border border-blue-200 group-hover:bg-blue-100/70",
     icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+      <svg className="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M6 3.5H18L22 9.5L12 21.5L2 9.5L6 3.5Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M2 9.5H22" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M12 21.5L7.5 9.5L10.5 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M12 21.5L16.5 9.5L13.5 3.5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M7.5 9.5L12 21.5L16.5 9.5H7.5Z" fill="currentColor" opacity="0.25" />
+        <circle cx="12" cy="6" r="1" fill="currentColor" opacity="0.8" />
       </svg>
     ),
     screenContent: {
@@ -69,9 +84,14 @@ const pillars = [
     color: "#2563EB",
     colorLight: "#EFF6FF",
     colorBorder: "#BFDBFE",
+    activeBadge: "bg-gradient-to-br from-[#1D4ED8] via-[#2563EB] to-[#0284C7] text-white shadow-[0_10px_25px_rgba(37,99,235,0.35)] ring-4 ring-blue-100",
+    inactiveBadge: "bg-blue-50/90 text-[#2563EB] border border-blue-200 group-hover:bg-blue-100/70",
     icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+      <svg className="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2.75V4.25M12 19.75V21.25M4.25 12H2.75M21.25 12H19.75M6.5 6.5L5.4 5.4M18.6 18.6L17.5 17.5M17.5 6.5L18.6 5.4M5.4 18.6L6.5 17.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" opacity="0.5" />
+        <circle cx="12" cy="12" r="7.5" stroke="currentColor" strokeWidth="1.8" strokeDasharray="3 3" opacity="0.4" />
+        <path d="M13.5 2.5L4.5 13H12L10.5 21.5L19.5 11H12L13.5 2.5Z" fill="currentColor" opacity="0.25" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="18" cy="4.5" r="1" fill="currentColor" />
       </svg>
     ),
     screenContent: {
@@ -95,9 +115,14 @@ const pillars = [
     color: "#2563EB",
     colorLight: "#EFF6FF",
     colorBorder: "#BFDBFE",
+    activeBadge: "bg-gradient-to-br from-[#1D4ED8] via-[#2563EB] to-[#0284C7] text-white shadow-[0_10px_25px_rgba(37,99,235,0.35)] ring-4 ring-blue-100",
+    inactiveBadge: "bg-blue-50/90 text-[#2563EB] border border-blue-200 group-hover:bg-blue-100/70",
     icon: (
-      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+      <svg className="w-6 h-6 shrink-0" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 3C16.5 3 20 4.5 20 7.5V13C20 17.5 15.5 20.5 12 21.5C8.5 20.5 4 17.5 4 13V7.5C4 4.5 7.5 3 12 3Z" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" fill="currentColor" fillOpacity="0.12" />
+        <path d="M8 15L11 12L13.5 14.5L17 9.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M14 9.5H17V12.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        <circle cx="12" cy="7.5" r="1.25" fill="currentColor" />
       </svg>
     ),
     screenContent: {
@@ -214,7 +239,7 @@ function PhoneMockup({ current, isPaused }: { current: typeof pillars[0]; isPaus
                       className="flex items-center justify-between px-3 py-2.5 rounded-xl bg-white/5"
                     >
                       <span className="text-[11px] font-medium text-slate-300">{item.label}</span>
-                      <span className="text-[9.5px] font-mono font-bold" style={{ color: item.highlight ? "#34d399" : "#64748b" }}>
+                      <span className="text-[9.5px] font-mono font-bold" style={{ color: item.highlight ? "#60a5fa" : "#64748b" }}>
                         {item.status}
                       </span>
                     </motion.div>
@@ -296,11 +321,11 @@ export default function WhyAgaran() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[260px] bg-[#2563EB]/7 rounded-full blur-[120px] pointer-events-none" />
 
       {/* Comfortably Positioned Container */}
-      <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-12 xl:px-16">
+      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-10 xl:px-14">
 
         {/* Section Header */}
         <motion.div
-          className="text-center max-w-5xl xl:max-w-6xl mx-auto mb-10 sm:mb-14"
+          className="text-center max-w-full mx-auto mb-10 sm:mb-14"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.55, ease: "easeOut" }}
@@ -369,10 +394,11 @@ export default function WhyAgaran() {
                   }}
                 >
                   <span
-                    className="w-8 h-8 rounded-xl flex items-center justify-center"
-                    style={{ backgroundColor: isActive ? "#2563EB" : "#e2e8f0" }}
+                    className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 transition-all duration-300 ${
+                      isActive ? pillar.activeBadge : pillar.inactiveBadge
+                    }`}
                   >
-                    <span style={{ color: isActive ? "#fff" : "#94a3b8" }}>{pillar.icon}</span>
+                    {pillar.icon}
                   </span>
                   <span
                     className="text-[9.5px] font-mono font-black tracking-widest"
@@ -446,7 +472,7 @@ export default function WhyAgaran() {
             DESKTOP LAYOUT (Ultra-Sleek Cardless Icon-Node Stepper with Instant Hover Freeze)
         ══════════════════════════════════════ */}
         <div
-          className="hidden lg:grid lg:grid-cols-12 gap-8 lg:gap-12 items-start max-w-6xl mx-auto"
+          className="hidden lg:grid lg:grid-cols-12 gap-8 xl:gap-12 items-start w-full"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
@@ -483,8 +509,8 @@ export default function WhyAgaran() {
                         whileTap={{ scale: 0.95 }}
                         className={`w-12 h-12 rounded-2xl flex items-center justify-center shrink-0 transition-all duration-300 ${
                           isActive
-                            ? "bg-gradient-to-br from-[#1D4ED8] to-[#2563EB] text-white shadow-[0_10px_25px_rgba(37,99,235,0.35)] scale-110 ring-4 ring-blue-100"
-                            : "bg-slate-100 text-slate-500 border border-slate-200/90 group-hover:bg-white group-hover:text-[#2563EB] group-hover:border-blue-200 shadow-2xs"
+                            ? `${pillar.activeBadge} scale-110`
+                            : `${pillar.inactiveBadge} shadow-2xs`
                         }`}
                       >
                         {pillar.icon}

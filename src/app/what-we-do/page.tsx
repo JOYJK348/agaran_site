@@ -37,66 +37,6 @@ function Reveal({
 }
 
 /* ─────────────────────────────────────────────
-   Interactive Ecosystem Categories (Section 09)
-───────────────────────────────────────────── */
-const ecosystemCategories = [
-  {
-    id: "startups",
-    label: "STARTUPS",
-    flow: "Idea → Product",
-    badge: "FOUNDERS",
-    headline: "Turn Your Idea Into a Production-Ready Product",
-    desc: "We help founders move fast without taking shortcuts. We build your initial product cleanly so it's ready for real users and scale.",
-    features: ["MVP Development", "Web & Mobile Apps", "Scalable Tech Foundation", "Rapid Iteration"],
-  },
-  {
-    id: "businesses",
-    label: "BUSINESSES",
-    flow: "Manual → Automated",
-    badge: "OPERATIONS",
-    headline: "Replace Manual Work With Streamlined Systems",
-    desc: "Stop losing hours to manual data entry, messaging, and scattered spreadsheets. We build custom software that automates daily operations.",
-    features: ["Custom Software", "WhatsApp & Workflow Automation", "Data Dashboards", "System Integration"],
-  },
-  {
-    id: "institutions",
-    label: "INSTITUTIONS",
-    flow: "Disconnected → Connected",
-    badge: "ENTERPRISE",
-    headline: "Unify Scattered Systems Into One Platform",
-    desc: "Connect legacy software, databases, and departments into a single secure interface that keeps everyone aligned.",
-    features: ["Unified Dashboards", "API Integrations", "Secure Access Control", "Legacy Upgrades"],
-  },
-  {
-    id: "teams",
-    label: "TEAMS",
-    flow: "Scattered → Organised",
-    badge: "COLLABORATION",
-    headline: "Give Your Team Clear Tools That Save Time",
-    desc: "Empower your team with intuitive internal tools, approval workflows, and AI assistants designed for their exact daily tasks.",
-    features: ["Internal Management Tools", "Approval Workflows", "Team AI Assistants", "Automated Reports"],
-  },
-  {
-    id: "education",
-    label: "EDUCATION",
-    flow: "Traditional → Digital",
-    badge: "EDTECH",
-    headline: "Digitalize The Complete Learning & Administrative Journey",
-    desc: "From admissions to assessments, AI support, and student portals — we build modern platforms for schools, colleges & EdTechs.",
-    features: ["Admissions Portals", "LMS & Course Hubs", "Online Exam Systems", "Student & Parent Apps"],
-  },
-  {
-    id: "ai",
-    label: "AI SYSTEMS",
-    flow: "Information → Intelligence",
-    badge: "INTELLIGENCE",
-    headline: "Turn Unstructured Information Into Actionable Intelligence",
-    desc: "We build AI systems that read your documents, answer customer questions accurately, and perform tasks automatically.",
-    features: ["Knowledge Search AI", "Custom AI Assistants", "Document Intelligence", "Process Automation"],
-  },
-];
-
-/* ─────────────────────────────────────────────
    Dynamic Mobile Swipe Dots Indicator Component
 ───────────────────────────────────────────── */
 function CarouselDots({
@@ -126,8 +66,6 @@ function CarouselDots({
 
 export default function WhatWeDoPage() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [activeCategory, setActiveCategory] = useState("startups");
-  const [isPaused, setIsPaused] = useState(false);
 
   /* Dynamic Carousel Scroll States for Mobile */
   const [softIdx, setSoftIdx] = useState(0);
@@ -153,21 +91,6 @@ export default function WhatWeDoPage() {
     );
     setIdx(calculatedIndex);
   };
-
-  /* Auto-slide Ecosystem categories every 4.5 seconds (Pauses on Hover) */
-  useEffect(() => {
-    if (isPaused) return;
-
-    const timer = setInterval(() => {
-      setActiveCategory((prev) => {
-        const currIndex = ecosystemCategories.findIndex((c) => c.id === prev);
-        const nextIndex = (currIndex + 1) % ecosystemCategories.length;
-        return ecosystemCategories[nextIndex].id;
-      });
-    }, 4500);
-
-    return () => clearInterval(timer);
-  }, [isPaused]);
 
   /* Particle constellation background (desktop) */
   useEffect(() => {
@@ -236,8 +159,6 @@ export default function WhatWeDoPage() {
       cancelAnimationFrame(animId);
     };
   }, []);
-
-  const selectedCategoryData = ecosystemCategories.find((c) => c.id === activeCategory) || ecosystemCategories[0];
 
   return (
     <>
@@ -370,7 +291,7 @@ export default function WhatWeDoPage() {
                     { title: "AUTOMATION", tag: "Workflows • Operations", badge: "WORKFLOW", href: "#business-automation" },
                     { title: "EDUCATION", tag: "Learning • EdTech", badge: "EDTECH", href: "#education-technology" },
                     { title: "CLOUD", tag: "Infrastructure • Scale", badge: "INFRASTRUCTURE", href: "#cloud-infrastructure" },
-                    { title: "REFINEMENT", tag: "Upgrade • Modernise", badge: "EXISTING SYSTEM", href: "#existing-systems" },
+                    { title: "MAINTENANCE", tag: "Upgrade • Modernise", badge: "EXISTING SYSTEM", href: "#existing-systems" },
                   ].map((node, i) => (
                     <motion.a
                       key={node.title}
@@ -462,7 +383,7 @@ export default function WhatWeDoPage() {
                     { title: "AUTOMATION", tag: "Workflows • Integrations • Operations", badge: "WORKFLOW", href: "#business-automation" },
                     { title: "EDUCATION", tag: "Learning • Assessment • Institution", badge: "EDTECH", href: "#education-technology" },
                     { title: "CLOUD", tag: "Infrastructure • Security • Scale", badge: "INFRASTRUCTURE", href: "#cloud-infrastructure" },
-                    { title: "REFINEMENT", tag: "Upgrade • Modernise • Scale", badge: "EXISTING SYSTEM", href: "#existing-systems" },
+                    { title: "MAINTENANCE", tag: "Upgrade • Modernise • Scale", badge: "EXISTING SYSTEM", href: "#existing-systems" },
                   ].map((node, i) => (
                     <motion.a
                       key={node.title}
@@ -592,15 +513,6 @@ export default function WhatWeDoPage() {
                     
                     {/* Low-opacity diagonal tech stripe overlay */}
                     <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(37,99,235,0.03)_25%,transparent_25%,transparent_50%,rgba(37,99,235,0.03)_50%,rgba(37,99,235,0.03)_75%,transparent_75%,transparent)] [background-size:20px_20px] pointer-events-none" />
-
-                    {/* Rich Low-Opacity Agaran Watermark Vector SVG */}
-                    <div className="absolute -bottom-6 -right-6 w-36 h-36 opacity-[0.12] group-hover:opacity-[0.25] group-hover:scale-110 transition-all duration-500 pointer-events-none z-0">
-                      <svg viewBox="0 0 100 100" fill="none" stroke="#2563EB" strokeWidth="2">
-                        <circle cx="50" cy="50" r="42" strokeDasharray="5 3" />
-                        <polygon points="50,16 84,78 16,78" />
-                        <circle cx="50" cy="50" r="12" fill="#2563EB" opacity="0.3" />
-                      </svg>
-                    </div>
 
                     <div className="relative z-10">
                       <h3 className="text-base sm:text-lg font-extrabold text-[#0F172A] mb-2.5 group-hover:text-[#2563EB] transition-colors">
@@ -755,7 +667,7 @@ export default function WhatWeDoPage() {
 
             {/* Capabilities Swipe Carousel */}
             <div
-              onScroll={(e) => handleCarouselScroll(e, 7, setAiIdx)}
+              onScroll={(e) => handleCarouselScroll(e, 8, setAiIdx)}
               className="flex md:grid md:grid-cols-3 lg:grid-cols-4 overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 pb-4 md:pb-0 mb-4 -mx-4 px-4 sm:mx-0 sm:px-0"
             >
               {[
@@ -765,6 +677,7 @@ export default function WhatWeDoPage() {
                 { title: "Knowledge Systems", desc: "Instant semantic search across all your company documents and files." },
                 { title: "AI Search", desc: "Smart search tools that understand meaning, not just exact keywords." },
                 { title: "AI Content Systems", desc: "Automated recommendations and content generation tailored to users." },
+                { title: "AI Document Intelligence", desc: "Automatically parse, summarize, and extract data from complex PDFs & invoices." },
                 { title: "AI Integrations", desc: "Plug smart AI capabilities seamlessly into your existing software tools." },
               ].map((aiItem, i) => (
                 <Reveal key={aiItem.title} delay={0.08 + i * 0.05} className="snap-center shrink-0 w-[80vw] sm:w-[290px] md:w-auto">
@@ -774,15 +687,6 @@ export default function WhatWeDoPage() {
                     
                     {/* Low-opacity diagonal tech stripe overlay */}
                     <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(37,99,235,0.03)_25%,transparent_25%,transparent_50%,rgba(37,99,235,0.03)_50%,rgba(37,99,235,0.03)_75%,transparent_75%,transparent)] [background-size:20px_20px] pointer-events-none" />
-
-                    {/* Low-opacity Watermark AI Neural SVG */}
-                    <div className="absolute -bottom-6 -right-6 w-36 h-36 opacity-[0.12] group-hover:opacity-[0.25] group-hover:scale-110 transition-all duration-500 pointer-events-none z-0">
-                      <svg viewBox="0 0 100 100" fill="none" stroke="#2563EB" strokeWidth="2">
-                        <path d="M20,50 Q50,16 80,50 Q50,84 20,50 Z" strokeDasharray="4 3" />
-                        <circle cx="50" cy="50" r="14" fill="#2563EB" opacity="0.3" />
-                        <line x1="50" y1="16" x2="50" y2="84" />
-                      </svg>
-                    </div>
 
                     <div className="relative z-10">
                       <h3 className="text-sm sm:text-base font-extrabold text-[#0F172A] mb-2 group-hover:text-[#2563EB] transition-colors">
@@ -803,7 +707,7 @@ export default function WhatWeDoPage() {
             </div>
 
             {/* Mobile Swipe Dot Indicator */}
-            <CarouselDots total={7} activeIndex={aiIdx} />
+            <CarouselDots total={8} activeIndex={aiIdx} />
           </div>
         </section>
 
@@ -878,7 +782,7 @@ export default function WhatWeDoPage() {
 
             {/* Automation Examples Grid / Swipe */}
             <div
-              onScroll={(e) => handleCarouselScroll(e, 7, setAutoIdx)}
+              onScroll={(e) => handleCarouselScroll(e, 8, setAutoIdx)}
               className="flex md:grid md:grid-cols-3 lg:grid-cols-4 overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 pb-4 md:pb-0 mb-4 -mx-4 px-4 sm:mx-0 sm:px-0"
             >
               {[
@@ -887,6 +791,7 @@ export default function WhatWeDoPage() {
                 { title: "Instant Notifications", desc: "Trigger automated email, SMS, and push alerts based on live user activity." },
                 { title: "Data Entry Automation", desc: "Automatically capture and structure incoming data directly into your database." },
                 { title: "Approval Workflows", desc: "Streamline multi-step manager approvals and document sign-offs with one click." },
+                { title: "Report & Invoice Automation", desc: "Automatically generate and email daily sales reports, invoices, and audit summaries." },
                 { title: "System Integration", desc: "Connect scattered tools so data syncs automatically across all your software." },
                 { title: "Process Automation", desc: "End-to-end automation of core business operations tailored to your business rules." },
               ].map((auto, i) => (
@@ -897,15 +802,6 @@ export default function WhatWeDoPage() {
                     
                     {/* Low-opacity diagonal tech stripe overlay */}
                     <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(37,99,235,0.03)_25%,transparent_25%,transparent_50%,rgba(37,99,235,0.03)_50%,rgba(37,99,235,0.03)_75%,transparent_75%,transparent)] [background-size:20px_20px] pointer-events-none" />
-
-                    {/* Low-opacity Watermark Automation Vector SVG */}
-                    <div className="absolute -bottom-6 -right-6 w-36 h-36 opacity-[0.12] group-hover:opacity-[0.25] group-hover:scale-110 transition-all duration-500 pointer-events-none z-0">
-                      <svg viewBox="0 0 100 100" fill="none" stroke="#2563EB" strokeWidth="2">
-                        <circle cx="50" cy="50" r="40" strokeDasharray="4 3" />
-                        <polygon points="50,20 80,75 20,75" strokeDasharray="3 3" />
-                        <circle cx="50" cy="50" r="10" fill="#2563EB" opacity="0.3" />
-                      </svg>
-                    </div>
 
                     <div className="relative z-10">
                       <h3 className="text-sm sm:text-base font-extrabold text-[#0F172A] mb-2 group-hover:text-[#2563EB] transition-colors">
@@ -926,7 +822,7 @@ export default function WhatWeDoPage() {
             </div>
 
             {/* Mobile Swipe Dot Indicator */}
-            <CarouselDots total={7} activeIndex={autoIdx} />
+            <CarouselDots total={8} activeIndex={autoIdx} />
           </div>
         </section>
 
@@ -982,15 +878,6 @@ export default function WhatWeDoPage() {
                     
                     {/* Low-opacity diagonal tech stripe overlay */}
                     <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(37,99,235,0.03)_25%,transparent_25%,transparent_50%,rgba(37,99,235,0.03)_50%,rgba(37,99,235,0.03)_75%,transparent_75%,transparent)] [background-size:20px_20px] pointer-events-none" />
-
-                    {/* Low-opacity Watermark EdTech Vector SVG */}
-                    <div className="absolute -bottom-6 -right-6 w-36 h-36 opacity-[0.12] group-hover:opacity-[0.25] group-hover:scale-110 transition-all duration-500 pointer-events-none z-0">
-                      <svg viewBox="0 0 100 100" fill="none" stroke="#2563EB" strokeWidth="2">
-                        <polygon points="50,20 85,40 50,60 15,40" strokeDasharray="4 2" />
-                        <line x1="85" y1="40" x2="85" y2="70" />
-                        <circle cx="50" cy="40" r="10" fill="#2563EB" opacity="0.3" />
-                      </svg>
-                    </div>
 
                     <div className="relative z-10">
                       <h3 className="text-sm sm:text-base font-extrabold text-[#0F172A] mb-2 group-hover:text-[#2563EB] transition-colors">
@@ -1053,10 +940,10 @@ export default function WhatWeDoPage() {
               className="flex md:grid md:grid-cols-3 lg:grid-cols-4 overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 pb-4 md:pb-0 mb-4 -mx-4 px-4 sm:mx-0 sm:px-0"
             >
               {[
-                { title: "Cloud Deployment", desc: "Automated deployment setup on AWS, Google Cloud, or Azure for maximum uptime." },
+                { title: "Cloud Deployment", desc: "Automated deployment setup on modern cloud infrastructure for maximum uptime." },
                 { title: "Database Architecture", desc: "Clean database design structured for fast queries and data integrity." },
                 { title: "Scalable Infrastructure", desc: "Systems designed to handle sudden traffic spikes without slowing down." },
-                { title: "DevOps & CI/CD Pipelines", desc: "Automated testing, building, and seamless zero-downtime deployment pipelines for fast updates." },
+                { title: "Automated Deployment Pipelines", desc: "Automated testing, building, and seamless zero-downtime pipelines for fast updates." },
                 { title: "Security & Access", desc: "Bank-grade encryption, role-based access control, and data protection." },
                 { title: "System Monitoring", desc: "24/7 automated uptime tracking and instant alert notifications." },
                 { title: "Automated Backups", desc: "Scheduled data backups ensuring your business information is never lost." },
@@ -1069,14 +956,6 @@ export default function WhatWeDoPage() {
                     
                     {/* Low-opacity diagonal tech stripe overlay */}
                     <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(37,99,235,0.03)_25%,transparent_25%,transparent_50%,rgba(37,99,235,0.03)_50%,rgba(37,99,235,0.03)_75%,transparent_75%,transparent)] [background-size:20px_20px] pointer-events-none" />
-
-                    {/* Low-opacity Watermark Cloud Vector SVG */}
-                    <div className="absolute -bottom-6 -right-6 w-36 h-36 opacity-[0.12] group-hover:opacity-[0.25] group-hover:scale-110 transition-all duration-500 pointer-events-none z-0">
-                      <svg viewBox="0 0 100 100" fill="none" stroke="#2563EB" strokeWidth="2">
-                        <path d="M25,60 Q15,60 15,45 Q15,35 30,30 Q35,15 55,20 Q70,15 75,30 Q85,35 85,50 Q85,60 70,60 Z" strokeDasharray="4 2" />
-                        <circle cx="50" cy="40" r="8" fill="#2563EB" opacity="0.3" />
-                      </svg>
-                    </div>
 
                     <div className="relative z-10">
                       <h3 className="text-sm sm:text-base font-extrabold text-[#0F172A] mb-2 group-hover:text-[#2563EB] transition-colors">
@@ -1188,15 +1067,6 @@ export default function WhatWeDoPage() {
                     {/* Low-opacity diagonal tech stripe overlay */}
                     <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(37,99,235,0.03)_25%,transparent_25%,transparent_50%,rgba(37,99,235,0.03)_50%,rgba(37,99,235,0.03)_75%,transparent_75%,transparent)] [background-size:20px_20px] pointer-events-none" />
 
-                    {/* Low-opacity Watermark System Refinement Vector SVG */}
-                    <div className="absolute -bottom-6 -right-6 w-36 h-36 opacity-[0.12] group-hover:opacity-[0.25] group-hover:scale-110 transition-all duration-500 pointer-events-none z-0">
-                      <svg viewBox="0 0 100 100" fill="none" stroke="#2563EB" strokeWidth="2">
-                        <circle cx="50" cy="50" r="35" strokeDasharray="4 2" />
-                        <line x1="50" y1="15" x2="50" y2="85" />
-                        <line x1="15" y1="50" x2="85" y2="50" />
-                      </svg>
-                    </div>
-
                     <div className="relative z-10">
                       <h3 className="text-sm sm:text-base font-extrabold text-[#0F172A] mb-2 group-hover:text-[#2563EB] transition-colors">
                         {imp.title}
@@ -1207,7 +1077,7 @@ export default function WhatWeDoPage() {
                     </div>
 
                     <div className="relative z-10 mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[10px] font-bold text-slate-400 group-hover:text-[#2563EB] transition-colors">
-                      <span className="px-2.5 py-0.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[9.5px] font-extrabold uppercase text-[#2563EB]">SYSTEM REFINEMENT</span>
+                      <span className="px-2.5 py-0.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[9.5px] font-extrabold uppercase text-[#2563EB]">SYSTEM MAINTENANCE</span>
                       <span>✓</span>
                     </div>
                   </div>
@@ -1301,164 +1171,6 @@ export default function WhatWeDoPage() {
 
             {/* Mobile Swipe Dot Indicator */}
             <CarouselDots total={4} activeIndex={thinkIdx} />
-          </div>
-        </section>
-
-        {/* ══════════════════════════════════════════════════════════
-            08  INTERACTIVE "WHAT CAN WE BUILD?" ECOSYSTEM
-        ══════════════════════════════════════════════════════════ */}
-        <section className="relative z-10 py-12 sm:py-16 px-4 sm:px-8 lg:px-16 overflow-hidden">
-          <div className="max-w-[1440px] mx-auto w-full">
-            {/* Header */}
-            <Reveal delay={0.04} className="flex justify-center">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-4">
-                <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-pulse" />
-                <span>08 &nbsp;•&nbsp; INTERACTIVE ECOSYSTEM</span>
-              </div>
-            </Reveal>
-
-            <Reveal delay={0.1}>
-              <h2 className="text-center text-[1.55rem] xs:text-[1.8rem] sm:text-3xl md:text-[2rem] lg:text-4xl xl:text-[2.4rem] font-extrabold lg:font-black leading-[1.18] tracking-[-0.035em] text-[#0F172A] mb-3 w-full max-w-[1280px] mx-auto">
-                If You Can Describe The Problem,{" "}
-                <span className="bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] bg-clip-text text-transparent">
-                  We Can Explore The Solution.
-                </span>
-              </h2>
-            </Reveal>
-
-            <Reveal delay={0.14}>
-              <p className="text-center text-sm sm:text-base lg:text-[1.05rem] font-medium leading-relaxed text-slate-600 w-full max-w-3xl mx-auto mb-8 text-justify sm:text-center">
-                Click any category below to see how Agaran turns specific operational challenges into tailored digital solutions:
-              </p>
-            </Reveal>
-
-            {/* Interactive Ecosystem Container (Hover to Pause Auto-Slide) */}
-            <div
-              onMouseEnter={() => setIsPaused(true)}
-              onMouseLeave={() => setIsPaused(false)}
-              className="relative"
-            >
-              {/* Interactive Category Selector Tile Grid (Clean 6-Tile Responsive Grid Layout!) */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-10 max-w-5xl mx-auto">
-                {ecosystemCategories.map((cat) => {
-                  const isActive = activeCategory === cat.id;
-                  return (
-                    <button
-                      key={cat.id}
-                      onClick={() => setActiveCategory(cat.id)}
-                      className={`group relative p-3.5 sm:p-4 rounded-2xl text-left transition-all duration-300 flex flex-col justify-between border cursor-pointer select-none ${
-                        isActive
-                          ? "bg-[#EFF6FF] border-[#2563EB] shadow-[0_8px_25px_rgba(37,99,235,0.15)] scale-[1.03] z-10"
-                          : "bg-white border-[#BFDBFE] hover:border-[#2563EB]/60 hover:bg-[#EFF6FF]/40 hover:-translate-y-0.5"
-                      }`}
-                    >
-                      <div className="flex items-center justify-between mb-2">
-                        <span className={`text-[8.5px] font-black uppercase tracking-wider px-2 py-0.5 rounded-full ${
-                          isActive ? "bg-[#2563EB] text-white" : "bg-[#EFF6FF] text-[#2563EB]"
-                        }`}>
-                          {cat.badge}
-                        </span>
-                        {isActive && (
-                          <span className={`w-2 h-2 rounded-full bg-[#2563EB] ${isPaused ? "opacity-60" : "animate-ping"}`} />
-                        )}
-                      </div>
-
-                      <div>
-                        <h4 className={`text-xs sm:text-sm font-black tracking-tight mb-0.5 transition-colors ${
-                          isActive ? "text-[#2563EB]" : "text-[#0F172A] group-hover:text-[#2563EB]"
-                        }`}>
-                          {cat.label}
-                        </h4>
-                        <div className="text-[10px] font-extrabold text-slate-500 leading-tight">
-                          {cat.flow}
-                        </div>
-                      </div>
-                    </button>
-                  );
-                })}
-              </div>
-
-              {/* Active Category Display Showcase Card (Ultra-Rich 2-Column Grid with Auto-Slide Progress) */}
-              <motion.div
-                key={activeCategory}
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.35, ease: "easeOut" }}
-                className="w-full max-w-[1440px] mx-auto rounded-[30px] bg-gradient-to-br from-[#EFF6FF]/80 via-white to-[#DBEAFE]/40 border border-[#BFDBFE] p-7 sm:p-10 shadow-[0_16px_50px_rgba(37,99,235,0.12)] relative overflow-hidden"
-              >
-                {/* Auto-slide timer progress line (Pauses on Hover) */}
-                <motion.div
-                  key={`progress-${activeCategory}-${isPaused ? 'paused' : 'active'}`}
-                  initial={{ scaleX: 0 }}
-                  animate={{ scaleX: isPaused ? 1 : 1 }}
-                  transition={{ duration: isPaused ? 0 : 4.5, ease: "linear" }}
-                  className={`absolute top-0 left-0 right-0 h-1 origin-left pointer-events-none transition-colors ${
-                    isPaused ? "bg-amber-400 opacity-70" : "bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7]"
-                  }`}
-                />
-
-              {/* Ambient Glow Orb */}
-              <div className="absolute -top-12 -right-12 w-48 h-48 bg-[#2563EB]/10 rounded-full blur-2xl pointer-events-none" />
-              
-              {/* Tech Mesh Pattern Overlay */}
-              <div className="absolute inset-0 bg-[radial-gradient(#2563EB_1px,transparent_1px)] [background-size:20px_20px] opacity-[0.03] pointer-events-none" />
-
-              <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative z-10">
-                {/* Left Column: Problem & Transformation Blueprint */}
-                <div className="md:col-span-7">
-                  <div className="flex items-center gap-2.5 mb-3 flex-wrap">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#2563EB] text-white text-[9.5px] font-black uppercase tracking-widest shadow-2xs">
-                      <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-                      TRANSFORMATION: {selectedCategoryData.flow}
-                    </span>
-                    <span className="px-2.5 py-0.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[9.5px] font-black uppercase text-[#2563EB]">
-                      {selectedCategoryData.badge}
-                    </span>
-                  </div>
-
-                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-black text-[#0F172A] tracking-tight leading-snug mb-3">
-                    {selectedCategoryData.headline}
-                  </h3>
-
-                  <p className="text-xs sm:text-sm font-medium leading-relaxed text-slate-600 text-justify mb-6">
-                    {selectedCategoryData.desc}
-                  </p>
-
-                  <div className="flex items-center gap-2 text-xs font-extrabold text-[#2563EB]">
-                    <span>⚡ Engineered by Agaran Core</span>
-                    <span>&bull;</span>
-                    <span>Production Grade</span>
-                  </div>
-                </div>
-
-                {/* Right Column: Key Solution Capabilities & CTA */}
-                <div className="md:col-span-5 p-6 rounded-2xl bg-white/90 border border-[#BFDBFE] shadow-sm flex flex-col justify-between h-full">
-                  <div>
-                    <div className="text-[10px] font-black uppercase tracking-widest text-[#2563EB] mb-3">
-                      AGARAN SOLUTION BLUEPRINT
-                    </div>
-
-                    <div className="space-y-2.5 mb-6">
-                      {selectedCategoryData.features.map((feat) => (
-                        <div key={feat} className="p-3 rounded-xl bg-[#EFF6FF]/70 border border-[#BFDBFE] flex items-center justify-between shadow-2xs">
-                          <span className="text-xs font-extrabold text-[#0F172A]">{feat}</span>
-                          <span className="w-5 h-5 rounded-full bg-[#2563EB] text-white flex items-center justify-center text-[10px] font-black shrink-0">✓</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center justify-center gap-2 text-xs sm:text-sm px-6 py-3.5 rounded-xl font-extrabold text-white bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] hover:shadow-[0_8px_25px_rgba(37,99,235,0.3)] transition-all shadow-md w-full"
-                  >
-                    <span>Discuss Your Solution</span>
-                    <span>&rarr;</span>
-                  </Link>
-                </div>
-              </div>
-            </motion.div>
-            </div>
           </div>
         </section>
 

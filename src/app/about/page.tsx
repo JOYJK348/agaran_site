@@ -278,15 +278,15 @@ export default function AboutPage() {
         {/* ══════════════════════════════════════════════════════════
             02  OUR STORY (Interactive Split Journey Showcase)
         ══════════════════════════════════════════════════════════ */}
-        <section className="relative z-10 py-10 sm:py-16 px-4 sm:px-8 lg:px-16 overflow-hidden bg-gradient-to-b from-white via-[#EFF6FF]/30 to-white">
+        <section className="relative z-10 py-6 sm:py-10 px-4 sm:px-8 lg:px-12 xl:px-16 overflow-hidden bg-gradient-to-b from-white via-[#EFF6FF]/30 to-white">
           {/* Background ambient glow + dot pattern */}
           <div className="absolute inset-0 bg-[radial-gradient(#BFDBFE_1px,transparent_1px)] [background-size:28px_28px] opacity-40 pointer-events-none" />
           <div className="absolute -top-24 right-0 w-[500px] h-[500px] rounded-full bg-[#2563EB]/10 blur-[120px] pointer-events-none" />
 
-          <div className="relative max-w-[1280px] mx-auto">
+          <div className="relative max-w-[1400px] mx-auto w-full">
             {/* Section Badge */}
             <Reveal delay={0.04} className="flex justify-center">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-4">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-2.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-pulse" />
                 <span>02 &nbsp;•&nbsp; OUR STORY</span>
               </div>
@@ -294,7 +294,7 @@ export default function AboutPage() {
 
             {/* Section H2 */}
             <Reveal delay={0.1}>
-              <h2 className="text-center text-[1.55rem] xs:text-[1.8rem] sm:text-3xl md:text-[2rem] lg:text-4xl xl:text-[2.4rem] font-extrabold lg:font-black leading-[1.18] tracking-[-0.035em] text-[#0F172A] mb-8 max-w-3xl mx-auto">
+              <h2 className="text-center text-[1.55rem] xs:text-[1.8rem] sm:text-3xl md:text-[2rem] lg:text-4xl xl:text-[2.4rem] font-extrabold lg:font-black leading-[1.18] tracking-[-0.035em] text-[#0F172A] mb-4 max-w-3xl mx-auto">
                 Why Agaran{" "}
                 <span className="bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] bg-clip-text text-transparent font-extrabold lg:font-black tracking-[-0.035em]">
                   Exists
@@ -303,10 +303,10 @@ export default function AboutPage() {
             </Reveal>
 
             {/* Interactive Split Grid */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-stretch mb-8">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-stretch mb-4">
               
               {/* Left Column: Interactive 3-Stage Story Navigation (7 Cols) — Touch-Swipe on Mobile */}
-              <div className="lg:col-span-7 flex lg:flex-col overflow-x-auto snap-x snap-mandatory scrollbar-none gap-3 pb-3 lg:pb-0 -mx-4 px-4 sm:mx-0 sm:px-0">
+              <div className="lg:col-span-7 flex lg:flex-col overflow-x-auto snap-x snap-mandatory scrollbar-none gap-3.5 pb-3 lg:pb-0 -mx-4 px-4 sm:mx-0 sm:px-0">
                 {[
                   {
                     num: "01",
@@ -346,13 +346,16 @@ export default function AboutPage() {
                   },
                 ].map((stage, idx) => (
                   <Reveal key={stage.num} delay={0.12 + idx * 0.08} className="snap-center shrink-0 w-[84vw] sm:w-[340px] lg:w-auto">
-                    <div className="group relative p-5 sm:p-6 rounded-[22px] bg-white border border-slate-200/90 shadow-[0_4px_20px_rgba(37,99,235,0.06)] hover:shadow-[0_14px_35px_rgba(37,99,235,0.12)] hover:border-[#BFDBFE] transition-all duration-300 h-full">
-                      {/* Left vertical indicator line */}
-                      <div className="absolute left-0 top-6 bottom-6 w-1 rounded-r-full bg-[#2563EB] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="group relative p-6 sm:p-7 rounded-[26px] bg-gradient-to-b from-[#EFF6FF]/70 via-white to-[#DBEAFE]/30 border border-[#BFDBFE] shadow-[0_8px_28px_rgba(37,99,235,0.08)] hover:shadow-[0_20px_45px_rgba(37,99,235,0.18)] hover:border-[#2563EB] hover:-translate-y-1.5 transition-all duration-300 h-full overflow-hidden">
+                      {/* Top gradient accent line */}
+                      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] opacity-80 group-hover:opacity-100 transition-opacity" />
                       
-                      <div className="flex items-start gap-4">
+                      {/* Ambient glow orb behind icon */}
+                      <div className="absolute -top-10 -left-10 w-32 h-32 bg-[#2563EB]/10 rounded-full blur-xl pointer-events-none group-hover:scale-150 transition-transform duration-500" />
+                      
+                      <div className="relative z-10 flex items-start gap-4">
                         {/* Number & Icon Badge */}
-                        <div className="w-10 h-10 rounded-xl bg-[#EFF6FF] border border-[#BFDBFE] flex items-center justify-center flex-shrink-0 group-hover:bg-[#2563EB] group-hover:border-[#2563EB] transition-colors duration-300">
+                        <div className="w-11 h-11 rounded-2xl bg-[#EFF6FF] border border-[#BFDBFE] flex items-center justify-center flex-shrink-0 group-hover:bg-[#2563EB] group-hover:border-[#2563EB] shadow-2xs transition-all duration-300">
                           <span className="text-xs font-black text-[#2563EB] group-hover:text-white transition-colors duration-300">
                             {stage.num}
                           </span>
@@ -360,12 +363,13 @@ export default function AboutPage() {
 
                         {/* Text Block */}
                         <div className="flex-1">
-                          <div className="flex items-center gap-2 mb-1">
-                            <span className="text-[10px] font-black uppercase tracking-widest text-[#2563EB]">{stage.tag}</span>
-                            <span className="w-1 h-1 rounded-full bg-slate-300" />
-                            <span className="text-[10px] font-bold text-slate-400">{stage.highlight}</span>
+                          <div className="flex items-center gap-2 mb-1.5 flex-wrap">
+                            <span className="text-[10px] font-black uppercase tracking-widest text-[#2563EB] bg-[#EFF6FF] px-2.5 py-0.5 rounded-full border border-[#BFDBFE]">
+                              {stage.tag}
+                            </span>
+                            <span className="text-[10px] font-bold text-slate-400">&bull; {stage.highlight}</span>
                           </div>
-                          <h3 className="text-sm sm:text-base font-extrabold text-[#0F172A] mb-1.5 group-hover:text-[#2563EB] transition-colors duration-200">
+                          <h3 className="text-base sm:text-lg font-black text-[#0F172A] mb-1.5 group-hover:text-[#2563EB] transition-colors duration-200">
                             {stage.title}
                           </h3>
                           <p className="text-xs sm:text-sm font-medium leading-relaxed text-slate-600 text-justify">
@@ -388,12 +392,12 @@ export default function AboutPage() {
               {/* Right Column: Premium 3D-Glass Architectural Feature Card (5 Cols) */}
               <div className="lg:col-span-5 flex flex-col">
                 <Reveal delay={0.25} className="h-full">
-                  <div className="relative h-full min-h-[340px] rounded-[24px] bg-gradient-to-br from-[#1D4ED8] via-[#2563EB] to-[#0284C7] p-7 sm:p-8 text-white flex flex-col justify-between overflow-hidden shadow-[0_20px_50px_rgba(37,99,235,0.25)] border border-blue-400/40">
+                  <div className="relative h-full min-h-[340px] rounded-[26px] bg-gradient-to-br from-[#1D4ED8] via-[#2563EB] to-[#0284C7] p-7 sm:p-9 text-white flex flex-col justify-between overflow-hidden shadow-[0_22px_55px_rgba(37,99,235,0.28)] border border-blue-300/40">
                     
                     {/* Background glow effects */}
-                    <div className="absolute top-[-20%] right-[-20%] w-[350px] h-[350px] rounded-full bg-white/10 blur-[80px] pointer-events-none" />
-                    <div className="absolute bottom-[-20%] left-[-20%] w-[300px] h-[300px] rounded-full bg-blue-900/30 blur-[80px] pointer-events-none" />
-                    <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.08)_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
+                    <div className="absolute top-[-20%] right-[-20%] w-[350px] h-[350px] rounded-full bg-white/15 blur-[80px] pointer-events-none" />
+                    <div className="absolute bottom-[-20%] left-[-20%] w-[300px] h-[300px] rounded-full bg-blue-900/40 blur-[80px] pointer-events-none" />
+                    <div className="absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.1)_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none" />
 
                     {/* Top status header */}
                     <div className="relative z-10 flex items-center justify-between">
@@ -401,35 +405,35 @@ export default function AboutPage() {
                         <span className="w-1.5 h-1.5 rounded-full bg-sky-300 animate-pulse" />
                         HOW WE WORK WITH YOU
                       </div>
-                      <span className="text-[11px] font-extrabold text-blue-200">OUR PROMISE</span>
+                      <span className="text-[11px] font-black text-sky-200 uppercase tracking-widest">OUR PROMISE</span>
                     </div>
 
                     {/* Middle feature metric callout */}
                     <div className="relative z-10 my-6 space-y-4">
-                      <div className="p-4 rounded-2xl bg-white/10 border border-white/20 backdrop-blur-md">
-                        <p className="text-xs font-medium text-blue-100 uppercase tracking-wider mb-1">What We Do For You</p>
+                      <div className="p-4.5 rounded-2xl bg-white/15 border border-white/25 backdrop-blur-md shadow-sm">
+                        <p className="text-xs font-bold text-sky-200 uppercase tracking-wider mb-1">What We Do For You</p>
                         <p className="text-base sm:text-lg font-black text-white leading-snug">
                           &ldquo;You bring your idea or problem. We build the exact technology you need to solve it and grow.&rdquo;
                         </p>
                       </div>
 
                       {/* Interactive Pillar Grid */}
-                      <div className="grid grid-cols-2 gap-2.5">
-                        <div className="p-3 rounded-xl bg-white/10 border border-white/15 backdrop-blur-sm">
-                          <p className="text-[10px] font-bold text-sky-200 uppercase tracking-widest">Your Goal</p>
+                      <div className="grid grid-cols-2 gap-3">
+                        <div className="p-3.5 rounded-2xl bg-white/15 border border-white/20 backdrop-blur-sm">
+                          <p className="text-[10px] font-extrabold text-sky-200 uppercase tracking-widest">Your Goal</p>
                           <p className="text-sm font-black text-white mt-0.5">Built Exactly For You</p>
                         </div>
-                        <div className="p-3 rounded-xl bg-white/10 border border-white/15 backdrop-blur-sm">
-                          <p className="text-[10px] font-bold text-sky-200 uppercase tracking-widest">User Experience</p>
+                        <div className="p-3.5 rounded-2xl bg-white/15 border border-white/20 backdrop-blur-sm">
+                          <p className="text-[10px] font-extrabold text-sky-200 uppercase tracking-widest">User Experience</p>
                           <p className="text-sm font-black text-white mt-0.5">Simple & Easy To Use</p>
                         </div>
                       </div>
                     </div>
 
                     {/* Bottom brand pill */}
-                    <div className="relative z-10 pt-4 border-t border-white/20 flex items-center justify-between text-xs font-bold text-blue-100">
-                      <span>For Businesses, Creators & Institutions</span>
-                      <span className="font-black text-white">Agaran →</span>
+                    <div className="relative z-10 pt-4 border-t border-white/20 flex items-center justify-between text-xs font-extrabold text-blue-100">
+                      <span>For Businesses, Creators &amp; Institutions</span>
+                      <span className="font-black text-white group-hover:translate-x-1 transition-transform">Agaran &rarr;</span>
                     </div>
 
                   </div>
@@ -440,17 +444,17 @@ export default function AboutPage() {
 
             {/* Bottom Full-Width Brand Pull-Quote Banner */}
             <Reveal delay={0.35}>
-              <div className="relative rounded-[20px] overflow-hidden">
-                <div className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-[#1D4ED8] via-[#2563EB] to-[#0284C7]" />
-                <div className="bg-gradient-to-r from-[#EFF6FF] via-white to-[#EFF6FF]/60 border border-[#BFDBFE] py-5 px-6 sm:px-10">
+              <div className="relative rounded-[26px] overflow-hidden shadow-[0_12px_35px_rgba(37,99,235,0.09)]">
+                <div className="absolute inset-y-0 left-0 w-2 bg-gradient-to-b from-[#1D4ED8] via-[#2563EB] to-[#0284C7]" />
+                <div className="bg-gradient-to-r from-[#EFF6FF] via-white to-[#DBEAFE]/40 border border-[#BFDBFE] py-6 px-7 sm:px-10">
                   <div className="flex items-start gap-4">
-                    <span className="text-[54px] leading-none font-black text-[#BFDBFE] select-none -mt-3 hidden sm:block">&ldquo;</span>
+                    <span className="text-[58px] leading-none font-black text-[#BFDBFE] select-none -mt-3 hidden sm:block">&ldquo;</span>
                     <div>
                       <p className="text-base sm:text-xl lg:text-2xl font-extrabold lg:font-black text-[#1D4ED8] tracking-[-0.035em] leading-snug">
                         We didn&rsquo;t build Agaran to be another software agency. We built it to be the technical partner that organizations deserve — rigorous, invested, and accountable beyond delivery.
                       </p>
                       <div className="flex items-center gap-2 mt-3">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-pulse" />
+                        <span className="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse" />
                         <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-widest text-[#2563EB]">THE AGARAN STANDARD</span>
                       </div>
                     </div>
@@ -465,18 +469,18 @@ export default function AboutPage() {
         {/* ══════════════════════════════════════════════════════════
             03  OUR BELIEF (Simplified Non-Tech Pillar Showcase)
         ══════════════════════════════════════════════════════════ */}
-        <section className="relative z-10 py-10 sm:py-16 px-4 sm:px-8 lg:px-16 overflow-hidden">
-          <div className="max-w-[1280px] mx-auto">
+        <section className="relative z-10 py-6 sm:py-10 px-4 sm:px-8 lg:px-12 xl:px-16 overflow-hidden">
+          <div className="relative max-w-[1400px] mx-auto w-full">
 
             <Reveal delay={0.05} className="flex justify-center">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-4">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-2.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-pulse" />
                 <span>03 &nbsp;•&nbsp; OUR BELIEF</span>
               </div>
             </Reveal>
 
             <Reveal delay={0.1}>
-              <h2 className="text-center text-[1.55rem] xs:text-[1.8rem] sm:text-3xl md:text-[2rem] lg:text-4xl xl:text-[2.4rem] font-extrabold lg:font-black leading-[1.18] tracking-[-0.035em] text-[#0F172A] mb-3 max-w-3xl mx-auto">
+              <h2 className="text-center text-[1.55rem] xs:text-[1.8rem] sm:text-3xl md:text-[2rem] lg:text-4xl xl:text-[2.4rem] font-extrabold lg:font-black leading-[1.18] tracking-[-0.035em] text-[#0F172A] mb-2 max-w-3xl mx-auto">
                 Technology Should Work For You,{" "}
                 <span className="bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] bg-clip-text text-transparent font-extrabold lg:font-black tracking-[-0.035em]">
                   Not Against You.
@@ -484,13 +488,13 @@ export default function AboutPage() {
               </h2>
             </Reveal>
             <Reveal delay={0.14}>
-              <p className="text-center text-sm sm:text-base lg:text-[1.05rem] font-medium leading-relaxed text-slate-600 max-w-2xl mx-auto mb-8">
+              <p className="text-center text-sm sm:text-base lg:text-[1.05rem] font-medium leading-relaxed text-slate-600 max-w-2xl mx-auto mb-4">
                 Powerful technology doesn&apos;t need to be confusing or hard to use. Here is the core standard we hold for everything we build:
               </p>
             </Reveal>
 
             {/* 3 Elevated Non-Tech Belief Cards — Touch-Swipe Horizontal Carousel on Mobile */}
-            <div className="flex md:grid md:grid-cols-3 overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 md:gap-6 pb-4 md:pb-0 mb-8 -mx-4 px-4 sm:mx-0 sm:px-0">
+            <div className="flex md:grid md:grid-cols-3 overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 md:gap-6 pb-4 md:pb-0 mb-4 -mx-4 px-4 sm:mx-0 sm:px-0">
               {[
                 {
                   idx: "01",
@@ -527,25 +531,28 @@ export default function AboutPage() {
                 },
               ].map((b, i) => (
                 <Reveal key={b.idx} delay={0.1 + i * 0.1} className="snap-center shrink-0 w-[82vw] sm:w-[320px] md:w-auto">
-                  <div className="group relative h-full rounded-[24px] border border-slate-200/90 bg-white p-6 sm:p-7 shadow-[0_6px_24px_rgba(37,99,235,0.06)] hover:shadow-[0_18px_45px_rgba(37,99,235,0.13)] hover:-translate-y-1.5 transition-all duration-300 overflow-hidden flex flex-col justify-between">
+                  <div className="group relative h-full rounded-[26px] border border-[#BFDBFE] bg-gradient-to-b from-[#EFF6FF]/70 via-white to-[#DBEAFE]/30 p-6 sm:p-7 shadow-[0_8px_28px_rgba(37,99,235,0.08)] hover:shadow-[0_20px_45px_rgba(37,99,235,0.18)] hover:border-[#2563EB] hover:-translate-y-2 transition-all duration-300 overflow-hidden flex flex-col justify-between">
                     {/* Top gradient accent line */}
                     <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] opacity-80 group-hover:opacity-100 transition-opacity" />
                     
-                    <div>
+                    {/* Ambient glow orb behind icon */}
+                    <div className="absolute -top-10 -left-10 w-32 h-32 bg-[#2563EB]/10 rounded-full blur-xl pointer-events-none group-hover:scale-150 transition-transform duration-500" />
+                    
+                    <div className="relative z-10">
                       {/* Top icon + index row */}
                       <div className="flex items-center justify-between mb-4">
-                        <div className="w-10 h-10 rounded-xl bg-[#EFF6FF] border border-[#BFDBFE] flex items-center justify-center group-hover:bg-[#2563EB] group-hover:border-[#2563EB] transition-colors duration-300">
+                        <div className="w-11 h-11 rounded-2xl bg-[#EFF6FF] border border-[#BFDBFE] flex items-center justify-center group-hover:bg-[#2563EB] group-hover:border-[#2563EB] shadow-2xs transition-all duration-300">
                           <span className="text-[#2563EB] group-hover:text-white transition-colors duration-300">
                             {b.icon}
                           </span>
                         </div>
-                        <span className="text-xs font-black text-[#2563EB] bg-[#EFF6FF] px-2.5 py-1 rounded-full border border-[#BFDBFE]">
+                        <span className="text-xs font-black text-[#2563EB] bg-[#EFF6FF] px-3 py-1 rounded-full border border-[#BFDBFE]">
                           {b.idx}
                         </span>
                       </div>
 
                       <div className="text-[10px] font-black uppercase tracking-widest text-[#2563EB] mb-1">{b.tag}</div>
-                      <h3 className="text-base sm:text-lg font-extrabold text-[#0F172A] mb-2 group-hover:text-[#2563EB] transition-colors duration-200">
+                      <h3 className="text-base sm:text-lg font-black text-[#0F172A] mb-2 group-hover:text-[#2563EB] transition-colors duration-200">
                         {b.title}
                       </h3>
                       <p className="text-xs sm:text-sm font-medium leading-relaxed text-slate-600 text-justify">
@@ -553,8 +560,8 @@ export default function AboutPage() {
                       </p>
                     </div>
 
-                    <div className="mt-5 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-slate-400 group-hover:text-[#2563EB] transition-colors">
-                      <span>Agaran Standard</span>
+                    <div className="relative z-10 mt-5 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-slate-400 group-hover:text-[#2563EB] transition-colors">
+                      <span className="px-2.5 py-0.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[9.5px] font-extrabold uppercase text-[#2563EB]">AGARAN STANDARD</span>
                       <span>✓</span>
                     </div>
                   </div>
@@ -571,14 +578,14 @@ export default function AboutPage() {
 
             {/* Bottom Callout Banner */}
             <Reveal delay={0.35}>
-              <div className="rounded-2xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] p-6 sm:p-7 text-white shadow-lg">
+              <div className="rounded-2xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] p-6 sm:p-7 text-white shadow-[0_12px_35px_rgba(37,99,235,0.22)] border border-blue-400/30">
                 <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                   <div className="flex-1">
                     <p className="text-base sm:text-lg font-extrabold tracking-tight leading-snug">
                       &ldquo;The products we&apos;re most proud of are the ones that make your daily work easier. That is our design standard.&rdquo;
                     </p>
                   </div>
-                  <div className="shrink-0 text-xs font-black uppercase tracking-widest text-white/80 bg-white/15 px-3 py-1.5 rounded-full border border-white/20">
+                  <div className="shrink-0 text-xs font-black uppercase tracking-widest text-white/90 bg-white/20 px-3.5 py-1.5 rounded-full border border-white/30 backdrop-blur-md">
                     AGARAN DESIGN PRINCIPLE
                   </div>
                 </div>
@@ -590,27 +597,31 @@ export default function AboutPage() {
         {/* ══════════════════════════════════════════════════════════
             04 + 05  MISSION & VISION — Touch-Swipe Carousel on Mobile
         ══════════════════════════════════════════════════════════ */}
-        <section className="relative z-10 py-8 sm:py-12 px-4 sm:px-8 lg:px-16 bg-[#EFF6FF]/40 overflow-hidden">
+        <section className="relative z-10 py-5 sm:py-8 px-4 sm:px-8 lg:px-12 xl:px-16 bg-[#EFF6FF]/40 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(#BFDBFE_1px,transparent_1px)] [background-size:32px_32px] opacity-30 pointer-events-none" />
-          <div className="relative max-w-[1280px] mx-auto flex md:grid md:grid-cols-2 overflow-x-auto snap-x snap-mandatory scrollbar-none gap-5 sm:gap-6 pb-4 md:pb-0 -mx-4 px-4 sm:mx-0 sm:px-0">
+          <div className="relative max-w-[1400px] mx-auto w-full flex md:grid md:grid-cols-2 overflow-x-auto snap-x snap-mandatory scrollbar-none gap-5 sm:gap-6 pb-4 md:pb-0 -mx-4 px-4 sm:mx-0 sm:px-0">
 
             {/* Mission */}
             <Reveal delay={0.08} className="snap-center shrink-0 w-[86vw] sm:w-[360px] md:w-auto">
-              <div className="h-full rounded-[24px] bg-white border border-slate-200/90 shadow-[0_8px_28px_rgba(37,99,235,0.07)] hover:shadow-[0_18px_45px_rgba(37,99,235,0.12)] hover:-translate-y-1 transition-all duration-400 overflow-hidden">
+              <div className="group relative h-full rounded-[26px] bg-gradient-to-b from-[#EFF6FF]/70 via-white to-[#DBEAFE]/30 border border-[#BFDBFE] shadow-[0_8px_30px_rgba(37,99,235,0.08)] hover:shadow-[0_22px_50px_rgba(37,99,235,0.18)] hover:border-[#2563EB] hover:-translate-y-1.5 transition-all duration-300 overflow-hidden">
                 <div className="h-1.5 bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7]" />
-                <div className="p-6 sm:p-8 flex flex-col h-[calc(100%-6px)]">
+                
+                {/* Ambient Glow */}
+                <div className="absolute -top-10 -left-10 w-32 h-32 bg-[#2563EB]/10 rounded-full blur-xl pointer-events-none group-hover:scale-150 transition-transform duration-500" />
+                
+                <div className="p-6 sm:p-8 flex flex-col h-[calc(100%-6px)] relative z-10">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-4 self-start">
                     04 &nbsp;•&nbsp; OUR MISSION
                   </div>
-                  <h3 className="text-lg sm:text-xl lg:text-2xl font-extrabold lg:font-black text-[#0F172A] tracking-[-0.035em] leading-snug mb-3">
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-black text-[#0F172A] tracking-[-0.035em] leading-snug mb-3 group-hover:text-[#2563EB] transition-colors">
                     Eliminate the Gap Between Business Intent and Technical Execution.
                   </h3>
                   <p className="text-xs sm:text-sm font-medium leading-relaxed text-slate-600 flex-1 text-justify">
-                    Most organizations lose time and resources in translation — between what they need and what they receive. Our mission is to close that gap permanently: delivering technology that is precisely scoped, rigorously built, and immediately usable by the people it's made for.
+                    Most organizations lose time and resources in translation — between what they need and what they receive. Our mission is to close that gap permanently: delivering technology that is precisely scoped, rigorously built, and immediately usable by the people it&apos;s made for.
                   </p>
                   <div className="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
-                    <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-widest text-[#94A3B8]">AGARAN MISSION</span>
-                    <span className="text-xs font-bold text-[#2563EB]">Precision-Built →</span>
+                    <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-widest text-[#2563EB]">AGARAN MISSION</span>
+                    <span className="text-xs font-bold text-[#2563EB] group-hover:translate-x-1 transition-transform">Precision-Built &rarr;</span>
                   </div>
                 </div>
               </div>
@@ -618,21 +629,25 @@ export default function AboutPage() {
 
             {/* Vision */}
             <Reveal delay={0.18} className="snap-center shrink-0 w-[86vw] sm:w-[360px] md:w-auto">
-              <div className="h-full rounded-[24px] bg-white border border-slate-200/90 shadow-[0_8px_28px_rgba(37,99,235,0.07)] hover:shadow-[0_18px_45px_rgba(37,99,235,0.12)] hover:-translate-y-1 transition-all duration-400 overflow-hidden">
+              <div className="group relative h-full rounded-[26px] bg-gradient-to-b from-[#EFF6FF]/70 via-white to-[#DBEAFE]/30 border border-[#BFDBFE] shadow-[0_8px_30px_rgba(37,99,235,0.08)] hover:shadow-[0_22px_50px_rgba(37,99,235,0.18)] hover:border-[#2563EB] hover:-translate-y-1.5 transition-all duration-300 overflow-hidden">
                 <div className="h-1.5 bg-gradient-to-r from-[#0284C7] via-[#2563EB] to-[#1D4ED8]" />
-                <div className="p-6 sm:p-8 flex flex-col h-[calc(100%-6px)]">
+                
+                {/* Ambient Glow */}
+                <div className="absolute -top-10 -left-10 w-32 h-32 bg-[#2563EB]/10 rounded-full blur-xl pointer-events-none group-hover:scale-150 transition-transform duration-500" />
+                
+                <div className="p-6 sm:p-8 flex flex-col h-[calc(100%-6px)] relative z-10">
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-4 self-start">
                     05 &nbsp;•&nbsp; OUR VISION
                   </div>
-                  <h3 className="text-lg sm:text-xl lg:text-2xl font-extrabold lg:font-black text-[#0F172A] tracking-[-0.035em] leading-snug mb-3">
+                  <h3 className="text-lg sm:text-xl lg:text-2xl font-black text-[#0F172A] tracking-[-0.035em] leading-snug mb-3 group-hover:text-[#2563EB] transition-colors">
                     To Be the Infrastructure Layer Behind Organizations That Move Fast.
                   </h3>
                   <p className="text-xs sm:text-sm font-medium leading-relaxed text-slate-600 flex-1 text-justify">
-                    We're building toward a future where Agaran is the silent engine powering the platforms, workflows, and AI systems of ambitious organizations — not just a vendor that gets replaced, but a foundational partner that grows with the institutions it serves.
+                    We&apos;re building toward a future where Agaran is the silent engine powering the platforms, workflows, and AI systems of ambitious organizations — not just a vendor that gets replaced, but a foundational partner that grows with the institutions it serves.
                   </p>
                   <div className="mt-5 pt-4 border-t border-slate-100 flex items-center justify-between">
-                    <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-widest text-[#94A3B8]">AGARAN VISION</span>
-                    <span className="text-xs font-bold text-[#2563EB]">Long-Term Infrastructure →</span>
+                    <span className="text-[10px] sm:text-[11px] font-black uppercase tracking-widest text-[#2563EB]">AGARAN VISION</span>
+                    <span className="text-xs font-bold text-[#2563EB] group-hover:translate-x-1 transition-transform">Long-Term Infrastructure &rarr;</span>
                   </div>
                 </div>
               </div>
@@ -650,18 +665,18 @@ export default function AboutPage() {
         {/* ══════════════════════════════════════════════════════════
             06  OUR PHILOSOPHY (Interactive Strategy Comparison)
         ══════════════════════════════════════════════════════════ */}
-        <section className="relative z-10 py-10 sm:py-16 px-4 sm:px-8 lg:px-16">
-          <div className="max-w-[1280px] mx-auto">
+        <section className="relative z-10 py-6 sm:py-10 px-4 sm:px-8 lg:px-12 xl:px-16">
+          <div className="relative max-w-[1400px] mx-auto w-full">
 
             <Reveal delay={0.05} className="flex justify-center">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-4">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-2.5">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-pulse" />
                 <span>06 &nbsp;•&nbsp; OUR PHILOSOPHY</span>
               </div>
             </Reveal>
 
             <Reveal delay={0.1}>
-              <h2 className="text-center text-[1.55rem] xs:text-[1.8rem] sm:text-3xl md:text-[2rem] lg:text-4xl xl:text-[2.4rem] font-extrabold lg:font-black leading-[1.18] tracking-[-0.035em] text-[#0F172A] mb-3 max-w-3xl mx-auto">
+              <h2 className="text-center text-[1.55rem] xs:text-[1.8rem] sm:text-3xl md:text-[2rem] lg:text-4xl xl:text-[2.4rem] font-extrabold lg:font-black leading-[1.18] tracking-[-0.035em] text-[#0F172A] mb-2 max-w-3xl mx-auto">
                 Quality First.{" "}
                 <span className="bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] bg-clip-text text-transparent font-extrabold lg:font-black tracking-[-0.035em]">
                   Always.
@@ -669,23 +684,23 @@ export default function AboutPage() {
               </h2>
             </Reveal>
             <Reveal delay={0.14}>
-              <p className="text-center text-sm sm:text-base lg:text-[1.05rem] font-medium leading-relaxed text-slate-600 max-w-2xl mx-auto mb-8">
+              <p className="text-center text-sm sm:text-base lg:text-[1.05rem] font-medium leading-relaxed text-slate-600 max-w-2xl mx-auto mb-4">
                 We don&apos;t rush out quick fixes that break a few months later. We build software carefully so it lasts and runs smoothly for years:
               </p>
             </Reveal>
 
             {/* 2-Column Side-by-Side Comparison Cards — Touch-Swipe Carousel on Mobile */}
-            <div className="flex lg:grid lg:grid-cols-2 overflow-x-auto snap-x snap-mandatory scrollbar-none gap-5 lg:gap-6 items-stretch mb-8 -mx-4 px-4 sm:mx-0 sm:px-0">
+            <div className="flex lg:grid lg:grid-cols-2 overflow-x-auto snap-x snap-mandatory scrollbar-none gap-5 lg:gap-6 items-stretch mb-4 -mx-4 px-4 sm:mx-0 sm:px-0">
               
               {/* Card 1: The Common Way */}
               <Reveal delay={0.18} className="snap-center shrink-0 w-[85vw] sm:w-[380px] lg:w-auto h-full">
-                <div className="h-full rounded-[24px] bg-slate-50/80 border border-slate-200 p-6 sm:p-8 flex flex-col justify-between hover:border-slate-300 transition-colors">
+                <div className="h-full rounded-[26px] bg-gradient-to-b from-slate-50 via-white to-slate-100/60 border border-slate-300/80 p-6 sm:p-8 flex flex-col justify-between shadow-[0_8px_25px_rgba(15,23,42,0.05)] hover:border-slate-400 hover:shadow-lg transition-all duration-300">
                   <div>
-                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-200/80 text-[10.5px] font-extrabold text-slate-600 uppercase tracking-wider mb-4">
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-200/80 text-[10.5px] font-black text-slate-600 uppercase tracking-wider mb-4">
                       <span>✕</span>
                       <span>THE RUSHED WAY</span>
                     </div>
-                    <h3 className="text-lg sm:text-xl font-extrabold text-slate-800 mb-2">
+                    <h3 className="text-lg sm:text-xl font-black text-slate-800 mb-2">
                       Rushing Features Without Planning
                     </h3>
                     <p className="text-xs sm:text-sm font-medium leading-relaxed text-slate-600 mb-5 text-justify">
@@ -693,25 +708,25 @@ export default function AboutPage() {
                     </p>
                   </div>
 
-                  <div className="p-3.5 rounded-xl bg-white border border-slate-200 flex items-center justify-between text-xs font-bold text-slate-500">
-                    <span>Result: High Costs & Wasted Time</span>
-                    <span className="text-rose-500 font-extrabold">✕ Avoid</span>
+                  <div className="p-3.5 rounded-xl bg-white border border-slate-200 flex items-center justify-between text-xs font-extrabold text-slate-500 shadow-2xs">
+                    <span>Result: High Costs &amp; Wasted Time</span>
+                    <span className="text-rose-500 font-black">✕ Avoid</span>
                   </div>
                 </div>
               </Reveal>
 
               {/* Card 2: The Agaran Way */}
               <Reveal delay={0.25} className="snap-center shrink-0 w-[85vw] sm:w-[380px] lg:w-auto h-full">
-                <div className="relative h-full rounded-[24px] bg-gradient-to-br from-[#1D4ED8] via-[#2563EB] to-[#0284C7] p-6 sm:p-8 text-white flex flex-col justify-between shadow-[0_16px_45px_rgba(37,99,235,0.22)] border border-blue-400/40 overflow-hidden">
-                  <div className="absolute top-[-20%] right-[-20%] w-[300px] h-[300px] rounded-full bg-white/10 blur-[70px] pointer-events-none" />
+                <div className="relative h-full rounded-[26px] bg-gradient-to-br from-[#1D4ED8] via-[#2563EB] to-[#0284C7] p-7 sm:p-9 text-white flex flex-col justify-between shadow-[0_20px_50px_rgba(37,99,235,0.28)] border border-blue-300/40 overflow-hidden group hover:-translate-y-1.5 transition-all duration-300">
+                  <div className="absolute top-[-20%] right-[-20%] w-[300px] h-[300px] rounded-full bg-white/15 blur-[70px] pointer-events-none" />
 
                   <div className="relative z-10">
-                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 border border-white/30 text-[10.5px] font-extrabold text-white uppercase tracking-wider backdrop-blur-md mb-4">
+                    <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 border border-white/30 text-[10.5px] font-black text-white uppercase tracking-wider backdrop-blur-md mb-4">
                       <span className="w-1.5 h-1.5 rounded-full bg-sky-300 animate-pulse" />
                       <span>✓ THE AGARAN WAY</span>
                     </div>
-                    <h3 className="text-lg sm:text-xl font-extrabold text-white mb-2">
-                      Careful Design & Strong Foundation
+                    <h3 className="text-lg sm:text-xl font-black text-white mb-2">
+                      Careful Design &amp; Strong Foundation
                     </h3>
                     <p className="text-xs sm:text-sm font-medium leading-relaxed text-blue-100 mb-5 text-justify">
                       We focus on building the exact solution you need with precision. It runs fast, feels smooth, and stays reliable for years without unexpected headaches.
@@ -719,7 +734,7 @@ export default function AboutPage() {
                   </div>
 
                   <div className="relative z-10 p-3.5 rounded-xl bg-white/15 border border-white/25 backdrop-blur-md flex items-center justify-between text-xs font-bold text-white">
-                    <span>Result: Long-Term Value & Peace of Mind</span>
+                    <span>Result: Long-Term Value &amp; Peace of Mind</span>
                     <span className="text-sky-300 font-black">✓ The Agaran Standard</span>
                   </div>
                 </div>
@@ -735,7 +750,7 @@ export default function AboutPage() {
 
             {/* Bottom Highlight Pill */}
             <Reveal delay={0.35}>
-              <div className="rounded-2xl bg-[#EFF6FF] border border-[#BFDBFE] p-5 sm:p-6 text-center">
+              <div className="rounded-2xl bg-[#EFF6FF] border border-[#BFDBFE] p-5 sm:p-6 text-center shadow-2xs">
                 <p className="text-sm sm:text-base font-extrabold text-[#1D4ED8] tracking-tight">
                   💡 &ldquo;Taking the time to ask the right question first saves months of wasted work.&rdquo;
                 </p>
@@ -748,38 +763,38 @@ export default function AboutPage() {
         {/* ══════════════════════════════════════════════════════════
             07  OUR PRINCIPLES (Animation-Based Interactive Stepper)
         ══════════════════════════════════════════════════════════ */}
-        <section className="relative z-10 py-10 sm:py-16 px-4 sm:px-8 lg:px-16 bg-[#EFF6FF]/40">
+        <section className="relative z-10 py-6 sm:py-10 px-4 sm:px-8 lg:px-12 xl:px-16 bg-[#EFF6FF]/40">
           <div className="absolute inset-0 bg-[radial-gradient(#BFDBFE_1px,transparent_1px)] [background-size:28px_28px] opacity-30 pointer-events-none" />
-          <div className="relative max-w-[1280px] mx-auto">
+          <div className="relative max-w-[1400px] mx-auto w-full">
 
             <Reveal delay={0.05} className="flex justify-center">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-3">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-pulse" />
                 <span>07 &nbsp;•&nbsp; OUR PRINCIPLES</span>
               </div>
             </Reveal>
 
             <Reveal delay={0.1}>
-              <h2 className="text-center text-[1.55rem] xs:text-[1.8rem] sm:text-3xl md:text-[2rem] lg:text-4xl xl:text-[2.4rem] font-extrabold lg:font-black leading-[1.18] tracking-[-0.035em] text-[#0F172A] mb-2 w-full max-w-[1280px] mx-auto">
-                How We Work & Make Decisions
+              <h2 className="text-center text-[1.55rem] xs:text-[1.8rem] sm:text-3xl md:text-[2rem] lg:text-4xl xl:text-[2.4rem] font-extrabold lg:font-black leading-[1.18] tracking-[-0.035em] text-[#0F172A] mb-1.5 w-full max-w-[1280px] mx-auto">
+                How We Work &amp; Make Decisions
               </h2>
             </Reveal>
             <Reveal delay={0.14}>
-              <p className="text-center text-xs sm:text-sm lg:text-[1.05rem] font-medium leading-relaxed text-slate-600 w-full max-w-3xl mx-auto mb-8">
+              <p className="text-center text-xs sm:text-sm lg:text-[1.05rem] font-medium leading-relaxed text-slate-600 w-full max-w-3xl mx-auto mb-4">
                 These aren&apos;t rules on a wall. They are the 5 standards we follow every single day:
               </p>
             </Reveal>
 
             {/* Interactive Animated Stepper Tabs */}
-            <div className="flex items-center justify-center gap-2 sm:gap-3 mb-8 overflow-x-auto pb-2 scrollbar-none w-full">
+            <div className="flex items-center justify-center gap-2 sm:gap-3 mb-4 overflow-x-auto pb-2 scrollbar-none w-full">
               {principles.map((p, i) => (
                 <button
                   key={p.num}
                   onClick={() => setActivePrinciple(i)}
-                  className={`relative flex items-center gap-2 px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-extrabold transition-all duration-300 ${
+                  className={`relative flex items-center gap-2 px-4 py-2.5 rounded-2xl text-xs sm:text-sm font-extrabold transition-all duration-300 cursor-pointer ${
                     activePrinciple === i
                       ? "bg-[#2563EB] text-white shadow-[0_8px_25px_rgba(37,99,235,0.3)] scale-105"
-                      : "bg-white text-slate-600 border border-slate-200/90 hover:border-[#BFDBFE] hover:text-[#2563EB]"
+                      : "bg-white text-slate-600 border border-[#BFDBFE] hover:border-[#2563EB] hover:text-[#2563EB]"
                   }`}
                 >
                   <span className={`w-2 h-2 rounded-full ${activePrinciple === i ? "bg-white animate-pulse" : "bg-blue-400"}`} />
@@ -795,11 +810,11 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 16, scale: 0.98 }}
               animate={{ opacity: 1, y: 0, scale: 1 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
-              className="w-full max-w-[1280px] mx-auto rounded-[28px] bg-white border border-slate-200/90 p-7 sm:p-10 shadow-[0_12px_40px_rgba(37,99,235,0.08)] relative overflow-hidden"
+              className="w-full max-w-[1400px] mx-auto rounded-[30px] bg-gradient-to-br from-[#EFF6FF]/80 via-white to-[#DBEAFE]/40 border border-[#BFDBFE] p-7 sm:p-10 shadow-[0_16px_50px_rgba(37,99,235,0.12)] relative overflow-hidden"
             >
               <div className="h-1.5 absolute top-0 left-0 right-0 bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7]" />
               
-              <div>
+              <div className="relative z-10">
                 {/* Text Content */}
                 <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10px] font-black uppercase tracking-widest text-[#2563EB] mb-3">
                   <span>AGARAN OPERATING STANDARD</span>
@@ -813,12 +828,12 @@ export default function AboutPage() {
               </div>
 
               {/* Prev / Next Controls */}
-              <div className="mt-8 pt-5 border-t border-slate-100 flex items-center justify-between">
+              <div className="mt-5 pt-3.5 border-t border-slate-100 flex items-center justify-between relative z-10">
                 <button
                   onClick={() => setActivePrinciple((prev) => (prev > 0 ? prev - 1 : principles.length - 1))}
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-[#2563EB] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-[#2563EB] transition-colors cursor-pointer"
                 >
-                  ← Previous Standard
+                  &larr; Previous Standard
                 </button>
                 <div className="flex items-center gap-1.5">
                   {principles.map((_, i) => (
@@ -833,9 +848,9 @@ export default function AboutPage() {
                 </div>
                 <button
                   onClick={() => setActivePrinciple((prev) => (prev < principles.length - 1 ? prev + 1 : 0))}
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#2563EB] hover:underline transition-all"
+                  className="inline-flex items-center gap-1.5 text-xs font-bold text-[#2563EB] hover:underline transition-all cursor-pointer"
                 >
-                  Next Standard →
+                  Next Standard &rarr;
                 </button>
               </div>
             </motion.div>
@@ -846,10 +861,10 @@ export default function AboutPage() {
         {/* ══════════════════════════════════════════════════════════
             08  MINDSET — Final CTA-style full-width blue banner
         ══════════════════════════════════════════════════════════ */}
-        <section className="relative z-10 pt-8 sm:pt-12 pb-16 sm:pb-20 px-4 sm:px-8 lg:px-16">
-          <div className="max-w-[1280px] mx-auto">
+        <section className="relative z-10 pt-4 sm:pt-6 pb-10 sm:pb-12 px-4 sm:px-8 lg:px-12 xl:px-16">
+          <div className="relative max-w-[1400px] mx-auto w-full">
             <Reveal delay={0.05}>
-              <div className="relative rounded-[2rem] bg-[#2563EB] border border-blue-400/50 p-6 sm:p-10 lg:p-12 overflow-hidden shadow-[0_25px_80px_rgba(37,99,235,0.28)] text-white">
+              <div className="relative rounded-[2.2rem] bg-[#2563EB] border border-blue-400/50 p-5 sm:p-8 lg:p-10 overflow-hidden shadow-[0_25px_80px_rgba(37,99,235,0.28)] text-white">
 
                 {/* Inner ambient glows */}
                 <div className="absolute top-[-30%] right-[-10%] w-[500px] h-[500px] rounded-full bg-white/10 blur-[100px] pointer-events-none" />
@@ -858,7 +873,7 @@ export default function AboutPage() {
 
                 <div className="relative z-10">
                   {/* Section tag */}
-                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/20 border border-white/35 text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider backdrop-blur-md mb-5">
+                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/20 border border-white/35 text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider backdrop-blur-md mb-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-sky-300 animate-pulse" />
                     <span>08 &nbsp;•&nbsp; OUR MINDSET</span>
                   </div>
@@ -878,7 +893,7 @@ export default function AboutPage() {
                           href="/contact"
                           className="inline-flex items-center justify-center gap-2 text-sm sm:text-base px-7 py-3.5 rounded-xl font-black bg-white text-[#1D4ED8] hover:bg-blue-50 shadow-lg transition-all duration-200"
                         >
-                          Start a Conversation →
+                          Start a Conversation &rarr;
                         </Link>
                         <Link
                           href="/work"
@@ -896,7 +911,7 @@ export default function AboutPage() {
                         { label: "ON REAL SCALE", text: "We build your software from day one so it handles growing users smoothly without breaking or needing rewrites." },
                         { label: "ON SUCCESS", text: "A project is only successful when it makes your daily business easier and delivers real, practical results." },
                       ].map((item) => (
-                        <div key={item.label} className="p-4 sm:p-5 rounded-2xl bg-[#1E40AF]/70 border border-blue-300/30 shadow-sm">
+                        <div key={item.label} className="group relative p-5 sm:p-6 rounded-2xl bg-white/15 border border-white/25 backdrop-blur-md shadow-md hover:bg-white/20 hover:border-white/40 hover:-translate-y-1 transition-all duration-300 overflow-hidden">
                           <div className="text-[11px] font-black uppercase tracking-widest text-sky-200 mb-1.5">{item.label}</div>
                           <p className="text-xs sm:text-sm font-medium leading-relaxed text-white text-justify">{item.text}</p>
                         </div>

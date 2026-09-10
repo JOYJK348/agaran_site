@@ -349,7 +349,7 @@ export default function Hero() {
   ];
 
   return (
-    <section className="relative min-h-[85vh] flex flex-col justify-center overflow-hidden bg-white pt-16 pb-6 sm:pt-20 sm:pb-8">
+    <section className="relative min-h-[85vh] flex flex-col justify-center overflow-hidden bg-white pt-24 pb-6 sm:pt-28 lg:pt-32 sm:pb-8">
       {/* Light constellation particle background (Desktop Only) */}
       <canvas
         ref={canvasRef}
