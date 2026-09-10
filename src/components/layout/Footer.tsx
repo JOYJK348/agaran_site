@@ -220,7 +220,7 @@ export default function Footer() {
 
         {/* ── BOTTOM BAR: OFFICIAL SOCIAL ICONS & COPYRIGHT ── */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-slate-500">
-          <p>© {new Date().getFullYear()} Agaran Technologies. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} AGARAN. All rights reserved.</p>
 
           {/* Official Social Media Icons */}
           <div className="flex items-center gap-3">

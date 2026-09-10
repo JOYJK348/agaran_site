@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, AnimatePresence } from "framer-motion";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
@@ -161,6 +161,8 @@ const CATEGORIES: CategoryOption[] = [
 
 export default function ContactPage() {
   const [selectedCategoryKey, setSelectedCategoryKey] = useState<string>("idea");
+  const [isCategoryDropdownOpen, setIsCategoryDropdownOpen] = useState<boolean>(false);
+  const categoryDropdownRef = useRef<HTMLDivElement>(null);
   const [selectedChips, setSelectedChips] = useState<string[]>([]);
   const [otherText, setOtherText] = useState<string>("");
   const [message, setMessage] = useState<string>("");
@@ -179,6 +181,17 @@ export default function ContactPage() {
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
   const [leadId, setLeadId] = useState<string>("");
+
+  // Click outside to close dropdown
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (categoryDropdownRef.current && !categoryDropdownRef.current.contains(event.target as Node)) {
+        setIsCategoryDropdownOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const currentCategory = CATEGORIES.find((c) => c.key === selectedCategoryKey) || CATEGORIES[0];
 
@@ -622,41 +635,135 @@ export default function ContactPage() {
                     </h2>
                   </div>
 
-                  {/* 1. CATEGORY SELECTOR DROPDOWN */}
-                  <div className="space-y-2">
+                  {/* 1. CUSTOM ROYAL BLUE THEME CATEGORY SELECTOR DROPDOWN */}
+                  <div className="space-y-2 relative z-30" ref={categoryDropdownRef}>
                     <label className="block text-xs font-extrabold uppercase tracking-wider text-[#0F172A]">
                       1. What do you need help with? <span className="text-rose-500">*</span>
                     </label>
 
-                    <div className="relative">
-                      <select
-                        value={selectedCategoryKey}
-                        onChange={(e) => handleCategoryChange(e.target.value)}
-                        className="w-full p-4 rounded-2xl bg-white border border-slate-200 text-slate-900 font-extrabold text-xs sm:text-sm focus:border-[#2563EB] focus:ring-2 focus:ring-[#2563EB]/20 outline-none transition-all appearance-none cursor-pointer pr-10 shadow-2xs hover:border-[#BFDBFE]"
-                      >
-                        {CATEGORIES.map((cat) => (
-                          <option key={cat.key} value={cat.key}>
-                            {cat.badge} &mdash; {cat.label}
-                          </option>
-                        ))}
-                      </select>
-                      <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-[#2563EB] text-xs font-black">
-                        ▼
+                    {/* Trigger Card */}
+                    <button
+                      type="button"
+                      onClick={() => setIsCategoryDropdownOpen((prev) => !prev)}
+                      className="w-full p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-[#EFF6FF] via-white to-[#EFF6FF] border-2 border-[#BFDBFE] hover:border-[#2563EB] shadow-2xs hover:shadow-md transition-all text-left flex items-center justify-between group cursor-pointer"
+                    >
+                      <div className="flex-1 min-w-0 pr-3">
+                        <div className="flex items-center gap-2 mb-1 flex-wrap">
+                          <span className="px-2.5 py-0.5 rounded-full bg-[#2563EB] text-white text-[9.5px] font-mono font-black uppercase tracking-wider shadow-2xs">
+                            {currentCategory.badge}
+                          </span>
+                          <span className="text-xs sm:text-sm font-black text-[#0F172A] group-hover:text-[#2563EB] transition-colors truncate">
+                            {currentCategory.label}
+                          </span>
+                        </div>
+                        <p className="text-[11.5px] font-medium text-slate-500 line-clamp-1">
+                          {currentCategory.subtitle}
+                        </p>
                       </div>
-                    </div>
 
-                    <p className="text-xs text-slate-500 font-medium pl-1">
-                      {currentCategory.subtitle}
-                    </p>
+                      <div className="w-8 h-8 rounded-xl bg-white border border-[#BFDBFE] text-[#2563EB] flex items-center justify-center group-hover:bg-[#2563EB] group-hover:text-white transition-all shrink-0 shadow-2xs">
+                        <svg
+                          className={`w-4 h-4 transition-transform duration-200 ${
+                            isCategoryDropdownOpen ? "rotate-180" : ""
+                          }`}
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke="currentColor"
+                          strokeWidth={2.5}
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </div>
+                    </button>
+
+                    {/* Custom Animated Floating Options List */}
+                    <AnimatePresence>
+                      {isCategoryDropdownOpen && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 8, scale: 0.98 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: 8, scale: 0.98 }}
+                          transition={{ duration: 0.18, ease: "easeOut" }}
+                          className="absolute top-full left-0 right-0 mt-2 p-2 rounded-2xl bg-white/98 backdrop-blur-2xl border-2 border-[#BFDBFE] shadow-[0_20px_50px_rgba(37,99,235,0.18)] z-50 space-y-1 overflow-hidden max-h-[380px] overflow-y-auto"
+                        >
+                          <div className="h-1 w-full bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] absolute top-0 left-0 right-0" />
+
+                          <div className="px-2 pt-2 pb-1.5 border-b border-slate-100 flex items-center justify-between">
+                            <span className="text-[10px] font-mono font-black text-[#2563EB] uppercase tracking-wider">
+                              SELECT A CATEGORY
+                            </span>
+                            <span className="text-[9.5px] font-mono text-slate-400 font-bold uppercase">
+                              6 OPTIONS
+                            </span>
+                          </div>
+
+                          <div className="space-y-1 pt-1">
+                            {CATEGORIES.map((cat) => {
+                              const isSelected = selectedCategoryKey === cat.key;
+                              return (
+                                <button
+                                  key={cat.key}
+                                  type="button"
+                                  onClick={() => {
+                                    handleCategoryChange(cat.key);
+                                    setIsCategoryDropdownOpen(false);
+                                  }}
+                                  className={`w-full p-3 rounded-xl transition-all text-left flex items-start justify-between gap-3 group/item ${
+                                    isSelected
+                                      ? "bg-[#EFF6FF] border border-[#BFDBFE] shadow-2xs"
+                                      : "bg-white border border-transparent hover:bg-slate-50 hover:border-slate-200"
+                                  }`}
+                                >
+                                  <div className="min-w-0 flex-1">
+                                    <div className="flex items-center gap-2 mb-1 flex-wrap">
+                                      <span
+                                        className={`px-2 py-0.5 rounded-full text-[9px] font-mono font-black uppercase tracking-wider ${
+                                          isSelected
+                                            ? "bg-[#2563EB] text-white"
+                                            : "bg-slate-100 text-slate-600 group-hover/item:bg-[#EFF6FF] group-hover/item:text-[#2563EB]"
+                                        }`}
+                                      >
+                                        {cat.badge}
+                                      </span>
+                                      <span
+                                        className={`text-xs font-extrabold ${
+                                          isSelected ? "text-[#2563EB]" : "text-[#0F172A] group-hover/item:text-[#2563EB]"
+                                        } transition-colors`}
+                                      >
+                                        {cat.label}
+                                      </span>
+                                    </div>
+                                    <p className="text-[11px] font-medium text-slate-500 line-clamp-1">
+                                      {cat.subtitle}
+                                    </p>
+                                  </div>
+
+                                  {isSelected && (
+                                    <span className="w-5 h-5 rounded-full bg-[#2563EB] text-white text-xs font-black flex items-center justify-center shrink-0 mt-0.5 shadow-2xs">
+                                      ✓
+                                    </span>
+                                  )}
+                                </button>
+                              );
+                            })}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
 
-                  {/* 2. DYNAMIC QUICK CHIPS */}
-                  <div className="space-y-2.5 pt-1">
-                    <label className="block text-xs font-extrabold uppercase tracking-wider text-[#0F172A]">
-                      2. Select options that match your need <span className="text-slate-400 font-medium">(Click to select)</span>
-                    </label>
+                  {/* 2. DYNAMIC QUICK CHIPS GRID (RESPONSIVE & THEMED) */}
+                  <div className="space-y-3 pt-1">
+                    <div className="flex items-center justify-between gap-2 flex-wrap">
+                      <label className="block text-xs font-extrabold uppercase tracking-wider text-[#0F172A]">
+                        2. Select options that match your need
+                      </label>
+                      <span className="text-[9.5px] font-mono font-bold text-[#2563EB] bg-[#EFF6FF] px-2.5 py-0.5 rounded-full border border-[#BFDBFE] shadow-2xs">
+                        SELECT ALL THAT APPLY
+                      </span>
+                    </div>
 
-                    <div className="flex flex-wrap gap-2">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-2.5">
                       {currentCategory.quickChips.map((chip) => {
                         const isSelected = selectedChips.includes(chip);
                         return (
@@ -664,16 +771,28 @@ export default function ContactPage() {
                             key={chip}
                             type="button"
                             onClick={() => toggleChip(chip)}
-                            className={`px-3.5 py-2.5 rounded-xl border text-xs transition-all duration-200 flex items-center gap-2 ${
+                            className={`p-3 sm:p-3.5 rounded-2xl border-2 transition-all duration-200 flex items-center justify-between text-left group cursor-pointer ${
                               isSelected
-                                ? "bg-[#EFF6FF] border-[#2563EB] text-[#2563EB] font-black shadow-2xs scale-[1.02]"
-                                : "bg-slate-50 border-slate-200 text-slate-700 hover:border-[#BFDBFE] hover:bg-[#EFF6FF]/40 font-bold"
+                                ? "bg-gradient-to-r from-[#EFF6FF] via-white to-[#EFF6FF] border-[#2563EB] shadow-sm shadow-blue-500/10 scale-[1.01]"
+                                : "bg-white border-slate-200/90 hover:border-[#BFDBFE] hover:bg-[#EFF6FF]/30 shadow-2xs"
                             }`}
                           >
-                            <span>{chip}</span>
-                            <span className={`w-4 h-4 rounded-full text-[10px] font-black flex items-center justify-center ${
-                              isSelected ? "bg-[#2563EB] text-white" : "bg-slate-200/80 text-slate-500"
-                            }`}>
+                            <span
+                              className={`text-xs sm:text-[13px] pr-2 ${
+                                isSelected
+                                  ? "font-black text-[#2563EB]"
+                                  : "font-extrabold text-[#0F172A] group-hover:text-[#2563EB]"
+                              } transition-colors leading-snug`}
+                            >
+                              {chip}
+                            </span>
+                            <span
+                              className={`w-6 h-6 rounded-full text-xs font-black flex items-center justify-center shrink-0 transition-all ${
+                                isSelected
+                                  ? "bg-[#2563EB] text-white shadow-xs shadow-blue-500/30 ring-2 ring-blue-200"
+                                  : "bg-slate-100 text-slate-400 group-hover:bg-[#EFF6FF] group-hover:text-[#2563EB] border border-slate-200/80"
+                              }`}
+                            >
                               {isSelected ? "✓" : "+"}
                             </span>
                           </button>
@@ -684,16 +803,19 @@ export default function ContactPage() {
                     {/* Show Textbox when "Others" is selected */}
                     {selectedChips.includes("Others") && (
                       <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: "auto" }}
-                        className="pt-2"
+                        initial={{ opacity: 0, y: 4 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        className="pt-1 space-y-1.5"
                       >
+                        <label className="block text-[11px] font-bold text-[#2563EB]">
+                          Specify custom requirement detail:
+                        </label>
                         <input
                           type="text"
                           value={otherText}
                           onChange={(e) => setOtherText(e.target.value)}
-                          placeholder="Type what you need in simple words..."
-                          className="w-full p-3.5 rounded-xl bg-white border border-[#2563EB] text-slate-800 font-medium text-xs sm:text-sm focus:ring-2 focus:ring-[#2563EB]/20 outline-none transition-all shadow-2xs"
+                          placeholder="Type what you need in simple words (e.g. Need a custom dashboard)..."
+                          className="w-full p-3.5 rounded-2xl bg-white border-2 border-[#2563EB] text-slate-800 font-bold text-xs sm:text-sm focus:ring-4 focus:ring-[#2563EB]/15 outline-none transition-all shadow-2xs"
                         />
                       </motion.div>
                     )}

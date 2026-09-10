@@ -74,6 +74,7 @@ export const WHAT_WE_DO_ITEMS: WhatWeDoOverviewItem[] = [
 ];
 
 const navLinks = [
+  { label: "Home", href: "/" },
   { label: "What We Do", href: "/what-we-do" },
   { label: "Products", href: "/products" },
   { label: "Work", href: "/work" },
