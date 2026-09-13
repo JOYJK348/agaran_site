@@ -10,13 +10,13 @@ export default function ProductAIEducationPage() {
     <>
       <Navbar />
 
-      <main className="min-h-screen bg-[#F8FAFC] text-[#0F172A] pt-20 sm:pt-28 pb-16 sm:pb-24 px-3 sm:px-8 lg:px-16 font-sans selection:bg-[#2563EB] selection:text-white">
+      <main className="min-h-screen bg-[#FAFCFF] text-[#0F172A] pt-20 sm:pt-28 pb-16 sm:pb-24 px-3 sm:px-6 lg:px-12 font-sans selection:bg-[#2563EB] selection:text-white">
 
         <motion.article
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-[1440px] mx-auto bg-white border border-slate-200/90 shadow-[0_4px_30px_rgba(15,23,42,0.03)] rounded-2xl sm:rounded-3xl p-4 sm:p-8 md:p-12 lg:p-16 relative overflow-hidden"
+          className="max-w-[1600px] mx-auto bg-white border border-slate-200/90 shadow-[0_4px_30px_rgba(15,23,42,0.03)] rounded-2xl sm:rounded-3xl p-4 sm:p-8 md:p-12 lg:p-16 relative overflow-hidden"
         >
 
           {/* ── Top Navigation Bar ── */}
@@ -57,25 +57,23 @@ export default function ProductAIEducationPage() {
               The Complete End-to-End AI LMS &amp; Education ERP Platform.
             </p>
 
-            <div className="p-6 sm:p-8 rounded-2xl bg-slate-50/80 border border-slate-200/90 mb-8 space-y-4">
-              <p className="text-sm sm:text-lg font-medium leading-relaxed text-slate-700 text-left sm:text-justify">
+            <div className="p-5 sm:p-8 rounded-2xl bg-slate-50/80 border border-slate-200/90 mb-8 space-y-4">
+              <p className="text-sm sm:text-lg font-medium leading-relaxed text-slate-700 text-left">
                 Running an educational institution requires seamless management of <strong className="font-extrabold text-[#0F172A]">admissions, live &amp; recorded classes, course modules, digital &amp; offline exams, daily attendance, fee collection, student portals, parent communication, and 24/7 AI learning assistance</strong>.
               </p>
-              <p className="text-sm sm:text-lg font-medium leading-relaxed text-slate-700 text-left sm:text-justify">
+              <p className="text-sm sm:text-lg font-medium leading-relaxed text-slate-700 text-left">
                 Agaran is building a unified, multi-tenant AI Education Platform that connects every stakeholder — <strong className="font-extrabold text-[#2563EB]">Students, Parents, Teachers, and Administrators</strong> — into a single automated ecosystem.
               </p>
             </div>
           </header>
 
-          {/* ── Product Architecture Dashboard Mockup ── */}
+          {/* ── Product Architecture Dashboard Mockup (Light Theme) ── */}
           <div className="mb-12 sm:mb-16 relative">
-            <div className="w-full rounded-2xl overflow-hidden bg-[#F8FAFC] border border-slate-200 shadow-2xs relative p-4 sm:p-6 text-slate-800 flex flex-col justify-between gap-5">
+            <div className="w-full rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-sm relative p-4 sm:p-6 text-slate-800 flex flex-col justify-between gap-5">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-200 text-xs font-mono gap-2.5">
                 <div className="flex items-center gap-2">
-                  <span className="w-3 h-3 rounded-full bg-rose-400" />
-                  <span className="w-3 h-3 rounded-full bg-amber-400" />
-                  <span className="w-3 h-3 rounded-full bg-emerald-400" />
-                  <div className="ml-2 px-3 py-1 rounded-md bg-white border border-slate-200 text-slate-700 text-[11px] font-mono flex items-center gap-2 shadow-2xs">
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#2563EB]" />
+                  <div className="px-3 py-1 rounded-md bg-slate-50 border border-slate-200 text-slate-700 text-[11px] font-mono flex items-center gap-2 shadow-2xs">
                     <span className="w-2 h-2 rounded-full bg-amber-500" />
                     <span>https://app.agaran-edu.com/dashboard</span>
                   </div>
@@ -88,22 +86,22 @@ export default function ProductAIEducationPage() {
 
               {/* 4 Connected System Pillars */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
-                <div className="p-3.5 bg-white rounded-xl border border-[#BFDBFE] space-y-1 shadow-2xs">
+                <div className="p-3.5 bg-slate-50 rounded-xl border border-[#BFDBFE] space-y-1 shadow-2xs">
                   <div className="text-[10px] font-black uppercase text-[#2563EB]">STUDENT PORTAL</div>
                   <div className="font-extrabold text-slate-900">Live Classes &amp; LMS</div>
                   <div className="text-slate-500 text-[11px]">Stream live via LiveKit, watch Cloudflare recordings &amp; access course modules.</div>
                 </div>
-                <div className="p-3.5 bg-white rounded-xl border border-emerald-200 space-y-1 shadow-2xs">
+                <div className="p-3.5 bg-slate-50 rounded-xl border border-emerald-200 space-y-1 shadow-2xs">
                   <div className="text-[10px] font-black uppercase text-emerald-700">PARENT PORTAL</div>
                   <div className="font-extrabold text-slate-900">Attendance &amp; Reports</div>
                   <div className="text-slate-500 text-[11px]">Real-time attendance logs, automated SMS/WhatsApp alerts &amp; marksheets.</div>
                 </div>
-                <div className="p-3.5 bg-white rounded-xl border border-sky-200 space-y-1 shadow-2xs">
+                <div className="p-3.5 bg-slate-50 rounded-xl border border-sky-200 space-y-1 shadow-2xs">
                   <div className="text-[10px] font-black uppercase text-[#0284C7]">EXAM ENGINE</div>
                   <div className="font-extrabold text-slate-900">Digital &amp; Offline Exams</div>
                   <div className="text-slate-500 text-[11px]">Online OMR/MCQ tests + printable offline paper generator &amp; rank lists.</div>
                 </div>
-                <div className="p-3.5 bg-white rounded-xl border border-purple-200 space-y-1 shadow-2xs">
+                <div className="p-3.5 bg-slate-50 rounded-xl border border-purple-200 space-y-1 shadow-2xs">
                   <div className="text-[10px] font-black uppercase text-purple-700">AI TUTOR</div>
                   <div className="font-extrabold text-slate-900">24/7 AI Doubt Solver</div>
                   <div className="text-slate-500 text-[11px]">Instant step-by-step problem explanations &amp; subject practice assistance.</div>
@@ -127,11 +125,11 @@ export default function ProductAIEducationPage() {
               Disconnected Systems Create Friction for Students, Teachers &amp; Parents.
             </h3>
 
-            <p className="text-sm sm:text-base text-slate-600 font-medium leading-relaxed mb-6 text-justify">
+            <p className="text-sm sm:text-base text-slate-600 font-medium leading-relaxed mb-6 text-left">
               Most educational institutions run on scattered tools: Zoom for live classes, Google Drive for study materials, physical sheets or WhatsApp for attendance, paper exams with manual grading, and separate software for fees and parent communication. This creates heavy administrative workload, lost data, and delayed updates.
             </p>
 
-            <div className="p-6 rounded-2xl bg-rose-50/60 border border-rose-200 space-y-4">
+            <div className="p-5 sm:p-6 rounded-2xl bg-rose-50/60 border border-rose-200 space-y-4">
               <div className="text-xs font-black uppercase tracking-wider text-rose-700 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-rose-600" />
                 Problems Solved by Agaran AI Education Platform:
@@ -271,7 +269,7 @@ export default function ProductAIEducationPage() {
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0F172A] tracking-tight">END-TO-END STUDENT LIFECYCLE PIPELINE</h2>
             </div>
 
-            <p className="text-sm sm:text-base text-slate-600 font-medium leading-relaxed mb-6 text-justify">
+            <p className="text-sm sm:text-base text-slate-600 font-medium leading-relaxed mb-6 text-left">
               From the moment a prospective student inquires to their daily learning, exam assessments, and ongoing parent updates, the entire journey moves automatically through one connected platform:
             </p>
 
@@ -312,7 +310,7 @@ export default function ProductAIEducationPage() {
                   FOR STUDENTS
                 </div>
                 <h3 className="text-lg font-black text-slate-900">Student Portal</h3>
-                <p className="text-xs text-slate-600 leading-relaxed text-justify">
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed text-left">
                   Students log into a distraction-free learning dashboard to watch live sessions, access pre-recorded course modules, attempt digital exams, review marksheets, and ask the 24/7 AI tutor for doubt resolution.
                 </p>
               </div>
@@ -322,7 +320,7 @@ export default function ProductAIEducationPage() {
                   FOR PARENTS
                 </div>
                 <h3 className="text-lg font-black text-slate-900">Parent Portal &amp; Alerts</h3>
-                <p className="text-xs text-slate-600 leading-relaxed text-justify">
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed text-left">
                   Parents receive immediate visibility into their child&apos;s daily attendance, exam marksheets, batch rank performance, fee payment receipts, and automated WhatsApp/SMS alerts when a student is absent.
                 </p>
               </div>
@@ -332,7 +330,7 @@ export default function ProductAIEducationPage() {
                   FOR MANAGEMENT
                 </div>
                 <h3 className="text-lg font-black text-slate-900">Management &amp; Faculty ERP</h3>
-                <p className="text-xs text-slate-600 leading-relaxed text-justify">
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed text-left">
                   Administrators and teachers manage course schedules, create digital/offline exams, monitor student performance analytics, track fee installments, and manage institutional growth seamlessly.
                 </p>
               </div>
@@ -357,26 +355,26 @@ export default function ProductAIEducationPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <h3 className="text-xl font-black text-[#0F172A] mb-2">Development Focus</h3>
-                  <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed text-justify mb-4">
+                  <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed text-left mb-4">
                     The platform is currently being designed and developed with high-performance multi-tenant architecture to support coaching centers, schools, and colleges.
                   </p>
-                  <ul className="grid grid-cols-2 gap-2 text-xs font-bold text-[#2563EB]">
-                    <li className="p-2 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-bold text-[#2563EB]">
+                    <li className="p-2.5 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
                       <span className="text-emerald-500 font-bold">✓</span> LiveKit SDK integration
                     </li>
-                    <li className="p-2 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
+                    <li className="p-2.5 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
                       <span className="text-emerald-500 font-bold">✓</span> Cloudflare Stream storage
                     </li>
-                    <li className="p-2 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
+                    <li className="p-2.5 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
                       <span className="text-emerald-500 font-bold">✓</span> Student &amp; Parent portals
                     </li>
-                    <li className="p-2 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
+                    <li className="p-2.5 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
                       <span className="text-emerald-500 font-bold">✓</span> Digital &amp; Offline exam engine
                     </li>
-                    <li className="p-2 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
+                    <li className="p-2.5 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
                       <span className="text-emerald-500 font-bold">✓</span> AI doubt solver assistant
                     </li>
-                    <li className="p-2 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
+                    <li className="p-2.5 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
                       <span className="text-emerald-500 font-bold">✓</span> Attendance &amp; Fee ERP
                     </li>
                   </ul>
@@ -384,12 +382,12 @@ export default function ProductAIEducationPage() {
 
                 <div>
                   <h3 className="text-xl font-black text-[#0F172A] mb-2">The Bigger Vision</h3>
-                  <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed text-justify mb-4">
+                  <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed text-left mb-4">
                     To deliver a unified digital backbone for modern education — where learning, assessment, administration, and parent communication flow effortlessly through intelligent automation.
                   </p>
                   <div className="p-4 rounded-2xl bg-white border border-[#BFDBFE] space-y-2 text-xs">
                     <div className="font-extrabold text-[#0F172A]">Why We Build Differently:</div>
-                    <p className="text-slate-600 leading-relaxed text-justify">
+                    <p className="text-slate-600 leading-relaxed text-left">
                       Instead of building isolated chatbots or single-purpose apps, Agaran builds connected systems where data flows seamlessly across every operational layer.
                     </p>
                   </div>
@@ -402,15 +400,15 @@ export default function ProductAIEducationPage() {
               BOTTOM NAVIGATION & CTA
           ══════════════════════════════════════════════════════════ */}
           <footer className="pt-8 border-t border-slate-200 space-y-8">
-            <div className="p-8 rounded-3xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] text-white text-center space-y-3">
+            <div className="p-6 sm:p-10 rounded-3xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] text-white text-center space-y-3">
               <h2 className="text-2xl sm:text-3xl font-black">Building the Future of Smarter Education.</h2>
-              <p className="text-xs sm:text-sm text-blue-100 max-w-xl mx-auto">
+              <p className="text-xs sm:text-sm text-blue-100 max-w-xl mx-auto font-medium">
                 We&apos;re building technology that helps education institutions spend less time managing systems and more time focusing on people.
               </p>
               <div className="pt-2">
                 <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-[#2563EB] font-black text-xs sm:text-sm shadow-md hover:bg-slate-50 transition-all"
+                  href="/contact?cat=edtech#inquiry-form"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-white text-[#2563EB] font-black text-xs sm:text-sm shadow-md hover:bg-blue-50 hover:scale-105 transition-all duration-300 w-full sm:w-auto justify-center"
                 >
                   <span>Start a Conversation</span>
                   <span>&rarr;</span>

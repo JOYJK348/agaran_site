@@ -182,7 +182,7 @@ export default function ContactPage() {
   const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
   const [leadId, setLeadId] = useState<string>("");
 
-  // Click outside to close dropdown
+  // Click outside to close dropdown & Handle Hash / Cat URL parameters
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (categoryDropdownRef.current && !categoryDropdownRef.current.contains(event.target as Node)) {
@@ -190,6 +190,42 @@ export default function ContactPage() {
       }
     };
     document.addEventListener("mousedown", handleClickOutside);
+
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const catParam = params.get("cat");
+      if (catParam) {
+        const match = CATEGORIES.find(
+          (c) => c.key === catParam.toLowerCase() || c.badge.toLowerCase() === catParam.toLowerCase()
+        );
+        if (match) {
+          setSelectedCategoryKey(match.key);
+        }
+      }
+
+      const hasHash = window.location.hash === "#inquiry-form";
+      if (hasHash || catParam) {
+        const performScroll = () => {
+          const elem = document.getElementById("inquiry-form");
+          if (elem) {
+            const yOffset = -85; // accounts for fixed navbar height & top clearance
+            const y = elem.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
+          }
+        };
+
+        performScroll();
+        const timer1 = setTimeout(performScroll, 120);
+        const timer2 = setTimeout(performScroll, 400);
+
+        return () => {
+          document.removeEventListener("mousedown", handleClickOutside);
+          clearTimeout(timer1);
+          clearTimeout(timer2);
+        };
+      }
+    }
+
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
@@ -481,58 +517,6 @@ export default function ContactPage() {
                     </a>
                   </div>
                 </div>
-
-                {/* Agaran Direct Guarantees Block to Fill Empty Space Cleanly */}
-                <div className="pt-3 space-y-2.5 border-t border-slate-100">
-                  <div className="text-[10px] font-black uppercase tracking-widest text-slate-400">
-                    THE AGARAN GUARANTEE
-                  </div>
-
-                  <div className="space-y-2">
-                    {[
-                      {
-                        icon: (
-                          <svg className="w-4 h-4 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                          </svg>
-                        ),
-                        title: "2-Hour Response Time",
-                        desc: "Fast technical feedback on your project requirements."
-                      },
-                      {
-                        icon: (
-                          <svg className="w-4 h-4 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                          </svg>
-                        ),
-                        title: "100% Code & IP Ownership",
-                        desc: "Full source code, production deployment & ownership rights."
-                      },
-                      {
-                        icon: (
-                          <svg className="w-4 h-4 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                          </svg>
-                        ),
-                        title: "Zero Overhead Execution",
-                        desc: "Direct communication with the engineers building your product."
-                      }
-                    ].map((item) => (
-                      <div
-                        key={item.title}
-                        className="p-3 rounded-2xl bg-gradient-to-r from-slate-50 to-[#EFF6FF]/40 border border-slate-200/80 flex items-start gap-3 shadow-2xs hover:border-[#2563EB]/40 transition-colors"
-                      >
-                        <span className="p-2 rounded-xl bg-[#EFF6FF] border border-[#BFDBFE] shrink-0 shadow-2xs">
-                          {item.icon}
-                        </span>
-                        <div>
-                          <div className="text-xs font-black text-[#0F172A]">{item.title}</div>
-                          <div className="text-[11px] font-medium text-slate-500 leading-snug">{item.desc}</div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </div>
 
               {/* WHERE WE'RE BASED Location Section */}
@@ -558,13 +542,13 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* RIGHT COLUMN: LIGHT FORM CARD (7 COLS) */}
-            <div className="lg:col-span-7 h-full">
+            {/* RIGHT COLUMN: SIMPLE CLEAN FORM CARD (7 COLS) */}
+            <div id="inquiry-form" className="scroll-mt-24 lg:col-span-7 h-full">
               {isSubmitted ? (
                 <motion.div
-                  initial={{ opacity: 0, scale: 0.95 }}
+                  initial={{ opacity: 0, scale: 0.96 }}
                   animate={{ opacity: 1, scale: 1 }}
-                  className="h-full flex flex-col justify-between p-8 sm:p-12 rounded-3xl bg-white border border-slate-200/90 shadow-xl text-center space-y-6 relative overflow-hidden"
+                  className="h-full flex flex-col justify-between p-8 sm:p-12 rounded-3xl bg-white border border-slate-200 shadow-xl text-center space-y-6 relative overflow-hidden"
                 >
                   <div className="h-2 w-full bg-gradient-to-r from-emerald-400 via-teal-500 to-emerald-600 absolute top-0 left-0 right-0" />
                   <div className="w-16 h-16 rounded-2xl bg-emerald-100 border border-emerald-200 text-emerald-600 text-3xl font-black flex items-center justify-center mx-auto shadow-md shadow-emerald-500/10">
@@ -575,11 +559,11 @@ export default function ContactPage() {
                     <span className="text-xs font-black uppercase tracking-widest text-emerald-800 bg-emerald-50 px-3.5 py-1 rounded-full border border-emerald-200 inline-block shadow-2xs">
                       MESSAGE RECEIVED &bull; REF ID: {leadId}
                     </span>
-                    <h2 className="text-2xl sm:text-4xl font-black text-[#0F172A]">
+                    <h2 className="text-2xl sm:text-4xl font-black text-slate-900">
                       Thank you, {name}!
                     </h2>
                     <p className="text-sm text-slate-600 font-medium leading-relaxed max-w-md mx-auto">
-                      We got your message regarding <strong className="text-[#0F172A]">{currentCategory.label}</strong>. Our team will review your details and get back to you within 2 hours.
+                      We got your details regarding <strong className="text-slate-900">{currentCategory.label}</strong>. Our team will review your message and get back to you within 2 hours.
                     </p>
                   </div>
 
@@ -588,7 +572,7 @@ export default function ContactPage() {
                       href={`https://wa.me/919080558130?text=Hi%20Agaran%2C%20I%20just%20sent%20a%20request%20(${leadId})`}
                       target="_blank"
                       rel="noreferrer"
-                      className="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-[#25D366] hover:bg-emerald-600 text-white font-black text-xs sm:text-sm transition-all shadow-md flex items-center justify-center gap-2.5 hover:scale-[1.02]"
+                      className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-[#25D366] hover:bg-emerald-600 text-white font-extrabold text-xs sm:text-sm transition-all shadow-md flex items-center justify-center gap-2.5 hover:scale-[1.02]"
                     >
                       <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
                         <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
@@ -599,7 +583,7 @@ export default function ContactPage() {
                     <button
                       type="button"
                       onClick={handleReset}
-                      className="w-full sm:w-auto px-7 py-3.5 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-extrabold text-xs sm:text-sm transition-all"
+                      className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-extrabold text-xs sm:text-sm transition-all"
                     >
                       Send Another Request
                     </button>
@@ -608,385 +592,162 @@ export default function ContactPage() {
               ) : (
                 <form
                   onSubmit={handleSubmit}
-                  className="h-full flex flex-col justify-between p-6 sm:p-10 rounded-3xl bg-gradient-to-b from-[#EFF6FF]/95 via-white to-[#DBEAFE]/50 border border-[#BFDBFE] shadow-[0_12px_35px_rgba(37,99,235,0.08)] hover:border-[#2563EB]/80 hover:shadow-[0_20px_45px_rgba(37,99,235,0.16)] transition-all duration-300 space-y-6 relative overflow-hidden"
+                  className="h-full flex flex-col justify-between p-6 sm:p-10 rounded-3xl bg-gradient-to-b from-[#F8FAFC] via-[#EFF6FF]/60 to-[#F0F9FF]/80 border border-[#BFDBFE] shadow-[0_12px_35px_rgba(37,99,235,0.06)] hover:border-[#2563EB]/60 hover:shadow-[0_16px_40px_rgba(37,99,235,0.12)] transition-all duration-300 space-y-5 relative overflow-hidden"
                 >
-                  {/* Agaran Royal Blue Top Accent Line */}
-                  <div className="h-1.5 w-full bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] absolute top-0 left-0 right-0" />
+                  {/* Header Title Block */}
+                  <div>
+                    <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                      Let&rsquo;s Talk
+                    </h2>
+                    <p className="text-xs sm:text-sm font-medium text-slate-500 mt-1">
+                      Fill in your details below to get in touch.
+                    </p>
+                  </div>
 
-                  {/* Header Block */}
-                  <div className="border-b border-slate-100 pb-4 space-y-2 pt-1">
-                    <div className="flex items-center justify-between gap-2 flex-wrap">
-                      <div className="flex items-center gap-2">
-                        <div className="w-7 h-7 rounded-xl bg-[#EFF6FF] border border-[#BFDBFE] text-[#2563EB] flex items-center justify-center shadow-2xs">
-                          <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  <div className="space-y-4">
+                    {/* Name Field */}
+                    <div>
+                      <label className="block text-xs sm:text-sm font-bold text-slate-700 mb-1.5">
+                        Name <span className="text-[#2563EB]">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        required
+                        value={name}
+                        onChange={(e) => {
+                          setName(e.target.value);
+                          if (fieldErrors.name) setFieldErrors((prev) => ({ ...prev, name: false }));
+                        }}
+                        placeholder="Enter your name"
+                        className={`w-full px-4 py-3 sm:py-3.5 rounded-xl border text-sm font-medium transition-all outline-none ${
+                          fieldErrors.name
+                            ? "border-rose-500 bg-rose-50/30 focus:ring-4 focus:ring-rose-100"
+                            : "border-slate-200 focus:border-[#2563EB] focus:ring-4 focus:ring-blue-50 bg-white"
+                        } text-slate-800 placeholder:text-slate-400`}
+                      />
+                      {fieldErrors.name && (
+                        <span className="text-[11px] font-bold text-rose-500 mt-1 block">
+                          Please enter your name
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Mobile or WhatsApp Field */}
+                    <div>
+                      <label className="block text-xs sm:text-sm font-bold text-slate-700 mb-1.5">
+                        Mobile or WhatsApp <span className="text-[#2563EB]">*</span>
+                      </label>
+                      <input
+                        type="tel"
+                        required
+                        value={phone}
+                        onChange={(e) => {
+                          setPhone(e.target.value);
+                          if (fieldErrors.phone) setFieldErrors((prev) => ({ ...prev, phone: false }));
+                        }}
+                        placeholder="Enter your phone number"
+                        className={`w-full px-4 py-3 sm:py-3.5 rounded-xl border text-sm font-medium transition-all outline-none ${
+                          fieldErrors.phone
+                            ? "border-rose-500 bg-rose-50/30 focus:ring-4 focus:ring-rose-100"
+                            : "border-slate-200 focus:border-[#2563EB] focus:ring-4 focus:ring-blue-50 bg-white"
+                        } text-slate-800 placeholder:text-slate-400`}
+                      />
+                      {fieldErrors.phone && (
+                        <span className="text-[11px] font-bold text-rose-500 mt-1 block">
+                          Please enter your phone number
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Email Field */}
+                    <div>
+                      <label className="block text-xs sm:text-sm font-bold text-slate-700 mb-1.5">
+                        Email Address <span className="text-[#2563EB]">*</span>
+                      </label>
+                      <input
+                        type="email"
+                        required
+                        value={email}
+                        onChange={(e) => {
+                          setEmail(e.target.value);
+                          if (fieldErrors.email) setFieldErrors((prev) => ({ ...prev, email: false }));
+                        }}
+                        placeholder="Enter your email address"
+                        className={`w-full px-4 py-3 sm:py-3.5 rounded-xl border text-sm font-medium transition-all outline-none ${
+                          fieldErrors.email
+                            ? "border-rose-500 bg-rose-50/30 focus:ring-4 focus:ring-rose-100"
+                            : "border-slate-200 focus:border-[#2563EB] focus:ring-4 focus:ring-blue-50 bg-white"
+                        } text-slate-800 placeholder:text-slate-400`}
+                      />
+                      {fieldErrors.email && (
+                        <span className="text-[11px] font-bold text-rose-500 mt-1 block">
+                          Please enter your email address
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Project Type Dropdown */}
+                    <div>
+                      <label className="block text-xs sm:text-sm font-bold text-slate-700 mb-1.5">
+                        Project Type
+                      </label>
+                      <div className="relative">
+                        <select
+                          value={selectedCategoryKey}
+                          onChange={(e) => handleCategoryChange(e.target.value)}
+                          className="w-full px-4 py-3 sm:py-3.5 rounded-xl border border-slate-200 focus:border-[#2563EB] focus:ring-4 focus:ring-blue-50 bg-white text-slate-800 text-sm font-medium appearance-none cursor-pointer outline-none transition-all pr-10"
+                        >
+                          <option value="general">General Project Discussion</option>
+                          <option value="software">Web Application / SaaS</option>
+                          <option value="edtech">Education Platform &amp; LMS</option>
+                          <option value="automation">AI &amp; Automation</option>
+                          <option value="idea">Product Idea / App Concept</option>
+                          <option value="ai">Business Systems &amp; ERP</option>
+                          <option value="other">Other Inquiry</option>
+                        </select>
+                        <div className="absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none text-slate-500">
+                          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
                           </svg>
                         </div>
-                        <span className="text-xs font-mono font-black uppercase tracking-wider text-[#2563EB]">
-                          PROJECT INQUIRY FORM
-                        </span>
                       </div>
-                      <span className="text-[10px] font-extrabold uppercase tracking-wider px-3 py-1 rounded-full bg-[#EFF6FF] text-[#2563EB] border border-[#BFDBFE] shadow-2xs">
-                        {currentCategory.badge}
-                      </span>
                     </div>
-                    <h2 className="text-xl sm:text-2xl font-black text-[#0F172A] tracking-tight">
-                      Tell us about your requirement
-                    </h2>
-                  </div>
 
-                  {/* 1. CUSTOM ROYAL BLUE THEME CATEGORY SELECTOR DROPDOWN */}
-                  <div className="space-y-2 relative z-30" ref={categoryDropdownRef}>
-                    <label className="block text-xs font-extrabold uppercase tracking-wider text-[#0F172A]">
-                      1. What do you need help with? <span className="text-rose-500">*</span>
-                    </label>
-
-                    {/* Trigger Card */}
-                    <button
-                      type="button"
-                      onClick={() => setIsCategoryDropdownOpen((prev) => !prev)}
-                      className="w-full p-3.5 sm:p-4 rounded-2xl bg-gradient-to-r from-[#EFF6FF] via-white to-[#EFF6FF] border-2 border-[#BFDBFE] hover:border-[#2563EB] shadow-2xs hover:shadow-md transition-all text-left flex items-center justify-between group cursor-pointer"
-                    >
-                      <div className="flex-1 min-w-0 pr-3">
-                        <div className="flex items-center gap-2 mb-1 flex-wrap">
-                          <span className="px-2.5 py-0.5 rounded-full bg-[#2563EB] text-white text-[9.5px] font-mono font-black uppercase tracking-wider shadow-2xs">
-                            {currentCategory.badge}
-                          </span>
-                          <span className="text-xs sm:text-sm font-black text-[#0F172A] group-hover:text-[#2563EB] transition-colors truncate">
-                            {currentCategory.label}
-                          </span>
-                        </div>
-                        <p className="text-[11.5px] font-medium text-slate-500 line-clamp-1">
-                          {currentCategory.subtitle}
-                        </p>
-                      </div>
-
-                      <div className="w-8 h-8 rounded-xl bg-white border border-[#BFDBFE] text-[#2563EB] flex items-center justify-center group-hover:bg-[#2563EB] group-hover:text-white transition-all shrink-0 shadow-2xs">
-                        <svg
-                          className={`w-4 h-4 transition-transform duration-200 ${
-                            isCategoryDropdownOpen ? "rotate-180" : ""
-                          }`}
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          stroke="currentColor"
-                          strokeWidth={2.5}
-                        >
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                        </svg>
-                      </div>
-                    </button>
-
-                    {/* Custom Animated Floating Options List */}
-                    <AnimatePresence>
-                      {isCategoryDropdownOpen && (
-                        <motion.div
-                          initial={{ opacity: 0, y: 8, scale: 0.98 }}
-                          animate={{ opacity: 1, y: 0, scale: 1 }}
-                          exit={{ opacity: 0, y: 8, scale: 0.98 }}
-                          transition={{ duration: 0.18, ease: "easeOut" }}
-                          className="absolute top-full left-0 right-0 mt-2 p-2 rounded-2xl bg-white/98 backdrop-blur-2xl border-2 border-[#BFDBFE] shadow-[0_20px_50px_rgba(37,99,235,0.18)] z-50 space-y-1 overflow-hidden max-h-[380px] overflow-y-auto"
-                        >
-                          <div className="h-1 w-full bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] absolute top-0 left-0 right-0" />
-
-                          <div className="px-2 pt-2 pb-1.5 border-b border-slate-100 flex items-center justify-between">
-                            <span className="text-[10px] font-mono font-black text-[#2563EB] uppercase tracking-wider">
-                              SELECT A CATEGORY
-                            </span>
-                            <span className="text-[9.5px] font-mono text-slate-400 font-bold uppercase">
-                              6 OPTIONS
-                            </span>
-                          </div>
-
-                          <div className="space-y-1 pt-1">
-                            {CATEGORIES.map((cat) => {
-                              const isSelected = selectedCategoryKey === cat.key;
-                              return (
-                                <button
-                                  key={cat.key}
-                                  type="button"
-                                  onClick={() => {
-                                    handleCategoryChange(cat.key);
-                                    setIsCategoryDropdownOpen(false);
-                                  }}
-                                  className={`w-full p-3 rounded-xl transition-all text-left flex items-start justify-between gap-3 group/item ${
-                                    isSelected
-                                      ? "bg-[#EFF6FF] border border-[#BFDBFE] shadow-2xs"
-                                      : "bg-white border border-transparent hover:bg-slate-50 hover:border-slate-200"
-                                  }`}
-                                >
-                                  <div className="min-w-0 flex-1">
-                                    <div className="flex items-center gap-2 mb-1 flex-wrap">
-                                      <span
-                                        className={`px-2 py-0.5 rounded-full text-[9px] font-mono font-black uppercase tracking-wider ${
-                                          isSelected
-                                            ? "bg-[#2563EB] text-white"
-                                            : "bg-slate-100 text-slate-600 group-hover/item:bg-[#EFF6FF] group-hover/item:text-[#2563EB]"
-                                        }`}
-                                      >
-                                        {cat.badge}
-                                      </span>
-                                      <span
-                                        className={`text-xs font-extrabold ${
-                                          isSelected ? "text-[#2563EB]" : "text-[#0F172A] group-hover/item:text-[#2563EB]"
-                                        } transition-colors`}
-                                      >
-                                        {cat.label}
-                                      </span>
-                                    </div>
-                                    <p className="text-[11px] font-medium text-slate-500 line-clamp-1">
-                                      {cat.subtitle}
-                                    </p>
-                                  </div>
-
-                                  {isSelected && (
-                                    <span className="w-5 h-5 rounded-full bg-[#2563EB] text-white text-xs font-black flex items-center justify-center shrink-0 mt-0.5 shadow-2xs">
-                                      ✓
-                                    </span>
-                                  )}
-                                </button>
-                              );
-                            })}
-                          </div>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-
-                  {/* 2. DYNAMIC QUICK CHIPS GRID (RESPONSIVE & THEMED) */}
-                  <div className="space-y-3 pt-1">
-                    <div className="flex items-center justify-between gap-2 flex-wrap">
-                      <label className="block text-xs font-extrabold uppercase tracking-wider text-[#0F172A]">
-                        2. Select options that match your need
+                    {/* Message Field (Optional) */}
+                    <div>
+                      <label className="block text-xs sm:text-sm font-bold text-slate-700 mb-1.5">
+                        Project Details <span className="text-slate-400 font-normal">(Optional)</span>
                       </label>
-                      <span className="text-[9.5px] font-mono font-bold text-[#2563EB] bg-[#EFF6FF] px-2.5 py-0.5 rounded-full border border-[#BFDBFE] shadow-2xs">
-                        SELECT ALL THAT APPLY
-                      </span>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-2.5">
-                      {currentCategory.quickChips.map((chip) => {
-                        const isSelected = selectedChips.includes(chip);
-                        return (
-                          <button
-                            key={chip}
-                            type="button"
-                            onClick={() => toggleChip(chip)}
-                            className={`p-3 sm:p-3.5 rounded-2xl border-2 transition-all duration-200 flex items-center justify-between text-left group cursor-pointer ${
-                              isSelected
-                                ? "bg-gradient-to-r from-[#EFF6FF] via-white to-[#EFF6FF] border-[#2563EB] shadow-sm shadow-blue-500/10 scale-[1.01]"
-                                : "bg-white border-slate-200/90 hover:border-[#BFDBFE] hover:bg-[#EFF6FF]/30 shadow-2xs"
-                            }`}
-                          >
-                            <span
-                              className={`text-xs sm:text-[13px] pr-2 ${
-                                isSelected
-                                  ? "font-black text-[#2563EB]"
-                                  : "font-extrabold text-[#0F172A] group-hover:text-[#2563EB]"
-                              } transition-colors leading-snug`}
-                            >
-                              {chip}
-                            </span>
-                            <span
-                              className={`w-6 h-6 rounded-full text-xs font-black flex items-center justify-center shrink-0 transition-all ${
-                                isSelected
-                                  ? "bg-[#2563EB] text-white shadow-xs shadow-blue-500/30 ring-2 ring-blue-200"
-                                  : "bg-slate-100 text-slate-400 group-hover:bg-[#EFF6FF] group-hover:text-[#2563EB] border border-slate-200/80"
-                              }`}
-                            >
-                              {isSelected ? "✓" : "+"}
-                            </span>
-                          </button>
-                        );
-                      })}
-                    </div>
-
-                    {/* Show Textbox when "Others" is selected */}
-                    {selectedChips.includes("Others") && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 4 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="pt-1 space-y-1.5"
-                      >
-                        <label className="block text-[11px] font-bold text-[#2563EB]">
-                          Specify custom requirement detail:
-                        </label>
-                        <input
-                          type="text"
-                          value={otherText}
-                          onChange={(e) => setOtherText(e.target.value)}
-                          placeholder="Type what you need in simple words (e.g. Need a custom dashboard)..."
-                          className="w-full p-3.5 rounded-2xl bg-white border-2 border-[#2563EB] text-slate-800 font-bold text-xs sm:text-sm focus:ring-4 focus:ring-[#2563EB]/15 outline-none transition-all shadow-2xs"
-                        />
-                      </motion.div>
-                    )}
-                  </div>
-
-                  {/* 3. BRIEF MESSAGE */}
-                  <div className="space-y-1.5 pt-1">
-                    <label className="block text-xs font-extrabold uppercase tracking-wider text-[#0F172A]">
-                      3. Tell us a little more about your requirement <span className="text-slate-400 font-medium">(Optional)</span>
-                    </label>
-                    <div className="relative rounded-2xl bg-white border border-slate-200 focus-within:border-[#2563EB] focus-within:ring-2 focus-within:ring-[#2563EB]/20 transition-all shadow-2xs overflow-hidden">
                       <textarea
-                        rows={2}
+                        rows={3}
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
-                        placeholder="e.g. I run a business and want an automated WhatsApp tool to send payment reminders..."
-                        className="w-full p-3.5 bg-transparent text-slate-800 placeholder:text-slate-400 font-medium text-xs sm:text-sm outline-none resize-none"
+                        placeholder="Tell us a little about your requirement..."
+                        className="w-full px-4 py-3 sm:py-3.5 rounded-xl border border-slate-200 focus:border-[#2563EB] focus:ring-4 focus:ring-blue-50 bg-white text-slate-800 text-sm font-medium placeholder:text-slate-400 outline-none transition-all resize-none"
                       />
                     </div>
                   </div>
 
-                  {/* 4. CONTACT DETAILS */}
-                  <div className="space-y-3.5 pt-4 border-t border-slate-100">
-                    <div className="flex items-center justify-between">
-                      <div className="text-xs font-extrabold uppercase tracking-wider text-[#0F172A] flex items-center gap-2">
-                        <span className="w-2 h-2 rounded-full bg-[#2563EB]" />
-                        4. Your Contact Information
-                      </div>
-                      <span className="text-[10px] font-bold text-rose-500 bg-rose-50 px-2 py-0.5 rounded-md border border-rose-200">
-                        * Required
-                      </span>
-                    </div>
-
-                    <div className="space-y-3">
-                      {/* Name Field */}
-                      <div>
-                        <div className={`flex items-center rounded-2xl bg-white border transition-all shadow-2xs overflow-hidden ${
-                          fieldErrors.name
-                            ? "border-rose-500 bg-rose-50/40 ring-2 ring-rose-500/20"
-                            : "border-slate-200 focus-within:border-[#2563EB] focus-within:ring-2 focus-within:ring-[#2563EB]/20"
-                        }`}>
-                          <div className="p-3.5 bg-[#EFF6FF] border-r border-[#BFDBFE]/60 text-[#2563EB] shrink-0">
-                            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                              <path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                            </svg>
-                          </div>
-                          <input
-                            type="text"
-                            required
-                            value={name}
-                            onChange={(e) => {
-                              setName(e.target.value);
-                              if (fieldErrors.name) setFieldErrors((prev) => ({ ...prev, name: false }));
-                            }}
-                            placeholder="Your Full Name (e.g. Priya)"
-                            className="w-full p-3.5 bg-transparent text-slate-800 placeholder:text-slate-400 font-bold text-xs sm:text-sm outline-none"
-                          />
-                        </div>
-                        {fieldErrors.name && (
-                          <span className="text-[11px] font-bold text-rose-500 mt-1 pl-1 block">
-                            Please enter your name
-                          </span>
-                        )}
-                      </div>
-
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        {/* Phone Field */}
-                        <div>
-                          <div className={`flex items-center rounded-2xl bg-white border transition-all shadow-2xs overflow-hidden ${
-                            fieldErrors.phone
-                              ? "border-rose-500 bg-rose-50/40 ring-2 ring-rose-500/20"
-                              : "border-slate-200 focus-within:border-[#2563EB] focus-within:ring-2 focus-within:ring-[#2563EB]/20"
-                          }`}>
-                            <div className="p-3.5 bg-[#EFF6FF] border-r border-[#BFDBFE]/60 text-[#2563EB] shrink-0">
-                              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                              </svg>
-                            </div>
-                            <input
-                              type="tel"
-                              required
-                              value={phone}
-                              onChange={(e) => {
-                                setPhone(e.target.value);
-                                if (fieldErrors.phone) setFieldErrors((prev) => ({ ...prev, phone: false }));
-                              }}
-                              placeholder="Phone / WhatsApp (+91...)"
-                              className="w-full p-3.5 bg-transparent text-slate-800 placeholder:text-slate-400 font-bold text-xs sm:text-sm outline-none"
-                            />
-                          </div>
-                          {fieldErrors.phone && (
-                            <span className="text-[11px] font-bold text-rose-500 mt-1 pl-1 block">
-                              Please enter phone number
-                            </span>
-                          )}
-                        </div>
-
-                        {/* Email Field */}
-                        <div>
-                          <div className={`flex items-center rounded-2xl bg-white border transition-all shadow-2xs overflow-hidden ${
-                            fieldErrors.email
-                              ? "border-rose-500 bg-rose-50/40 ring-2 ring-rose-500/20"
-                              : "border-slate-200 focus-within:border-[#2563EB] focus-within:ring-2 focus-within:ring-[#2563EB]/20"
-                          }`}>
-                            <div className="p-3.5 bg-[#EFF6FF] border-r border-[#BFDBFE]/60 text-[#2563EB] shrink-0">
-                              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                                <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                              </svg>
-                            </div>
-                            <input
-                              type="email"
-                              required
-                              value={email}
-                              onChange={(e) => {
-                                setEmail(e.target.value);
-                                if (fieldErrors.email) setFieldErrors((prev) => ({ ...prev, email: false }));
-                              }}
-                              placeholder="Email (priya@gmail.com)"
-                              className="w-full p-3.5 bg-transparent text-slate-800 placeholder:text-slate-400 font-bold text-xs sm:text-sm outline-none"
-                            />
-                          </div>
-                          {fieldErrors.email && (
-                            <span className="text-[11px] font-bold text-rose-500 mt-1 pl-1 block">
-                              Please enter email address
-                            </span>
-                          )}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* SUBMIT BUTTON & TRUST FOOTER */}
-                  <div className="pt-2 space-y-3">
+                  {/* SUBMIT BUTTON */}
+                  <div className="pt-2">
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-4.5 rounded-2xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] hover:shadow-[0_12px_30px_rgba(37,99,235,0.35)] text-white font-black text-sm sm:text-base transition-all duration-300 flex items-center justify-center gap-2.5 hover:scale-[1.01] active:scale-[0.99]"
+                      className="w-full py-3.5 sm:py-4 rounded-xl bg-[#2563EB] hover:bg-[#1D4ED8] active:scale-[0.99] text-white font-bold text-base transition-all duration-200 shadow-sm hover:shadow-md flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70"
                     >
                       {isSubmitting ? (
                         <>
                           <span className="w-5 h-5 rounded-full border-2 border-white border-t-transparent animate-spin" />
-                          <span>Sending Your Request...</span>
+                          <span>Sending...</span>
                         </>
                       ) : (
-                        <>
-                          <span>Send Request to Agaran</span>
-                          <span className="text-lg">&rarr;</span>
-                        </>
+                        <span>Send Message</span>
                       )}
                     </button>
-
-                    {/* Trust Badges Strip */}
-                    <div className="flex items-center justify-center gap-4 text-[10.5px] font-extrabold text-slate-500 flex-wrap">
-                      <span className="flex items-center gap-1 text-[#2563EB]">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-pulse" />
-                        Reply Within 2 Hours
-                      </span>
-                      <span>&bull;</span>
-                      <span className="flex items-center gap-1 text-[#2563EB]">
-                        100% Code &amp; Data Ownership
-                      </span>
-                      <span>&bull;</span>
-                      <span className="flex items-center gap-1 text-[#2563EB]">
-                        Direct Engineer Support
-                      </span>
-                    </div>
                   </div>
                 </form>
               )}
             </div>
-
           </div>
           </Reveal>
 

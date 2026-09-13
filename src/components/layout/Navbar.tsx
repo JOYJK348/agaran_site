@@ -10,64 +10,42 @@ export interface WhatWeDoOverviewItem {
   subtext: string;
   href: string;
   badge: string;
-  icon?: React.ReactNode;
 }
 
 export const WHAT_WE_DO_ITEMS: WhatWeDoOverviewItem[] = [
   {
-    title: "Software Dev",
+    title: "Software Development",
     subtext: "Web Apps, Mobile & Custom SaaS",
     href: "/what-we-do#software-development",
     badge: "01",
-    icon: (
-      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-      </svg>
-    ),
   },
   {
-    title: "AI Tools",
-    subtext: "Agents, Chatbots & Semantic Search",
+    title: "AI Tools & Agents",
+    subtext: "Autonomous Agents & AI Systems",
     href: "/what-we-do#ai-systems",
     badge: "02",
-    icon: (
-      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    ),
   },
   {
-    title: "Automation",
-    subtext: "Workflows & Auto Data Sync",
+    title: "Business Automation",
+    subtext: "Workflows & WhatsApp Bots",
     href: "/what-we-do#business-automation",
     badge: "03",
-    icon: (
-      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-      </svg>
-    ),
   },
   {
-    title: "EdTech",
-    subtext: "LMS, Exams & Student Portals",
+    title: "EdTech & LMS",
+    subtext: "Student Portals, LMS & Exams",
     href: "/what-we-do#education-technology",
     badge: "04",
-    icon: (
-      <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l9-5-9-5-9 5 9 5z" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0112 20.055a11.952 11.952 0 01-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-      </svg>
-    ),
   },
   {
-    title: "Cloud Scale",
-    subtext: "Cloud Infra, Security & Scale",
+    title: "Cloud & Infrastructure",
+    subtext: "Scalable Cloud, Security & DevOps",
     href: "/what-we-do#cloud-infrastructure",
     badge: "05",
   },
   {
-    title: "Maintenance",
-    subtext: "System Upgrades & Maintenance",
+    title: "System Maintenance",
+    subtext: "Long-term Upgrades & Support",
     href: "/what-we-do#existing-systems",
     badge: "06",
   },
@@ -220,63 +198,61 @@ export default function Navbar() {
                     <span className="absolute bottom-0.5 left-3 right-3 h-[2px] rounded-full bg-[#2563EB] opacity-0 scale-x-50 group-hover:opacity-100 group-hover:scale-x-100 transition-all duration-300 ease-out z-10" />
                   </Link>
 
-                  {/* ── What We Do Hover Pop-Up Dropdown Menu (Seamless Professional List) ── */}
+                  {/* ── What We Do Hover Dropdown Menu (Ultra-Clean Plain Text Layout) ── */}
                   <div
-                    className={`absolute top-full left-0 mt-2.5 w-[460px] p-3.5 rounded-2xl bg-white shadow-[0_20px_45px_rgba(15,23,42,0.08)] border border-slate-200/80 backdrop-blur-xl transition-all duration-200 z-50 overflow-hidden ${
+                    className={`absolute top-full left-1/2 -translate-x-1/2 mt-2.5 w-[520px] p-6 rounded-2xl bg-white shadow-[0_20px_60px_rgba(15,23,42,0.12)] border border-slate-200/80 backdrop-blur-xl transition-all duration-200 z-50 overflow-hidden before:content-[''] before:absolute before:-top-3 before:left-0 before:w-full before:h-3 ${
                       isDropdownOpen
                         ? "opacity-100 scale-100 translate-y-0 pointer-events-auto"
                         : "opacity-0 scale-95 -translate-y-2 pointer-events-none"
                     }`}
                   >
-                    {/* Minimal Top Blue Accent Bar */}
-                    <div className="h-[2px] w-full bg-gradient-to-r from-[#1D4ED8] to-[#2563EB] absolute top-0 left-0 right-0" />
-
-                    {/* Header Bar */}
-                    <div className="flex items-center justify-between px-1.5 pb-2 mb-1.5 border-b border-slate-100 pt-0.5">
-                      <div className="flex items-center gap-1.5">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
-                        <span className="text-[10.5px] font-mono font-bold tracking-widest text-[#2563EB] uppercase">
+                    {/* Header Row */}
+                    <div className="flex items-center justify-between pb-3 mb-4 border-b border-slate-100">
+                      <div className="flex items-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-[#2563EB]" />
+                        <span className="text-[11px] font-mono font-bold tracking-wider text-[#2563EB] uppercase">
                           WHAT WE DO
                         </span>
                       </div>
-                      <span className="text-[9.5px] font-mono font-semibold text-slate-400 uppercase tracking-wider">
-                        6 CAPABILITIES
+                      <span className="text-[11px] font-mono font-medium text-slate-400">
+                        6 Core Services
                       </span>
                     </div>
 
-                    {/* 2-Column Box-less List Layout */}
-                    <div className="grid grid-cols-2 gap-x-2 gap-y-1">
+                    {/* 2-Column Plain Text Layout (No Card Boxes, No Icons) */}
+                    <div className="grid grid-cols-2 gap-x-8 gap-y-5">
                       {WHAT_WE_DO_ITEMS.map((item) => (
                         <Link
                           key={item.title}
                           href={item.href}
                           onClick={(e) => handleItemClick(e, item.href)}
-                          className="group/item p-2 rounded-xl hover:bg-[#EFF6FF]/70 transition-colors duration-150 flex flex-col justify-center"
+                          className="group/item flex flex-col space-y-1 focus:outline-none transition-transform duration-150 hover:translate-x-1"
                         >
                           <div className="flex items-center justify-between">
-                            <span className="text-[13px] font-semibold text-slate-800 group-hover/item:text-[#2563EB] transition-colors">
+                            <span className="text-[14px] font-bold text-slate-900 group-hover/item:text-[#2563EB] transition-colors leading-tight">
                               {item.title}
                             </span>
-                            <span className="text-[10px] font-mono font-medium text-slate-400 group-hover/item:text-[#2563EB] transition-colors">
+                            <span className="text-[10px] font-mono font-bold text-slate-300 group-hover/item:text-[#2563EB] transition-colors">
                               {item.badge}
                             </span>
                           </div>
-                          <p className="text-[11.5px] text-slate-500 font-normal line-clamp-1 group-hover/item:text-slate-700 transition-colors mt-0.5">
+                          <p className="text-[12px] text-slate-500 font-normal leading-relaxed group-hover/item:text-slate-700 transition-colors">
                             {item.subtext}
                           </p>
                         </Link>
                       ))}
                     </div>
 
-                    {/* Footer Bar */}
-                    <div className="mt-2 pt-2 px-1.5 border-t border-slate-100 flex items-center justify-between text-[11.5px]">
-                      <span className="text-slate-500 font-medium">Explore full capability breakdown</span>
+                    {/* Footer Row */}
+                    <div className="mt-5 pt-3.5 border-t border-slate-100 flex items-center justify-between text-xs">
+                      <span className="text-slate-500 font-medium">Looking for custom engineering?</span>
                       <Link
                         href="/what-we-do"
                         onClick={() => setIsDropdownOpen(false)}
-                        className="font-bold text-[#2563EB] hover:text-[#1d4ed8] hover:underline transition-all"
+                        className="font-bold text-[#2563EB] hover:text-[#1d4ed8] hover:underline flex items-center gap-1 transition-colors"
                       >
-                        View All &rarr;
+                        <span>View All Capabilities</span>
+                        <span className="text-sm">&rarr;</span>
                       </Link>
                     </div>
                   </div>
@@ -301,7 +277,7 @@ export default function Navbar() {
         {/* ── Desktop CTA ── */}
         <div className="hidden md:block">
           <Link
-            href="/contact"
+            href="/contact#inquiry-form"
             className="inline-flex items-center justify-center px-5 py-2 rounded-lg text-[13.5px] font-semibold text-white bg-[#2563EB] hover:bg-[#1d4ed8] transition-colors duration-150 active:scale-[0.98]"
           >
             Start a Conversation

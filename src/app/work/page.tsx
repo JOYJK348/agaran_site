@@ -49,7 +49,7 @@ export default function WorkPage() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="relative max-w-[1440px] mx-auto w-full space-y-10 sm:space-y-14"
+          className="relative max-w-[1600px] mx-auto w-full space-y-10 sm:space-y-14"
         >
           
           {/* ══════════════════════════════════════════════════════════
@@ -64,19 +64,19 @@ export default function WorkPage() {
                 </div>
               </div>
 
-              <h1 className="text-center text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] xl:text-[4.4rem] font-black leading-[1.12] tracking-[-0.035em] text-[#0F172A] w-full max-w-5xl mx-auto mb-5">
+              <h1 className="text-center text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] xl:text-[4.4rem] font-black leading-[1.12] tracking-[-0.035em] text-[#0F172A] w-full max-w-full lg:max-w-6xl mx-auto mb-5">
                 Proven Architecture Over{" "}
                 <span className="bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] bg-clip-text text-transparent">
                   Marketing Hype.
                 </span>
               </h1>
 
-              <p className="text-center text-sm sm:text-lg lg:text-xl font-medium leading-relaxed text-slate-600 w-full max-w-5xl mx-auto mb-6">
+              <p className="text-center text-sm sm:text-lg lg:text-xl font-medium leading-relaxed text-slate-600 w-full max-w-full lg:max-w-6xl mx-auto mb-6">
                 In-depth technical whitepapers and engineering case studies detailing real multi-tenant SaaS platforms, microservices backend architectures, automated infrastructure, and 24/7 real-time system monitoring shipped for client institutions.
               </p>
 
               {/* Quick System Stats Bar — Full Container Width */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-2 max-w-5xl mx-auto text-center text-xs">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-2 max-w-full lg:max-w-6xl mx-auto text-center text-xs">
                 <div className="p-3.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs space-y-0.5">
                   <div className="text-base sm:text-lg font-black text-[#2563EB]">2 Systems</div>
                   <div className="text-slate-500 font-bold text-[10px] uppercase">Live Production</div>

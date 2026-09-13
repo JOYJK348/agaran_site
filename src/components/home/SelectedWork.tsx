@@ -139,6 +139,41 @@ export default function SelectedWork() {
   const moduleCount = useCounter(100, statsInView);
   const partnerCount = useCounter(3, statsInView);
 
+  const [workIdx, setWorkIdx] = useState(0);
+  const [partnerIdx, setPartnerIdx] = useState(0);
+  const partnerCarouselRef = useRef<HTMLDivElement>(null);
+
+  const handleWorkScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const container = e.currentTarget;
+    const scrollLeft = container.scrollLeft;
+    const maxScroll = container.scrollWidth - container.clientWidth;
+    if (maxScroll <= 0) return;
+    const itemWidth = container.scrollWidth / 2;
+    const idx = Math.min(1, Math.max(0, Math.round(scrollLeft / itemWidth)));
+    setWorkIdx(idx);
+  };
+
+  const handlePartnerScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const container = e.currentTarget;
+    const scrollLeft = container.scrollLeft;
+    const maxScroll = container.scrollWidth - container.clientWidth;
+    if (maxScroll <= 0) return;
+    const cardWidth = container.clientWidth * 0.84;
+    const idx = Math.min(testimonials.length - 1, Math.max(0, Math.round(scrollLeft / cardWidth)));
+    setPartnerIdx(idx);
+  };
+
+  const scrollToPartnerCard = (index: number) => {
+    setPartnerIdx(index);
+    if (partnerCarouselRef.current) {
+      const cardWidth = partnerCarouselRef.current.clientWidth * 0.84;
+      partnerCarouselRef.current.scrollTo({
+        left: index * cardWidth,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <>
       {/* ══════════════════════════════════════════════ */}
@@ -148,7 +183,7 @@ export default function SelectedWork() {
         <div className="absolute inset-0 bg-[radial-gradient(#e2e8f0_1px,transparent_1px)] [background-size:28px_28px] opacity-30 pointer-events-none" />
         <div className="absolute top-0 left-1/3 w-[500px] h-[280px] bg-blue-100/40 rounded-full blur-[120px] pointer-events-none" />
 
-        <div className="relative z-10 w-full max-w-full px-2 xs:px-3 sm:px-4 lg:px-6">
+        <div className="relative z-10 w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-14">
 
             {/* ── Section Header ── */}
             <div className="relative text-center max-w-4xl mx-auto mb-8 sm:mb-10">
@@ -199,8 +234,11 @@ export default function SelectedWork() {
               </div>
             </Reveal>
 
-            {/* ── Project Cards — Equal Height Grid ── */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-7 items-stretch">
+            {/* ── Project Cards — Equal Height Grid / Mobile Horizontal Swipe Carousel ── */}
+            <div
+              onScroll={handleWorkScroll}
+              className="flex lg:grid lg:grid-cols-2 overflow-x-auto snap-x snap-mandatory scrollbar-none gap-5 sm:gap-6 lg:gap-7 pb-2 lg:pb-0 -mx-2 px-2 sm:mx-0 sm:px-0 items-stretch"
+            >
               {projects.map((project, idx) => {
                 const cardStyles = [
                   { bg: "bg-gradient-to-br from-blue-100/90 via-blue-50/70 to-white", border: "border-blue-300/80", hoverShadow: "hover:shadow-[0_22px_50px_rgba(37,99,235,0.16)]", accent: "from-[#1D4ED8] via-[#2563EB] to-[#0284C7]", badge: "bg-blue-100 text-[#2563EB] border-blue-300", metricBg: "bg-gradient-to-r from-blue-100/80 via-white to-blue-50/90 border-blue-200", tagBg: "bg-blue-100/90 border-blue-200 text-[#2563EB]" },
@@ -208,7 +246,7 @@ export default function SelectedWork() {
                 ][idx % 2];
 
                 return (
-                  <Reveal key={project.name} delay={0.1 + idx * 0.12} y={28} className="h-full">
+                  <Reveal key={project.name} delay={0.1 + idx * 0.12} y={28} className="h-full shrink-0 snap-center w-[88vw] sm:w-[480px] lg:w-auto">
                     <div className="group relative rounded-[22px] transition-all duration-500 h-full">
                       {/* Multi-layered Soft Glow Shadow Background */}
                       <div className={`relative rounded-[22px] ${cardStyles.bg} border ${cardStyles.border} transition-all duration-500 overflow-hidden shadow-[0_8px_30px_rgba(37,99,235,0.07)] ${cardStyles.hoverShadow} h-full flex flex-col justify-between`}>
@@ -283,6 +321,18 @@ export default function SelectedWork() {
               })}
             </div>
 
+            {/* Mobile Swipe Dot Indicator for What We're Building */}
+            <div className="flex lg:hidden justify-center items-center gap-1.5 mt-5">
+              {Array.from({ length: 2 }).map((_, i) => (
+                <span
+                  key={i}
+                  className={`h-1.5 rounded-full transition-all duration-300 ${
+                    i === workIdx ? "w-6 bg-[#2563EB]" : "w-1.5 bg-[#BFDBFE]"
+                  }`}
+                />
+              ))}
+            </div>
+
             {/* ── CTA — View Our Work Main Page ── */}
             <Reveal delay={0.3} y={14}>
               <div className="mt-8 sm:mt-10 flex justify-center">
@@ -300,7 +350,7 @@ export default function SelectedWork() {
       <section className="relative py-8 sm:py-12 lg:py-16 bg-gradient-to-b from-[#EFF6FF]/60 via-white to-[#DBEAFE]/30 border-t border-[#BFDBFE]/60 overflow-hidden w-full">
         <div className="absolute inset-0 bg-[radial-gradient(#BFDBFE_1px,transparent_1px)] [background-size:32px_32px] opacity-35 pointer-events-none" />
         
-        <div className="relative z-10 w-full max-w-[1400px] mx-auto px-4 sm:px-8 lg:px-12">
+        <div className="relative z-10 w-full max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
 
             {/* ── Section Header ── */}
             <div className="relative text-center max-w-4xl mx-auto mb-10 sm:mb-12">
@@ -320,12 +370,16 @@ export default function SelectedWork() {
               </Reveal>
             </div>
 
-            {/* ── PARTNER TESTIMONIALS GRID (Matching What-We-Do Card UI/UX) ── */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto items-stretch">
+            {/* ── PARTNER TESTIMONIALS GRID / Mobile Swipe Carousel ── */}
+            <div
+              ref={partnerCarouselRef}
+              onScroll={handlePartnerScroll}
+              className="flex md:grid md:grid-cols-3 overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 sm:gap-6 w-full mx-auto items-stretch pb-2 md:pb-0 px-1 sm:px-0"
+            >
               {testimonials.map((item, idx) => {
                 return (
-                  <Reveal key={item.role} delay={0.1 + idx * 0.12} y={20} className="h-full">
-                    <div className="group relative flex flex-col justify-between p-6 sm:p-7 rounded-3xl bg-gradient-to-b from-[#EFF6FF]/95 via-white to-[#DBEAFE]/50 border border-[#BFDBFE] shadow-[0_12px_35px_rgba(37,99,235,0.08)] hover:border-[#2563EB] hover:shadow-[0_22px_48px_rgba(37,99,235,0.20)] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden h-full">
+                  <Reveal key={item.role} delay={0.1 + idx * 0.12} y={20} className="h-full shrink-0 snap-start w-[84vw] sm:w-[320px] md:w-auto">
+                    <div className="group relative flex flex-col justify-between p-5 sm:p-7 rounded-3xl bg-gradient-to-b from-[#EFF6FF]/95 via-white to-[#DBEAFE]/50 border border-[#BFDBFE] shadow-[0_12px_35px_rgba(37,99,235,0.08)] hover:border-[#2563EB] hover:shadow-[0_22px_48px_rgba(37,99,235,0.20)] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden h-full">
                       {/* Top Right Live Dot Accent */}
                       <span className="w-2.5 h-2.5 rounded-full bg-[#2563EB] animate-ping absolute top-4 right-4" />
 
@@ -375,6 +429,20 @@ export default function SelectedWork() {
                   </Reveal>
                 );
               })}
+            </div>
+
+            {/* Mobile Touch & Swipe Interactive Dot Indicator */}
+            <div className="flex md:hidden justify-center items-center gap-2 mt-5">
+              {Array.from({ length: 3 }).map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => scrollToPartnerCard(i)}
+                  aria-label={`Go to partner testimonial ${i + 1}`}
+                  className={`h-2 rounded-full transition-all duration-300 focus:outline-none ${
+                    i === partnerIdx ? "w-7 bg-[#2563EB]" : "w-2 bg-[#BFDBFE]"
+                  }`}
+                />
+              ))}
             </div>
 
           </div>

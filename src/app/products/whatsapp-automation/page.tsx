@@ -10,13 +10,13 @@ export default function ProductWhatsAppPage() {
     <>
       <Navbar />
 
-      <main className="min-h-screen bg-[#F8FAFC] text-[#0F172A] pt-20 sm:pt-28 pb-16 sm:pb-24 px-3 sm:px-8 lg:px-16 font-sans selection:bg-[#2563EB] selection:text-white">
+      <main className="min-h-screen bg-[#FAFCFF] text-[#0F172A] pt-20 sm:pt-28 pb-16 sm:pb-24 px-3 sm:px-6 lg:px-12 font-sans selection:bg-[#2563EB] selection:text-white">
 
         <motion.article
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-[1440px] mx-auto bg-white border border-slate-200/90 shadow-[0_4px_30px_rgba(15,23,42,0.03)] rounded-2xl sm:rounded-3xl p-4 sm:p-8 md:p-12 lg:p-16 relative overflow-hidden"
+          className="max-w-[1600px] mx-auto bg-white border border-slate-200/90 shadow-[0_4px_30px_rgba(15,23,42,0.03)] rounded-2xl sm:rounded-3xl p-4 sm:p-8 md:p-12 lg:p-16 relative overflow-hidden"
         >
 
           {/* ── Top Navigation Bar ── */}
@@ -57,27 +57,27 @@ export default function ProductWhatsAppPage() {
               Your Business, Running Smarter on WhatsApp.
             </p>
 
-            <div className="p-6 sm:p-8 rounded-2xl bg-slate-50/80 border border-slate-200/90 mb-8 space-y-4 text-slate-700 text-sm sm:text-lg font-medium leading-relaxed">
-              <p>Every business works differently.</p>
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-xs sm:text-sm font-bold text-slate-800 pt-1">
-                <span className="p-2.5 rounded-xl bg-white border border-slate-200 text-center">A salon doesn&apos;t work like a gym.</span>
-                <span className="p-2.5 rounded-xl bg-white border border-slate-200 text-center">A fashion brand doesn&apos;t work like a restaurant.</span>
-                <span className="p-2.5 rounded-xl bg-white border border-slate-200 text-center">A coaching centre doesn&apos;t work like a service firm.</span>
-                <span className="p-2.5 rounded-xl bg-white border border-slate-200 text-center">A clinic doesn&apos;t work like a store.</span>
+            <div className="p-5 sm:p-8 rounded-2xl bg-slate-50/80 border border-slate-200/90 mb-8 space-y-4 text-slate-700 text-sm sm:text-lg font-medium leading-relaxed">
+              <p className="font-extrabold text-[#0F172A]">Every business works differently.</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2 text-xs sm:text-sm font-bold text-slate-800 pt-1">
+                <span className="p-3 rounded-xl bg-white border border-slate-200 text-center shadow-2xs">A salon doesn&apos;t work like a gym.</span>
+                <span className="p-3 rounded-xl bg-white border border-slate-200 text-center shadow-2xs">A fashion brand doesn&apos;t work like a restaurant.</span>
+                <span className="p-3 rounded-xl bg-white border border-slate-200 text-center shadow-2xs">A coaching centre doesn&apos;t work like a service firm.</span>
+                <span className="p-3 rounded-xl bg-white border border-slate-200 text-center shadow-2xs">A clinic doesn&apos;t work like a store.</span>
               </div>
-              <p className="pt-2 text-left sm:text-justify">
+              <p className="pt-2 text-left">
                 That&apos;s why Agaran is building a WhatsApp automation platform that can adapt to each business instead of forcing every business into the same workflow.
               </p>
             </div>
           </header>
 
-          {/* ── Product UI Visual / WhatsApp Chat Simulation Mockup ── */}
+          {/* ── Product UI Visual / WhatsApp Chat Simulation Mockup (Light Theme) ── */}
           <div className="mb-12 sm:mb-16 relative">
-            <div className="w-full rounded-2xl overflow-hidden bg-[#F8FAFC] border border-slate-200 shadow-2xs relative p-4 sm:p-6 text-slate-800 flex flex-col justify-between gap-5">
+            <div className="w-full rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-sm relative p-4 sm:p-6 text-slate-800 flex flex-col justify-between gap-5">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-200 text-xs font-mono gap-2.5">
                 <div className="flex items-center gap-2">
-                  <span className="w-3 h-3 rounded-full bg-emerald-500" />
-                  <span className="font-bold text-slate-800 text-xs">WHATSAPP AI AUTOMATION STUDIO</span>
+                  <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
+                  <span className="font-bold text-slate-800 text-xs font-sans">WHATSAPP AI AUTOMATION STUDIO</span>
                 </div>
                 <div className="text-[10px] font-mono uppercase bg-amber-50 text-amber-800 border border-amber-200 px-3 py-1 rounded-md font-bold self-start sm:self-auto flex items-center gap-1.5 shadow-2xs">
                   <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
@@ -86,15 +86,15 @@ export default function ProductWhatsAppPage() {
               </div>
 
               {/* Chat Simulation Container */}
-              <div className="p-4 sm:p-6 rounded-2xl bg-[#075E54]/5 border border-emerald-200 space-y-3 font-sans text-xs">
-                <div className="p-3 rounded-2xl bg-white border border-slate-200 max-w-md shadow-2xs">
+              <div className="p-4 sm:p-6 rounded-2xl bg-emerald-50/50 border border-emerald-200 space-y-3 font-sans text-xs">
+                <div className="p-3.5 rounded-2xl bg-white border border-slate-200 max-w-md shadow-2xs">
                   <span className="text-[10px] font-bold text-slate-400 block mb-0.5">CUSTOMER ENQUIRY</span>
-                  <span>&ldquo;Hello! Can I see your current product catalog and pricing details?&rdquo;</span>
+                  <span className="text-slate-800 font-medium">&ldquo;Hello! Can I see your current product catalog and pricing details?&rdquo;</span>
                 </div>
 
-                <div className="p-3 rounded-2xl bg-[#DCF8C6] border border-emerald-300 max-w-md ml-auto text-slate-900 shadow-2xs">
+                <div className="p-3.5 rounded-2xl bg-emerald-100/90 border border-emerald-300 max-w-md ml-auto text-slate-900 shadow-2xs">
                   <span className="text-[10px] font-bold text-emerald-800 block mb-0.5">AGARAN AI WHATSAPP ASSISTANT</span>
-                  <span>&ldquo;Welcome! Here is our current catalog. Tap below to select items or book a service consultation directly!&rdquo;</span>
+                  <span className="font-medium">&ldquo;Welcome! Here is our current catalog. Tap below to select items or book a service consultation directly!&rdquo;</span>
                 </div>
 
                 <div className="p-3 rounded-2xl bg-white border border-emerald-200 text-center font-bold text-emerald-700 text-xs shadow-2xs">
@@ -119,11 +119,11 @@ export default function ProductWhatsAppPage() {
               Every Business Has Repetitive Conversations.
             </h3>
 
-            <p className="text-sm sm:text-base text-slate-600 font-medium leading-relaxed mb-6 text-justify">
+            <p className="text-sm sm:text-base text-slate-600 font-medium leading-relaxed mb-6 text-left">
               Businesses receive the same types of questions every day from customers regarding products, services, pricing, availability, timings, appointments, orders, status updates, and location directions. Business owners or staff often have to answer these manually. Then there are follow-ups, reminders, customer updates and other repetitive tasks.
             </p>
 
-            <div className="p-6 rounded-2xl bg-rose-50/60 border border-rose-200 space-y-4">
+            <div className="p-5 sm:p-6 rounded-2xl bg-rose-50/60 border border-rose-200 space-y-4">
               <div className="text-xs font-black uppercase tracking-wider text-rose-700 flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-rose-600" />
                 Common Daily Customer Enquiries:
@@ -151,7 +151,7 @@ export default function ProductWhatsAppPage() {
               One Platform. Different Businesses. Their Own Rules.
             </h3>
 
-            <p className="text-sm sm:text-base text-slate-600 font-medium leading-relaxed mb-6 text-justify">
+            <p className="text-sm sm:text-base text-slate-600 font-medium leading-relaxed mb-6 text-left">
               The platform doesn&apos;t assume that every business works the same way. Instead, each business can configure its own information, products, services, FAQs, customer workflows, automated responses, follow-up rules, and AI assistant behaviour.
             </p>
 
@@ -221,12 +221,12 @@ export default function ProductWhatsAppPage() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
               <div className="p-6 rounded-2xl bg-white border border-slate-200 space-y-4">
                 <h3 className="text-lg font-extrabold text-[#0F172A]">AI Engine</h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed text-justify">
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed text-left">
                   Understands customer questions and responds using the business context provided during configuration.
                 </p>
                 <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 text-xs space-y-2 font-mono">
                   <div className="font-extrabold text-emerald-800">01. Initial WhatsApp Lead Message &amp; Capture</div>
-                  <div className="text-emerald-600 font-bold">&darr; 02. AI Intent Understanding &amp; Qualification</div>
+                  <div className="text-emerald-700 font-bold">&darr; 02. AI Intent Understanding &amp; Qualification</div>
                   <div className="text-[#2563EB] font-bold">&darr; 03. System Checks Catalog, Pricing &amp; Rules</div>
                   <div className="text-[#0284C7] font-bold">&darr; 04. Instant Response, Booking or Quote Generated</div>
                   <div className="text-purple-700 font-bold">&darr; 05. Automated Follow-Up &amp; Lead Conversion</div>
@@ -235,7 +235,7 @@ export default function ProductWhatsAppPage() {
 
               <div className="p-6 rounded-2xl bg-white border border-slate-200 space-y-4">
                 <h3 className="text-lg font-extrabold text-[#0F172A]">Business Configuration Panel</h3>
-                <div className="grid grid-cols-2 gap-2.5 text-xs">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
                   <div className="p-3 rounded-xl bg-slate-50 border border-slate-200">
                     <strong className="text-slate-900 block mb-0.5">Business Profile</strong>
                     <span className="text-[11px] text-slate-500">Name, location, timings, contact</span>
@@ -275,26 +275,26 @@ export default function ProductWhatsAppPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <h3 className="text-xl font-black text-[#0F172A] mb-2">Current Development Focus</h3>
-                  <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed text-justify mb-4">
+                  <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed text-left mb-4">
                     The platform is currently being designed and developed. The focus is on building the core multi-business architecture, business configuration system, WhatsApp integration, AI assistant layer and automation workflows.
                   </p>
-                  <ul className="grid grid-cols-2 gap-2 text-xs font-bold text-emerald-700">
-                    <li className="p-2 rounded-xl bg-white border border-emerald-200 flex items-center gap-1.5 shadow-2xs">
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-bold text-emerald-800">
+                    <li className="p-2.5 rounded-xl bg-white border border-emerald-200 flex items-center gap-1.5 shadow-2xs">
                       <span className="text-emerald-500 font-bold">✓</span> Multi-business architecture
                     </li>
-                    <li className="p-2 rounded-xl bg-white border border-emerald-200 flex items-center gap-1.5 shadow-2xs">
+                    <li className="p-2.5 rounded-xl bg-white border border-emerald-200 flex items-center gap-1.5 shadow-2xs">
                       <span className="text-emerald-500 font-bold">✓</span> WhatsApp API integration
                     </li>
-                    <li className="p-2 rounded-xl bg-white border border-emerald-200 flex items-center gap-1.5 shadow-2xs">
+                    <li className="p-2.5 rounded-xl bg-white border border-emerald-200 flex items-center gap-1.5 shadow-2xs">
                       <span className="text-emerald-500 font-bold">✓</span> Business onboarding panel
                     </li>
-                    <li className="p-2 rounded-xl bg-white border border-emerald-200 flex items-center gap-1.5 shadow-2xs">
+                    <li className="p-2.5 rounded-xl bg-white border border-emerald-200 flex items-center gap-1.5 shadow-2xs">
                       <span className="text-emerald-500 font-bold">✓</span> Custom catalog configuration
                     </li>
-                    <li className="p-2 rounded-xl bg-white border border-emerald-200 flex items-center gap-1.5 shadow-2xs">
+                    <li className="p-2.5 rounded-xl bg-white border border-emerald-200 flex items-center gap-1.5 shadow-2xs">
                       <span className="text-emerald-500 font-bold">✓</span> AI assistant prompt engine
                     </li>
-                    <li className="p-2 rounded-xl bg-white border border-emerald-200 flex items-center gap-1.5 shadow-2xs">
+                    <li className="p-2.5 rounded-xl bg-white border border-emerald-200 flex items-center gap-1.5 shadow-2xs">
                       <span className="text-emerald-500 font-bold">✓</span> Lead &amp; booking automation
                     </li>
                   </ul>
@@ -302,12 +302,12 @@ export default function ProductWhatsAppPage() {
 
                 <div>
                   <h3 className="text-xl font-black text-[#0F172A] mb-2">The Bigger Vision</h3>
-                  <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed text-justify mb-4">
+                  <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed text-left mb-4">
                     WhatsApp is already where many businesses communicate with customers. The goal is to make it more than a messaging channel — a place where customers ask, discover, book, order, and get support while the business automates the work behind those conversations.
                   </p>
                   <div className="p-4 rounded-2xl bg-white border border-emerald-200 space-y-2 text-xs">
                     <div className="font-extrabold text-slate-900">Why We Build Differently:</div>
-                    <p className="text-slate-600 leading-relaxed text-justify">
+                    <p className="text-slate-600 leading-relaxed text-left">
                       Every business gets its own isolated environment, custom context, and rules — delivering authentic customer engagement without generic bot responses.
                     </p>
                   </div>
@@ -320,15 +320,15 @@ export default function ProductWhatsAppPage() {
               BOTTOM NAVIGATION & CTA
           ══════════════════════════════════════════════════════════ */}
           <footer className="pt-8 border-t border-slate-200 space-y-8">
-            <div className="p-8 rounded-3xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] text-white text-center space-y-3">
+            <div className="p-6 sm:p-10 rounded-3xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] text-white text-center space-y-3">
               <h2 className="text-2xl sm:text-3xl font-black">What Could Your Business Automate?</h2>
-              <p className="text-xs sm:text-sm text-blue-100 max-w-xl mx-auto">
+              <p className="text-xs sm:text-sm text-blue-100 max-w-xl mx-auto font-medium">
                 Tell us how your business currently handles customer conversations and repetitive work. We&apos;ll explore what could be automated.
               </p>
               <div className="pt-2">
                 <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-[#2563EB] font-black text-xs sm:text-sm shadow-md hover:bg-slate-50 transition-all"
+                  href="/contact?cat=automation#inquiry-form"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-white text-emerald-800 font-black text-xs sm:text-sm shadow-md hover:bg-emerald-50 hover:scale-105 transition-all duration-300 w-full sm:w-auto justify-center"
                 >
                   <span>Start a Conversation</span>
                   <span>&rarr;</span>

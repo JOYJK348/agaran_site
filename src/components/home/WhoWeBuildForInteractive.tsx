@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 
@@ -27,6 +27,7 @@ const categories = [
       "CRM & Business Analytics Portals",
     ],
     cta: "Build Business Tech",
+    href: "/contact?cat=software#inquiry-form",
   },
   {
     id: "education",
@@ -47,6 +48,7 @@ const categories = [
       "Parent Alerts & Auto Fee Portals",
     ],
     cta: "Build Automated LMS",
+    href: "/contact?cat=edtech#inquiry-form",
   },
   {
     id: "organizations",
@@ -67,6 +69,7 @@ const categories = [
       "Cross-Department Data Sync",
     ],
     cta: "Build Team Software",
+    href: "/contact?cat=automation#inquiry-form",
   },
   {
     id: "ideas",
@@ -87,15 +90,24 @@ const categories = [
       "Cloud Launch & Product Scaling",
     ],
     cta: "Build Your Product",
+    href: "/contact?cat=idea#inquiry-form",
   },
 ];
 
-// ─────────────────────────────────────────────────────────────────────────────
-// COMPACT 4-COL RESPONSIVE GRID COMPONENT
-// ─────────────────────────────────────────────────────────────────────────────
 export default function WhoWeBuildForInteractive() {
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: "-60px" });
+  const [whoIdx, setWhoIdx] = useState(0);
+
+  const handleCarouselScroll = (e: React.UIEvent<HTMLDivElement>) => {
+    const container = e.currentTarget;
+    const scrollLeft = container.scrollLeft;
+    const maxScroll = container.scrollWidth - container.clientWidth;
+    if (maxScroll <= 0) return;
+    const itemWidth = container.scrollWidth / 4;
+    const idx = Math.min(3, Math.max(0, Math.round(scrollLeft / itemWidth)));
+    setWhoIdx(idx);
+  };
 
   return (
     <section
@@ -107,11 +119,11 @@ export default function WhoWeBuildForInteractive() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[350px] bg-blue-50/50 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(#CBD5E1_1px,transparent_1px)] [background-size:24px_24px] opacity-20 pointer-events-none" />
 
-      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-10 xl:px-14">
+      <div className="relative z-10 w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-14">
 
         {/* Section Header */}
         <motion.div
-          className="text-center max-w-full mx-auto mb-10 sm:mb-14"
+          className="text-center max-w-full mx-auto mb-8 sm:mb-14"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5 }}
@@ -126,17 +138,19 @@ export default function WhoWeBuildForInteractive() {
               One Technology Partner.
             </span>
           </h2>
-          <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed max-w-xl mx-auto">
+          <p className="text-xs sm:text-sm sm:text-base text-slate-600 font-medium leading-relaxed max-w-3xl mx-auto">
             From ambitious ideas to growing businesses and learning institutions, we build custom technology around the people behind them.
           </p>
         </motion.div>
 
-        {/* 4 CARDS RESPONSIVE GRID Layout:
-            - Desktop (lg: 1024px+): 4 columns in 1 single row (grid-cols-4)
-            - Tablet (md: 768px-1023px): 2 columns (grid-cols-2)
-            - Mobile (<768px): 1 column (grid-cols-1)
+        {/* 4 CARDS Layout:
+            - Mobile (<768px): Horizontal swipe carousel with 4 active indicator dots
+            - Tablet/Desktop (768px+): Grid layout (md:grid-cols-2 lg:grid-cols-4)
         */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 xl:gap-6">
+        <div
+          onScroll={handleCarouselScroll}
+          className="flex md:grid md:grid-cols-2 lg:grid-cols-4 overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 sm:gap-5 xl:gap-6 pb-2 md:pb-0 -mx-4 px-4 sm:mx-0 sm:px-0"
+        >
           {categories.map((cat, idx) => (
             <motion.div
               key={cat.id}
@@ -144,7 +158,7 @@ export default function WhoWeBuildForInteractive() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.45, delay: idx * 0.08 }}
               whileHover={{ y: -5 }}
-              className={`group relative rounded-3xl ${cat.cardBg} border ${cat.cardBorder} shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col justify-between`}
+              className={`group relative rounded-3xl ${cat.cardBg} border ${cat.cardBorder} shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden flex flex-col justify-between shrink-0 snap-center w-[85vw] sm:w-[320px] md:w-auto`}
             >
               {/* Top Accent Line */}
               <div className={`h-1.5 w-full bg-gradient-to-r ${cat.headerLine}`} />
@@ -200,7 +214,7 @@ export default function WhoWeBuildForInteractive() {
                 {/* CTA Link */}
                 <div className="pt-2">
                   <Link
-                    href="/contact"
+                    href={cat.href}
                     className="inline-flex items-center justify-center gap-1.5 w-full py-2.5 px-4 rounded-xl font-black text-xs text-white transition-all duration-300 shadow-xs hover:shadow-md hover:scale-[1.01]"
                     style={{ backgroundColor: cat.accentColor }}
                   >
@@ -214,9 +228,21 @@ export default function WhoWeBuildForInteractive() {
           ))}
         </div>
 
+        {/* Mobile Swipe Dot Indicator for WHO WE BUILD FOR */}
+        <div className="flex md:hidden justify-center items-center gap-1.5 mt-5">
+          {Array.from({ length: 4 }).map((_, i) => (
+            <span
+              key={i}
+              className={`h-1.5 rounded-full transition-all duration-300 ${
+                i === whoIdx ? "w-6 bg-[#2563EB]" : "w-1.5 bg-[#BFDBFE]"
+              }`}
+            />
+          ))}
+        </div>
+
         {/* Bottom CTA Banner */}
         <motion.div
-          className="mt-10 sm:mt-14 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#EFF6FF] via-white to-[#F0F9FF] border border-[#BFDBFE] text-center relative overflow-hidden shadow-xs"
+          className="mt-8 sm:mt-14 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#EFF6FF] via-white to-[#F0F9FF] border border-[#BFDBFE] text-center relative overflow-hidden shadow-xs"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.3 }}
@@ -226,7 +252,7 @@ export default function WhoWeBuildForInteractive() {
               Have a vision in mind? Let&apos;s build the technology behind it.
             </h4>
             <Link
-              href="/contact"
+              href="/contact#inquiry-form"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] text-white font-black text-xs sm:text-sm hover:shadow-[0_10px_25px_rgba(37,99,235,0.25)] hover:scale-[1.02] transition-all duration-300"
             >
               Build Your Solution
@@ -239,4 +265,3 @@ export default function WhoWeBuildForInteractive() {
     </section>
   );
 }
-

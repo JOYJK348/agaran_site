@@ -321,7 +321,7 @@ export default function WhyAgaran() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[260px] bg-[#2563EB]/7 rounded-full blur-[120px] pointer-events-none" />
 
       {/* Comfortably Positioned Container */}
-      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-10 xl:px-14">
+      <div className="relative z-10 w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-14">
 
         {/* Section Header */}
         <motion.div

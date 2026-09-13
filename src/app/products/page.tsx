@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import Navbar from "@/components/layout/Navbar";
@@ -21,13 +21,13 @@ function Reveal({
   className?: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, amount: 0.12 });
+  const inView = useInView(ref, { once: true, amount: 0.1 });
   return (
     <motion.div
       ref={ref}
       initial={{ opacity: 0, y }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.55, delay, ease: [0.22, 1, 0.36, 1] }}
       className={className}
     >
       {children}
@@ -36,390 +36,519 @@ function Reveal({
 }
 
 export default function ProductsPage() {
+  const [activeTab, setActiveTab] = useState<string>("all");
+
+  const scrollToSection = (id: string) => {
+    setActiveTab(id);
+    if (id === "all") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+    const el = document.getElementById(id);
+    if (el) {
+      const offset = 100;
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = el.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <Navbar />
 
-      <main className="min-h-screen bg-[#F8FAFC] text-[#0F172A] pt-20 sm:pt-28 pb-16 sm:pb-24 px-3 sm:px-8 lg:px-16 font-sans selection:bg-[#2563EB] selection:text-white relative overflow-hidden">
+      <main className="min-h-screen bg-[#FAFCFF] text-[#0F172A] pt-20 sm:pt-28 pb-20 sm:pb-28 px-3 sm:px-6 lg:px-12 font-sans selection:bg-[#2563EB] selection:text-white relative overflow-hidden">
         
-        {/* Ambient Radial Mesh Background */}
-        <div className="absolute inset-0 bg-[radial-gradient(#BFDBFE_1px,transparent_1px)] [background-size:32px_32px] opacity-35 pointer-events-none" />
+        {/* Subtle Ambient Radial Glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] bg-gradient-to-b from-blue-100/30 via-slate-50/20 to-transparent blur-3xl pointer-events-none -z-10" />
 
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="relative max-w-[1440px] mx-auto w-full space-y-10 sm:space-y-14"
-        >
+        <div className="relative max-w-[1500px] mx-auto w-full space-y-12 sm:space-y-16">
           
           {/* ══════════════════════════════════════════════════════════
-              HEADER SECTION — EXECUTIVE PRODUCTS HERO
+              HEADER SECTION — CLEAN CREATIVE SHOWCASE HERO
           ══════════════════════════════════════════════════════════ */}
           <Reveal>
-            <header className="text-center w-full max-w-full mx-auto mb-8 sm:mb-12">
-              <div className="flex justify-center mb-5">
-                <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-xs sm:text-sm font-extrabold uppercase tracking-widest text-[#2563EB] shadow-2xs">
-                  <span className="w-2.5 h-2.5 rounded-full bg-[#2563EB] animate-pulse" />
-                  AGARAN PRODUCTS &bull; OWN IP &amp; PLATFORMS
+            <header className="text-center w-full max-w-4xl mx-auto mb-8 sm:mb-12 px-2">
+              <div className="flex justify-center mb-4 sm:mb-5">
+                <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-xs font-black uppercase tracking-wider text-[#2563EB] shadow-2xs">
+                  <span className="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse" />
+                  <span>AGARAN PRODUCTS &bull; OWN IP PLATFORMS</span>
                 </div>
               </div>
 
-              <h1 className="text-center text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] xl:text-[4.4rem] font-black leading-[1.12] tracking-[-0.035em] text-[#0F172A] w-full max-w-5xl mx-auto mb-5">
-                Things We&apos;re{" "}
+              <h1 className="text-center text-3xl xs:text-4xl sm:text-6xl md:text-7xl font-black leading-[1.08] tracking-[-0.035em] text-[#0F172A] mb-4 sm:mb-5">
+                Platforms We&apos;re{" "}
                 <span className="bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] bg-clip-text text-transparent">
-                  Building.
+                  Engineering.
                 </span>
               </h1>
 
-              <p className="text-center text-sm sm:text-lg lg:text-xl font-medium leading-relaxed text-slate-600 w-full max-w-5xl mx-auto mb-6">
-                Agaran is building its own technology products to solve real problems across education, business, communication and everyday operations. Our products are designed around a simple idea: <strong className="font-extrabold text-[#0F172A]">technology should reduce unnecessary work, not create more of it.</strong>
+              <p className="text-center text-xs sm:text-base md:text-lg font-medium leading-relaxed text-slate-600 max-w-3xl mx-auto mb-6 sm:mb-8">
+                We don&apos;t just build client solutions — we design and develop proprietary SaaS platforms to automate complex workflows across education, communication, and business operations.
               </p>
 
-              {/* In Development Assurance Banner */}
-              <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-2xl bg-amber-50 border border-amber-200/90 text-amber-800 text-xs sm:text-sm font-bold shadow-2xs">
-                <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
-                <span>Authentic Engineering: All products below are actively <strong>In Development</strong>.</span>
+              {/* Quick Jump Interactive Navigation Pills */}
+              <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 p-1.5 sm:p-2 rounded-2xl bg-slate-200/50 backdrop-blur-md max-w-fit mx-auto border border-slate-300/60 shadow-xs">
+                <button
+                  onClick={() => scrollToSection("all")}
+                  className={`px-4 py-2 rounded-xl text-xs font-black transition-all duration-200 ${
+                    activeTab === "all"
+                      ? "bg-[#2563EB] text-white shadow-md scale-105"
+                      : "text-slate-700 hover:text-[#2563EB] hover:bg-white/60"
+                  }`}
+                >
+                  All Products (3)
+                </button>
+                <button
+                  onClick={() => scrollToSection("ai-education")}
+                  className={`px-4 py-2 rounded-xl text-xs font-black transition-all duration-200 ${
+                    activeTab === "ai-education"
+                      ? "bg-[#2563EB] text-white shadow-md scale-105"
+                      : "text-slate-700 hover:text-[#2563EB] hover:bg-white/60"
+                  }`}
+                >
+                  01 &bull; AI Education
+                </button>
+                <button
+                  onClick={() => scrollToSection("whatsapp-automation")}
+                  className={`px-4 py-2 rounded-xl text-xs font-black transition-all duration-200 ${
+                    activeTab === "whatsapp-automation"
+                      ? "bg-[#2563EB] text-white shadow-md scale-105"
+                      : "text-slate-700 hover:text-[#2563EB] hover:bg-white/60"
+                  }`}
+                >
+                  02 &bull; WhatsApp AI
+                </button>
+                <button
+                  onClick={() => scrollToSection("ai-agent-platform")}
+                  className={`px-4 py-2 rounded-xl text-xs font-black transition-all duration-200 ${
+                    activeTab === "ai-agent-platform"
+                      ? "bg-[#2563EB] text-white shadow-md scale-105"
+                      : "text-slate-700 hover:text-[#2563EB] hover:bg-white/60"
+                  }`}
+                >
+                  03 &bull; AI Agents
+                </button>
               </div>
             </header>
           </Reveal>
 
           {/* ══════════════════════════════════════════════════════════
-              PRODUCT 01 — AI EDUCATION AUTOMATION PLATFORM
+              CREATIVE VERTICAL ECOSYSTEM TIMELINE & FLOATING SECTIONS
+              (Clean Borderless Open Layout — No Side Accent Bars)
           ══════════════════════════════════════════════════════════ */}
-          <Reveal delay={0.1}>
-            <section className="scroll-mt-24" id="ai-education">
-              <div className="group block p-6 sm:p-8 lg:p-10 rounded-3xl bg-white border border-[#BFDBFE] shadow-[0_8px_35px_rgba(37,99,235,0.08)] hover:shadow-[0_22px_55px_rgba(37,99,235,0.16)] hover:border-[#2563EB] transition-all duration-300 relative overflow-hidden">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
+          <div className="relative">
+            {/* Clean Single-Tone Vertical Timeline Ribbon */}
+            <div className="absolute top-8 bottom-8 left-4 md:left-1/2 -translate-x-1/2 w-0.5 bg-gradient-to-b from-[#2563EB]/30 via-[#2563EB]/50 to-[#2563EB]/30 opacity-40 pointer-events-none hidden sm:block" />
+
+            <div className="space-y-16 sm:space-y-24">
+              
+              {/* ──────────────────────────────────────────────────────────
+                  PRODUCT 01 — AI EDUCATION AUTOMATION PLATFORM
+              ────────────────────────────────────────────────────────── */}
+              <Reveal delay={0.05}>
+                <section className="scroll-mt-28 relative group" id="ai-education">
                   
-                  {/* Left Narrative Column (7/12) */}
-                  <div className="lg:col-span-7 space-y-4 sm:space-y-5">
-                    <div className="flex flex-wrap items-center gap-2">
-                      <span className="text-[10.5px] sm:text-xs font-black uppercase tracking-wider text-[#2563EB] bg-[#EFF6FF] px-3.5 py-1.5 rounded-full border border-[#BFDBFE] shadow-2xs">
-                        PRODUCT 01 &bull; AI &bull; EDUCATION &bull; AUTOMATION
-                      </span>
-                      <span className="text-xs font-black text-amber-800 bg-amber-50 px-3 py-1 rounded-full flex items-center gap-1.5 border border-amber-200 shadow-2xs">
-                        <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
-                        Status: In Development
-                      </span>
-                    </div>
-
-                    <h2 className="text-2xl sm:text-4xl font-black text-[#0F172A] group-hover:text-[#2563EB] transition-colors leading-tight tracking-tight">
-                      AI Education Automation Platform
-                    </h2>
-
-                    <p className="text-base sm:text-xl font-black bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] bg-clip-text text-transparent">
-                      A Smarter Way to Run Education.
-                    </p>
-
-                    <p className="text-xs sm:text-base text-slate-600 font-medium leading-relaxed text-left sm:text-justify">
-                      An intelligent education platform designed to bring <strong className="font-extrabold text-[#0F172A]">student lead capture</strong>, <strong className="font-extrabold text-[#2563EB]">online admissions</strong>, <strong className="font-extrabold text-[#0284C7]">learning management (LMS)</strong>, <strong className="font-extrabold text-purple-700">digital/offline exams</strong>, and <strong className="font-extrabold text-[#0F172A]">parent communication</strong> into one connected system. From the first student inquiry to ongoing academic progress, the platform automates repetitive work seamlessly.
-                    </p>
-
-                    {/* Feature Highlights Grid — Bold & Colorful Pills */}
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-1 text-xs">
-                      <div className="p-3.5 rounded-2xl bg-[#EFF6FF] border border-[#BFDBFE] shadow-2xs hover:scale-[1.02] transition-transform">
-                        <div className="font-black text-[#2563EB] flex items-center gap-1.5 text-xs sm:text-sm">
-                          <span className="text-emerald-500 font-bold">✓</span> Admissions &amp; Forms
-                        </div>
-                        <div className="text-[11px] font-bold text-slate-500 mt-1">Lead capture &amp; verification</div>
-                      </div>
-                      <div className="p-3.5 rounded-2xl bg-sky-50 border border-sky-200 shadow-2xs hover:scale-[1.02] transition-transform">
-                        <div className="font-black text-[#0284C7] flex items-center gap-1.5 text-xs sm:text-sm">
-                          <span className="text-emerald-500 font-bold">✓</span> Course &amp; Learning
-                        </div>
-                        <div className="text-[11px] font-bold text-slate-500 mt-1">Live &amp; Cloud video LMS</div>
-                      </div>
-                      <div className="p-3.5 rounded-2xl bg-purple-50 border border-purple-200 shadow-2xs hover:scale-[1.02] transition-transform">
-                        <div className="font-black text-purple-700 flex items-center gap-1.5 text-xs sm:text-sm">
-                          <span className="text-emerald-500 font-bold">✓</span> AI Doubt Support
-                        </div>
-                        <div className="text-[11px] font-bold text-slate-500 mt-1">24/7 AI tutor explanations</div>
-                      </div>
-                    </div>
-
-                    <div className="pt-2">
-                      <Link
-                        href="/products/ai-education-platform"
-                        className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-2xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] hover:shadow-[0_10px_25px_rgba(37,99,235,0.3)] text-white font-black text-xs sm:text-sm transition-all duration-300 group/btn shadow-md"
-                      >
-                        <span>View Product Details</span>
-                        <span className="text-base group-hover/btn:translate-x-1 transition-transform">&rarr;</span>
-                      </Link>
-                    </div>
+                  {/* Watermark Giant Number Backdrop */}
+                  <div className="absolute -top-10 left-0 md:left-8 text-[120px] sm:text-[180px] font-black text-[#2563EB]/[0.05] select-none pointer-events-none font-mono leading-none z-0">
+                    01
                   </div>
 
-                  {/* Right Visual Interactive Pipeline Mockup (5/12) */}
-                  <div className="lg:col-span-5">
-                    <div className="rounded-2xl bg-gradient-to-br from-[#EFF6FF] via-white to-[#DBEAFE]/40 border border-[#BFDBFE] p-5 sm:p-6 text-slate-800 flex flex-col justify-between font-sans text-xs shadow-2xs space-y-4">
-                      <div className="flex items-center justify-between border-b border-[#BFDBFE] pb-3">
-                        <div className="flex items-center gap-2">
-                          <span className="w-2.5 h-2.5 rounded-full bg-rose-400" />
-                          <span className="w-2.5 h-2.5 rounded-full bg-amber-400" />
-                          <span className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
-                          <span className="ml-1 text-[11px] text-slate-800 font-black">PLANNED WORKFLOW ARCHITECTURE</span>
+                  {/* Floating Content Block — Clean Borderless Design */}
+                  <div className="relative z-10 p-5 sm:p-8 lg:p-10 rounded-3xl bg-white/95 border border-slate-200/90 shadow-[0_8px_30px_rgba(15,23,42,0.04)] hover:shadow-[0_16px_45px_rgba(37,99,235,0.1)] hover:border-[#BFDBFE] transition-all duration-300">
+                    
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                      
+                      {/* Narrative Column (7 Cols) */}
+                      <div className="lg:col-span-7 space-y-4">
+                        
+                        {/* Header Badges */}
+                        <div className="flex flex-wrap items-center gap-2">
+                          <span className="text-[11px] font-mono font-black uppercase tracking-wider text-[#2563EB] bg-[#EFF6FF] px-3 py-1 rounded-full border border-[#BFDBFE]">
+                            PRODUCT 01 &bull; EDTECH &amp; LMS
+                          </span>
+                          <span className="text-[11px] font-extrabold text-amber-800 bg-amber-50 px-3 py-1 rounded-full border border-amber-200 flex items-center gap-1.5">
+                            <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
+                            In Development
+                          </span>
                         </div>
-                        <span className="text-amber-800 bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200 font-black text-[10px] uppercase">IN DEV</span>
+
+                        <h2 className="text-2xl sm:text-4xl font-black text-[#0F172A] tracking-tight leading-tight">
+                          AI Education Automation Platform
+                        </h2>
+
+                        <div className="text-sm sm:text-base font-extrabold text-[#2563EB] flex items-center gap-2">
+                          <span className="w-2 h-0.5 bg-[#2563EB]" />
+                          <span>A Smarter Way to Run Educational Institutions.</span>
+                        </div>
+
+                        <p className="text-xs sm:text-base text-slate-600 font-medium leading-relaxed text-left sm:text-justify">
+                          An intelligent, multi-tenant education platform bringing student lead capture, online admissions, live LMS, digital/printed exams, attendance, parent WhatsApp updates, and a 24/7 AI Tutor into one seamless operational engine.
+                        </p>
+
+                        {/* Feature Highlights Grid */}
+                        <div className="space-y-2 pt-2">
+                          <div className="text-xs font-black uppercase tracking-wider text-slate-400">Key Platform Highlights:</div>
+                          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                            <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 shadow-2xs hover:border-[#2563EB] transition-all">
+                              <div className="text-xs font-black text-[#2563EB]">Live LMS &amp; Video</div>
+                              <div className="text-[11px] font-semibold text-slate-500 mt-0.5">LiveKit + Cloudflare DRM</div>
+                            </div>
+                            <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 shadow-2xs hover:border-[#2563EB] transition-all">
+                              <div className="text-xs font-black text-[#0F172A]">Digital &amp; OMR Exams</div>
+                              <div className="text-[11px] font-semibold text-slate-500 mt-0.5">Online MCQ + Printed papers</div>
+                            </div>
+                            <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 shadow-2xs hover:border-[#2563EB] transition-all">
+                              <div className="text-xs font-black text-[#2563EB]">24/7 AI Doubt Tutor</div>
+                              <div className="text-[11px] font-semibold text-slate-500 mt-0.5">Instant step-by-step solver</div>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Action CTA Link */}
+                        <div className="pt-3">
+                          <Link
+                            href="/products/ai-education-platform"
+                            className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] text-white font-black text-xs sm:text-sm shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300 w-full sm:w-auto"
+                          >
+                            <span>Explore Full Architecture &amp; Specs</span>
+                            <span className="text-base">&rarr;</span>
+                          </Link>
+                        </div>
+
                       </div>
 
-                      {/* Workflow Chain Visual */}
-                      <div className="space-y-2.5 text-xs">
-                        <div className="p-3 rounded-xl bg-white border border-[#BFDBFE] flex items-center justify-between shadow-2xs">
-                          <span className="font-black text-[#0F172A]">01. Lead Capture &amp; Admissions</span>
-                          <span className="text-xs text-[#2563EB] font-black uppercase bg-[#EFF6FF] px-2 py-0.5 rounded border border-[#BFDBFE]">Automated</span>
-                        </div>
-                        <div className="p-3 rounded-xl bg-white border border-sky-200 flex items-center justify-between shadow-2xs">
-                          <span className="font-black text-[#0F172A]">02. LMS &amp; Exam Engine</span>
-                          <span className="text-xs text-[#0284C7] font-black uppercase bg-sky-50 px-2 py-0.5 rounded border border-sky-200">Connected</span>
-                        </div>
-                        <div className="p-3 rounded-xl bg-white border border-purple-200 flex items-center justify-between shadow-2xs">
-                          <span className="font-black text-[#0F172A]">03. AI Tutor &amp; Parent Reports</span>
-                          <span className="text-xs text-purple-700 font-black uppercase bg-purple-50 px-2 py-0.5 rounded border border-purple-200">Assisted</span>
+                      {/* Clean Visual Canvas Column (5 Cols) */}
+                      <div className="lg:col-span-5">
+                        <div className="relative rounded-2xl bg-[#0F172A] p-4 sm:p-5 text-white font-mono text-xs shadow-xl border border-slate-800 overflow-hidden space-y-4">
+                          
+                          {/* Clean Single-Tone Studio Header */}
+                          <div className="flex items-center justify-between pb-3 border-b border-slate-800">
+                            <div className="flex items-center gap-2">
+                              <span className="w-2.5 h-2.5 rounded-full bg-[#2563EB]" />
+                              <span className="text-[11px] text-slate-300 font-extrabold font-sans">AGARAN LMS SYSTEM MOCKUP</span>
+                            </div>
+                            <span className="text-[9.5px] font-black uppercase text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/30">
+                              IN DEV
+                            </span>
+                          </div>
+
+                          {/* Architecture Visual Nodes */}
+                          <div className="space-y-2.5 font-sans">
+                            <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between">
+                              <div className="flex items-center gap-2">
+                                <span className="w-2 h-2 rounded-full bg-[#2563EB]" />
+                                <span className="font-extrabold text-white text-xs">Student Portal &amp; LMS</span>
+                              </div>
+                              <span className="text-[10px] text-slate-400 font-mono">Live / DRM Video</span>
+                            </div>
+
+                            <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between">
+                              <div className="flex items-center gap-2">
+                                <span className="w-2 h-2 rounded-full bg-[#2563EB]" />
+                                <span className="font-extrabold text-white text-xs">Parent WhatsApp Alerts</span>
+                              </div>
+                              <span className="text-[10px] text-slate-400 font-mono">Auto Attendance</span>
+                            </div>
+
+                            <div className="p-3 rounded-xl bg-slate-900 border border-slate-800 flex items-center justify-between">
+                              <div className="flex items-center gap-2">
+                                <span className="w-2 h-2 rounded-full bg-[#2563EB]" />
+                                <span className="font-extrabold text-white text-xs">AI Doubt Resolution</span>
+                              </div>
+                              <span className="text-[10px] text-slate-400 font-mono">24/7 Academic AI</span>
+                            </div>
+                          </div>
+
+                          {/* Footer Tag */}
+                          <div className="p-2.5 rounded-xl bg-[#2563EB]/15 border border-[#2563EB]/30 text-blue-200 text-center font-mono text-[11px]">
+                            ⚡ Multi-Tenant Institutional Engine
+                          </div>
                         </div>
                       </div>
 
-                      <div className="p-3 rounded-xl bg-gradient-to-r from-[#1D4ED8] to-[#2563EB] text-[#BFDBFE] text-center font-black text-xs shadow-xs uppercase tracking-wider">
-                        Manage &rarr; Automate &rarr; Assist &rarr; Improve
-                      </div>
                     </div>
+
+                  </div>
+                </section>
+              </Reveal>
+
+              {/* ──────────────────────────────────────────────────────────
+                  PRODUCT 02 — WHATSAPP BUSINESS AUTOMATION PLATFORM
+              ────────────────────────────────────────────────────────── */}
+              <Reveal delay={0.08}>
+                <section className="scroll-mt-28 relative group" id="whatsapp-automation">
+                  
+                  {/* Watermark Giant Number Backdrop */}
+                  <div className="absolute -top-10 left-0 md:left-8 text-[120px] sm:text-[180px] font-black text-[#2563EB]/[0.05] select-none pointer-events-none font-mono leading-none z-0">
+                    02
                   </div>
 
-                </div>
-              </div>
-            </section>
-          </Reveal>
+                  {/* Floating Content Block — Clean Borderless Design */}
+                  <div className="relative z-10 p-5 sm:p-8 lg:p-10 rounded-3xl bg-white/95 border border-slate-200/90 shadow-[0_8px_30px_rgba(15,23,42,0.04)] hover:shadow-[0_16px_45px_rgba(37,99,235,0.1)] hover:border-[#BFDBFE] transition-all duration-300">
+                    
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                      
+                      {/* Narrative Column (7 Cols) */}
+                      <div className="lg:col-span-7 space-y-4">
+                        
+                        {/* Header Badges */}
+                        <div className="flex flex-wrap items-center gap-2">
+                          <span className="text-[11px] font-mono font-black uppercase tracking-wider text-[#2563EB] bg-[#EFF6FF] px-3 py-1 rounded-full border border-[#BFDBFE]">
+                            PRODUCT 02 &bull; WHATSAPP AI AUTOMATION
+                          </span>
+                          <span className="text-[11px] font-extrabold text-amber-800 bg-amber-50 px-3 py-1 rounded-full border border-amber-200 flex items-center gap-1.5">
+                            <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
+                            In Development
+                          </span>
+                        </div>
+
+                        <h2 className="text-2xl sm:text-4xl font-black text-[#0F172A] tracking-tight leading-tight">
+                          WhatsApp Business Automation Platform
+                        </h2>
+
+                        <div className="text-sm sm:text-base font-extrabold text-[#2563EB] flex items-center gap-2">
+                          <span className="w-2 h-0.5 bg-[#2563EB]" />
+                          <span>Turn WhatsApp Conversations into Automated Business Operations.</span>
+                        </div>
+
+                        <p className="text-xs sm:text-base text-slate-600 font-medium leading-relaxed text-left sm:text-justify">
+                          Automates customer communication from first enquiry to instant pricing quotes, catalog discovery, appointment bookings, and scheduled follow-ups using a customized AI WhatsApp assistant trained on your business data.
+                        </p>
+
+                        {/* Feature Highlights Grid */}
+                        <div className="space-y-2 pt-2">
+                          <div className="text-xs font-black uppercase tracking-wider text-slate-400">Key Platform Highlights:</div>
+                          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                            <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 shadow-2xs hover:border-[#2563EB] transition-all">
+                              <div className="text-xs font-black text-[#0F172A]">Adaptable Workflows</div>
+                              <div className="text-[11px] font-semibold text-slate-500 mt-0.5">Salons, Gyms, Clinics, Retail</div>
+                            </div>
+                            <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 shadow-2xs hover:border-[#2563EB] transition-all">
+                              <div className="text-xs font-black text-[#2563EB]">Live AI Assistant</div>
+                              <div className="text-[11px] font-semibold text-slate-500 mt-0.5">Responds using live catalog</div>
+                            </div>
+                            <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 shadow-2xs hover:border-[#2563EB] transition-all">
+                              <div className="text-xs font-black text-[#2563EB]">Lead &amp; Quote Engine</div>
+                              <div className="text-[11px] font-semibold text-slate-500 mt-0.5">Instant automated follow-ups</div>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Action CTA Link */}
+                        <div className="pt-3">
+                          <Link
+                            href="/products/whatsapp-automation"
+                            className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] text-white font-black text-xs sm:text-sm shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300 w-full sm:w-auto"
+                          >
+                            <span>Explore WhatsApp Automation Specs</span>
+                            <span className="text-base">&rarr;</span>
+                          </Link>
+                        </div>
+
+                      </div>
+
+                      {/* Clean Visual Canvas Column (5 Cols) */}
+                      <div className="lg:col-span-5">
+                        <div className="relative rounded-2xl bg-[#0F172A] p-4 sm:p-5 text-white font-mono text-xs shadow-xl border border-slate-800 overflow-hidden space-y-3.5">
+                          
+                          {/* Clean Single-Tone Studio Header */}
+                          <div className="flex items-center justify-between pb-3 border-b border-slate-800">
+                            <div className="flex items-center gap-2">
+                              <span className="w-2.5 h-2.5 rounded-full bg-[#2563EB]" />
+                              <span className="text-[11px] text-slate-300 font-extrabold font-sans">WHATSAPP AUTOMATION STUDIO</span>
+                            </div>
+                            <span className="text-[9.5px] font-black uppercase text-amber-400 bg-amber-500/10 px-2 py-0.5 rounded border border-amber-500/30">
+                              IN DEV
+                            </span>
+                          </div>
+
+                          {/* Chat Messages */}
+                          <div className="space-y-2.5 font-sans text-xs">
+                            <div className="p-3 rounded-2xl bg-slate-900 border border-slate-800 text-slate-200 max-w-[90%] shadow-2xs">
+                              <span className="text-[9.5px] font-extrabold text-[#2563EB] block mb-0.5 uppercase tracking-wider">Customer Enquiry</span>
+                              <span>&ldquo;Hi, what are your pricing packages and booking availability for tomorrow?&rdquo;</span>
+                            </div>
+
+                            <div className="p-3 rounded-2xl bg-[#2563EB] text-white font-medium max-w-[90%] ml-auto shadow-2xs">
+                              <span className="text-[9.5px] font-extrabold text-blue-100 block mb-0.5 uppercase tracking-wider">Agaran AI Assistant</span>
+                              <span>&ldquo;Here is our instant pricing catalog PDF. Tap below to select your slot directly!&rdquo;</span>
+                            </div>
+                          </div>
+
+                          {/* Action Footer */}
+                          <div className="p-2.5 rounded-xl bg-[#2563EB]/15 border border-[#2563EB]/30 text-blue-200 text-center font-mono text-[11px]">
+                            💬 Lead Captured &bull; Invoice Generated &bull; CRM Updated
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </section>
+              </Reveal>
+
+              {/* ──────────────────────────────────────────────────────────
+                  PRODUCT 03 — AUTONOMOUS AI AGENT PLATFORM
+              ────────────────────────────────────────────────────────── */}
+              <Reveal delay={0.1}>
+                <section className="scroll-mt-28 relative group" id="ai-agent-platform">
+                  
+                  {/* Watermark Giant Number Backdrop */}
+                  <div className="absolute -top-10 left-0 md:left-8 text-[120px] sm:text-[180px] font-black text-[#2563EB]/[0.05] select-none pointer-events-none font-mono leading-none z-0">
+                    03
+                  </div>
+
+                  {/* Floating Content Block — Clean Borderless Design */}
+                  <div className="relative z-10 p-5 sm:p-8 lg:p-10 rounded-3xl bg-white/95 border border-slate-200/90 shadow-[0_8px_30px_rgba(15,23,42,0.04)] hover:shadow-[0_16px_45px_rgba(37,99,235,0.1)] hover:border-[#BFDBFE] transition-all duration-300">
+                    
+                    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                      
+                      {/* Narrative Column (7 Cols) */}
+                      <div className="lg:col-span-7 space-y-4">
+                        
+                        {/* Header Badges */}
+                        <div className="flex flex-wrap items-center gap-2">
+                          <span className="text-[11px] font-mono font-black uppercase tracking-wider text-[#2563EB] bg-[#EFF6FF] px-3 py-1 rounded-full border border-[#BFDBFE]">
+                            PRODUCT 03 &bull; AI AGENTS &amp; WORKFORCE
+                          </span>
+                          <span className="text-[11px] font-extrabold text-[#1D4ED8] bg-[#DBEAFE] px-3 py-1 rounded-full border border-[#BFDBFE] flex items-center gap-1.5">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-pulse" />
+                            Exploring Concept
+                          </span>
+                        </div>
+
+                        <h2 className="text-2xl sm:text-4xl font-black text-[#0F172A] tracking-tight leading-tight">
+                          Autonomous AI Agent Platform
+                        </h2>
+
+                        <div className="text-sm sm:text-base font-extrabold text-[#2563EB] flex items-center gap-2">
+                          <span className="w-2 h-0.5 bg-[#2563EB]" />
+                          <span>A Specialised Digital Workforce Working Alongside Your Team.</span>
+                        </div>
+
+                        <p className="text-xs sm:text-base text-slate-600 font-medium leading-relaxed text-left sm:text-justify">
+                          Deploy a team of 8 specialised AI agents (Sales, Support, Knowledge, Ops, Finance, Strategy) that handle routine business responsibilities and inter-agent collaboration under human supervision.
+                        </p>
+
+                        {/* Feature Highlights Grid */}
+                        <div className="space-y-2 pt-2">
+                          <div className="text-xs font-black uppercase tracking-wider text-slate-400">Key Platform Highlights:</div>
+                          <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                            <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 shadow-2xs hover:border-[#2563EB] transition-all">
+                              <div className="text-xs font-black text-[#2563EB]">8 Specialised Agents</div>
+                              <div className="text-[11px] font-semibold text-slate-500 mt-0.5">Sales, Ops, Finance &amp; SOPs</div>
+                            </div>
+                            <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 shadow-2xs hover:border-[#2563EB] transition-all">
+                              <div className="text-xs font-black text-[#0F172A]">Inter-Agent Sync</div>
+                              <div className="text-[11px] font-semibold text-slate-500 mt-0.5">Automated workflow chains</div>
+                            </div>
+                            <div className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80 shadow-2xs hover:border-[#2563EB] transition-all">
+                              <div className="text-xs font-black text-[#2563EB]">Human Control Layer</div>
+                              <div className="text-[11px] font-semibold text-slate-500 mt-0.5">Approval bounds for safety</div>
+                            </div>
+                          </div>
+                        </div>
+
+                        {/* Action CTA Link */}
+                        <div className="pt-3">
+                          <Link
+                            href="/products/ai-agent-platform"
+                            className="inline-flex items-center justify-center gap-2.5 px-6 py-3.5 rounded-xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] text-white font-black text-xs sm:text-sm shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300 w-full sm:w-auto"
+                          >
+                            <span>Explore AI Agent Concept Specs</span>
+                            <span className="text-base">&rarr;</span>
+                          </Link>
+                        </div>
+
+                      </div>
+
+                      {/* Clean Visual Canvas Column (5 Cols) */}
+                      <div className="lg:col-span-5">
+                        <div className="relative rounded-2xl bg-[#0F172A] p-4 sm:p-5 text-white font-mono text-xs shadow-xl border border-slate-800 overflow-hidden space-y-3.5">
+                          
+                          {/* Clean Single-Tone Studio Header */}
+                          <div className="flex items-center justify-between pb-3 border-b border-slate-800">
+                            <div className="flex items-center gap-2">
+                              <span className="w-2.5 h-2.5 rounded-full bg-[#2563EB]" />
+                              <span className="text-[11px] text-slate-300 font-extrabold font-sans">AI DIGITAL WORKFORCE MATRIX</span>
+                            </div>
+                            <span className="text-[9.5px] font-black uppercase text-[#2563EB] bg-[#EFF6FF]/10 px-2 py-0.5 rounded border border-[#BFDBFE]/30">
+                              CONCEPT
+                            </span>
+                          </div>
+
+                          {/* Grid of 4 Active Agent Status Cards */}
+                          <div className="grid grid-cols-2 gap-2 font-sans text-xs">
+                            <div className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 space-y-0.5">
+                              <div className="font-extrabold text-[#2563EB] text-[11px]">Sales Agent</div>
+                              <div className="text-[10px] text-slate-400">Qualifies incoming leads</div>
+                            </div>
+                            <div className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 space-y-0.5">
+                              <div className="font-extrabold text-blue-300 text-[11px]">Knowledge Agent</div>
+                              <div className="text-[10px] text-slate-400">Searches company SOPs</div>
+                            </div>
+                            <div className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 space-y-0.5">
+                              <div className="font-extrabold text-blue-200 text-[11px]">Support Agent</div>
+                              <div className="text-[10px] text-slate-400">Resolves client tickets</div>
+                            </div>
+                            <div className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 space-y-0.5">
+                              <div className="font-extrabold text-slate-300 text-[11px]">Ops Agent</div>
+                              <div className="text-[10px] text-slate-400">Monitors task delays</div>
+                            </div>
+                          </div>
+
+                          {/* Inter-Agent Status */}
+                          <div className="p-2.5 rounded-xl bg-[#2563EB]/15 border border-[#2563EB]/30 text-blue-200 text-center font-mono text-[11px]">
+                            🤖 Multi-Agent Interoperability + Human Approval
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+                </section>
+              </Reveal>
+
+            </div>
+          </div>
 
           {/* ══════════════════════════════════════════════════════════
-              PRODUCT 02 — WHATSAPP BUSINESS AUTOMATION PLATFORM
+              FINAL CALL TO ACTION — HIGH-IMPACT GRADIENT CANVAS
           ══════════════════════════════════════════════════════════ */}
-          <Reveal delay={0.15}>
-            <section className="scroll-mt-24" id="whatsapp-automation">
-              <div className="group block p-6 sm:p-8 lg:p-10 rounded-3xl bg-white border border-emerald-200 shadow-[0_8px_35px_rgba(16,185,129,0.08)] hover:shadow-[0_22px_55px_rgba(16,185,129,0.16)] hover:border-emerald-500 transition-all duration-300 relative overflow-hidden">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
-                  
-                  {/* Left Narrative Column (7/12) */}
-                  <div className="lg:col-span-7 space-y-4 sm:space-y-5">
-                    <div className="flex flex-wrap items-center gap-2">
-                      <span className="text-[10.5px] sm:text-xs font-black uppercase tracking-wider text-emerald-800 bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-200 shadow-2xs">
-                        PRODUCT 02 &bull; AI &bull; WHATSAPP &bull; BUSINESS AUTOMATION
-                      </span>
-                      <span className="text-xs font-black text-amber-800 bg-amber-50 px-3 py-1 rounded-full flex items-center gap-1.5 border border-amber-200 shadow-2xs">
-                        <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
-                        Status: In Development
-                      </span>
-                    </div>
-
-                    <h2 className="text-2xl sm:text-4xl font-black text-[#0F172A] group-hover:text-emerald-700 transition-colors leading-tight tracking-tight">
-                      WhatsApp Business Automation Platform
-                    </h2>
-
-                    <p className="text-base sm:text-xl font-black bg-gradient-to-r from-emerald-600 via-[#0284C7] to-[#2563EB] bg-clip-text text-transparent">
-                      Your Business, Running Smarter on WhatsApp.
-                    </p>
-
-                    <p className="text-xs sm:text-base text-slate-600 font-medium leading-relaxed text-left sm:text-justify">
-                      A customizable WhatsApp automation platform designed to automate your entire business workflow starting right from <strong className="font-extrabold text-[#0F172A]">initial lead capture</strong>. Businesses configure their products, services, and rules, while an <strong className="font-extrabold text-emerald-700">AI-powered WhatsApp assistant</strong> handles <strong className="font-extrabold text-[#2563EB]">lead generation</strong>, <strong className="font-extrabold text-[#0284C7]">quotes &amp; follow-ups</strong> automatically.
-                    </p>
-
-                    {/* Feature Highlights Grid — Bold & Colorful Pills */}
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-1 text-xs">
-                      <div className="p-3.5 rounded-2xl bg-emerald-50 border border-emerald-200 shadow-2xs hover:scale-[1.02] transition-transform">
-                        <div className="font-black text-emerald-800 flex items-center gap-1.5 text-xs sm:text-sm">
-                          <span className="text-emerald-600 font-bold">✓</span> Multi-Business Config
-                        </div>
-                        <div className="text-[11px] font-bold text-slate-500 mt-1">Adaptable to any industry</div>
-                      </div>
-                      <div className="p-3.5 rounded-2xl bg-blue-50 border border-blue-200 shadow-2xs hover:scale-[1.02] transition-transform">
-                        <div className="font-black text-[#2563EB] flex items-center gap-1.5 text-xs sm:text-sm">
-                          <span className="text-emerald-600 font-bold">✓</span> AI Chat Assistant
-                        </div>
-                        <div className="text-[11px] font-bold text-slate-500 mt-1">Responds using business data</div>
-                      </div>
-                      <div className="p-3.5 rounded-2xl bg-sky-50 border border-sky-200 shadow-2xs hover:scale-[1.02] transition-transform">
-                        <div className="font-black text-[#0284C7] flex items-center gap-1.5 text-xs sm:text-sm">
-                          <span className="text-emerald-600 font-bold">✓</span> Lead Workflows
-                        </div>
-                        <div className="text-[11px] font-bold text-slate-500 mt-1">Follow-ups, leads &amp; bookings</div>
-                      </div>
-                    </div>
-
-                    <div className="pt-2">
-                      <Link
-                        href="/products/whatsapp-automation"
-                        className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-2xl bg-gradient-to-r from-emerald-600 via-emerald-700 to-[#0284C7] hover:shadow-[0_10px_25px_rgba(16,185,129,0.3)] text-white font-black text-xs sm:text-sm transition-all duration-300 group/btn shadow-md"
-                      >
-                        <span>View Product Details</span>
-                        <span className="text-base group-hover/btn:translate-x-1 transition-transform">&rarr;</span>
-                      </Link>
-                    </div>
-                  </div>
-
-                  {/* Right Visual Chat Workflow Visual (5/12) */}
-                  <div className="lg:col-span-5">
-                    <div className="rounded-2xl bg-gradient-to-br from-emerald-50 via-white to-sky-50 border border-emerald-200 p-5 sm:p-6 text-slate-800 flex flex-col justify-between font-sans text-xs shadow-2xs space-y-4">
-                      <div className="flex items-center justify-between border-b border-emerald-200 pb-3">
-                        <div className="flex items-center gap-2">
-                          <span className="w-2.5 h-2.5 rounded-full bg-emerald-500" />
-                          <span className="text-[11px] font-black text-slate-800">WHATSAPP AUTOMATION PIPELINE</span>
-                        </div>
-                        <span className="text-amber-800 bg-amber-50 px-2.5 py-0.5 rounded-full border border-amber-200 font-black text-[10px] uppercase">IN DEV</span>
-                      </div>
-
-                      {/* Chat Bubble Flow Preview */}
-                      <div className="space-y-2.5 text-xs font-sans">
-                        <div className="p-3 rounded-xl bg-white border border-slate-200 text-slate-700 shadow-2xs">
-                          <div className="text-[10px] font-black text-slate-400 uppercase mb-0.5">CUSTOMER ENQUIRY</div>
-                          <div className="font-semibold">&ldquo;Hi, what are your service timings and booking availability?&rdquo;</div>
-                        </div>
-                        <div className="p-3 rounded-xl bg-emerald-600 text-white font-medium shadow-2xs ml-4">
-                          <div className="text-[10px] font-black text-emerald-200 uppercase mb-0.5">AI ASSISTANT RESPONSE</div>
-                          <div className="font-bold">&ldquo;We are open Mon-Sat 9AM-8PM. Would you like to check available slots for today?&rdquo;</div>
-                        </div>
-                      </div>
-
-                      <div className="p-3 rounded-xl bg-gradient-to-r from-emerald-700 to-emerald-600 text-white text-center font-black text-xs shadow-xs uppercase tracking-wider">
-                        Connect &rarr; Configure &rarr; Teach &rarr; Automate
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </section>
-          </Reveal>
-
-          {/* ══════════════════════════════════════════════════════════
-              PRODUCT 03 — AI AGENT PLATFORM
-          ══════════════════════════════════════════════════════════ */}
-          <Reveal delay={0.2}>
-            <section className="scroll-mt-24" id="ai-agent-platform">
-              <div className="group block p-6 sm:p-8 lg:p-10 rounded-3xl bg-white border border-[#BFDBFE] shadow-[0_8px_35px_rgba(37,99,235,0.08)] hover:shadow-[0_22px_55px_rgba(37,99,235,0.16)] hover:border-[#2563EB] transition-all duration-300 relative overflow-hidden">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
-                  
-                  {/* Left Narrative Column (7/12) */}
-                  <div className="lg:col-span-7 space-y-4 sm:space-y-5">
-                    <div className="flex flex-wrap items-center gap-2">
-                      <span className="text-[10.5px] sm:text-xs font-black uppercase tracking-wider text-[#2563EB] bg-[#EFF6FF] px-3.5 py-1.5 rounded-full border border-[#BFDBFE] shadow-2xs">
-                        PRODUCT 03 &bull; AI &bull; AGENTS &bull; BUSINESS OPERATIONS
-                      </span>
-                      <span className="text-xs font-black text-[#1D4ED8] bg-[#DBEAFE] px-3 py-1 rounded-full flex items-center gap-1.5 border border-[#BFDBFE] shadow-2xs">
-                        <span className="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse" />
-                        Status: Exploring Concept
-                      </span>
-                    </div>
-
-                    <h2 className="text-2xl sm:text-4xl font-black text-[#0F172A] group-hover:text-[#2563EB] transition-colors leading-tight tracking-tight">
-                      AI Agent Platform
-                    </h2>
-
-                    <p className="text-base sm:text-xl font-black bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] bg-clip-text text-transparent">
-                      A Digital Workforce for Modern Businesses.
-                    </p>
-
-                    <p className="text-xs sm:text-base text-slate-600 font-medium leading-relaxed text-left sm:text-justify">
-                      We&apos;re exploring a platform where businesses can build a team of <strong className="font-extrabold text-[#0F172A]">specialised AI agents</strong> to handle different parts of their everyday work — working alongside people, communicating with each other, and taking action across business systems with <strong className="font-extrabold text-[#2563EB]">full human oversight</strong>.
-                    </p>
-
-                    {/* Feature Highlights Grid */}
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-1 text-xs">
-                      <div className="p-3.5 rounded-2xl bg-[#EFF6FF] border border-[#BFDBFE] shadow-2xs hover:scale-[1.02] transition-transform">
-                        <div className="font-black text-[#2563EB] flex items-center gap-1.5 text-xs sm:text-sm">
-                          <span className="text-emerald-500 font-bold">✓</span> Multi-Agent Team
-                        </div>
-                        <div className="text-[11px] font-bold text-slate-500 mt-1">CEO, Sales, Support, Ops &amp; HR</div>
-                      </div>
-                      <div className="p-3.5 rounded-2xl bg-blue-50 border border-blue-200 shadow-2xs hover:scale-[1.02] transition-transform">
-                        <div className="font-black text-[#2563EB] flex items-center gap-1.5 text-xs sm:text-sm">
-                          <span className="text-emerald-500 font-bold">✓</span> Inter-Agent Collab
-                        </div>
-                        <div className="text-[11px] font-bold text-slate-500 mt-1">Agents coordinate workflows</div>
-                      </div>
-                      <div className="p-3.5 rounded-2xl bg-sky-50 border border-sky-200 shadow-2xs hover:scale-[1.02] transition-transform">
-                        <div className="font-black text-[#0284C7] flex items-center gap-1.5 text-xs sm:text-sm">
-                          <span className="text-emerald-600 font-bold">✓</span> Human Control Layer
-                        </div>
-                        <div className="text-[11px] font-bold text-slate-500 mt-1">Approvals &amp; permission bounds</div>
-                      </div>
-                    </div>
-
-                    <div className="pt-2">
-                      <Link
-                        href="/products/ai-agent-platform"
-                        className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-2xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] hover:shadow-[0_10px_25px_rgba(37,99,235,0.3)] text-white font-black text-xs sm:text-sm transition-all duration-300 group/btn shadow-md"
-                      >
-                        <span>View Product Details</span>
-                        <span className="text-base group-hover/btn:translate-x-1 transition-transform">&rarr;</span>
-                      </Link>
-                    </div>
-                  </div>
-
-                  {/* Right Visual Agent Team Mockup (5/12) */}
-                  <div className="lg:col-span-5">
-                    <div className="rounded-2xl bg-gradient-to-br from-[#EFF6FF] via-white to-sky-50 border border-[#BFDBFE] p-5 sm:p-6 text-slate-800 flex flex-col justify-between font-sans text-xs shadow-2xs space-y-4">
-                      <div className="flex items-center justify-between border-b border-[#BFDBFE] pb-3">
-                        <div className="flex items-center gap-2">
-                          <span className="w-2.5 h-2.5 rounded-full bg-[#2563EB]" />
-                          <span className="text-[11px] font-black text-slate-800">DIGITAL WORKFORCE ARCHITECTURE</span>
-                        </div>
-                        <span className="text-[#1D4ED8] bg-[#DBEAFE] px-2.5 py-0.5 rounded-full border border-[#BFDBFE] font-black text-[10px] uppercase">EXPLORING</span>
-                      </div>
-
-                      {/* Agent Team Matrix */}
-                      <div className="grid grid-cols-2 gap-2 text-xs">
-                        <div className="p-2.5 rounded-xl bg-white border border-[#BFDBFE] shadow-2xs">
-                          <div className="font-black text-[#2563EB]">Sales Agent</div>
-                          <div className="text-[10px] text-slate-500">Qualifies leads &amp; updates CRM</div>
-                        </div>
-                        <div className="p-2.5 rounded-xl bg-white border border-blue-200 shadow-2xs">
-                          <div className="font-black text-[#2563EB]">Knowledge Agent</div>
-                          <div className="text-[10px] text-slate-500">Searches company SOPs &amp; docs</div>
-                        </div>
-                        <div className="p-2.5 rounded-xl bg-white border border-sky-200 shadow-2xs">
-                          <div className="font-black text-[#0284C7]">Support Agent</div>
-                          <div className="text-[10px] text-slate-500">Resolves customer tickets</div>
-                        </div>
-                        <div className="p-2.5 rounded-xl bg-white border border-emerald-200 shadow-2xs">
-                          <div className="font-black text-emerald-700">Ops &amp; Finance</div>
-                          <div className="text-[10px] text-slate-500">Triggers routine workflows</div>
-                        </div>
-                      </div>
-
-                      <div className="p-3 rounded-xl bg-gradient-to-r from-[#1D4ED8] to-[#2563EB] text-white text-center font-black text-xs shadow-xs uppercase tracking-wider">
-                        Agent &rarr; AI Team &rarr; Digital Workforce
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </section>
-          </Reveal>
-
-          {/* ══════════════════════════════════════════════════════════
-              FINAL CALL TO ACTION
-          ══════════════════════════════════════════════════════════ */}
-          <Reveal delay={0.25}>
+          <Reveal delay={0.12}>
             <section className="pt-6 sm:pt-10">
-              <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] text-white shadow-xl text-center space-y-4">
-                <h2 className="text-2xl sm:text-4xl font-black tracking-tight">
-                  Want to Explore Product Capabilities for Your Organization?
+              <div className="relative p-6 sm:p-12 rounded-3xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] text-white shadow-2xl text-center space-y-4 overflow-hidden">
+                
+                {/* Background Accent Mesh */}
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.15),transparent_50%)] pointer-events-none" />
+
+                <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight relative z-10">
+                  Want to Explore Platform Capabilities for Your Organization?
                 </h2>
-                <p className="text-sm sm:text-base text-blue-100 max-w-2xl mx-auto font-medium">
-                  We are actively refining these platforms. Tell us your institutional or business requirements and we&apos;ll explore how our technology can help.
+                
+                <p className="text-xs sm:text-base text-blue-100 max-w-2xl mx-auto font-medium leading-relaxed relative z-10">
+                  Share your business or institutional workflow requirements with us. We&apos;ll explore how our technology platforms can accelerate your operations.
                 </p>
-                <div className="pt-2">
+                
+                <div className="pt-3 relative z-10">
                   <Link
-                    href="/contact"
-                    className="inline-flex items-center gap-2 px-7 py-3.5 rounded-2xl bg-white text-[#2563EB] font-black text-sm shadow-md hover:bg-slate-50 hover:scale-105 transition-all duration-300"
+                    href="/contact#inquiry-form"
+                    className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl bg-white text-[#2563EB] font-black text-xs sm:text-sm shadow-xl hover:bg-slate-50 hover:scale-105 transition-all duration-300 w-full sm:w-auto"
                   >
-                    <span>Start a Conversation</span>
-                    <span>&rarr;</span>
+                    <span>Start a Technical Inquiry</span>
+                    <span className="text-base">&rarr;</span>
                   </Link>
                 </div>
               </div>
             </section>
           </Reveal>
 
-        </motion.div>
+        </div>
 
       </main>
 

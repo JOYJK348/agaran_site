@@ -39,10 +39,10 @@ export default function Footer() {
   return (
     <footer className="relative bg-[#090D16] text-white border-t border-slate-800 overflow-hidden select-none">
       {/* Background Glow Mesh */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-64 bg-blue-600/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[var(--container-max)] h-64 bg-blue-600/10 rounded-full blur-[140px] pointer-events-none" />
 
       {/* Main Footer Container */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8 sm:pt-16 sm:pb-12">
+      <div className="relative z-10 max-w-[var(--container-max)] mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-8 sm:pt-16 sm:pb-12">
         
         {/* ── TOP SECTION: BRAND & LIVE STATUS ── */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-10 border-b border-white/10">
@@ -220,7 +220,7 @@ export default function Footer() {
 
         {/* ── BOTTOM BAR: OFFICIAL SOCIAL ICONS & COPYRIGHT ── */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-6 text-xs text-slate-500">
-          <p>© {new Date().getFullYear()} AGARAN. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} AGARAN. Built with passion.</p>
 
           {/* Official Social Media Icons */}
           <div className="flex items-center gap-3">
@@ -279,12 +279,9 @@ export default function Footer() {
             </a>
           </div>
 
-          <div className="flex items-center gap-4">
-            <span className="inline-flex items-center gap-1">
-              <span>Made with</span>
-              <span className="text-red-500">❤️</span>
-              <span>in India</span>
-            </span>
+          <div className="flex items-center gap-2 text-slate-400 font-medium text-xs">
+            <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
+            <span>Engineering Technology for Scale</span>
           </div>
         </div>
 

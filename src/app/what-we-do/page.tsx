@@ -179,7 +179,7 @@ export default function WhatWeDoPage() {
         <section className="relative z-10 pt-20 sm:pt-28 pb-10 sm:pb-12 px-4 sm:px-8 lg:px-16 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(#BFDBFE_1px,transparent_1px)] [background-size:32px_32px] opacity-40 pointer-events-none" />
 
-          <div className="relative max-w-[1400px] mx-auto w-full text-center">
+          <div className="relative max-w-[1600px] mx-auto w-full text-center">
             {/* Section Tag */}
             <Reveal delay={0}>
               <div className="flex justify-center mb-6">
@@ -192,7 +192,7 @@ export default function WhatWeDoPage() {
 
             {/* H1 Title */}
             <Reveal delay={0.1}>
-              <h1 className="text-center text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] xl:text-[4.4rem] font-black leading-[1.12] tracking-[-0.035em] text-[#0F172A] w-full max-w-5xl mx-auto mb-5">
+              <h1 className="text-center text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-[4rem] xl:text-[4.4rem] font-black leading-[1.12] tracking-[-0.035em] text-[#0F172A] w-full max-w-full lg:max-w-6xl mx-auto mb-5">
                 We Build Technology That{" "}
                 <span className="bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] bg-clip-text text-transparent">
                   Works For You.
@@ -202,7 +202,7 @@ export default function WhatWeDoPage() {
 
             {/* Subtitle */}
             <Reveal delay={0.2}>
-              <p className="text-center text-sm sm:text-lg lg:text-xl font-medium leading-relaxed text-slate-600 w-full max-w-5xl mx-auto mb-9">
+              <p className="text-center text-sm sm:text-lg lg:text-xl font-medium leading-relaxed text-slate-600 w-full max-w-full lg:max-w-6xl mx-auto mb-9">
                 From custom software to AI-powered systems, we turn real problems and ideas into technology that people can actually use.
               </p>
             </Reveal>
@@ -211,7 +211,7 @@ export default function WhatWeDoPage() {
             <Reveal delay={0.28}>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 mb-8">
                 <Link
-                  href="/contact"
+                  href="/contact#inquiry-form"
                   className="inline-flex items-center justify-center gap-2.5 text-sm sm:text-base px-8 py-4 rounded-2xl font-black text-white bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] hover:shadow-[0_12px_35px_rgba(37,99,235,0.35)] hover:scale-105 transition-all duration-300 w-full sm:w-auto shadow-md"
                 >
                   <span>Tell Us What You Need</span>
@@ -430,22 +430,22 @@ export default function WhatWeDoPage() {
         </section>
 
         {/* ══════════════════════════════════════════════════════════
-            01  SOFTWARE DEVELOPMENT
+            03  SOFTWARE DEVELOPMENT
         ══════════════════════════════════════════════════════════ */}
-        <section id="software-development" className="relative z-10 py-12 sm:py-16 px-4 sm:px-8 lg:px-16 bg-[#EFF6FF]/40 overflow-hidden">
+        <section id="software-development" className="relative z-10 py-10 sm:py-16 px-4 sm:px-8 lg:px-16 bg-[#EFF6FF]/40 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(#BFDBFE_1px,transparent_1px)] [background-size:32px_32px] opacity-30 pointer-events-none" />
 
           <div className="relative max-w-[1440px] mx-auto w-full">
             {/* Header */}
             <Reveal delay={0.04} className="flex justify-center">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-4">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-pulse" />
                 <span>01 &nbsp;•&nbsp; SOFTWARE DEVELOPMENT</span>
               </div>
             </Reveal>
 
             <Reveal delay={0.1}>
-              <h2 className="text-center text-[1.55rem] xs:text-[1.8rem] sm:text-3xl md:text-[2rem] lg:text-4xl xl:text-[2.4rem] font-extrabold lg:font-black leading-[1.18] tracking-[-0.035em] text-[#0F172A] mb-3 w-full max-w-[1280px] mx-auto">
+              <h2 className="text-center text-2xl xs:text-3xl sm:text-4xl md:text-[2.2rem] lg:text-4xl font-black leading-tight tracking-tight text-[#0F172A] mb-2.5 max-w-4xl mx-auto">
                 Software Built Around{" "}
                 <span className="bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] bg-clip-text text-transparent">
                   Your Business.
@@ -454,40 +454,40 @@ export default function WhatWeDoPage() {
             </Reveal>
 
             <Reveal delay={0.14}>
-              <p className="text-center text-sm sm:text-base lg:text-[1.05rem] font-medium leading-relaxed text-slate-600 w-full max-w-3xl mx-auto mb-8 text-justify sm:text-center">
-                We build websites, web applications, mobile apps and complete software platforms based on how your business actually works.
+              <p className="text-center text-xs sm:text-base font-medium leading-relaxed text-slate-600 max-w-2xl mx-auto mb-7">
+                Custom web apps, mobile applications, and software platforms tailored to your business operations.
               </p>
             </Reveal>
 
-            {/* Visual Problem vs Solution Flow — Full Container Width */}
-            <Reveal delay={0.2} className="mb-10">
-              <div className="w-full max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-11 gap-4 items-center">
+            {/* Visual Problem vs Solution Flow */}
+            <Reveal delay={0.2} className="mb-8">
+              <div className="w-full max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-11 gap-3 items-center">
                 {/* Problem */}
-                <div className="md:col-span-5 p-5 sm:p-6 rounded-2xl bg-white border border-slate-200 shadow-sm">
-                  <div className="inline-flex items-center gap-1.5 text-xs font-extrabold text-rose-600 uppercase tracking-wider mb-2">
+                <div className="md:col-span-5 p-4 sm:p-5 rounded-2xl bg-white border border-slate-200 shadow-2xs">
+                  <div className="inline-flex items-center gap-1.5 text-[11px] font-extrabold text-rose-600 uppercase tracking-wider mb-1">
                     <span>✕ THE PROBLEM</span>
                   </div>
-                  <h3 className="text-base font-black text-slate-800 mb-1.5">&ldquo;Too Many Tools&rdquo;</h3>
-                  <p className="text-xs sm:text-sm font-medium text-slate-600 leading-relaxed text-justify">
-                    Spreadsheets, separate chat apps, disconnected forms, and manual copy-pasting that slow down your team.
+                  <h3 className="text-sm sm:text-base font-black text-slate-800 mb-1">&ldquo;Too Many Tools&rdquo;</h3>
+                  <p className="text-xs font-medium text-slate-600 leading-normal">
+                    Disconnected spreadsheets and manual copy-pasting that slow down operations.
                   </p>
                 </div>
 
                 {/* Arrow Bridge */}
-                <div className="md:col-span-1 flex justify-center py-2 md:py-0">
-                  <div className="w-10 h-10 rounded-full bg-[#2563EB] text-white flex items-center justify-center font-black shadow-md">
+                <div className="md:col-span-1 flex justify-center py-1 md:py-0">
+                  <div className="w-8 h-8 rounded-full bg-[#2563EB] text-white flex items-center justify-center font-bold text-xs shadow-xs">
                     →
                   </div>
                 </div>
 
                 {/* Solution */}
-                <div className="md:col-span-5 p-5 sm:p-6 rounded-2xl bg-gradient-to-br from-[#1D4ED8] to-[#2563EB] text-white shadow-lg border border-blue-400/30">
-                  <div className="inline-flex items-center gap-1.5 text-xs font-extrabold text-sky-200 uppercase tracking-wider mb-2">
+                <div className="md:col-span-5 p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-[#1D4ED8] to-[#2563EB] text-white shadow-md">
+                  <div className="inline-flex items-center gap-1.5 text-[11px] font-extrabold text-sky-200 uppercase tracking-wider mb-1">
                     <span>✓ THE AGARAN SOLUTION</span>
                   </div>
-                  <h3 className="text-base font-black text-white mb-1.5">One Connected System</h3>
-                  <p className="text-xs sm:text-sm font-medium text-blue-100 leading-relaxed text-justify">
-                    A single intuitive software platform custom-built for your workflows, accessible from desktop & mobile.
+                  <h3 className="text-sm sm:text-base font-black text-white mb-1">One Connected System</h3>
+                  <p className="text-xs font-medium text-blue-100 leading-normal">
+                    A single unified software platform custom-built for desktop and mobile users.
                   </p>
                 </div>
               </div>
@@ -495,36 +495,27 @@ export default function WhatWeDoPage() {
 
             {/* Capabilities Horizontal Swipe Carousel on Mobile */}
             <div
-              onScroll={(e) => handleCarouselScroll(e, 6, setSoftIdx)}
-              className="flex md:grid md:grid-cols-3 overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 sm:gap-6 pb-4 md:pb-0 mb-4 -mx-4 px-4 sm:mx-0 sm:px-0"
+              onScroll={(e) => handleCarouselScroll(e, 4, setSoftIdx)}
+              className="flex md:grid md:grid-cols-2 lg:grid-cols-4 overflow-x-auto snap-x snap-mandatory scrollbar-none gap-3.5 pb-3 md:pb-0 mb-3 -mx-4 px-4 sm:mx-0 sm:px-0"
             >
               {[
-                { title: "Websites & Web Apps", desc: "Fast, responsive web applications built for high performance and smooth user experience." },
-                { title: "Mobile Applications", desc: "Native & cross-platform iOS and Android apps designed for speed and daily reliability." },
-                { title: "Custom Business Software", desc: "Tailored internal tools and platforms aligned precisely with your operational needs." },
-                { title: "SaaS Platforms", desc: "Multi-tenant cloud applications built to onboard users cleanly and scale effortlessly." },
-                { title: "Internal Management Systems", desc: "Centralized dashboards for team collaboration, tracking, and operational management." },
-                { title: "APIs & System Integrations", desc: "Secure API connections that link all your third-party tools into one automated pipeline." },
+                { title: "Websites & Web Apps", desc: "High-performance web applications built for speed and effortless user experience." },
+                { title: "Mobile Applications", desc: "Native iOS and Android apps designed for smooth daily operational use." },
+                { title: "Custom Business Platforms", desc: "Tailored internal management tools aligned precisely with your workflow." },
+                { title: "SaaS & Cloud APIs", desc: "Scalable cloud SaaS products and secure APIs connecting third-party services." },
               ].map((cap, i) => (
-                <Reveal key={cap.title} delay={0.1 + i * 0.06} className="snap-center shrink-0 w-[82vw] sm:w-[320px] md:w-auto">
-                  <div className="group relative h-full p-6 sm:p-7 rounded-[26px] bg-gradient-to-b from-[#EFF6FF]/70 via-white to-[#DBEAFE]/30 border border-[#BFDBFE] shadow-[0_8px_28px_rgba(37,99,235,0.08)] hover:shadow-[0_20px_45px_rgba(37,99,235,0.18)] hover:border-[#2563EB] hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between overflow-hidden">
-                    {/* Ambient glow orb */}
-                    <div className="absolute -top-10 -left-10 w-32 h-32 bg-[#2563EB]/10 rounded-full blur-xl pointer-events-none group-hover:scale-150 transition-transform duration-500" />
-                    
-                    {/* Low-opacity diagonal tech stripe overlay */}
-                    <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(37,99,235,0.03)_25%,transparent_25%,transparent_50%,rgba(37,99,235,0.03)_50%,rgba(37,99,235,0.03)_75%,transparent_75%,transparent)] [background-size:20px_20px] pointer-events-none" />
-
-                    <div className="relative z-10">
-                      <h3 className="text-base sm:text-lg font-extrabold text-[#0F172A] mb-2.5 group-hover:text-[#2563EB] transition-colors">
+                <Reveal key={cap.title} delay={0.08 + i * 0.05} className="snap-center shrink-0 w-[82vw] sm:w-[280px] md:w-auto">
+                  <div className="group relative h-full p-5 rounded-2xl bg-white border border-[#BFDBFE] shadow-2xs hover:border-[#2563EB] hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-sm sm:text-base font-bold text-[#0F172A] mb-1.5 group-hover:text-[#2563EB] transition-colors">
                         {cap.title}
                       </h3>
-                      <p className="text-xs sm:text-sm font-medium text-slate-600 leading-relaxed text-justify">
+                      <p className="text-xs text-slate-500 font-normal leading-relaxed">
                         {cap.desc}
                       </p>
                     </div>
-
-                    <div className="relative z-10 mt-5 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] font-bold text-slate-400 group-hover:text-[#2563EB] transition-colors">
-                      <span className="px-2.5 py-0.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[9.5px] font-extrabold uppercase text-[#2563EB]">AGARAN STANDARD</span>
+                    <div className="mt-4 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[10px] font-bold text-slate-400">
+                      <span className="text-[#2563EB] uppercase tracking-wider font-mono">0{i + 1} &bull; SOFTWARE</span>
                       <span>✓</span>
                     </div>
                   </div>
@@ -533,25 +524,25 @@ export default function WhatWeDoPage() {
             </div>
 
             {/* Mobile Swipe Dot Indicator */}
-            <CarouselDots total={6} activeIndex={softIdx} />
+            <CarouselDots total={4} activeIndex={softIdx} />
           </div>
         </section>
 
         {/* ══════════════════════════════════════════════════════════
-            02  AI & INTELLIGENT SYSTEMS
+            04  AI & INTELLIGENT SYSTEMS
         ══════════════════════════════════════════════════════════ */}
-        <section id="ai-systems" className="relative z-10 py-12 sm:py-16 px-4 sm:px-8 lg:px-16 overflow-hidden">
+        <section id="ai-systems" className="relative z-10 py-10 sm:py-16 px-4 sm:px-8 lg:px-16 overflow-hidden">
           <div className="max-w-[1440px] mx-auto w-full">
             {/* Header */}
             <Reveal delay={0.04} className="flex justify-center">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-4">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-pulse" />
                 <span>02 &nbsp;•&nbsp; AI & INTELLIGENT SYSTEMS</span>
               </div>
             </Reveal>
 
             <Reveal delay={0.1}>
-              <h2 className="text-center text-[1.55rem] xs:text-[1.8rem] sm:text-3xl md:text-[2rem] lg:text-4xl xl:text-[2.4rem] font-extrabold lg:font-black leading-[1.18] tracking-[-0.035em] text-[#0F172A] mb-3 w-full max-w-[1280px] mx-auto">
+              <h2 className="text-center text-2xl xs:text-3xl sm:text-4xl md:text-[2.2rem] lg:text-4xl font-black leading-tight tracking-tight text-[#0F172A] mb-2.5 max-w-4xl mx-auto">
                 AI That Can Do More Than{" "}
                 <span className="bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] bg-clip-text text-transparent">
                   Answer.
@@ -560,106 +551,28 @@ export default function WhatWeDoPage() {
             </Reveal>
 
             <Reveal delay={0.14}>
-              <p className="text-center text-sm sm:text-base lg:text-[1.05rem] font-medium leading-relaxed text-slate-600 w-full max-w-3xl mx-auto mb-8 text-justify sm:text-center">
-                We build AI-powered systems that understand information, make decisions, and help people get things done.
+              <p className="text-center text-xs sm:text-base font-medium leading-relaxed text-slate-600 max-w-2xl mx-auto mb-7">
+                Intelligent systems that understand data, make decisions, and automate work.
               </p>
             </Reveal>
 
-            {/* ── Visual AI Flow: Connected Neural Pipeline (UNDERSTAND -> THINK -> ACT) — Full Container Width ── */}
-            <Reveal delay={0.2} className="mb-12">
+            {/* ── Visual AI Flow (UNDERSTAND -> THINK -> ACT) ── */}
+            <Reveal delay={0.2} className="mb-8">
               <div className="w-full max-w-[1440px] mx-auto relative">
-                
-                {/* Connecting Laser Ray between Steps (Desktop) */}
-                <div className="hidden sm:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-[#2563EB]/20 via-[#2563EB] to-[#2563EB]/20 -translate-y-1/2 z-0 pointer-events-none" />
-
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 relative z-10">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   {[
-                    {
-                      step: "01",
-                      title: "UNDERSTAND",
-                      tag: "DATA INGESTION",
-                      desc: "Reads documents, user prompts, and raw data to extract exact context.",
-                      badge: "PHASE 1",
-                      svg: (
-                        <svg viewBox="0 0 100 100" fill="none" stroke="#2563EB" strokeWidth="2" className="w-24 h-24">
-                          <circle cx="50" cy="50" r="35" strokeDasharray="4 2" />
-                          <circle cx="50" cy="50" r="15" fill="#2563EB" opacity="0.15" />
-                        </svg>
-                      )
-                    },
-                    {
-                      step: "02",
-                      title: "THINK",
-                      tag: "NEURAL REASONING",
-                      desc: "Evaluates rules, calculates options, and decides the best action.",
-                      badge: "PHASE 2",
-                      svg: (
-                        <svg viewBox="0 0 100 100" fill="none" stroke="#2563EB" strokeWidth="2" className="w-24 h-24">
-                          <polygon points="50,15 85,80 15,80" strokeDasharray="4 2" />
-                          <circle cx="50" cy="52" r="12" fill="#2563EB" opacity="0.2" />
-                        </svg>
-                      )
-                    },
-                    {
-                      step: "03",
-                      title: "ACT",
-                      tag: "AUTONOMOUS EXECUTION",
-                      desc: "Generates output, updates databases, and triggers real-world workflows.",
-                      badge: "PHASE 3",
-                      svg: (
-                        <svg viewBox="0 0 100 100" fill="none" stroke="#2563EB" strokeWidth="2" className="w-24 h-24">
-                          <rect x="25" y="25" width="50" height="50" rx="10" strokeDasharray="4 2" />
-                          <circle cx="50" cy="50" r="10" fill="#2563EB" opacity="0.25" />
-                        </svg>
-                      )
-                    },
+                    { step: "01", title: "UNDERSTAND", desc: "Reads documents, inputs, and raw data to extract exact context.", badge: "PHASE 1" },
+                    { step: "02", title: "THINK", desc: "Evaluates rules and determines the best decision path.", badge: "PHASE 2" },
+                    { step: "03", title: "ACT", desc: "Executes output, updates systems, and triggers workflows.", badge: "PHASE 3" },
                   ].map((st) => (
-                    <motion.div
-                      key={st.title}
-                      whileHover={{ y: -6, scale: 1.02 }}
-                      transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                      className="group relative p-6 rounded-2xl bg-gradient-to-b from-[#EFF6FF]/90 via-white to-[#DBEAFE]/40 border border-[#BFDBFE] shadow-[0_8px_30px_rgba(37,99,235,0.08)] hover:border-[#2563EB] hover:shadow-[0_16px_40px_rgba(37,99,235,0.18)] transition-all duration-300 overflow-hidden flex flex-col justify-between"
-                    >
-                      {/* Ambient background glow orb */}
-                      <div className="absolute -top-8 -right-8 w-28 h-28 bg-[#2563EB]/10 rounded-full blur-xl pointer-events-none group-hover:scale-150 transition-transform duration-500" />
-                      
-                      {/* Low-opacity background watermark graphic */}
-                      <div className="absolute -bottom-4 -right-4 opacity-[0.10] group-hover:opacity-[0.22] group-hover:scale-110 transition-all duration-500 pointer-events-none z-0">
-                        {st.svg}
+                    <div key={st.title} className="p-4 rounded-xl bg-white border border-[#BFDBFE] shadow-2xs">
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-[10px] font-mono font-bold text-[#2563EB]">{st.step} &bull; STEP</span>
+                        <span className="text-[9px] font-mono text-slate-400">{st.badge}</span>
                       </div>
-
-                      <div className="relative z-10">
-                        {/* Top Badge Row */}
-                        <div className="flex items-center justify-between mb-4">
-                          <span className="inline-flex items-center gap-1.5 text-[9.5px] font-black uppercase tracking-widest text-[#2563EB] bg-white px-2.5 py-1 rounded-full border border-[#BFDBFE] shadow-2xs">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-pulse" />
-                            {st.step} &bull; STEP
-                          </span>
-                          <span className="text-[9px] font-extrabold uppercase tracking-wider text-slate-400">
-                            {st.badge}
-                          </span>
-                        </div>
-
-                        {/* Title & Tag */}
-                        <h3 className="text-lg sm:text-xl font-black text-[#0F172A] group-hover:text-[#2563EB] transition-colors mb-0.5 tracking-tight">
-                          {st.title}
-                        </h3>
-                        <div className="text-[10.5px] font-extrabold text-[#2563EB] tracking-wider mb-3">
-                          {st.tag}
-                        </div>
-
-                        {/* Body */}
-                        <p className="text-xs sm:text-sm font-medium text-slate-600 leading-relaxed text-justify">
-                          {st.desc}
-                        </p>
-                      </div>
-
-                      {/* Footer Progress bar */}
-                      <div className="relative z-10 mt-5 pt-3 border-t border-slate-100/80 flex items-center justify-between text-[10.5px] font-bold text-slate-400 group-hover:text-[#2563EB] transition-colors">
-                        <span>AI PIPELINE FLOW</span>
-                        <span>&rarr;</span>
-                      </div>
-                    </motion.div>
+                      <h3 className="text-sm font-bold text-[#0F172A] mb-1">{st.title}</h3>
+                      <p className="text-xs text-slate-500 font-normal leading-normal">{st.desc}</p>
+                    </div>
                   ))}
                 </div>
               </div>
@@ -667,38 +580,27 @@ export default function WhatWeDoPage() {
 
             {/* Capabilities Swipe Carousel */}
             <div
-              onScroll={(e) => handleCarouselScroll(e, 8, setAiIdx)}
-              className="flex md:grid md:grid-cols-3 lg:grid-cols-4 overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 pb-4 md:pb-0 mb-4 -mx-4 px-4 sm:mx-0 sm:px-0"
+              onScroll={(e) => handleCarouselScroll(e, 4, setAiIdx)}
+              className="flex md:grid md:grid-cols-2 lg:grid-cols-4 overflow-x-auto snap-x snap-mandatory scrollbar-none gap-3.5 pb-3 md:pb-0 mb-3 -mx-4 px-4 sm:mx-0 sm:px-0"
             >
               {[
-                { title: "AI Agents", desc: "Autonomous AI workers designed to perform multi-step business tasks." },
-                { title: "AI Assistants", desc: "Intelligent co-pilots that help your team and customers get answers fast." },
-                { title: "AI-Powered Apps", desc: "Custom web & mobile apps enhanced with real-time AI intelligence." },
-                { title: "Knowledge Systems", desc: "Instant semantic search across all your company documents and files." },
-                { title: "AI Search", desc: "Smart search tools that understand meaning, not just exact keywords." },
-                { title: "AI Content Systems", desc: "Automated recommendations and content generation tailored to users." },
-                { title: "AI Document Intelligence", desc: "Automatically parse, summarize, and extract data from complex PDFs & invoices." },
-                { title: "AI Integrations", desc: "Plug smart AI capabilities seamlessly into your existing software tools." },
+                { title: "Autonomous AI Agents", desc: "Smart AI workers capable of executing complex multi-step business actions." },
+                { title: "Intelligent Assistants", desc: "Co-pilots offering instant support and smart internal knowledge lookup." },
+                { title: "Semantic Document AI", desc: "Automated extraction and summary of text from complex PDFs and invoices." },
+                { title: "AI Application Integration", desc: "Embed real-time LLM intelligence seamlessly into your software." },
               ].map((aiItem, i) => (
-                <Reveal key={aiItem.title} delay={0.08 + i * 0.05} className="snap-center shrink-0 w-[80vw] sm:w-[290px] md:w-auto">
-                  <div className="group relative h-full p-5 sm:p-6 rounded-[26px] bg-gradient-to-b from-[#EFF6FF]/70 via-white to-[#DBEAFE]/30 border border-[#BFDBFE] shadow-[0_8px_28px_rgba(37,99,235,0.08)] hover:shadow-[0_20px_45px_rgba(37,99,235,0.18)] hover:border-[#2563EB] hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between overflow-hidden">
-                    {/* Ambient glow orb */}
-                    <div className="absolute -top-10 -left-10 w-32 h-32 bg-[#2563EB]/10 rounded-full blur-xl pointer-events-none group-hover:scale-150 transition-transform duration-500" />
-                    
-                    {/* Low-opacity diagonal tech stripe overlay */}
-                    <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(37,99,235,0.03)_25%,transparent_25%,transparent_50%,rgba(37,99,235,0.03)_50%,rgba(37,99,235,0.03)_75%,transparent_75%,transparent)] [background-size:20px_20px] pointer-events-none" />
-
-                    <div className="relative z-10">
-                      <h3 className="text-sm sm:text-base font-extrabold text-[#0F172A] mb-2 group-hover:text-[#2563EB] transition-colors">
+                <Reveal key={aiItem.title} delay={0.08 + i * 0.05} className="snap-center shrink-0 w-[82vw] sm:w-[280px] md:w-auto">
+                  <div className="group relative h-full p-5 rounded-2xl bg-white border border-[#BFDBFE] shadow-2xs hover:border-[#2563EB] hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-sm sm:text-base font-bold text-[#0F172A] mb-1.5 group-hover:text-[#2563EB] transition-colors">
                         {aiItem.title}
                       </h3>
-                      <p className="text-xs font-medium text-slate-600 leading-relaxed text-justify">
+                      <p className="text-xs text-slate-500 font-normal leading-relaxed">
                         {aiItem.desc}
                       </p>
                     </div>
-
-                    <div className="relative z-10 mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[10px] font-bold text-slate-400 group-hover:text-[#2563EB] transition-colors">
-                      <span className="px-2.5 py-0.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[9.5px] font-extrabold uppercase text-[#2563EB]">SMART AI SYSTEM</span>
+                    <div className="mt-4 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[10px] font-bold text-slate-400">
+                      <span className="text-[#2563EB] uppercase tracking-wider font-mono">0{i + 1} &bull; AI SYSTEM</span>
                       <span>✓</span>
                     </div>
                   </div>
@@ -707,27 +609,27 @@ export default function WhatWeDoPage() {
             </div>
 
             {/* Mobile Swipe Dot Indicator */}
-            <CarouselDots total={8} activeIndex={aiIdx} />
+            <CarouselDots total={4} activeIndex={aiIdx} />
           </div>
         </section>
 
         {/* ══════════════════════════════════════════════════════════
-            03  BUSINESS AUTOMATION
+            05  BUSINESS AUTOMATION
         ══════════════════════════════════════════════════════════ */}
-        <section id="business-automation" className="relative z-10 py-12 sm:py-16 px-4 sm:px-8 lg:px-16 bg-[#EFF6FF]/40 overflow-hidden">
+        <section id="business-automation" className="relative z-10 py-10 sm:py-16 px-4 sm:px-8 lg:px-16 bg-[#EFF6FF]/40 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(#BFDBFE_1px,transparent_1px)] [background-size:32px_32px] opacity-30 pointer-events-none" />
 
           <div className="relative max-w-[1440px] mx-auto w-full">
             {/* Header */}
             <Reveal delay={0.04} className="flex justify-center">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-4">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-pulse" />
                 <span>03 &nbsp;•&nbsp; BUSINESS AUTOMATION</span>
               </div>
             </Reveal>
 
             <Reveal delay={0.1}>
-              <h2 className="text-center text-[1.55rem] xs:text-[1.8rem] sm:text-3xl md:text-[2rem] lg:text-4xl xl:text-[2.4rem] font-extrabold lg:font-black leading-[1.18] tracking-[-0.035em] text-[#0F172A] mb-3 w-full max-w-[1280px] mx-auto">
+              <h2 className="text-center text-2xl xs:text-3xl sm:text-4xl md:text-[2.2rem] lg:text-4xl font-black leading-tight tracking-tight text-[#0F172A] mb-2.5 max-w-4xl mx-auto">
                 Let Technology Handle the{" "}
                 <span className="bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] bg-clip-text text-transparent">
                   Repetitive Work.
@@ -736,45 +638,41 @@ export default function WhatWeDoPage() {
             </Reveal>
 
             <Reveal delay={0.14}>
-              <p className="text-center text-sm sm:text-base lg:text-[1.05rem] font-medium leading-relaxed text-slate-600 w-full max-w-3xl mx-auto mb-8 text-justify sm:text-center">
-                If your team is doing the same task again and again, we look for a simpler way to handle it.
+              <p className="text-center text-xs sm:text-base font-medium leading-relaxed text-slate-600 max-w-2xl mx-auto mb-7">
+                Automate routine tasks to save time and eliminate manual effort.
               </p>
             </Reveal>
 
-            {/* Visual Workflow Comparison: Manual vs Automated — Full Container Width */}
-            <Reveal delay={0.2} className="mb-10">
-              <div className="w-full max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
+            {/* Visual Workflow Comparison */}
+            <Reveal delay={0.2} className="mb-8">
+              <div className="w-full max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-3">
                 {/* Manual Flow */}
-                <div className="p-6 sm:p-7 rounded-3xl bg-white border border-slate-200 shadow-2xs space-y-4">
-                  <div className="flex items-center justify-between border-b border-slate-100 pb-3">
-                    <span className="text-xs font-black text-slate-500 uppercase tracking-wider bg-slate-100 px-3 py-1 rounded-full">✕ MANUAL WORKFLOW</span>
-                    <span className="text-xs font-extrabold text-rose-500 bg-rose-50 px-2.5 py-0.5 rounded border border-rose-200">Slow &amp; Error-Prone</span>
+                <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-2xs flex flex-col justify-between">
+                  <div className="flex items-center justify-between border-b border-slate-100 pb-2 mb-2">
+                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">✕ MANUAL WORKFLOW</span>
+                    <span className="text-[10px] font-bold text-rose-500 bg-rose-50 px-2 py-0.5 rounded">Slow & Manual</span>
                   </div>
-                  <div className="flex flex-wrap items-center gap-2 text-xs font-bold text-slate-600 pt-1">
-                    <span className="px-3 py-1.5 rounded-xl bg-slate-100 border border-slate-200">Message</span>
+                  <div className="flex flex-wrap items-center gap-1.5 text-xs text-slate-600 font-medium">
+                    <span className="px-2 py-1 rounded bg-slate-100">Message</span>
                     <span>&rarr;</span>
-                    <span className="px-3 py-1.5 rounded-xl bg-slate-100 border border-slate-200">Copy Data</span>
+                    <span className="px-2 py-1 rounded bg-slate-100">Copy Data</span>
                     <span>&rarr;</span>
-                    <span className="px-3 py-1.5 rounded-xl bg-slate-100 border border-slate-200">Update Sheet</span>
+                    <span className="px-2 py-1 rounded bg-slate-100">Update Sheet</span>
                     <span>&rarr;</span>
-                    <span className="px-3 py-1.5 rounded-xl bg-slate-100 border border-slate-200">Check Approval</span>
-                    <span>&rarr;</span>
-                    <span className="px-3 py-1.5 rounded-xl bg-slate-100 border border-slate-200">Send Notification</span>
+                    <span className="px-2 py-1 rounded bg-slate-100">Notify Team</span>
                   </div>
                 </div>
 
                 {/* Automated Flow */}
-                <div className="p-6 sm:p-7 rounded-3xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] text-white shadow-lg space-y-4">
-                  <div className="flex items-center justify-between border-b border-white/20 pb-3">
-                    <span className="text-xs font-black text-sky-100 uppercase tracking-wider bg-white/20 px-3 py-1 rounded-full border border-white/20">✓ AUTOMATED AGARAN FLOW</span>
-                    <span className="text-xs font-extrabold text-white bg-emerald-500/30 px-2.5 py-0.5 rounded border border-emerald-300/40">Instant &amp; 100% Accurate</span>
+                <div className="p-4 rounded-2xl bg-gradient-to-r from-[#1D4ED8] to-[#2563EB] text-white shadow-md flex flex-col justify-between">
+                  <div className="flex items-center justify-between border-b border-white/20 pb-2 mb-2">
+                    <span className="text-[10px] font-bold text-sky-100 uppercase tracking-wider">✓ AUTOMATED AGARAN FLOW</span>
+                    <span className="text-[10px] font-bold text-emerald-300 bg-emerald-500/20 px-2 py-0.5 rounded">Instant & Accurate</span>
                   </div>
-                  <div className="flex flex-wrap items-center gap-2.5 text-xs font-extrabold text-white pt-1">
-                    <span className="px-3.5 py-2 rounded-xl bg-white/15 border border-white/25 backdrop-blur-xs">Trigger Event</span>
+                  <div className="flex items-center gap-2 text-xs font-bold text-white">
+                    <span className="px-2.5 py-1 rounded bg-white/20">Trigger Event</span>
                     <span>&rarr;</span>
-                    <span className="px-3.5 py-2 rounded-xl bg-white/15 border border-white/25 backdrop-blur-xs">Automated Processing</span>
-                    <span>&rarr;</span>
-                    <span className="px-3.5 py-2 rounded-xl bg-white/15 border border-white/25 backdrop-blur-xs">Instant Action &amp; Update</span>
+                    <span className="px-2.5 py-1 rounded bg-white/20">Automated Processing & Action</span>
                   </div>
                 </div>
               </div>
@@ -782,38 +680,27 @@ export default function WhatWeDoPage() {
 
             {/* Automation Examples Grid / Swipe */}
             <div
-              onScroll={(e) => handleCarouselScroll(e, 8, setAutoIdx)}
-              className="flex md:grid md:grid-cols-3 lg:grid-cols-4 overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 pb-4 md:pb-0 mb-4 -mx-4 px-4 sm:mx-0 sm:px-0"
+              onScroll={(e) => handleCarouselScroll(e, 4, setAutoIdx)}
+              className="flex md:grid md:grid-cols-2 lg:grid-cols-4 overflow-x-auto snap-x snap-mandatory scrollbar-none gap-3.5 pb-3 md:pb-0 mb-3 -mx-4 px-4 sm:mx-0 sm:px-0"
             >
               {[
-                { title: "Workflow Automation", desc: "Automatically route tasks, assign leads, and move projects forward without manual friction." },
-                { title: "WhatsApp Automation", desc: "Automate customer support messages, notifications, and status updates via WhatsApp." },
-                { title: "Instant Notifications", desc: "Trigger automated email, SMS, and push alerts based on live user activity." },
-                { title: "Data Entry Automation", desc: "Automatically capture and structure incoming data directly into your database." },
-                { title: "Approval Workflows", desc: "Streamline multi-step manager approvals and document sign-offs with one click." },
-                { title: "Report & Invoice Automation", desc: "Automatically generate and email daily sales reports, invoices, and audit summaries." },
-                { title: "System Integration", desc: "Connect scattered tools so data syncs automatically across all your software." },
-                { title: "Process Automation", desc: "End-to-end automation of core business operations tailored to your business rules." },
+                { title: "Workflow Automation", desc: "Automatically route tasks, assign leads, and move operations forward." },
+                { title: "WhatsApp Automation", desc: "Automate support messages, notifications, and customer status updates." },
+                { title: "Data Entry & Invoices", desc: "Structure incoming data directly into your database with auto-generated invoices." },
+                { title: "Cross-System Sync", desc: "Connect tools so information syncs automatically across all software." },
               ].map((auto, i) => (
-                <Reveal key={auto.title} delay={0.08 + i * 0.05} className="snap-center shrink-0 w-[80vw] sm:w-[290px] md:w-auto">
-                  <div className="group relative h-full p-5 sm:p-6 rounded-[26px] bg-gradient-to-b from-[#EFF6FF]/70 via-white to-[#DBEAFE]/30 border border-[#BFDBFE] shadow-[0_8px_28px_rgba(37,99,235,0.08)] hover:shadow-[0_20px_45px_rgba(37,99,235,0.18)] hover:border-[#2563EB] hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between overflow-hidden">
-                    {/* Ambient glow orb */}
-                    <div className="absolute -top-10 -left-10 w-32 h-32 bg-[#2563EB]/10 rounded-full blur-xl pointer-events-none group-hover:scale-150 transition-transform duration-500" />
-                    
-                    {/* Low-opacity diagonal tech stripe overlay */}
-                    <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(37,99,235,0.03)_25%,transparent_25%,transparent_50%,rgba(37,99,235,0.03)_50%,rgba(37,99,235,0.03)_75%,transparent_75%,transparent)] [background-size:20px_20px] pointer-events-none" />
-
-                    <div className="relative z-10">
-                      <h3 className="text-sm sm:text-base font-extrabold text-[#0F172A] mb-2 group-hover:text-[#2563EB] transition-colors">
+                <Reveal key={auto.title} delay={0.08 + i * 0.05} className="snap-center shrink-0 w-[82vw] sm:w-[280px] md:w-auto">
+                  <div className="group relative h-full p-5 rounded-2xl bg-white border border-[#BFDBFE] shadow-2xs hover:border-[#2563EB] hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-sm sm:text-base font-bold text-[#0F172A] mb-1.5 group-hover:text-[#2563EB] transition-colors">
                         {auto.title}
                       </h3>
-                      <p className="text-xs font-medium text-slate-600 leading-relaxed text-justify">
+                      <p className="text-xs text-slate-500 font-normal leading-relaxed">
                         {auto.desc}
                       </p>
                     </div>
-
-                    <div className="relative z-10 mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[10px] font-bold text-slate-400 group-hover:text-[#2563EB] transition-colors">
-                      <span className="px-2.5 py-0.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[9.5px] font-extrabold uppercase text-[#2563EB]">AUTOMATION FLOW</span>
+                    <div className="mt-4 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[10px] font-bold text-slate-400">
+                      <span className="text-[#2563EB] uppercase tracking-wider font-mono">0{i + 1} &bull; AUTOMATION</span>
                       <span>✓</span>
                     </div>
                   </div>
@@ -822,25 +709,25 @@ export default function WhatWeDoPage() {
             </div>
 
             {/* Mobile Swipe Dot Indicator */}
-            <CarouselDots total={8} activeIndex={autoIdx} />
+            <CarouselDots total={4} activeIndex={autoIdx} />
           </div>
         </section>
 
         {/* ══════════════════════════════════════════════════════════
-            04  EDUCATION TECHNOLOGY
+            06  EDUCATION TECHNOLOGY
         ══════════════════════════════════════════════════════════ */}
-        <section id="education-technology" className="relative z-10 py-12 sm:py-16 px-4 sm:px-8 lg:px-16 overflow-hidden">
+        <section id="education-technology" className="relative z-10 py-10 sm:py-16 px-4 sm:px-8 lg:px-16 overflow-hidden">
           <div className="max-w-[1440px] mx-auto w-full">
             {/* Header */}
             <Reveal delay={0.04} className="flex justify-center">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-4">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-pulse" />
                 <span>04 &nbsp;•&nbsp; EDUCATION TECHNOLOGY</span>
               </div>
             </Reveal>
 
             <Reveal delay={0.1}>
-              <h2 className="text-center text-[1.55rem] xs:text-[1.8rem] sm:text-3xl md:text-[2rem] lg:text-4xl xl:text-[2.4rem] font-extrabold lg:font-black leading-[1.18] tracking-[-0.035em] text-[#0F172A] mb-3 w-full max-w-[1280px] mx-auto">
+              <h2 className="text-center text-2xl xs:text-3xl sm:text-4xl md:text-[2.2rem] lg:text-4xl font-black leading-tight tracking-tight text-[#0F172A] mb-2.5 max-w-4xl mx-auto">
                 Technology For The Complete{" "}
                 <span className="bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] bg-clip-text text-transparent">
                   Learning Journey.
@@ -849,47 +736,34 @@ export default function WhatWeDoPage() {
             </Reveal>
 
             <Reveal delay={0.14}>
-              <p className="text-center text-sm sm:text-base lg:text-[1.05rem] font-medium leading-relaxed text-slate-600 w-full max-w-3xl mx-auto mb-8 text-justify sm:text-center">
-                We build digital platforms that connect admissions, learning, assessments, AI support and the wider education experience.
+              <p className="text-center text-xs sm:text-base font-medium leading-relaxed text-slate-600 max-w-2xl mx-auto mb-7">
+                Digital platforms connecting learning, online exams, and educational management.
               </p>
             </Reveal>
 
-
-
             {/* EdTech Capabilities Grid / Swipe */}
             <div
-              onScroll={(e) => handleCarouselScroll(e, 8, setEdIdx)}
-              className="flex md:grid md:grid-cols-3 lg:grid-cols-4 overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 pb-4 md:pb-0 mb-4 -mx-4 px-4 sm:mx-0 sm:px-0"
+              onScroll={(e) => handleCarouselScroll(e, 4, setEdIdx)}
+              className="flex md:grid md:grid-cols-2 lg:grid-cols-4 overflow-x-auto snap-x snap-mandatory scrollbar-none gap-3.5 pb-3 md:pb-0 mb-3 -mx-4 px-4 sm:mx-0 sm:px-0"
             >
               {[
-                { title: "Admission & Online Forms", desc: "Streamlined online application portals and document verification for institutions." },
-                { title: "LMS & Course Hubs", desc: "Interactive Learning Management Systems for courses, live classes, and student tracking." },
-                { title: "Teacher & Tutor Portals", desc: "Dedicated management portals for teachers to organize courses, assignments, attendance, and student grading." },
+                { title: "LMS & Course Hubs", desc: "Interactive Learning Management Systems for courses, live classes, and tracking." },
                 { title: "Exam & Assessment Systems", desc: "Secure online examination platforms with automated grading and instant results." },
-                { title: "Student & Parent Apps", desc: "Dedicated portals for attendance, grades, announcements, and direct communication." },
-                { title: "AI-Powered Learning", desc: "Personalized AI tutoring and adaptive practice modules that help students learn faster." },
-                { title: "Career Guidance", desc: "Skill gap analysis and AI-driven placement recommendations for graduating students." },
-                { title: "Institution Management", desc: "Complete administrative software connecting fees, staff, schedules, and operations." },
+                { title: "Student & Teacher Portals", desc: "Dedicated portals for attendance, grades, announcements, and assignment workflows." },
+                { title: "AI Learning Assistants", desc: "Personalized AI practice modules that accelerate student learning." },
               ].map((ed, i) => (
-                <Reveal key={ed.title} delay={0.08 + i * 0.05} className="snap-center shrink-0 w-[80vw] sm:w-[290px] md:w-auto">
-                  <div className="group relative h-full p-5 sm:p-6 rounded-[26px] bg-gradient-to-b from-[#EFF6FF]/70 via-white to-[#DBEAFE]/30 border border-[#BFDBFE] shadow-[0_8px_28px_rgba(37,99,235,0.08)] hover:shadow-[0_20px_45px_rgba(37,99,235,0.18)] hover:border-[#2563EB] hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between overflow-hidden">
-                    {/* Ambient glow orb */}
-                    <div className="absolute -top-10 -left-10 w-32 h-32 bg-[#2563EB]/10 rounded-full blur-xl pointer-events-none group-hover:scale-150 transition-transform duration-500" />
-                    
-                    {/* Low-opacity diagonal tech stripe overlay */}
-                    <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(37,99,235,0.03)_25%,transparent_25%,transparent_50%,rgba(37,99,235,0.03)_50%,rgba(37,99,235,0.03)_75%,transparent_75%,transparent)] [background-size:20px_20px] pointer-events-none" />
-
-                    <div className="relative z-10">
-                      <h3 className="text-sm sm:text-base font-extrabold text-[#0F172A] mb-2 group-hover:text-[#2563EB] transition-colors">
+                <Reveal key={ed.title} delay={0.08 + i * 0.05} className="snap-center shrink-0 w-[82vw] sm:w-[280px] md:w-auto">
+                  <div className="group relative h-full p-5 rounded-2xl bg-white border border-[#BFDBFE] shadow-2xs hover:border-[#2563EB] hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-sm sm:text-base font-bold text-[#0F172A] mb-1.5 group-hover:text-[#2563EB] transition-colors">
                         {ed.title}
                       </h3>
-                      <p className="text-xs font-medium text-slate-600 leading-relaxed text-justify">
+                      <p className="text-xs text-slate-500 font-normal leading-relaxed">
                         {ed.desc}
                       </p>
                     </div>
-
-                    <div className="relative z-10 mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[10px] font-bold text-slate-400 group-hover:text-[#2563EB] transition-colors">
-                      <span className="px-2.5 py-0.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[9.5px] font-extrabold uppercase text-[#2563EB]">EDTECH PLATFORM</span>
+                    <div className="mt-4 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[10px] font-bold text-slate-400">
+                      <span className="text-[#2563EB] uppercase tracking-wider font-mono">0{i + 1} &bull; EDTECH</span>
                       <span>✓</span>
                     </div>
                   </div>
@@ -898,27 +772,27 @@ export default function WhatWeDoPage() {
             </div>
 
             {/* Mobile Swipe Dot Indicator */}
-            <CarouselDots total={8} activeIndex={edIdx} />
+            <CarouselDots total={4} activeIndex={edIdx} />
           </div>
         </section>
 
         {/* ══════════════════════════════════════════════════════════
-            05  CLOUD & INFRASTRUCTURE
+            07  CLOUD & INFRASTRUCTURE
         ══════════════════════════════════════════════════════════ */}
-        <section id="cloud-infrastructure" className="relative z-10 py-12 sm:py-16 px-4 sm:px-8 lg:px-16 bg-[#EFF6FF]/40 overflow-hidden">
+        <section id="cloud-infrastructure" className="relative z-10 py-10 sm:py-16 px-4 sm:px-8 lg:px-16 bg-[#EFF6FF]/40 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(#BFDBFE_1px,transparent_1px)] [background-size:32px_32px] opacity-30 pointer-events-none" />
 
           <div className="relative max-w-[1440px] mx-auto w-full">
             {/* Header */}
             <Reveal delay={0.04} className="flex justify-center">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-4">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-pulse" />
                 <span>05 &nbsp;•&nbsp; CLOUD & INFRASTRUCTURE</span>
               </div>
             </Reveal>
 
             <Reveal delay={0.1}>
-              <h2 className="text-center text-[1.55rem] xs:text-[1.8rem] sm:text-3xl md:text-[2rem] lg:text-4xl xl:text-[2.4rem] font-extrabold lg:font-black leading-[1.18] tracking-[-0.035em] text-[#0F172A] mb-3 w-full max-w-[1280px] mx-auto">
+              <h2 className="text-center text-2xl xs:text-3xl sm:text-4xl md:text-[2.2rem] lg:text-4xl font-black leading-tight tracking-tight text-[#0F172A] mb-2.5 max-w-4xl mx-auto">
                 Built To Run.{" "}
                 <span className="bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] bg-clip-text text-transparent">
                   Built To Grow.
@@ -927,47 +801,34 @@ export default function WhatWeDoPage() {
             </Reveal>
 
             <Reveal delay={0.14}>
-              <p className="text-center text-sm sm:text-base lg:text-[1.05rem] font-medium leading-relaxed text-slate-600 w-full max-w-3xl mx-auto mb-8 text-justify sm:text-center">
-                We set up the technology behind your product so it stays reliable as your users and business grow.
+              <p className="text-center text-xs sm:text-base font-medium leading-relaxed text-slate-600 max-w-2xl mx-auto mb-7">
+                Reliable cloud setup designed for high uptime, security, and effortless scaling.
               </p>
             </Reveal>
 
-
-
             {/* Cloud Capabilities Grid / Swipe */}
             <div
-              onScroll={(e) => handleCarouselScroll(e, 8, setCloudIdx)}
-              className="flex md:grid md:grid-cols-3 lg:grid-cols-4 overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 pb-4 md:pb-0 mb-4 -mx-4 px-4 sm:mx-0 sm:px-0"
+              onScroll={(e) => handleCarouselScroll(e, 4, setCloudIdx)}
+              className="flex md:grid md:grid-cols-2 lg:grid-cols-4 overflow-x-auto snap-x snap-mandatory scrollbar-none gap-3.5 pb-3 md:pb-0 mb-3 -mx-4 px-4 sm:mx-0 sm:px-0"
             >
               {[
-                { title: "Cloud Deployment", desc: "Automated deployment setup on modern cloud infrastructure for maximum uptime." },
-                { title: "Database Architecture", desc: "Clean database design structured for fast queries and data integrity." },
-                { title: "Scalable Infrastructure", desc: "Systems designed to handle sudden traffic spikes without slowing down." },
-                { title: "Automated Deployment Pipelines", desc: "Automated testing, building, and seamless zero-downtime pipelines for fast updates." },
-                { title: "Security & Access", desc: "Bank-grade encryption, role-based access control, and data protection." },
-                { title: "System Monitoring", desc: "24/7 automated uptime tracking and instant alert notifications." },
-                { title: "Automated Backups", desc: "Scheduled data backups ensuring your business information is never lost." },
-                { title: "Performance Optimisation", desc: "Speed tuning across databases and code to ensure lightning-fast loading." },
+                { title: "Cloud Deployment", desc: "Automated setup on AWS, GCP & Vercel for high reliability and uptime." },
+                { title: "Scalable Architecture", desc: "Database and backend structure engineered to handle traffic spikes." },
+                { title: "CI/CD Deployment Pipelines", desc: "Zero-downtime automated testing and continuous deployment setup." },
+                { title: "Security & Monitoring", desc: "Role-based access, automated backups, and 24/7 uptime monitoring." },
               ].map((cloud, i) => (
-                <Reveal key={cloud.title} delay={0.08 + i * 0.05} className="snap-center shrink-0 w-[80vw] sm:w-[290px] md:w-auto">
-                  <div className="group relative h-full p-5 sm:p-6 rounded-[26px] bg-gradient-to-b from-[#EFF6FF]/70 via-white to-[#DBEAFE]/30 border border-[#BFDBFE] shadow-[0_8px_28px_rgba(37,99,235,0.08)] hover:shadow-[0_20px_45px_rgba(37,99,235,0.18)] hover:border-[#2563EB] hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between overflow-hidden">
-                    {/* Ambient glow orb */}
-                    <div className="absolute -top-10 -left-10 w-32 h-32 bg-[#2563EB]/10 rounded-full blur-xl pointer-events-none group-hover:scale-150 transition-transform duration-500" />
-                    
-                    {/* Low-opacity diagonal tech stripe overlay */}
-                    <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(37,99,235,0.03)_25%,transparent_25%,transparent_50%,rgba(37,99,235,0.03)_50%,rgba(37,99,235,0.03)_75%,transparent_75%,transparent)] [background-size:20px_20px] pointer-events-none" />
-
-                    <div className="relative z-10">
-                      <h3 className="text-sm sm:text-base font-extrabold text-[#0F172A] mb-2 group-hover:text-[#2563EB] transition-colors">
+                <Reveal key={cloud.title} delay={0.08 + i * 0.05} className="snap-center shrink-0 w-[82vw] sm:w-[280px] md:w-auto">
+                  <div className="group relative h-full p-5 rounded-2xl bg-white border border-[#BFDBFE] shadow-2xs hover:border-[#2563EB] hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-sm sm:text-base font-bold text-[#0F172A] mb-1.5 group-hover:text-[#2563EB] transition-colors">
                         {cloud.title}
                       </h3>
-                      <p className="text-xs font-medium text-slate-600 leading-relaxed text-justify">
+                      <p className="text-xs text-slate-500 font-normal leading-relaxed">
                         {cloud.desc}
                       </p>
                     </div>
-
-                    <div className="relative z-10 mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[10px] font-bold text-slate-400 group-hover:text-[#2563EB] transition-colors">
-                      <span className="px-2.5 py-0.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[9.5px] font-extrabold uppercase text-[#2563EB]">CLOUD INFRA</span>
+                    <div className="mt-4 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[10px] font-bold text-slate-400">
+                      <span className="text-[#2563EB] uppercase tracking-wider font-mono">0{i + 1} &bull; CLOUD</span>
                       <span>✓</span>
                     </div>
                   </div>
@@ -976,25 +837,25 @@ export default function WhatWeDoPage() {
             </div>
 
             {/* Mobile Swipe Dot Indicator */}
-            <CarouselDots total={8} activeIndex={cloudIdx} />
+            <CarouselDots total={4} activeIndex={cloudIdx} />
           </div>
         </section>
 
         {/* ══════════════════════════════════════════════════════════
-            06  EXISTING SYSTEM IMPROVEMENT
+            08  EXISTING SYSTEM IMPROVEMENT
         ══════════════════════════════════════════════════════════ */}
-        <section id="existing-systems" className="relative z-10 py-12 sm:py-16 px-4 sm:px-8 lg:px-16 overflow-hidden">
+        <section id="existing-systems" className="relative z-10 py-10 sm:py-16 px-4 sm:px-8 lg:px-16 overflow-hidden">
           <div className="max-w-[1440px] mx-auto w-full">
             {/* Header */}
             <Reveal delay={0.04} className="flex justify-center">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-4">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-pulse" />
                 <span>06 &nbsp;•&nbsp; EXISTING SYSTEM IMPROVEMENT</span>
               </div>
             </Reveal>
 
             <Reveal delay={0.1}>
-              <h2 className="text-center text-[1.55rem] xs:text-[1.8rem] sm:text-3xl md:text-[2rem] lg:text-4xl xl:text-[2.4rem] font-extrabold lg:font-black leading-[1.18] tracking-[-0.035em] text-[#0F172A] mb-3 w-full max-w-[1280px] mx-auto">
+              <h2 className="text-center text-2xl xs:text-3xl sm:text-4xl md:text-[2.2rem] lg:text-4xl font-black leading-tight tracking-tight text-[#0F172A] mb-2.5 max-w-4xl mx-auto">
                 Already Have A System?{" "}
                 <span className="bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] bg-clip-text text-transparent">
                   We Can Improve It.
@@ -1003,42 +864,40 @@ export default function WhatWeDoPage() {
             </Reveal>
 
             <Reveal delay={0.14}>
-              <p className="text-center text-sm sm:text-base lg:text-[1.05rem] font-medium leading-relaxed text-slate-600 w-full max-w-3xl mx-auto mb-8 text-justify sm:text-center">
-                Your existing software doesn't always need to be replaced. Sometimes it just needs to work better.
+              <p className="text-center text-xs sm:text-base font-medium leading-relaxed text-slate-600 max-w-2xl mx-auto mb-7">
+                Upgrade your existing software without rebuilding everything from scratch.
               </p>
             </Reveal>
 
-            {/* Visual Transformation: Before vs After — Full Container Width */}
-            <Reveal delay={0.2} className="mb-10">
-              <div className="w-full max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-11 gap-4 items-center">
+            {/* Visual Transformation */}
+            <Reveal delay={0.2} className="mb-8">
+              <div className="w-full max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-11 gap-3 items-center">
                 {/* Before */}
-                <div className="md:col-span-5 p-5 rounded-2xl bg-slate-50 border border-slate-200">
-                  <div className="text-xs font-black text-slate-500 uppercase tracking-wider mb-2">
-                    EXISTING SYSTEM PROBLEMS
+                <div className="md:col-span-5 p-4 rounded-2xl bg-slate-50 border border-slate-200">
+                  <div className="text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-1.5">
+                    EXISTING SYSTEM ISSUES
                   </div>
-                  <div className="space-y-1.5 text-xs font-bold text-slate-700">
-                    <div className="flex items-center gap-2"><span className="text-rose-500 font-extrabold">✕</span><span>Slow & frustrating to load</span></div>
-                    <div className="flex items-center gap-2"><span className="text-rose-500 font-extrabold">✕</span><span>Repetitive manual tasks</span></div>
-                    <div className="flex items-center gap-2"><span className="text-rose-500 font-extrabold">✕</span><span>Disconnected from other tools</span></div>
+                  <div className="space-y-1 text-xs font-medium text-slate-700">
+                    <div className="flex items-center gap-1.5"><span className="text-rose-500 font-bold">✕</span><span>Slow performance & UI bottlenecks</span></div>
+                    <div className="flex items-center gap-1.5"><span className="text-rose-500 font-bold">✕</span><span>Manual repetitive operations</span></div>
                   </div>
                 </div>
 
                 {/* Arrow */}
-                <div className="md:col-span-1 flex justify-center py-2 md:py-0">
-                  <div className="w-10 h-10 rounded-full bg-[#2563EB] text-white flex items-center justify-center font-black shadow-md">
+                <div className="md:col-span-1 flex justify-center py-1 md:py-0">
+                  <div className="w-8 h-8 rounded-full bg-[#2563EB] text-white flex items-center justify-center font-bold text-xs shadow-xs">
                     &rarr;
                   </div>
                 </div>
 
                 {/* After */}
-                <div className="md:col-span-5 p-5 rounded-2xl bg-gradient-to-br from-[#1D4ED8] to-[#2563EB] text-white shadow-lg">
-                  <div className="text-xs font-black text-sky-200 uppercase tracking-wider mb-2">
+                <div className="md:col-span-5 p-4 rounded-2xl bg-gradient-to-br from-[#1D4ED8] to-[#2563EB] text-white shadow-md">
+                  <div className="text-[10px] font-bold text-sky-200 uppercase tracking-wider mb-1.5">
                     AFTER AGARAN IMPROVEMENT
                   </div>
-                  <div className="space-y-1.5 text-xs font-extrabold text-white">
-                    <div className="flex items-center gap-2"><span className="text-sky-200">✓</span><span>Faster & responsive screens</span></div>
-                    <div className="flex items-center gap-2"><span className="text-sky-200">✓</span><span>Fully connected workflows</span></div>
-                    <div className="flex items-center gap-2"><span className="text-sky-200">✓</span><span>Smarter with AI capabilities</span></div>
+                  <div className="space-y-1 text-xs font-bold text-white">
+                    <div className="flex items-center gap-1.5"><span className="text-sky-200">✓</span><span>Faster load speeds & clean UI</span></div>
+                    <div className="flex items-center gap-1.5"><span className="text-sky-200">✓</span><span>Automated workflows & AI capabilities</span></div>
                   </div>
                 </div>
               </div>
@@ -1046,38 +905,27 @@ export default function WhatWeDoPage() {
 
             {/* System Improvement Capabilities */}
             <div
-              onScroll={(e) => handleCarouselScroll(e, 8, setImpIdx)}
-              className="flex md:grid md:grid-cols-3 lg:grid-cols-4 overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 pb-4 md:pb-0 mb-4 -mx-4 px-4 sm:mx-0 sm:px-0"
+              onScroll={(e) => handleCarouselScroll(e, 4, setImpIdx)}
+              className="flex md:grid md:grid-cols-2 lg:grid-cols-4 overflow-x-auto snap-x snap-mandatory scrollbar-none gap-3.5 pb-3 md:pb-0 mb-3 -mx-4 px-4 sm:mx-0 sm:px-0"
             >
               {[
-                { title: "Improve Existing Apps", desc: "Upgrade user experience, fix broken UI elements, and refine app speed." },
-                { title: "Add New Features", desc: "Build new capability modules into your current software without disrupting live users." },
-                { title: "Integrate Systems", desc: "Link your legacy software directly to new web services and payment gateways." },
-                { title: "Add AI Capabilities", desc: "Embed smart AI chat, search, or document reading into your existing portal." },
-                { title: "Automate Workflows", desc: "Turn manual operational steps inside your software into automated actions." },
-                { title: "Fix Performance Issues", desc: "Optimize slow database queries and server bottlenecks for instant loading." },
-                { title: "Modernise Old Systems", desc: "Update old codebases to modern, secure web standards without starting from scratch." },
-                { title: "Security & Compliance Upgrades", desc: "Harden your existing codebase with modern security patches, encryption, and vulnerability fixes." },
+                { title: "UI & Speed Upgrades", desc: "Fix slow screens, UI clutter, and performance bottlenecks." },
+                { title: "Feature Additions", desc: "Build new capability modules into your current software seamlessly." },
+                { title: "AI & Automation Additions", desc: "Add smart AI search, chat, or automated steps into legacy portals." },
+                { title: "Modernization & Security", desc: "Update codebase standards and patch security vulnerabilities." },
               ].map((imp, i) => (
-                <Reveal key={imp.title} delay={0.08 + i * 0.05} className="snap-center shrink-0 w-[80vw] sm:w-[290px] md:w-auto">
-                  <div className="group relative h-full p-5 sm:p-6 rounded-[26px] bg-gradient-to-b from-[#EFF6FF]/70 via-white to-[#DBEAFE]/30 border border-[#BFDBFE] shadow-[0_8px_28px_rgba(37,99,235,0.08)] hover:shadow-[0_20px_45px_rgba(37,99,235,0.18)] hover:border-[#2563EB] hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between overflow-hidden">
-                    {/* Ambient glow orb */}
-                    <div className="absolute -top-10 -left-10 w-32 h-32 bg-[#2563EB]/10 rounded-full blur-xl pointer-events-none group-hover:scale-150 transition-transform duration-500" />
-                    
-                    {/* Low-opacity diagonal tech stripe overlay */}
-                    <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(37,99,235,0.03)_25%,transparent_25%,transparent_50%,rgba(37,99,235,0.03)_50%,rgba(37,99,235,0.03)_75%,transparent_75%,transparent)] [background-size:20px_20px] pointer-events-none" />
-
-                    <div className="relative z-10">
-                      <h3 className="text-sm sm:text-base font-extrabold text-[#0F172A] mb-2 group-hover:text-[#2563EB] transition-colors">
+                <Reveal key={imp.title} delay={0.08 + i * 0.05} className="snap-center shrink-0 w-[82vw] sm:w-[280px] md:w-auto">
+                  <div className="group relative h-full p-5 rounded-2xl bg-white border border-[#BFDBFE] shadow-2xs hover:border-[#2563EB] hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-sm sm:text-base font-bold text-[#0F172A] mb-1.5 group-hover:text-[#2563EB] transition-colors">
                         {imp.title}
                       </h3>
-                      <p className="text-xs font-medium text-slate-600 leading-relaxed text-justify">
+                      <p className="text-xs text-slate-500 font-normal leading-relaxed">
                         {imp.desc}
                       </p>
                     </div>
-
-                    <div className="relative z-10 mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[10px] font-bold text-slate-400 group-hover:text-[#2563EB] transition-colors">
-                      <span className="px-2.5 py-0.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[9.5px] font-extrabold uppercase text-[#2563EB]">SYSTEM MAINTENANCE</span>
+                    <div className="mt-4 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[10px] font-bold text-slate-400">
+                      <span className="text-[#2563EB] uppercase tracking-wider font-mono">0{i + 1} &bull; UPGRADE</span>
                       <span>✓</span>
                     </div>
                   </div>
@@ -1086,27 +934,27 @@ export default function WhatWeDoPage() {
             </div>
 
             {/* Mobile Swipe Dot Indicator */}
-            <CarouselDots total={8} activeIndex={impIdx} />
+            <CarouselDots total={4} activeIndex={impIdx} />
           </div>
         </section>
 
         {/* ══════════════════════════════════════════════════════════
-            07  HOW WE APPROACH TECHNOLOGY
+            09  HOW WE APPROACH TECHNOLOGY
         ══════════════════════════════════════════════════════════ */}
-        <section className="relative z-10 py-12 sm:py-16 px-4 sm:px-8 lg:px-16 bg-[#EFF6FF]/40 overflow-hidden">
+        <section className="relative z-10 py-10 sm:py-16 px-4 sm:px-8 lg:px-16 bg-[#EFF6FF]/40 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(#BFDBFE_1px,transparent_1px)] [background-size:32px_32px] opacity-30 pointer-events-none" />
 
           <div className="relative max-w-[1440px] mx-auto w-full">
             {/* Header */}
             <Reveal delay={0.04} className="flex justify-center">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-4">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-pulse" />
                 <span>07 &nbsp;•&nbsp; HOW WE THINK</span>
               </div>
             </Reveal>
 
             <Reveal delay={0.1}>
-              <h2 className="text-center text-[1.55rem] xs:text-[1.8rem] sm:text-3xl md:text-[2rem] lg:text-4xl xl:text-[2.4rem] font-extrabold lg:font-black leading-[1.18] tracking-[-0.035em] text-[#0F172A] mb-3 w-full max-w-[1280px] mx-auto">
+              <h2 className="text-center text-2xl xs:text-3xl sm:text-4xl md:text-[2.2rem] lg:text-4xl font-black leading-tight tracking-tight text-[#0F172A] mb-2.5 max-w-4xl mx-auto">
                 We Start With The Problem.{" "}
                 <span className="bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] bg-clip-text text-transparent">
                   Not The Technology.
@@ -1115,54 +963,31 @@ export default function WhatWeDoPage() {
             </Reveal>
 
             <Reveal delay={0.14}>
-              <p className="text-center text-sm sm:text-base lg:text-[1.05rem] font-medium leading-relaxed text-slate-600 w-full max-w-3xl mx-auto mb-8 text-justify sm:text-center">
-                We don't start by choosing a technology. We start by understanding what needs to be solved.
+              <p className="text-center text-xs sm:text-base font-medium leading-relaxed text-slate-600 max-w-2xl mx-auto mb-7">
+                We focus first on what needs to be solved, then select the right technology to solve it.
               </p>
-            </Reveal>
-
-            {/* Visual Process Chain */}
-            <Reveal delay={0.2} className="mb-10">
-              <div className="w-full max-w-[1440px] mx-auto p-5 sm:p-6 rounded-3xl bg-white border border-slate-200 shadow-2xs">
-                <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs font-extrabold text-[#0F172A]">
-                  <span className="px-3.5 py-2 rounded-xl bg-slate-100">Problem</span>
-                  <span>→</span>
-                  <span className="px-3.5 py-2 rounded-xl bg-[#EFF6FF] border border-[#BFDBFE] text-[#2563EB]">Understand</span>
-                  <span>→</span>
-                  <span className="px-3.5 py-2 rounded-xl bg-[#EFF6FF] border border-[#BFDBFE] text-[#2563EB]">Design</span>
-                  <span>→</span>
-                  <span className="px-3.5 py-2 rounded-xl bg-[#EFF6FF] border border-[#BFDBFE] text-[#2563EB]">Build</span>
-                  <span>→</span>
-                  <span className="px-3.5 py-2 rounded-xl bg-[#2563EB] text-white">Improve</span>
-                </div>
-              </div>
             </Reveal>
 
             {/* 4 Approach Principles Mobile Swipe Carousel */}
             <div
               onScroll={(e) => handleCarouselScroll(e, 4, setThinkIdx)}
-              className="flex lg:grid lg:grid-cols-4 overflow-x-auto snap-x snap-mandatory scrollbar-none gap-4 pb-4 lg:pb-0 mb-4 -mx-4 px-4 sm:mx-0 sm:px-0"
+              className="flex md:grid md:grid-cols-2 lg:grid-cols-4 overflow-x-auto snap-x snap-mandatory scrollbar-none gap-3.5 pb-3 md:pb-0 mb-3 -mx-4 px-4 sm:mx-0 sm:px-0"
             >
               {[
-                { title: "Understand", sub: "Know the real problem.", desc: "We listen carefully to your goals and users before proposing any technical solution." },
-                { title: "Simplify", sub: "Remove complexity.", desc: "Every unnecessary feature is a debt. We eliminate clutter so your software stays fast." },
-                { title: "Build", sub: "Create what matters.", desc: "We write clean, production-grade code that performs reliably under real conditions." },
-                { title: "Improve", sub: "Keep making it better.", desc: "Software evolves. We continuously refine and upgrade your system based on user feedback." },
+                { title: "Understand", sub: "Identify the root goal.", desc: "Listen carefully to user needs before writing code." },
+                { title: "Simplify", sub: "Remove unnecessary bloat.", desc: "Eliminate clutter so your software stays fast and easy to use." },
+                { title: "Build", sub: "Production-grade execution.", desc: "Write clean, scalable code that performs under real traffic." },
+                { title: "Improve", sub: "Continuous optimization.", desc: "Refine and upgrade systems iteratively based on user feedback." },
               ].map((p, i) => (
-                <Reveal key={p.title} delay={0.1 + i * 0.07} className="snap-center shrink-0 w-[82vw] sm:w-[320px] lg:w-auto">
-                  <div className="group relative h-full p-6 sm:p-7 rounded-[26px] bg-gradient-to-b from-[#EFF6FF]/70 via-white to-[#DBEAFE]/30 border border-[#BFDBFE] shadow-[0_8px_28px_rgba(37,99,235,0.08)] hover:shadow-[0_20px_45px_rgba(37,99,235,0.18)] hover:border-[#2563EB] hover:-translate-y-2 transition-all duration-300 flex flex-col justify-between overflow-hidden">
-                    {/* Ambient glow orb */}
-                    <div className="absolute -top-10 -left-10 w-32 h-32 bg-[#2563EB]/10 rounded-full blur-xl pointer-events-none group-hover:scale-150 transition-transform duration-500" />
-                    
-                    {/* Low-opacity diagonal tech stripe overlay */}
-                    <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(37,99,235,0.03)_25%,transparent_25%,transparent_50%,rgba(37,99,235,0.03)_50%,rgba(37,99,235,0.03)_75%,transparent_75%,transparent)] [background-size:20px_20px] pointer-events-none" />
-
-                    <div className="relative z-10">
-                      <div className="text-[10px] font-black uppercase tracking-widest text-[#2563EB] bg-[#EFF6FF] px-2.5 py-1 rounded-full border border-[#BFDBFE] inline-block mb-3">
+                <Reveal key={p.title} delay={0.08 + i * 0.05} className="snap-center shrink-0 w-[82vw] sm:w-[280px] md:w-auto">
+                  <div className="group relative h-full p-5 rounded-2xl bg-white border border-[#BFDBFE] shadow-2xs hover:border-[#2563EB] hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                      <div className="text-[10px] font-bold uppercase tracking-wider text-[#2563EB] mb-2 font-mono">
                         0{i + 1} &bull; PRINCIPLE
                       </div>
-                      <h3 className="text-lg font-black text-[#0F172A] mb-1 group-hover:text-[#2563EB] transition-colors">{p.title}</h3>
-                      <div className="text-xs font-bold text-[#2563EB] mb-2">{p.sub}</div>
-                      <p className="text-xs sm:text-sm font-medium text-slate-600 leading-relaxed text-justify">{p.desc}</p>
+                      <h3 className="text-sm sm:text-base font-bold text-[#0F172A] mb-1 group-hover:text-[#2563EB] transition-colors">{p.title}</h3>
+                      <div className="text-xs font-semibold text-[#2563EB] mb-1.5">{p.sub}</div>
+                      <p className="text-xs text-slate-500 font-normal leading-relaxed">{p.desc}</p>
                     </div>
                   </div>
                 </Reveal>
@@ -1175,40 +1000,36 @@ export default function WhatWeDoPage() {
         </section>
 
         {/* ══════════════════════════════════════════════════════════
-            09  FINAL CTA
+            10  FINAL CTA
         ══════════════════════════════════════════════════════════ */}
-        <section className="relative z-10 pt-6 pb-16 sm:pb-20 px-4 sm:px-8 lg:px-16">
+        <section className="relative z-10 pt-4 pb-14 sm:pb-20 px-4 sm:px-8 lg:px-16">
           <div className="max-w-[1440px] mx-auto w-full">
             <Reveal delay={0.05}>
-              <div className="relative rounded-[2rem] bg-[#2563EB] border border-blue-400/50 p-7 sm:p-10 lg:p-12 overflow-hidden shadow-[0_25px_80px_rgba(37,99,235,0.28)] text-white">
-                {/* Ambient glows */}
-                <div className="absolute top-[-30%] right-[-10%] w-[500px] h-[500px] rounded-full bg-white/10 blur-[100px] pointer-events-none" />
-                <div className="absolute bottom-[-30%] left-[-5%] w-[400px] h-[400px] rounded-full bg-[#1D4ED8]/60 blur-[100px] pointer-events-none" />
-
-                <div className="relative z-10 max-w-3xl mx-auto text-center">
-                  <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/20 border border-white/35 text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider backdrop-blur-md mb-5">
+              <div className="relative rounded-[2rem] bg-[#2563EB] border border-blue-400/50 p-6 sm:p-10 lg:p-12 overflow-hidden shadow-lg text-white text-center">
+                <div className="relative z-10 max-w-2xl mx-auto">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 border border-white/30 text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider mb-4">
                     <span className="w-1.5 h-1.5 rounded-full bg-sky-300 animate-pulse" />
                     <span>LET&apos;S WORK TOGETHER</span>
                   </div>
 
-                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-[-0.035em] text-white mb-4">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-white mb-3">
                     Have A Problem Worth Solving?
                   </h2>
 
-                  <p className="text-sm sm:text-base lg:text-[1.05rem] font-medium leading-relaxed text-blue-100 mb-8 text-justify sm:text-center">
-                    Tell us what you&apos;re trying to improve, build or automate. We&apos;ll help you figure out what makes sense.
+                  <p className="text-xs sm:text-base font-medium text-blue-100 mb-6">
+                    Tell us what you&apos;re trying to build or automate. We&apos;ll help you figure out the best approach.
                   </p>
 
-                  <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                  <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
                     <Link
-                      href="/contact"
-                      className="inline-flex items-center justify-center gap-2 text-sm sm:text-base px-8 py-4 rounded-xl font-black bg-white text-[#1D4ED8] hover:bg-blue-50 shadow-lg transition-all duration-200 w-full sm:w-auto"
+                      href="/contact#inquiry-form"
+                      className="inline-flex items-center justify-center gap-2 text-sm sm:text-base px-7 py-3.5 rounded-xl font-bold bg-white text-[#1D4ED8] hover:bg-blue-50 transition-all duration-200 w-full sm:w-auto"
                     >
                       Start a Conversation →
                     </Link>
                     <Link
                       href="/work"
-                      className="inline-flex items-center justify-center gap-2 text-sm sm:text-base px-7 py-4 rounded-xl font-bold bg-blue-700/50 border border-white/30 text-white hover:bg-blue-700/70 transition-all duration-200 w-full sm:w-auto"
+                      className="inline-flex items-center justify-center gap-2 text-sm sm:text-base px-6 py-3.5 rounded-xl font-semibold bg-blue-700/50 border border-white/30 text-white hover:bg-blue-700/70 transition-all duration-200 w-full sm:w-auto"
                     >
                       View Our Work
                     </Link>

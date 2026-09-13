@@ -10,13 +10,13 @@ export default function ProductAIAgentPlatformPage() {
     <>
       <Navbar />
 
-      <main className="min-h-screen bg-[#F8FAFC] text-[#0F172A] pt-20 sm:pt-28 pb-16 sm:pb-24 px-3 sm:px-8 lg:px-16 font-sans selection:bg-[#2563EB] selection:text-white">
+      <main className="min-h-screen bg-[#FAFCFF] text-[#0F172A] pt-20 sm:pt-28 pb-16 sm:pb-24 px-3 sm:px-6 lg:px-12 font-sans selection:bg-[#2563EB] selection:text-white">
 
         <motion.article
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-          className="max-w-[1440px] mx-auto bg-white border border-slate-200/90 shadow-[0_4px_30px_rgba(15,23,42,0.03)] rounded-2xl sm:rounded-3xl p-4 sm:p-8 md:p-12 lg:p-16 relative overflow-hidden"
+          className="max-w-[1600px] mx-auto bg-white border border-slate-200/90 shadow-[0_4px_30px_rgba(15,23,42,0.03)] rounded-2xl sm:rounded-3xl p-4 sm:p-8 md:p-12 lg:p-16 relative overflow-hidden"
         >
 
           {/* ── Top Navigation Bar ── */}
@@ -57,31 +57,31 @@ export default function ProductAIAgentPlatformPage() {
               A Company Where AI Agents Work Alongside People.
             </p>
 
-            <div className="p-6 sm:p-8 rounded-2xl bg-slate-50/80 border border-slate-200/90 mb-8 space-y-4 text-slate-700 text-sm sm:text-lg font-medium leading-relaxed">
-              <p className="text-left sm:text-justify">
+            <div className="p-5 sm:p-8 rounded-2xl bg-slate-50/80 border border-slate-200/90 mb-8 space-y-4 text-slate-700 text-sm sm:text-lg font-medium leading-relaxed">
+              <p className="text-left font-extrabold text-[#0F172A]">
                 Running a company involves hundreds of small decisions and repetitive tasks every day.
               </p>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 text-xs sm:text-sm font-bold text-slate-800 pt-1">
-                <span className="p-2.5 rounded-xl bg-white border border-slate-200">Respond to enquiries</span>
-                <span className="p-2.5 rounded-xl bg-white border border-slate-200">Follow up with leads</span>
-                <span className="p-2.5 rounded-xl bg-white border border-slate-200">Prepare business reports</span>
-                <span className="p-2.5 rounded-xl bg-white border border-slate-200">Answer internal questions</span>
-                <span className="p-2.5 rounded-xl bg-white border border-slate-200">Monitor daily operations</span>
-                <span className="p-2.5 rounded-xl bg-white border border-slate-200">Coordinate workflow tasks</span>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 text-xs sm:text-sm font-bold text-slate-800 pt-1">
+                <span className="p-3 rounded-xl bg-white border border-slate-200 shadow-2xs">Respond to enquiries</span>
+                <span className="p-3 rounded-xl bg-white border border-slate-200 shadow-2xs">Follow up with leads</span>
+                <span className="p-3 rounded-xl bg-white border border-slate-200 shadow-2xs">Prepare business reports</span>
+                <span className="p-3 rounded-xl bg-white border border-slate-200 shadow-2xs">Answer internal questions</span>
+                <span className="p-3 rounded-xl bg-white border border-slate-200 shadow-2xs">Monitor daily operations</span>
+                <span className="p-3 rounded-xl bg-white border border-slate-200 shadow-2xs">Coordinate workflow tasks</span>
               </div>
-              <p className="pt-2 text-left sm:text-justify font-extrabold text-[#0F172A]">
+              <p className="pt-2 text-left font-extrabold text-[#0F172A]">
                 What if many of these responsibilities could be handled by specialised AI agents working together as a digital team? That&apos;s the idea we are exploring.
               </p>
             </div>
           </header>
 
-          {/* ── Visual Digital Workforce Architecture Mockup ── */}
+          {/* ── Visual Digital Workforce Architecture Mockup (Light Theme) ── */}
           <div className="mb-12 sm:mb-16 relative">
-            <div className="w-full rounded-2xl overflow-hidden bg-[#F8FAFC] border border-slate-200 shadow-2xs relative p-4 sm:p-6 text-slate-800 flex flex-col justify-between gap-5">
+            <div className="w-full rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-sm relative p-4 sm:p-6 text-slate-800 flex flex-col justify-between gap-5">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-200 text-xs font-mono gap-2.5">
                 <div className="flex items-center gap-2">
-                  <span className="w-3 h-3 rounded-full bg-[#2563EB]" />
-                  <span className="font-bold text-slate-800 text-xs">AGARAN DIGITAL WORKFORCE STUDIO</span>
+                  <span className="w-2.5 h-2.5 rounded-full bg-[#2563EB]" />
+                  <span className="font-bold text-slate-800 text-xs font-sans">AGARAN DIGITAL WORKFORCE STUDIO</span>
                 </div>
                 <div className="text-[10px] font-mono uppercase bg-[#EFF6FF] text-[#2563EB] border border-[#BFDBFE] px-3 py-1 rounded-md font-bold self-start sm:self-auto flex items-center gap-1.5 shadow-2xs">
                   <span className="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse" />
@@ -90,16 +90,16 @@ export default function ProductAIAgentPlatformPage() {
               </div>
 
               {/* Inter-Agent Network Visual */}
-              <div className="p-4 sm:p-6 rounded-2xl bg-[#EFF6FF]/60 border border-[#BFDBFE] space-y-3 font-sans text-xs">
+              <div className="p-4 sm:p-6 rounded-2xl bg-[#EFF6FF]/70 border border-[#BFDBFE] space-y-3 font-sans text-xs">
                 <div className="text-center font-extrabold text-[#1D4ED8] text-sm">
                   AI Agent &rarr; AI Team &rarr; AI Workforce &rarr; AI-Powered Company
                 </div>
 
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-center text-xs font-bold text-slate-800">
-                  <div className="p-3 rounded-xl bg-white border border-[#BFDBFE]">Sales Agent</div>
-                  <div className="p-3 rounded-xl bg-white border border-blue-200">Knowledge Agent</div>
-                  <div className="p-3 rounded-xl bg-white border border-sky-200">Support Agent</div>
-                  <div className="p-3 rounded-xl bg-white border border-emerald-200">Ops &amp; Finance</div>
+                  <div className="p-3 rounded-xl bg-white border border-[#BFDBFE] shadow-2xs">Sales Agent</div>
+                  <div className="p-3 rounded-xl bg-white border border-[#BFDBFE] shadow-2xs">Knowledge Agent</div>
+                  <div className="p-3 rounded-xl bg-white border border-[#BFDBFE] shadow-2xs">Support Agent</div>
+                  <div className="p-3 rounded-xl bg-white border border-[#BFDBFE] shadow-2xs">Ops &amp; Finance</div>
                 </div>
 
                 <div className="p-3 rounded-xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] text-white text-center font-black text-xs shadow-2xs">
@@ -124,7 +124,7 @@ export default function ProductAIAgentPlatformPage() {
               People Decide What Matters. AI Helps Get the Work Done.
             </h3>
 
-            <p className="text-sm sm:text-base text-slate-600 font-medium leading-relaxed mb-6 text-justify">
+            <p className="text-sm sm:text-base text-slate-600 font-medium leading-relaxed mb-6 text-left">
               Instead of giving a business one generic AI assistant, the platform is designed around a team of specialised agents. Each agent takes care of a specific operational responsibility.
             </p>
 
@@ -136,13 +136,13 @@ export default function ProductAIAgentPlatformPage() {
                   HUMAN TEAM RESPONSIBILITIES
                 </div>
                 <h4 className="text-lg font-black text-[#0F172A]">Where People Excel</h4>
-                <ul className="grid grid-cols-2 gap-2 text-xs font-extrabold text-slate-800">
-                  <li className="p-2.5 rounded-xl bg-white border border-slate-200">✓ Strategy &amp; Vision</li>
-                  <li className="p-2.5 rounded-xl bg-white border border-slate-200">✓ Creative Thinking</li>
-                  <li className="p-2.5 rounded-xl bg-white border border-slate-200">✓ Client Relationships</li>
-                  <li className="p-2.5 rounded-xl bg-white border border-slate-200">✓ Critical Decisions</li>
-                  <li className="p-2.5 rounded-xl bg-white border border-slate-200">✓ Leadership</li>
-                  <li className="p-2.5 rounded-xl bg-white border border-slate-200">✓ Complex Problem Solving</li>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-extrabold text-slate-800">
+                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">✓ Strategy &amp; Vision</li>
+                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">✓ Creative Thinking</li>
+                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">✓ Client Relationships</li>
+                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">✓ Critical Decisions</li>
+                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">✓ Leadership</li>
+                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">✓ Complex Problem Solving</li>
                 </ul>
               </div>
 
@@ -152,13 +152,13 @@ export default function ProductAIAgentPlatformPage() {
                   AI TEAM RESPONSIBILITIES
                 </div>
                 <h4 className="text-lg font-black text-[#0F172A]">Where Digital Workforce Excels</h4>
-                <ul className="grid grid-cols-2 gap-2 text-xs font-extrabold text-slate-800">
-                  <li className="p-2.5 rounded-xl bg-white border border-slate-200">✓ Repetitive Work</li>
-                  <li className="p-2.5 rounded-xl bg-white border border-slate-200">✓ Info Processing</li>
-                  <li className="p-2.5 rounded-xl bg-white border border-slate-200">✓ System Monitoring</li>
-                  <li className="p-2.5 rounded-xl bg-white border border-slate-200">✓ Lead Follow-Ups</li>
-                  <li className="p-2.5 rounded-xl bg-white border border-slate-200">✓ Routine Communication</li>
-                  <li className="p-2.5 rounded-xl bg-white border border-slate-200">✓ Task Execution</li>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-extrabold text-slate-800">
+                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">✓ Repetitive Work</li>
+                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">✓ Info Processing</li>
+                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">✓ System Monitoring</li>
+                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">✓ Lead Follow-Ups</li>
+                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">✓ Routine Communication</li>
+                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">✓ Task Execution</li>
                 </ul>
               </div>
             </div>
@@ -242,7 +242,7 @@ export default function ProductAIAgentPlatformPage() {
 
                     <h3 className={`text-base font-black ${agent.color} mb-0.5`}>{agent.name}</h3>
                     <div className="text-[11px] font-bold text-slate-500 mb-2">{agent.role}</div>
-                    <p className="text-xs text-slate-600 leading-relaxed text-justify">{agent.desc}</p>
+                    <p className="text-xs text-slate-600 leading-relaxed text-left">{agent.desc}</p>
                   </div>
 
                   <div className="pt-2 border-t border-slate-100 text-[10px] font-bold text-slate-400">
@@ -262,7 +262,7 @@ export default function ProductAIAgentPlatformPage() {
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0F172A] tracking-tight">AGENTS WORKING TOGETHER</h2>
             </div>
 
-            <p className="text-sm sm:text-base text-slate-600 font-medium leading-relaxed mb-6 text-justify">
+            <p className="text-sm sm:text-base text-slate-600 font-medium leading-relaxed mb-6 text-left">
               Agents shouldn&apos;t work as isolated chatbots. They communicate and coordinate automatically to complete end-to-end business tasks:
             </p>
 
@@ -298,7 +298,7 @@ export default function ProductAIAgentPlatformPage() {
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0F172A] tracking-tight">THE AGENT CONTROL LAYER</h2>
             </div>
 
-            <p className="text-sm sm:text-base text-slate-600 font-medium leading-relaxed mb-6 text-justify">
+            <p className="text-sm sm:text-base text-slate-600 font-medium leading-relaxed mb-6 text-left">
               Businesses decide what an agent can see, what it can do, and when sensitive actions require human confirmation:
             </p>
 
@@ -344,26 +344,26 @@ export default function ProductAIAgentPlatformPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <h3 className="text-xl font-black text-[#0F172A] mb-2">Current Exploration Focus</h3>
-                  <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed text-justify mb-4">
+                  <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed text-left mb-4">
                     This is an Agaran product concept currently being explored and developed. The focus is on understanding how specialised AI agents can safely work with real business workflows, tools and human teams.
                   </p>
-                  <ul className="grid grid-cols-2 gap-2 text-xs font-bold text-[#2563EB]">
-                    <li className="p-2 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-bold text-[#2563EB]">
+                    <li className="p-2.5 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
                       <span className="text-emerald-500 font-bold">✓</span> AI Agent Architecture
                     </li>
-                    <li className="p-2 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
+                    <li className="p-2.5 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
                       <span className="text-emerald-500 font-bold">✓</span> Multi-Agent Workflows
                     </li>
-                    <li className="p-2 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
+                    <li className="p-2.5 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
                       <span className="text-emerald-500 font-bold">✓</span> Business Knowledge Sync
                     </li>
-                    <li className="p-2 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
+                    <li className="p-2.5 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
                       <span className="text-emerald-500 font-bold">✓</span> Tool &amp; System Integration
                     </li>
-                    <li className="p-2 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
+                    <li className="p-2.5 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
                       <span className="text-emerald-500 font-bold">✓</span> Agent Collaboration
                     </li>
-                    <li className="p-2 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
+                    <li className="p-2.5 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
                       <span className="text-emerald-500 font-bold">✓</span> Human Approval Layer
                     </li>
                   </ul>
@@ -371,12 +371,12 @@ export default function ProductAIAgentPlatformPage() {
 
                 <div>
                   <h3 className="text-xl font-black text-[#0F172A] mb-2">The Bigger Vision</h3>
-                  <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed text-justify mb-4">
+                  <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed text-left mb-4">
                     A business that doesn&apos;t stop when everyone goes home. Imagine enquiries being handled, leads followed up, internal questions answered, and reports prepared before morning meetings — because your AI workforce works alongside your team.
                   </p>
                   <div className="p-4 rounded-2xl bg-white border border-[#BFDBFE] space-y-2 text-xs">
                     <div className="font-extrabold text-[#0F172A]">Build a Digital Workforce:</div>
-                    <p className="text-slate-600 leading-relaxed text-justify">
+                    <p className="text-slate-600 leading-relaxed text-left">
                       Not just another chatbot or isolated assistant — a team of AI agents working as part of your business.
                     </p>
                   </div>
@@ -389,15 +389,15 @@ export default function ProductAIAgentPlatformPage() {
               BOTTOM NAVIGATION & CTA
           ══════════════════════════════════════════════════════════ */}
           <footer className="pt-8 border-t border-slate-200 space-y-8">
-            <div className="p-8 rounded-3xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] text-white text-center space-y-3">
+            <div className="p-6 sm:p-10 rounded-3xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] text-white text-center space-y-3">
               <h2 className="text-2xl sm:text-3xl font-black">What Would Your AI Team Look Like?</h2>
               <p className="text-xs sm:text-sm text-blue-100 max-w-xl mx-auto font-medium">
                 Tell us what your team spends too much time doing. We&apos;re exploring how an AI agent could take care of it.
               </p>
               <div className="pt-2">
                 <Link
-                  href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-[#2563EB] font-black text-xs sm:text-sm shadow-md hover:bg-slate-50 transition-all"
+                  href="/contact?cat=ai#inquiry-form"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-2xl bg-white text-[#2563EB] font-black text-xs sm:text-sm shadow-md hover:bg-blue-50 hover:scale-105 transition-all duration-300 w-full sm:w-auto justify-center"
                 >
                   <span>Start a Conversation</span>
                   <span>&rarr;</span>

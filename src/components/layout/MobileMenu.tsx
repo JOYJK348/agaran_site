@@ -146,30 +146,30 @@ export default function MobileMenu({ isOpen, onClose, navLinks }: MobileMenuProp
                     )}
                   </div>
 
-                  {/* Expanded What We Do Capabilities Grid */}
+                  {/* Expanded What We Do Capabilities List (Plain Text, No Card Boxes) */}
                   {isWhatWeDo && isWhatWeDoExpanded && (
                     <motion.div
                       initial={{ opacity: 0, height: 0 }}
                       animate={{ opacity: 1, height: "auto" }}
                       exit={{ opacity: 0, height: 0 }}
-                      className="pt-2 pb-3 grid grid-cols-2 gap-2"
+                      className="pt-2 pb-2 space-y-2.5"
                     >
                       {WHAT_WE_DO_ITEMS.map((sub) => (
                         <Link
                           key={sub.title}
                           href={sub.href}
                           onClick={(e) => handleMobileItemClick(e, sub.href)}
-                          className="p-3 rounded-xl bg-slate-50 border border-slate-100 hover:bg-[#EFF6FF] hover:border-[#BFDBFE] transition-all flex flex-col justify-between group"
+                          className="block py-1.5 px-2 rounded-lg hover:bg-slate-50 transition-colors group"
                         >
-                          <div className="flex items-center justify-between mb-1">
-                            <span className="text-xs font-black text-[#0F172A] group-hover:text-[#2563EB] transition-colors">
+                          <div className="flex items-center justify-between">
+                            <span className="text-xs font-bold text-slate-900 group-hover:text-[#2563EB] transition-colors">
                               {sub.title}
                             </span>
-                            <span className="text-[9px] font-mono font-bold text-[#2563EB]">
+                            <span className="text-[10px] font-mono font-bold text-slate-400 group-hover:text-[#2563EB]">
                               {sub.badge}
                             </span>
                           </div>
-                          <span className="text-[10.5px] font-medium text-slate-500 line-clamp-1">
+                          <span className="text-[11px] font-normal text-slate-500 block mt-0.5">
                             {sub.subtext}
                           </span>
                         </Link>
@@ -184,7 +184,7 @@ export default function MobileMenu({ isOpen, onClose, navLinks }: MobileMenuProp
           {/* Bottom Action Section */}
           <div className="pt-4 border-t border-slate-100 space-y-3">
             <Link
-              href="/contact"
+              href="/contact#inquiry-form"
               onClick={onClose}
               className="w-full py-3.5 rounded-2xl bg-[#2563EB] hover:bg-[#1d4ed8] active:scale-[0.98] text-white font-extrabold text-sm text-center shadow-lg shadow-blue-500/20 transition-all flex items-center justify-center gap-2"
             >

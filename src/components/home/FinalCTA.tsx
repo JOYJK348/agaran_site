@@ -51,7 +51,7 @@ export default function FinalCTA() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[450px] bg-blue-100/40 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:32px_32px] opacity-30 pointer-events-none" />
 
-      <div className="relative z-10 w-full max-w-full px-2 xs:px-3 sm:px-4 lg:px-6">
+      <div className="relative z-10 w-full max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-14">
         <motion.div
           ref={containerRef}
           initial={{ opacity: 0, y: 28 }}
@@ -61,7 +61,7 @@ export default function FinalCTA() {
         >
 
           {/* ── Top Header Section ── */}
-          <div className="relative z-10 text-center max-w-3xl mx-auto mb-8 sm:mb-12">
+          <div className="relative z-10 text-center max-w-4xl mx-auto mb-8 sm:mb-12">
             {/* Category Pill Badge */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -159,7 +159,7 @@ export default function FinalCTA() {
           >
             {/* Primary CTA */}
             <a
-              href="/contact"
+              href="/contact#inquiry-form"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-9 py-4 rounded-full bg-white hover:bg-blue-50 text-[#1D4ED8] text-sm sm:text-base font-black tracking-wide shadow-[0_12px_35px_rgba(0,0,0,0.25)] hover:shadow-[0_18px_45px_rgba(0,0,0,0.35)] hover:-translate-y-1 active:translate-y-0 transition-all duration-300 group/btn"
             >
               <span>Start a Conversation</span>
@@ -168,7 +168,7 @@ export default function FinalCTA() {
 
             {/* Secondary CTA */}
             <a
-              href="/contact"
+              href="/contact#inquiry-form"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full bg-blue-950/40 hover:bg-blue-950/60 text-white text-sm font-extrabold border border-white/30 backdrop-blur-md hover:border-white/50 hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
             >
               <span>Schedule a Strategy Call</span>

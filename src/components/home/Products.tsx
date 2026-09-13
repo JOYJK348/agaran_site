@@ -1402,9 +1402,9 @@ export default function Products() {
       <div className="absolute inset-0 bg-[radial-gradient(#cbd5e1_1px,transparent_1px)] [background-size:28px_28px] opacity-35 pointer-events-none" />
 
       <Container as="div">
-        <div className="relative z-10 max-w-6xl mx-auto">
+        <div className="relative z-10 max-w-[1600px] mx-auto w-full">
           {/* ── Section Header — Ultra-Clean, Zero-Sentence High-Impact UI/UX ── */}
-          <div className="relative text-center max-w-4xl mx-auto mb-8 sm:mb-10">
+          <div className="relative text-center max-w-5xl mx-auto mb-8 sm:mb-10">
             {/* Category Badge Pill */}
             <Reveal delay={0} y={14}>
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-200/90 text-[11px] font-black text-[#2563EB] tracking-[0.18em] uppercase mb-3.5 shadow-2xs">
