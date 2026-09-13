@@ -58,7 +58,7 @@ const offerings = [
 
 export default function HeroVisual() {
   return (
-    <div className="relative w-full max-w-[560px] mx-auto flex flex-col items-center justify-center select-none py-2 sm:py-4">
+    <div className="relative w-full max-w-[560px] mx-auto flex flex-col items-center justify-center py-2 sm:py-4">
       {/* ── Ambient soft glow ── */}
       <motion.div
         className="absolute top-[15%] right-[10%] w-[240px] h-[240px] rounded-full bg-[#2563EB]/4 blur-[100px] pointer-events-none"

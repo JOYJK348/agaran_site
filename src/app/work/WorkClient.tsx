@@ -53,7 +53,7 @@ export default function WorkClient() {
         >
           
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              HEADER SECTION ΓÇö EXECUTIVE LANDING HERO
+              HEADER SECTION — EXECUTIVE LANDING HERO
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <Reveal>
             <header className="text-center w-full max-w-full mx-auto mb-6">
@@ -75,7 +75,7 @@ export default function WorkClient() {
                 In-depth technical whitepapers and engineering case studies detailing real multi-tenant SaaS platforms, microservices backend architectures, automated infrastructure, and 24/7 real-time system monitoring shipped for client institutions.
               </p>
 
-              {/* Quick System Stats Bar ΓÇö Full Container Width */}
+              {/* Quick System Stats Bar — Full Container Width */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-2 max-w-full lg:max-w-6xl mx-auto text-center text-xs">
                 <div className="p-3.5 rounded-xl bg-white border border-slate-200/90 shadow-2xs space-y-0.5">
                   <div className="text-base sm:text-lg font-black text-[#2563EB]">2 Systems</div>
@@ -101,7 +101,7 @@ export default function WorkClient() {
           </Reveal>
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              FEATURED CASE STUDY 01 ΓÇö ZHI EARLY LEARNING PLATFORM
+              FEATURED CASE STUDY 01 — ZHI EARLY LEARNING PLATFORM
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <Reveal delay={0.1}>
             <section>
@@ -124,7 +124,7 @@ export default function WorkClient() {
                     </div>
 
                     <h2 className="text-2xl sm:text-4xl font-black text-[#0F172A] group-hover:text-[#2563EB] transition-colors leading-tight">
-                      ZHI ΓÇö Learn While Playing
+                      ZHI — Learn While Playing
                     </h2>
 
                     <p className="text-xs sm:text-base text-slate-600 leading-relaxed text-left sm:text-justify">
@@ -203,7 +203,7 @@ export default function WorkClient() {
           </Reveal>
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              FEATURED CASE STUDY 02 ΓÇö NEET SAAS PLATFORM (CMP)
+              FEATURED CASE STUDY 02 — NEET SAAS PLATFORM (CMP)
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <Reveal delay={0.15}>
             <section>

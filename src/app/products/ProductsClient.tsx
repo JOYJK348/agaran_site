@@ -67,7 +67,7 @@ export default function ProductsClient() {
         <div className="relative max-w-[1500px] mx-auto w-full space-y-12 sm:space-y-16">
           
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              HEADER SECTION ΓÇö CLEAN CREATIVE SHOWCASE HERO
+              HEADER SECTION — CLEAN CREATIVE SHOWCASE HERO
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <Reveal>
             <header className="text-center w-full max-w-4xl mx-auto mb-8 sm:mb-12 px-2">
@@ -86,7 +86,7 @@ export default function ProductsClient() {
               </h1>
 
               <p className="text-center text-xs sm:text-base md:text-lg font-medium leading-relaxed text-slate-600 max-w-3xl mx-auto mb-6 sm:mb-8">
-                We don&apos;t just build client solutions ΓÇö we design and develop proprietary SaaS platforms to automate complex workflows across education, communication, and business operations.
+                We don&apos;t just build client solutions — we design and develop proprietary SaaS platforms to automate complex workflows across education, communication, and business operations.
               </p>
 
               {/* Quick Jump Interactive Navigation Pills */}
@@ -137,7 +137,7 @@ export default function ProductsClient() {
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
               CREATIVE VERTICAL ECOSYSTEM TIMELINE & FLOATING SECTIONS
-              (Clean Borderless Open Layout ΓÇö No Side Accent Bars)
+              (Clean Borderless Open Layout — No Side Accent Bars)
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <div className="relative">
             {/* Clean Single-Tone Vertical Timeline Ribbon */}
@@ -146,7 +146,7 @@ export default function ProductsClient() {
             <div className="space-y-16 sm:space-y-24">
               
               {/* ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
-                  PRODUCT 01 ΓÇö AI EDUCATION AUTOMATION PLATFORM
+                  PRODUCT 01 — AI EDUCATION AUTOMATION PLATFORM
               ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */}
               <Reveal delay={0.05}>
                 <section className="scroll-mt-28 relative group" id="ai-education">
@@ -156,7 +156,7 @@ export default function ProductsClient() {
                     01
                   </div>
 
-                  {/* Floating Content Block ΓÇö Clean Borderless Design */}
+                  {/* Floating Content Block — Clean Borderless Design */}
                   <div className="relative z-10 p-5 sm:p-8 lg:p-10 rounded-3xl bg-white/95 border border-slate-200/90 shadow-[0_8px_30px_rgba(15,23,42,0.04)] hover:shadow-[0_16px_45px_rgba(37,99,235,0.1)] hover:border-[#BFDBFE] transition-all duration-300">
                     
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -276,7 +276,7 @@ export default function ProductsClient() {
               </Reveal>
 
               {/* ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
-                  PRODUCT 02 ΓÇö WHATSAPP BUSINESS AUTOMATION PLATFORM
+                  PRODUCT 02 — WHATSAPP BUSINESS AUTOMATION PLATFORM
               ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */}
               <Reveal delay={0.08}>
                 <section className="scroll-mt-28 relative group" id="whatsapp-automation">
@@ -286,7 +286,7 @@ export default function ProductsClient() {
                     02
                   </div>
 
-                  {/* Floating Content Block ΓÇö Clean Borderless Design */}
+                  {/* Floating Content Block — Clean Borderless Design */}
                   <div className="relative z-10 p-5 sm:p-8 lg:p-10 rounded-3xl bg-white/95 border border-slate-200/90 shadow-[0_8px_30px_rgba(15,23,42,0.04)] hover:shadow-[0_16px_45px_rgba(37,99,235,0.1)] hover:border-[#BFDBFE] transition-all duration-300">
                     
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -392,7 +392,7 @@ export default function ProductsClient() {
               </Reveal>
 
               {/* ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
-                  PRODUCT 03 ΓÇö AUTONOMOUS AI AGENT PLATFORM
+                  PRODUCT 03 — AUTONOMOUS AI AGENT PLATFORM
               ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */}
               <Reveal delay={0.1}>
                 <section className="scroll-mt-28 relative group" id="ai-agent-platform">
@@ -402,7 +402,7 @@ export default function ProductsClient() {
                     03
                   </div>
 
-                  {/* Floating Content Block ΓÇö Clean Borderless Design */}
+                  {/* Floating Content Block — Clean Borderless Design */}
                   <div className="relative z-10 p-5 sm:p-8 lg:p-10 rounded-3xl bg-white/95 border border-slate-200/90 shadow-[0_8px_30px_rgba(15,23,42,0.04)] hover:shadow-[0_16px_45px_rgba(37,99,235,0.1)] hover:border-[#BFDBFE] transition-all duration-300">
                     
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -518,7 +518,7 @@ export default function ProductsClient() {
           </div>
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              FINAL CALL TO ACTION ΓÇö HIGH-IMPACT GRADIENT CANVAS
+              FINAL CALL TO ACTION — HIGH-IMPACT GRADIENT CANVAS
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <Reveal delay={0.12}>
             <section className="pt-6 sm:pt-10">

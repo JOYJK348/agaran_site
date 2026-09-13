@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
@@ -286,12 +286,12 @@ export default function WhatWeDoClient() {
                 {/* 6 Synchronized Floating Pillars (Wide Full-Width Grid) */}
                 <div className="grid grid-cols-6 gap-4 sm:gap-5 relative z-10 mb-16 text-center items-start">
                   {[
-                    { title: "SOFTWARE", tag: "Web ΓÇó Mobile ΓÇó SaaS", badge: "APPLICATION", href: "#software-development" },
-                    { title: "AI", tag: "Agents ΓÇó Intelligence", badge: "INTELLIGENCE", href: "#ai-systems" },
-                    { title: "AUTOMATION", tag: "Workflows ΓÇó Operations", badge: "WORKFLOW", href: "#business-automation" },
-                    { title: "EDUCATION", tag: "Learning ΓÇó EdTech", badge: "EDTECH", href: "#education-technology" },
-                    { title: "CLOUD", tag: "Infrastructure ΓÇó Scale", badge: "INFRASTRUCTURE", href: "#cloud-infrastructure" },
-                    { title: "MAINTENANCE", tag: "Upgrade ΓÇó Modernise", badge: "EXISTING SYSTEM", href: "#existing-systems" },
+                    { title: "SOFTWARE", tag: "Web • Mobile • SaaS", badge: "APPLICATION", href: "#software-development" },
+                    { title: "AI", tag: "Agents • Intelligence", badge: "INTELLIGENCE", href: "#ai-systems" },
+                    { title: "AUTOMATION", tag: "Workflows • Operations", badge: "WORKFLOW", href: "#business-automation" },
+                    { title: "EDUCATION", tag: "Learning • EdTech", badge: "EDTECH", href: "#education-technology" },
+                    { title: "CLOUD", tag: "Infrastructure • Scale", badge: "INFRASTRUCTURE", href: "#cloud-infrastructure" },
+                    { title: "MAINTENANCE", tag: "Upgrade • Modernise", badge: "EXISTING SYSTEM", href: "#existing-systems" },
                   ].map((node, i) => (
                     <motion.a
                       key={node.title}
@@ -299,7 +299,7 @@ export default function WhatWeDoClient() {
                       animate={{ y: [0, -10, 0] }}
                       transition={{ repeat: Infinity, duration: 4.5, delay: i * 0.6, ease: "easeInOut" }}
                       whileHover={{ scale: 1.08, y: -14 }}
-                      className="group flex flex-col items-center cursor-pointer select-none p-5 sm:p-6 rounded-3xl bg-gradient-to-b from-[#EFF6FF]/95 via-white to-[#DBEAFE]/50 border border-[#BFDBFE] shadow-[0_12px_35px_rgba(37,99,235,0.12)] hover:border-[#2563EB] hover:shadow-[0_22px_48px_rgba(37,99,235,0.24)] transition-all duration-300 relative overflow-hidden"
+                      className="group flex flex-col items-center cursor-pointer p-5 sm:p-6 rounded-3xl bg-gradient-to-b from-[#EFF6FF]/95 via-white to-[#DBEAFE]/50 border border-[#BFDBFE] shadow-[0_12px_35px_rgba(37,99,235,0.12)] hover:border-[#2563EB] hover:shadow-[0_22px_48px_rgba(37,99,235,0.24)] transition-all duration-300 relative overflow-hidden"
                     >
                       <span className="w-2.5 h-2.5 rounded-full bg-[#2563EB] animate-ping absolute top-3 right-3" />
                       <span className="text-[9.5px] font-black uppercase tracking-wider text-[#2563EB] bg-white px-3 py-1 rounded-full border border-[#BFDBFE] mb-3 shadow-2xs">
@@ -378,12 +378,12 @@ export default function WhatWeDoClient() {
                   <div className="absolute left-[27px] top-2 bottom-2 w-1 bg-gradient-to-b from-[#2563EB] via-[#3B82F6] to-[#0284C7] rounded-full animate-pulse opacity-80" />
 
                   {[
-                    { title: "SOFTWARE", tag: "Web ΓÇó Mobile ΓÇó SaaS", badge: "APPLICATION", href: "#software-development" },
-                    { title: "AI", tag: "Agents ΓÇó Assistants ΓÇó Intelligence", badge: "INTELLIGENCE", href: "#ai-systems" },
-                    { title: "AUTOMATION", tag: "Workflows ΓÇó Integrations ΓÇó Operations", badge: "WORKFLOW", href: "#business-automation" },
-                    { title: "EDUCATION", tag: "Learning ΓÇó Assessment ΓÇó Institution", badge: "EDTECH", href: "#education-technology" },
-                    { title: "CLOUD", tag: "Infrastructure ΓÇó Security ΓÇó Scale", badge: "INFRASTRUCTURE", href: "#cloud-infrastructure" },
-                    { title: "MAINTENANCE", tag: "Upgrade ΓÇó Modernise ΓÇó Scale", badge: "EXISTING SYSTEM", href: "#existing-systems" },
+                    { title: "SOFTWARE", tag: "Web • Mobile • SaaS", badge: "APPLICATION", href: "#software-development" },
+                    { title: "AI", tag: "Agents • Assistants • Intelligence", badge: "INTELLIGENCE", href: "#ai-systems" },
+                    { title: "AUTOMATION", tag: "Workflows • Integrations • Operations", badge: "WORKFLOW", href: "#business-automation" },
+                    { title: "EDUCATION", tag: "Learning • Assessment • Institution", badge: "EDTECH", href: "#education-technology" },
+                    { title: "CLOUD", tag: "Infrastructure • Security • Scale", badge: "INFRASTRUCTURE", href: "#cloud-infrastructure" },
+                    { title: "MAINTENANCE", tag: "Upgrade • Modernise • Scale", badge: "EXISTING SYSTEM", href: "#existing-systems" },
                   ].map((node, i) => (
                     <motion.a
                       key={node.title}
@@ -440,7 +440,7 @@ export default function WhatWeDoClient() {
             <Reveal delay={0.04} className="flex justify-center">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-pulse" />
-                <span>01 &nbsp;ΓÇó&nbsp; SOFTWARE DEVELOPMENT</span>
+                <span>01 &nbsp;•&nbsp; SOFTWARE DEVELOPMENT</span>
               </div>
             </Reveal>
 
@@ -537,7 +537,7 @@ export default function WhatWeDoClient() {
             <Reveal delay={0.04} className="flex justify-center">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-pulse" />
-                <span>02 &nbsp;ΓÇó&nbsp; AI & INTELLIGENT SYSTEMS</span>
+                <span>02 &nbsp;•&nbsp; AI & INTELLIGENT SYSTEMS</span>
               </div>
             </Reveal>
 
@@ -624,7 +624,7 @@ export default function WhatWeDoClient() {
             <Reveal delay={0.04} className="flex justify-center">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-pulse" />
-                <span>03 &nbsp;ΓÇó&nbsp; BUSINESS AUTOMATION</span>
+                <span>03 &nbsp;•&nbsp; BUSINESS AUTOMATION</span>
               </div>
             </Reveal>
 
@@ -722,7 +722,7 @@ export default function WhatWeDoClient() {
             <Reveal delay={0.04} className="flex justify-center">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-pulse" />
-                <span>04 &nbsp;ΓÇó&nbsp; EDUCATION TECHNOLOGY</span>
+                <span>04 &nbsp;•&nbsp; EDUCATION TECHNOLOGY</span>
               </div>
             </Reveal>
 
@@ -787,7 +787,7 @@ export default function WhatWeDoClient() {
             <Reveal delay={0.04} className="flex justify-center">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-pulse" />
-                <span>05 &nbsp;ΓÇó&nbsp; CLOUD & INFRASTRUCTURE</span>
+                <span>05 &nbsp;•&nbsp; CLOUD & INFRASTRUCTURE</span>
               </div>
             </Reveal>
 
@@ -850,7 +850,7 @@ export default function WhatWeDoClient() {
             <Reveal delay={0.04} className="flex justify-center">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-pulse" />
-                <span>06 &nbsp;ΓÇó&nbsp; EXISTING SYSTEM IMPROVEMENT</span>
+                <span>06 &nbsp;•&nbsp; EXISTING SYSTEM IMPROVEMENT</span>
               </div>
             </Reveal>
 
@@ -949,7 +949,7 @@ export default function WhatWeDoClient() {
             <Reveal delay={0.04} className="flex justify-center">
               <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#BFDBFE] text-[10.5px] sm:text-xs font-extrabold uppercase tracking-wider text-[#2563EB] mb-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB] animate-pulse" />
-                <span>07 &nbsp;ΓÇó&nbsp; HOW WE THINK</span>
+                <span>07 &nbsp;•&nbsp; HOW WE THINK</span>
               </div>
             </Reveal>
 

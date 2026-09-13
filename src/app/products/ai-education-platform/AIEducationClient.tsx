@@ -35,7 +35,7 @@ export default function AIEducationClient() {
           </div>
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              HEADER ΓÇö PRODUCT TITLE & HERO NARRATIVE
+              HEADER — PRODUCT TITLE & HERO NARRATIVE
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <header className="mb-10 sm:mb-14">
             <div className="flex flex-wrap items-center gap-2 mb-4">
@@ -62,7 +62,7 @@ export default function AIEducationClient() {
                 Running an educational institution requires seamless management of <strong className="font-extrabold text-[#0F172A]">admissions, live &amp; recorded classes, course modules, digital &amp; offline exams, daily attendance, fee collection, student portals, parent communication, and 24/7 AI learning assistance</strong>.
               </p>
               <p className="text-sm sm:text-lg font-medium leading-relaxed text-slate-700 text-left">
-                Agaran is building a unified, multi-tenant AI Education Platform that connects every stakeholder ΓÇö <strong className="font-extrabold text-[#2563EB]">Students, Parents, Teachers, and Administrators</strong> ΓÇö into a single automated ecosystem.
+                Agaran is building a unified, multi-tenant AI Education Platform that connects every stakeholder — <strong className="font-extrabold text-[#2563EB]">Students, Parents, Teachers, and Administrators</strong> — into a single automated ecosystem.
               </p>
             </div>
           </header>
@@ -113,7 +113,7 @@ export default function AIEducationClient() {
           <hr className="border-slate-200 my-10 sm:my-14" />
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              01 ΓÇö THE PROBLEM & INSTITUTIONAL CHALLENGES
+              01 — THE PROBLEM & INSTITUTIONAL CHALLENGES
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <section className="mb-12 sm:mb-16 scroll-mt-24" id="problem">
             <div className="flex items-center gap-3 mb-6">
@@ -155,7 +155,7 @@ export default function AIEducationClient() {
           </section>
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              02 ΓÇö COMPLETE 8-PILLAR MODULE ECOSYSTEM
+              02 — COMPLETE 8-PILLAR MODULE ECOSYSTEM
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <section className="mb-12 sm:mb-16 scroll-mt-24" id="modules">
             <div className="flex items-center gap-3 mb-6 sm:mb-8">
@@ -261,7 +261,7 @@ export default function AIEducationClient() {
           </section>
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              03 ΓÇö END-TO-END STUDENT LIFECYCLE PIPELINE
+              03 — END-TO-END STUDENT LIFECYCLE PIPELINE
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <section className="mb-12 sm:mb-16 scroll-mt-24" id="pipeline">
             <div className="flex items-center gap-3 mb-6">
@@ -296,7 +296,7 @@ export default function AIEducationClient() {
           </section>
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              04 ΓÇö DEDICATED PORTALS FOR EVERY ROLE
+              04 — DEDICATED PORTALS FOR EVERY ROLE
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <section className="mb-12 sm:mb-16 scroll-mt-24" id="portals">
             <div className="flex items-center gap-3 mb-6">
@@ -338,7 +338,7 @@ export default function AIEducationClient() {
           </section>
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              05 ΓÇö CURRENT DEVELOPMENT STATUS & VISION
+              05 — CURRENT DEVELOPMENT STATUS & VISION
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <section className="mb-12 sm:mb-16 scroll-mt-24" id="status-vision">
             <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-[#EFF6FF] via-white to-[#DBEAFE]/40 border border-[#BFDBFE] text-slate-800 space-y-6 shadow-xs">
@@ -383,7 +383,7 @@ export default function AIEducationClient() {
                 <div>
                   <h3 className="text-xl font-black text-[#0F172A] mb-2">The Bigger Vision</h3>
                   <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed text-left mb-4">
-                    To deliver a unified digital backbone for modern education ΓÇö where learning, assessment, administration, and parent communication flow effortlessly through intelligent automation.
+                    To deliver a unified digital backbone for modern education — where learning, assessment, administration, and parent communication flow effortlessly through intelligent automation.
                   </p>
                   <div className="p-4 rounded-2xl bg-white border border-[#BFDBFE] space-y-2 text-xs">
                     <div className="font-extrabold text-[#0F172A]">Why We Build Differently:</div>

@@ -35,7 +35,7 @@ export default function NEETClient() {
           </div>
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              PROJECT TITLE & METADATA ΓÇö OVERHAULED EXECUTIVE HERO
+              PROJECT TITLE & METADATA — OVERHAULED EXECUTIVE HERO
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <header className="mb-10 sm:mb-14">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-[#EFF6FF] border border-[#BFDBFE] text-[#2563EB] font-extrabold text-[10px] sm:text-xs uppercase tracking-wider mb-4">
@@ -44,16 +44,16 @@ export default function NEETClient() {
             </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-[3.75rem] font-black tracking-tight text-[#0F172A] leading-[1.12] mb-6">
-              NEET SaaS Platform ΓÇö <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#2563EB] via-[#0284C7] to-[#0D9488]">Education Core Engine</span>
+              NEET SaaS Platform — <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#2563EB] via-[#0284C7] to-[#0D9488]">Education Core Engine</span>
             </h1>
 
             <div className="p-5 sm:p-7 rounded-2xl bg-slate-50/80 border border-slate-200/90 mb-8 space-y-3">
               <p className="text-sm sm:text-lg md:text-xl font-medium leading-relaxed text-slate-700 text-left sm:text-justify">
-                NEET SaaS Platform is an <strong className="font-extrabold text-[#2563EB]">enterprise multi-tenant Education Core Platform (CMP)</strong> purpose-built for NEET coaching institutes, academy chains, and higher education test prep centers. Powered by <strong className="font-extrabold text-slate-900">LiveKit real-time live classrooms</strong>, <strong className="font-extrabold text-[#2563EB]">Cloudflare Stream DRM pre-recorded video security</strong>, and a <strong className="font-extrabold text-slate-900">Moodle-style modular course builder</strong>, it unifies administrative operations, multi-batch scheduling, OMR &amp; MCQ mock test evaluation queues, fee installment ledgers, and real-time student analytics into a single multi-role workspace ΓÇö backed by <strong className="font-extrabold text-[#2563EB]">strict Row-Level Security (RLS) tenant isolation</strong>.
+                NEET SaaS Platform is an <strong className="font-extrabold text-[#2563EB]">enterprise multi-tenant Education Core Platform (CMP)</strong> purpose-built for NEET coaching institutes, academy chains, and higher education test prep centers. Powered by <strong className="font-extrabold text-slate-900">LiveKit real-time live classrooms</strong>, <strong className="font-extrabold text-[#2563EB]">Cloudflare Stream DRM pre-recorded video security</strong>, and a <strong className="font-extrabold text-slate-900">Moodle-style modular course builder</strong>, it unifies administrative operations, multi-batch scheduling, OMR &amp; MCQ mock test evaluation queues, fee installment ledgers, and real-time student analytics into a single multi-role workspace — backed by <strong className="font-extrabold text-[#2563EB]">strict Row-Level Security (RLS) tenant isolation</strong>.
               </p>
             </div>
 
-            {/* Document Metadata Grid ΓÇö Rich Executive Micro-Cards */}
+            {/* Document Metadata Grid — Rich Executive Micro-Cards */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 text-xs sm:text-sm">
               <div className="p-4 rounded-xl sm:rounded-2xl bg-[#EFF6FF] border border-[#BFDBFE] space-y-1">
                 <div className="font-extrabold text-[#2563EB] uppercase tracking-wider text-[9px] sm:text-xs">Live Streaming</div>
@@ -170,7 +170,7 @@ export default function NEETClient() {
               {/* Bottom Visual Subtitle */}
               <div className="pt-3 border-t border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between text-[11px] text-slate-500 font-mono gap-1">
                 <span>[ CENTRAL ARCHITECTURE TOPOLOGY &bull; LIVEKIT + CLOUDFLARE DRM + MOODLE BUILDER ]</span>
-                <span className="text-[#2563EB] font-bold">Figure 1.0 ΓÇö Four Role-Based Authenticated Portals</span>
+                <span className="text-[#2563EB] font-bold">Figure 1.0 — Four Role-Based Authenticated Portals</span>
               </div>
             </div>
           </div>
@@ -178,7 +178,7 @@ export default function NEETClient() {
           <hr className="border-slate-200 my-10 sm:my-14" />
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              01 ΓÇö PROJECT OVERVIEW ΓÇö REDESIGNED EXECUTIVE SPLIT LAYOUT
+              01 — PROJECT OVERVIEW — REDESIGNED EXECUTIVE SPLIT LAYOUT
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <section className="mb-12 sm:mb-16 scroll-mt-24" id="overview">
             <div className="flex items-center gap-3 mb-6 sm:mb-8">
@@ -188,10 +188,10 @@ export default function NEETClient() {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start w-full">
               
-              {/* Left Column (2/3) ΓÇö Deep Narrative with Callout Box */}
+              {/* Left Column (2/3) — Deep Narrative with Callout Box */}
               <div className="lg:col-span-2 space-y-5 text-slate-700 font-medium text-sm sm:text-base leading-relaxed text-left sm:text-justify w-full">
                 <p>
-                  The <strong className="font-extrabold text-[#2563EB]">NEET SaaS Platform (Education Management Core Platform ΓÇö CMP)</strong> is designed to transition NEET coaching centers and test prep academies away from disjointed software stacks ΓÇö such as combinations of WhatsApp groups, spreadsheets, physical receipt books, manual OMR optical scanners, and standalone video tools ΓÇö into a <strong className="font-extrabold text-slate-900">single unified enterprise workspace</strong>.
+                  The <strong className="font-extrabold text-[#2563EB]">NEET SaaS Platform (Education Management Core Platform — CMP)</strong> is designed to transition NEET coaching centers and test prep academies away from disjointed software stacks — such as combinations of WhatsApp groups, spreadsheets, physical receipt books, manual OMR optical scanners, and standalone video tools — into a <strong className="font-extrabold text-slate-900">single unified enterprise workspace</strong>.
                 </p>
 
                 {/* Highlight Executive Callout Box */}
@@ -201,7 +201,7 @@ export default function NEETClient() {
                     Configuration-Driven Domain Philosophy
                   </div>
                   <p className="text-xs sm:text-sm font-semibold leading-relaxed text-slate-700">
-                    Golden Architectural Rule: Business-specific behaviors live in tenant configuration, NOT hardcoded database schemas. NEET&apos;s +4/-1 marking scheme, configurable total marks criteria, OMR evaluation parameters, and subject splits (Physics, Chemistry, Botany, Zoology) are stored as tenant settings ΓÇö making the system extensible to JEE, UPSC, TNPSC, and Banking exams out of the box.
+                    Golden Architectural Rule: Business-specific behaviors live in tenant configuration, NOT hardcoded database schemas. NEET&apos;s +4/-1 marking scheme, configurable total marks criteria, OMR evaluation parameters, and subject splits (Physics, Chemistry, Botany, Zoology) are stored as tenant settings — making the system extensible to JEE, UPSC, TNPSC, and Banking exams out of the box.
                   </p>
                 </div>
 
@@ -210,7 +210,7 @@ export default function NEETClient() {
                 </p>
               </div>
 
-              {/* Right Column (1/3) ΓÇö High Impact Core Architecture Metrics Card */}
+              {/* Right Column (1/3) — High Impact Core Architecture Metrics Card */}
               <div className="p-6 rounded-2xl bg-gradient-to-b from-[#EFF6FF]/90 via-white to-[#DBEAFE]/40 border border-[#BFDBFE] shadow-md space-y-4 w-full">
                 <div className="flex items-center justify-between border-b border-[#BFDBFE] pb-3">
                   <span className="text-xs font-black uppercase tracking-wider text-[#2563EB]">KEY METRICS &bull; CMP PLATFORM</span>
@@ -250,7 +250,7 @@ export default function NEETClient() {
           </section>
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              02 ΓÇö SPECIAL SECTION: LIVEKIT LIVE CLASSROOMS, CLOUDFLARE DRM & MOODLE COURSE BUILDER
+              02 — SPECIAL SECTION: LIVEKIT LIVE CLASSROOMS, CLOUDFLARE DRM & MOODLE COURSE BUILDER
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <section className="mb-12 sm:mb-16 scroll-mt-24 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-[#EFF6FF] via-white to-[#DBEAFE]/60 border border-[#BFDBFE] shadow-md relative overflow-hidden" id="video-engine">
             <div className="flex items-center gap-3 mb-6">
@@ -396,7 +396,7 @@ export default function NEETClient() {
           </section>
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              03 ΓÇö SYSTEM ARCHITECTURE & 4 PORTALS DEEP DIVE
+              03 — SYSTEM ARCHITECTURE & 4 PORTALS DEEP DIVE
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <section className="mb-12 sm:mb-16 scroll-mt-24" id="portals">
             <div className="flex items-center gap-3 mb-6 sm:mb-8">
@@ -406,11 +406,11 @@ export default function NEETClient() {
 
             <div className="space-y-6 sm:space-y-8">
               
-              {/* Portal 01 ΓÇö Platform Admin HQ */}
+              {/* Portal 01 — Platform Admin HQ */}
               <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-3 sm:space-y-4">
                 <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                   <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-[#2563EB] bg-[#EFF6FF] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full border border-[#BFDBFE]">PORTAL 01</span>
-                  <h3 className="text-base sm:text-xl font-extrabold text-[#0F172A]">Platform Admin HQ ΓÇö Super Admin Operations</h3>
+                  <h3 className="text-base sm:text-xl font-extrabold text-[#0F172A]">Platform Admin HQ — Super Admin Operations</h3>
                   <span className="text-[10px] sm:text-xs font-extrabold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">LIVE</span>
                 </div>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
@@ -433,11 +433,11 @@ export default function NEETClient() {
                 </div>
               </div>
 
-              {/* Portal 02 ΓÇö Institute Operations HQ */}
+              {/* Portal 02 — Institute Operations HQ */}
               <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-3 sm:space-y-4">
                 <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                   <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-[#0284C7] bg-sky-50 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full border border-sky-200">PORTAL 02</span>
-                  <h3 className="text-base sm:text-xl font-extrabold text-[#0F172A]">Institute Operations HQ ΓÇö Tenant Administrator</h3>
+                  <h3 className="text-base sm:text-xl font-extrabold text-[#0F172A]">Institute Operations HQ — Tenant Administrator</h3>
                   <span className="text-[10px] sm:text-xs font-extrabold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">LIVE</span>
                 </div>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
@@ -460,11 +460,11 @@ export default function NEETClient() {
                 </div>
               </div>
 
-              {/* Portal 03 ΓÇö Tutor Portal */}
+              {/* Portal 03 — Tutor Portal */}
               <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-3 sm:space-y-4">
                 <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                   <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-purple-700 bg-purple-50 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full border border-purple-200">PORTAL 03</span>
-                  <h3 className="text-base sm:text-xl font-extrabold text-[#0F172A]">Tutor Portal ΓÇö Faculty Workstation</h3>
+                  <h3 className="text-base sm:text-xl font-extrabold text-[#0F172A]">Tutor Portal — Faculty Workstation</h3>
                   <span className="text-[10px] sm:text-xs font-extrabold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">LIVE</span>
                 </div>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
@@ -487,11 +487,11 @@ export default function NEETClient() {
                 </div>
               </div>
 
-              {/* Portal 04 ΓÇö Student & Parent Portal */}
+              {/* Portal 04 — Student & Parent Portal */}
               <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-3 sm:space-y-4">
                 <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                   <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-emerald-700 bg-emerald-50 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full border border-emerald-200">PORTAL 04</span>
-                  <h3 className="text-base sm:text-xl font-extrabold text-[#0F172A]">Student &amp; Parent Portal ΓÇö Learner &amp; Guardian Hub</h3>
+                  <h3 className="text-base sm:text-xl font-extrabold text-[#0F172A]">Student &amp; Parent Portal — Learner &amp; Guardian Hub</h3>
                   <span className="text-[10px] sm:text-xs font-extrabold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">LIVE</span>
                 </div>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
@@ -518,7 +518,7 @@ export default function NEETClient() {
           </section>
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              04 ΓÇö TENANCY & SECURITY ARCHITECTURE
+              04 — TENANCY & SECURITY ARCHITECTURE
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <section className="mb-10 sm:mb-14 scroll-mt-24" id="security">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
@@ -533,7 +533,7 @@ export default function NEETClient() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-6 mb-6">
               <div className="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-2.5">
                 <div className="text-[10px] font-black uppercase tracking-wider text-[#2563EB] bg-[#EFF6FF] px-2 py-0.5 rounded border border-[#BFDBFE] inline-block">
-                  LAYER 01 ΓÇö AUTH
+                  LAYER 01 — AUTH
                 </div>
                 <h3 className="font-extrabold text-slate-900 text-sm sm:text-base">Stateless JWT + Silent Cookie Refresh</h3>
                 <p className="text-xs text-slate-600 leading-relaxed text-left sm:text-justify">
@@ -543,17 +543,17 @@ export default function NEETClient() {
 
               <div className="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-2.5">
                 <div className="text-[10px] font-black uppercase tracking-wider text-[#0284C7] bg-sky-50 px-2 py-0.5 rounded border border-sky-200 inline-block">
-                  LAYER 02 ΓÇö MIDDLEWARE
+                  LAYER 02 — MIDDLEWARE
                 </div>
                 <h3 className="font-extrabold text-slate-900 text-sm sm:text-base">Prisma Tenant Injection</h3>
                 <p className="text-xs text-slate-600 leading-relaxed text-left sm:text-justify">
-                  Every NestJS backend request executes through a Prisma middleware wrapper that automatically binds <strong className="font-extrabold text-[#0284C7]">WHERE institute_id = ctx.instituteId</strong> to every SELECT, UPDATE, and DELETE query ΓÇö preventing developer error from missing tenant clauses.
+                  Every NestJS backend request executes through a Prisma middleware wrapper that automatically binds <strong className="font-extrabold text-[#0284C7]">WHERE institute_id = ctx.instituteId</strong> to every SELECT, UPDATE, and DELETE query — preventing developer error from missing tenant clauses.
                 </p>
               </div>
 
               <div className="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-2.5">
                 <div className="text-[10px] font-black uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200 inline-block">
-                  LAYER 03 ΓÇö DATABASE RLS
+                  LAYER 03 — DATABASE RLS
                 </div>
                 <h3 className="font-extrabold text-slate-900 text-sm sm:text-base">PostgreSQL Row-Level Security</h3>
                 <p className="text-xs text-slate-600 leading-relaxed text-left sm:text-justify">
@@ -564,7 +564,7 @@ export default function NEETClient() {
           </section>
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              05 ΓÇö ACADEMIC & ASSESSMENT ENGINE
+              05 — ACADEMIC & ASSESSMENT ENGINE
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <section className="mb-10 sm:mb-14 scroll-mt-24" id="assessment">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
@@ -628,12 +628,12 @@ export default function NEETClient() {
           </section>
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              06 ΓÇö HOW IT WORKS ΓÇö WORKFLOW
+              06 — HOW IT WORKS — WORKFLOW
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <section className="mb-10 sm:mb-14 scroll-mt-24" id="how-it-works">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
               <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-white bg-[#0F172A] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded">06</span>
-              <h2 className="text-xl sm:text-3xl font-extrabold text-[#0F172A] tracking-tight">HOW IT WORKS ΓÇö OPERATIONAL WORKFLOW</h2>
+              <h2 className="text-xl sm:text-3xl font-extrabold text-[#0F172A] tracking-tight">HOW IT WORKS — OPERATIONAL WORKFLOW</h2>
             </div>
 
             <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-4">
@@ -661,7 +661,7 @@ export default function NEETClient() {
           </section>
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              07 ΓÇö ARCHITECTURE & TECH STACK DEEP DIVE
+              07 — ARCHITECTURE & TECH STACK DEEP DIVE
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <section className="mb-10 sm:mb-14 scroll-mt-24" id="tech-stack">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
@@ -696,7 +696,7 @@ export default function NEETClient() {
             <div className="p-5 sm:p-7 rounded-2xl bg-slate-50 border border-slate-200 space-y-4">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-200 pb-3">
                 <h3 className="font-extrabold text-slate-900 text-sm sm:text-base">
-                  NestJS Monorepo Architecture ΓÇö 8 Decoupled Modules
+                  NestJS Monorepo Architecture — 8 Decoupled Modules
                 </h3>
                 <span className="text-[10px] font-mono uppercase bg-[#EFF6FF] text-[#2563EB] px-2.5 py-1 rounded border border-[#BFDBFE] font-bold">
                   MICRO-SERVICES ARCHITECTURE
@@ -716,7 +716,7 @@ export default function NEETClient() {
           </section>
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              08 ΓÇö VERIFICATION & SYSTEM IMPACT REPORT
+              08 — VERIFICATION & SYSTEM IMPACT REPORT
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <section className="mb-10 sm:mb-14 scroll-mt-24" id="impact">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">

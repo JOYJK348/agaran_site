@@ -7,7 +7,7 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 /* ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
-   Scroll-reveal animation wrapper ΓÇö matching About & Work pages
+   Scroll-reveal animation wrapper — matching About & Work pages
 ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
 function Reveal({
   children,
@@ -317,7 +317,7 @@ export default function ContactClient() {
 
       <main className="relative min-h-screen bg-white text-[#0F172A] pt-20 sm:pt-28 pb-20 sm:pb-28 font-sans selection:bg-[#2563EB] selection:text-white overflow-hidden">
         
-        {/* Ambient Radial Dot Mesh Backdrop & Orbs ΓÇö matching About & Work pages */}
+        {/* Ambient Radial Dot Mesh Backdrop & Orbs — matching About & Work pages */}
         <div className="absolute inset-0 bg-[radial-gradient(#BFDBFE_1px,transparent_1px)] [background-size:32px_32px] opacity-40 pointer-events-none" />
         <div className="absolute top-[-15%] right-[-10%] w-[650px] h-[650px] rounded-full bg-[#2563EB]/14 blur-[130px] pointer-events-none" />
         <div className="absolute top-[40%] left-[-12%] w-[600px] h-[600px] rounded-full bg-[#3B82F6]/12 blur-[120px] pointer-events-none" />
@@ -349,11 +349,11 @@ export default function ContactClient() {
 
             <Reveal delay={0.2}>
               <p className="text-center text-sm sm:text-lg lg:text-xl font-medium leading-relaxed text-slate-600 w-full max-w-5xl mx-auto mb-8">
-                Tell us what you need. Choose an option below and share your details ΓÇö our team will reply within 2 hours.
+                Tell us what you need. Choose an option below and share your details — our team will reply within 2 hours.
               </p>
             </Reveal>
 
-            {/* Executive Quick Highlights Strip ΓÇö matching Work & About pages */}
+            {/* Executive Quick Highlights Strip — matching Work & About pages */}
             <Reveal delay={0.28}>
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-5xl mx-auto text-center text-xs">
                 <div className="p-4 rounded-2xl bg-white border border-slate-200/90 shadow-2xs space-y-0.5 hover:border-[#BFDBFE] transition-all">

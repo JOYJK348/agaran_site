@@ -35,7 +35,7 @@ export default function AILearningClient() {
           </div>
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              PROJECT TITLE & METADATA ΓÇö OVERHAULED EXECUTIVE HERO
+              PROJECT TITLE & METADATA — OVERHAULED EXECUTIVE HERO
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <header className="mb-10 sm:mb-14">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-[#EFF6FF] border border-[#BFDBFE] text-[#2563EB] font-extrabold text-[10px] sm:text-xs uppercase tracking-wider mb-4">
@@ -44,16 +44,16 @@ export default function AILearningClient() {
             </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-[3.75rem] font-black tracking-tight text-[#0F172A] leading-[1.12] mb-6">
-              ZHI ΓÇö <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#2563EB] via-[#0284C7] to-[#0D9488]">Learn While Playing</span>
+              ZHI — <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#2563EB] via-[#0284C7] to-[#0D9488]">Learn While Playing</span>
             </h1>
 
             <div className="p-5 sm:p-7 rounded-2xl bg-slate-50/80 border border-slate-200/90 mb-8 space-y-3">
               <p className="text-sm sm:text-lg md:text-xl font-medium leading-relaxed text-slate-700 text-left sm:text-justify">
-                ZHI is a <strong className="font-extrabold text-[#2563EB]">production-grade, multi-portal EdTech SaaS platform</strong> purpose-built for early childhood foundation learning (<strong className="font-extrabold text-slate-900">Pre-KG, LKG, UKG, and 1st Standard</strong>). It combines <strong className="font-extrabold text-[#2563EB]">four distinct authenticated portals</strong> ΓÇö Super Admin, School Admin, Parent, and Student ΓÇö each with its own role-specific dashboard and business logic. The platform serves two distinct customer segments: <strong className="font-extrabold text-slate-900">B2C individual parents</strong> via Razorpay subscription plans, and <strong className="font-extrabold text-slate-900">B2B school institutions</strong> via manual invoice and bank transfer activation.
+                ZHI is a <strong className="font-extrabold text-[#2563EB]">production-grade, multi-portal EdTech SaaS platform</strong> purpose-built for early childhood foundation learning (<strong className="font-extrabold text-slate-900">Pre-KG, LKG, UKG, and 1st Standard</strong>). It combines <strong className="font-extrabold text-[#2563EB]">four distinct authenticated portals</strong> — Super Admin, School Admin, Parent, and Student — each with its own role-specific dashboard and business logic. The platform serves two distinct customer segments: <strong className="font-extrabold text-slate-900">B2C individual parents</strong> via Razorpay subscription plans, and <strong className="font-extrabold text-slate-900">B2B school institutions</strong> via manual invoice and bank transfer activation.
               </p>
             </div>
 
-            {/* Document Metadata Grid ΓÇö Rich Executive Micro-Cards */}
+            {/* Document Metadata Grid — Rich Executive Micro-Cards */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 text-xs sm:text-sm">
               <div className="p-4 rounded-xl sm:rounded-2xl bg-[#EFF6FF] border border-[#BFDBFE] space-y-1">
                 <div className="font-extrabold text-[#2563EB] uppercase tracking-wider text-[9px] sm:text-xs">Platform Name</div>
@@ -98,7 +98,7 @@ export default function AILearningClient() {
                 </div>
                 <div className="text-[10px] font-mono uppercase bg-[#EFF6FF] text-[#2563EB] border border-[#BFDBFE] px-3 py-1 rounded-md font-bold self-start sm:self-auto flex items-center gap-1.5 shadow-2xs">
                   <span className="w-2 h-2 rounded-full bg-[#2563EB] animate-pulse" />
-                  ZHI PLATFORM v3.1 ΓÇö 4 PORTALS ACTIVE
+                  ZHI PLATFORM v3.1 — 4 PORTALS ACTIVE
                 </div>
               </div>
 
@@ -170,7 +170,7 @@ export default function AILearningClient() {
               {/* Bottom Visual Subtitle */}
               <div className="pt-3 border-t border-slate-200 flex flex-col sm:flex-row items-start sm:items-center justify-between text-[11px] text-slate-500 font-mono gap-1">
                 <span>[ PLATFORM ARCHITECTURE TOPOLOGY &bull; DUAL-MODEL EDTECH SYSTEM ]</span>
-                <span className="text-[#2563EB] font-bold">Figure 1.0 ΓÇö Four Role-Based Authenticated Portals</span>
+                <span className="text-[#2563EB] font-bold">Figure 1.0 — Four Role-Based Authenticated Portals</span>
               </div>
             </div>
           </div>
@@ -178,7 +178,7 @@ export default function AILearningClient() {
           <hr className="border-slate-200 my-10 sm:my-14" />
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              01 ΓÇö PROJECT OVERVIEW ΓÇö REDESIGNED EXECUTIVE SPLIT LAYOUT
+              01 — PROJECT OVERVIEW — REDESIGNED EXECUTIVE SPLIT LAYOUT
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <section className="mb-12 sm:mb-16 scroll-mt-24" id="overview">
             <div className="flex items-center gap-3 mb-6 sm:mb-8">
@@ -188,7 +188,7 @@ export default function AILearningClient() {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start w-full">
               
-              {/* Left Column (2/3) ΓÇö Deep Narrative with Callout Box */}
+              {/* Left Column (2/3) — Deep Narrative with Callout Box */}
               <div className="lg:col-span-2 space-y-5 text-slate-700 font-medium text-sm sm:text-base leading-relaxed text-left sm:text-justify w-full">
                 <p>
                   ZHI is a full-stack, production-grade early childhood learning platform that replaces fragmented PDF worksheets and passive YouTube playlists with a <strong className="font-extrabold text-[#2563EB]">structured, interactive digital curriculum</strong>. The platform was engineered to serve two distinct business models simultaneously: <strong className="font-extrabold text-slate-900">B2C individual parents</strong> who subscribe to monthly plans for their child&apos;s home learning, and <strong className="font-extrabold text-slate-900">B2B school institutions</strong> that pay a per-student monthly fee to unlock full curriculum access for every enrolled student.
@@ -206,14 +206,14 @@ export default function AILearningClient() {
                 </div>
 
                 <p>
-                  The core challenge of building ZHI was not just building a learning portal ΓÇö it was building <strong className="font-extrabold text-[#2563EB]">four fundamentally different applications</strong> that share a unified Next.js backend architecture, and a common authentication system with <strong className="font-extrabold text-slate-900">strict role-based access control</strong>. Each portal serves a completely different user persona with entirely different data needs, UI flows, and business rules.
+                  The core challenge of building ZHI was not just building a learning portal — it was building <strong className="font-extrabold text-[#2563EB]">four fundamentally different applications</strong> that share a unified Next.js backend architecture, and a common authentication system with <strong className="font-extrabold text-slate-900">strict role-based access control</strong>. Each portal serves a completely different user persona with entirely different data needs, UI flows, and business rules.
                 </p>
                 <p>
-                  Agaran designed and engineered the complete system from <strong className="font-extrabold text-[#2563EB]">multi-role JWT authentication middleware</strong>, secure platform architecture, <strong className="font-extrabold text-slate-900">payment integration with webhook fallback safety</strong>, and four full frontend portals ΓÇö all delivered as a cohesive, live production system.
+                  Agaran designed and engineered the complete system from <strong className="font-extrabold text-[#2563EB]">multi-role JWT authentication middleware</strong>, secure platform architecture, <strong className="font-extrabold text-slate-900">payment integration with webhook fallback safety</strong>, and four full frontend portals — all delivered as a cohesive, live production system.
                 </p>
               </div>
 
-              {/* Right Column (1/3) ΓÇö Executive Snapshot & Key Pillars */}
+              {/* Right Column (1/3) — Executive Snapshot & Key Pillars */}
               <div className="lg:col-span-1 p-5 sm:p-6 rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-5 w-full">
                 <div className="text-xs font-black uppercase tracking-wider text-[#0F172A] pb-3 border-b border-slate-200 flex items-center justify-between">
                   <span>EXECUTIVE SUMMARY</span>
@@ -259,7 +259,7 @@ export default function AILearningClient() {
           </section>
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              02 ΓÇö THE CHALLENGE
+              02 — THE CHALLENGE
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <section className="mb-10 sm:mb-14 scroll-mt-24" id="challenge">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
@@ -274,7 +274,7 @@ export default function AILearningClient() {
                 </div>
                 <h3 className="text-sm sm:text-base font-extrabold text-slate-900">PDF &amp; YouTube Dependency</h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
-                  Schools and parents had <strong className="font-extrabold text-rose-700">no structured digital curriculum</strong> for Pre-KG to 1st Std. Learning happened through scattered WhatsApp PDFs, random YouTube videos, and printed sheets ΓÇö with <strong className="font-extrabold text-slate-900">zero tracking, zero progress data</strong>, and zero engagement feedback for parents or teachers.
+                  Schools and parents had <strong className="font-extrabold text-rose-700">no structured digital curriculum</strong> for Pre-KG to 1st Std. Learning happened through scattered WhatsApp PDFs, random YouTube videos, and printed sheets — with <strong className="font-extrabold text-slate-900">zero tracking, zero progress data</strong>, and zero engagement feedback for parents or teachers.
                 </p>
               </div>
               <div className="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-amber-50/60 border border-amber-200/80 space-y-2">
@@ -283,7 +283,7 @@ export default function AILearningClient() {
                 </div>
                 <h3 className="text-sm sm:text-base font-extrabold text-slate-900">Past Payment Failures</h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
-                  Prior EdTech systems faced a critical failure mode: parents would pay via Razorpay, but webhook misses or race conditions meant course access never activated. Money was deducted with <strong className="font-extrabold text-amber-800">zero access granted</strong> ΓÇö a trust-destroying user experience that ZHI required a <strong className="font-extrabold text-[#2563EB]">bulletproof verification engine</strong> to solve.
+                  Prior EdTech systems faced a critical failure mode: parents would pay via Razorpay, but webhook misses or race conditions meant course access never activated. Money was deducted with <strong className="font-extrabold text-amber-800">zero access granted</strong> — a trust-destroying user experience that ZHI required a <strong className="font-extrabold text-[#2563EB]">bulletproof verification engine</strong> to solve.
                 </p>
               </div>
               <div className="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-sky-50/60 border border-sky-200/80 space-y-2">
@@ -299,25 +299,25 @@ export default function AILearningClient() {
           </section>
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              03 ΓÇö PORTAL ARCHITECTURE ΓÇö THE FOUR USER SYSTEMS
+              03 — PORTAL ARCHITECTURE — THE FOUR USER SYSTEMS
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <section className="mb-10 sm:mb-14 scroll-mt-24" id="portals">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
               <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-white bg-[#0F172A] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded">03</span>
-              <h2 className="text-xl sm:text-3xl font-extrabold text-[#0F172A] tracking-tight">PORTAL ARCHITECTURE ΓÇö FOUR USER SYSTEMS</h2>
+              <h2 className="text-xl sm:text-3xl font-extrabold text-[#0F172A] tracking-tight">PORTAL ARCHITECTURE — FOUR USER SYSTEMS</h2>
             </div>
 
             <p className="text-xs sm:text-base font-medium text-slate-600 leading-relaxed text-left sm:text-justify mb-6 sm:mb-8">
-              ZHI is not a single portal with a &ldquo;role toggle.&rdquo; It is <strong className="font-extrabold text-[#2563EB]">four fully independent, purpose-designed user systems</strong> ΓÇö each with its own frontend routes, access permissions, data visibility rules, and business logic ΓÇö served from a shared Next.js backend with <strong className="font-extrabold text-slate-900">centralized JWT authentication middleware</strong>.
+              ZHI is not a single portal with a &ldquo;role toggle.&rdquo; It is <strong className="font-extrabold text-[#2563EB]">four fully independent, purpose-designed user systems</strong> — each with its own frontend routes, access permissions, data visibility rules, and business logic — served from a shared Next.js backend with <strong className="font-extrabold text-slate-900">centralized JWT authentication middleware</strong>.
             </p>
 
             <div className="space-y-4 sm:space-y-6">
 
-              {/* Portal 01 ΓÇö Super Admin */}
+              {/* Portal 01 — Super Admin */}
               <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-3 sm:space-y-4">
                 <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                   <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-[#2563EB] bg-[#EFF6FF] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full border border-[#BFDBFE]">PORTAL 01</span>
-                  <h3 className="text-base sm:text-xl font-extrabold text-[#0F172A]">Super Admin ΓÇö Platform Command Center</h3>
+                  <h3 className="text-base sm:text-xl font-extrabold text-[#0F172A]">Super Admin — Platform Command Center</h3>
                   <span className="text-[10px] sm:text-xs font-extrabold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">LIVE</span>
                 </div>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
@@ -330,7 +330,7 @@ export default function AILearningClient() {
                     { title: "Pending Registration Approvals", desc: "Review and approve parent+student account creation requests. Every new parent registration triggers a pending approval queue before the account is activated." },
                     { title: "Payment Verification Center", desc: "Track all subscription revenues, verify unverified school bank transfers (mark UTR, confirm credit), and force-activate access for parents whose payment cleared but auto-webhook failed." },
                     { title: "Curriculum Settings", desc: "Map education boards, add grades, manage chapters and lessons, publish quizzes, and maintain the entire content library across all subjects and terms." },
-                    { title: "Alert System", desc: "Live alert panel: pending_approvals count, pending_payments unverified, expiring_plans near renewal ΓÇö with severity ratings (High / Medium / Soon)." },
+                    { title: "Alert System", desc: "Live alert panel: pending_approvals count, pending_payments unverified, expiring_plans near renewal — with severity ratings (High / Medium / Soon)." },
                   ].map((item) => (
                     <div key={item.title} className="p-3 sm:p-3.5 rounded-lg sm:rounded-xl bg-[#F8FAFC] border border-slate-200 space-y-1">
                       <div className="text-xs font-extrabold text-[#2563EB]">{item.title}</div>
@@ -340,21 +340,21 @@ export default function AILearningClient() {
                 </div>
               </div>
 
-              {/* Portal 02 ΓÇö School Admin */}
+              {/* Portal 02 — School Admin */}
               <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-3 sm:space-y-4">
                 <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                   <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-[#0284C7] bg-sky-50 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full border border-sky-200">PORTAL 02</span>
-                  <h3 className="text-base sm:text-xl font-extrabold text-[#0F172A]">School Admin ΓÇö Institution Management Portal</h3>
+                  <h3 className="text-base sm:text-xl font-extrabold text-[#0F172A]">School Admin — Institution Management Portal</h3>
                   <span className="text-[10px] sm:text-xs font-extrabold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">LIVE</span>
                 </div>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
-                  The School Admin portal is issued to the principal or administrator of each enrolled institution. Each school admin has a <strong className="font-extrabold text-[#0284C7]">strictly scoped data view</strong> ΓÇö they can see only their own school&apos;s students, parents, and analytics. They cannot access data from any other school. This is enforced via <strong className="font-extrabold text-slate-900">JWT-bound school_id claims</strong> on every request.
+                  The School Admin portal is issued to the principal or administrator of each enrolled institution. Each school admin has a <strong className="font-extrabold text-[#0284C7]">strictly scoped data view</strong> — they can see only their own school&apos;s students, parents, and analytics. They cannot access data from any other school. This is enforced via <strong className="font-extrabold text-slate-900">JWT-bound school_id claims</strong> on every request.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-3">
                   {[
                     { title: "School Dashboard KPIs", desc: "Real-time stats for their school: total students enrolled, students active today (within last 24h), total stars given out platform-wide within the school, and number of unique grade sections active." },
-                    { title: "Students Directory", desc: "Full student roster management ΓÇö view all enrolled students, add new students, update roll numbers and section assignments, and remove students. Bulk import of student records from school management systems." },
-                    { title: "Class Pulse ΓÇö Grade Analytics", desc: "Per-grade average progress tracking. Visual progress bar per grade (LKG, UKG, Grade 1) showing what % of the curriculum each class has completed on average. Color-coded green/amber/red based on progress thresholds." },
+                    { title: "Students Directory", desc: "Full student roster management — view all enrolled students, add new students, update roll numbers and section assignments, and remove students. Bulk import of student records from school management systems." },
+                    { title: "Class Pulse — Grade Analytics", desc: "Per-grade average progress tracking. Visual progress bar per grade (LKG, UKG, Grade 1) showing what % of the curriculum each class has completed on average. Color-coded green/amber/red based on progress thresholds." },
                     { title: "Needs Attention Panel", desc: "Smart alert system that surfaces students with overall_progress < 30% or who have had no activity in the last 7 days. School admin can identify at-risk learners and follow up with parents." },
                     { title: "Top Performers Leaderboard", desc: "Star-based ranking of the top 5 performers in the school by total_stars_earned. Encourages healthy academic competition and highlights consistent learners for recognition." },
                     { title: "Parents Directory & Plan Billing", desc: "View all parent profiles linked to their school students. Access school subscription plan details and billing status (Bank transfer / Invoice-based activation confirmed by Super Admin)." },
@@ -367,20 +367,20 @@ export default function AILearningClient() {
                 </div>
               </div>
 
-              {/* Portal 03 ΓÇö Parent */}
+              {/* Portal 03 — Parent */}
               <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-3 sm:space-y-4">
                 <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                   <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-emerald-700 bg-emerald-50 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full border border-emerald-200">PORTAL 03</span>
-                  <h3 className="text-base sm:text-xl font-extrabold text-[#0F172A]">Parent Portal ΓÇö Child Progress Monitoring Dashboard</h3>
+                  <h3 className="text-base sm:text-xl font-extrabold text-[#0F172A]">Parent Portal — Child Progress Monitoring Dashboard</h3>
                   <span className="text-[10px] sm:text-xs font-extrabold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">LIVE</span>
                 </div>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
-                  The Parent Portal gives every parent a <strong className="font-extrabold text-emerald-700">real-time window</strong> into their child&apos;s learning journey. Built with simplicity-first design (parents with limited digital literacy must be able to understand their child&apos;s progress at a glance), the portal provides <strong className="font-extrabold text-[#2563EB]">multi-child switching, per-subject progress tracking, quiz attempt logs, badge achievements, milestone timelines</strong>, and subscription plan management ΓÇö all in a single unified dashboard.
+                  The Parent Portal gives every parent a <strong className="font-extrabold text-emerald-700">real-time window</strong> into their child&apos;s learning journey. Built with simplicity-first design (parents with limited digital literacy must be able to understand their child&apos;s progress at a glance), the portal provides <strong className="font-extrabold text-[#2563EB]">multi-child switching, per-subject progress tracking, quiz attempt logs, badge achievements, milestone timelines</strong>, and subscription plan management — all in a single unified dashboard.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-3">
                   {[
-                    { title: "Multi-Child Switcher", desc: "Parents with multiple children can switch between child profiles using a dropdown selector. The active child's full progress data is pre-fetched and cached using React Query ΓÇö switching is instant with no load delay." },
-                    { title: "Learning Journey KPIs", desc: "Four top-level stats for the active child: Lessons Completed, Learning Streak (consecutive active days), Badges Earned, and Quiz Attempts ΓÇö all pulled from live platform data." },
+                    { title: "Multi-Child Switcher", desc: "Parents with multiple children can switch between child profiles using a dropdown selector. The active child's full progress data is pre-fetched and cached using React Query — switching is instant with no load delay." },
+                    { title: "Learning Journey KPIs", desc: "Four top-level stats for the active child: Lessons Completed, Learning Streak (consecutive active days), Badges Earned, and Quiz Attempts — all pulled from live platform data." },
                     { title: "Subject-wise Progress Map", desc: "Per-subject completion progress bars (English, Tamil, Maths, EVS, GK) showing percentage of chapters and lessons completed within each subject. Expandable to chapter-level detail with lesson-by-lesson unlock status." },
                     { title: "Quiz History Drawer", desc: "Full quiz attempt log: quiz name, subject, lesson linked, score (e.g., 8/10), percentage, pass/fail status, time taken, and attempt timestamp. Summary metrics: total attempts, total passed, failed count, and average score percentage." },
                     { title: "Recent Milestones Timeline", desc: "Chronological activity feed combining quiz completions, chapter finishes, and learning streaks into a milestone timeline. Parents see what their child did most recently without needing to understand raw progress numbers." },
@@ -394,11 +394,11 @@ export default function AILearningClient() {
                 </div>
               </div>
 
-              {/* Portal 04 ΓÇö Student */}
+              {/* Portal 04 — Student */}
               <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-3 sm:space-y-4">
                 <div className="flex flex-wrap items-center gap-2 sm:gap-3">
                   <span className="text-[9px] sm:text-[10px] font-black uppercase tracking-widest text-amber-700 bg-amber-50 px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full border border-amber-200">PORTAL 04</span>
-                  <h3 className="text-base sm:text-xl font-extrabold text-[#0F172A]">Student Portal ΓÇö Kids Interactive Learning Hub</h3>
+                  <h3 className="text-base sm:text-xl font-extrabold text-[#0F172A]">Student Portal — Kids Interactive Learning Hub</h3>
                   <span className="text-[10px] sm:text-xs font-extrabold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">LIVE</span>
                 </div>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
@@ -407,10 +407,10 @@ export default function AILearningClient() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 sm:gap-3">
                   {[
                     { title: "Student Home Dashboard", desc: "Personalized greeting with grade, current overall progress %, total stars earned, badges count, current learning streak, and max streak. Shows today's lessons with thumbnail previews, in-progress status indicators, and next lesson unlock requirements." },
-                    { title: "Learn ΓÇö Structured Lesson Library", desc: "Grade-specific, term-sequenced lesson library. Subjects covered: English Phonics (Capital/Small letters, CVC word families -at/-an/-ig, Sight Words, Rhymes), Early Maths (Numbers 1ΓÇô100, Shapes, Missing Number Trains), Tamil (α«ëα«»α«┐α«░α»ì & α««α»åα«»α»ì α«Äα«┤α»üα«ñα»ìα«ñα»üα«òα»ìα«òα«│α»ì), and EVS/GK (Animals, Body Parts, Seasons, Fruits)." },
+                    { title: "Learn — Structured Lesson Library", desc: "Grade-specific, term-sequenced lesson library. Subjects covered: English Phonics (Capital/Small letters, CVC word families -at/-an/-ig, Sight Words, Rhymes), Early Maths (Numbers 1–100, Shapes, Missing Number Trains), Tamil (α«ëα«»α«┐α«░α»ì & α««α»åα«»α»ì α«Äα«┤α»üα«ñα»ìα«ñα»üα«òα»ìα«òα«│α»ì), and EVS/GK (Animals, Body Parts, Seasons, Fruits)." },
                     { title: "Mascot Voice Tutorial Engine", desc: "Each lesson launches an audio-visual step-by-step mascot tutorial powered by Web Speech Synthesis TTS. The mascot speaks directly to the child ('Hello Explorer! Let us learn the -at family today!'), animates letter cards, and pronounces every word sound clearly." },
-                    { title: "Quiz ΓÇö Gamified Assessment", desc: "Post-lesson quizzes with interactive formats: WordSorterQuiz (drag letters into word families), PictureLetterMatch (match images to correct letters), MissingLettersTrain (complete the sequence), and RhymesPlayer sing-along activities. Each attempt is submitted to the backend, scored, and stored." },
-                    { title: "Games ΓÇö Mini Activity Engine", desc: "Standalone gamified activity modules beyond lesson-tied quizzes. Includes independent word building games, picture matching challenges, and counting activities. Stars are earned per correct answer and accumulate in the student's global star total." },
+                    { title: "Quiz — Gamified Assessment", desc: "Post-lesson quizzes with interactive formats: WordSorterQuiz (drag letters into word families), PictureLetterMatch (match images to correct letters), MissingLettersTrain (complete the sequence), and RhymesPlayer sing-along activities. Each attempt is submitted to the backend, scored, and stored." },
+                    { title: "Games — Mini Activity Engine", desc: "Standalone gamified activity modules beyond lesson-tied quizzes. Includes independent word building games, picture matching challenges, and counting activities. Stars are earned per correct answer and accumulate in the student's global star total." },
                     { title: "Progress Tracking & Badge Rewards", desc: "Every lesson watched, quiz submitted, and activity completed is logged to the student's progress record. Completion unlocks the next sequential lesson. Badge rewards are issued on milestones (First Steps, 10 Lessons, 5-Day Streak, etc.) and synced to the parent dashboard in real-time." },
                   ].map((item) => (
                     <div key={item.title} className="p-3 sm:p-3.5 rounded-lg sm:rounded-xl bg-[#F8FAFC] border border-slate-200 space-y-1">
@@ -425,7 +425,7 @@ export default function AILearningClient() {
           </section>
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              04 ΓÇö PAYMENT ENGINE & SUBSCRIPTION ARCHITECTURE
+              04 — PAYMENT ENGINE & SUBSCRIPTION ARCHITECTURE
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <section className="mb-10 sm:mb-14 scroll-mt-24" id="payment">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
@@ -434,7 +434,7 @@ export default function AILearningClient() {
             </div>
 
             <p className="text-xs sm:text-base font-medium text-slate-600 leading-relaxed text-left sm:text-justify mb-5 sm:mb-6">
-              ZHI runs a <strong className="font-extrabold text-[#2563EB]">dual-track monetization model</strong>: B2C individual parent subscriptions via Razorpay, and B2B school institution billing via manual invoice and bank transfer. The payment system was engineered with <strong className="font-extrabold text-[#2563EB]">bulletproof idempotency and triple-verification</strong> to prevent the trust-breaking failure mode of &ldquo;payment deducted but access not granted&rdquo; ΓÇö a critical issue from prior EdTech projects.
+              ZHI runs a <strong className="font-extrabold text-[#2563EB]">dual-track monetization model</strong>: B2C individual parent subscriptions via Razorpay, and B2B school institution billing via manual invoice and bank transfer. The payment system was engineered with <strong className="font-extrabold text-[#2563EB]">bulletproof idempotency and triple-verification</strong> to prevent the trust-breaking failure mode of &ldquo;payment deducted but access not granted&rdquo; — a critical issue from prior EdTech projects.
             </p>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 mb-6">
@@ -442,7 +442,7 @@ export default function AILearningClient() {
               <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-3 sm:space-y-4">
                 <h3 className="font-extrabold text-[#0F172A] text-sm sm:text-base flex items-center gap-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-[#2563EB] shrink-0" />
-                  B2C ΓÇö Individual Parent Subscription Plans (Razorpay)
+                  B2C — Individual Parent Subscription Plans (Razorpay)
                 </h3>
                 <div className="space-y-2.5 text-xs sm:text-sm">
                   {[
@@ -477,10 +477,10 @@ export default function AILearningClient() {
               <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-3 sm:space-y-4">
                 <h3 className="font-extrabold text-[#0F172A] text-sm sm:text-base flex items-center gap-2">
                   <span className="w-2.5 h-2.5 rounded-full bg-emerald-600 shrink-0" />
-                  B2B ΓÇö School Institution Pack (Manual Invoice)
+                  B2B — School Institution Pack (Manual Invoice)
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
-                  Schools pay <strong className="font-extrabold text-emerald-700">Γé╣50 per child per month</strong> via bank transfer or cheque. For a school with 500 students, this is <strong className="font-extrabold text-slate-900">Γé╣25,000/month</strong> ΓÇö a bulk amount that cannot go through standard Razorpay UPI (limit issues, GST invoice requirements, PO approval cycles). The B2B flow is deliberately manual with Super Admin verification as the activation gate.
+                  Schools pay <strong className="font-extrabold text-emerald-700">Γé╣50 per child per month</strong> via bank transfer or cheque. For a school with 500 students, this is <strong className="font-extrabold text-slate-900">Γé╣25,000/month</strong> — a bulk amount that cannot go through standard Razorpay UPI (limit issues, GST invoice requirements, PO approval cycles). The B2B flow is deliberately manual with Super Admin verification as the activation gate.
                 </p>
                 <div className="p-3 rounded-lg sm:rounded-xl bg-white border border-slate-200 text-[11px] sm:text-xs font-mono text-slate-700 leading-relaxed space-y-1">
                   <div className="font-black text-emerald-700 text-[10px] uppercase mb-1">School Payment Flow</div>
@@ -488,7 +488,7 @@ export default function AILearningClient() {
                   <div>2. School issues Purchase Order (PO) from accounts department</div>
                   <div>3. Agaran Finance raises GST invoice (PDF, custom)</div>
                   <div>4. School transfers via NEFT/IMPS or posts cheque</div>
-                  <div>5. Accountant confirms bank statement credit (2ΓÇô3 day delay)</div>
+                  <div>5. Accountant confirms bank statement credit (2–3 day delay)</div>
                   <div>6. Super Admin marks UTR number &rarr; [Mark as Paid] in dashboard</div>
                   <div>7. System activates: all students in school &rarr; FULL ACCESS</div>
                   <div>8. Transaction logged in system billing audit records</div>
@@ -508,12 +508,12 @@ export default function AILearningClient() {
           </section>
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              05 ΓÇö CURRICULUM ARCHITECTURE
+              05 — CURRICULUM ARCHITECTURE
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <section className="mb-10 sm:mb-14 scroll-mt-24" id="curriculum">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
               <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-white bg-[#0F172A] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded">05</span>
-              <h2 className="text-xl sm:text-3xl font-extrabold text-[#0F172A] tracking-tight">CURRICULUM ARCHITECTURE ΓÇö SUBJECTS &amp; MODULES</h2>
+              <h2 className="text-xl sm:text-3xl font-extrabold text-[#0F172A] tracking-tight">CURRICULUM ARCHITECTURE — SUBJECTS &amp; MODULES</h2>
             </div>
 
             <p className="text-xs sm:text-base font-medium text-slate-600 leading-relaxed text-left sm:text-justify mb-5 sm:mb-6">
@@ -528,7 +528,7 @@ export default function AILearningClient() {
                   color: "text-[#2563EB]",
                   bg: "bg-[#EFF6FF]",
                   border: "border-[#BFDBFE]",
-                  chapters: ["Capital Letters AΓÇôZ (with mascot pronunciation)", "Small Letters aΓÇôz (recognition & matching)", "Capital-to-Small Letter Matching games", "Phonics Soundboard (letter sound isolation)", "CVC Word Families: -at (cat, hat, mat, bat), -an (can, fan, man, van), -ig (big, dig, fig, wig), -op (hop, mop, pop, top)", "Sight Word recognition (the, and, is, was, etc.)", "Story Reading Time (guided reading with TTS)", "Nursery Rhymes Sing-along player (animated)"]
+                  chapters: ["Capital Letters A–Z (with mascot pronunciation)", "Small Letters a–z (recognition & matching)", "Capital-to-Small Letter Matching games", "Phonics Soundboard (letter sound isolation)", "CVC Word Families: -at (cat, hat, mat, bat), -an (can, fan, man, van), -ig (big, dig, fig, wig), -op (hop, mop, pop, top)", "Sight Word recognition (the, and, is, was, etc.)", "Story Reading Time (guided reading with TTS)", "Nursery Rhymes Sing-along player (animated)"]
                 },
                 {
                   subject: "Early Mathematics & Logic",
@@ -544,7 +544,7 @@ export default function AILearningClient() {
                   color: "text-emerald-700",
                   bg: "bg-emerald-50",
                   border: "border-emerald-200",
-                  chapters: ["α«ëα«»α«┐α«░α»ì α«Äα«┤α»üα«ñα»ìα«ñα»üα«òα»ìα«òα«│α»ì ΓÇö 12 vowels (α«à, α«å, α«ç, α«ê, α«ë, α«è, α«Ä, α«Å, α«É, α«Æ, α«ô, α«ö)", "α««α»åα«»α»ì α«Äα«┤α»üα«ñα»ìα«ñα»üα«òα»ìα«òα«│α»ì ΓÇö 18 consonants recognition", "Tamil letter audio pronunciation with mascot", "Picture-to-word letter matching activities", "Tamil rhymes with animated sing-along player", "Basic Tamil vocabulary building (objects, animals, colors)"]
+                  chapters: ["α«ëα«»α«┐α«░α»ì α«Äα«┤α»üα«ñα»ìα«ñα»üα«òα»ìα«òα«│α»ì — 12 vowels (α«à, α«å, α«ç, α«ê, α«ë, α«è, α«Ä, α«Å, α«É, α«Æ, α«ô, α«ö)", "α««α»åα«»α»ì α«Äα«┤α»üα«ñα»ìα«ñα»üα«òα»ìα«òα«│α»ì — 18 consonants recognition", "Tamil letter audio pronunciation with mascot", "Picture-to-word letter matching activities", "Tamil rhymes with animated sing-along player", "Basic Tamil vocabulary building (objects, animals, colors)"]
                 },
                 {
                   subject: "EVS & General Knowledge",
@@ -552,7 +552,7 @@ export default function AILearningClient() {
                   color: "text-amber-700",
                   bg: "bg-amber-50",
                   border: "border-amber-200",
-                  chapters: ["My Body Parts (head, shoulders, eyes, etc. ΓÇö interactive)", "Animals of the World (domestic & wild ΓÇö picture quiz)", "Seasons & Weather (summer, winter, rainy ΓÇö visual cards)", "Fruits & Vegetables identification (picture matching)", "Community Helpers (teacher, doctor, police, etc.)", "Colors & Shapes in nature (environmental awareness)"]
+                  chapters: ["My Body Parts (head, shoulders, eyes, etc. — interactive)", "Animals of the World (domestic & wild — picture quiz)", "Seasons & Weather (summer, winter, rainy — visual cards)", "Fruits & Vegetables identification (picture matching)", "Community Helpers (teacher, doctor, police, etc.)", "Colors & Shapes in nature (environmental awareness)"]
                 },
               ].map((sub) => (
                 <div key={sub.subject} className="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white border border-slate-200 shadow-2xs hover:border-[#BFDBFE] transition-colors space-y-2.5 sm:space-y-3">
@@ -576,17 +576,17 @@ export default function AILearningClient() {
           </section>
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              06 ΓÇö HOW IT WORKS ΓÇö USER JOURNEYS
+              06 — HOW IT WORKS — USER JOURNEYS
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <section className="mb-10 sm:mb-14 scroll-mt-24" id="how-it-works">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
               <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-white bg-[#0F172A] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded">06</span>
-              <h2 className="text-xl sm:text-3xl font-extrabold text-[#0F172A] tracking-tight">HOW IT WORKS ΓÇö TWO USER JOURNEYS</h2>
+              <h2 className="text-xl sm:text-3xl font-extrabold text-[#0F172A] tracking-tight">HOW IT WORKS — TWO USER JOURNEYS</h2>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
               <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-3 sm:space-y-4">
-                <h3 className="font-extrabold text-[#2563EB] text-sm sm:text-base">B2C Journey ΓÇö Individual Parent</h3>
+                <h3 className="font-extrabold text-[#2563EB] text-sm sm:text-base">B2C Journey — Individual Parent</h3>
                 <div className="w-full rounded-lg sm:rounded-xl bg-white border border-slate-200 p-3 sm:p-4 overflow-x-auto">
                   <div className="min-w-[280px] sm:min-w-[400px] flex flex-col gap-2 text-xs font-bold">
                     {[
@@ -611,14 +611,14 @@ export default function AILearningClient() {
               </div>
 
               <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#F8FAFC] border border-slate-200 space-y-3 sm:space-y-4">
-                <h3 className="font-extrabold text-emerald-700 text-sm sm:text-base">B2B Journey ΓÇö School Institution</h3>
+                <h3 className="font-extrabold text-emerald-700 text-sm sm:text-base">B2B Journey — School Institution</h3>
                 <div className="w-full rounded-lg sm:rounded-xl bg-white border border-slate-200 p-3 sm:p-4 overflow-x-auto">
                   <div className="min-w-[280px] sm:min-w-[400px] flex flex-col gap-2 text-xs font-bold">
                     {[
                       { step: "01", label: "School Onboarding", desc: "Super Admin creates school account, assigns School Admin login credentials" },
                       { step: "02", label: "Student Registration", desc: "School Admin adds students (LKG/UKG/Grade 1, roll numbers, sections)" },
                       { step: "03", label: "Invoice Sent", desc: "Agaran Finance sends GST invoice ΓåÆ Γé╣50/child/month" },
-                      { step: "04", label: "Bank Transfer", desc: "School accounts dept transfers via NEFT/IMPS. Takes 2ΓÇô3 days." },
+                      { step: "04", label: "Bank Transfer", desc: "School accounts dept transfers via NEFT/IMPS. Takes 2–3 days." },
                       { step: "05", label: "Super Admin Verifies", desc: "UTR number logged ΓåÆ Mark as Paid ΓåÆ system activation triggered" },
                       { step: "06", label: "All Students Unlocked", desc: "Every student in school gets full curriculum access immediately" },
                     ].map((s, i, arr) => (
@@ -638,7 +638,7 @@ export default function AILearningClient() {
           </section>
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              07 ΓÇö SYSTEM ARCHITECTURE
+              07 — SYSTEM ARCHITECTURE
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <section className="mb-10 sm:mb-14 scroll-mt-24" id="architecture">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
@@ -654,7 +654,7 @@ export default function AILearningClient() {
 
               <div className="min-w-[600px] space-y-3">
                 <div className="p-3 rounded-lg sm:rounded-xl bg-white border border-slate-200 text-center">
-                  <div className="text-[10px] text-[#2563EB] font-black uppercase mb-1">CLIENT LAYER ΓÇö FOUR AUTHENTICATED PORTALS</div>
+                  <div className="text-[10px] text-[#2563EB] font-black uppercase mb-1">CLIENT LAYER — FOUR AUTHENTICATED PORTALS</div>
                   <div className="grid grid-cols-4 gap-2 text-[10px] sm:text-[11px]">
                     {["Super Admin /admin", "School Admin /school-admin", "Parent /parent", "Student /student"].map(p => (
                       <span key={p} className="bg-[#EFF6FF] px-2 py-1.5 rounded border border-[#BFDBFE] text-[#2563EB] font-bold truncate">{p}</span>
@@ -662,7 +662,7 @@ export default function AILearningClient() {
                   </div>
                 </div>
 
-                <div className="text-center text-slate-400 font-bold text-[11px]">&darr; Next.js Middleware ΓÇö JWT Role Validation &darr;</div>
+                <div className="text-center text-slate-400 font-bold text-[11px]">&darr; Next.js Middleware — JWT Role Validation &darr;</div>
 
                 <div className="p-3 rounded-lg sm:rounded-xl bg-white border border-slate-200 text-center">
                   <div className="text-[10px] text-[#0284C7] font-black uppercase mb-1">CORE SERVICES LAYER</div>
@@ -697,12 +697,12 @@ export default function AILearningClient() {
             </div>
 
             <p className="text-xs sm:text-sm font-medium text-slate-600 leading-relaxed text-left sm:text-justify">
-              <strong className="font-extrabold text-[#2563EB]">Architectural Design Decisions:</strong> The platform uses Next.js App Router for both frontend rendering and server services. Role-based access is enforced at the middleware layer using JWT claims ΓÇö every request is validated before reaching business logic. Enterprise data isolation ensures <strong className="font-extrabold text-slate-900">no cross-tenant data leakage between schools</strong>. The i18n architecture (next-intl) supports bilingual content delivery in English and Tamil across all four portals.
+              <strong className="font-extrabold text-[#2563EB]">Architectural Design Decisions:</strong> The platform uses Next.js App Router for both frontend rendering and server services. Role-based access is enforced at the middleware layer using JWT claims — every request is validated before reaching business logic. Enterprise data isolation ensures <strong className="font-extrabold text-slate-900">no cross-tenant data leakage between schools</strong>. The i18n architecture (next-intl) supports bilingual content delivery in English and Tamil across all four portals.
             </p>
           </section>
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              08 ΓÇö AGARAN'S ROLE
+              08 — AGARAN'S ROLE
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <section className="mb-10 sm:mb-14 scroll-mt-24" id="role">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
@@ -717,7 +717,7 @@ export default function AILearningClient() {
                 { title: "Bulletproof Payment Engine", desc: "Engineered the Razorpay integration with triple-verification (frontend ΓåÆ webhook ΓåÆ manual override), idempotency key enforcement, database transaction atomicity, audit trail logging, and Super Admin force-activate fallback." },
                 { title: "Curriculum Content Engine", desc: "Built the full curriculum data architecture: board ΓåÆ grade ΓåÆ subject ΓåÆ chapter ΓåÆ lesson ΓåÆ activity/quiz hierarchy. Implemented TTS-driven mascot voice tutorial engine, gamified quiz components (WordSorterQuiz, PictureLetterMatch, MissingLettersTrain), and badge reward system." },
                 { title: "B2B School Admin System", desc: "Designed and built the school-scoped admin portal with real-time student roster management, grade-wise class pulse analytics, needs-attention smart alerting (progress < 30% or 7-day inactivity), top performer leaderboard, and invoice-based school plan activation flow." },
-                { title: "Multi-language i18n Infrastructure", desc: "Implemented next-intl internationalization supporting English and Tamil across all portal routes, content delivery, and UI strings ΓÇö enabling the platform to serve Tamil-medium schools and parents who prefer their regional language interface." },
+                { title: "Multi-language i18n Infrastructure", desc: "Implemented next-intl internationalization supporting English and Tamil across all portal routes, content delivery, and UI strings — enabling the platform to serve Tamil-medium schools and parents who prefer their regional language interface." },
               ].map((item) => (
                 <div key={item.title} className="p-3.5 sm:p-4 rounded-lg sm:rounded-xl bg-[#F8FAFC] border border-slate-200 space-y-1 sm:space-y-1.5">
                   <div className="font-extrabold text-[#2563EB] text-xs sm:text-sm">{item.title}</div>
@@ -728,7 +728,7 @@ export default function AILearningClient() {
           </section>
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              09 ΓÇö TECHNOLOGY
+              09 — TECHNOLOGY
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <section className="mb-10 sm:mb-14 scroll-mt-24" id="technology">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
@@ -760,7 +760,7 @@ export default function AILearningClient() {
           </section>
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              10 ΓÇö PROJECT DETAILS ΓÇö EXECUTIVE MATRIX GRID
+              10 — PROJECT DETAILS — EXECUTIVE MATRIX GRID
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <section className="mb-10 sm:mb-14 scroll-mt-24" id="details">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
@@ -860,7 +860,7 @@ export default function AILearningClient() {
           </section>
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              11 ΓÇö OUTCOME
+              11 — OUTCOME
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <section className="mb-10 sm:mb-14 scroll-mt-24" id="outcome">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
@@ -872,8 +872,8 @@ export default function AILearningClient() {
               {[
                 { stat: "4 Portals", label: "Role-Based Systems", sub: "Super Admin, School Admin, Parent, Student", color: "text-[#2563EB]", bg: "bg-[#EFF6FF]", border: "border-[#BFDBFE]" },
                 { stat: "Γé╣0 Lost", label: "Payment Failures", sub: "Triple-verified, bulletproof payment engine", color: "text-emerald-600", bg: "bg-emerald-50", border: "border-emerald-200" },
-                { stat: "2 Models", label: "Revenue Streams", sub: "B2C Razorpay + B2B Invoice ΓÇö Dual monetization", color: "text-[#0284C7]", bg: "bg-sky-50", border: "border-sky-200" },
-                { stat: "100%", label: "Syllabus Coverage", sub: "English, Tamil, Maths, EVS, GK ΓÇö Term 1, 2, 3", color: "text-purple-600", bg: "bg-purple-50", border: "border-purple-200" },
+                { stat: "2 Models", label: "Revenue Streams", sub: "B2C Razorpay + B2B Invoice — Dual monetization", color: "text-[#0284C7]", bg: "bg-sky-50", border: "border-sky-200" },
+                { stat: "100%", label: "Syllabus Coverage", sub: "English, Tamil, Maths, EVS, GK — Term 1, 2, 3", color: "text-purple-600", bg: "bg-purple-50", border: "border-purple-200" },
               ].map((item) => (
                 <div key={item.label} className={`p-4 sm:p-5 rounded-xl sm:rounded-2xl ${item.bg} border ${item.border} text-center space-y-1`}>
                   <div className={`text-xl sm:text-3xl font-black ${item.color}`}>{item.stat}</div>
@@ -890,7 +890,7 @@ export default function AILearningClient() {
           </section>
 
           {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
-              12 ΓÇö CASE STUDY NAVIGATION
+              12 — CASE STUDY NAVIGATION
           ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
           <section className="pt-6 sm:pt-8 border-t border-slate-200" id="next-project">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">

@@ -159,7 +159,7 @@ function PhoneMockup({ current, isPaused }: { current: typeof pillars[0]; isPaus
   }, []);
 
   return (
-    <div className="relative w-[280px] xs:w-[300px] sm:w-[320px] rounded-[38px] bg-[#090D16] border-[6px] border-[#1e293b] shadow-[0_25px_60px_rgba(0,0,0,0.35)] overflow-hidden select-none">
+    <div className="relative w-[280px] xs:w-[300px] sm:w-[320px] rounded-[38px] bg-[#090D16] border-[6px] border-[#1e293b] shadow-[0_25px_60px_rgba(0,0,0,0.35)] overflow-hidden">
       {/* Dynamic Ambient Island Glow */}
       <div
         className="absolute -top-10 -right-10 w-44 h-44 rounded-full blur-3xl opacity-30 transition-colors duration-700 pointer-events-none"

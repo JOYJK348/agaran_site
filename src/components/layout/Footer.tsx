@@ -37,7 +37,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-[#090D16] text-white border-t border-slate-800 overflow-hidden select-none">
+    <footer className="relative bg-[#090D16] text-white border-t border-slate-800 overflow-hidden">
       {/* Background Glow Mesh */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[var(--container-max)] h-64 bg-blue-600/10 rounded-full blur-[140px] pointer-events-none" />
 

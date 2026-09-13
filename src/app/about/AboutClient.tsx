@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
@@ -67,35 +67,35 @@ const principles = [
     shortTitle: "SIMPLE FIRST",
     title: "Keep Things Simple First",
     desc: "We remove unnecessary clutter before building. Simple software works faster, stays reliable, and never confuses your users.",
-    highlight: "Zero Complexity ΓÇó Fast Performance",
+    highlight: "Zero Complexity • Fast Performance",
   },
   {
     num: "02",
     shortTitle: "LISTEN FIRST",
     title: "Understand Your Need First",
     desc: "We listen carefully to your exact business goals before writing code, ensuring we build the right solution on day one.",
-    highlight: "Deep Alignment ΓÇó Tailored Architecture",
+    highlight: "Deep Alignment • Tailored Architecture",
   },
   {
     num: "03",
     shortTitle: "REAL RESULTS",
     title: "Real Results Over Empty Talk",
     desc: "Working software in the hands of real users matters most. We focus on real-world impact and business performance.",
-    highlight: "Working Code ΓÇó Measurable Growth",
+    highlight: "Working Code • Measurable Growth",
   },
   {
     num: "04",
     shortTitle: "FULL OWNERSHIP",
     title: "We Stay With You All The Way",
     desc: "We take full responsibility from initial design to launch, deployment, and ongoing technical performance.",
-    highlight: "End-to-End Delivery ΓÇó Continuous Support",
+    highlight: "End-to-End Delivery • Continuous Support",
   },
   {
     num: "05",
     shortTitle: "KEEP UPGRADING",
     title: "Continuous, Goal-Driven Upgrades",
     desc: "Software needs active refinement. We test, optimize, and upgrade your system based on real operational feedback.",
-    highlight: "Proactive Maintenance ΓÇó Scale Ready",
+    highlight: "Proactive Maintenance • Scale Ready",
   },
 ];
 
@@ -158,7 +158,7 @@ export default function AboutClient() {
 
             <Reveal delay={0.18}>
               <p className="text-center text-sm sm:text-lg lg:text-xl font-medium leading-relaxed text-slate-600 w-full max-w-4xl mx-auto mb-8">
-                We build custom web apps, automated business workflows, and AI tools for companies, schools, and teams ΓÇö simple to use, rock-solid, and made to drive revenue.
+                We build custom web apps, automated business workflows, and AI tools for companies, schools, and teams — simple to use, rock-solid, and made to drive revenue.
               </p>
             </Reveal>
 
@@ -233,7 +233,7 @@ export default function AboutClient() {
                       tag: "ARCHITECTURE",
                       title: "Production-First Engineering",
                       desc: "We don't build throwaway prototypes. Every system is architected with clean, scalable code, 100% type safety, and zero hidden technical debt.",
-                      pill: "TypeScript ΓÇó NestJS ΓÇó Next.js",
+                      pill: "TypeScript • NestJS • Next.js",
                       icon: (
                         <svg className="w-5 h-5 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                           <path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
@@ -245,7 +245,7 @@ export default function AboutClient() {
                       tag: "AUTOMATION",
                       title: "Autonomous AI & Workflows",
                       desc: "We integrate intelligent AI agents and real-time backend queues to automate repetitive operational tasks and customer interactions 24/7.",
-                      pill: "24/7 Autopilot ΓÇó AI Workflows",
+                      pill: "24/7 Autopilot • AI Workflows",
                       icon: (
                         <svg className="w-5 h-5 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                           <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -257,7 +257,7 @@ export default function AboutClient() {
                       tag: "DELIVERY",
                       title: "Rapid 2-Week Prototyping",
                       desc: "Experience real working software in 14 days. We test, validate, and iterate early based on real operational feedback before full launch.",
-                      pill: "Fast Feedback ΓÇó 14-Day Sprint",
+                      pill: "Fast Feedback • 14-Day Sprint",
                       icon: (
                         <svg className="w-5 h-5 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                           <path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -269,7 +269,7 @@ export default function AboutClient() {
                       tag: "TRANSPARENCY",
                       title: "100% IP & Source Ownership",
                       desc: "Full source code access, production server deployment, and complete intellectual property ownership handed directly to your team.",
-                      pill: "Full Ownership ΓÇó Direct Engineer Access",
+                      pill: "Full Ownership • Direct Engineer Access",
                       icon: (
                         <svg className="w-5 h-5 text-[#2563EB]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                           <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -408,7 +408,7 @@ export default function AboutClient() {
                           <button
                             type="button"
                             onClick={() => setActivePrinciple(isOpen ? null : i)}
-                            className="w-full px-5 py-4 sm:px-7 sm:py-5 flex items-center justify-between gap-4 text-left focus:outline-none cursor-pointer select-none"
+                            className="w-full px-5 py-4 sm:px-7 sm:py-5 flex items-center justify-between gap-4 text-left focus:outline-none cursor-pointer"
                           >
                             {/* Left: Number Pill + Title */}
                             <div className="flex items-center gap-3.5 sm:gap-5 min-w-0">

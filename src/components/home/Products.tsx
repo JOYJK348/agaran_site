@@ -749,7 +749,7 @@ function Automation3DVisual() {
             <div className="absolute -right-[4px] top-32 w-[4px] h-16 bg-slate-700 rounded-r-md" />
 
             {/* Smartphone Inner Screen — Fixed 550px Height for extra vertical breathing room */}
-            <div className="relative rounded-[42px] bg-slate-950 overflow-hidden border border-slate-800/90 h-[550px] flex flex-col justify-between select-none shadow-inner">
+            <div className="relative rounded-[42px] bg-slate-950 overflow-hidden border border-slate-800/90 h-[550px] flex flex-col justify-between shadow-inner">
               
               {/* Dynamic Island Header Bar */}
               <div className="pt-3 px-6 pb-2 bg-black flex items-center justify-between z-30 shrink-0">
