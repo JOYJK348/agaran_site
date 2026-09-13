@@ -57,6 +57,9 @@ export default function RootLayout({
       className={`${plusJakartaSans.variable} ${jetbrainsMono.variable}`}
     >
       <head>
+        <link rel="icon" href="/logo-transparent.png?v=2" type="image/png" sizes="any" />
+        <link rel="shortcut icon" href="/logo-transparent.png?v=2" type="image/png" />
+        <link rel="apple-touch-icon" href="/logo-transparent.png?v=2" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link

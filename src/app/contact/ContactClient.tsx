@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
@@ -544,213 +544,249 @@ export default function ContactClient() {
 
             {/* RIGHT COLUMN: SIMPLE CLEAN FORM CARD (7 COLS) */}
             <div id="inquiry-form" className="scroll-mt-24 lg:col-span-7 h-full">
-              {isSubmitted ? (
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.96 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="h-full flex flex-col justify-between p-8 sm:p-12 rounded-3xl bg-white border border-slate-200 shadow-xl text-center space-y-6 relative overflow-hidden"
-                >
-                  <div className="h-2 w-full bg-gradient-to-r from-emerald-400 via-teal-500 to-emerald-600 absolute top-0 left-0 right-0" />
-                  <div className="w-16 h-16 rounded-2xl bg-emerald-100 border border-emerald-200 text-emerald-600 text-3xl font-black flex items-center justify-center mx-auto shadow-md shadow-emerald-500/10">
-                    ✓
-                  </div>
+              <form
+                onSubmit={handleSubmit}
+                className="h-full flex flex-col justify-between p-6 sm:p-10 rounded-3xl bg-gradient-to-b from-[#F8FAFC] via-[#EFF6FF]/60 to-[#F0F9FF]/80 border border-[#BFDBFE] shadow-[0_12px_35px_rgba(37,99,235,0.06)] hover:border-[#2563EB]/60 hover:shadow-[0_16px_40px_rgba(37,99,235,0.12)] transition-all duration-300 space-y-5 relative overflow-hidden"
+              >
+                {/* Header Title Block */}
+                <div>
+                  <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                    Let&rsquo;s Talk
+                  </h2>
+                  <p className="text-xs sm:text-sm font-medium text-slate-500 mt-1">
+                    Fill in your details below to get in touch.
+                  </p>
+                </div>
 
-                  <div className="space-y-2">
-                    <span className="text-xs font-black uppercase tracking-widest text-emerald-800 bg-emerald-50 px-3.5 py-1 rounded-full border border-emerald-200 inline-block shadow-2xs">
-                      MESSAGE RECEIVED &bull; REF ID: {leadId}
-                    </span>
-                    <h2 className="text-2xl sm:text-4xl font-black text-slate-900">
-                      Thank you, {name}!
-                    </h2>
-                    <p className="text-sm text-slate-600 font-medium leading-relaxed max-w-md mx-auto">
-                      We got your details regarding <strong className="text-slate-900">{currentCategory.label}</strong>. Our team will review your message and get back to you within 2 hours.
-                    </p>
-                  </div>
-
-                  <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-3">
-                    <a
-                      href={`https://wa.me/919080558130?text=Hi%20Agaran%2C%20I%20just%20sent%20a%20request%20(${leadId})`}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-[#25D366] hover:bg-emerald-600 text-white font-extrabold text-xs sm:text-sm transition-all shadow-md flex items-center justify-center gap-2.5 hover:scale-[1.02]"
-                    >
-                      <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
-                      </svg>
-                      <span>Chat With Us on WhatsApp</span>
-                      <span>&rarr;</span>
-                    </a>
-                    <button
-                      type="button"
-                      onClick={handleReset}
-                      className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-extrabold text-xs sm:text-sm transition-all"
-                    >
-                      Send Another Request
-                    </button>
-                  </div>
-                </motion.div>
-              ) : (
-                <form
-                  onSubmit={handleSubmit}
-                  className="h-full flex flex-col justify-between p-6 sm:p-10 rounded-3xl bg-gradient-to-b from-[#F8FAFC] via-[#EFF6FF]/60 to-[#F0F9FF]/80 border border-[#BFDBFE] shadow-[0_12px_35px_rgba(37,99,235,0.06)] hover:border-[#2563EB]/60 hover:shadow-[0_16px_40px_rgba(37,99,235,0.12)] transition-all duration-300 space-y-5 relative overflow-hidden"
-                >
-                  {/* Header Title Block */}
+                <div className="space-y-4">
+                  {/* Name Field */}
                   <div>
-                    <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                      Let&rsquo;s Talk
-                    </h2>
-                    <p className="text-xs sm:text-sm font-medium text-slate-500 mt-1">
-                      Fill in your details below to get in touch.
-                    </p>
+                    <label className="block text-xs sm:text-sm font-bold text-slate-700 mb-1.5">
+                      Name <span className="text-[#2563EB]">*</span>
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      value={name}
+                      onChange={(e) => {
+                        setName(e.target.value);
+                        if (fieldErrors.name) setFieldErrors((prev) => ({ ...prev, name: false }));
+                      }}
+                      placeholder="Enter your name"
+                      className={`w-full px-4 py-3 sm:py-3.5 rounded-xl border text-sm font-medium transition-all outline-none ${
+                        fieldErrors.name
+                          ? "border-rose-500 bg-rose-50/30 focus:ring-4 focus:ring-rose-100"
+                          : "border-slate-200 focus:border-[#2563EB] focus:ring-4 focus:ring-blue-50 bg-white"
+                      } text-slate-800 placeholder:text-slate-400`}
+                    />
+                    {fieldErrors.name && (
+                      <span className="text-[11px] font-bold text-rose-500 mt-1 block">
+                        Please enter your name
+                      </span>
+                    )}
                   </div>
 
-                  <div className="space-y-4">
-                    {/* Name Field */}
-                    <div>
-                      <label className="block text-xs sm:text-sm font-bold text-slate-700 mb-1.5">
-                        Name <span className="text-[#2563EB]">*</span>
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        value={name}
-                        onChange={(e) => {
-                          setName(e.target.value);
-                          if (fieldErrors.name) setFieldErrors((prev) => ({ ...prev, name: false }));
-                        }}
-                        placeholder="Enter your name"
-                        className={`w-full px-4 py-3 sm:py-3.5 rounded-xl border text-sm font-medium transition-all outline-none ${
-                          fieldErrors.name
-                            ? "border-rose-500 bg-rose-50/30 focus:ring-4 focus:ring-rose-100"
-                            : "border-slate-200 focus:border-[#2563EB] focus:ring-4 focus:ring-blue-50 bg-white"
-                        } text-slate-800 placeholder:text-slate-400`}
-                      />
-                      {fieldErrors.name && (
-                        <span className="text-[11px] font-bold text-rose-500 mt-1 block">
-                          Please enter your name
-                        </span>
-                      )}
-                    </div>
+                  {/* Mobile or WhatsApp Field */}
+                  <div>
+                    <label className="block text-xs sm:text-sm font-bold text-slate-700 mb-1.5">
+                      Mobile or WhatsApp <span className="text-[#2563EB]">*</span>
+                    </label>
+                    <input
+                      type="tel"
+                      required
+                      value={phone}
+                      onChange={(e) => {
+                        setPhone(e.target.value);
+                        if (fieldErrors.phone) setFieldErrors((prev) => ({ ...prev, phone: false }));
+                      }}
+                      placeholder="Enter your phone number"
+                      className={`w-full px-4 py-3 sm:py-3.5 rounded-xl border text-sm font-medium transition-all outline-none ${
+                        fieldErrors.phone
+                          ? "border-rose-500 bg-rose-50/30 focus:ring-4 focus:ring-rose-100"
+                          : "border-slate-200 focus:border-[#2563EB] focus:ring-4 focus:ring-blue-50 bg-white"
+                      } text-slate-800 placeholder:text-slate-400`}
+                    />
+                    {fieldErrors.phone && (
+                      <span className="text-[11px] font-bold text-rose-500 mt-1 block">
+                        Please enter your phone number
+                      </span>
+                    )}
+                  </div>
 
-                    {/* Mobile or WhatsApp Field */}
-                    <div>
-                      <label className="block text-xs sm:text-sm font-bold text-slate-700 mb-1.5">
-                        Mobile or WhatsApp <span className="text-[#2563EB]">*</span>
-                      </label>
-                      <input
-                        type="tel"
-                        required
-                        value={phone}
-                        onChange={(e) => {
-                          setPhone(e.target.value);
-                          if (fieldErrors.phone) setFieldErrors((prev) => ({ ...prev, phone: false }));
-                        }}
-                        placeholder="Enter your phone number"
-                        className={`w-full px-4 py-3 sm:py-3.5 rounded-xl border text-sm font-medium transition-all outline-none ${
-                          fieldErrors.phone
-                            ? "border-rose-500 bg-rose-50/30 focus:ring-4 focus:ring-rose-100"
-                            : "border-slate-200 focus:border-[#2563EB] focus:ring-4 focus:ring-blue-50 bg-white"
-                        } text-slate-800 placeholder:text-slate-400`}
-                      />
-                      {fieldErrors.phone && (
-                        <span className="text-[11px] font-bold text-rose-500 mt-1 block">
-                          Please enter your phone number
-                        </span>
-                      )}
-                    </div>
+                  {/* Email Field */}
+                  <div>
+                    <label className="block text-xs sm:text-sm font-bold text-slate-700 mb-1.5">
+                      Email Address <span className="text-[#2563EB]">*</span>
+                    </label>
+                    <input
+                      type="email"
+                      required
+                      value={email}
+                      onChange={(e) => {
+                        setEmail(e.target.value);
+                        if (fieldErrors.email) setFieldErrors((prev) => ({ ...prev, email: false }));
+                      }}
+                      placeholder="Enter your email address"
+                      className={`w-full px-4 py-3 sm:py-3.5 rounded-xl border text-sm font-medium transition-all outline-none ${
+                        fieldErrors.email
+                          ? "border-rose-500 bg-rose-50/30 focus:ring-4 focus:ring-rose-100"
+                          : "border-slate-200 focus:border-[#2563EB] focus:ring-4 focus:ring-blue-50 bg-white"
+                      } text-slate-800 placeholder:text-slate-400`}
+                    />
+                    {fieldErrors.email && (
+                      <span className="text-[11px] font-bold text-rose-500 mt-1 block">
+                        Please enter your email address
+                      </span>
+                    )}
+                  </div>
 
-                    {/* Email Field */}
-                    <div>
-                      <label className="block text-xs sm:text-sm font-bold text-slate-700 mb-1.5">
-                        Email Address <span className="text-[#2563EB]">*</span>
-                      </label>
-                      <input
-                        type="email"
-                        required
-                        value={email}
-                        onChange={(e) => {
-                          setEmail(e.target.value);
-                          if (fieldErrors.email) setFieldErrors((prev) => ({ ...prev, email: false }));
-                        }}
-                        placeholder="Enter your email address"
-                        className={`w-full px-4 py-3 sm:py-3.5 rounded-xl border text-sm font-medium transition-all outline-none ${
-                          fieldErrors.email
-                            ? "border-rose-500 bg-rose-50/30 focus:ring-4 focus:ring-rose-100"
-                            : "border-slate-200 focus:border-[#2563EB] focus:ring-4 focus:ring-blue-50 bg-white"
-                        } text-slate-800 placeholder:text-slate-400`}
-                      />
-                      {fieldErrors.email && (
-                        <span className="text-[11px] font-bold text-rose-500 mt-1 block">
-                          Please enter your email address
-                        </span>
-                      )}
-                    </div>
-
-                    {/* Project Type Dropdown */}
-                    <div>
-                      <label className="block text-xs sm:text-sm font-bold text-slate-700 mb-1.5">
-                        Project Type
-                      </label>
-                      <div className="relative">
-                        <select
-                          value={selectedCategoryKey}
-                          onChange={(e) => handleCategoryChange(e.target.value)}
-                          className="w-full px-4 py-3 sm:py-3.5 rounded-xl border border-slate-200 focus:border-[#2563EB] focus:ring-4 focus:ring-blue-50 bg-white text-slate-800 text-sm font-medium appearance-none cursor-pointer outline-none transition-all pr-10"
-                        >
-                          <option value="general">General Project Discussion</option>
-                          <option value="software">Web Application / SaaS</option>
-                          <option value="edtech">Education Platform &amp; LMS</option>
-                          <option value="automation">AI &amp; Automation</option>
-                          <option value="idea">Product Idea / App Concept</option>
-                          <option value="ai">Business Systems &amp; ERP</option>
-                          <option value="other">Other Inquiry</option>
-                        </select>
-                        <div className="absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none text-slate-500">
-                          <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                          </svg>
-                        </div>
+                  {/* Project Type Dropdown */}
+                  <div>
+                    <label className="block text-xs sm:text-sm font-bold text-slate-700 mb-1.5">
+                      Project Type
+                    </label>
+                    <div className="relative">
+                      <select
+                        value={selectedCategoryKey}
+                        onChange={(e) => handleCategoryChange(e.target.value)}
+                        className="w-full px-4 py-3 sm:py-3.5 rounded-xl border border-slate-200 focus:border-[#2563EB] focus:ring-4 focus:ring-blue-50 bg-white text-slate-800 text-sm font-medium appearance-none cursor-pointer outline-none transition-all pr-10"
+                      >
+                        <option value="idea">Product Idea / App Concept</option>
+                        <option value="automation">AI &amp; Business Automation</option>
+                        <option value="ai">AI Tools &amp; Chatbots</option>
+                        <option value="software">Custom Software / Web &amp; Mobile App</option>
+                        <option value="edtech">Education Platform &amp; LMS</option>
+                        <option value="general">General Question or Advice</option>
+                      </select>
+                      <div className="absolute right-3.5 top-1/2 -translate-y-1/2 pointer-events-none text-slate-500">
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
                       </div>
                     </div>
-
-                    {/* Message Field (Optional) */}
-                    <div>
-                      <label className="block text-xs sm:text-sm font-bold text-slate-700 mb-1.5">
-                        Project Details <span className="text-slate-400 font-normal">(Optional)</span>
-                      </label>
-                      <textarea
-                        rows={3}
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
-                        placeholder="Tell us a little about your requirement..."
-                        className="w-full px-4 py-3 sm:py-3.5 rounded-xl border border-slate-200 focus:border-[#2563EB] focus:ring-4 focus:ring-blue-50 bg-white text-slate-800 text-sm font-medium placeholder:text-slate-400 outline-none transition-all resize-none"
-                      />
-                    </div>
                   </div>
 
-                  {/* SUBMIT BUTTON */}
-                  <div className="pt-2">
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="w-full py-3.5 sm:py-4 rounded-xl bg-[#2563EB] hover:bg-[#1D4ED8] active:scale-[0.99] text-white font-bold text-base transition-all duration-200 shadow-sm hover:shadow-md flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70"
-                    >
-                      {isSubmitting ? (
-                        <>
-                          <span className="w-5 h-5 rounded-full border-2 border-white border-t-transparent animate-spin" />
-                          <span>Sending...</span>
-                        </>
-                      ) : (
-                        <span>Send Message</span>
-                      )}
-                    </button>
+                  {/* Message Field (Optional) */}
+                  <div>
+                    <label className="block text-xs sm:text-sm font-bold text-slate-700 mb-1.5">
+                      Project Details <span className="text-slate-400 font-normal">(Optional)</span>
+                    </label>
+                    <textarea
+                      rows={3}
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      placeholder="Tell us a little about your requirement..."
+                      className="w-full px-4 py-3 sm:py-3.5 rounded-xl border border-slate-200 focus:border-[#2563EB] focus:ring-4 focus:ring-blue-50 bg-white text-slate-800 text-sm font-medium placeholder:text-slate-400 outline-none transition-all resize-none"
+                    />
                   </div>
-                </form>
-              )}
+                </div>
+
+                {/* SUBMIT BUTTON */}
+                <div className="pt-2">
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full py-3.5 sm:py-4 rounded-xl bg-[#2563EB] hover:bg-[#1D4ED8] active:scale-[0.99] text-white font-bold text-base transition-all duration-200 shadow-sm hover:shadow-md flex items-center justify-center gap-2 cursor-pointer disabled:opacity-70"
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <span className="w-5 h-5 rounded-full border-2 border-white border-t-transparent animate-spin" />
+                        <span>Sending...</span>
+                      </>
+                    ) : (
+                      <span>Send Message</span>
+                    )}
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
           </Reveal>
 
+          {/* ══════════════════════════════════════════════════════════
+              THANK YOU POPUP MODAL (CENTERED & MOBILE-FIRST RESPONSIVE)
+          ══════════════════════════════════════════════════════════ */}
+          <AnimatePresence>
+            {isSubmitted && (
+              <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto">
+                {/* Backdrop Overlay */}
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  onClick={handleReset}
+                  className="fixed inset-0 bg-slate-900/60 backdrop-blur-md cursor-pointer"
+                />
+
+                {/* Centered Modal Card */}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                  transition={{ type: "spring", stiffness: 350, damping: 28 }}
+                  className="relative z-10 w-full max-w-lg rounded-3xl bg-white border border-[#BFDBFE] p-6 sm:p-9 shadow-[0_25px_60px_rgba(15,23,42,0.3)] text-center space-y-6 overflow-hidden my-auto"
+                >
+                  {/* Top Royal Blue Accent Line */}
+                  <div className="h-1.5 w-full bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] absolute top-0 left-0 right-0" />
+
+                  {/* Close Icon (Top-Right) */}
+                  <button
+                    type="button"
+                    onClick={handleReset}
+                    className="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center transition-colors cursor-pointer"
+                    aria-label="Close modal"
+                  >
+                    ✕
+                  </button>
+
+                  {/* Checkmark Icon Header */}
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-3xl bg-gradient-to-tr from-[#EFF6FF] via-emerald-50 to-[#DBEAFE] border border-emerald-200 text-emerald-600 text-3xl sm:text-4xl font-black flex items-center justify-center mx-auto shadow-md shadow-emerald-500/10">
+                    ✓
+                  </div>
+
+                  {/* Content Block */}
+                  <div className="space-y-3">
+                    <span className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#EFF6FF] border border-[#BFDBFE] text-[11px] sm:text-xs font-black uppercase tracking-wider text-[#2563EB]">
+                      <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+                      MESSAGE RECEIVED &bull; REF ID: {leadId}
+                    </span>
+
+                    <h2 className="text-2xl sm:text-3xl font-black text-[#0F172A] tracking-tight">
+                      Thank You, {name}! 🎉
+                    </h2>
+
+                    <p className="text-xs sm:text-sm text-slate-600 font-medium leading-relaxed max-w-md mx-auto">
+                      We got your request regarding <strong className="text-[#0F172A] font-bold">{currentCategory.label}</strong>. Our team will review your message and reply within <strong className="text-[#2563EB]">2 hours</strong>.
+                    </p>
+                  </div>
+
+                  {/* Action Buttons (WhatsApp Chat + Done) */}
+                  <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+                    <a
+                      href={`https://wa.me/919080558130?text=Hi%20Agaran%2C%20I%20just%20submitted%20a%20contact%20request%20(${leadId})`}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-[#25D366] hover:bg-emerald-600 text-white font-extrabold text-xs sm:text-sm transition-all shadow-md flex items-center justify-center gap-2 hover:scale-[1.02] cursor-pointer"
+                    >
+                      <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                      </svg>
+                      <span>Chat on WhatsApp</span>
+                      <span>&rarr;</span>
+                    </a>
+
+                    <button
+                      type="button"
+                      onClick={handleReset}
+                      className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-[#EFF6FF] hover:bg-[#DBEAFE] text-[#2563EB] font-extrabold text-xs sm:text-sm border border-[#BFDBFE] transition-all cursor-pointer"
+                    >
+                      Done
+                    </button>
+                  </div>
+                </motion.div>
+              </div>
+            )}
+          </AnimatePresence>
         </div>
       </main>
 
