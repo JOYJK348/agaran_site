@@ -3,11 +3,16 @@ import WhoWeBuildForInteractive from "@/components/home/WhoWeBuildForInteractive
 import FinalCTA from "@/components/home/FinalCTA";
 import JsonLd from "@/components/seo/JsonLd";
 import { Metadata } from "next";
+import { whoWeBuildForMeta } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "Who We Build For — Ecosystems & Solutions | Agaran",
-  description:
-    "Discover how Agaran builds custom software, AI agents, EdTech SaaS platforms, and enterprise automation for startups, businesses, education, and organizations.",
+  title: whoWeBuildForMeta.title,
+  description: whoWeBuildForMeta.description,
+  keywords: whoWeBuildForMeta.keywords,
+  alternates: whoWeBuildForMeta.alternates,
+  openGraph: whoWeBuildForMeta.openGraph,
+  twitter: whoWeBuildForMeta.twitter,
+  robots: whoWeBuildForMeta.robots,
 };
 
 export default function WhoWeBuildForPage() {

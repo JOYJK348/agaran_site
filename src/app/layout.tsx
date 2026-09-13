@@ -20,23 +20,25 @@ const jetbrainsMono = JetBrains_Mono({
 
 export const viewport: Viewport = {
   themeColor: siteConfig.themeColor,
+  width: "device-width",
+  initialScale: 1,
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: {
     default: homepageMeta.title,
     template: homepageMeta.titleTemplate,
   },
   description: homepageMeta.description,
   keywords: homepageMeta.keywords,
-  metadataBase: new URL(siteConfig.url),
   alternates: homepageMeta.alternates,
   openGraph: homepageMeta.openGraph,
   twitter: homepageMeta.twitter,
   robots: homepageMeta.robots,
   icons: {
     icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    // apple-touch-icon.png is not present in /public, omitted to avoid 404
   },
 };
 
@@ -51,7 +53,6 @@ export default function RootLayout({
       className={`${plusJakartaSans.variable} ${jetbrainsMono.variable}`}
     >
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
@@ -65,4 +66,3 @@ export default function RootLayout({
     </html>
   );
 }
-
