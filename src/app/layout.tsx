@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
+import Script from "next/script";
 import { siteConfig, homepageMeta } from "@/lib/seo";
 import "./globals.css";
 
@@ -61,6 +62,18 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen flex flex-col bg-white text-[var(--agaran-text-primary)] antialiased">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-K6MJ5K56ZP"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-K6MJ5K56ZP');
+          `}
+        </Script>
         {children}
       </body>
     </html>
