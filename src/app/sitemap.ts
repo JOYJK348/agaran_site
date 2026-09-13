@@ -5,7 +5,7 @@ import type { MetadataRoute } from "next";
  * Only public, indexable routes are listed here.
  */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://agaran.com";
+  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://agaran.in";
 
   const routes: MetadataRoute.Sitemap = [
     {

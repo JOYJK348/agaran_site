@@ -1,10 +1,20 @@
 import { siteConfig } from "@/lib/seo";
 
+export interface BreadcrumbItem {
+  name: string;
+  item: string;
+}
+
+interface JsonLdProps {
+  breadcrumbs?: BreadcrumbItem[];
+}
+
 /**
- * Global JSON-LD structured data — injected on every page via the homepage.
+ * Global JSON-LD structured data.
  * Only uses verified, real information from the live site.
+ * Supports page-specific breadcrumb items when passed as props.
  */
-export default function JsonLd() {
+export default function JsonLd({ breadcrumbs }: JsonLdProps = {}) {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
@@ -17,7 +27,6 @@ export default function JsonLd() {
       caption: siteConfig.logoAlt,
     },
     description: siteConfig.description,
-    // Verified from the contact page and footer
     contactPoint: {
       "@type": "ContactPoint",
       telephone: siteConfig.contact.phone,
@@ -25,7 +34,6 @@ export default function JsonLd() {
       contactType: "customer service",
       availableLanguage: ["English", "Tamil"],
     },
-    // Verified from contact page content
     address: {
       "@type": "PostalAddress",
       addressLocality: siteConfig.location.locality,
@@ -33,7 +41,6 @@ export default function JsonLd() {
       addressCountry: siteConfig.location.countryCode,
     },
     areaServed: "IN",
-    // Verified social profiles from the contact page social links
     sameAs: siteConfig.sameAs,
   };
 
@@ -49,6 +56,20 @@ export default function JsonLd() {
     },
   };
 
+  const breadcrumbSchema =
+    breadcrumbs && breadcrumbs.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          itemListElement: breadcrumbs.map((b, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            name: b.name,
+            item: b.item.startsWith("http") ? b.item : `${siteConfig.url}${b.item}`,
+          })),
+        }
+      : null;
+
   return (
     <>
       <script
@@ -63,6 +84,14 @@ export default function JsonLd() {
           __html: JSON.stringify(websiteSchema),
         }}
       />
+      {breadcrumbSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(breadcrumbSchema),
+          }}
+        />
+      )}
     </>
   );
 }

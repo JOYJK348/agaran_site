@@ -5,7 +5,7 @@ import type { MetadataRoute } from "next";
  * Allows all public crawling; references the sitemap for discovery.
  */
 export default function robots(): MetadataRoute.Robots {
-  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://agaran.com";
+  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://agaran.in";
 
   return {
     rules: [

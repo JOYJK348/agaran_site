@@ -9,7 +9,7 @@ export const siteConfig = {
   tagline: "Build Intelligent Solutions. Automate What Matters.",
   description:
     "Agaran builds AI systems, business automation, custom software, and education technology that help businesses work smarter and people learn, create, and grow.",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://agaran.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL || "https://agaran.in",
   logo: "/logo.png",
   logoAlt: "Agaran — AI, Automation & Software",
   themeColor: "#2563EB",
