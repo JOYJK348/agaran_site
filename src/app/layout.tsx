@@ -38,8 +38,11 @@ export const metadata: Metadata = {
   twitter: homepageMeta.twitter,
   robots: homepageMeta.robots,
   icons: {
-    icon: "/favicon.ico",
-    // apple-touch-icon.png is not present in /public, omitted to avoid 404
+    icon: [
+      { url: "/logo-transparent.png", type: "image/png" },
+      { url: "/logo.png", type: "image/png" },
+    ],
+    apple: "/logo-transparent.png",
   },
 };
 

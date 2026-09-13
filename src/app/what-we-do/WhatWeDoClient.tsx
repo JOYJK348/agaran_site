@@ -7,9 +7,9 @@ import { motion, useInView } from "framer-motion";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
-/* ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+/* ─────────────────────────────────────────────
    Scroll-reveal animation wrapper
-ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+───────────────────────────────────────────── */
 function Reveal({
   children,
   delay = 0,
@@ -36,9 +36,9 @@ function Reveal({
   );
 }
 
-/* ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ
+/* ─────────────────────────────────────────────
    Dynamic Mobile Swipe Dots Indicator Component
-ΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇΓöÇ */
+───────────────────────────────────────────── */
 function CarouselDots({
   total,
   activeIndex,
@@ -173,9 +173,9 @@ export default function WhatWeDoClient() {
         <div className="absolute top-[35%] left-[-12%] w-[600px] h-[600px] rounded-full bg-[#3B82F6]/10 blur-[120px] pointer-events-none" />
         <div className="absolute top-[70%] right-[-8%] w-[550px] h-[450px] rounded-full bg-[#2563EB]/10 blur-[120px] pointer-events-none" />
 
-        {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+        {/* ══════════════════════════════════════════════════════════
             01  HERO
-        ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+        ══════════════════════════════════════════════════════════ */}
         <section className="relative z-10 pt-20 sm:pt-28 pb-10 sm:pb-12 px-4 sm:px-8 lg:px-16 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(#BFDBFE_1px,transparent_1px)] [background-size:32px_32px] opacity-40 pointer-events-none" />
 
@@ -229,9 +229,9 @@ export default function WhatWeDoClient() {
           </div>
         </section>
 
-        {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+        {/* ══════════════════════════════════════════════════════════
             02  THE AGARAN ECOSYSTEM STAGE
-        ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+        ══════════════════════════════════════════════════════════ */}
         <section className="relative z-10 py-12 sm:py-16 px-4 sm:px-8 lg:px-16 bg-gradient-to-b from-[#EFF6FF]/70 via-white to-[#DBEAFE]/40 border-y border-[#BFDBFE]/60 overflow-hidden">
           
           {/* Ambient light glow backdrop */}
@@ -256,7 +256,7 @@ export default function WhatWeDoClient() {
                 </p>
               </div>
 
-              {/* ΓöÇΓöÇ DESKTOP VIEW: 6 Orbiting Pillars connected to Center Pedestal ΓöÇΓöÇ */}
+              {/* ── DESKTOP VIEW: 6 Orbiting Pillars connected to Center Pedestal ── */}
               <div className="hidden md:block relative">
                 
                 {/* Ambient Counter-Rotating Energy Rings behind Center Hub */}
@@ -344,7 +344,7 @@ export default function WhatWeDoClient() {
                 </div>
               </div>
 
-              {/* ΓöÇΓöÇ MOBILE VIEW: Vertical Animated Laser Stream Pipeline ΓöÇΓöÇ */}
+              {/* ── MOBILE VIEW: Vertical Animated Laser Stream Pipeline ── */}
               <div className="block md:hidden relative">
                 
                 {/* Central AGARAN Logo Hub (Top) */}
@@ -429,9 +429,9 @@ export default function WhatWeDoClient() {
           </div>
         </section>
 
-        {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+        {/* ══════════════════════════════════════════════════════════
             03  SOFTWARE DEVELOPMENT
-        ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+        ══════════════════════════════════════════════════════════ */}
         <section id="software-development" className="relative z-10 py-10 sm:py-16 px-4 sm:px-8 lg:px-16 bg-[#EFF6FF]/40 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(#BFDBFE_1px,transparent_1px)] [background-size:32px_32px] opacity-30 pointer-events-none" />
 
@@ -465,7 +465,7 @@ export default function WhatWeDoClient() {
                 {/* Problem */}
                 <div className="md:col-span-5 p-4 sm:p-5 rounded-2xl bg-white border border-slate-200 shadow-2xs">
                   <div className="inline-flex items-center gap-1.5 text-[11px] font-extrabold text-rose-600 uppercase tracking-wider mb-1">
-                    <span>Γ£ò THE PROBLEM</span>
+                    <span>✗ THE PROBLEM</span>
                   </div>
                   <h3 className="text-sm sm:text-base font-black text-slate-800 mb-1">&ldquo;Too Many Tools&rdquo;</h3>
                   <p className="text-xs font-medium text-slate-600 leading-normal">
@@ -476,14 +476,14 @@ export default function WhatWeDoClient() {
                 {/* Arrow Bridge */}
                 <div className="md:col-span-1 flex justify-center py-1 md:py-0">
                   <div className="w-8 h-8 rounded-full bg-[#2563EB] text-white flex items-center justify-center font-bold text-xs shadow-xs">
-                    ΓåÆ
+                    →
                   </div>
                 </div>
 
                 {/* Solution */}
                 <div className="md:col-span-5 p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-[#1D4ED8] to-[#2563EB] text-white shadow-md">
                   <div className="inline-flex items-center gap-1.5 text-[11px] font-extrabold text-sky-200 uppercase tracking-wider mb-1">
-                    <span>Γ£ô THE AGARAN SOLUTION</span>
+                    <span>✓ THE AGARAN SOLUTION</span>
                   </div>
                   <h3 className="text-sm sm:text-base font-black text-white mb-1">One Connected System</h3>
                   <p className="text-xs font-medium text-blue-100 leading-normal">
@@ -516,7 +516,7 @@ export default function WhatWeDoClient() {
                     </div>
                     <div className="mt-4 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[10px] font-bold text-slate-400">
                       <span className="text-[#2563EB] uppercase tracking-wider font-mono">0{i + 1} &bull; SOFTWARE</span>
-                      <span>Γ£ô</span>
+                      <span>✓</span>
                     </div>
                   </div>
                 </Reveal>
@@ -528,9 +528,9 @@ export default function WhatWeDoClient() {
           </div>
         </section>
 
-        {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+        {/* ══════════════════════════════════════════════════════════
             04  AI & INTELLIGENT SYSTEMS
-        ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+        ══════════════════════════════════════════════════════════ */}
         <section id="ai-systems" className="relative z-10 py-10 sm:py-16 px-4 sm:px-8 lg:px-16 overflow-hidden">
           <div className="max-w-[1440px] mx-auto w-full">
             {/* Header */}
@@ -556,7 +556,7 @@ export default function WhatWeDoClient() {
               </p>
             </Reveal>
 
-            {/* ΓöÇΓöÇ Visual AI Flow (UNDERSTAND -> THINK -> ACT) ΓöÇΓöÇ */}
+            {/* ── Visual AI Flow (UNDERSTAND -> THINK -> ACT) ── */}
             <Reveal delay={0.2} className="mb-8">
               <div className="w-full max-w-[1440px] mx-auto relative">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -601,7 +601,7 @@ export default function WhatWeDoClient() {
                     </div>
                     <div className="mt-4 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[10px] font-bold text-slate-400">
                       <span className="text-[#2563EB] uppercase tracking-wider font-mono">0{i + 1} &bull; AI SYSTEM</span>
-                      <span>Γ£ô</span>
+                      <span>✓</span>
                     </div>
                   </div>
                 </Reveal>
@@ -613,9 +613,9 @@ export default function WhatWeDoClient() {
           </div>
         </section>
 
-        {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+        {/* ══════════════════════════════════════════════════════════
             05  BUSINESS AUTOMATION
-        ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+        ══════════════════════════════════════════════════════════ */}
         <section id="business-automation" className="relative z-10 py-10 sm:py-16 px-4 sm:px-8 lg:px-16 bg-[#EFF6FF]/40 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(#BFDBFE_1px,transparent_1px)] [background-size:32px_32px] opacity-30 pointer-events-none" />
 
@@ -649,7 +649,7 @@ export default function WhatWeDoClient() {
                 {/* Manual Flow */}
                 <div className="p-4 rounded-2xl bg-white border border-slate-200 shadow-2xs flex flex-col justify-between">
                   <div className="flex items-center justify-between border-b border-slate-100 pb-2 mb-2">
-                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">Γ£ò MANUAL WORKFLOW</span>
+                    <span className="text-[10px] font-bold text-slate-500 uppercase tracking-wider">✗ MANUAL WORKFLOW</span>
                     <span className="text-[10px] font-bold text-rose-500 bg-rose-50 px-2 py-0.5 rounded">Slow & Manual</span>
                   </div>
                   <div className="flex flex-wrap items-center gap-1.5 text-xs text-slate-600 font-medium">
@@ -666,7 +666,7 @@ export default function WhatWeDoClient() {
                 {/* Automated Flow */}
                 <div className="p-4 rounded-2xl bg-gradient-to-r from-[#1D4ED8] to-[#2563EB] text-white shadow-md flex flex-col justify-between">
                   <div className="flex items-center justify-between border-b border-white/20 pb-2 mb-2">
-                    <span className="text-[10px] font-bold text-sky-100 uppercase tracking-wider">Γ£ô AUTOMATED AGARAN FLOW</span>
+                    <span className="text-[10px] font-bold text-sky-100 uppercase tracking-wider">✓ AUTOMATED AGARAN FLOW</span>
                     <span className="text-[10px] font-bold text-emerald-300 bg-emerald-500/20 px-2 py-0.5 rounded">Instant & Accurate</span>
                   </div>
                   <div className="flex items-center gap-2 text-xs font-bold text-white">
@@ -701,7 +701,7 @@ export default function WhatWeDoClient() {
                     </div>
                     <div className="mt-4 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[10px] font-bold text-slate-400">
                       <span className="text-[#2563EB] uppercase tracking-wider font-mono">0{i + 1} &bull; AUTOMATION</span>
-                      <span>Γ£ô</span>
+                      <span>✓</span>
                     </div>
                   </div>
                 </Reveal>
@@ -713,9 +713,9 @@ export default function WhatWeDoClient() {
           </div>
         </section>
 
-        {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+        {/* ══════════════════════════════════════════════════════════
             06  EDUCATION TECHNOLOGY
-        ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+        ══════════════════════════════════════════════════════════ */}
         <section id="education-technology" className="relative z-10 py-10 sm:py-16 px-4 sm:px-8 lg:px-16 overflow-hidden">
           <div className="max-w-[1440px] mx-auto w-full">
             {/* Header */}
@@ -764,7 +764,7 @@ export default function WhatWeDoClient() {
                     </div>
                     <div className="mt-4 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[10px] font-bold text-slate-400">
                       <span className="text-[#2563EB] uppercase tracking-wider font-mono">0{i + 1} &bull; EDTECH</span>
-                      <span>Γ£ô</span>
+                      <span>✓</span>
                     </div>
                   </div>
                 </Reveal>
@@ -776,9 +776,9 @@ export default function WhatWeDoClient() {
           </div>
         </section>
 
-        {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+        {/* ══════════════════════════════════════════════════════════
             07  CLOUD & INFRASTRUCTURE
-        ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+        ══════════════════════════════════════════════════════════ */}
         <section id="cloud-infrastructure" className="relative z-10 py-10 sm:py-16 px-4 sm:px-8 lg:px-16 bg-[#EFF6FF]/40 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(#BFDBFE_1px,transparent_1px)] [background-size:32px_32px] opacity-30 pointer-events-none" />
 
@@ -829,7 +829,7 @@ export default function WhatWeDoClient() {
                     </div>
                     <div className="mt-4 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[10px] font-bold text-slate-400">
                       <span className="text-[#2563EB] uppercase tracking-wider font-mono">0{i + 1} &bull; CLOUD</span>
-                      <span>Γ£ô</span>
+                      <span>✓</span>
                     </div>
                   </div>
                 </Reveal>
@@ -841,9 +841,9 @@ export default function WhatWeDoClient() {
           </div>
         </section>
 
-        {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+        {/* ══════════════════════════════════════════════════════════
             08  EXISTING SYSTEM IMPROVEMENT
-        ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+        ══════════════════════════════════════════════════════════ */}
         <section id="existing-systems" className="relative z-10 py-10 sm:py-16 px-4 sm:px-8 lg:px-16 overflow-hidden">
           <div className="max-w-[1440px] mx-auto w-full">
             {/* Header */}
@@ -878,8 +878,8 @@ export default function WhatWeDoClient() {
                     EXISTING SYSTEM ISSUES
                   </div>
                   <div className="space-y-1 text-xs font-medium text-slate-700">
-                    <div className="flex items-center gap-1.5"><span className="text-rose-500 font-bold">Γ£ò</span><span>Slow performance & UI bottlenecks</span></div>
-                    <div className="flex items-center gap-1.5"><span className="text-rose-500 font-bold">Γ£ò</span><span>Manual repetitive operations</span></div>
+                    <div className="flex items-center gap-1.5"><span className="text-rose-500 font-bold">✗</span><span>Slow performance & UI bottlenecks</span></div>
+                    <div className="flex items-center gap-1.5"><span className="text-rose-500 font-bold">✗</span><span>Manual repetitive operations</span></div>
                   </div>
                 </div>
 
@@ -896,8 +896,8 @@ export default function WhatWeDoClient() {
                     AFTER AGARAN IMPROVEMENT
                   </div>
                   <div className="space-y-1 text-xs font-bold text-white">
-                    <div className="flex items-center gap-1.5"><span className="text-sky-200">Γ£ô</span><span>Faster load speeds & clean UI</span></div>
-                    <div className="flex items-center gap-1.5"><span className="text-sky-200">Γ£ô</span><span>Automated workflows & AI capabilities</span></div>
+                    <div className="flex items-center gap-1.5"><span className="text-sky-200">✓</span><span>Faster load speeds & clean UI</span></div>
+                    <div className="flex items-center gap-1.5"><span className="text-sky-200">✓</span><span>Automated workflows & AI capabilities</span></div>
                   </div>
                 </div>
               </div>
@@ -926,7 +926,7 @@ export default function WhatWeDoClient() {
                     </div>
                     <div className="mt-4 pt-2.5 border-t border-slate-100 flex items-center justify-between text-[10px] font-bold text-slate-400">
                       <span className="text-[#2563EB] uppercase tracking-wider font-mono">0{i + 1} &bull; UPGRADE</span>
-                      <span>Γ£ô</span>
+                      <span>✓</span>
                     </div>
                   </div>
                 </Reveal>
@@ -938,9 +938,9 @@ export default function WhatWeDoClient() {
           </div>
         </section>
 
-        {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+        {/* ══════════════════════════════════════════════════════════
             09  HOW WE APPROACH TECHNOLOGY
-        ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+        ══════════════════════════════════════════════════════════ */}
         <section className="relative z-10 py-10 sm:py-16 px-4 sm:px-8 lg:px-16 bg-[#EFF6FF]/40 overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(#BFDBFE_1px,transparent_1px)] [background-size:32px_32px] opacity-30 pointer-events-none" />
 
@@ -999,9 +999,9 @@ export default function WhatWeDoClient() {
           </div>
         </section>
 
-        {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+        {/* ══════════════════════════════════════════════════════════
             10  FINAL CTA
-        ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+        ══════════════════════════════════════════════════════════ */}
         <section className="relative z-10 pt-4 pb-14 sm:pb-20 px-4 sm:px-8 lg:px-16">
           <div className="max-w-[1440px] mx-auto w-full">
             <Reveal delay={0.05}>
@@ -1025,7 +1025,7 @@ export default function WhatWeDoClient() {
                       href="/contact#inquiry-form"
                       className="inline-flex items-center justify-center gap-2 text-sm sm:text-base px-7 py-3.5 rounded-xl font-bold bg-white text-[#1D4ED8] hover:bg-blue-50 transition-all duration-200 w-full sm:w-auto"
                     >
-                      Start a Conversation ΓåÆ
+                      Start a Conversation →
                     </Link>
                     <Link
                       href="/work"

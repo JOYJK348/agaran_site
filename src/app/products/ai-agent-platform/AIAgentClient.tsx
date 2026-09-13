@@ -19,7 +19,7 @@ export default function AIAgentClient() {
           className="max-w-[1600px] mx-auto bg-white border border-slate-200/90 shadow-[0_4px_30px_rgba(15,23,42,0.03)] rounded-2xl sm:rounded-3xl p-4 sm:p-8 md:p-12 lg:p-16 relative overflow-hidden"
         >
 
-          {/* ΓöÇΓöÇ Top Navigation Bar ΓöÇΓöÇ */}
+          {/* ── Top Navigation Bar ── */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 mb-6 sm:mb-8 border-b border-slate-200 text-xs sm:text-sm font-semibold text-slate-500">
             <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
               <Link href="/" className="hover:text-[#2563EB] transition-colors">Home</Link>
@@ -34,9 +34,9 @@ export default function AIAgentClient() {
             </div>
           </div>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               HEADER — PRODUCT TITLE & HERO NARRATIVE
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <header className="mb-10 sm:mb-14">
             <div className="flex flex-wrap items-center gap-2 mb-4">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#EFF6FF] border border-[#BFDBFE] text-[#2563EB] font-extrabold text-[10px] sm:text-xs uppercase tracking-wider">
@@ -75,7 +75,7 @@ export default function AIAgentClient() {
             </div>
           </header>
 
-          {/* ΓöÇΓöÇ Visual Digital Workforce Architecture Mockup (Light Theme) ΓöÇΓöÇ */}
+          {/* ── Visual Digital Workforce Architecture Mockup (Light Theme) ── */}
           <div className="mb-12 sm:mb-16 relative">
             <div className="w-full rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-sm relative p-4 sm:p-6 text-slate-800 flex flex-col justify-between gap-5">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-200 text-xs font-mono gap-2.5">
@@ -111,9 +111,9 @@ export default function AIAgentClient() {
 
           <hr className="border-slate-200 my-10 sm:my-14" />
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               01 — NOT ONE AI. A WHOLE TEAM.
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-12 sm:mb-16 scroll-mt-24" id="human-ai-team">
             <div className="flex items-center gap-3 mb-6">
               <span className="text-xs font-black uppercase tracking-widest text-white bg-[#2563EB] px-2.5 py-1 rounded">01</span>
@@ -137,12 +137,12 @@ export default function AIAgentClient() {
                 </div>
                 <h4 className="text-lg font-black text-[#0F172A]">Where People Excel</h4>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-extrabold text-slate-800">
-                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">Γ£ô Strategy &amp; Vision</li>
-                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">Γ£ô Creative Thinking</li>
-                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">Γ£ô Client Relationships</li>
-                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">Γ£ô Critical Decisions</li>
-                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">Γ£ô Leadership</li>
-                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">Γ£ô Complex Problem Solving</li>
+                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">✓ Strategy &amp; Vision</li>
+                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">✓ Creative Thinking</li>
+                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">✓ Client Relationships</li>
+                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">✓ Critical Decisions</li>
+                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">✓ Leadership</li>
+                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">✓ Complex Problem Solving</li>
                 </ul>
               </div>
 
@@ -153,20 +153,20 @@ export default function AIAgentClient() {
                 </div>
                 <h4 className="text-lg font-black text-[#0F172A]">Where Digital Workforce Excels</h4>
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-extrabold text-slate-800">
-                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">Γ£ô Repetitive Work</li>
-                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">Γ£ô Info Processing</li>
-                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">Γ£ô System Monitoring</li>
-                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">Γ£ô Lead Follow-Ups</li>
-                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">Γ£ô Routine Communication</li>
-                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">Γ£ô Task Execution</li>
+                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">✓ Repetitive Work</li>
+                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">✓ Info Processing</li>
+                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">✓ System Monitoring</li>
+                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">✓ Lead Follow-Ups</li>
+                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">✓ Routine Communication</li>
+                  <li className="p-2.5 rounded-xl bg-white border border-slate-200 shadow-2xs">✓ Task Execution</li>
                 </ul>
               </div>
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               02 — THE 8 SPECIALISED AI AGENTS
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-12 sm:mb-16 scroll-mt-24" id="agents-breakdown">
             <div className="flex items-center gap-3 mb-6 sm:mb-8">
               <span className="text-xs font-black uppercase tracking-widest text-white bg-[#0F172A] px-2.5 py-1 rounded">02</span>
@@ -253,9 +253,9 @@ export default function AIAgentClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               03 — AGENTS WORKING TOGETHER (MULTI-AGENT COLLABORATION)
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-12 sm:mb-16 scroll-mt-24" id="inter-agent-collaboration">
             <div className="flex items-center gap-3 mb-6">
               <span className="text-xs font-black uppercase tracking-widest text-white bg-[#2563EB] px-2.5 py-1 rounded">03</span>
@@ -289,9 +289,9 @@ export default function AIAgentClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               04 — THE AGENT CONTROL LAYER & HUMAN OVERVIEW
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-12 sm:mb-16 scroll-mt-24" id="agent-control-layer">
             <div className="flex items-center gap-3 mb-6">
               <span className="text-xs font-black uppercase tracking-widest text-white bg-[#0F172A] px-2.5 py-1 rounded">04</span>
@@ -326,9 +326,9 @@ export default function AIAgentClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               05 — CURRENT EXPLORATION STATUS & VISION
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-12 sm:mb-16 scroll-mt-24" id="status-vision">
             <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-[#EFF6FF] via-white to-sky-50 border border-[#BFDBFE] text-slate-800 space-y-6 shadow-xs">
               <div className="flex items-center justify-between border-b border-[#BFDBFE] pb-4">
@@ -349,22 +349,22 @@ export default function AIAgentClient() {
                   </p>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-bold text-[#2563EB]">
                     <li className="p-2.5 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
-                      <span className="text-emerald-500 font-bold">Γ£ô</span> AI Agent Architecture
+                      <span className="text-emerald-500 font-bold">✓</span> AI Agent Architecture
                     </li>
                     <li className="p-2.5 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
-                      <span className="text-emerald-500 font-bold">Γ£ô</span> Multi-Agent Workflows
+                      <span className="text-emerald-500 font-bold">✓</span> Multi-Agent Workflows
                     </li>
                     <li className="p-2.5 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
-                      <span className="text-emerald-500 font-bold">Γ£ô</span> Business Knowledge Sync
+                      <span className="text-emerald-500 font-bold">✓</span> Business Knowledge Sync
                     </li>
                     <li className="p-2.5 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
-                      <span className="text-emerald-500 font-bold">Γ£ô</span> Tool &amp; System Integration
+                      <span className="text-emerald-500 font-bold">✓</span> Tool &amp; System Integration
                     </li>
                     <li className="p-2.5 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
-                      <span className="text-emerald-500 font-bold">Γ£ô</span> Agent Collaboration
+                      <span className="text-emerald-500 font-bold">✓</span> Agent Collaboration
                     </li>
                     <li className="p-2.5 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
-                      <span className="text-emerald-500 font-bold">Γ£ô</span> Human Approval Layer
+                      <span className="text-emerald-500 font-bold">✓</span> Human Approval Layer
                     </li>
                   </ul>
                 </div>
@@ -385,9 +385,9 @@ export default function AIAgentClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               BOTTOM NAVIGATION & CTA
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <footer className="pt-8 border-t border-slate-200 space-y-8">
             <div className="p-6 sm:p-10 rounded-3xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] text-white text-center space-y-3">
               <h2 className="text-2xl sm:text-3xl font-black">What Would Your AI Team Look Like?</h2>

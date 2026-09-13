@@ -19,7 +19,7 @@ export default function AILearningClient() {
           className="max-w-[1600px] mx-auto bg-white border border-slate-200/90 shadow-[0_4px_30px_rgba(15,23,42,0.03)] rounded-2xl sm:rounded-3xl p-4 sm:p-8 md:p-12 lg:p-16 relative overflow-hidden"
         >
 
-          {/* ΓöÇΓöÇ Top Document Header Bar ΓöÇΓöÇ */}
+          {/* ── Top Document Header Bar ── */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 mb-6 sm:mb-8 border-b border-slate-200 text-xs sm:text-sm font-semibold text-slate-500">
             <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
               <Link href="/" className="hover:text-[#2563EB] transition-colors">Home</Link>
@@ -34,9 +34,9 @@ export default function AILearningClient() {
             </div>
           </div>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               PROJECT TITLE & METADATA — OVERHAULED EXECUTIVE HERO
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <header className="mb-10 sm:mb-14">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-[#EFF6FF] border border-[#BFDBFE] text-[#2563EB] font-extrabold text-[10px] sm:text-xs uppercase tracking-wider mb-4">
               <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
@@ -81,7 +81,7 @@ export default function AILearningClient() {
             </div>
           </header>
 
-          {/* ΓöÇΓöÇ Hero Visual / Interactive Browser Dashboard Mockup ΓöÇΓöÇ */}
+          {/* ── Hero Visual / Interactive Browser Dashboard Mockup ── */}
           <div className="mb-12 sm:mb-16 relative">
             <div className="w-full rounded-2xl overflow-hidden bg-[#F8FAFC] border border-slate-200 shadow-2xs relative p-4 sm:p-6 text-slate-800 flex flex-col justify-between gap-5">
               
@@ -177,9 +177,9 @@ export default function AILearningClient() {
 
           <hr className="border-slate-200 my-10 sm:my-14" />
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               01 — PROJECT OVERVIEW — REDESIGNED EXECUTIVE SPLIT LAYOUT
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-12 sm:mb-16 scroll-mt-24" id="overview">
             <div className="flex items-center gap-3 mb-6 sm:mb-8">
               <span className="text-xs font-black uppercase tracking-widest text-white bg-[#0F172A] px-2.5 py-1 rounded">01</span>
@@ -201,7 +201,7 @@ export default function AILearningClient() {
                     Dual Monetization Architecture
                   </div>
                   <p className="text-xs sm:text-sm font-semibold leading-relaxed text-slate-700">
-                    B2C parents subscribe via automated monthly Razorpay plans (Free 14-day trial, Focus Γé╣149, Premium Γé╣399, Ultimate Γé╣699) with countdown trial timers and instant activation. B2B schools pay Γé╣50/child/month via GST invoice and bank transfer, activated via Super Admin control.
+                    B2C parents subscribe via automated monthly Razorpay plans (Free 14-day trial, Focus  Premium  Ultimate é╣699) with countdown trial timers and instant activation. B2B schools pay  via GST invoice and bank transfer, activated via Super Admin control.
                   </p>
                 </div>
 
@@ -249,7 +249,7 @@ export default function AILearningClient() {
                     <div>Curriculum Library</div>
                   </div>
                   <div className="p-2 rounded-lg bg-white border border-slate-200 text-slate-700">
-                    <div className="text-emerald-600 text-xs font-black">Γé╣0 Lost</div>
+                    <div className="text-emerald-600 text-xs font-black"> Lost</div>
                     <div>Payment Failures</div>
                   </div>
                 </div>
@@ -258,9 +258,9 @@ export default function AILearningClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               02 — THE CHALLENGE
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-10 sm:mb-14 scroll-mt-24" id="challenge">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
               <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-white bg-[#0F172A] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded">02</span>
@@ -270,7 +270,7 @@ export default function AILearningClient() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
               <div className="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-rose-50/60 border border-rose-200/80 space-y-2">
                 <div className="text-[10px] sm:text-xs font-black uppercase tracking-wider text-rose-700 flex items-center gap-1.5">
-                  <span>Γ£ò</span> No Structured Curriculum
+                  <span>✗</span> No Structured Curriculum
                 </div>
                 <h3 className="text-sm sm:text-base font-extrabold text-slate-900">PDF &amp; YouTube Dependency</h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
@@ -279,7 +279,7 @@ export default function AILearningClient() {
               </div>
               <div className="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-amber-50/60 border border-amber-200/80 space-y-2">
                 <div className="text-[10px] sm:text-xs font-black uppercase tracking-wider text-amber-700 flex items-center gap-1.5">
-                  <span>Γ£ò</span> Payment &amp; Access Chaos
+                  <span>✗</span> Payment &amp; Access Chaos
                 </div>
                 <h3 className="text-sm sm:text-base font-extrabold text-slate-900">Past Payment Failures</h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
@@ -288,7 +288,7 @@ export default function AILearningClient() {
               </div>
               <div className="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-sky-50/60 border border-sky-200/80 space-y-2">
                 <div className="text-[10px] sm:text-xs font-black uppercase tracking-wider text-sky-700 flex items-center gap-1.5">
-                  <span>Γ£ò</span> Multi-Role Complexity
+                  <span>✗</span> Multi-Role Complexity
                 </div>
                 <h3 className="text-sm sm:text-base font-extrabold text-slate-900">Four Different Users, One System</h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
@@ -298,9 +298,9 @@ export default function AILearningClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               03 — PORTAL ARCHITECTURE — THE FOUR USER SYSTEMS
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-10 sm:mb-14 scroll-mt-24" id="portals">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
               <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-white bg-[#0F172A] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded">03</span>
@@ -424,9 +424,9 @@ export default function AILearningClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               04 — PAYMENT ENGINE & SUBSCRIPTION ARCHITECTURE
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-10 sm:mb-14 scroll-mt-24" id="payment">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
               <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-white bg-[#0F172A] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded">04</span>
@@ -446,10 +446,10 @@ export default function AILearningClient() {
                 </h3>
                 <div className="space-y-2.5 text-xs sm:text-sm">
                   {[
-                    { name: "Free Plan (Γé╣0)", detail: "14-day full trial. After trial expiry, system locks all content automatically. No manual action needed." },
-                    { name: "Focus Plan (Γé╣149/month)", detail: "Single subject access (e.g., Maths only or English only) with full lesson and quiz unlock for that subject." },
-                    { name: "Premium Plan (Γé╣399/month)", detail: "All subjects, all video/audio tutorials, all activity games. The most popular individual parent plan." },
-                    { name: "Ultimate Plan (Γé╣699/month)", detail: "Everything in Premium + AI Tutor integration (v2). Child can interact directly with an AI mentor for personalized doubt resolution." },
+                    { name: "Free Plan (é╣0)", detail: "14-day full trial. After trial expiry, system locks all content automatically. No manual action needed." },
+                    { name: "Focus Plan (é╣149/month)", detail: "Single subject access (e.g., Maths only or English only) with full lesson and quiz unlock for that subject." },
+                    { name: "Premium Plan (é╣399/month)", detail: "All subjects, all video/audio tutorials, all activity games. The most popular individual parent plan." },
+                    { name: "Ultimate Plan (é╣699/month)", detail: "Everything in Premium + AI Tutor integration (v2). Child can interact directly with an AI mentor for personalized doubt resolution." },
                   ].map((p) => (
                     <div key={p.name} className="flex items-start gap-2">
                       <span className="text-[#2563EB] font-bold text-sm mt-0.5">&bull;</span>
@@ -467,7 +467,7 @@ export default function AILearningClient() {
                   <div>3. Razorpay checkout opens &rarr; UPI / Card / NetBanking</div>
                   <div>4. Payment success &rarr; frontend sends verification payload</div>
                   <div>5. Backend: verify signature &rarr; check idempotency &rarr; secure transaction commit</div>
-                  <div>6. Triple check: Razorpay dashboard Γ£ô + Parent account status = PAID Γ£ô + Payment log = success Γ£ô</div>
+                  <div>6. Triple check: Razorpay dashboard ✓ + Parent account status = PAID ✓ + Payment log = success ✓</div>
                   <div>7. Webhook backup: if frontend miss, Razorpay webhook auto-triggers backend activation</div>
                   <div>8. Manual override: Super Admin force-activate if webhook also missed</div>
                 </div>
@@ -480,7 +480,7 @@ export default function AILearningClient() {
                   B2B — School Institution Pack (Manual Invoice)
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-600 leading-relaxed text-left sm:text-justify">
-                  Schools pay <strong className="font-extrabold text-emerald-700">Γé╣50 per child per month</strong> via bank transfer or cheque. For a school with 500 students, this is <strong className="font-extrabold text-slate-900">Γé╣25,000/month</strong> — a bulk amount that cannot go through standard Razorpay UPI (limit issues, GST invoice requirements, PO approval cycles). The B2B flow is deliberately manual with Super Admin verification as the activation gate.
+                  Schools pay <strong className="font-extrabold text-emerald-700"> per child per month</strong> via bank transfer or cheque. For a school with 500 students, this is <strong className="font-extrabold text-slate-900">é╣25,000/month</strong> — a bulk amount that cannot go through standard Razorpay UPI (limit issues, GST invoice requirements, PO approval cycles). The B2B flow is deliberately manual with Super Admin verification as the activation gate.
                 </p>
                 <div className="p-3 rounded-lg sm:rounded-xl bg-white border border-slate-200 text-[11px] sm:text-xs font-mono text-slate-700 leading-relaxed space-y-1">
                   <div className="font-black text-emerald-700 text-[10px] uppercase mb-1">School Payment Flow</div>
@@ -507,9 +507,9 @@ export default function AILearningClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               05 — CURRICULUM ARCHITECTURE
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-10 sm:mb-14 scroll-mt-24" id="curriculum">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
               <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-white bg-[#0F172A] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded">05</span>
@@ -565,7 +565,7 @@ export default function AILearningClient() {
                   <ul className="space-y-1.5">
                     {sub.chapters.map((ch) => (
                       <li key={ch} className="flex items-start gap-2 text-xs text-slate-600">
-                        <span className="text-emerald-500 font-bold mt-0.5 shrink-0">Γ£ô</span>
+                        <span className="text-emerald-500 font-bold mt-0.5 shrink-0">✓</span>
                         <span className="leading-snug">{ch}</span>
                       </li>
                     ))}
@@ -575,9 +575,9 @@ export default function AILearningClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               06 — HOW IT WORKS — USER JOURNEYS
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-10 sm:mb-14 scroll-mt-24" id="how-it-works">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
               <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-white bg-[#0F172A] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded">06</span>
@@ -590,11 +590,11 @@ export default function AILearningClient() {
                 <div className="w-full rounded-lg sm:rounded-xl bg-white border border-slate-200 p-3 sm:p-4 overflow-x-auto">
                   <div className="min-w-[280px] sm:min-w-[400px] flex flex-col gap-2 text-xs font-bold">
                     {[
-                      { step: "01", label: "Parent Registers", desc: "Account created ΓåÆ pending registration queue" },
-                      { step: "02", label: "Super Admin Approves", desc: "Registration reviewed & approved ΓåÆ account activated" },
+                      { step: "01", label: "Parent Registers", desc: "Account created → pending registration queue" },
+                      { step: "02", label: "Super Admin Approves", desc: "Registration reviewed & approved → account activated" },
                       { step: "03", label: "14-Day Free Trial", desc: "Full content access. Countdown timer active in dashboard." },
-                      { step: "04", label: "Parent Subscribes", desc: "Picks plan (Γé╣149/Γé╣399/Γé╣699) ΓåÆ Razorpay checkout" },
-                      { step: "05", label: "Triple Verification", desc: "Signature verify ΓåÆ idempotency check ΓåÆ secure transaction commit ΓåÆ Webhook backup" },
+                      { step: "04", label: "Parent Subscribes", desc: "Picks plan (é╣149/é╣399/é╣699) → Razorpay checkout" },
+                      { step: "05", label: "Triple Verification", desc: "Signature verify → idempotency check → secure transaction commit → Webhook backup" },
                       { step: "06", label: "Access Activated", desc: "Plan tier unlocked. Child begins structured learning journey." },
                     ].map((s, i, arr) => (
                       <div key={s.step}>
@@ -617,9 +617,9 @@ export default function AILearningClient() {
                     {[
                       { step: "01", label: "School Onboarding", desc: "Super Admin creates school account, assigns School Admin login credentials" },
                       { step: "02", label: "Student Registration", desc: "School Admin adds students (LKG/UKG/Grade 1, roll numbers, sections)" },
-                      { step: "03", label: "Invoice Sent", desc: "Agaran Finance sends GST invoice ΓåÆ Γé╣50/child/month" },
+                      { step: "03", label: "Invoice Sent", desc: "Agaran Finance sends GST invoice → é╣50/child/month" },
                       { step: "04", label: "Bank Transfer", desc: "School accounts dept transfers via NEFT/IMPS. Takes 2–3 days." },
-                      { step: "05", label: "Super Admin Verifies", desc: "UTR number logged ΓåÆ Mark as Paid ΓåÆ system activation triggered" },
+                      { step: "05", label: "Super Admin Verifies", desc: "UTR number logged → Mark as Paid → system activation triggered" },
                       { step: "06", label: "All Students Unlocked", desc: "Every student in school gets full curriculum access immediately" },
                     ].map((s, i, arr) => (
                       <div key={s.step}>
@@ -637,9 +637,9 @@ export default function AILearningClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               07 — SYSTEM ARCHITECTURE
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-10 sm:mb-14 scroll-mt-24" id="architecture">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
               <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-white bg-[#0F172A] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded">07</span>
@@ -701,9 +701,9 @@ export default function AILearningClient() {
             </p>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               08 — AGARAN'S ROLE
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-10 sm:mb-14 scroll-mt-24" id="role">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
               <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-white bg-[#0F172A] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded">08</span>
@@ -714,8 +714,8 @@ export default function AILearningClient() {
               {[
                 { title: "Full-Stack System Architecture", desc: "Designed the complete multi-portal system architecture, role management, and frontend routing. Made all key architectural decisions: multi-tenant data scoping, JWT role enforcement strategy, sequential lesson unlock logic, and idempotent payment verification flow." },
                 { title: "Four Independent Portal Frontends", desc: "Built all four Next.js frontend portals (Super Admin, School Admin, Parent, Student) with role-specific dashboards, data-fetching with React Query (including prefetching, stale-time tuning, and 30s auto-refresh for critical data), and responsive mobile-first UI." },
-                { title: "Bulletproof Payment Engine", desc: "Engineered the Razorpay integration with triple-verification (frontend ΓåÆ webhook ΓåÆ manual override), idempotency key enforcement, database transaction atomicity, audit trail logging, and Super Admin force-activate fallback." },
-                { title: "Curriculum Content Engine", desc: "Built the full curriculum data architecture: board ΓåÆ grade ΓåÆ subject ΓåÆ chapter ΓåÆ lesson ΓåÆ activity/quiz hierarchy. Implemented TTS-driven mascot voice tutorial engine, gamified quiz components (WordSorterQuiz, PictureLetterMatch, MissingLettersTrain), and badge reward system." },
+                { title: "Bulletproof Payment Engine", desc: "Engineered the Razorpay integration with triple-verification (frontend → webhook → manual override), idempotency key enforcement, database transaction atomicity, audit trail logging, and Super Admin force-activate fallback." },
+                { title: "Curriculum Content Engine", desc: "Built the full curriculum data architecture: board → grade → subject → chapter → lesson → activity/quiz hierarchy. Implemented TTS-driven mascot voice tutorial engine, gamified quiz components (WordSorterQuiz, PictureLetterMatch, MissingLettersTrain), and badge reward system." },
                 { title: "B2B School Admin System", desc: "Designed and built the school-scoped admin portal with real-time student roster management, grade-wise class pulse analytics, needs-attention smart alerting (progress < 30% or 7-day inactivity), top performer leaderboard, and invoice-based school plan activation flow." },
                 { title: "Multi-language i18n Infrastructure", desc: "Implemented next-intl internationalization supporting English and Tamil across all portal routes, content delivery, and UI strings — enabling the platform to serve Tamil-medium schools and parents who prefer their regional language interface." },
               ].map((item) => (
@@ -727,9 +727,9 @@ export default function AILearningClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               09 — TECHNOLOGY
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-10 sm:mb-14 scroll-mt-24" id="technology">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
               <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-white bg-[#0F172A] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded">09</span>
@@ -759,9 +759,9 @@ export default function AILearningClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               10 — PROJECT DETAILS — EXECUTIVE MATRIX GRID
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-10 sm:mb-14 scroll-mt-24" id="details">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
               <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-white bg-[#0F172A] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded">10</span>
@@ -859,9 +859,9 @@ export default function AILearningClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               11 — OUTCOME
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-10 sm:mb-14 scroll-mt-24" id="outcome">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
               <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-white bg-[#0F172A] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded">11</span>
@@ -871,7 +871,7 @@ export default function AILearningClient() {
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-4 sm:mb-6">
               {[
                 { stat: "4 Portals", label: "Role-Based Systems", sub: "Super Admin, School Admin, Parent, Student", color: "text-[#2563EB]", bg: "bg-[#EFF6FF]", border: "border-[#BFDBFE]" },
-                { stat: "Γé╣0 Lost", label: "Payment Failures", sub: "Triple-verified, bulletproof payment engine", color: "text-emerald-600", bg: "bg-emerald-50", border: "border-emerald-200" },
+                { stat: " Lost", label: "Payment Failures", sub: "Triple-verified, bulletproof payment engine", color: "text-emerald-600", bg: "bg-emerald-50", border: "border-emerald-200" },
                 { stat: "2 Models", label: "Revenue Streams", sub: "B2C Razorpay + B2B Invoice — Dual monetization", color: "text-[#0284C7]", bg: "bg-sky-50", border: "border-sky-200" },
                 { stat: "100%", label: "Syllabus Coverage", sub: "English, Tamil, Maths, EVS, GK — Term 1, 2, 3", color: "text-purple-600", bg: "bg-purple-50", border: "border-purple-200" },
               ].map((item) => (
@@ -889,9 +889,9 @@ export default function AILearningClient() {
             </blockquote>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               12 — CASE STUDY NAVIGATION
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="pt-6 sm:pt-8 border-t border-slate-200" id="next-project">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
               <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-white bg-[#0F172A] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded">12</span>

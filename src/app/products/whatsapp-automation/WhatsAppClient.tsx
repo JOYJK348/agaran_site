@@ -19,7 +19,7 @@ export default function WhatsAppClient() {
           className="max-w-[1600px] mx-auto bg-white border border-slate-200/90 shadow-[0_4px_30px_rgba(15,23,42,0.03)] rounded-2xl sm:rounded-3xl p-4 sm:p-8 md:p-12 lg:p-16 relative overflow-hidden"
         >
 
-          {/* ΓöÇΓöÇ Top Navigation Bar ΓöÇΓöÇ */}
+          {/* ── Top Navigation Bar ── */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 mb-6 sm:mb-8 border-b border-slate-200 text-xs sm:text-sm font-semibold text-slate-500">
             <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
               <Link href="/" className="hover:text-[#2563EB] transition-colors">Home</Link>
@@ -34,9 +34,9 @@ export default function WhatsAppClient() {
             </div>
           </div>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               HEADER — PRODUCT TITLE & HERO NARRATIVE
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <header className="mb-10 sm:mb-14">
             <div className="flex flex-wrap items-center gap-2 mb-4">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-700 font-extrabold text-[10px] sm:text-xs uppercase tracking-wider">
@@ -71,7 +71,7 @@ export default function WhatsAppClient() {
             </div>
           </header>
 
-          {/* ΓöÇΓöÇ Product UI Visual / WhatsApp Chat Simulation Mockup (Light Theme) ΓöÇΓöÇ */}
+          {/* ── Product UI Visual / WhatsApp Chat Simulation Mockup (Light Theme) ── */}
           <div className="mb-12 sm:mb-16 relative">
             <div className="w-full rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-sm relative p-4 sm:p-6 text-slate-800 flex flex-col justify-between gap-5">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-200 text-xs font-mono gap-2.5">
@@ -106,9 +106,9 @@ export default function WhatsAppClient() {
 
           <hr className="border-slate-200 my-10 sm:my-14" />
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               01 — THE PROBLEM
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-12 sm:mb-16 scroll-mt-24" id="problem">
             <div className="flex items-center gap-3 mb-6">
               <span className="text-xs font-black uppercase tracking-widest text-white bg-rose-600 px-2.5 py-1 rounded">01</span>
@@ -138,9 +138,9 @@ export default function WhatsAppClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               02 — THE IDEA & HOW IT WORKS
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-12 sm:mb-16 scroll-mt-24" id="how-it-works">
             <div className="flex items-center gap-3 mb-6">
               <span className="text-xs font-black uppercase tracking-widest text-white bg-[#2563EB] px-2.5 py-1 rounded">02</span>
@@ -177,9 +177,9 @@ export default function WhatsAppClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               03 — WHAT IT CAN HANDLE & INDUSTRY WORKFLOWS
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-12 sm:mb-16 scroll-mt-24" id="capabilities">
             <div className="flex items-center gap-3 mb-6 sm:mb-8">
               <span className="text-xs font-black uppercase tracking-widest text-white bg-[#0F172A] px-2.5 py-1 rounded">03</span>
@@ -188,12 +188,12 @@ export default function WhatsAppClient() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
               {[
-                { industry: "Salon & Spa", flow: "Services ΓåÆ Availability ΓåÆ Appointment ΓåÆ Reminder", color: "text-[#2563EB]" },
-                { industry: "Fashion & Retail", flow: "Product ΓåÆ Enquiry ΓåÆ Order ΓåÆ Status Update", color: "text-emerald-700" },
-                { industry: "Gym & Fitness", flow: "Membership ΓåÆ Enquiry ΓåÆ Follow-up ΓåÆ Renewal", color: "text-[#0284C7]" },
-                { industry: "Restaurant & Cafe", flow: "Menu ΓåÆ Enquiry ΓåÆ Order ΓåÆ Delivery Update", color: "text-amber-800" },
-                { industry: "Coaching / Training", flow: "Course ΓåÆ Enquiry ΓåÆ Registration ΓåÆ Follow-up", color: "text-purple-700" },
-                { industry: "Service Business", flow: "Service ΓåÆ Requirement ΓåÆ Quote ΓåÆ Follow-up", color: "text-[#2563EB]" },
+                { industry: "Salon & Spa", flow: "Services → Availability → Appointment → Reminder", color: "text-[#2563EB]" },
+                { industry: "Fashion & Retail", flow: "Product → Enquiry → Order → Status Update", color: "text-emerald-700" },
+                { industry: "Gym & Fitness", flow: "Membership → Enquiry → Follow-up → Renewal", color: "text-[#0284C7]" },
+                { industry: "Restaurant & Cafe", flow: "Menu → Enquiry → Order → Delivery Update", color: "text-amber-800" },
+                { industry: "Coaching / Training", flow: "Course → Enquiry → Registration → Follow-up", color: "text-purple-700" },
+                { industry: "Service Business", flow: "Service → Requirement → Quote → Follow-up", color: "text-[#2563EB]" },
               ].map((ind) => (
                 <div key={ind.industry} className="p-6 rounded-2xl bg-white border border-slate-200 shadow-2xs space-y-3 hover:border-emerald-500 transition-colors">
                   <div className={`font-black text-lg ${ind.color}`}>{ind.industry}</div>
@@ -209,9 +209,9 @@ export default function WhatsAppClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               04 — AI + AUTOMATION & BUSINESS CONFIGURATION
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-12 sm:mb-16 scroll-mt-24" id="ai-engine">
             <div className="flex items-center gap-3 mb-6">
               <span className="text-xs font-black uppercase tracking-widest text-white bg-[#0F172A] px-2.5 py-1 rounded">04</span>
@@ -257,9 +257,9 @@ export default function WhatsAppClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               05 — CURRENT DEVELOPMENT STATUS & VISION
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-12 sm:mb-16 scroll-mt-24" id="status-vision">
             <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-emerald-50 via-white to-sky-50 border border-emerald-200 text-slate-800 space-y-6 shadow-xs">
               <div className="flex items-center justify-between border-b border-emerald-200 pb-4">
@@ -280,22 +280,22 @@ export default function WhatsAppClient() {
                   </p>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-bold text-emerald-800">
                     <li className="p-2.5 rounded-xl bg-white border border-emerald-200 flex items-center gap-1.5 shadow-2xs">
-                      <span className="text-emerald-500 font-bold">Γ£ô</span> Multi-business architecture
+                      <span className="text-emerald-500 font-bold">✓</span> Multi-business architecture
                     </li>
                     <li className="p-2.5 rounded-xl bg-white border border-emerald-200 flex items-center gap-1.5 shadow-2xs">
-                      <span className="text-emerald-500 font-bold">Γ£ô</span> WhatsApp API integration
+                      <span className="text-emerald-500 font-bold">✓</span> WhatsApp API integration
                     </li>
                     <li className="p-2.5 rounded-xl bg-white border border-emerald-200 flex items-center gap-1.5 shadow-2xs">
-                      <span className="text-emerald-500 font-bold">Γ£ô</span> Business onboarding panel
+                      <span className="text-emerald-500 font-bold">✓</span> Business onboarding panel
                     </li>
                     <li className="p-2.5 rounded-xl bg-white border border-emerald-200 flex items-center gap-1.5 shadow-2xs">
-                      <span className="text-emerald-500 font-bold">Γ£ô</span> Custom catalog configuration
+                      <span className="text-emerald-500 font-bold">✓</span> Custom catalog configuration
                     </li>
                     <li className="p-2.5 rounded-xl bg-white border border-emerald-200 flex items-center gap-1.5 shadow-2xs">
-                      <span className="text-emerald-500 font-bold">Γ£ô</span> AI assistant prompt engine
+                      <span className="text-emerald-500 font-bold">✓</span> AI assistant prompt engine
                     </li>
                     <li className="p-2.5 rounded-xl bg-white border border-emerald-200 flex items-center gap-1.5 shadow-2xs">
-                      <span className="text-emerald-500 font-bold">Γ£ô</span> Lead &amp; booking automation
+                      <span className="text-emerald-500 font-bold">✓</span> Lead &amp; booking automation
                     </li>
                   </ul>
                 </div>
@@ -316,9 +316,9 @@ export default function WhatsAppClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               BOTTOM NAVIGATION & CTA
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <footer className="pt-8 border-t border-slate-200 space-y-8">
             <div className="p-6 sm:p-10 rounded-3xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] text-white text-center space-y-3">
               <h2 className="text-2xl sm:text-3xl font-black">What Could Your Business Automate?</h2>

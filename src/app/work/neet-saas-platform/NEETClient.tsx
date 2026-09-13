@@ -19,7 +19,7 @@ export default function NEETClient() {
           className="max-w-[1600px] mx-auto bg-white border border-slate-200/90 shadow-[0_4px_30px_rgba(15,23,42,0.03)] rounded-2xl sm:rounded-3xl p-4 sm:p-8 md:p-12 lg:p-16 relative overflow-hidden"
         >
 
-          {/* ΓöÇΓöÇ Top Document Header Bar ΓöÇΓöÇ */}
+          {/* ── Top Document Header Bar ── */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 mb-6 sm:mb-8 border-b border-slate-200 text-xs sm:text-sm font-semibold text-slate-500">
             <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
               <Link href="/" className="hover:text-[#2563EB] transition-colors">Home</Link>
@@ -34,9 +34,9 @@ export default function NEETClient() {
             </div>
           </div>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               PROJECT TITLE & METADATA — OVERHAULED EXECUTIVE HERO
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <header className="mb-10 sm:mb-14">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-lg bg-[#EFF6FF] border border-[#BFDBFE] text-[#2563EB] font-extrabold text-[10px] sm:text-xs uppercase tracking-wider mb-4">
               <span className="w-1.5 h-1.5 rounded-full bg-[#2563EB]" />
@@ -81,7 +81,7 @@ export default function NEETClient() {
             </div>
           </header>
 
-          {/* ΓöÇΓöÇ Hero Visual / Interactive Browser Dashboard Mockup ΓöÇΓöÇ */}
+          {/* ── Hero Visual / Interactive Browser Dashboard Mockup ── */}
           <div className="mb-12 sm:mb-16 relative">
             <div className="w-full rounded-2xl overflow-hidden bg-[#F8FAFC] border border-slate-200 shadow-2xs relative p-4 sm:p-6 text-slate-800 flex flex-col justify-between gap-5">
               
@@ -177,9 +177,9 @@ export default function NEETClient() {
 
           <hr className="border-slate-200 my-10 sm:my-14" />
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               01 — PROJECT OVERVIEW — REDESIGNED EXECUTIVE SPLIT LAYOUT
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-12 sm:mb-16 scroll-mt-24" id="overview">
             <div className="flex items-center gap-3 mb-6 sm:mb-8">
               <span className="text-xs font-black uppercase tracking-widest text-white bg-[#0F172A] px-2.5 py-1 rounded">01</span>
@@ -249,9 +249,9 @@ export default function NEETClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               02 — SPECIAL SECTION: LIVEKIT LIVE CLASSROOMS, CLOUDFLARE DRM & MOODLE COURSE BUILDER
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-12 sm:mb-16 scroll-mt-24 p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-[#EFF6FF] via-white to-[#DBEAFE]/60 border border-[#BFDBFE] shadow-md relative overflow-hidden" id="video-engine">
             <div className="flex items-center gap-3 mb-6">
               <span className="text-xs font-black uppercase tracking-widest text-white bg-[#2563EB] px-3 py-1 rounded-full shadow-2xs">CORE MEDIA &amp; ACADEMIC ENGINE</span>
@@ -289,19 +289,19 @@ export default function NEETClient() {
 
                   <ul className="space-y-2 text-xs font-semibold text-slate-700 border-t border-slate-100 pt-3">
                     <li className="flex items-start gap-2">
-                      <span className="text-[#2563EB] font-bold">Γ£ô</span>
+                      <span className="text-[#2563EB] font-bold">✓</span>
                       <span>Real-Time Video, Audio &amp; Screen Sharing</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-[#2563EB] font-bold">Γ£ô</span>
+                      <span className="text-[#2563EB] font-bold">✓</span>
                       <span>Interactive Digital Whiteboard &amp; Annotations</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-[#2563EB] font-bold">Γ£ô</span>
+                      <span className="text-[#2563EB] font-bold">✓</span>
                       <span>Student Hand-Raising &amp; Audio Moderation</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-[#2563EB] font-bold">Γ£ô</span>
+                      <span className="text-[#2563EB] font-bold">✓</span>
                       <span>Automated Join/Leave Attendance Tracking</span>
                     </li>
                   </ul>
@@ -329,19 +329,19 @@ export default function NEETClient() {
 
                   <ul className="space-y-2 text-xs font-semibold text-slate-700 border-t border-slate-100 pt-3">
                     <li className="flex items-start gap-2">
-                      <span className="text-[#0284C7] font-bold">Γ£ô</span>
+                      <span className="text-[#0284C7] font-bold">✓</span>
                       <span>Dynamic Student Watermark Overlay (Anti-Piracy)</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-[#0284C7] font-bold">Γ£ô</span>
+                      <span className="text-[#0284C7] font-bold">✓</span>
                       <span>Signed JWT HLS Tokens (Prevents Video Downloads)</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-[#0284C7] font-bold">Γ£ô</span>
+                      <span className="text-[#0284C7] font-bold">✓</span>
                       <span>Adaptive Bitrate Streaming (1080p to 360p)</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-[#0284C7] font-bold">Γ£ô</span>
+                      <span className="text-[#0284C7] font-bold">✓</span>
                       <span>Playback Resume &amp; Completion Percentage Tracking</span>
                     </li>
                   </ul>
@@ -369,19 +369,19 @@ export default function NEETClient() {
 
                   <ul className="space-y-2 text-xs font-semibold text-slate-700 border-t border-slate-100 pt-3">
                     <li className="flex items-start gap-2">
-                      <span className="text-purple-700 font-bold">Γ£ô</span>
+                      <span className="text-purple-700 font-bold">✓</span>
                       <span>Course &rarr; Module &rarr; Chapter &rarr; Lesson Hierarchy</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-purple-700 font-bold">Γ£ô</span>
+                      <span className="text-purple-700 font-bold">✓</span>
                       <span>Attach LiveKit Live Sessions to Lessons</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-purple-700 font-bold">Γ£ô</span>
+                      <span className="text-purple-700 font-bold">✓</span>
                       <span>Embed Cloudflare Stream Pre-Recorded Videos</span>
                     </li>
                     <li className="flex items-start gap-2">
-                      <span className="text-purple-700 font-bold">Γ£ô</span>
+                      <span className="text-purple-700 font-bold">✓</span>
                       <span>Attach DPP PDFs &amp; Lesson MCQ Quizzes</span>
                     </li>
                   </ul>
@@ -395,9 +395,9 @@ export default function NEETClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               03 — SYSTEM ARCHITECTURE & 4 PORTALS DEEP DIVE
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-12 sm:mb-16 scroll-mt-24" id="portals">
             <div className="flex items-center gap-3 mb-6 sm:mb-8">
               <span className="text-xs font-black uppercase tracking-widest text-white bg-[#0F172A] px-2.5 py-1 rounded">03</span>
@@ -517,9 +517,9 @@ export default function NEETClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               04 — TENANCY & SECURITY ARCHITECTURE
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-10 sm:mb-14 scroll-mt-24" id="security">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
               <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-white bg-[#0F172A] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded">04</span>
@@ -563,9 +563,9 @@ export default function NEETClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               05 — ACADEMIC & ASSESSMENT ENGINE
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-10 sm:mb-14 scroll-mt-24" id="assessment">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
               <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-white bg-[#0F172A] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded">05</span>
@@ -617,7 +617,7 @@ export default function NEETClient() {
                   <ul className="space-y-1.5">
                     {sub.topics.map((t) => (
                       <li key={t} className="flex items-start gap-2 text-xs text-slate-600">
-                        <span className="text-emerald-500 font-bold mt-0.5 shrink-0">Γ£ô</span>
+                        <span className="text-emerald-500 font-bold mt-0.5 shrink-0">✓</span>
                         <span className="leading-snug">{t}</span>
                       </li>
                     ))}
@@ -627,9 +627,9 @@ export default function NEETClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               06 — HOW IT WORKS — WORKFLOW
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-10 sm:mb-14 scroll-mt-24" id="how-it-works">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
               <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-white bg-[#0F172A] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded">06</span>
@@ -660,9 +660,9 @@ export default function NEETClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               07 — ARCHITECTURE & TECH STACK DEEP DIVE
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-10 sm:mb-14 scroll-mt-24" id="tech-stack">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
               <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-white bg-[#0F172A] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded">07</span>
@@ -715,9 +715,9 @@ export default function NEETClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               08 — VERIFICATION & SYSTEM IMPACT REPORT
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-10 sm:mb-14 scroll-mt-24" id="impact">
             <div className="flex items-center gap-2.5 sm:gap-3 mb-4 sm:mb-6">
               <span className="text-[10px] sm:text-xs font-black uppercase tracking-widest text-white bg-[#0F172A] px-2 sm:px-2.5 py-0.5 sm:py-1 rounded">08</span>
@@ -770,9 +770,9 @@ export default function NEETClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               DOCUMENT FOOTER / NAVIGATION
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <footer className="pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm font-bold text-slate-500">
             <div>
               &copy; {new Date().getFullYear()} Agaran Engineering &bull; All Rights Reserved.

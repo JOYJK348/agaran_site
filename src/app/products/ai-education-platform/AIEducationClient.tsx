@@ -19,7 +19,7 @@ export default function AIEducationClient() {
           className="max-w-[1600px] mx-auto bg-white border border-slate-200/90 shadow-[0_4px_30px_rgba(15,23,42,0.03)] rounded-2xl sm:rounded-3xl p-4 sm:p-8 md:p-12 lg:p-16 relative overflow-hidden"
         >
 
-          {/* ΓöÇΓöÇ Top Navigation Bar ΓöÇΓöÇ */}
+          {/* ── Top Navigation Bar ── */}
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-5 mb-6 sm:mb-8 border-b border-slate-200 text-xs sm:text-sm font-semibold text-slate-500">
             <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
               <Link href="/" className="hover:text-[#2563EB] transition-colors">Home</Link>
@@ -34,9 +34,9 @@ export default function AIEducationClient() {
             </div>
           </div>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               HEADER — PRODUCT TITLE & HERO NARRATIVE
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <header className="mb-10 sm:mb-14">
             <div className="flex flex-wrap items-center gap-2 mb-4">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#EFF6FF] border border-[#BFDBFE] text-[#2563EB] font-extrabold text-[10px] sm:text-xs uppercase tracking-wider">
@@ -67,7 +67,7 @@ export default function AIEducationClient() {
             </div>
           </header>
 
-          {/* ΓöÇΓöÇ Product Architecture Dashboard Mockup (Light Theme) ΓöÇΓöÇ */}
+          {/* ── Product Architecture Dashboard Mockup (Light Theme) ── */}
           <div className="mb-12 sm:mb-16 relative">
             <div className="w-full rounded-2xl overflow-hidden bg-white border border-slate-200 shadow-sm relative p-4 sm:p-6 text-slate-800 flex flex-col justify-between gap-5">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-200 text-xs font-mono gap-2.5">
@@ -112,9 +112,9 @@ export default function AIEducationClient() {
 
           <hr className="border-slate-200 my-10 sm:my-14" />
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               01 — THE PROBLEM & INSTITUTIONAL CHALLENGES
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-12 sm:mb-16 scroll-mt-24" id="problem">
             <div className="flex items-center gap-3 mb-6">
               <span className="text-xs font-black uppercase tracking-widest text-white bg-rose-600 px-2.5 py-1 rounded">01</span>
@@ -146,7 +146,7 @@ export default function AIEducationClient() {
                   "Repetitive data entry between teams",
                 ].map((item) => (
                   <div key={item} className="p-3 rounded-xl bg-white border border-rose-200/80 flex items-center gap-2 text-slate-800 shadow-2xs">
-                    <span className="text-rose-600 font-black">Γ£ò</span>
+                    <span className="text-rose-600 font-black">✗</span>
                     <span>{item}</span>
                   </div>
                 ))}
@@ -154,9 +154,9 @@ export default function AIEducationClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               02 — COMPLETE 8-PILLAR MODULE ECOSYSTEM
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-12 sm:mb-16 scroll-mt-24" id="modules">
             <div className="flex items-center gap-3 mb-6 sm:mb-8">
               <span className="text-xs font-black uppercase tracking-widest text-white bg-[#0F172A] px-2.5 py-1 rounded">02</span>
@@ -245,7 +245,7 @@ export default function AIEducationClient() {
                     <ul className="space-y-1 text-[11px] font-semibold text-slate-700 border-t border-slate-100 pt-2.5">
                       {card.points.map((p) => (
                         <li key={p} className="flex items-start gap-1.5">
-                          <span className="text-emerald-500 font-bold">Γ£ô</span>
+                          <span className="text-emerald-500 font-bold">✓</span>
                           <span>{p}</span>
                         </li>
                       ))}
@@ -260,9 +260,9 @@ export default function AIEducationClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               03 — END-TO-END STUDENT LIFECYCLE PIPELINE
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-12 sm:mb-16 scroll-mt-24" id="pipeline">
             <div className="flex items-center gap-3 mb-6">
               <span className="text-xs font-black uppercase tracking-widest text-white bg-[#2563EB] px-2.5 py-1 rounded">03</span>
@@ -295,9 +295,9 @@ export default function AIEducationClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               04 — DEDICATED PORTALS FOR EVERY ROLE
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-12 sm:mb-16 scroll-mt-24" id="portals">
             <div className="flex items-center gap-3 mb-6">
               <span className="text-xs font-black uppercase tracking-widest text-white bg-[#0F172A] px-2.5 py-1 rounded">04</span>
@@ -337,9 +337,9 @@ export default function AIEducationClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               05 — CURRENT DEVELOPMENT STATUS & VISION
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <section className="mb-12 sm:mb-16 scroll-mt-24" id="status-vision">
             <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-[#EFF6FF] via-white to-[#DBEAFE]/40 border border-[#BFDBFE] text-slate-800 space-y-6 shadow-xs">
               <div className="flex items-center justify-between border-b border-[#BFDBFE] pb-4">
@@ -360,22 +360,22 @@ export default function AIEducationClient() {
                   </p>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs font-bold text-[#2563EB]">
                     <li className="p-2.5 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
-                      <span className="text-emerald-500 font-bold">Γ£ô</span> LiveKit SDK integration
+                      <span className="text-emerald-500 font-bold">✓</span> LiveKit SDK integration
                     </li>
                     <li className="p-2.5 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
-                      <span className="text-emerald-500 font-bold">Γ£ô</span> Cloudflare Stream storage
+                      <span className="text-emerald-500 font-bold">✓</span> Cloudflare Stream storage
                     </li>
                     <li className="p-2.5 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
-                      <span className="text-emerald-500 font-bold">Γ£ô</span> Student &amp; Parent portals
+                      <span className="text-emerald-500 font-bold">✓</span> Student &amp; Parent portals
                     </li>
                     <li className="p-2.5 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
-                      <span className="text-emerald-500 font-bold">Γ£ô</span> Digital &amp; Offline exam engine
+                      <span className="text-emerald-500 font-bold">✓</span> Digital &amp; Offline exam engine
                     </li>
                     <li className="p-2.5 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
-                      <span className="text-emerald-500 font-bold">Γ£ô</span> AI doubt solver assistant
+                      <span className="text-emerald-500 font-bold">✓</span> AI doubt solver assistant
                     </li>
                     <li className="p-2.5 rounded-xl bg-white border border-[#BFDBFE] flex items-center gap-1.5 shadow-2xs">
-                      <span className="text-emerald-500 font-bold">Γ£ô</span> Attendance &amp; Fee ERP
+                      <span className="text-emerald-500 font-bold">✓</span> Attendance &amp; Fee ERP
                     </li>
                   </ul>
                 </div>
@@ -396,9 +396,9 @@ export default function AIEducationClient() {
             </div>
           </section>
 
-          {/* ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ
+          {/* ══════════════════════════════════════════════════════════
               BOTTOM NAVIGATION & CTA
-          ΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉΓòÉ */}
+          ══════════════════════════════════════════════════════════ */}
           <footer className="pt-8 border-t border-slate-200 space-y-8">
             <div className="p-6 sm:p-10 rounded-3xl bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#0284C7] text-white text-center space-y-3">
               <h2 className="text-2xl sm:text-3xl font-black">Building the Future of Smarter Education.</h2>
